@@ -116,8 +116,8 @@ def _com_sta_traj_for_model(
             # create folder
             if not os.path.exists(json_save_path):
                 os.makedirs(json_save_path)
-        except:
-            print('Model ' + iModel + ' extension is missing!')
+        except Exception as e:
+            print('Model ' + iModel + ' extension is missing! ', e)
             return
 
         ######### jws simulation
@@ -176,8 +176,6 @@ def _com_sta_traj_for_model(
             if sbml_model.getModel().getSpecies(iSpec).getBoundaryCondition()
                is True]
         state_trajectory = np.delete(state_trajectory, delete_ind, 1)
-
-        print(column_names, model.getObservableIds())
 
         # Convert ndarray 'state-trajectory' to data frame and save it
         df_state_trajectory = pd.DataFrame(columns=column_names,
