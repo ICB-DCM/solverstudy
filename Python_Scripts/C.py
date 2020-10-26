@@ -37,7 +37,7 @@ DIR_DATA_WHOLESTUDY = os.path.join(DIR_DATA, 'WholeStudy')
 DIR_DATA_TOLERANCES = os.path.join(DIR_DATA, 'TolerancesStudy')
 
 ###############################################################################
-# Model directory
+# Model directories
 
 # Base folder for all models
 DIR_MODELS = os.path.join(DIR_BASE, 'Models')

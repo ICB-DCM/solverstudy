@@ -152,7 +152,6 @@ def _com_sta_traj_for_model(
         solver.setAbsoluteTolerance(iTolerance[0])
         solver.setRelativeTolerance(iTolerance[1])
         solver.setLinearSolver(linSol)
-        solver.setNonLinearSolver(2)
         solver.setLinearMultistepMethod(solAlg)
 
         # set stability flag for Adams-Moulton
