@@ -26,8 +26,8 @@ def get_sedml_infos_from_rest_api():
     return sedml_infos
 
 
-def download_all_sedml_models_from_jws(base_folder=BASE_FOLDER,
-                                       only_specified=True):
+def download_all_sedml_models_from_jws(
+        base_folder=BASE_FOLDER, only_specified=True):
     """
     Download all sedml models to xml files.
     """
