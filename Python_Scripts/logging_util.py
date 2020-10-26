@@ -3,7 +3,7 @@
 import logging
 
 
-LOGGER_NAME = "JWS_IMPORTER"
+LOGGER_NAME = "SOLVERSTUDY_LOGGER"
 
 
 def log_to_console(level=None):

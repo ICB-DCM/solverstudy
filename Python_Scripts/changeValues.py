@@ -5,18 +5,19 @@ import libsbml
 import os
 import numpy as np
 
+from C import DIR_MODELS_SEDML
 
-def changeValues(model, model_name, explicit_model, skip_indicator):
+
+def changeValues(model, model_name, explicit_model):
 
     # important paths
-    if skip_indicator == 0:
-        sedml_path = '../Models/all_models/' + model_name + '/' + model_name + '.sedml'
-        sbml_path = '../Models/all_models/' + model_name + '/sbml_models/' + explicit_model + '.sbml'
-    elif skip_indicator == 1:
-        sedml_path = '../../Benchmarking_of_numerical_ODE_integration_methods/sedml_models/' + model_name + '/' + model_name + '.sedml'
-        sbml_path = '../../Benchmarking_of_numerical_ODE_integration_methods/sedml_models/' + model_name + '/sbml_models/' + explicit_model + '.sbml'
+    sedml_path = os.path.join(
+        DIR_MODELS_SEDML, model_name, model_name + '.sedml')
+    sbml_path = os.path.join(
+        DIR_MODELS_SEDML, model_name, 'sbml_models', explicit_model + '.sbml')
 
-    # do a case study if the sedml file exists or not (it doesn't exist for models of the BioModelsDatabase)
+    # do a case study if the sedml file exists or not (it doesn't exist for
+    #  models of the BioModelsDatabase)
     if os.path.exists(sedml_path):
 
         # load SBML && SEDML models
@@ -41,6 +42,7 @@ def changeValues(model, model_name, explicit_model, skip_indicator):
                 if a == 'amici':
                     par_id[iCount] = b
             except:
+                # TODO review all excepts here
                 'No split necessary!'
         par_num = model.getParameters()
         par_num = list(par_num)
@@ -136,6 +138,6 @@ def changeValues(model, model_name, explicit_model, skip_indicator):
         model.setInitialStates(s_num)
 
     else:
-        'Model is part of the BioModelsDatabase!'
+        'Model is part of the BioModelsDatabase! THIS SHOULD NOT APPEAR'
 
     return model

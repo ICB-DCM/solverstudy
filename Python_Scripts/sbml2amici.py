@@ -4,16 +4,19 @@ import libsbml
 import amici
 import os
 import logging
-import shutil
 import pandas as pd
 
+from C import (
+    DIR_BASE, DIR_MODELS_SEDML, DIR_MODELS_AMICI_BASE, DIR_MODELS_AMICI)
+
 # create .tsv file
-tsv_table = pd.DataFrame(columns=['id', 'states', 'reactions', 'error_message'])
+tsv_table = pd.DataFrame(
+    columns=['id', 'states', 'reactions', 'error_message'])
 
 # important paths
-models_path = "../../Benchmarking_of_numerical_ODE_integration_methods/sbml2amici/amici_models_newest_version_0.10.19"
-models_base_path = "../../Benchmarking_of_numerical_ODE_integration_methods/sbml2amici"
-base_path = "../../Benchmarking_of_numerical_ODE_integration_methods/sedml_models"
+models_path = DIR_MODELS_AMICI
+models_base_path = DIR_MODELS_AMICI_BASE
+base_path = DIR_MODELS_SEDML
 
 # create directory for all future amici models
 if not os.path.exists(models_path):
@@ -23,7 +26,8 @@ if not os.path.exists(models_path):
 logger = logging.getLogger()
 
 # initialize the log settings
-logging.basicConfig(filename='all_logs',level=logging.DEBUG)
+logging.basicConfig(filename=os.path.join(DIR_BASE, 'sbml2amici.log'),
+                    level=logging.DEBUG)
 
 # list of all directories + SBML files
 list_directory = os.listdir(base_path)
@@ -32,13 +36,14 @@ list_directory = sorted(list_directory)
 # set row-counter for .tsv file and list all model
 counter = 0
 for models in list_directory:
-    list_files = os.listdir(base_path + '/' + models + '/sbml_models')
+    list_files = os.listdir(os.path.join(base_path, models, 'sbml_models'))
     list_files = sorted(list_files)
 
     for files in list_files:
-        sbml_file = base_path + '/' + models + '/sbml_models/' + files
-        model_name, other_stuff = files.split(".",1)
-        model_output_dir = models_path + '/' + models + '/' + model_name
+        sbml_file = os.path.join(base_path, models, 'sbml_models', files)
+        model_name, other_stuff = files.split(".", 1)
+        model_output_dir = os.path.join(
+            models_path, models, model_name)
 
         # get new_observables()
         print('Current Model: ' + models + '_' + model_name)
@@ -48,7 +53,8 @@ for models in list_directory:
             tsv_table = tsv_table.append({}, ignore_index=True)
 
             # define the model id
-            tsv_table.loc[counter].id = '{' + models + '}' + '_' + '{' + files + '}'
+            tsv_table.loc[counter].id = \
+                '{' + models + '}' + '_' + '{' + files + '}'
 
             # read accompanying sbml file
             file = libsbml.readSBML(sbml_file)
@@ -64,9 +70,8 @@ for models in list_directory:
             sbml_importer = amici.SbmlImporter(sbml_file)
 
             # SBML2AMICI
-            sbml_importer.sbml2amici(model_name,
-                        model_output_dir,
-                        verbose=False)
+            sbml_importer.sbml2amici(
+                model_name, model_output_dir, verbose=False)
 
             # Write 'OK' in 'error_message' column
             tsv_table.loc[counter].error_message = 'OK'
@@ -85,9 +90,6 @@ for models in list_directory:
             counter = counter + 1
 
 # save .tsv file
-tsv_table.to_csv(path_or_buf=models_base_path + '/table.tsv', sep='\t', index=False)
-
-# copy file 'all_logs' in new directory
-old_path = './all_logs'
-new_path = models_base_path + '/all_logs'
-shutil.move(old_path, new_path)
+tsv_table.to_csv(
+    path_or_buf=os.path.join(models_base_path, 'table.tsv'),
+    sep='\t', index=False)

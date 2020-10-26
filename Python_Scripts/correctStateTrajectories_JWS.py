@@ -3,18 +3,27 @@
 import os
 import shutil
 import pandas as pd
-from setTime_BioModels import *
 
-# important paths --- for abs_error = rel_error = 1e-4, abs_tolerance = rel_tolerance = 1e-12 and BDF
-base_path = '../../Benchmarking_of_numerical_ODE_integration_methods'
-json_path = base_path + '/json_files/json_files_all_results_BDF_12_12/json_files_1e-04_1e-04'
-sedml_path = base_path + '/sedml_models'
-old_path = base_path + '/sbml2amici/amici_models_newest_version_0.10.19'
-new_path = base_path + '/sbml2amici/correct_amici_models_paper'
+from setTime_BioModels import timePointsBioModels
+from C import (
+    DIR_MODELS_SEDML, DIR_MODELS_AMICI, DIR_MODELS_AMICI_FINAL,
+    DIR_MODELS_JSON)
 
-# copy all successfully imported amici models and eliminate those witch don't have matching state trajectories to JWS
+# important paths --- for abs_error = rel_error = 1e-4,
+#  abs_tolerance = rel_tolerance = 1e-12 and BDF
+json_path = os.path.join(
+    DIR_MODELS_JSON, 'json_files_all_results_BDF_12_12/json_files_1e-04_1e-04')
+sedml_path = DIR_MODELS_JSON
+old_path = DIR_MODELS_AMICI
+new_path = DIR_MODELS_AMICI_FINAL
+
+# copy all successfully imported amici models and eliminate those which
+#  don't have matching state trajectories to JWS
 if not os.path.exists(new_path):
     shutil.copytree(old_path, new_path)
+else:
+    raise ValueError(
+        f"Target folder {new_path} already exists, please remove.")
 
 # set counter
 counter_true = 0
@@ -32,12 +41,14 @@ for iModel in list_directory_sedml:
         iFile_name = iFile
 
         # check if file exists in correct_amici_models folder
-        if os.path.exists(new_path + '/' + iModel + '/' + iFile_name):
+        if os.path.exists(os.path.join(new_path, iModel, iFile_name)):
             counter_model = counter_model + 1
 
             # check if file exists in json folder
-            if os.path.exists(json_path + '/' + iModel + '/' + iFile_name):
-                csv_file = pd.read_csv(json_path + '/' + iModel + '/' + iFile_name + '/whole_error.csv', sep='\t')
+            if os.path.exists(os.path.join(json_path, iModel, iFile_name)):
+                csv_file = pd.read_csv(os.path.join(
+                    json_path, iModel, iFile_name, 'whole_error.csv'),
+                    sep='\t')
 
                 # check for True
                 if csv_file['trajectories_match'][0] == True:
@@ -46,7 +57,8 @@ for iModel in list_directory_sedml:
                     print(iModel + '_' + iFile_name + ' is False!')
 
                     # delete folder
-                    shutil.rmtree(new_path + '/' + iModel + '/' + iFile_name)
+                    shutil.rmtree(os.path.join(
+                        new_path, iModel, iFile_name))
 
             else:
                 # check for BioModels
@@ -57,9 +69,10 @@ for iModel in list_directory_sedml:
                     print('BioModels model could not be imported!')
 
                     # delete folder
-                    shutil.rmtree(new_path + '/' + iModel + '/' + iFile_name)
+                    shutil.rmtree(os.path.join(new_path, iModel, iFile_name))
 
         else:
+            # TODO clean up
             print(iModel + '_' + iFile_name + ' has already been deleted!')
             counter_model = counter_model + 1
 
@@ -72,8 +85,8 @@ print('Difference: ' + str(counter_difference))
 delete_counter = 0
 list_directory_sedml = sorted(os.listdir(new_path))
 for iModel in list_directory_sedml:
-    if len(os.listdir(new_path + '/' + iModel)) == 0:
-        os.rmdir(new_path + '/' + iModel)
+    if len(os.listdir(os.path.join(new_path, iModel))) == 0:
+        os.rmdir(os.path.join(new_path, iModel))
         print('Deleted model ' + iModel)
         delete_counter = delete_counter + 1
 

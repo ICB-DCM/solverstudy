@@ -2,6 +2,19 @@
 
 This repository contains all python files and (supplementary) figures for the manuscript 'Benchmarking of numerical integration methods for ODE models of biological systems'.
 
+## Preparations
+
+The study was performed on Linux (Ubuntu 20.10) with Anaconda python 3.8.5. All scripts can be found under `Python_Scripts`, which we henceforth assume to be the working directory (`cd Python_Scripts`).
+All required dependencies can be installed via
+
+    pip install -r ../Software/requirements.txt
+
+The study writes and loads its data from a data base folder, which can be configured via the environment variable
+
+    export SOLVERSTUDY_DIR_BASE=WORK|CACHE|TEST
+
+where WORK, CACHE, TEST are conventions for dedicated working folders: WORK for development work, CACHE a cached version of WORK which is shipped with this repository, and TEST a smaller test collection.
+
 ## 0 Problems that can occur
 
 ### 0.1 downloading this repository on Windows:

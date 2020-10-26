@@ -1,6 +1,5 @@
 # set time data for all successfully imported models from BioModels-Database
 
-import numpy as np
 
 def timePointsBioModels(iModel):
 
