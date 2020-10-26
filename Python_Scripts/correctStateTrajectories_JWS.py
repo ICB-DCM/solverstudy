@@ -7,13 +7,13 @@ import pandas as pd
 from setTime_BioModels import timePointsBioModels
 from C import (
     DIR_MODELS_SEDML, DIR_MODELS_AMICI, DIR_MODELS_AMICI_FINAL,
-    DIR_MODELS_JSON)
+    DIR_MODELS_TRAJ_AMICI)
 
 # important paths --- for abs_error = rel_error = 1e-4,
 #  abs_tolerance = rel_tolerance = 1e-12 and BDF
 json_path = os.path.join(
-    DIR_MODELS_JSON, 'json_files_all_results_BDF_12_12/json_files_1e-04_1e-04')
-sedml_path = DIR_MODELS_JSON
+    DIR_MODELS_TRAJ_AMICI, 'json_files_all_results_BDF_12_12/json_files_1e-04_1e-04')
+sedml_path = DIR_MODELS_TRAJ_AMICI
 old_path = DIR_MODELS_AMICI
 new_path = DIR_MODELS_AMICI_FINAL
 

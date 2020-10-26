@@ -34,19 +34,19 @@ def download_all_sedml_models_from_jws(
     # download list of sedml model infos
     sedml_infos = get_sedml_infos_from_rest_api()
 
-    cached_list = None
+    specified_models = None
     if only_specified:
         print("Downloading only specified models")
         with open("jws_sedml_models.txt") as f:
-            cached_list = f.readlines()
-        cached_list = [x.rstrip('\n') for x in cached_list]
+            specified_models = f.readlines()
+        specified_models = set([x.rstrip('\n') for x in specified_models])
 
     # download every single sedml model
     for sedml_info in sedml_infos:
         # model identifier
         sedml_slug = sedml_info['slug']
         # check whether this model is of interest
-        if only_specified and sedml_slug not in cached_list:
+        if only_specified and sedml_slug not in specified_models:
             print(f"Skipping {sedml_slug} as not in list")
             continue
         # an own folder for the sedml model

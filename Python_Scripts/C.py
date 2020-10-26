@@ -51,8 +51,7 @@ DIR_MODELS_AMICI_BASE = os.path.join(DIR_MODELS, 'amici')
 DIR_MODELS_AMICI = os.path.join(DIR_MODELS_AMICI_BASE, 'models')
 # Folder for only the final models for the main part of the study
 DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
-# Folder for trajectories and trajectory comparison data
-DIR_MODELS_JSON = os.path.join(DIR_MODELS, 'json_files')  # TODO change
+# Folder for trajectories simulated with AMICI
+DIR_MODELS_TRAJ_AMICI = os.path.join(DIR_MODELS, 'trajectories_amici')
 # Folder for reference trajectories
-DIR_MODELS_REF_TRAJECTORIES = os.path.join(
-    DIR_MODELS, 'reference_trajectories')
+DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')

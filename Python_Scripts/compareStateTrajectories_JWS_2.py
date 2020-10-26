@@ -9,8 +9,8 @@ import pandas as pd
 import time
 
 from C import (
-    DIR_MODELS_JSON, DIR_MODELS_SEDML, DIR_MODELS_BIOMODELS, DIR_MODELS_AMICI,
-    DIR_MODELS_REF_TRAJECTORIES)
+    DIR_MODELS_TRAJ_AMICI, DIR_MODELS_SEDML, DIR_MODELS_BIOMODELS, DIR_MODELS_AMICI,
+    DIR_MODELS_TRAJ_REF)
 
 
 # upper and lower boundaries for the absolute and relative errors
@@ -42,7 +42,7 @@ for solAlg in [1, 2]:
 
         # create folder for all results for the given method and tolerances
         results_dir_base = os.path.join(
-            DIR_MODELS_JSON,
+            DIR_MODELS_TRAJ_AMICI,
             f'json_files_all_results_{MultistepMethod}_{atol_exp}_{rtol_exp}')
         if not os.path.exists(results_dir_base):
             os.makedirs(results_dir_base)
@@ -96,14 +96,14 @@ for solAlg in [1, 2]:
                         # important paths
                         # TODO Y I fixed the path (how did this work???)
                         reference_path = os.path.join(
-                            DIR_MODELS_REF_TRAJECTORIES, iModel, iFile)
+                            DIR_MODELS_TRAJ_REF, iModel, iFile)
                         old_json_save_path = os.path.join(
-                            DIR_MODELS_JSON,
+                            DIR_MODELS_TRAJ_AMICI,
                             f'json_files_{MultistepMethod}_'
                             f'{atol_exp}_{rtol_exp}',
                             iModel, iFile)
                         new_json_save_path = os.path.join(
-                            DIR_MODELS_JSON,
+                            DIR_MODELS_TRAJ_AMICI,
                             f'json_files_all_results_{MultistepMethod}_'
                             f'{atol_exp}_{rtol_exp}',
                             f'json_files_{abs_str}_{rel_str}',

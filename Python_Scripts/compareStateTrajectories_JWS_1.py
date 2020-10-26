@@ -19,15 +19,15 @@ from execute_loadModels import all_settings
 from JWS_changeValues import JWS_changeValues
 
 from C import (
-    DIR_MODELS_SEDML, DIR_MODELS_BIOMODELS, DIR_MODELS_AMICI, DIR_MODELS_JSON,
-    DIR_MODELS_REF_TRAJECTORIES)
+    DIR_MODELS_SEDML, DIR_MODELS_BIOMODELS, DIR_MODELS_AMICI,
+    DIR_MODELS_TRAJ_AMICI, DIR_MODELS_TRAJ_REF)
 
 
 def _maybe_download_jws_simulation(
         iModel, iFile, sedml_path, sim_end_time):
     """Download the JWS simulation, unless already downloaded."""
     json_save_path = os.path.join(
-        DIR_MODELS_REF_TRAJECTORIES, iModel, iFile)
+        DIR_MODELS_TRAJ_REF, iModel, iFile)
     tsv_file = os.path.join(json_save_path, 'JWS_simulation.csv')
     if os.path.exists(tsv_file):
         print(f"JWS simulations for model {iModel} {iFile} already exist, "
@@ -95,7 +95,7 @@ def _com_sta_traj_for_model(
 
     # important paths
     json_save_path = os.path.join(
-        DIR_MODELS_JSON,
+        DIR_MODELS_TRAJ_AMICI,
         f'json_files_{MultistepMethod}_{atol_exp}_{rtol_exp}',
         iModel, iFile)
     sedml_path = os.path.join(
