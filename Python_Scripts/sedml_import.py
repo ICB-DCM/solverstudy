@@ -36,6 +36,7 @@ def download_all_sedml_models_from_jws(
 
     cached_list = None
     if only_specified:
+        print("Downloading only specified models")
         with open("jws_sedml_models.txt") as f:
             cached_list = f.readlines()
         cached_list = [x.rstrip('\n') for x in cached_list]
