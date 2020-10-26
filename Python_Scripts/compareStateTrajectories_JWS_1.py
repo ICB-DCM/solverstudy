@@ -24,7 +24,7 @@ from C import (
 
 
 def _maybe_download_jws_simulation(
-        iModel, iFile, sedml_path, sbml_path, json_dictionary, sim_end_time):
+        iModel, iFile, sedml_path, sim_end_time):
     """Download the JWS simulation, unless already downloaded."""
     json_save_path = os.path.join(
         DIR_MODELS_REF_TRAJECTORIES, iModel, iFile)
@@ -39,13 +39,14 @@ def _maybe_download_jws_simulation(
 
     # open sedml file
     sedml_model: libsedml.SedDocument = libsedml.readSedML(sedml_path)
-    # open sbml file
-    sbml_model = libsbml.readSBML(sbml_path)
 
     sbml_slug = None
-    for iCount in range(0, len(json_dictionary)):
-        if sbml_model.getModel().getName() == json_dictionary[iCount]['name']:
-            sbml_slug = json_dictionary[iCount]['slug']
+    for i_sbml_model in range(sedml_model.getNumModels()):
+        sbml_entry: libsedml.SedModel = sedml_model.getModel(i_sbml_model)
+        if sbml_entry.getId() == iFile:
+            # source is of form https://jjj.bio.vu.nl/models/{slug}/sbml
+            sbml_slug = list(
+                filter(len, sbml_entry.getSource().split('/')))[-2]
             break
     if sbml_slug is None:
         raise ValueError(
@@ -130,8 +131,7 @@ def _com_sta_traj_for_model(
             np.linspace(sim_start_time, sim_end_time, sim_num_time_points))
 
         tsv_file = _maybe_download_jws_simulation(
-            iModel, iFile, sedml_path, sbml_path, json_dictionary,
-            sim_end_time)
+            iModel, iFile, sedml_path, sim_end_time)
 
         # open new .csv file
         df = pd.read_csv(tsv_file, sep='\t')

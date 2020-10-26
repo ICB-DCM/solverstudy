@@ -10,7 +10,7 @@ DIR_WORK_BASE = '../SolverStudyWork'
 # The output of the study has been conserved in `DIR_CACHE_BASE`.
 DIR_CACHE_BASE = '../SolverStudyCache'
 # The `DIR_TEST_BASE` folder contains a smaller test model set
-DIR_TEST_BASE = '../Test/SolverStudyTest'
+DIR_TEST_BASE = '../SolverStudyTest'
 
 # All scripts expect their in/output relative to `DIR_BASE`.
 DIR_BASE = os.getenv('SOLVERSTUDY_DIR_BASE', None)
