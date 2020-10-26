@@ -46,6 +46,7 @@ def download_all_sedml_models_from_jws(
         sedml_slug = sedml_info['slug']
         # check whether this model is of interest
         if only_specified and sedml_slug not in cached_list:
+            print(f"Skipping {sedml_slug} as not in list")
             continue
         # an own folder for the sedml model
         sedml_folder = os.path.join(base_folder, sedml_slug)
