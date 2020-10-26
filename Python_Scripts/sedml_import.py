@@ -26,17 +26,27 @@ def get_sedml_infos_from_rest_api():
     return sedml_infos
 
 
-def download_all_sedml_models_from_jws(base_folder=BASE_FOLDER):
+def download_all_sedml_models_from_jws(base_folder=BASE_FOLDER,
+                                       only_specified=True):
     """
     Download all sedml models to xml files.
     """
     # download list of sedml model infos
     sedml_infos = get_sedml_infos_from_rest_api()
 
+    cached_list = None
+    if only_specified:
+        with open("jws_sedml_models.txt") as f:
+            cached_list = f.readlines()
+        cached_list = [x.rstrip('\n') for x in cached_list]
+
     # download every single sedml model
     for sedml_info in sedml_infos:
         # model identifier
         sedml_slug = sedml_info['slug']
+        # check whether this model is of interest
+        if only_specified and sedml_slug not in cached_list:
+            continue
         # an own folder for the sedml model
         sedml_folder = os.path.join(base_folder, sedml_slug)
         sedml_file = os.path.join(sedml_folder, sedml_slug + ".sedml")
