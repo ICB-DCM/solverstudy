@@ -136,7 +136,7 @@ def averaging(next_tsv):
                 if 'reactions' in columns:
                     new_df.loc[iFile - repetition].reactions = next_tsv['reactions'][iFile]
         else:
-            if next_tsv['id'][iFile] == next_tsv['id'][iFile - 1] and next_tsv['state_variables'][iFile] == next_tsv['state_variables'][iFile + 1]:
+            if next_tsv['id'][iFile] == next_tsv['id'][iFile - 1] and next_tsv['state_variables'][iFile] == next_tsv['state_variables'][iFile - 1]:
                 # find all exceptions by hand and type them in manually --- no clear rule existing
                 if next_tsv['id'][iFile] == '{kolodkin2010_figure2b}':
                     if 'id' in columns:
