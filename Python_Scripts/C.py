@@ -55,3 +55,6 @@ DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
 DIR_MODELS_TRAJ_AMICI = os.path.join(DIR_MODELS, 'trajectories_amici')
 # Folder for reference trajectories
 DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')
+# Folder for the original COPASI simulations of the biomodels models
+DIR_MODELS_TRAJ_REF_BIOMODELS = os.path.join(
+    DIR_MODELS, 'trajectories_reference_biomodels')

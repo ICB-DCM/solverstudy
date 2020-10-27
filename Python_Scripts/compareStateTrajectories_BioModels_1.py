@@ -6,13 +6,16 @@
 # all trajectories simulated by COPASI were simulated with absolute and relative tolerances 1e-14 & 1e-14,
 # except three models where 1e-12 & 1e-12 had to be used.
 
-from execute_loadModels import *
+from execute_loadModels import all_settings
 import amici.plotting
 import numpy as np
 import libsbml
 import pandas as pd
 import os
-import sys
+
+from C import (
+    DIR_MODELS_BIOMODELS, DIR_MODELS_AMICI, DIR_MODELS_TRAJ_REF_BIOMODELS,
+    DIR_MODELS_TRAJ_REF, DIR_MODELS_SEDML)
 
 
 def compStaTraj_BioModels():
@@ -22,10 +25,6 @@ def compStaTraj_BioModels():
     base_path = '../../Benchmarking_of_numerical_ODE_integration_methods'
     all_biomodels_path = base_path + '/BioModelsDatabase_models'
     simulable_biomodels_path = base_path + '/sbml2amici/correct_amici_models_paper'
-
-    # create folder structure
-    if not os.path.exists(base_path + '/biomodels_files'):
-        os.makedirs(base_path + '/biomodels_files')
 
     # set settings for simulation
     for solAlg in [1, 2]:
@@ -43,45 +42,48 @@ def compStaTraj_BioModels():
             _, save_atol = str('{:.1e}'.format(atol)).split('-')
             _, save_rtol = str('{:.1e}'.format(rtol)).split('-')
 
-            # get all models from different folders
-            list_directory_COPASI_bio = sorted(os.listdir(COPASI_data))
-            list_directory_simulable_bio = sorted(os.listdir(simulable_biomodels_path))
+            # get all AMICI compatible models
+            list_directory_amici = sorted(os.listdir(DIR_MODELS_AMICI))
 
-            # check if correct amici version with correct amount of simulable biomodels was used
-            if not list_directory_simulable_bio == list_directory_COPASI_bio:
-                print('The number of biomodels which were generated with the earlier '
-                      'python scripts does not match with the number of biomodels that '
-                      'have COPASI state trajectories! The problem could be '
-                      'that a newer AMICI version was used!')
-                sys.exit(0)
+            # iterate over the "sedml" models
+            for iMod in range(0, len(list_directory_amici)):
+                iModel = list_directory_amici[iMod]
+                list_files = sorted(os.listdir(os.path.join(
+                    DIR_MODELS_SEDML, iModel, 'sbml_models')))
 
-            for iMod in range(0, len(list_directory_COPASI_bio)):
-
-                iModel = list_directory_COPASI_bio[iMod]
-                list_files = sorted(os.listdir(all_biomodels_path + '/' + iModel + '/sbml_models'))
-
+                # iterate over the sbml models
                 for iFile in list_files:
-
                     # iFile without .xml extension
                     iFile, extension = iFile.split('.', 1)
 
                     # more important model-dependent paths
-                    tsv_path = COPASI_data + '/' + iModel
+                    #  path to the original copasi simulation
+                    tsv_path = os.path.join(
+                        DIR_MODELS_TRAJ_REF_BIOMODELS, iModel, iModel)
                     save_path = base_path + '/biomodels_files/StateTrajectories_BioModels_COPASI_Data/' + iModel
-                    sbml_path = all_biomodels_path + '/' + iModel + '/sbml_models/' + iFile + '.xml'
+                    #  path of the sbml file
+                    sbml_path = os.path.join(
+                        DIR_MODELS_SEDML, iModel, 'sbml_models',
+                        iFile + '.sbml')
 
                     # Open XML file
                     sbml_model = libsbml.readSBML(sbml_path)
 
                     # Get whole model
-                    model = all_settings(iModel, iFile, 1)
+                    model = all_settings(iModel, iFile)
 
                     ######### COPASI simulatiom
                     # open new .csv file with COPASI simulation trajectories
-                    try:
-                        tsv_file = pd.read_csv(tsv_path + '/Original_COPASI_' + iModel + '_14_14.tsv', sep='\t')
-                    except:
-                        tsv_file = pd.read_csv(tsv_path + '/Original_COPASI_' + iModel + '_12_12.tsv', sep='\t')
+                    if os.path.exists(os.path.join(
+                            tsv_path, f'Original_COPASI_{iModel}_14_14.tsv')):
+                        tsv_file = pd.read_csv(os.path.join(
+                            tsv_path, f'Original_COPASI_{iModel}_14_14.tsv'),
+                            sep='\t')
+                    else:
+                        # TODO Y Why the alternative?
+                        tsv_file = pd.read_csv(os.path.join(
+                            tsv_path, f'Original_COPASI_{iModel}_12_12.tsv'),
+                            sep='\t')
 
                     # columns names of .tsv file and alter .tsv file
                     column_names = list(tsv_file.columns)
@@ -91,13 +93,17 @@ def compStaTraj_BioModels():
                     del_counter = 0
                     for iName in range(0, len(column_names)):
                         if 'Values[' in column_names[iName - del_counter]:
-                            column_names.remove(column_names[iName - del_counter])
+                            column_names.remove(
+                                column_names[iName - del_counter])
                             position.append(iName)
                             del_counter += 1
                     del tsv_file['# Time']
-                    tsv_file.drop(tsv_file.columns[len(tsv_file.columns) - 1], axis=1, inplace=True)
+                    tsv_file.drop(
+                        tsv_file.columns[len(tsv_file.columns) - 1],
+                        axis=1, inplace=True)
                     if len(position) != 0:
-                        tsv_file = tsv_file.drop(tsv_file.columns[position], axis=1)
+                        tsv_file = tsv_file.drop(
+                            tsv_file.columns[position], axis=1)
 
                     ########## model simulation
                     # Create solver instance
