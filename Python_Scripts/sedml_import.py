@@ -27,9 +27,14 @@ def get_sedml_infos_from_rest_api():
 
 
 def download_all_sedml_models_from_jws(
-        base_folder=BASE_FOLDER, only_specified=True):
+        base_folder: str = BASE_FOLDER, only_specified: bool = True):
     """
     Download all sedml models to xml files.
+
+    :param base_folder: The base folder to save the models to.
+    :param only_specified:
+        Whether to only download models specified in a file in this repository,
+        or to download all models from the repository.
     """
     # download list of sedml model infos
     sedml_infos = get_sedml_infos_from_rest_api()
