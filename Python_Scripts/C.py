@@ -6,7 +6,7 @@ import os
 # Base folder
 
 # The simulation scripts write their output to `DIR_WORK_BASE` by default.
-DIR_WORK_BASE = '../SolverStudyWork'
+DIR_WORK_BASE = os.path.abspath('../SolverStudyWork')
 # The output of the study has been conserved in `DIR_CACHE_BASE`.
 DIR_CACHE_BASE = '../SolverStudyCache'
 # The `DIR_TEST_BASE` folder contains a smaller test model set
