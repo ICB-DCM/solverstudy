@@ -7,14 +7,16 @@ import time
 import statistics
 import pandas as pd
 
+from C import DIR_DATA_WHOLESTUDY, DIR_DATA_TOLERANCES, DIR_MODELS_AMICI_FINAL
 
-def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator, skip_indicator):
+
+def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator):
 
     # Create new folder structure for study
     if study_indicator == 1:
-        tolerance_path = '../../Benchmarking_of_numerical_ODE_integration_methods/Data/WholeStudy'
+        tolerance_path = DIR_DATA_WHOLESTUDY
     elif study_indicator == 2:
-        tolerance_path = '../../Benchmarking_of_numerical_ODE_integration_methods/Data/TolerancesStudy'
+        tolerance_path = DIR_DATA_TOLERANCES
     if not os.path.exists(tolerance_path):
         os.makedirs(tolerance_path)
 
@@ -26,7 +28,9 @@ def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator, skip_in
     s_solAlg = str(solAlg)
 
     # create .tsv file
-    tsv_table = pd.DataFrame(columns=['id', 't_intern_ms', 't_extern_ms', 'state_variables', 'reactions', 'parameters', 'status', 'error_message'])
+    tsv_table = pd.DataFrame(
+        columns=['id', 't_intern_ms', 't_extern_ms', 'state_variables',
+                 'reactions', 'parameters', 'status', 'error_message'])
 
     # set row counter for .tsv file
     counter = 0
@@ -35,50 +39,40 @@ def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator, skip_in
     sim_rep = 40
 
     # insert specific model properties as strings, e.g.:
-    if skip_indicator == 0:
-        base_path_sbml2amici = '../Models/amici_import'
-        base_path_sedml = '../Models/all_models'
-    elif skip_indicator == 0.33:
-        base_path_sbml2amici = '../../Models/amici_import'
-        base_path_sedml = '../../Benchmarking_of_numerical_ODE_integration_methods/sedml_models'
-    elif skip_indicator == 0.67:
-        base_path_sbml2amici = '../../Benchmarking_of_numerical_ODE_integration_methods/sbml2amici/correct_amici_models_paper'
-        base_path_sedml = '../Models/all_models'
-    elif skip_indicator == 1:
-        base_path_sbml2amici = '../../Benchmarking_of_numerical_ODE_integration_methods/sbml2amici/correct_amici_models_paper'
-        base_path_sedml = '../../Benchmarking_of_numerical_ODE_integration_methods/sedml_models'
+    base_path_sedml = DIR_MODELS_SEDML
+    base_path_amici = DIR_MODELS_AMICI_FINAL
 
-    # list of all directories + SBML files
-    list_directory_sedml = os.listdir(base_path_sbml2amici)
-    list_directory_sedml = sorted(list_directory_sedml)
+    # list only specific models ---- should only simulate those models where
+    #  sbml2amici worked!
+    for iModel in sorted(os.listdir(base_path_amici)):
 
-    # list only specific models ---- should only simulate those models where sbml to AMICI worked!
-    for iModel in list_directory_sedml:
-
-        if os.path.exists(base_path_sbml2amici + '/' + iModel):
-            list_files = os.listdir(base_path_sbml2amici + '/' + iModel)
-            list_files = sorted(list_files)
+        # TODO Y refactor, this is trivial
+        if os.path.exists(os.path.join(base_path_amici, iModel)):
+            list_files = sorted(
+                os.listdir(os.path.join(base_path_amici, iModel)))
 
             for iFile in list_files:
                 # Append additional row in .tsv file
                 tsv_table = tsv_table.append({}, ignore_index=True)
 
                 # save id in .tsv
-                tsv_table.loc[counter].id = '{' + iModel + '}' + '_' + '{' + iFile + '}'
-                tsv_table.loc[counter].setting = s_solAlg + '_' + s_atol + '_' + s_rtol
+                tsv_table.loc[counter].id = \
+                    '{' + iModel + '}' + '_' + '{' + iFile + '}'
+                tsv_table.loc[counter].setting = \
+                    s_solAlg + '_' + s_atol + '_' + s_rtol
 
                 try:
-                    # read in SBML file for reactions since AMICI has no functions to count all reactions
-                    if os.path.isfile(base_path_sedml + '/' + iModel + '/sbml_models/' + iFile + '.sbml'):
-                        file = libsbml.readSBML(base_path_sedml + '/' + iModel + '/sbml_models/' + iFile + '.sbml')
-                    else:
-                        file = libsbml.readSBML(base_path_sedml + '/' + iModel + '/sbml_models/' + iFile + '.xml')
+                    # read in SBML file for reactions since AMICI has no
+                    #  functions to count all reactions
+                    file = libsbml.readSBML(os.path.join(
+                        base_path_sedml, iModel, 'sbml_models',
+                        iFile + '.sbml'))
                     all_properties = file.getModel()
                     num_reactions = all_properties.getNumReactions()
                     tsv_table.loc[counter].reactions = num_reactions
 
                     # call function from 'execute_loadModels.py'
-                    model = all_settings(iModel, iFile, skip_indicator)
+                    model = all_settings(iModel, iFile)
 
                     # save state_variables, reactions and parameters
                     num_states = len(model.getStateNames())
@@ -97,7 +91,8 @@ def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator, skip_in
                     solver.setLinearMultistepMethod(solAlg)
                     solver.setMaxSteps(maxStep)
 
-                    # clock simulation time while running the simulation using pre-defined settings
+                    # clock simulation time while running the simulation
+                    #  using pre-defined settings
                     built_in_time = []
                     external_time = []
                     ind_time = []
@@ -137,7 +132,8 @@ def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator, skip_in
                         error_info_3 = str(e)
                         tsv_table.loc[counter].t_intern_ms = 'nan'
                         tsv_table.loc[counter].t_extern_ms = 'nan'
-                        tsv_table.loc[counter].error_message = 'Error_3: ' + error_info_3
+                        tsv_table.loc[counter].error_message = \
+                            'Error_3: ' + error_info_3
 
                         # raise counter
                         counter = counter + 1
@@ -146,10 +142,15 @@ def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator, skip_in
                     error_info_2 = str(e)
                     tsv_table.loc[counter].t_intern_ms = 'nan'
                     tsv_table.loc[counter].t_extern_ms = 'nan'
-                    tsv_table.loc[counter].error_message = 'Error_2: ' + error_info_2
+                    tsv_table.loc[counter].error_message = \
+                        'Error_2: ' + error_info_2
 
                     # raise counter
                     counter = counter + 1
 
     # save data frame as .tsv file
-    tsv_table.to_csv(path_or_buf=tolerance_path + '/' + s_solAlg + '_' + s_iter + '_' + s_linSol + '_' + s_atol + '_' + s_rtol + '.tsv', sep='\t', index=False)
+    tsv_table.to_csv(path_or_buf=os.path.join(
+        tolerance_path,
+        s_solAlg + '_' + s_iter + '_' + s_linSol + '_' + s_atol + '_' +
+        s_rtol + '.tsv'),
+        sep='\t', index=False)

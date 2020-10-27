@@ -1,21 +1,20 @@
 # execute script loadModels.py for model simulation
 
-from setTime_BioModels import *
-from loadModels import *
-from changeValues import *
+import os
+from setTime_BioModels import timePointsBioModels
+from loadModels import load_specific_model
+from changeValues import changeValues
 import numpy as np
 import libsedml
 
+from C import DIR_MODELS_SEDML, DIR_MODELS_BIOMODELS
 
-def all_settings(iModel, iFile, skip_indicator):
+
+def all_settings(iModel, iFile):
 
     # insert specific model properties as strings, e.g.:
-    if skip_indicator == 0:
-        BioModels_path = '../Models/BioModelsDatabase_models'
-        sedml_path = '../Models/all_models/' + iModel + '/' + iModel + '.sedml'
-    elif skip_indicator == 1:
-        BioModels_path = '../../Benchmarking_of_numerical_ODE_integration_methods/BioModelsDatabase_models'
-        sedml_path = '../../Benchmarking_of_numerical_ODE_integration_methods/sedml_models/' + iModel + '/' + iModel + '.sedml'
+    BioModels_path = DIR_MODELS_BIOMODELS
+    sedml_path = os.path.join(DIR_MODELS_SEDML, iModel, iModel + '.sedml')
 
     # iFile without extension
     try:
@@ -24,15 +23,16 @@ def all_settings(iModel, iFile, skip_indicator):
         'No extension'
 
     # call function from 'loadModels.py'
-    model = load_specific_model(iModel, iFile, skip_indicator)
+    model = load_specific_model(iModel, iFile)
 
     # call function from 'setTime_BioModels.py'
-    if os.path.exists(BioModels_path + '/' + iModel):
-        sim_start_time, sim_end_time, sim_num_time_points, y_bound = timePointsBioModels(iModel)
+    if os.path.exists(os.path.join(BioModels_path, iModel)):
+        sim_start_time, sim_end_time, sim_num_time_points, y_bound = \
+            timePointsBioModels(iModel)
     else:
         # call function from 'changeValues.py'
         # change parameter and species according to SEDML file
-        model = changeValues(model, iModel, iFile, skip_indicator)
+        model = changeValues(model, iModel, iFile)
 
         # tasks
         sedml_file = libsedml.readSedML(sedml_path)
@@ -67,6 +67,7 @@ def all_settings(iModel, iFile, skip_indicator):
             sim_num_time_points = all_simulations.getNumberOfPoints()
 
     # set time points for which we want to simulate the model
-    model.setTimepoints(np.linspace(sim_start_time, sim_end_time, sim_num_time_points))
+    model.setTimepoints(np.linspace(
+        sim_start_time, sim_end_time, sim_num_time_points))
 
     return model

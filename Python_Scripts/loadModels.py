@@ -4,15 +4,14 @@ import sys
 import os
 import importlib
 
+from C import DIR_MODELS_AMICI
 
-def load_specific_model(model_name, explicit_model, skip_indicator):
+
+def load_specific_model(model_name, explicit_model):
 
     # path to one specific model
-    if skip_indicator == 0:
-        path = '../Models/amici_import'
-    elif skip_indicator == 1:
-        path = '../../Benchmarking_of_numerical_ODE_integration_methods/sbml2amici/amici_models_newest_version_0.10.19'
-        model_output_dir = path + '/' + model_name + '/' + explicit_model
+    model_output_dir = os.path.join(
+        DIR_MODELS_AMICI, model_name, explicit_model)
 
     # load specific model
     sys.path.insert(0, os.path.abspath(model_output_dir))

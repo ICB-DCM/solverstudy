@@ -1,12 +1,14 @@
 # Main Manuscript Plot --- Figure 1
 # combined plot for study one
 
-import matplotlib.pyplot as plt
-import pandas as pd
-from averageTime import *
+import os
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
+from averageTime import averaging
 
+# TODO fix this
 # check whether the folder 'Benchmarking_of_numerical_ODE_integration_methods/Data' and
 # 'Benchmarking_of_numerical_ODE_integration_methods/json_files' exists
 if not os.path.exists('../../Benchmarking_of_numerical_ODE_integration_methods/Data/WholeStudy') and \

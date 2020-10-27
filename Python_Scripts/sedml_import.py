@@ -4,13 +4,15 @@ import urllib.request
 import shutil
 import json
 import logging
+
 from logging_util import LOGGER_NAME
+from C import DIR_MODELS_SEDML
 
 
 logger = logging.getLogger(LOGGER_NAME)
 
 BASE_URL = "https://jjj.bio.vu.nl"
-BASE_FOLDER = "../../Benchmarking_of_numerical_ODE_integration_methods/sedml_models"
+BASE_FOLDER = DIR_MODELS_SEDML
 
 
 def get_sedml_infos_from_rest_api():
@@ -24,20 +26,37 @@ def get_sedml_infos_from_rest_api():
     return sedml_infos
 
 
-def download_all_sedml_models_from_jws(base_folder=BASE_FOLDER):
+def download_all_sedml_models_from_jws(
+        base_folder: str = BASE_FOLDER, only_specified: bool = True):
     """
     Download all sedml models to xml files.
+
+    :param base_folder: The base folder to save the models to.
+    :param only_specified:
+        Whether to only download models specified in a file in this repository,
+        or to download all models from the repository.
     """
     # download list of sedml model infos
     sedml_infos = get_sedml_infos_from_rest_api()
+
+    specified_models = None
+    if only_specified:
+        print("Downloading only specified models")
+        with open("jws_sedml_models.txt") as f:
+            specified_models = f.readlines()
+        specified_models = set([x.rstrip('\n') for x in specified_models])
 
     # download every single sedml model
     for sedml_info in sedml_infos:
         # model identifier
         sedml_slug = sedml_info['slug']
+        # check whether this model is of interest
+        if only_specified and sedml_slug not in specified_models:
+            print(f"Skipping {sedml_slug} as not in list")
+            continue
         # an own folder for the sedml model
-        sedml_folder = base_folder + "/" + sedml_slug
-        sedml_file = sedml_folder + "/" + sedml_slug + ".sedml"
+        sedml_folder = os.path.join(base_folder, sedml_slug)
+        sedml_file = os.path.join(sedml_folder, sedml_slug + ".sedml")
         download_sedml_model(sedml_slug, sedml_file)
 
 
@@ -64,14 +83,14 @@ def download_sedml_model(sedml_slug, sedml_file):
             shutil.copyfileobj(response, f)
 
         # folder for sbml models
-        sbml_folder = sedml_folder + "/" + "sbml_models"
+        sbml_folder = os.path.join(sedml_folder, "sbml_models")
 
         # download all sbml models for the sedml model to file
         download_all_sbml_models_for_sedml_model(sedml_file, sbml_folder)
 
     except Exception as e:
-        logger.warn(f"Failed to download sedml model {sedml_slug} "
-                    f"from {sedml_url}, {e}.")
+        logger.warning(f"Failed to download sedml model {sedml_slug} "
+                       f"from {sedml_url}, {e}.")
 
 
 def download_all_sbml_models_for_sedml_model(sedml_file, sbml_folder):
@@ -91,7 +110,7 @@ def download_all_sbml_models_for_sedml_model(sedml_file, sbml_folder):
         sbml_entry = sedml_model.getModel(i_sbml_model)
         sbml_id = sbml_entry.getId()
         sbml_url = sbml_entry.getSource()
-        sbml_file = sbml_folder + "/" + sbml_id + ".sbml"
+        sbml_file = os.path.join(sbml_folder, sbml_id + ".sbml")
         download_sbml_model(sbml_url, sbml_file)
 
 
@@ -107,4 +126,4 @@ def download_sbml_model(sbml_url, sbml_file):
                 open(sbml_file, 'wb') as f:
             shutil.copyfileobj(response, f)
     except Exception as e:
-        logger.warn(f"Failed to download sbml model from {sbml_url}, {e}.")
+        logger.warning(f"Failed to download sbml model from {sbml_url}, {e}.")

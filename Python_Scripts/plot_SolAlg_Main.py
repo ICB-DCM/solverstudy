@@ -1,20 +1,17 @@
 # Main Manuscript Plot --- Figure 5
 # scatter plot of AM vs BDF
 
-import numpy as np
 import os
+import numpy as np
+from scipy.stats import gaussian_kde
 import pandas as pd
 import matplotlib.pyplot as plt
-from scipy.stats import gaussian_kde
-from averageTime import averaging
 from matplotlib.colors import LinearSegmentedColormap
 
+from averageTime import averaging
+from C import DIR_DATA_WHOLESTUDY
 
-# check whether the folder 'Benchmarking_of_numerical_ODE_integration_methods/Data' exists
-if not os.path.exists('../../Benchmarking_of_numerical_ODE_integration_methods/Data/WholeStudy'):
-    base_path = '../Data/WholeStudy'
-elif os.path.exists('../../Benchmarking_of_numerical_ODE_integration_methods/Data/WholeStudy'):
-    base_path = '../../Benchmarking_of_numerical_ODE_integration_methods/Data/WholeStudy'
+base_path = DIR_DATA_WHOLESTUDY
 Adams_base_path = base_path
 BDF_base_path = base_path
 
@@ -30,16 +27,18 @@ list_directory_adams = []
 list_directory_bdf = []
 for iFile in range(0, int(len(list_directory_general)/2)):
     adams_split = list_directory_general[iFile].split('_')
-    bdf_split = list_directory_general[iFile + int(len(list_directory_general)/2)].split('_')
+    bdf_split = list_directory_general[iFile + int(
+        len(list_directory_general)/2)].split('_')
     if adams_split[1] == '2' and adams_split[2] == '9':
         list_directory_adams.append(list_directory_general[iFile])
     if bdf_split[1] == '2'and bdf_split[2] == '9':
-        list_directory_bdf.append(list_directory_general[iFile + int(len(list_directory_general)/2)])
+        list_directory_bdf.append(list_directory_general[
+            iFile + int(len(list_directory_general)/2)])
 
 # create list of doubles for scatter plot
-adams_bdf_x = []          # red
+adams_bdf_x = [] # red
 adams_bdf_y = []
-bdf_adams_x = []          # green
+bdf_adams_x = [] # blue
 bdf_adams_y = []
 ratio_adams_bdf = []
 ratio_bdf_adams = []
@@ -53,7 +52,7 @@ num_states_equal = []
 num_states_adams_zero = []
 num_states_bdf_zero = []
 num_states_equal_zero = []
-equal_x = []              # yellow
+equal_x = [] # yellow
 equal_y = []
 adams_zero_x = []
 adams_zero_y = []
@@ -63,8 +62,10 @@ equal_zero_x = []
 equal_zero_y = []
 
 for iTsvFile in range(0, len(list_directory_adams)):
-    adams_tsv_file = pd.read_csv(Adams_base_path + '/' + list_directory_adams[iTsvFile], sep='\t')
-    bdf_tsv_file = pd.read_csv(BDF_base_path + '/' + list_directory_bdf[iTsvFile], sep='\t')
+    adams_tsv_file = pd.read_csv(os.path.join(
+        Adams_base_path, list_directory_adams[iTsvFile]), sep='\t')
+    bdf_tsv_file = pd.read_csv(os.path.join(
+        BDF_base_path, list_directory_bdf[iTsvFile]), sep='\t')
 
     # average from 211 to 167 models
     adams_tsv_file = averaging(adams_tsv_file)
@@ -159,22 +160,43 @@ kde_blue = gaussian_kde(grid_blue)(grid_blue)
 # Sort the points by density, so that the densest points are plotted last
 # orange
 ids_orange = kde_orange.argsort()
-adams_bdf_x, adams_bdf_y, kde_orange = np.array(adams_bdf_x)[ids_orange], np.array(adams_bdf_y)[ids_orange], np.array(kde_orange)[ids_orange]
+adams_bdf_x, adams_bdf_y, kde_orange = \
+    np.array(adams_bdf_x)[ids_orange],\
+    np.array(adams_bdf_y)[ids_orange],\
+    np.array(kde_orange)[ids_orange]
 # blue
 ids_blue = kde_blue.argsort()
-bdf_adams_x, bdf_adams_y, kde_blue = np.array(bdf_adams_x)[ids_blue], np.array(bdf_adams_y)[ids_blue], np.array(kde_blue)[ids_blue]
+bdf_adams_x, bdf_adams_y, kde_blue = \
+    np.array(bdf_adams_x)[ids_blue],\
+    np.array(bdf_adams_y)[ids_blue],\
+    np.array(kde_blue)[ids_blue]
 
 
 # plot scatter plot
 ax = plt.axes([0.08, 0.11, 0.37, 0.84])
 ax2 = plt.axes([0.57, 0.11, 0.40, 0.84])
 z = range(0,3000)
-plt1 = ax.scatter(adams_bdf_x, adams_bdf_y, s=marker_size, c=kde_orange, cmap=cm_1, label='AM faster: ' + str(round(len(adams_bdf_x) / len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %', zorder=10, clip_on=False, alpha=alpha)
-plt2 = ax.scatter(bdf_adams_x, bdf_adams_y, s=marker_size, c=kde_blue, cmap=cm_2, label='BDF faster: ' + str(round(len(bdf_adams_x)/len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %', zorder=10, clip_on=False, alpha=alpha)
-plt3 = ax.scatter(equal_x, equal_y, s=marker_size, c='grey', zorder=10, clip_on=False, alpha=alpha)
-plt4 = ax.scatter(adams_zero_x, adams_zero_y, c='orange', cmap=cm_2, marker='D', s=marker_size, facecolors='none', edgecolors='blue', zorder=10, clip_on=False)
-plt5 = ax.scatter(bdf_zero_x, bdf_zero_y, c='blue', cmap=cm_1, s=marker_size, facecolors='none', edgecolors='orange', marker='D', zorder=10, clip_on=False)
-plt6 = ax.scatter(equal_zero_x, equal_zero_y, s=marker_size, facecolors='none', edgecolors='grey', marker='D', zorder=10, clip_on=False)
+plt1 = ax.scatter(
+    adams_bdf_x, adams_bdf_y, s=marker_size, c=kde_orange, cmap=cm_1,
+    label='AM faster: ' + str(round(len(adams_bdf_x) / len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %',
+    zorder=10, clip_on=False, alpha=alpha)
+plt2 = ax.scatter(
+    bdf_adams_x, bdf_adams_y, s=marker_size, c=kde_blue, cmap=cm_2,
+    label='BDF faster: ' + str(round(len(bdf_adams_x) / len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %', zorder=10, clip_on=False, alpha=alpha)
+plt3 = ax.scatter(
+    equal_x, equal_y, s=marker_size, c='grey', zorder=10, clip_on=False,
+    alpha=alpha)
+plt4 = ax.scatter(
+    adams_zero_x, adams_zero_y, c='orange', cmap=cm_2, marker='D',
+    s=marker_size, facecolors='none', edgecolors='blue', zorder=10,
+    clip_on=False)
+plt5 = ax.scatter(
+    bdf_zero_x, bdf_zero_y, c='blue', cmap=cm_1, s=marker_size,
+    facecolors='none', edgecolors='orange', marker='D', zorder=10,
+    clip_on=False)
+plt6 = ax.scatter(
+    equal_zero_x, equal_zero_y, s=marker_size, facecolors='none',
+    edgecolors='grey', marker='D', zorder=10, clip_on=False)
 ax.plot(z, c='black', zorder=20)
 ax.set_xlim([0.2, 3000])
 ax.set_ylim([0.2, 3000])
@@ -273,8 +295,10 @@ ax2.set_xlabel('Computation time ratio AM / BDF', fontsize=fontsize)
 plt.xticks([-np.log10(400), -2, -1, 0, 1, 2, np.log10(400)],
            ['', '$10^{-2}$', '$10^{-1}$', '1', '$10^1$', '$10^2$',
             ''], fontsize=fontsize)
-ax2.text(-np.log10(600), 20, 'BDF failed', fontsize=fontsize, rotation=90, ha='center')
-ax2.text(np.log10(600), 20, 'AM failed', fontsize=fontsize, rotation=-90, ha='center')
+ax2.text(-np.log10(600), 20, 'BDF failed', fontsize=fontsize, rotation=90,
+         ha='center')
+ax2.text(np.log10(600), 20, 'AM failed', fontsize=fontsize, rotation=-90,
+         ha='center')
 
 # plot text 'B'
 ax.text(-0.08, 1, 'B', fontsize=fontsize + 5, transform=ax2.transAxes)
