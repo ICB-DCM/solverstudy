@@ -38,7 +38,7 @@ for iFile in range(0, int(len(list_directory_general)/2)):
 # create list of doubles for scatter plot
 adams_bdf_x = [] # red
 adams_bdf_y = []
-bdf_adams_x = [] # green
+bdf_adams_x = [] # blue
 bdf_adams_y = []
 ratio_adams_bdf = []
 ratio_bdf_adams = []

@@ -64,7 +64,6 @@ The AMICI version used for this project was 0.10.19. However, it was a commit fr
 ### 1.3 Import all sbml models to AMICI
 
 	sbml2amici.py
-	sbml2amici_BioModelsDatabase.py
 
 ### 1.4 Compare the state trajectories of the local simulation of all JWS models to the in-built simulation routine of JWS
 
