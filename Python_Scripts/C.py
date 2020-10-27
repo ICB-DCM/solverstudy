@@ -10,7 +10,7 @@ DIR_WORK_BASE = os.path.abspath('../SolverStudyWork')
 # The output of the study has been conserved in `DIR_CACHE_BASE`.
 DIR_CACHE_BASE = os.path.abspath('../SolverStudyCache')
 # The `DIR_TEST_BASE` folder contains a smaller test model set
-DIR_TEST_BASE = '../SolverStudyTest'
+DIR_TEST_BASE = os.path.abspath('../SolverStudyTest')
 
 # All scripts expect their in/output relative to `DIR_BASE`.
 DIR_BASE = os.getenv('SOLVERSTUDY_DIR_BASE', None)
