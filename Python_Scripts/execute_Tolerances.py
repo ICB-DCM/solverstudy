@@ -35,5 +35,4 @@ for iSolALg in trange(0, len(solAlg)):
                 solAlg[iSolALg],
                 maxStep,
                 study_indicator)
-            useless_variable = os.system('clear')
-            pass
+            os.system('clear')
