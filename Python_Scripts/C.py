@@ -27,6 +27,20 @@ elif DIR_BASE == 'TEST':
     DIR_BASE = DIR_TEST_BASE
 
 ###############################################################################
+# Configuration of the model list
+
+# List of JWS sedml models
+JWS_MODEL_FILE = os.getenv(
+    'SOLVERSTUDY_JWS_MODEL_FILE', 'jws_models.txt')
+# List of Biomodels model slugs
+BIOMODELS_MODEL_SLUG_FILE = os.getenv(
+    'SOLVERSTUDY_BIOMODELS_MODEL_SLUG_FILE', 'biomodels_model_slugs.txt')
+# List of Biomodels sbml models
+BIOMODELS_MODEL_FILE = os.getenv(
+    'SOLVERSTUDY_BIOMODELS_MODEL_FILE', 'biomodels_models.txt')
+INCLUDE_FROEHLICH = os.getenv('SOLVERSTUDY_INCLUDE_FROEHLICH', 'YES')
+
+###############################################################################
 # Data directories
 
 # Simulation data base folder

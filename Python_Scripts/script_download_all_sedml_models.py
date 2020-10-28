@@ -21,4 +21,4 @@ logger = logging.getLogger(LOGGER_NAME)
 logger.setLevel(logging.INFO)
 
 # download all models
-download_all_sedml_models_from_jws(only_specified=True)
+download_all_sedml_models_from_jws()
