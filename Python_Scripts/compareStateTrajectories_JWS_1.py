@@ -163,6 +163,10 @@ def _com_sta_traj_for_model(
         # Simulate model
         sim_data = amici.runAmiciSimulation(model, solver)
 
+        # If AMICI failed, we cannot write any trajectory
+        if sim_data['status'] < 0:
+            return
+
         # print some values
         # for key, value in sim_data.items():
         #       print('%12s: ' % key, value)
@@ -176,7 +180,7 @@ def _com_sta_traj_for_model(
         delete_ind = [
             iSpec for iSpec in range(sbml_model.getModel().getNumSpecies())
             if sbml_model.getModel().getSpecies(iSpec).getBoundaryCondition()
-               is True]
+            is True]
         state_trajectory = np.delete(state_trajectory, delete_ind, 1)
 
         # Convert ndarray 'state-trajectory' to data frame and save it
