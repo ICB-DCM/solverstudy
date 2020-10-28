@@ -70,18 +70,14 @@ The AMICI version used for this project was 0.10.19. However, it was a commit fr
 	compareStateTrajectories_JWS_1.py
 	compareStateTrajectories_JWS_2.py
 
-### 1.5 Derive the whole model collection for JWS and make a pre-selection of the biomodels based on their ability to be simulated 
-
-	correctStateTrajectories_JWS.py
-
 ### 1.6 Compare the state trajectories of the local simulation of all selected BioModels models who can be simulated to the in-built simulation routine of COPASI
 
 	compareStateTrajectories_BioModels_1.py
 	compareStateTrajectories_BioModels_2.py
 
-### 1.7 Finalize the model collection by excluding all biomodels which have wrong state trajectories
+### 1.7 Finalize the model collection by excluding all models that could not be imported of have non-matching trajectories
 
-	correctStateTrajectories_BioModels.py
+	selectModelsForMain.py
 
 To skip step 1, the whole benchmark collection is available in 'Solver_Study/Models'.
 If step 1 was skipped, the main folder 'Benchmarking_of_numerical_ODE_integration_methods' or the subfolders 'BioModelsDatabase_models', 'json_files', 'sbml2amici' and 'sedml_models' will not exist. 
