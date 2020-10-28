@@ -14,6 +14,7 @@ import os
 import urllib.request
 import requests
 import json
+import tempfile
 
 from execute_loadModels import all_settings
 from JWS_changeValues import JWS_changeValues
@@ -26,9 +27,9 @@ from C import (
 def _maybe_download_jws_simulation(
         iModel, iFile, sedml_path, sim_end_time):
     """Download the JWS simulation, unless already downloaded."""
-    json_save_path = os.path.join(
-        DIR_MODELS_TRAJ_REF, iModel, iFile)
-    tsv_file = os.path.join(json_save_path, 'JWS_simulation.csv')
+    json_save_path = os.path.join(DIR_MODELS_TRAJ_REF, iModel)
+    tsv_file = os.path.join(
+        json_save_path, iFile + '_reference_simulation.csv')
     if os.path.exists(tsv_file):
         print(f"JWS simulations for model {iModel} {iFile} already exist, "
               "skipping.")
@@ -66,7 +67,7 @@ def _maybe_download_jws_simulation(
 
     #### Save .json file
     print(f"JWS simulation URL: {url}")
-    json_file = os.path.join(json_save_path, 'JWS_simulation.json')
+    fd, json_file = tempfile.mkstemp()
     # JWS sometimes just returns an error output, then just retry
     while True:
         print("Downloading")
@@ -77,8 +78,11 @@ def _maybe_download_jws_simulation(
 
     #### write as .csv file
     json_2_csv = pd.read_json(json_file)
-    tsv_file = os.path.join(json_save_path, 'JWS_simulation.csv')
     json_2_csv.to_csv(tsv_file, sep='\t', index=False)
+
+    # remove temporary json file
+    os.close(fd)
+    os.remove(json_file)
 
     return tsv_file
 
@@ -96,8 +100,8 @@ def _com_sta_traj_for_model(
     # important paths
     json_save_path = os.path.join(
         DIR_MODELS_TRAJ_AMICI,
-        f'json_files_{MultistepMethod}_{atol_exp}_{rtol_exp}',
-        iModel, iFile)
+        f'trajectories_{MultistepMethod}_{atol_exp}_{rtol_exp}',
+        iModel)
     sedml_path = os.path.join(
         DIR_MODELS_SEDML, iModel, iModel + '.sedml')
     sbml_path = os.path.join(
@@ -110,16 +114,16 @@ def _com_sta_traj_for_model(
     else:
         # check if 'all_settings' works
         # TODO Y this is not good. JWS download should not depend on AMICI!!!
+        # Get whole model
         try:
-            # Get whole model
             model = all_settings(iModel, iFile)
-
-            # create folder
-            if not os.path.exists(json_save_path):
-                os.makedirs(json_save_path)
         except Exception as e:
-            print('Model ' + iModel + ' extension is missing! ', e)
+            print('Model ' + iModel + ' failed ', e)
             return
+
+        # create folder
+        if not os.path.exists(json_save_path):
+            os.makedirs(json_save_path)
 
         ######### jws simulation
         # Get time data with num_time_points == 100
@@ -181,7 +185,7 @@ def _com_sta_traj_for_model(
         df_state_trajectory = pd.DataFrame(columns=column_names,
                                            data=state_trajectory)
         df_state_trajectory.to_csv(os.path.join(
-            json_save_path, iFile + '_model_simulation.csv'),
+            json_save_path, iFile + '_amici_simulation.csv'),
             sep='\t')
 
 
