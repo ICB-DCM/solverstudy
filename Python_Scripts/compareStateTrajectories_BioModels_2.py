@@ -16,12 +16,12 @@ from C import (
     DIR_MODELS_TRAJ_REF)
 
 
-def compStaTraj_BioModels_2(MultistepMethod, atol_exp, rtol_exp):
+def compStaTraj_BioModels_2(MultistepMethod, atol, rtol):
     # upper and lower boundaries for the absolute and relative errors
     AbsError_1 = range(-20, 10)
     RelError_2 = range(-20, 10)
 
-    print(f"Setting: {MultistepMethod} {atol_exp} {rtol_exp}")
+    print(f"Setting: {MultistepMethod} {atol} {rtol}")
 
     # iterate over all error combinations
     for iAbsError in range(0, len(AbsError_1)):
@@ -61,11 +61,11 @@ def compStaTraj_BioModels_2(MultistepMethod, atol_exp, rtol_exp):
                         DIR_MODELS_TRAJ_REF, iModel)
                     old_json_save_path = os.path.join(
                         DIR_MODELS_TRAJ_AMICI,
-                        f'trajectories_{MultistepMethod}_{atol_exp}_{rtol_exp}',
+                        f'trajectories_{MultistepMethod}_{atol}_{rtol}',
                         iModel)
                     new_json_save_path = os.path.join(
                         DIR_MODELS_TRAJ_AMICI,
-                        f'comparisons_{MultistepMethod}_{atol_exp}_{rtol_exp}',
+                        f'comparisons_{MultistepMethod}_{atol}_{rtol}',
                         f'comparisons_{abs_str}_{rel_str}',
                         iModel)
 
@@ -129,13 +129,7 @@ for solAlg in [1, 2]:
 
     for iTolerance in Tolerance_combination:
         # split atol and rtol for naming purposes
-        atol_exp = str(iTolerance[0])
-        rtol_exp = str(iTolerance[1])
-        # this is used for jws, so also use it here. TODO Y refactor
-        if len(atol_exp) != 2:
-            atol_exp = '0' + atol_exp
-        if len(rtol_exp) != 2:
-            rtol_exp = '0' + rtol_exp
+        atol, rtol = iTolerance
 
         # call function
-        compStaTraj_BioModels_2(MultistepMethod, atol_exp, rtol_exp)
+        compStaTraj_BioModels_2(MultistepMethod, atol, rtol)

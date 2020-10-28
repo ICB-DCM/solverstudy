@@ -11,6 +11,8 @@ from C import DIR_DATA_WHOLESTUDY, DIR_DATA_TOLERANCES, DIR_MODELS_AMICI_FINAL
 
 
 def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator):
+    print("Simulate for", atol, rtol, linSol, iter, solAlg, maxStep,
+          study_indicator)
 
     # Create new folder structure for study
     if study_indicator == 1:
@@ -36,7 +38,7 @@ def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator):
     counter = 0
 
     # set number of repetitions for simulation
-    sim_rep = 40
+    sim_rep = 10
 
     # insert specific model properties as strings, e.g.:
     base_path_sedml = DIR_MODELS_SEDML
@@ -52,6 +54,8 @@ def simulate(atol, rtol, linSol, iter, solAlg, maxStep, study_indicator):
                 os.listdir(os.path.join(base_path_amici, iModel)))
 
             for iFile in list_files:
+                print("  Model:", iModel, iFile)
+
                 # Append additional row in .tsv file
                 tsv_table = tsv_table.append({}, ignore_index=True)
 

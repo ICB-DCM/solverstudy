@@ -12,8 +12,6 @@ import numpy as np
 import pandas as pd
 import os
 import urllib.request
-import requests
-import json
 import tempfile
 
 from execute_loadModels import all_settings
@@ -89,7 +87,7 @@ def _maybe_download_jws_simulation(
 
 def _com_sta_traj_for_model(
         iModel, iFile, MultistepMethod, linSol, iTolerance,
-        atol_exp, rtol_exp, json_dictionary, solAlg):
+        atol, rtol, solAlg):
     """Generate and save JWS and AMICI trajectories for the given model."""
 
     # Report the model currently worked on
@@ -100,7 +98,7 @@ def _com_sta_traj_for_model(
     # important paths
     json_save_path = os.path.join(
         DIR_MODELS_TRAJ_AMICI,
-        f'trajectories_{MultistepMethod}_{atol_exp}_{rtol_exp}',
+        f'trajectories_{MultistepMethod}_{atol}_{rtol}',
         iModel)
     sedml_path = os.path.join(
         DIR_MODELS_SEDML, iModel, iModel + '.sedml')
@@ -192,12 +190,6 @@ def _com_sta_traj_for_model(
 def compStaTraj():
     """Compute state trajectories with JWS and AMICI."""
 
-    # get name of jws reference
-    url = "https://jjj.bio.vu.nl/rest/models/?format=json"
-    view_source = requests.get(url)
-    json_string = view_source.text
-    json_dictionary = json.loads(json_string)
-
     # set settings for simulation
     for solAlg in [1, 2]:
         linSol = 9
@@ -214,12 +206,7 @@ def compStaTraj():
 
         for iTolerance in Tolerance_combination:
             # split atol and rtol for naming purposes
-            atol_exp = str(iTolerance[0])
-            rtol_exp = str(iTolerance[1])
-            if len(atol_exp) != 2:
-                atol_exp = '0' + atol_exp
-            if len(rtol_exp) != 2:
-                rtol_exp = '0' + rtol_exp
+            atol, rtol = iTolerance
 
             # get all models
             list_directory_amici = sorted(os.listdir(DIR_MODELS_AMICI))
@@ -235,7 +222,7 @@ def compStaTraj():
                     # compute trajectories for model
                     _com_sta_traj_for_model(
                         iModel, iFile, MultistepMethod, linSol, iTolerance,
-                        atol_exp, rtol_exp, json_dictionary, solAlg)
+                        atol, rtol, solAlg)
 
 
 # call function, starting with no models to delete

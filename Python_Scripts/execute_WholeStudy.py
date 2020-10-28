@@ -10,11 +10,7 @@
 ######################################################################################
 
 from SimAllSettings import *
-from tqdm import trange
 import os
-
-from C import DIR_MODELS_AMICI_FINAL
-
 
 # settings
 atol = [1e-8, 1e-6, 1e-12, 1e-10, 1e-14, 1e-16, 1e-8]
@@ -27,10 +23,10 @@ maxStep = 10000
 study_indicator = 1
 
 # run simulation
-for iSolALg in trange(0, len(solAlg)):
-    for iNonLin in trange(0, len(iter)):
-        for iLinSol in trange(0, len(linSol)):
-            for iToleranceTupel in trange(0, len(atol)):
+for iSolALg in range(0, len(solAlg)):
+    for iNonLin in range(0, len(iter)):
+        for iLinSol in range(0, len(linSol)):
+            for iToleranceTupel in range(0, len(atol)):
                 simulate(
                     atol[iToleranceTupel],
                     rtol[iToleranceTupel],

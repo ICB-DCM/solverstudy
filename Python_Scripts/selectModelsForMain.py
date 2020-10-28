@@ -4,7 +4,6 @@ import os
 import shutil
 import pandas as pd
 
-from setTime_BioModels import timePointsBioModels
 from C import (
     DIR_MODELS_AMICI, DIR_MODELS_AMICI_FINAL,
     DIR_MODELS_TRAJ_AMICI)
@@ -13,7 +12,7 @@ from C import (
 #  for BDF, abs_error = rel_error = 1e-4, abs_tolerance = rel_tolerance = 1e-12
 trajectory_path = os.path.join(
     DIR_MODELS_TRAJ_AMICI,
-    'comparisons_BDF_01e-12_01e-12/comparisons_1e-04_1e-04')
+    'comparisons_BDF_1e-12_1e-12/comparisons_1e-04_1e-04')
 # Folder with all amici models
 old_path = DIR_MODELS_AMICI
 # Folder for only the selected amici models

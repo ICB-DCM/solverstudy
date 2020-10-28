@@ -33,14 +33,9 @@ for solAlg in [1, 2]:
     for iTolerance in Tolerance_combination:
 
         # split atol and rtol for naming purposes
-        atol_exp = str(iTolerance[0])
-        rtol_exp = str(iTolerance[1])
-        if len(atol_exp) != 2:
-            atol_exp = '0' + atol_exp
-        if len(rtol_exp) != 2:
-            rtol_exp = '0' + rtol_exp
+        atol, rtol = iTolerance
 
-        print(f"Setting: {MultistepMethod} {atol_exp} {rtol_exp}")
+        print(f"Setting: {MultistepMethod} {atol} {rtol}")
 
         # iterate over all error combinations
         for iAbsError in range(0, len(AbsError_1)):
@@ -86,11 +81,11 @@ for solAlg in [1, 2]:
                             DIR_MODELS_TRAJ_REF, iModel)
                         old_json_save_path = os.path.join(
                             DIR_MODELS_TRAJ_AMICI,
-                            f'trajectories_{MultistepMethod}_{atol_exp}_{rtol_exp}',
+                            f'trajectories_{MultistepMethod}_{atol}_{rtol}',
                             iModel)
                         new_json_save_path = os.path.join(
                             DIR_MODELS_TRAJ_AMICI,
-                            f'comparisons_{MultistepMethod}_{atol_exp}_{rtol_exp}',
+                            f'comparisons_{MultistepMethod}_{atol}_{rtol}',
                             f'comparisons_{abs_str}_{rel_str}',
                             iModel)
 
