@@ -9,8 +9,7 @@
 #                                                                                    #
 ######################################################################################
 
-from SimAllSettings import *
-from tqdm import trange
+from SimAllSettings import simulate
 
 
 # settings
@@ -24,9 +23,10 @@ maxStep = 10000
 study_indicator = 2
 
 # run simulation
-for iSolALg in trange(0, len(solAlg)):
-    for iAtol in trange(0, len(atol)):
-        for iRtol in trange(0, len(rtol)):
+#TODO P: Use itertools for this!!!
+for iSolALg in range(0, len(solAlg)):
+    for iAtol in range(0, len(atol)):
+        for iRtol in range(0, len(rtol)):
             simulate(
                 atol[iAtol],
                 rtol[iRtol],
@@ -35,4 +35,3 @@ for iSolALg in trange(0, len(solAlg)):
                 solAlg[iSolALg],
                 maxStep,
                 study_indicator)
-            os.system('clear')

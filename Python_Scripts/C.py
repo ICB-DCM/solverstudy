@@ -27,6 +27,20 @@ elif DIR_BASE == 'TEST':
     DIR_BASE = DIR_TEST_BASE
 
 ###############################################################################
+# Configuration of the model list
+
+# List of JWS sedml models
+JWS_MODEL_FILE = os.getenv(
+    'SOLVERSTUDY_JWS_MODEL_FILE', 'jws_models.txt')
+# List of Biomodels model slugs
+BIOMODELS_MODEL_SLUG_FILE = os.getenv(
+    'SOLVERSTUDY_BIOMODELS_MODEL_SLUG_FILE', 'biomodels_model_slugs.txt')
+# List of Biomodels sbml models
+BIOMODELS_MODEL_FILE = os.getenv(
+    'SOLVERSTUDY_BIOMODELS_MODEL_FILE', 'biomodels_models.txt')
+INCLUDE_FROEHLICH = os.getenv('SOLVERSTUDY_INCLUDE_FROEHLICH', 'YES')
+
+###############################################################################
 # Data directories
 
 # Simulation data base folder
@@ -55,3 +69,6 @@ DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
 DIR_MODELS_TRAJ_AMICI = os.path.join(DIR_MODELS, 'trajectories_amici')
 # Folder for reference trajectories
 DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')
+# Folder for the original COPASI simulations of the biomodels models
+DIR_MODELS_TRAJ_REF_BIOMODELS = os.path.join(
+    DIR_MODELS, 'trajectories_reference_biomodels')

@@ -1,5 +1,5 @@
-# script 1 to compare state trajectories from JWS with trajectories of the AMICI simulation
-# => creates two important .tsv files
+"""Simulate trajectories for all jws models and load reference
+trajectories."""
 
 # Attention:    boundary conditions are not being simulated by JWS!
 
@@ -12,8 +12,7 @@ import numpy as np
 import pandas as pd
 import os
 import urllib.request
-import requests
-import json
+import tempfile
 
 from execute_loadModels import all_settings
 from JWS_changeValues import JWS_changeValues
@@ -26,9 +25,9 @@ from C import (
 def _maybe_download_jws_simulation(
         iModel, iFile, sedml_path, sim_end_time):
     """Download the JWS simulation, unless already downloaded."""
-    json_save_path = os.path.join(
-        DIR_MODELS_TRAJ_REF, iModel, iFile)
-    tsv_file = os.path.join(json_save_path, 'JWS_simulation.csv')
+    json_save_path = os.path.join(DIR_MODELS_TRAJ_REF, iModel)
+    tsv_file = os.path.join(
+        json_save_path, iFile + '_reference_simulation.csv')
     if os.path.exists(tsv_file):
         print(f"JWS simulations for model {iModel} {iFile} already exist, "
               "skipping.")
@@ -66,7 +65,7 @@ def _maybe_download_jws_simulation(
 
     #### Save .json file
     print(f"JWS simulation URL: {url}")
-    json_file = os.path.join(json_save_path, 'JWS_simulation.json')
+    fd, json_file = tempfile.mkstemp()
     # JWS sometimes just returns an error output, then just retry
     while True:
         print("Downloading")
@@ -77,15 +76,18 @@ def _maybe_download_jws_simulation(
 
     #### write as .csv file
     json_2_csv = pd.read_json(json_file)
-    tsv_file = os.path.join(json_save_path, 'JWS_simulation.csv')
     json_2_csv.to_csv(tsv_file, sep='\t', index=False)
+
+    # remove temporary json file
+    os.close(fd)
+    os.remove(json_file)
 
     return tsv_file
 
 
 def _com_sta_traj_for_model(
         iModel, iFile, MultistepMethod, linSol, iTolerance,
-        atol_exp, rtol_exp, json_dictionary, solAlg):
+        atol, rtol, solAlg):
     """Generate and save JWS and AMICI trajectories for the given model."""
 
     # Report the model currently worked on
@@ -96,8 +98,8 @@ def _com_sta_traj_for_model(
     # important paths
     json_save_path = os.path.join(
         DIR_MODELS_TRAJ_AMICI,
-        f'json_files_{MultistepMethod}_{atol_exp}_{rtol_exp}',
-        iModel, iFile)
+        f'trajectories_{MultistepMethod}_{atol}_{rtol}',
+        iModel)
     sedml_path = os.path.join(
         DIR_MODELS_SEDML, iModel, iModel + '.sedml')
     sbml_path = os.path.join(
@@ -110,16 +112,16 @@ def _com_sta_traj_for_model(
     else:
         # check if 'all_settings' works
         # TODO Y this is not good. JWS download should not depend on AMICI!!!
+        # Get whole model
         try:
-            # Get whole model
             model = all_settings(iModel, iFile)
-
-            # create folder
-            if not os.path.exists(json_save_path):
-                os.makedirs(json_save_path)
         except Exception as e:
-            print('Model ' + iModel + ' extension is missing! ', e)
+            print('Model ' + iModel + ' failed ', e)
             return
+
+        # create folder
+        if not os.path.exists(json_save_path):
+            os.makedirs(json_save_path)
 
         ######### jws simulation
         # Get time data with num_time_points == 100
@@ -161,6 +163,10 @@ def _com_sta_traj_for_model(
         # Simulate model
         sim_data = amici.runAmiciSimulation(model, solver)
 
+        # If AMICI failed, we cannot write any trajectory
+        if sim_data['status'] < 0:
+            return
+
         # print some values
         # for key, value in sim_data.items():
         #       print('%12s: ' % key, value)
@@ -174,25 +180,19 @@ def _com_sta_traj_for_model(
         delete_ind = [
             iSpec for iSpec in range(sbml_model.getModel().getNumSpecies())
             if sbml_model.getModel().getSpecies(iSpec).getBoundaryCondition()
-               is True]
+            is True]
         state_trajectory = np.delete(state_trajectory, delete_ind, 1)
 
         # Convert ndarray 'state-trajectory' to data frame and save it
         df_state_trajectory = pd.DataFrame(columns=column_names,
                                            data=state_trajectory)
         df_state_trajectory.to_csv(os.path.join(
-            json_save_path, iFile + '_model_simulation.csv'),
+            json_save_path, iFile + '_amici_simulation.csv'),
             sep='\t')
 
 
 def compStaTraj():
     """Compute state trajectories with JWS and AMICI."""
-
-    # get name of jws reference
-    url = "https://jjj.bio.vu.nl/rest/models/?format=json"
-    view_source = requests.get(url)
-    json_string = view_source.text
-    json_dictionary = json.loads(json_string)
 
     # set settings for simulation
     for solAlg in [1, 2]:
@@ -210,12 +210,7 @@ def compStaTraj():
 
         for iTolerance in Tolerance_combination:
             # split atol and rtol for naming purposes
-            atol_exp = str(iTolerance[0])
-            rtol_exp = str(iTolerance[1])
-            if len(atol_exp) != 2:
-                atol_exp = '0' + atol_exp
-            if len(rtol_exp) != 2:
-                rtol_exp = '0' + rtol_exp
+            atol, rtol = iTolerance
 
             # get all models
             list_directory_amici = sorted(os.listdir(DIR_MODELS_AMICI))
@@ -231,7 +226,7 @@ def compStaTraj():
                     # compute trajectories for model
                     _com_sta_traj_for_model(
                         iModel, iFile, MultistepMethod, linSol, iTolerance,
-                        atol_exp, rtol_exp, json_dictionary, solAlg)
+                        atol, rtol, solAlg)
 
 
 # call function, starting with no models to delete

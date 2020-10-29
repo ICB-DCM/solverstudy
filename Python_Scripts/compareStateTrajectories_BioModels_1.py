@@ -1,32 +1,23 @@
-# script 1 to compare state trajectories from BioModels with trajectories of the simulation created by COPASI
-# all data from COPASI is stored in the 'Data' folder of the repository
-# => creates two important .tsv files
+"""Simulate trajectories for all biomodels models and load reference
+trajectories."""
 
 # Attention:    boundary conditions are not being simulated by COPASI!
 # all trajectories simulated by COPASI were simulated with absolute and relative tolerances 1e-14 & 1e-14,
 # except three models where 1e-12 & 1e-12 had to be used.
 
-from execute_loadModels import *
+from execute_loadModels import all_settings
 import amici.plotting
 import numpy as np
 import libsbml
 import pandas as pd
 import os
-import sys
+
+from C import (
+    DIR_MODELS_BIOMODELS, DIR_MODELS_AMICI, DIR_MODELS_TRAJ_REF_BIOMODELS,
+    DIR_MODELS_TRAJ_REF, DIR_MODELS_SEDML, DIR_MODELS_TRAJ_AMICI)
 
 
 def compStaTraj_BioModels():
-
-    # important paths
-    COPASI_data = '../Data/BioModels_AMICI_state_trajectory_comparison/StateTrajectories_BioModels_COPASI_Data'
-    base_path = '../../Benchmarking_of_numerical_ODE_integration_methods'
-    all_biomodels_path = base_path + '/BioModelsDatabase_models'
-    simulable_biomodels_path = base_path + '/sbml2amici/correct_amici_models_paper'
-
-    # create folder structure
-    if not os.path.exists(base_path + '/biomodels_files'):
-        os.makedirs(base_path + '/biomodels_files')
-
     # set settings for simulation
     for solAlg in [1, 2]:
         linSol = 9
@@ -38,66 +29,79 @@ def compStaTraj_BioModels():
 
         for iTolerance in Tolerance_combination:
             # split atol and rtol for naming purposes
-            atol = iTolerance[0]
-            rtol = iTolerance[1]
-            _, save_atol = str('{:.1e}'.format(atol)).split('-')
-            _, save_rtol = str('{:.1e}'.format(rtol)).split('-')
+            atol, rtol = iTolerance
 
-            # get all models from different folders
-            list_directory_COPASI_bio = sorted(os.listdir(COPASI_data))
-            list_directory_simulable_bio = sorted(os.listdir(simulable_biomodels_path))
+            # get all AMICI compatible models
+            list_directory_amici = sorted(os.listdir(DIR_MODELS_AMICI))
 
-            # check if correct amici version with correct amount of simulable biomodels was used
-            if not list_directory_simulable_bio == list_directory_COPASI_bio:
-                print('The number of biomodels which were generated with the earlier '
-                      'python scripts does not match with the number of biomodels that '
-                      'have COPASI state trajectories! The problem could be '
-                      'that a newer AMICI version was used!')
-                sys.exit(0)
+            # iterate over the "sedml" models
+            for iMod in range(0, len(list_directory_amici)):
+                iModel = list_directory_amici[iMod]
+                print(iModel)
 
-            for iMod in range(0, len(list_directory_COPASI_bio)):
+                if not os.path.exists(
+                        os.path.join(DIR_MODELS_BIOMODELS, iModel)):
+                    print("Model is not part of Biomodels")
+                    continue
 
-                iModel = list_directory_COPASI_bio[iMod]
-                list_files = sorted(os.listdir(all_biomodels_path + '/' + iModel + '/sbml_models'))
+                list_files = sorted(os.listdir(os.path.join(
+                    DIR_MODELS_SEDML, iModel, 'sbml_models')))
 
+                # iterate over the sbml models
                 for iFile in list_files:
-
-                    # iFile without .xml extension
+                    # iFile without .sbml extension
                     iFile, extension = iFile.split('.', 1)
 
                     # more important model-dependent paths
-                    tsv_path = COPASI_data + '/' + iModel
-                    save_path = base_path + '/biomodels_files/StateTrajectories_BioModels_COPASI_Data/' + iModel
-                    sbml_path = all_biomodels_path + '/' + iModel + '/sbml_models/' + iFile + '.xml'
-
-                    # Open XML file
-                    sbml_model = libsbml.readSBML(sbml_path)
+                    #  path to the original copasi simulation
+                    sbml_path = os.path.join(
+                        DIR_MODELS_SEDML, iModel, 'sbml_models',
+                        iFile + '.sbml')
 
                     # Get whole model
-                    model = all_settings(iModel, iFile, 1)
+                    try:
+                        model = all_settings(iModel, iFile)
+                    except Exception as e:
+                        print(f'Model {iModel} failed ', e)
+                        continue
 
                     ######### COPASI simulatiom
                     # open new .csv file with COPASI simulation trajectories
-                    try:
-                        tsv_file = pd.read_csv(tsv_path + '/Original_COPASI_' + iModel + '_14_14.tsv', sep='\t')
-                    except:
-                        tsv_file = pd.read_csv(tsv_path + '/Original_COPASI_' + iModel + '_12_12.tsv', sep='\t')
+                    if os.path.exists(os.path.join(
+                            DIR_MODELS_TRAJ_REF_BIOMODELS,
+                            f'Original_COPASI_{iModel}_14_14.tsv')):
+                        tsv_file = pd.read_csv(os.path.join(
+                            DIR_MODELS_TRAJ_REF_BIOMODELS,
+                            f'Original_COPASI_{iModel}_14_14.tsv'),
+                            sep='\t')
+                    else:
+                        # TODO Y Why the alternative?
+                        tsv_file = pd.read_csv(os.path.join(
+                            DIR_MODELS_TRAJ_REF_BIOMODELS,
+                            f'Original_COPASI_{iModel}_12_12.tsv'),
+                            sep='\t')
 
                     # columns names of .tsv file and alter .tsv file
                     column_names = list(tsv_file.columns)
                     column_names.remove('# Time')
                     column_names = column_names[:len(column_names) - 1]
                     position = []
+
+                    # TODO Y ????
                     del_counter = 0
                     for iName in range(0, len(column_names)):
                         if 'Values[' in column_names[iName - del_counter]:
-                            column_names.remove(column_names[iName - del_counter])
+                            column_names.remove(
+                                column_names[iName - del_counter])
                             position.append(iName)
                             del_counter += 1
                     del tsv_file['# Time']
-                    tsv_file.drop(tsv_file.columns[len(tsv_file.columns) - 1], axis=1, inplace=True)
+                    tsv_file.drop(
+                        tsv_file.columns[len(tsv_file.columns) - 1],
+                        axis=1, inplace=True)
                     if len(position) != 0:
-                        tsv_file = tsv_file.drop(tsv_file.columns[position], axis=1)
+                        tsv_file = tsv_file.drop(
+                            tsv_file.columns[position], axis=1)
 
                     ########## model simulation
                     # Create solver instance
@@ -114,44 +118,60 @@ def compStaTraj_BioModels():
                         solver.setStabilityLimitFlag(False)
 
                     # Simulate model
+                    print("Simulating with AMICI")
                     sim_data = amici.runAmiciSimulation(model, solver)
 
-                    # np.set_printoptions(threshold=8, edgeitems=2)
-                    for key, value in sim_data.items():
-                        print('%12s: ' % key, value)
+                    # If AMICI failed, we cannot write any trajectory
+                    if sim_data['status'] < 0:
+                        continue
 
+                    # np.set_printoptions(threshold=8, edgeitems=2)
                     # Get state trajectory
                     state_trajectory = sim_data['x']
 
-                    # Delete all trajectories for boundary conditions
-                    delete_counter = 0
-                    all_properties = sbml_model.getModel()
-                    for iSpec in range(0, all_properties.getNumSpecies()):
-                        all_species = all_properties.getSpecies(iSpec)
-                        if all_species.getBoundaryCondition() == True:
-                            state_trajectory = state_trajectory.transpose()
-                            if delete_counter == 0:
-                                state_trajectory = np.delete(state_trajectory, iSpec, 0)
-                            else:
-                                state_trajectory = np.delete(state_trajectory, iSpec - delete_counter, 0)
-                            state_trajectory = state_trajectory.transpose()
-                            delete_counter = delete_counter + 1
+                    # prune out constant species for trajectory comparison
+                    # open sbml file
+                    sbml_model = libsbml.readSBML(sbml_path)
+                    delete_ind = [
+                        iSpec for iSpec in
+                        range(sbml_model.getModel().getNumSpecies())
+                        if sbml_model.getModel().getSpecies(
+                            iSpec).getBoundaryCondition()
+                           is True]
+                    state_trajectory = np.delete(
+                        state_trajectory, delete_ind, 1)
 
                     # Adjustment for the 'Froehlich2018' model
+                    # TODO Y Why?
                     if iModel == 'Froehlich2018':
-                        state_trajectory = np.delete(state_trajectory, np.s_[1177:1178], axis=1)
+                        state_trajectory = np.delete(
+                            state_trajectory, np.s_[1177:1178], axis=1)
 
                     # Convert ndarray 'state-trajectory' to data frame + save it and modified COPASI file
-                    df_state_trajectory = pd.DataFrame(columns=column_names, data=state_trajectory)
+                    df_state_trajectory = pd.DataFrame(
+                        columns=column_names, data=state_trajectory)
+
+                    # Store simulations
+                    amici_result_file = os.path.join(
+                        DIR_MODELS_TRAJ_AMICI,
+                        f'trajectories_{MultistepMethod}_{atol}_{rtol}',
+                        iModel, iFile + '_amici_simulation.csv')
+                    os.makedirs(os.path.dirname(amici_result_file),
+                                exist_ok=True)
                     df_state_trajectory.to_csv(
-                        f"{save_path}/AMICI_{iModel}_{MultistepMethod}_{save_atol}_{save_rtol}.tsv",
-                        sep='\t', index=False)
-                    tsv_file.to_csv(
-                        f"{save_path}/COPASI_{iModel}_{MultistepMethod}_{save_atol}_{save_rtol}.tsv",
-                        sep='\t', index=False)
+                        amici_result_file, sep='\t', index=False)
+
+                    # TODO Y only do this once if at all
+                    ref_result_file = os.path.join(
+                        DIR_MODELS_TRAJ_REF, iModel,
+                        iFile + '_reference_simulation.csv')
+                    if not os.path.exists(ref_result_file):
+                        os.makedirs(os.path.dirname(ref_result_file),
+                                    exist_ok=True)
+                        tsv_file.to_csv(ref_result_file, sep='\t', index=False)
 
                     # to know where one is
-                    print('Model ' + iModel + ' successfully completed!')
+                    print(f'Model {iModel} successfully completed')
 
 
 # call function with no models to delete

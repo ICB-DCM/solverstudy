@@ -1,5 +1,5 @@
-# script 2 to compare state trajectories from JWS with trajectories of the simulation
-# => compares state trajectories
+"""Compare the AMICI and JWS trajectories, check for each model whether
+to accept."""
 
 # Attention:    boundary conditions are not being simulated by JWS!
 
@@ -33,19 +33,9 @@ for solAlg in [1, 2]:
     for iTolerance in Tolerance_combination:
 
         # split atol and rtol for naming purposes
-        atol_exp = str(iTolerance[0])
-        rtol_exp = str(iTolerance[1])
-        if len(atol_exp) != 2:
-            atol_exp = '0' + atol_exp
-        if len(rtol_exp) != 2:
-            rtol_exp = '0' + rtol_exp
+        atol, rtol = iTolerance
 
-        # create folder for all results for the given method and tolerances
-        results_dir_base = os.path.join(
-            DIR_MODELS_TRAJ_AMICI,
-            f'json_files_all_results_{MultistepMethod}_{atol_exp}_{rtol_exp}')
-        if not os.path.exists(results_dir_base):
-            os.makedirs(results_dir_base)
+        print(f"Setting: {MultistepMethod} {atol} {rtol}")
 
         # iterate over all error combinations
         for iAbsError in range(0, len(AbsError_1)):
@@ -62,14 +52,7 @@ for solAlg in [1, 2]:
                 abs_str = '{:.0e}'.format(float(abs_error))
                 rel_str = '{:.0e}'.format(float(rel_error))
 
-                print(f"TOLERANCES: abs={abs_str} rel={rel_str}")
-
-                # create folder for all .csv files of the results
-                #  for the given errors
-                results_dir = os.path.join(
-                    results_dir_base, f'json_files_{abs_str}_{rel_str}')
-                if not os.path.exists(results_dir):
-                    os.makedirs(results_dir)
+                print(f"  Tolerances: abs={abs_str} rel={rel_str}")
 
                 # set counter
                 counter = 0
@@ -84,132 +67,81 @@ for solAlg in [1, 2]:
                 # iterate over all models again
                 for iMod in range(0, len(list_directory_amici)):
                     iModel = list_directory_amici[iMod]
+                    if os.path.exists(
+                            os.path.join(DIR_MODELS_BIOMODELS, iModel)):
+                        continue
+
                     list_files = sorted(os.listdir(os.path.join(
-                        DIR_MODELS_SEDML, iModel, 'sbml_models')))
+                        DIR_MODELS_AMICI, iModel)))
 
                     for iFile in list_files:
-                        print(f"    {iModel} :: {iFile}")
-
-                        # iFile without .sbml extension
-                        iFile, extension = iFile.split('.', 1)
-
                         # important paths
                         # TODO Y I fixed the path (how did this work???)
                         reference_path = os.path.join(
-                            DIR_MODELS_TRAJ_REF, iModel, iFile)
+                            DIR_MODELS_TRAJ_REF, iModel,
+                            iFile + '_reference_simulation.csv')
                         old_json_save_path = os.path.join(
                             DIR_MODELS_TRAJ_AMICI,
-                            f'json_files_{MultistepMethod}_'
-                            f'{atol_exp}_{rtol_exp}',
-                            iModel, iFile)
+                            f'trajectories_{MultistepMethod}_{atol}_{rtol}',
+                            iModel,
+                            iFile + '_amici_simulation.csv')
                         new_json_save_path = os.path.join(
                             DIR_MODELS_TRAJ_AMICI,
-                            f'json_files_all_results_{MultistepMethod}_'
-                            f'{atol_exp}_{rtol_exp}',
-                            f'json_files_{abs_str}_{rel_str}',
-                            iModel, iFile)
-                        sedml_path = os.path.join(
-                            DIR_MODELS_SEDML, iModel, iModel + '.sedml')
-                        sbml_path = os.path.join(
-                            DIR_MODELS_SEDML, iModel, 'sbml_models',
-                            iFile + '.sbml')
-                        BioModels_path = DIR_MODELS_BIOMODELS
+                            f'comparisons_{MultistepMethod}_{atol}_{rtol}',
+                            f'comparisons_{abs_str}_{rel_str}',
+                            iModel)
 
-                        if os.path.exists(
-                                os.path.join(BioModels_path, iModel)):
-                            print('Model is still not part of JWS-database!')
+                        if not os.path.exists(old_json_save_path):
+                            continue
+
+                        # create folder
+                        if not os.path.exists(new_json_save_path):
+                            os.makedirs(new_json_save_path)
+
+                        # open jws_simulation .csv file
+                        tsv_file = pd.read_csv(
+                            reference_path,
+                            sep='\t')
+
+                        # open model_simulation .csv file
+                        df_state_trajectory = pd.read_csv(
+                            old_json_save_path,
+                            index_col=0,
+                            sep='\t')
+
+                        # TODO Y tidy this up
+                        tsv_file.drop('time', axis=1, inplace=True)
+
+                        if tsv_file.shape != df_state_trajectory.shape:
+                            raise ValueError(
+                                "Simulation file shapes do not match for "
+                                f"{iModel} {iFile}")
+
+                        # comparison
+                        df_whole_error = pd.DataFrame(
+                            columns=['trajectories_match'],
+                            data=np.zeros((1, 1)))
+
+                        df_abs = (df_state_trajectory - tsv_file).abs()
+                        df_rel = (df_abs / df_state_trajectory).abs()
+                        df_single_error = (
+                            (df_abs <= abs_error) | (df_rel <= rel_error))
+
+                        if df_single_error.all().all():
+                            df_whole_error.at[0, 'trajectories_match'] = 1
+                            counter = counter + 1
                         else:
-                            if not os.path.exists(old_json_save_path):
-                                print('Model ' + iModel + '_' + iFile + ' crashed some other way!')
-                            else:
-                                # create folder
-                                if not os.path.exists(os.path.join(
-                                        results_dir, iModel, iFile)):
-                                    os.makedirs(os.path.join(
-                                        results_dir, iModel, iFile))
+                            df_whole_error.at[0, 'trajectories_match'] = 0
 
-                                # open jws_simulation .csv file
-                                tsv_file = pd.read_csv(os.path.join(
-                                    reference_path, 'JWS_simulation.csv'),
-                                    sep='\t')
-
-                                # open model_simulation .csv file
-                                df_state_trajectory = pd.read_csv(os.path.join(
-                                    old_json_save_path,
-                                    iFile + '_model_simulation.csv'),
-                                    sep='\t')
-
-                                # columns names of .tsv file
-                                column_names = list(tsv_file.columns)
-                                column_names.remove('time')
-                                del tsv_file['time']
-
-                                # comparison
-                                amount_col = len(column_names)
-                                first_col = column_names[0]
-                                amount_row = len(df_state_trajectory[first_col])
-                                df_single_error = pd.DataFrame(
-                                    columns=column_names,
-                                    data=np.zeros((amount_row, amount_col)))
-                                df_trajectory_error = pd.DataFrame(
-                                    columns=column_names,
-                                    data=np.zeros((1, amount_col)))
-                                df_whole_error = pd.DataFrame(
-                                    columns=['trajectories_match'],
-                                    data=np.zeros((1, 1)))
-
-                                # single error
-                                for iCol in column_names:
-                                    for iRow in range(0, amount_row):
-                                        rel_tol = abs(
-                                            (df_state_trajectory.at[iRow, iCol] - tsv_file.at[iRow,iCol]) /
-                                             df_state_trajectory.at[iRow, iCol])
-                                        abs_tol = abs(df_state_trajectory.at[iRow, iCol] - tsv_file.at[iRow,iCol])
-                                        if rel_tol <= rel_error or abs_tol <= abs_error:
-                                            df_single_error.at[iRow, iCol] = 1
-                                        else:
-                                            df_single_error.at[iRow, iCol] = 0
-
-                                # trajectory error
-                                for iCol in column_names:
-                                    if sum(df_single_error[iCol]) == amount_row:
-                                        df_trajectory_error.at[0, iCol] = 1
-                                    else:
-                                        df_trajectory_error.at[0, iCol] = 0
-
-                                # whole error
-                                error_list = []
-                                for iCol in column_names:
-                                    error_list.append(df_trajectory_error.at[0, iCol])
-                                if sum(error_list) == amount_col:
-                                    df_whole_error.at[0, 'trajectories_match'] = 1
-                                else:
-                                    df_whole_error.at[0, 'trajectories_match'] = 0
-
-                                # adjust counter
-                                if df_whole_error.at[0, 'trajectories_match'] == 1:
-                                    print('matching state trajectory!')
-                                    counter = counter + 1
-
-                                # save outcome
-                                df_single_error.to_csv(
-                                    path_or_buf=os.path.join(
-                                        new_json_save_path,
-                                        'single_error.csv'),
-                                    sep='\t', index=False)
-                                df_trajectory_error.to_csv(
-                                    path_or_buf=os.path.join(
-                                        new_json_save_path,
-                                        'trajectory_error.csv'),
-                                    sep='\t', index=False)
-                                df_whole_error.to_csv(
-                                    path_or_buf=os.path.join(
-                                        new_json_save_path,
-                                        'whole_error.csv'),
-                                    sep='\t', index=False)
+                        # save outcome
+                        df_whole_error.to_csv(
+                            path_or_buf=os.path.join(
+                                new_json_save_path,
+                                iFile + '_whole_error.csv'),
+                            sep='\t', index=False)
 
                 # print number of all models with correct state trajectories
-                print("Amount of models with correct state trajectories: "
+                print("  Amount of models with correct state trajectories: "
                       f"{str(counter)}")
                 # print time needed for the comparison
-                print(f"Time needed: {str(time.time() - start_time)}")
+                print(f"  Time needed: {str(time.time() - start_time)}")
