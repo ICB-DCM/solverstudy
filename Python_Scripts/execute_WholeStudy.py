@@ -35,4 +35,3 @@ for iSolALg in range(0, len(solAlg)):
                     solAlg[iSolALg],
                     maxStep,
                     study_indicator)
-                pass
