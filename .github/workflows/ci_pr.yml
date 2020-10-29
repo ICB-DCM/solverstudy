@@ -14,7 +14,6 @@ jobs:
       - name: Install apt dependencies
         run: |
           which swig
-          swig --version
           sudo apt-get install \
             swig3.0 libatlas-base-dev libhdf5-serial-dev
           # sudo ln -s /usr/bin/swig3.0 /usr/bin/swig
