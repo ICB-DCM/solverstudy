@@ -1,6 +1,5 @@
-# script 1 to compare state trajectories from BioModels with trajectories of the simulation created by COPASI
-# all data from COPASI is stored in the 'Data' folder of the repository
-# => creates two important .tsv files
+"""Simulate trajectories for all biomodels models and load reference
+trajectories."""
 
 # Attention:    boundary conditions are not being simulated by COPASI!
 # all trajectories simulated by COPASI were simulated with absolute and relative tolerances 1e-14 & 1e-14,

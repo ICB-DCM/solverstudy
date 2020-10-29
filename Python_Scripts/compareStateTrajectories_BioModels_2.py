@@ -1,6 +1,5 @@
-# script 2 to compare state trajectories from BioModels with trajectories of the simulation created by COPASI
-# all data from COPASI is stored in the 'Data' folder of the repository
-# => creates two important .tsv files
+"""Compare the AMICI and COPASI trajectories, check for each model whether
+to accept."""
 
 # Attention:    boundary conditions are not being simulated by COPASI!
 # all trajectories simulated by COPASI were simulated with absolute and

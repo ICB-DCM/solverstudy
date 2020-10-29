@@ -1,5 +1,5 @@
-# script 1 to compare state trajectories from JWS with trajectories of the AMICI simulation
-# => creates two important .tsv files
+"""Simulate trajectories for all jws models and load reference
+trajectories."""
 
 # Attention:    boundary conditions are not being simulated by JWS!
 

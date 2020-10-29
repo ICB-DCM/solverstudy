@@ -1,5 +1,5 @@
-# script 2 to compare state trajectories from JWS with trajectories of the simulation
-# => compares state trajectories
+"""Compare the AMICI and JWS trajectories, check for each model whether
+to accept."""
 
 # Attention:    boundary conditions are not being simulated by JWS!
 
