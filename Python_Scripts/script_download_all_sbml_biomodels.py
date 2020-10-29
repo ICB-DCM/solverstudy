@@ -41,7 +41,7 @@ model_names = [x.rstrip('\n') for x in model_names]
 download_specified_models_from_biomodels(model_ids, model_names)
 
 # add Froehlich model from github
-if INCLUDE_FROEHLICH == 'Yes':
+if INCLUDE_FROEHLICH == 'YES':
     add_Froehlich2018()
 
 # create an additional folder consisting of all models form the BioModels
