@@ -23,6 +23,7 @@ def compStaTraj_BioModels_2(MultistepMethod, atol, rtol):
     print(f"Setting: {MultistepMethod} {atol} {rtol}")
 
     # iterate over all error combinations
+    # TODO P Iterate over only ONE quantity here
     for iAbsError in range(0, len(AbsError_1)):
         for iRelError in range(0, len(RelError_2)):
             if iAbsError != iRelError:
