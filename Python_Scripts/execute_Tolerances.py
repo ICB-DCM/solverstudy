@@ -23,6 +23,7 @@ maxStep = 10000
 study_indicator = 2
 
 # run simulation
+#TODO P: Use itertools for this!!!
 for iSolALg in range(0, len(solAlg)):
     for iAtol in range(0, len(atol)):
         for iRtol in range(0, len(rtol)):
