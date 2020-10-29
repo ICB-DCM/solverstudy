@@ -127,9 +127,6 @@ def compStaTraj_BioModels():
                         continue
 
                     # np.set_printoptions(threshold=8, edgeitems=2)
-                    #for key, value in sim_data.items():
-                    #    print('%12s: ' % key, value)
-
                     # Get state trajectory
                     state_trajectory = sim_data['x']
 
