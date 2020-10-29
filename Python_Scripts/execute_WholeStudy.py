@@ -9,8 +9,7 @@
 #                                                                                    #
 ######################################################################################
 
-from SimAllSettings import *
-import os
+from SimAllSettings import simulate
 
 # settings
 atol = [1e-8, 1e-6, 1e-12, 1e-10, 1e-14, 1e-16, 1e-8]
@@ -35,5 +34,4 @@ for iSolALg in range(0, len(solAlg)):
                     solAlg[iSolALg],
                     maxStep,
                     study_indicator)
-                useless_variable = os.system('clear')
                 pass

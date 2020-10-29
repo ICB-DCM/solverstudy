@@ -122,6 +122,10 @@ def compStaTraj_BioModels():
                     print("Simulating with AMICI")
                     sim_data = amici.runAmiciSimulation(model, solver)
 
+                    # If AMICI failed, we cannot write any trajectory
+                    if sim_data['status'] < 0:
+                        continue
+
                     # np.set_printoptions(threshold=8, edgeitems=2)
                     #for key, value in sim_data.items():
                     #    print('%12s: ' % key, value)

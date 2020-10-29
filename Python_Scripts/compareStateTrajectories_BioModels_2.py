@@ -58,11 +58,13 @@ def compStaTraj_BioModels_2(MultistepMethod, atol, rtol):
                 # iterate over all sbml models
                 for iFile in list_files:
                     reference_path = os.path.join(
-                        DIR_MODELS_TRAJ_REF, iModel)
+                        DIR_MODELS_TRAJ_REF, iModel,
+                        iFile + '_reference_simulation.csv')
                     old_json_save_path = os.path.join(
                         DIR_MODELS_TRAJ_AMICI,
                         f'trajectories_{MultistepMethod}_{atol}_{rtol}',
-                        iModel)
+                        iModel,
+                        iFile + '_amici_simulation.csv')
                     new_json_save_path = os.path.join(
                         DIR_MODELS_TRAJ_AMICI,
                         f'comparisons_{MultistepMethod}_{atol}_{rtol}',
@@ -77,14 +79,12 @@ def compStaTraj_BioModels_2(MultistepMethod, atol, rtol):
                         os.makedirs(new_json_save_path)
 
                     # open COPASI_simulation .tsv file
-                    tsv_file = pd.read_csv(os.path.join(
-                        reference_path,
-                        iFile + '_reference_simulation.csv'), sep='\t')
+                    tsv_file = pd.read_csv(
+                        reference_path, sep='\t')
 
                     # open AMICI model_simulation .tsv file
-                    df_state_trajectory = pd.read_csv(os.path.join(
+                    df_state_trajectory = pd.read_csv(
                         old_json_save_path,
-                        iFile + '_amici_simulation.csv'),
                         sep='\t')
 
                     if tsv_file.shape != df_state_trajectory.shape:

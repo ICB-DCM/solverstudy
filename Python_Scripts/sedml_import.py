@@ -6,7 +6,7 @@ import json
 import logging
 
 from logging_util import LOGGER_NAME
-from C import DIR_MODELS_SEDML
+from C import DIR_MODELS_SEDML, JWS_MODEL_FILE
 
 
 logger = logging.getLogger(LOGGER_NAME)
@@ -27,22 +27,19 @@ def get_sedml_infos_from_rest_api():
 
 
 def download_all_sedml_models_from_jws(
-        base_folder: str = BASE_FOLDER, only_specified: bool = True):
+        base_folder: str = BASE_FOLDER):
     """
     Download all sedml models to xml files.
 
     :param base_folder: The base folder to save the models to.
-    :param only_specified:
-        Whether to only download models specified in a file in this repository,
-        or to download all models from the repository.
     """
     # download list of sedml model infos
     sedml_infos = get_sedml_infos_from_rest_api()
 
     specified_models = None
-    if only_specified:
+    if JWS_MODEL_FILE:
         print("Downloading only specified models")
-        with open("jws_sedml_models.txt") as f:
+        with open(JWS_MODEL_FILE) as f:
             specified_models = f.readlines()
         specified_models = set([x.rstrip('\n') for x in specified_models])
 
@@ -51,7 +48,7 @@ def download_all_sedml_models_from_jws(
         # model identifier
         sedml_slug = sedml_info['slug']
         # check whether this model is of interest
-        if only_specified and sedml_slug not in specified_models:
+        if JWS_MODEL_FILE and sedml_slug not in specified_models:
             print(f"Skipping {sedml_slug} as not in list")
             continue
         # an own folder for the sedml model

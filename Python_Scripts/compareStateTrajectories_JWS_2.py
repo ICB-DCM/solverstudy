@@ -78,11 +78,13 @@ for solAlg in [1, 2]:
                         # important paths
                         # TODO Y I fixed the path (how did this work???)
                         reference_path = os.path.join(
-                            DIR_MODELS_TRAJ_REF, iModel)
+                            DIR_MODELS_TRAJ_REF, iModel,
+                            iFile + '_reference_simulation.csv')
                         old_json_save_path = os.path.join(
                             DIR_MODELS_TRAJ_AMICI,
                             f'trajectories_{MultistepMethod}_{atol}_{rtol}',
-                            iModel)
+                            iModel,
+                            iFile + '_amici_simulation.csv')
                         new_json_save_path = os.path.join(
                             DIR_MODELS_TRAJ_AMICI,
                             f'comparisons_{MultistepMethod}_{atol}_{rtol}',
@@ -97,24 +99,23 @@ for solAlg in [1, 2]:
                             os.makedirs(new_json_save_path)
 
                         # open jws_simulation .csv file
-                        tsv_file = pd.read_csv(os.path.join(
+                        tsv_file = pd.read_csv(
                             reference_path,
-                            iFile + '_reference_simulation.csv'),
                             sep='\t')
 
                         # open model_simulation .csv file
-                        df_state_trajectory = pd.read_csv(os.path.join(
+                        df_state_trajectory = pd.read_csv(
                             old_json_save_path,
-                            iFile + '_amici_simulation.csv'),
                             index_col=0,
                             sep='\t')
 
-                        if tsv_file.shape != df_state_trajectory.shape:
-                            raise ValueError(
-                                "Simulation file shapes do not match")
-
                         # TODO Y tidy this up
                         tsv_file.drop('time', axis=1, inplace=True)
+
+                        if tsv_file.shape != df_state_trajectory.shape:
+                            raise ValueError(
+                                "Simulation file shapes do not match for "
+                                f"{iModel} {iFile}")
 
                         # comparison
                         df_whole_error = pd.DataFrame(
