@@ -4,10 +4,32 @@ This repository contains all python files and (supplementary) figures for the ma
 
 ## Preparations
 
-The study was performed on Linux (Ubuntu 20.10) with Anaconda python 3.8.5. All scripts can be found under `Python_Scripts`, which we henceforth assume to be the working directory (`cd Python_Scripts`).
+The study was performed on Linux (Ubuntu 20.10) with Anaconda python 3.8.5. 
+All scripts can be found under `Python_Scripts`, which we henceforth assume to be the working directory (`cd Python_Scripts`).
+We recommend the installation of a virtual environment using conda:
+
+    conda create -n solverstudy python=3.8
+    conda activate solverstudy
+
 All required dependencies can be installed via
 
     pip install -r ../Software/requirements.txt
+
+In the case of an virtual environment, the requirements must be 
+installed to the specific conda environment, i.e.,
+
+    ~/anaconda/envs/solverstudy/bin/pip install -r ../Software/requirements.txt
+
+or, if miniconda is used instead of anaconda:
+
+    ~/miniconda3/envs/solverstudy/bin/pip install -r ../Software/requirements.txt
+
+Furthermore, since AMICI requires BLAS support and swig, those need to be 
+installed if a new virtual environment was created. This done for anaconda 
+(and with the respective changes for miniconda3) environments (on Linux) via
+
+    conda install -n solverstudy -c conda-forge openblas
+    conda install -n solverstudy -c anaconda swig
 
 The study writes and loads its data from a data base folder, which can be configured via the environment variable
 
