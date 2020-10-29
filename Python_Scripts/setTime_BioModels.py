@@ -1,7 +1,15 @@
-# set time data for all successfully imported models from BioModels-Database
+"""Set time data for all successfully imported models from biomodels."""
 
 
 def timePointsBioModels(iModel):
+    """Specify simulation time points for biomodels models.
+
+    Return a tuple of start time, end time, number of simulation points,
+    and a good upper boundary on the simulations. The last thing is useful
+    for plotting, otherwise not needed.
+
+    Note: Will fail if the model is not in the list maintained here.
+    """
 
     if iModel == 'Bungay2003':
         sim_start_time = 0
