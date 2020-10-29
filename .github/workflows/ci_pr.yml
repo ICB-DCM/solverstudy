@@ -6,21 +6,31 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8.5
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.8.5
+
+      - name: Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache
+          key: {{ runner.os }}-ci
+
       - name: Install apt dependencies
         run: |
           which swig
           sudo apt-get install \
             swig3.0 libatlas-base-dev libhdf5-serial-dev
-          #sudo ln -s /usr/bin/swig3.0 /usr/bin/swig
+
       - name: Install pip dependencies
         run: |
           pip install -r requirements.txt
+
       - name: Run tests
+        timeout-minutes: 50
         run: |
           bash Test/run_tests.sh
-
