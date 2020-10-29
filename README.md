@@ -25,7 +25,7 @@ or, if miniconda is used instead of anaconda:
     ~/miniconda3/envs/solverstudy/bin/pip install -r ../Software/requirements.txt
 
 Furthermore, since AMICI requires BLAS support and swig, those need to be 
-installed if a new virtual environment was created. This done for anaconda 
+installed if a new virtual environment was created. This is done for anaconda 
 (and with the respective changes for miniconda3) environments (on Linux) via
 
     conda install -n solverstudy -c conda-forge openblas
