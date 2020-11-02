@@ -11,9 +11,10 @@ files belonging to one benchmark model.
 import libsedml
 import libsbml
 import os
+import shutil
 
 from C import (DIR_MODELS_SEDML, DIR_MODELS_FINAL)
-from setTime_BioModels import setTimeBioModels
+from setTime_BioModels import timePointsBioModels
 
 
 # get all models
@@ -31,10 +32,29 @@ def regroup_models():
         if os.path.exists(sedml_file):
             benchmark_models = _check_submodels(sedml_file, sbml_files)
         else:
-            sim_start, sim_end, num_time_points = setTimeBioModels(sedml_model)
+            # only one sbml file, a benchmark model on its own. Copy.
+            benchmark_model = os.path.join(DIR_MODELS_FINAL, sedml_model)
+            if not os.path.exists(benchmark_model):
+                os.mkdir(benchmark_model)
+            try:
+                shutil.copy(sbml_files[0],
+                            os.path.join(benchmark_model,
+                                         os.listdir(sbml_folder)[0]))
+            except IndexError:
+                print('Empty model folder for model ' + sedml_model)
+
+            # get the simulation times and write them to csv file
+            sim_start, sim_end, num_timep, _ = timePointsBioModels(sedml_model)
 
 def _check_submodels(sedml_file, sbml_files):
     """Checks which sbml models of one sedml group belong together"""
+    sedml_info = libsedml.readSedML(sedml_file)
+    for sbml_file in sbml_files:
+        sbml_info = libsbml.readSBML(sbml_file)
+        sbml_model = sbml_info.getModel()
+        species = sbml_model.getListOfSpecies()
+        reactions = sbml_model.getListOfReactions()
+
     return
 
 
