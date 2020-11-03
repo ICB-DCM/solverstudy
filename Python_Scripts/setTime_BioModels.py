@@ -169,6 +169,6 @@ def timePointsBioModels(iModel):
     try:
         return sim_start_time, sim_end_time, sim_num_time_points, y_bound
     except UnboundLocalError:
-        print('Requested time for biomodels model, but info is not present.'
-              'Error occured for model:' + iModel)
+        print('Requested timepoints for biomodels model, but no info on '
+              'time points is present. This error occured for model:' + iModel)
         return None, None, None, None

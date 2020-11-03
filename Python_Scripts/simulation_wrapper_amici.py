@@ -2,9 +2,12 @@ import amici
 import numpy as np
 from time import time as toc
 
+from loadModels import get_model_list
+
 CPUTIME = 'cputime_study'
 FAILURE = 'failure_study'
 TRAJECTORY = 'trajectory_comparison'
+
 
 def simulation_wrapper(
         model_name: str,
