@@ -60,7 +60,7 @@ DIR_MODELS_SEDML = os.path.join(DIR_MODELS, 'sedml')  # TODO remove
 # Folder for a copy of the biomodels models
 DIR_MODELS_BIOMODELS = os.path.join(DIR_MODELS, 'biomodels')  # TODO remove
 # Folder with the final benchmark models (regrouped and adapted sbml files)
-DIR_MODELS_FINAL = os.path.join(DIR_MODELS, 'benchmark_collection')
+DIR_MODELS_REGROUPED = os.path.join(DIR_MODELS, 'regrouped')
 # Base folder for the AMICI compilation files
 DIR_MODELS_AMICI_BASE = os.path.join(DIR_MODELS, 'amici')
 # Folder for all possible AMICI compilation files

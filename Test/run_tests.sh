@@ -22,8 +22,12 @@ cd Python_Scripts
 time python script_download_all_sedml_models.py
 time python script_download_all_sbml_biomodels.py
 
-# Run compilation
+# run model regrouping
+time python script_regroup_models.py
+
+# Run amici import and compilation
 time python sbml2amici.py
+# time python sbml2copasi.py # TBD: automated Copasi import
 
 # Run JWS trajectory comparison
 time python compareStateTrajectories_JWS_1.py

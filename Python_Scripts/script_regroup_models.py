@@ -15,9 +15,8 @@ import shutil
 import pandas as pd
 import re
 
-from C import (DIR_MODELS_SEDML, DIR_MODELS_FINAL)
+from C import (DIR_MODELS_SEDML, DIR_MODELS_REGROUPED, DIR_MODELS)
 from setTime_BioModels import timePointsBioModels
-from warnings import warn
 
 
 # get all models
@@ -53,7 +52,9 @@ def regroup_models():
 
     # Group sbml models and give them short Identifiers (e.g., Bachmann2011a)
     model_info_df = _group_models_by_id(model_info)
-    model_info_df.to_csv('benchmark_models_overview.tsv', sep='\t', index=False)
+    model_info_df.to_csv(os.path.join(DIR_MODELS,
+                                      'regrouped_models_summary.tsv'),
+                         sep='\t', index=False)
 
     return model_info_df
 
@@ -114,16 +115,6 @@ def _check_biomodels_model(sedml_model, sbml_path, model_name, model_year, model
     sbml_model = (libsbml.readSBML(sbml_path)).getModel()
     n_species = len(sbml_model.getListOfSpecies())
     n_reactions = len(sbml_model.getListOfReactions())
-
-    # benchmark_model = os.path.join(DIR_MODELS_FINAL, sedml_model)
-    # if not os.path.exists(benchmark_model):
-    #    os.mkdir(benchmark_model)
-    # try:
-    #    shutil.copy(sbml_files[0],
-    #                os.path.join(benchmark_model,
-    #                             os.listdir(sbml_folder)[0]))
-    # except IndexError:
-    #    print('Empty model folder for model ' + sedml_model)
 
     # get the simulation times and write them to csv file
     out_start, out_end, n_timepoints, _ = \
@@ -209,10 +200,13 @@ def _check_sedml_submodels(sedml_file, sbml_files,
 
 def adapt_and_save_models(model_info_df):
     # create the folders
+    if not os.path.exists(DIR_MODELS_REGROUPED):
+        os.mkdir(DIR_MODELS_REGROUPED)
+
     model_folders = list(set(model_info_df['short_id']))
     for model_folder in model_folders:
-        if not os.path.exists(os.path.join(DIR_MODELS_FINAL, model_folder)):
-            os.mkdir(os.path.join(DIR_MODELS_FINAL, model_folder))
+        if not os.path.exists(os.path.join(DIR_MODELS_REGROUPED, model_folder)):
+            os.mkdir(os.path.join(DIR_MODELS_REGROUPED, model_folder))
     logfile = open('sedml_change.log', 'w')
     logfile.close()
     n_models = model_info_df.shape[0]
@@ -226,7 +220,7 @@ def _adapt_and_save_model(model_details):
 
     # get and create info about the paths
     sbml_file_name = model_details['sbml_path'].split('/')[-1]
-    final_folder = os.path.join(DIR_MODELS_FINAL, model_details['short_id'])
+    final_folder = os.path.join(DIR_MODELS_REGROUPED, model_details['short_id'])
     final_file_name = os.path.join(final_folder, sbml_file_name)
 
     # ifwe have no SED-ML file, the model is a biomodels model consisting of

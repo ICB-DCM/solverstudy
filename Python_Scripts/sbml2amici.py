@@ -7,7 +7,7 @@ import logging
 import pandas as pd
 
 from C import (
-    DIR_BASE, DIR_MODELS_SEDML, DIR_MODELS_AMICI_BASE, DIR_MODELS_AMICI)
+    DIR_BASE, DIR_MODELS_REGROUPED, DIR_MODELS, DIR_MODELS_AMICI)
 
 # create .tsv file
 tsv_table = pd.DataFrame(
@@ -15,8 +15,8 @@ tsv_table = pd.DataFrame(
 
 # important paths
 models_path = DIR_MODELS_AMICI
-models_base_path = DIR_MODELS_AMICI_BASE
-base_path = DIR_MODELS_SEDML
+models_base_path = DIR_MODELS
+base_path = DIR_MODELS_REGROUPED
 
 # create directory for all future amici models
 if not os.path.exists(models_path):
@@ -30,23 +30,22 @@ logging.basicConfig(filename=os.path.join(DIR_BASE, 'sbml2amici.log'),
                     level=logging.DEBUG)
 
 # list of all directories + SBML files
-list_directory = os.listdir(base_path)
-list_directory = sorted(list_directory)
+list_directory = sorted(os.listdir(base_path))
 
 # set row-counter for .tsv file and list all model
 counter = 0
-for models in list_directory:
-    list_files = os.listdir(os.path.join(base_path, models, 'sbml_models'))
+for i_model in list_directory:
+    list_files = os.listdir(os.path.join(base_path, i_model))
     list_files = sorted(list_files)
 
-    for files in list_files:
-        sbml_file = os.path.join(base_path, models, 'sbml_models', files)
-        model_name, other_stuff = files.split(".", 1)
+    for i_file in list_files:
+        sbml_file = os.path.join(base_path, i_model, i_file)
+        model_name, other_stuff = i_file.split(".", 1)
         model_output_dir = os.path.join(
-            models_path, models, model_name)
+            models_path, i_model, model_name)
 
         # get new_observables()
-        print('Current Model: ' + models + '_' + model_name)
+        print('Current Model: ' + i_model + '_' + model_name)
 
         try:
             # Append additional row in .tsv file
@@ -54,7 +53,7 @@ for models in list_directory:
 
             # define the model id
             tsv_table.loc[counter].id = \
-                '{' + models + '}' + '_' + '{' + files + '}'
+                '{' + i_model + '}' + '_' + '{' + i_file + '}'
 
             # read accompanying sbml file
             file = libsbml.readSBML(sbml_file)
@@ -82,7 +81,7 @@ for models in list_directory:
         except Exception as e:
             error_info = str(e)
             print(error_info)
-            logging.exception('Model failed: %s, %s', models, files)
+            logging.exception('Model failed: %s, %s', i_model, i_file)
             logging.info('\n')
 
             # Write the error message in 'error_message' column
@@ -91,5 +90,5 @@ for models in list_directory:
 
 # save .tsv file
 tsv_table.to_csv(
-    path_or_buf=os.path.join(models_base_path, 'table.tsv'),
+    path_or_buf=os.path.join(models_base_path, 'amici_import_summary.tsv'),
     sep='\t', index=False)
