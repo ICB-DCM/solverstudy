@@ -17,6 +17,7 @@ import re
 
 from C import (DIR_MODELS_SEDML, DIR_MODELS_FINAL)
 from setTime_BioModels import timePointsBioModels
+from warnings import warn
 
 
 # get all models
@@ -68,6 +69,7 @@ def _group_models_by_id(model_info):
         model['short_id'] = known_ids[model['long_id']]
     # finally we want to post-process the model_list
     return pd.DataFrame(model_info)
+
 
 def _generate_new_id(known_ids, long_id):
     # count, which letter to append in case (yes, I know that's simplistic)
@@ -205,4 +207,85 @@ def _check_sedml_submodels(sedml_file, sbml_files,
     return model_info
 
 
-regroup_models()
+def adapt_and_save_models(model_info_df):
+    # create the folders
+    model_folders = list(set(model_info_df['short_id']))
+    for model_folder in model_folders:
+        if not os.path.exists(os.path.join(DIR_MODELS_FINAL, model_folder)):
+            os.mkdir(os.path.join(DIR_MODELS_FINAL, model_folder))
+    logfile = open('sedml_change.log', 'w')
+    logfile.close()
+    n_models = model_info_df.shape[0]
+    for i_model in range(n_models):
+        _adapt_and_save_model(model_details=dict(model_info_df.loc[i_model, :]))
+
+
+def _adapt_and_save_model(model_details):
+    """This routine takes model information from the dataframe creeated during
+    model regrouping, adapts the SBML file, and saves it in the model folder"""
+
+    # get and create info about the paths
+    sbml_file_name = model_details['sbml_path'].split('/')[-1]
+    final_folder = os.path.join(DIR_MODELS_FINAL, model_details['short_id'])
+    final_file_name = os.path.join(final_folder, sbml_file_name)
+
+    # ifwe have no SED-ML file, the model is a biomodels model consisting of
+    # only one SBML sheet. Movi this file to the new location
+    if model_details['sedml_path'] == '':
+        shutil.copy(model_details['sbml_path'], final_file_name)
+        return
+
+    # if the model is from the JWS model collection, we must applay the changes
+    # from the SED-ML file
+    sedml_file = libsedml.readSedML(model_details['sedml_path'])
+    sedml_task = sedml_file.getTask(model_details['sedml_task'])
+    sbml_file = libsbml.readSBML(model_details['sbml_path'])
+    sbml_model = sbml_file.getModel()
+
+    # short consistency check that SBML model and SED-ML task fit together
+    assert sbml_file_name.split('.')[0] == sedml_task.getModelReference()
+    sedml_submodel = sedml_file.getModel(sedml_task.getModelReference())
+
+    logfile = open('sedml_change.log', 'a')
+    for change in sedml_submodel.getListOfChanges():
+        # We iterate over all changes for this model in the SED-ML
+        target = change.getTarget()
+        value = change.getNewValue()
+
+        # decide for species or parameter
+        div = (target.split('[')[0]).split(':')[4]
+        target_id = target.split('\'', )[1]
+
+        if div == 'species':
+            try:
+                sbml_model.getSpecies(target_id).initial_concentration = \
+                    float(value)
+            except AttributeError:
+                if sbml_model.getSpecies(target_id) is None:
+                    logfile.write(f'Trying to change initial concentration of species '
+                          f'{target_id} via SED-ML file, but this species does '
+                          f'not exist in the current SBML model '
+                          f'({sbml_file_name}). Omitting!\n')
+        elif div == 'parameter':
+            try:
+                sbml_model.getParameter(target_id).value = float(value)
+            except AttributeError:
+                if sbml_model.getParameter(target_id) is None:
+                    logfile.write(f'Trying to change sbml_model parameter {target_id}, '
+                          f'via SED-ML file, but this parameter does not exist '
+                          f'in the current SBML model ({sbml_file_name}).'
+                          f'Omitting!\n')
+        elif div == 'compartment':
+            sbml_model.getCompartment(target_id).size = float(value)
+        else:
+            logfile.write(f'Trying to change a {div} in sbml_model '
+                  f'{sbml_file_name}, which is currently not supported.'
+                  f'Omitting!\n')
+
+    # save changed sbml files and the accompaniying sedml file
+    libsbml.writeSBMLToFile(sbml_model.getSBMLDocument(), final_file_name)
+    logfile.close()
+
+model_info_df = regroup_models()
+
+adapt_and_save_models(model_info_df)
