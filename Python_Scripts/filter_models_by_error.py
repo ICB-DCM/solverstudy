@@ -51,7 +51,7 @@ for i_model in max_num_errors.index:
     new_path = os.path.join(DIR_MODELS_AMICI_FINAL, amici_path)
     shutil.copytree(old_path, new_path)
 
-    # update model info table
+    # add final model path to model info table
     model_info.loc[model_info['amici_path'] == amici_path,
                    'amici_path_final'] = os.path.relpath(new_path, DIR_MODELS)
 
