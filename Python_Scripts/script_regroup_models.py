@@ -255,7 +255,7 @@ def _adapt_and_save_model(model_details):
 
         # decide for species or parameter
         div = (target.split('[')[0]).split(':')[4]
-        target_id = target.split('\'', )[1]
+        target_id = target.split("'", )[1]
 
         if div == 'species':
             try:
