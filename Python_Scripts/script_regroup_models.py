@@ -15,7 +15,7 @@ import shutil
 import pandas as pd
 import re
 
-from C import (DIR_MODELS_SEDML, DIR_MODELS_REGROUPED, DIR_MODELS)
+from C import (DIR_MODELS_SEDML, DIR_MODELS_REGROUPED, DIR_MODELS, DIR_BASE)
 from setTime_BioModels import timePointsBioModels
 
 
@@ -52,9 +52,6 @@ def regroup_models():
 
     # Group sbml models and give them short Identifiers (e.g., Bachmann2011a)
     model_info_df = _group_models_by_id(model_info)
-    model_info_df.to_csv(os.path.join(DIR_MODELS,
-                                      'regrouped_models_summary.tsv'),
-                         sep='\t', index=False)
 
     return model_info_df
 
@@ -131,6 +128,7 @@ def _check_biomodels_model(sedml_model, sbml_path, model_name, model_year, model
         'short_id': '',
         'sbml_path': sbml_path,
         'sedml_path': sedml_path,
+        'regrouped_path': '',
         'start_time': out_start,
         'end_time': out_end,
         'n_timepoints': n_timepoints,
@@ -187,6 +185,7 @@ def _check_sedml_submodels(sedml_file, sbml_files,
             'n_reactions': n_reactions,
             'sbml_path': sbml_path,
             'sedml_path': sedml_path,
+            'regrouped_path': '',
             'start_time': out_start,
             'end_time': out_end,
             'n_timepoints': n_timepoints,
@@ -211,7 +210,12 @@ def adapt_and_save_models(model_info_df):
     logfile.close()
     n_models = model_info_df.shape[0]
     for i_model in range(n_models):
-        _adapt_and_save_model(model_details=dict(model_info_df.loc[i_model, :]))
+        final_file_name = _adapt_and_save_model(
+            model_details=dict(model_info_df.loc[i_model, :]))
+        model_info_df.loc[i_model, 'regrouped_path'] = os.path.relpath(
+            final_file_name, DIR_MODELS)
+
+    return model_info_df
 
 
 def _adapt_and_save_model(model_details):
@@ -227,7 +231,7 @@ def _adapt_and_save_model(model_details):
     # only one SBML sheet. Movi this file to the new location
     if model_details['sedml_path'] == '':
         shutil.copy(model_details['sbml_path'], final_file_name)
-        return
+        return final_file_name
 
     # if the model is from the JWS model collection, we must applay the changes
     # from the SED-ML file
@@ -279,7 +283,55 @@ def _adapt_and_save_model(model_details):
     # save changed sbml files and the accompaniying sedml file
     libsbml.writeSBMLToFile(sbml_model.getSBMLDocument(), final_file_name)
     logfile.close()
+    return final_file_name
+
+
+def link_reference_trajectories_to_amici_models(model_info_df):
+    # we need to find the correct reference trajectory for each model
+    ref_trajectory_paths = {}
+    path_ref_biomodels = os.path.abspath(os.path.join(
+        DIR_BASE, '..', 'Cache', 'trajectories_reference_biomodels'))
+    path_ref_jws = os.path.abspath(os.path.join(
+        DIR_BASE, '..', 'Cache', 'trajectories_reference_jws'))
+
+    # iterate over models, write pyth to reference trajectory
+    for sub_id in model_info_df.index:
+        i_row = model_info_df.loc[sub_id]
+
+        # we must discriminate between models from JWS and biomodels
+        if i_row['sedml_path'] == '':
+            # from biomodels, the ref trajectories were simulated with Copasi
+            name = 'original_copasi_' + i_row['name'] + str(i_row['year'])
+            if os.path.exists(os.path.join(path_ref_biomodels,
+                                           name + '_14_14.tsv')):
+                # did it work with tolerances 1e-14, 1e-14?
+                ref = name + '_14_14.tsv'
+            else:
+                # If not, tolerances 1e-12, 1e-12 were used
+                ref = name + '_12_12.tsv'
+            # add the path
+            ref = os.path.join(path_ref_biomodels, ref)
+
+        else:
+            # from JWS online, reference trajectories were downloaded
+            # refactor the name based on the sedml and the sbml file names
+            name1 = (i_row['sedml_path'].split('/')[-1]).split('.')[0]
+            name2 = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
+            ref = os.path.join(path_ref_jws, name1, name2, 'JWS_simulation.csv')
+
+        ref_trajectory_paths[sub_id] = ref
+
+    # We've collected the paths of all reference trajectories.
+    # Now we append them to the dataframe
+    return model_info_df.join(pd.Series(ref_trajectory_paths,
+                                        name='ref_trajectory_path'))
+
 
 model_info_df = regroup_models()
 
-adapt_and_save_models(model_info_df)
+model_info_df = adapt_and_save_models(model_info_df)
+
+model_info_df = link_reference_trajectories_to_amici_models(model_info_df)
+
+model_info_df.to_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                     sep='\t', index=False)

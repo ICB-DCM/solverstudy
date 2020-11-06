@@ -10,8 +10,14 @@ from C import (
     DIR_BASE, DIR_MODELS_REGROUPED, DIR_MODELS, DIR_MODELS_AMICI)
 
 # create .tsv file
-tsv_table = pd.DataFrame(
-    columns=['id', 'states', 'reactions', 'error_message'])
+model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                         sep='\t')
+model_info = model_info.join(pd.Series([''] * model_info.shape[0],
+                                       name='amici_path'))
+model_info = model_info.join(pd.Series([''] * model_info.shape[0],
+                                       name='amici_import'))
+model_info = model_info.join(pd.Series([''] * model_info.shape[0],
+                                       name='id'))
 
 # important paths
 models_path = DIR_MODELS_AMICI
@@ -33,13 +39,13 @@ logging.basicConfig(filename=os.path.join(DIR_BASE, 'sbml2amici.log'),
 list_directory = sorted(os.listdir(base_path))
 
 # set row-counter for .tsv file and list all model
-counter = 0
 for i_model in list_directory:
     list_files = os.listdir(os.path.join(base_path, i_model))
     list_files = sorted(list_files)
 
     for i_file in list_files:
         sbml_file = os.path.join(base_path, i_model, i_file)
+        regrouped_path = os.path.relpath(sbml_file, DIR_MODELS)
         model_name, other_stuff = i_file.split(".", 1)
         model_output_dir = os.path.join(
             models_path, i_model, model_name)
@@ -47,24 +53,14 @@ for i_model in list_directory:
         # get new_observables()
         print('Current Model: ' + i_model + '_' + model_name)
 
+        # Append additional row in .tsv file
+        model_row = model_info.loc[model_info['regrouped_path'] == regrouped_path]
+        counter = int(model_row.index.values)
+
+        model_info.loc[counter, 'id'] = '{' + i_model + '}' + '_' + \
+                                        '{' + i_file + '}'
+
         try:
-            # Append additional row in .tsv file
-            tsv_table = tsv_table.append({}, ignore_index=True)
-
-            # define the model id
-            tsv_table.loc[counter].id = \
-                '{' + i_model + '}' + '_' + '{' + i_file + '}'
-
-            # read accompanying sbml file
-            file = libsbml.readSBML(sbml_file)
-            all_properties = file.getModel()
-            num_states = len(all_properties.getListOfSpecies())
-            num_reactions = len(all_properties.getListOfReactions())
-
-            # fill in .tsv file
-            tsv_table.loc[counter].states = num_states
-            tsv_table.loc[counter].reactions = num_reactions
-
             # Create SBML importer
             sbml_importer = amici.SbmlImporter(sbml_file)
 
@@ -73,10 +69,9 @@ for i_model in list_directory:
                 model_name, model_output_dir, verbose=False)
 
             # Write 'OK' in 'error_message' column
-            tsv_table.loc[counter].error_message = 'OK'
-
-            # increase counter by 1
-            counter = counter + 1
+            model_info.loc[counter, 'amici_import'] = 'OK'
+            model_info.loc[counter, 'amici_path'] = os.path.relpath(
+                model_output_dir, DIR_MODELS)
 
         except Exception as e:
             error_info = str(e)
@@ -85,10 +80,9 @@ for i_model in list_directory:
             logging.info('\n')
 
             # Write the error message in 'error_message' column
-            tsv_table.loc[counter].error_message = error_info
-            counter = counter + 1
+            model_info.loc[counter, 'amici_import'] = error_info
 
 # save .tsv file
-tsv_table.to_csv(
-    path_or_buf=os.path.join(models_base_path, 'amici_import_summary.tsv'),
+model_info.to_csv(
+    path_or_buf=os.path.join(models_base_path, 'model_summary.tsv'),
     sep='\t', index=False)

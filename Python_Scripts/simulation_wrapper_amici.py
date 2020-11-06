@@ -1,18 +1,17 @@
 import amici
 import numpy as np
 from time import time as toc
+import pandas as pd
+import os
 
-from loadModels import get_model_list
-
-CPUTIME = 'cputime_study'
-FAILURE = 'failure_study'
-TRAJECTORY = 'trajectory_comparison'
-
+from loadModels import get_submodel_list, get_submodel
+from C import simconfig, DIR_MODELS
 
 def simulation_wrapper(
-        model_name: str,
         simulation_mode: str,
         settings: dict,
+        model_name: str = None,
+        submodel_path: str = None,
 ):
     """This script wraps around the simulation with AMICI,
     applies the settings for the ODE solver,
@@ -20,7 +19,12 @@ def simulation_wrapper(
 
     """
     # get the list of sbml models which belong to this benchmark model
-    amici_model_list, sbml_model_list = get_model_list(model_name)
+    if submodel_path is None:
+        amici_model_list, sbml_model_list = get_submodel_list(model_name)
+    else:
+        amici_model, sbml_model = get_submodel(submodel_path)
+        amici_model_list = [amici_model]
+        sbml_model_list = [sbml_model]
 
     # collect cpu times
     average_cpu_times_intern = []
@@ -31,11 +35,11 @@ def simulation_wrapper(
     failures = []
 
     # loop over models (=modules) to be simulated:
-    for model in amici_model_list:
+    for i_model, model in enumerate(amici_model_list):
         # get the adapted solver object
         solver = _apply_solver_settings(model, settings)
 
-        if simulation_mode == CPUTIME:
+        if simulation_mode == simconfig.CPUTIME:
             # we want to repeatedly simulate the model
             n_repetitions = 40
         else:
@@ -51,6 +55,12 @@ def simulation_wrapper(
             rdata = amici.runAmiciSimulation(model, solver)
             time_extern = (toc() - start) / 1000.
 
+            # if simulation was not successful
+            if rdata['status'] != 0:
+                cpu_times_extern.append(float('nan'))
+                cpu_times_intern.append(float('nan'))
+                break
+
             # report in seconds
             cpu_times_extern.append(time_extern)
             cpu_times_intern.append(rdata['cpu_time'])
@@ -61,11 +71,11 @@ def simulation_wrapper(
         failures.append(rdata['status'] != 0)
 
         # Trajectories are more memory intensive. Only collect if needed
-        if simulation_mode != CPUTIME:
+        if simulation_mode == simconfig.TRAJECTORY:
             trajectories.append(rdata['x'])
 
     # postprocess depending on purpose and return a dict
-    if simulation_mode == TRAJECTORY:
+    if simulation_mode == simconfig.TRAJECTORY:
         return _post_process_trajectories(trajectories,
                                           failures,
                                           amici_model_list,
@@ -84,6 +94,7 @@ def _apply_solver_settings(model, settings):
     solver.setAbsoluteTolerance(settings['atol'])
     solver.setRelativeTolerance(settings['rtol'])
     solver.setLinearSolver(settings['linSol'])
+    solver.setNonlinearSolverIteration(settings['nonlinSol'])
     solver.setLinearMultistepMethod(settings['solAlg'])
 
     # set stability flag for Adams-Moulton
@@ -130,4 +141,29 @@ def _post_process_trajectories(trajectories,
                                failures,
                                amici_model_list,
                                sbml_model_list):
-    pass
+    """This script prunes out the constant species from the trajectory array
+    and returns a dataframe with the species ids as column names"""
+    pruned_trajectories = []
+
+    for i_model, sbml_model in enumerate(sbml_model_list):
+        # did the simulation fail? If so, return None
+        failure = failures[i_model]
+        if failure:
+            pruned_trajectories.append(None)
+            continue
+
+        trajectory = trajectories[i_model]
+        amici_model = amici_model_list[i_model]
+        species_ids = []
+        species_keep = []
+        for i_state, state in enumerate(amici_model.getStateIds()):
+            species = sbml_model.getSpecies(state)
+            if species.constant == False and species.getBoundaryCondition() == False:
+                species_ids.append(state)
+                species_keep.append(i_state)
+
+        pruned_trajectories.append(
+            pd.DataFrame(data=trajectory[:, species_keep],
+                         columns=species_ids))
+
+    return pruned_trajectories

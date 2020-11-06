@@ -3,10 +3,15 @@
 import sys
 import os
 import importlib
+import pandas as pd
+import numpy as np
 
 import libsbml
-from C import DIR_MODELS_FINAL, DIR_MODELS_AMICI
+from C import DIR_MODELS_REGROUPED, DIR_MODELS_AMICI, DIR_MODELS
 
+# import the model_summary table to add information about the model
+model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                         sep='\t')
 
 def load_specific_model(model_name, explicit_model):
 
@@ -21,11 +26,32 @@ def load_specific_model(model_name, explicit_model):
 
     return model
 
+def get_submodel(submodel_path):
+    # load the amici model
+    # add model path
+    amici_model_path = os.path.join(DIR_MODELS, submodel_path)
+    sys.path.insert(0, os.path.abspath(amici_model_path))
+    # import the module, get the model
+    amici_model_name = amici_model_path.split('/')[-1]
+    amici_model_module = importlib.import_module(amici_model_name)
+    amici_model = amici_model_module.getModel()
 
-def get_model_list(model_name):
+    # get information about the model from the tsv table
+    model_row = model_info.loc[model_info['amici_path'] == submodel_path]
+    amici_model.setTimepoints(np.linspace(model_row.loc[0, 'start_time'],
+                                          model_row.loc[0, 'end_time'],
+                                          model_row.loc[0, 'n_timepoints']))
+
+    # import the sbml model
+    sbml_path = os.path.join(DIR_MODELS, model_row.loc[0, 'regrouped_path'])
+    sbml_model = (libsbml.readSBML(sbml_path)).getModel()
+
+    return amici_model, sbml_model
+
+def get_submodel_list(model_name):
     sbml_files = [
         os.path.abspath(sbml_file) for sbml_file in
-        sorted(os.listdir(os.path.join(DIR_MODELS_FINAL, model_name)))
+        sorted(os.listdir(os.path.join(DIR_MODELS_REGROUPED, model_name)))
     ]
     sbml_model_list = [libsbml.readSBML(sbml_file).getModel()
                        for sbml_file in sbml_files]

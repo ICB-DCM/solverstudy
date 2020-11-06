@@ -1,6 +1,7 @@
 """Constant definitions."""
 
 import os
+import enum
 
 ###############################################################################
 # Base folder
@@ -74,3 +75,11 @@ DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')
 # Folder for the original COPASI simulations of the biomodels models
 DIR_MODELS_TRAJ_REF_BIOMODELS = os.path.join(
     DIR_MODELS, 'trajectories_reference_biomodels')
+
+##############################################################################
+# Configurations for simulations
+# Using enum class create enumerations
+class simconfig(enum.Enum):
+   CPUTIME = 'cputime_study'
+   FAILURE = 'failure_study'
+   TRAJECTORY = 'trajectory_comparison'
