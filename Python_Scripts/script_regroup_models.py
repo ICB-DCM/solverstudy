@@ -57,7 +57,7 @@ def regroup_models():
 
 
 def _group_models_by_id(model_info):
-    # We've run through all models. Now, let's generate short identifier for
+    # We've run through all models. Now, let's generate short identifiers for
     # the groups of models, which should belong together
     known_ids = {}
     for model in model_info:
@@ -173,9 +173,9 @@ def _check_sedml_submodels(sedml_file, sbml_files,
         sbml_model = libsbml.readSBML(sbml_file).getModel()
         if sbml_model is None:
             # check for SBML model
-            print('No sbml model found for file' + sbml_file +
-                  ', in model name ' + model_name +
-                  ', model year ' + model_year)
+            print(f'No sbml model found for file {sbml_file}, '
+                  f'in model name f{model_name}, '
+                  f'model year {model_year}')
             return model_info
         n_species = len(sbml_model.getListOfSpecies())
         n_reactions = len(sbml_model.getListOfReactions())
@@ -222,7 +222,7 @@ def adapt_and_save_models(model_info_df):
 
 
 def _adapt_and_save_model(model_details):
-    """This routine takes model information from the dataframe creeated during
+    """This routine takes model information from the dataframe created during
     model regrouping, adapts the SBML file, and saves it in the model folder"""
 
     # get and create info about the paths
@@ -230,13 +230,13 @@ def _adapt_and_save_model(model_details):
     final_folder = os.path.join(DIR_MODELS_REGROUPED, model_details['short_id'])
     final_file_name = os.path.join(final_folder, sbml_file_name)
 
-    # ifwe have no SED-ML file, the model is a biomodels model consisting of
-    # only one SBML sheet. Movi this file to the new location
+    # if we have no SED-ML file, the model is a biomodels model consisting of
+    # only one SBML sheet. Move this file to the new location
     if model_details['sedml_path'] == '':
         shutil.copy(model_details['sbml_path'], final_file_name)
         return final_file_name
 
-    # if the model is from the JWS model collection, we must applay the changes
+    # if the model is from the JWS model collection, we must apply the changes
     # from the SED-ML file
     sedml_file = libsedml.readSedML(model_details['sedml_path'])
     sedml_task = sedml_file.getTask(model_details['sedml_task'])
@@ -255,7 +255,7 @@ def _adapt_and_save_model(model_details):
 
         # decide for species or parameter
         div = (target.split('[')[0]).split(':')[4]
-        target_id = target.split('\'', )[1]
+        target_id = target.split("'", )[1]
 
         if div == 'species':
             try:
