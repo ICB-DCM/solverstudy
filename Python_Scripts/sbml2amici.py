@@ -46,7 +46,7 @@ for i_model in list_directory:
     for i_file in list_files:
         sbml_file = os.path.join(base_path, i_model, i_file)
         regrouped_path = os.path.relpath(sbml_file, DIR_MODELS)
-        model_name, other_stuff = i_file.split(".", 1)
+        model_name, _ = i_file.split(".", 1)
         model_output_dir = os.path.join(
             models_path, i_model, model_name)
 
