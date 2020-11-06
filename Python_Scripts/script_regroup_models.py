@@ -57,7 +57,7 @@ def regroup_models():
 
 
 def _group_models_by_id(model_info):
-    # We've run through all models. Now, let's generate short identifier for
+    # We've run through all models. Now, let's generate short identifiers for
     # the groups of models, which should belong together
     known_ids = {}
     for model in model_info:
