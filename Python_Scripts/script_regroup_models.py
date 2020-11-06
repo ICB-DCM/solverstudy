@@ -173,9 +173,9 @@ def _check_sedml_submodels(sedml_file, sbml_files,
         sbml_model = libsbml.readSBML(sbml_file).getModel()
         if sbml_model is None:
             # check for SBML model
-            print('No sbml model found for file' + sbml_file +
-                  ', in model name ' + model_name +
-                  ', model year ' + model_year)
+            print(f'No sbml model found for file {sbml_file}, '
+                  f'in model name f{model_name}, '
+                  f'model year {model_year}')
             return model_info
         n_species = len(sbml_model.getListOfSpecies())
         n_reactions = len(sbml_model.getListOfReactions())
