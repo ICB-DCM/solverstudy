@@ -236,7 +236,7 @@ def _adapt_and_save_model(model_details):
         shutil.copy(model_details['sbml_path'], final_file_name)
         return final_file_name
 
-    # if the model is from the JWS model collection, we must applay the changes
+    # if the model is from the JWS model collection, we must apply the changes
     # from the SED-ML file
     sedml_file = libsedml.readSedML(model_details['sedml_path'])
     sedml_task = sedml_file.getTask(model_details['sedml_task'])
