@@ -231,7 +231,7 @@ def _adapt_and_save_model(model_details):
     final_file_name = os.path.join(final_folder, sbml_file_name)
 
     # ifwe have no SED-ML file, the model is a biomodels model consisting of
-    # only one SBML sheet. Movi this file to the new location
+    # only one SBML sheet. Move this file to the new location
     if model_details['sedml_path'] == '':
         shutil.copy(model_details['sbml_path'], final_file_name)
         return final_file_name
