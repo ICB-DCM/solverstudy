@@ -46,7 +46,7 @@ for i_model in max_num_errors.index:
                    amici_path, 'amici_min_error'] = best_sim_error
     model_info.loc[model_info['amici_path'] == amici_path, 'accepted'] = acc
 
-    # if the model was accepted: move the files
+    # if the model was accepted: copy the files
     old_path = os.path.join(DIR_MODELS, amici_path)
     new_path = os.path.join(DIR_MODELS_AMICI_FINAL, amici_path)
     shutil.copytree(old_path, new_path)
