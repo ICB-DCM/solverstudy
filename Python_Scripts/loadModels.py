@@ -37,8 +37,12 @@ def get_submodel(submodel_path):
     amici_model = amici_model_module.getModel()
 
     # get information about the model from the tsv table
-    model_row = model_info.loc[model_info['amici_path'] == submodel_path]
+    if 'amici_path_final' in model_info.keys():
+        model_row = model_info.loc[model_info['amici_path_final'] == submodel_path]
+    else:
+        model_row = model_info.loc[model_info['amici_path'] == submodel_path]
     id = int(model_row.index.values)
+    # get the timepoints according to the model info dataframe
     amici_model.setTimepoints(np.linspace(
         model_row.loc[id, 'start_time'],
         model_row.loc[id, 'end_time'],
@@ -52,18 +56,18 @@ def get_submodel(submodel_path):
     return amici_model, sbml_model
 
 def get_submodel_list(model_name):
-    sbml_files = [
-        os.path.abspath(sbml_file) for sbml_file in
-        sorted(os.listdir(os.path.join(DIR_MODELS_REGROUPED, model_name)))
-    ]
-    sbml_model_list = [libsbml.readSBML(sbml_file).getModel()
-                       for sbml_file in sbml_files]
+    # get information about the model from the tsv table
+    model_rows = model_info.loc[model_info['short_id'] == model_name]
+    submodel_paths = [final_path
+                      for final_path in model_rows['amici_path_final']
+                      if str(final_path) not in ('', 'nan')]
 
-    amici_folders = [
-        os.path.abspath(amici_folder) for amici_folder in
-        sorted(os.listdir(os.path.join(DIR_MODELS_AMICI, model_name)))
-    ]
-    amici_model_list = [load_specific_model(amici_folder, amici_folder)
-                        for amici_folder in amici_folders]
+    # collect the submodels
+    sbml_model_list = []
+    amici_model_list = []
+    for submodel_path in submodel_paths:
+        amici_model, sbml_model = get_submodel(submodel_path)
+        sbml_model_list.append(sbml_model)
+        amici_model_list.append(amici_model)
 
     return amici_model_list, sbml_model_list

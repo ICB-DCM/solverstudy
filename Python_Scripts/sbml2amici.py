@@ -12,12 +12,18 @@ from C import (
 # create .tsv file
 model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
                          sep='\t')
-model_info = model_info.join(pd.Series([''] * model_info.shape[0],
-                                       name='amici_path'))
-model_info = model_info.join(pd.Series([''] * model_info.shape[0],
-                                       name='amici_import'))
-model_info = model_info.join(pd.Series([''] * model_info.shape[0],
-                                       name='id'))
+if 'amici_path' not in model_info.keys():
+    # add path to amici_model
+    model_info = model_info.join(pd.Series([''] * model_info.shape[0],
+                                           name='amici_path'))
+if 'amici_import' not in model_info.keys():
+    # add message on whether amici import worked
+    model_info = model_info.join(pd.Series([''] * model_info.shape[0],
+                                           name='amici_import'))
+if 'id' not in model_info.keys():
+    # add legacy id to models
+    model_info = model_info.join(pd.Series([''] * model_info.shape[0],
+                                           name='id'))
 
 # important paths
 models_path = DIR_MODELS_AMICI

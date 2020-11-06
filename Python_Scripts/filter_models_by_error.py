@@ -4,7 +4,7 @@ import os
 import shutil
 
 
-from C import DIR_MODELS, DIR_MODELS_AMICI_FINAL
+from C import DIR_MODELS, DIR_MODELS_AMICI, DIR_MODELS_AMICI_FINAL
 
 # load the table with model information
 model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
@@ -47,13 +47,14 @@ for i_model in max_num_errors.index:
     model_info.loc[model_info['amici_path'] == amici_path, 'accepted'] = acc
 
     # if the model was accepted: move the files
-    old_path = os.path.join(DIR_MODELS, amici_path)
-    new_path = os.path.join(DIR_MODELS_AMICI_FINAL, amici_path)
-    shutil.copytree(old_path, new_path)
+    if acc:
+        old_path = os.path.join(DIR_MODELS, amici_path)
+        new_path = os.path.join(DIR_MODELS_AMICI_FINAL, amici_path[13:])
+        shutil.copytree(old_path, new_path)
 
-    # update model info table
-    model_info.loc[model_info['amici_path'] == amici_path,
-                   'amici_path_final'] = os.path.relpath(new_path, DIR_MODELS)
+        # update model info table
+        model_info.loc[model_info['amici_path'] == amici_path,
+                       'amici_path_final'] = os.path.relpath(new_path, DIR_MODELS)
 
 # save overview table
 model_info.to_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'), sep='\t', index=False)
