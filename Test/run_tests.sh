@@ -30,7 +30,7 @@ time python sbml2amici.py
 # time python sbml2copasi.py # TBD: automated Copasi import
 
 # Run JWS trajectory comparison
-time python compare_state_trajectories
+time python compare_state_trajectories.py
 
 # Select models to include in main study
 time python filter_models_by_error.py
