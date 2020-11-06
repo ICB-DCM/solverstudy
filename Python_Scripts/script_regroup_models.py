@@ -26,7 +26,7 @@ def regroup_models():
     model_info = []
 
     for sedml_model in list_directory_sedml:
-        # get the model name and year
+        # get the model name and year based on the SED-ML and SBML name
         model_name, model_year = _parse_model_name(sedml_model)
         if model_name is None or model_year is None:
             continue
@@ -84,6 +84,7 @@ def _generate_new_id(known_ids, long_id):
 
 
 def _parse_model_name(sedml_model):
+    """We want to extract the model name and year based on the SBML file"""
     # parse the sedml name via regex
     model_name_full = sedml_model.split('_')[0]
     p_name = re.compile('[A-Za-z]*')
@@ -117,6 +118,8 @@ def _check_biomodels_model(sedml_model, sbml_path, model_name, model_year, model
     out_start, out_end, n_timepoints, _ = \
         timePointsBioModels(sedml_model)
     if out_start is None:
+        # Tf the model is not found, timePointsBioModels issues a warning.
+        # We want to treat this case as a failure
         return model_info
 
     model_info.append({
