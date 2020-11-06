@@ -188,7 +188,7 @@ def _check_sedml_submodels(sedml_file, sbml_files,
             'regrouped_path': '',
             'start_time': out_start,
             'end_time': out_end,
-            'n_timepoints': n_timepoints,
+            'n_timepoints': 101, # for whatever reason, our ref trajectories only use 101 points...
             'long_id': (model_name, model_year, n_species, n_reactions),
             'short_id': '',
             'sedml_task': task_number,

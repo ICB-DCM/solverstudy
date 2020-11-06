@@ -56,7 +56,7 @@ def compare_trajetories(trajectories, ref_traj):
 for i_submodel in model_info.index:
     # could the model be successfully imported?
     amici_model_path = model_info.loc[i_submodel, 'amici_path']
-    if amici_model_path == '':
+    if str(amici_model_path) in ('', 'nan'):
         continue
 
     # load reference trajectories

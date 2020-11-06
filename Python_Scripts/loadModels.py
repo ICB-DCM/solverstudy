@@ -38,12 +38,15 @@ def get_submodel(submodel_path):
 
     # get information about the model from the tsv table
     model_row = model_info.loc[model_info['amici_path'] == submodel_path]
-    amici_model.setTimepoints(np.linspace(model_row.loc['start_time'].values,
-                                          model_row.loc['end_time'].values,
-                                          model_row.loc['n_timepoints'].values))
+    id = int(model_row.index.values)
+    amici_model.setTimepoints(np.linspace(
+        model_row.loc[id, 'start_time'],
+        model_row.loc[id, 'end_time'],
+        model_row.loc[id, 'n_timepoints']
+    ))
 
     # import the sbml model
-    sbml_path = os.path.join(DIR_MODELS, model_row.loc['regrouped_path'].values)
+    sbml_path = os.path.join(DIR_MODELS, model_row.loc[id, 'regrouped_path'])
     sbml_model = (libsbml.readSBML(sbml_path)).getModel()
 
     return amici_model, sbml_model
