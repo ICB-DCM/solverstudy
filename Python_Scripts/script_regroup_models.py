@@ -222,7 +222,7 @@ def adapt_and_save_models(model_info_df):
 
 
 def _adapt_and_save_model(model_details):
-    """This routine takes model information from the dataframe creeated during
+    """This routine takes model information from the dataframe created during
     model regrouping, adapts the SBML file, and saves it in the model folder"""
 
     # get and create info about the paths
