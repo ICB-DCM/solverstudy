@@ -36,18 +36,19 @@ for i_model in max_num_errors.index:
     # get the best simulation
     best_sim_error = np.min(current_row[2:])
     # was the model accepted?
-    acc = best_sim_error < 1e-4
+    acceptance_threshold = 1e-4
+    model_accepted = best_sim_error < acceptance_threshold
     min_error.append(best_sim_error)
-    accepted.append(acc)
+    accepted.append(model_accepted)
 
     # update the model overview table
     amici_path = max_num_errors.loc[i_model, 'amici_path']
     model_info.loc[model_info['amici_path'] ==
                    amici_path, 'amici_min_error'] = best_sim_error
-    model_info.loc[model_info['amici_path'] == amici_path, 'accepted'] = acc
+    model_info.loc[model_info['amici_path'] == amici_path, 'accepted'] = model_accepted
 
     # if the model was accepted: move the files
-    if acc:
+    if model_accepted:
         old_path = os.path.join(DIR_MODELS, amici_path)
         new_path = os.path.join(DIR_MODELS_AMICI_FINAL, amici_path[13:])
         shutil.copytree(old_path, new_path)

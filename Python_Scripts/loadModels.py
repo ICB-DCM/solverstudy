@@ -44,9 +44,9 @@ def get_submodel(submodel_path):
     id = int(model_row.index.values)
     # get the timepoints according to the model info dataframe
     amici_model.setTimepoints(np.linspace(
-        model_row.loc[id, 'start_time'],
-        model_row.loc[id, 'end_time'],
-        model_row.loc[id, 'n_timepoints']
+        float(model_row.loc[id, 'start_time']),
+        float(model_row.loc[id, 'end_time']),
+        int(model_row.loc[id, 'n_timepoints'])
     ))
 
     # import the sbml model

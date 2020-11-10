@@ -157,6 +157,9 @@ def _post_process_trajectories(trajectories,
         species_ids = []
         species_keep = []
         for i_state, state in enumerate(amici_model.getStateIds()):
+            # unmark prohibited symbols:
+            if state[:6] == 'amici_':
+                state = state[6:]
             species = sbml_model.getSpecies(state)
             if species.constant == False and species.getBoundaryCondition() == False:
                 species_ids.append(state)

@@ -68,7 +68,8 @@ def compare_trajectories():
             else:
                 # integration worked. Compute a combination of abs and rel error
                 max_num_error[setting['id']] = _compare_trajetory(trajectories,
-                                                                  ref_traj)
+                                                                  ref_traj,
+                                                                  i_submodel)
 
         # save the error for each setting and model
         max_num_errors.append(max_num_error)
@@ -81,12 +82,17 @@ def compare_trajectories():
     return max_num_errors
 
 
-def _compare_trajetory(trajectories, ref_traj):
+def _compare_trajetory(trajectories, ref_traj, submodel_index):
     errors = []
     for key in trajectories.keys():
-        sim = trajectories[key].values
-        ref = ref_traj[key].values
-        errors.append(np.max( np.abs(sim - ref) / (1 + ref) ))
+        try:
+            sim = trajectories[key].values
+            ref = ref_traj[key].values
+            errors.append(np.max( np.abs(sim - ref) / (1 + ref) ))
+        except KeyError:
+            errors.append(float('inf'))
+            print('could not map the species ' + key  + ' in submodel '
+                  + str(submodel_index) + '. Failed comparison.')
     return max(errors)
 
 

@@ -68,6 +68,9 @@ DIR_MODELS_AMICI_BASE = os.path.join(DIR_MODELS, 'amici')
 DIR_MODELS_AMICI = os.path.join(DIR_MODELS_AMICI_BASE, 'models')
 # Folder for only the final models for the main part of the study
 DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
+# Folder for all possible Copasi files
+DIR_MODELS_COPASI = os.path.join(DIR_MODELS, 'copasi', 'models')
+
 # Folder for trajectories simulated with AMICI
 DIR_MODELS_TRAJ_AMICI = os.path.join(DIR_MODELS, 'trajectories_amici')
 # Folder for reference trajectories
@@ -75,6 +78,9 @@ DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')
 # Folder for the original COPASI simulations of the biomodels models
 DIR_MODELS_TRAJ_REF_BIOMODELS = os.path.join(
     DIR_MODELS, 'trajectories_reference_biomodels')
+
+# Folder with COPASI binaries, user-dependent, te reproduce LSODA simulations
+DIR_COPASI_BIN = '/home/paulstapor/Dokumente/Programme/COPASI/bin'
 
 ##############################################################################
 # Configurations for simulations

@@ -165,9 +165,9 @@ def _check_sedml_submodels(sedml_file, sbml_files,
         current_sim = sedml_doc.getSimulation(sedml_doc.getTask(
             task_number).getSimulationReference())
         # remember simulation settings
-        out_start = current_sim.getOutputStartTime()
+        # out_start = current_sim.getOutputStartTime()
         out_end = current_sim.getOutputEndTime()
-        n_timepoints = current_sim.getNumberOfPoints()
+        # n_timepoints = current_sim.getNumberOfPoints()
 
         # get info about the SBML file
         sbml_model = libsbml.readSBML(sbml_file).getModel()
@@ -189,9 +189,9 @@ def _check_sedml_submodels(sedml_file, sbml_files,
             'sbml_path': sbml_path,
             'sedml_path': sedml_path,
             'regrouped_path': '',
-            'start_time': out_start,
+            'start_time': 0,        # will only use t_end to have a rough timeframe
             'end_time': out_end,
-            'n_timepoints': 101, # for whatever reason, our ref trajectories only use 101 points...
+            'n_timepoints': 101,    # will only use t_end to have a rough timeframe
             'long_id': (model_name, model_year, n_species, n_reactions),
             'short_id': '',
             'sedml_task': task_number,
@@ -228,7 +228,13 @@ def _adapt_and_save_model(model_details):
     # get and create info about the paths
     sbml_file_name = model_details['sbml_path'].split('/')[-1]
     final_folder = os.path.join(DIR_MODELS_REGROUPED, model_details['short_id'])
-    final_file_name = os.path.join(final_folder, sbml_file_name)
+    sedml_file_name = (model_details['sedml_path'].split('/')[-1]).split('.')[0]
+    if sedml_file_name == '':
+        final_file_name = os.path.join(final_folder, sbml_file_name)
+    else:
+        final_file_name = os.path.join(final_folder,
+                                       sedml_file_name.replace('-', '_') +
+                                       '__' + sbml_file_name)
 
     # if we have no SED-ML file, the model is a biomodels model consisting of
     # only one SBML sheet. Move this file to the new location
@@ -304,14 +310,19 @@ def link_reference_trajectories_to_amici_models(model_info_df):
         # we must discriminate between models from JWS and biomodels
         if i_row['sedml_path'] == '':
             # from biomodels, the ref trajectories were simulated with Copasi
-            name = 'original_copasi_' + i_row['name'] + str(i_row['year'])
+            model_suffix = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
+            name = 'original_copasi_' + model_suffix.lower()
             if os.path.exists(os.path.join(path_ref_biomodels,
                                            name + '_14_14.tsv')):
                 # did it work with tolerances 1e-14, 1e-14?
                 ref = name + '_14_14.tsv'
-            else:
+            elif os.path.exists(os.path.join(path_ref_biomodels,
+                                               name + '_12_12.tsv')):
                 # If not, tolerances 1e-12, 1e-12 were used
                 ref = name + '_12_12.tsv'
+            else:
+                raise Exception('Now freaking ref trajectory found for model '
+                                + model_suffix)
             # add the path
             ref = os.path.join(path_ref_biomodels, ref)
 
