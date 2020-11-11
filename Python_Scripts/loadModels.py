@@ -37,7 +37,7 @@ def get_submodel(submodel_path):
     amici_model = amici_model_module.getModel()
 
     # get information about the model from the tsv table
-    if 'amici_path_final' in model_info.keys():
+    if 'amici_path_final1' in model_info.keys():
         model_row = model_info.loc[model_info['amici_path_final'] == submodel_path]
     else:
         model_row = model_info.loc[model_info['amici_path'] == submodel_path]
@@ -58,9 +58,9 @@ def get_submodel(submodel_path):
 def get_submodel_list(model_name):
     # get information about the model from the tsv table
     model_rows = model_info.loc[model_info['short_id'] == model_name]
-    submodel_paths = [final_path
-                      for final_path in model_rows['amici_path_final']
-                      if str(final_path) not in ('', 'nan')]
+    # only take accepted models
+    model_rows = model_rows[model_rows['accepted']]
+    submodel_paths = [path for path in model_rows['amici_path_final']]
 
     # collect the submodels
     sbml_model_list = []

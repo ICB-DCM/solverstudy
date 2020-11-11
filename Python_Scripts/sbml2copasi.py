@@ -51,7 +51,7 @@ def import_sbmls_in_copasi(model_info):
 
             # create temporary filename for an adapted sbml file for Copasi
             temp_file_name, sbml_model_name, output_table = \
-                _adapt_sbml_file(model_row, idx, sbml_file)
+                _adapt_sbml_file(sbml_file)
             # create a Copasi readable file
             cps_file = _create_copasi_file(model_row, idx, temp_file_name)
             # Id Copasi import did not work, skip
@@ -67,7 +67,7 @@ def import_sbmls_in_copasi(model_info):
     return model_info
 
 
-def _adapt_sbml_file(model_row, idx, sbml_file):
+def _adapt_sbml_file(sbml_file):
     # create temporary filename for an adapted sbml file for Copasi
     temp = sbml_file.split('.')
     temp_file_name = temp[0] + '_deleteme.xml'
@@ -101,11 +101,9 @@ def _create_copasi_file(model_row, idx, temp_file_name):
     if not os.path.exists(model_folder):
         os.makedirs(model_folder)
 
-    # run the Copasi import
+    # run the Copasi import and remove temporary file
     CopasiSE = os.path.join(DIR_COPASI_BIN, 'CopasiSE')
     os.system(f'{CopasiSE} -i {temp_file_name} -s {cps_file}')
-
-    # remove temporary file
     os.system(f'rm {temp_file_name}')
 
     # return
@@ -116,7 +114,6 @@ def _create_copasi_file(model_row, idx, temp_file_name):
 
 
 def _adapt_copasi_file(model_row, idx, cps_file, sbml_model_name, output_table):
-
     # create another cps file with some specifications altered
     f_in = open(cps_file, 'r')
     f_out = open(cps_file + '.temp', 'w')

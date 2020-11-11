@@ -36,7 +36,7 @@ time python compare_state_trajectories.py
 time python filter_models_by_error.py
 
 # Run main study
-# time python execute_WholeStudy.py
-# time python execute_Tolerances.py
+time python execute_study_algorithms.py
+time python execute_study_tolerances.py
 
 # TODO Run Plots

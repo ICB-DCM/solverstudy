@@ -38,7 +38,7 @@ def timePointsBioModels(iModel):
     elif iModel == 'Froehlich2018':
         sim_start_time = 0
         sim_end_time = 100000000
-        sim_num_time_points = 3
+        sim_num_time_points = 2
         y_bound = 1
 
     elif iModel == 'Holzhutter2004':

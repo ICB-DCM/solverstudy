@@ -311,17 +311,12 @@ def link_reference_trajectories_to_amici_models(model_info_df):
         if i_row['sedml_path'] == '':
             # from biomodels, the ref trajectories were simulated with Copasi
             model_suffix = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
-            name = 'original_copasi_' + model_suffix.lower()
-            if os.path.exists(os.path.join(path_ref_biomodels,
-                                           name + '_14_14.tsv')):
+            name = 'trajectories_copasi_strictest_' + model_suffix.lower() + '.tsv'
+            if os.path.exists(os.path.join(path_ref_biomodels, name )):
                 # did it work with tolerances 1e-14, 1e-14?
-                ref = name + '_14_14.tsv'
-            elif os.path.exists(os.path.join(path_ref_biomodels,
-                                               name + '_12_12.tsv')):
-                # If not, tolerances 1e-12, 1e-12 were used
-                ref = name + '_12_12.tsv'
+                ref = name
             else:
-                raise Exception('Now freaking ref trajectory found for model '
+                raise Exception('Now ref trajectory found for model '
                                 + model_suffix)
             # add the path
             ref = os.path.join(path_ref_biomodels, ref)

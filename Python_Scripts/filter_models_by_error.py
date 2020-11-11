@@ -24,7 +24,7 @@ if 'amici_min_error' not in model_info.keys():
     model_info = model_info.join(pd.Series(data=['inf'] * n_submodels,
                                            name='amici_min_error'))
 if 'amici_path_final' not in model_info.keys():
-    model_info = model_info.join(pd.Series(data=['inf'] * n_submodels,
+    model_info = model_info.join(pd.Series(data=[''] * n_submodels,
                                            name='amici_path_final'))
 
 # keep track of integration errors and acceptec models

@@ -41,7 +41,7 @@ def simulation_wrapper(
 
         if simulation_mode == simconfig.CPUTIME:
             # we want to repeatedly simulate the model
-            n_repetitions = 40
+            n_repetitions = 10
         else:
             n_repetitions = 1
 
@@ -50,20 +50,23 @@ def simulation_wrapper(
         cpu_times_extern = []
 
         for _ in range(n_repetitions):
+            # get the adapted solver object
+            solver = _apply_solver_settings(model, settings)
+
             # simulate and get simulation time
             start = toc()
             rdata = amici.runAmiciSimulation(model, solver)
-            time_extern = (toc() - start) / 1000.
+            time_extern = (toc() - start)
 
             # if simulation was not successful
             if rdata['status'] != 0:
-                cpu_times_extern.append(float('nan'))
-                cpu_times_intern.append(float('nan'))
+                cpu_times_extern.append([float('nan')] * n_repetitions)
+                cpu_times_intern.append([float('nan')] * n_repetitions)
                 break
 
             # report in seconds
             cpu_times_extern.append(time_extern)
-            cpu_times_intern.append(rdata['cpu_time'])
+            cpu_times_intern.append(rdata['cpu_time'] / 1000.)
 
         # let's just always collect the stuff which is cheap anyway
         average_cpu_times_intern.append(np.array(cpu_times_intern))
@@ -83,7 +86,8 @@ def simulation_wrapper(
     else:
         return _post_process_cputime(np.array(average_cpu_times_intern),
                                      np.array(average_cpu_times_extern),
-                                     np.array(failures),)
+                                     np.array(failures),
+                                     n_repetitions)
 
 
 def _apply_solver_settings(model, settings):
@@ -106,7 +110,8 @@ def _apply_solver_settings(model, settings):
 
 def _post_process_cputime(average_cpu_times_intern: np.ndarray,
                           average_cpu_times_extern: np.ndarray,
-                          failures: np.ndarray,):
+                          failures: np.ndarray,
+                          n_repetitions):
     """We want to average over the different sbml models
     which belong to the same benchmark model
 
@@ -124,8 +129,8 @@ def _post_process_cputime(average_cpu_times_intern: np.ndarray,
     # If we have a model simulation failure, we record no cpu time
     if np.any(failures):
         return {
-            'cpu_times_intern': None,
-            'cpu_times_extern': None,
+            'cpu_times_intern': np.full((1, n_repetitions), np.nan),
+            'cpu_times_extern': np.full((1, n_repetitions), np.nan),
             'failure': True,
         }
 
