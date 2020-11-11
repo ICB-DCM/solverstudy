@@ -11,9 +11,8 @@ model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
                          sep='\t')
 
 # load the table with integration errors
-max_num_errors = pd.read_csv(os.path.join(DIR_MODELS,
-                                          'amici_trajectory_errors.tsv'),
-                             sep='\t')
+max_trajectory_errors_amici = pd.read_csv(
+    os.path.join(DIR_MODELS, 'max_trajectory_errors_amici.tsv'),  sep='\t')
 
 # add columns to the model overview table, if necessary
 n_submodels = model_info.shape[0]
@@ -27,22 +26,28 @@ if 'amici_path_final' not in model_info.keys():
     model_info = model_info.join(pd.Series(data=[''] * n_submodels,
                                            name='amici_path_final'))
 
+# We want to call a model "accepted" if our trajectories deviate at most
+# by the following amount (combined absolute and relative error) from given
+# reference trajectories
+acceptance_threshold = 1e-4
+
 # keep track of integration errors and acceptec models
 accepted = []
 min_error = []
-for i_model in max_num_errors.index:
+for i_model in max_trajectory_errors_amici.index:
     # get the current row
-    current_row = max_num_errors.loc[i_model,:].values
-    # get the best simulation
+    current_row = max_trajectory_errors_amici.loc[i_model,:].values
+    # get the best simulation: "current_row" comes from a pd..DataFrame, where
+    # each column lists an ODE solver setting, each row a model. Column 1 is
+    # the model name (discard for having only the numerical errors).
     best_sim_error = np.min(current_row[2:])
     # was the model accepted?
-    acceptance_threshold = 1e-4
     model_accepted = best_sim_error < acceptance_threshold
     min_error.append(best_sim_error)
     accepted.append(model_accepted)
 
     # update the model overview table
-    amici_path = max_num_errors.loc[i_model, 'amici_path']
+    amici_path = max_trajectory_errors_amici.loc[i_model, 'amici_path']
     model_info.loc[model_info['amici_path'] ==
                    amici_path, 'amici_min_error'] = best_sim_error
     model_info.loc[model_info['amici_path'] == amici_path, 'accepted'] = model_accepted

@@ -28,7 +28,7 @@ model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
 def compare_trajectories():
     # set up a list with the numerical integration errors
     error_list = []
-    max_num_errors = []
+    max_trajectory_errors_amici = []
 
     settings = [
         {
@@ -64,7 +64,7 @@ def compare_trajectories():
         ref_traj = pd.read_csv(ref_path, sep='\t')
 
         # save error
-        max_num_error = {'amici_path': amici_model_path}
+        max_trajectory_error = {'amici_path': amici_model_path}
         for setting in settings:
             trajectories, = simulation_wrapper(simulation_mode=simconfig.TRAJECTORY,
                                                settings=setting,
@@ -72,20 +72,20 @@ def compare_trajectories():
 
             if trajectories is None:
                 # integration did not work
-                max_num_error[setting['id']] = float('inf')
+                max_trajectory_error[setting['id']] = float('inf')
             else:
                 # integration worked. Compute a combination of abs and rel error
-                max_num_error[setting['id']] = _compare_trajetory(trajectories,
-                                                                  ref_traj,
-                                                                  i_submodel)
+                max_trajectory_error[setting['id']] = \
+                    _compare_trajetory(trajectories, ref_traj, i_submodel)
 
         # save the error for each setting and model
-        max_num_errors.append(max_num_error)
+        max_trajectory_errors_amici.append(max_trajectory_error)
 
     # create a dataframe from the errors and save
-    max_num_errors = pd.DataFrame(max_num_errors)
-    max_num_errors.to_csv(os.path.join(DIR_MODELS, 'amici_trajectory_errors.tsv'),
-                          sep='\t')
+    max_trajectory_errors_amici = pd.DataFrame(max_trajectory_errors_amici)
+    max_trajectory_errors_amici.to_csv(
+        os.path.join(DIR_MODELS, 'max_trajectory_errors_amici.tsv'),
+        sep='\t', index=False)
 
     return max_num_errors
 
