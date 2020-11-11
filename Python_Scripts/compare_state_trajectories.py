@@ -83,11 +83,8 @@ def compare_trajectories():
 
     # create a dataframe from the errors and save
     max_trajectory_errors_amici = pd.DataFrame(max_trajectory_errors_amici)
-    max_trajectory_errors_amici.to_csv(
-        os.path.join(DIR_MODELS, 'max_trajectory_errors_amici.tsv'),
-        sep='\t', index=False)
 
-    return max_num_errors
+    return max_trajectory_errors_amici
 
 
 def _compare_trajetory(trajectories, ref_traj, submodel_index):
@@ -104,5 +101,7 @@ def _compare_trajetory(trajectories, ref_traj, submodel_index):
     return max(errors)
 
 
-max_num_errors = compare_trajectories()
-
+max_trajectory_errors_amici = compare_trajectories()
+max_trajectory_errors_amici.to_csv(
+    os.path.join(DIR_MODELS, 'max_trajectory_errors_amici.tsv'),
+    sep='\t', index=False)
