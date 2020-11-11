@@ -68,9 +68,6 @@ def simulation_wrapper(
 
     # loop over models (=modules) to be simulated:
     for i_model, model in enumerate(amici_model_list):
-        # get the adapted solver object
-        solver = _apply_solver_settings(model, settings)
-
         if simulation_mode == simconfig.CPUTIME:
             # we want to repeatedly simulate the model
             n_repetitions = repetitions_for_cpu_time_study

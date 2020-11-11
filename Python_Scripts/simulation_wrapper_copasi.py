@@ -4,8 +4,9 @@ from time import time as toc
 import pandas as pd
 import os
 
-from loadModels import get_submodel_list, get_submodel
-from C import simconfig, DIR_MODELS
+from loadModels import get_submodel_list_copasi, get_submodel_copasi
+from C import simconfig, DIR_MODELS, DIR_COPASI_BIN
+
 
 def simulation_wrapper(
         simulation_mode: str,
@@ -13,18 +14,25 @@ def simulation_wrapper(
         model_name: str = None,
         submodel_path: str = None,
 ):
-    """This script wraps around the simulation with AMICI,
+    """
+    This script wraps around the simulation with Copasi,
     applies the settings for the ODE solver,
     and returns a list of result, which depend on simulation_mode:
 
     """
+    # import the model_summary table to add information about the models to load
+    model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                             sep='\t')
+
     # get the list of sbml models which belong to this benchmark model
     if submodel_path is None:
-        amici_model_list, sbml_model_list = get_submodel_list(model_name)
+        copasi_file_list = get_submodel_list_copasi(model_name, model_info)
     else:
-        amici_model, sbml_model = get_submodel(submodel_path)
-        amici_model_list = [amici_model]
-        sbml_model_list = [sbml_model]
+        copasi_file = get_submodel_copasi(submodel_path, model_info)
+        copasi_file_list = [copasi_file]
+
+    # get the path with the Copasi binaries
+    CopasiSE = os.path.join(DIR_COPASI_BIN, 'CopasiSE')
 
     # collect cpu times
     average_cpu_times_intern = []
@@ -35,13 +43,13 @@ def simulation_wrapper(
     failures = []
 
     # loop over models (=modules) to be simulated:
-    for i_model, model in enumerate(amici_model_list):
-        # get the adapted solver object
-        solver = _apply_solver_settings(model, settings)
-
+    for i_model, model in enumerate(copasi_file_list):
         if simulation_mode == simconfig.CPUTIME:
             # we want to repeatedly simulate the model
-            n_repetitions = 10
+            if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
+                n_repetitions = 3
+            else:
+                n_repetitions = 25
         else:
             n_repetitions = 1
 
@@ -49,24 +57,37 @@ def simulation_wrapper(
         cpu_times_intern = []
         cpu_times_extern = []
 
-        for _ in range(n_repetitions):
-            # get the adapted solver object
-            solver = _apply_solver_settings(model, settings)
+        # adapt the cps-file for Copasi simulation according to the solver
+        # settings (create a temporary file for this).
+        # Also generate a name for the temporary Copasi report file
+        tmp_cps_file, tmp_report_base = \
+            _apply_solver_settings(model, settings)
 
-            # simulate and get simulation time
+        for i_rep in range(n_repetitions):
+            # adapt the name of the temporary report file
+            tmp_report_file = f'{tmp_report_base}_{i_rep}.tsv'
+
+            # simulate and get simulation time, remove temporary simulation file
             start = toc()
-            rdata = amici.runAmiciSimulation(model, solver)
+            os.system(f'{CopasiSE} --report-file {tmp_report_file} {tmp_cps_file}')
             time_extern = (toc() - start)
+
+            # Copasi writes its results to a report file.
+            # We need to post process it first and then remove it
+            rdata = _post_process_report_file(tmp_report_file, simulation_mode)
 
             # if simulation was not successful
             if rdata['status'] != 0:
-                cpu_times_extern.append([float('nan')] * n_repetitions)
-                cpu_times_intern.append([float('nan')] * n_repetitions)
+                cpu_times_extern = [float('nan')] * n_repetitions
+                cpu_times_intern = [float('nan')] * n_repetitions
                 break
 
             # report in seconds
             cpu_times_extern.append(time_extern)
-            cpu_times_intern.append(rdata['cpu_time'] / 1000.)
+            cpu_times_intern.append(rdata['cpu_time'])
+
+        # We need to remoe the temporary cps-file
+        os.system(f'rm {tmp_cps_file}')
 
         # let's just always collect the stuff which is cheap anyway
         average_cpu_times_intern.append(np.array(cpu_times_intern))
@@ -79,10 +100,7 @@ def simulation_wrapper(
 
     # postprocess depending on purpose and return a dict
     if simulation_mode == simconfig.TRAJECTORY:
-        return _post_process_trajectories(trajectories,
-                                          failures,
-                                          amici_model_list,
-                                          sbml_model_list)
+        return trajectories
     else:
         return _post_process_cputime(np.array(average_cpu_times_intern),
                                      np.array(average_cpu_times_extern),
@@ -91,21 +109,74 @@ def simulation_wrapper(
 
 
 def _apply_solver_settings(model, settings):
-    # get the solver object
-    solver = model.getSolver()
+    # generate a name for the temporary copasi file
+    tmp_cps_file = (model.split('/')[-1]).split('.')[0] + '__for_sim__'
+    tmp_report_base = (model.split('/')[-1]).split('.')[0] + '__report__'
+    suffix = f'atol_{settings["atol"]}__rtol{settings["rtol"]}__deleteme'
+    tmp_cps_file += suffix + '.cps'
+    tmp_report_base += suffix
 
-    # apply settings
-    solver.setAbsoluteTolerance(settings['atol'])
-    solver.setRelativeTolerance(settings['rtol'])
-    solver.setLinearSolver(settings['linSol'])
-    solver.setNonlinearSolverIteration(settings['nonlinSol'])
-    solver.setLinearMultistepMethod(settings['solAlg'])
+    # open file to read in and to write out
+    f_in = open(model, 'r')
+    f_out = open(tmp_cps_file, 'w')
 
-    # set stability flag for Adams-Moulton
-    if settings['solAlg'] == 1:
-        solver.setStabilityLimitFlag(False)
+    for line in f_in:
+        if '<Parameter name="Relative Tolerance" type="unsigned' in line:
+            # adapt relative integration error tolerance
+            f_out.write('<Parameter name="Relative Tolerance" '
+                        'type="unsignedFloat" value="1.0e-06"/>\n')
 
-    return solver
+        elif '<Parameter name="Absolute Tolerance" type="unsigned' in line:
+            # adapt absolute integration error tolerance
+            f_out.write('<Parameter name="Absolute Tolerance" '
+                        'type="unsignedFloat" value="1.0e-06"/>\n')
+
+        elif '<Parameter name="Max Internal Steps" type="unsigned' in line:
+            # adpapt number of integration steps
+            f_out.write(line.replace('value="100000"', 'value="10000"'))
+        else:
+            f_out.write(line)
+
+    # close files
+    f_out.close()
+    f_in.close()
+
+    return tmp_cps_file, tmp_report_base
+
+
+def _post_process_report_file(tmp_report_file,
+                              simulation_mode):
+    """
+    We want to postprocess the tsv file created by Copasi
+
+    :tmp_report_file:
+        string with path to report file created by Copasi
+
+    :simulation_mode:
+        ndarray of size n_models x n_repetitions.
+        to be averaged oer the models
+    """
+
+    # Does the report file exist? If so, assume simulation to be successful
+    if os.path.exists(tmp_report_file):
+        status = 0
+    else:
+        return {'status': -1, 'x': None}
+
+    # if the file exists, read it
+    results_df = pd.read_csv(tmp_report_file, sep='\t')
+    cpu_time = results_df['(Timer)CPU Time'].values[-1]
+    if simulation_mode == simconfig.TRAJECTORY:
+        # We want trajectories. Hence, we keep them
+        trajectories = results_df.drop(['Time', '(Timer)CPU Time',
+                                        '(Timer)Wall Clock Time'], axis=1)
+    else:
+        trajectories = None
+
+    # remove the temporary file
+    os.remove(tmp_report_file)
+    # return a dict
+    return {'status': status, 'x': trajectories, 'cpu_time': cpu_time}
 
 
 def _post_process_cputime(average_cpu_times_intern: np.ndarray,

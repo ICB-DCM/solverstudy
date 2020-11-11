@@ -73,3 +73,50 @@ def get_submodel_list(model_name: str,
         amici_model_list.append(amici_model)
 
     return amici_model_list, sbml_model_list
+
+
+def get_submodel_copasi(submodel_path: str,
+                        model_info: pd.DataFrame):
+    """
+    This function loads a copasi file, if the (relative) path to the folder
+    with this Copasi model is provided.
+    It extracts the respective sbml file from the list and returns it alongside
+    with the model, if any postprecessing of the Copasi results is necessary
+    """
+
+    # load the amici model
+    copasi_file = os.path.join(DIR_MODELS, submodel_path)
+
+    # if the amici import did not work, we don't want to consider this model
+    if 'amici_path_final' in model_info.keys():
+        model_row = model_info.loc[model_info['copasi_path'] == submodel_path]
+        id = int(model_row.index.values)
+        if model_row.loc[id, 'amici_path_final'] == '':
+            return None
+
+    return copasi_file
+
+
+def get_submodel_list_copasi(model_name: str,
+                             model_info: pd.DataFrame):
+    """
+    This function loads a list of Copasi model files, which all belong to the
+    same benchmark model, if a string with the id of the benchmark model id is
+    provided.
+    It also extracts the respective sbml files from the list and returns them
+    with the models, if any postprecessing of the Copasi results is necessary
+    """
+
+    # get information about the model from the tsv table
+    model_rows = model_info.loc[model_info['short_id'] == model_name]
+    # only take accepted models
+    model_rows = model_rows[model_rows['accepted']]
+    submodel_paths = [path for path in model_rows['copasi']]
+
+    # collect the submodels
+    copasi_file_list = []
+    for submodel_path in submodel_paths:
+        copasi_file = get_submodel_copasi(submodel_path, model_info)
+        copasi_file_list.append(copasi_file)
+
+    return [cps_file for cps_file in copasi_file_list if cps_file is not None]
