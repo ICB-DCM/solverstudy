@@ -89,3 +89,6 @@ class simconfig(enum.Enum):
    CPUTIME = 'cputime_study'
    FAILURE = 'failure_study'
    TRAJECTORY = 'trajectory_comparison'
+
+# repetitions for simulation when measuring cpu times, to have a roobust result
+repetitions_for_cpu_time_study = 25

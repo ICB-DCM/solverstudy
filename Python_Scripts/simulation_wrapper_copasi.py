@@ -1,14 +1,3 @@
-"""
-This script executes simulations for the benchmark study and wraps around
-simulations with AMICI. It accounts for whether trajectories should be compared
-or CPU times taken (then it repeats simulations and reports a list of CPU
-times). It can be called for one submodel (one SBML model, if its path is
-provided, e.g., for trajectory comparison) or for a whole benchmark model
-(possibly consisting of multiple submodels, i.e., SBML files).
-In the latter case, the script automatically collects all submodels and
-CPU times are averaged over the submodels.
-"""
-
 import amici
 import numpy as np
 from time import time as toc
@@ -16,7 +5,7 @@ import pandas as pd
 import os
 
 from loadModels import get_submodel_list, get_submodel
-from C import simconfig, DIR_MODELS, repetitions_for_cpu_time_study
+from C import simconfig, DIR_MODELS
 
 def simulation_wrapper(
         simulation_mode: str,
@@ -24,37 +13,16 @@ def simulation_wrapper(
         model_name: str = None,
         submodel_path: str = None,
 ):
-    """
-    This script wraps around the simulation with AMICI,
+    """This script wraps around the simulation with AMICI,
     applies the settings for the ODE solver,
     and returns a list of result, which depend on simulation_mode:
 
-    :param:
-        - simulation_mode:
-            whether we want to get trajectories out or cpu times
-
-        - settings:
-            a dict with settigs for the ODE solver
-
-        - model_name:
-            string with the id of the benchmark model (e.g. parthak2013a),
-            which may contain different submodels
-
-        - submodel_path:
-            string with path to the amici model module (submodel) which belongs
-            to *one* SBML file, path being relative to DIR_MODELS
     """
-
-    # import the model_summary table to add information about the models to load
-    model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
-                             sep='\t')
-
     # get the list of sbml models which belong to this benchmark model
     if submodel_path is None:
-        amici_model_list, sbml_model_list = get_submodel_list(model_name,
-                                                              model_info)
+        amici_model_list, sbml_model_list = get_submodel_list(model_name)
     else:
-        amici_model, sbml_model = get_submodel(submodel_path, model_info)
+        amici_model, sbml_model = get_submodel(submodel_path)
         amici_model_list = [amici_model]
         sbml_model_list = [sbml_model]
 
@@ -73,7 +41,7 @@ def simulation_wrapper(
 
         if simulation_mode == simconfig.CPUTIME:
             # we want to repeatedly simulate the model
-            n_repetitions = repetitions_for_cpu_time_study
+            n_repetitions = 10
         else:
             n_repetitions = 1
 
@@ -88,7 +56,7 @@ def simulation_wrapper(
             # simulate and get simulation time
             start = toc()
             rdata = amici.runAmiciSimulation(model, solver)
-            time_extern = (toc() - start) # time in seconds
+            time_extern = (toc() - start)
 
             # if simulation was not successful
             if rdata['status'] != 0:
@@ -98,7 +66,6 @@ def simulation_wrapper(
 
             # report in seconds
             cpu_times_extern.append(time_extern)
-            # convert time in milliseconds to time in seconds
             cpu_times_intern.append(rdata['cpu_time'] / 1000.)
 
         # let's just always collect the stuff which is cheap anyway

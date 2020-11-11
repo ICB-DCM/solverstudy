@@ -45,6 +45,14 @@ def compare_trajectories():
         for algo in (1, 2)
     ]
 
+    # if we're only testing, we don't want to check all settings
+    if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
+        settings = [
+            {'id': f'atol:1e-12_rtol:1e-10_linSol:9_nonlinSol:2_solAlg:2',
+            'atol': 1.e-12, 'rtol': 1.e-10,
+            'linSol': 9, 'nonlinSol': 2, 'solAlg': 2}
+        ]
+
     for i_submodel in model_info.index:
         # could the model be successfully imported?
         amici_model_path = model_info.loc[i_submodel, 'amici_path']
