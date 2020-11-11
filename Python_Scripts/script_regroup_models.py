@@ -50,7 +50,15 @@ def regroup_models():
                                                 model_name, model_year,
                                                 model_info)
 
-    # Group sbml models and give them short Identifiers (e.g., Bachmann2011a)
+    # Group sbml models and give them short Identifiers (e.g., Smith2011a):
+    # Grouping is done via the long model id, i.e., (first author name, year,
+    # number of species, number of reactions).
+    # If these things coincide for different SBML models, we expect them to
+    # stem from "one" main model. We keep this "main model" as benchmark model,
+    # which gets a short and handy id of its own here, and the different SBMLs
+    # are kept as "submodels" within that benchmark model. Later, evaluation
+    # of cpu times will be averaged over submodels, yielding one value per
+    # benchmark model
     model_info_df = _group_models_by_id(model_info)
 
     return model_info_df
@@ -58,10 +66,14 @@ def regroup_models():
 
 def _group_models_by_id(model_info):
     # We've run through all models. Now, let's generate short identifiers for
-    # the groups of models, which should belong together
+    # the groups of models, which should belong together.
+    # We already have long identifiers (author name, year, #species, #reactions)
+    # but those we cant really use as filenames. Go for Smith2011[a,b,c,..]
     known_ids = {}
     for model in model_info:
         if model['long_id'] not in known_ids:
+            # if the long model id is not the same as a previous one,
+            # create a new short id
             new_id = _generate_new_id(known_ids, model['long_id'])
             known_ids[model['long_id']] = new_id
         model['short_id'] = known_ids[model['long_id']]
@@ -70,6 +82,11 @@ def _group_models_by_id(model_info):
 
 
 def _generate_new_id(known_ids, long_id):
+    """
+    Create a short id for each benchmark model a la Smith2011[a,b,c,..] from
+    the long id = (author name, year, #species, #reactions)
+    "model" here means benchmark model, possibly having multiple submodels
+    """
     # count, which letter to append in case (yes, I know that's simplistic)
     letter_count = 0
     letter_list = ['', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
@@ -131,7 +148,7 @@ def _check_biomodels_model(sedml_model, sbml_path, model_name, model_year, model
         'short_id': '',
         'sbml_path': sbml_path,
         'sedml_path': sedml_path,
-        'regrouped_path': '',
+        'regrouped_path': '',   # to be filled later
         'start_time': out_start,
         'end_time': out_end,
         'n_timepoints': n_timepoints,
@@ -188,7 +205,7 @@ def _check_sedml_submodels(sedml_file, sbml_files,
             'n_reactions': n_reactions,
             'sbml_path': sbml_path,
             'sedml_path': sedml_path,
-            'regrouped_path': '',
+            'regrouped_path': '',   # to be filled later
             'start_time': 0,        # will only use t_end to have a rough timeframe
             'end_time': out_end,
             'n_timepoints': 101,    # will only use t_end to have a rough timeframe
@@ -222,8 +239,10 @@ def adapt_and_save_models(model_info_df):
 
 
 def _adapt_and_save_model(model_details):
-    """This routine takes model information from the dataframe created during
-    model regrouping, adapts the SBML file, and saves it in the model folder"""
+    """
+    This routine takes model information from the dataframe created during
+    model regrouping, adapts the SBML file, and saves it in the model folder
+    """
 
     # get and create info about the paths
     sbml_file_name = model_details['sbml_path'].split('/')[-1]
@@ -296,7 +315,10 @@ def _adapt_and_save_model(model_details):
 
 
 def link_reference_trajectories_to_amici_models(model_info_df):
-    # we need to find the correct reference trajectory for each model
+    """
+    We need to find the correct reference trajectory for each model.
+    This is not fully trivial, as some models come from biomodels, some from JWS
+    """
     ref_trajectory_paths = {}
     path_ref_biomodels = os.path.abspath(os.path.join(
         DIR_BASE, '..', 'Cache', 'trajectories_reference_biomodels'))
