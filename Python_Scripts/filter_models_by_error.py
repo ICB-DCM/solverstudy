@@ -40,7 +40,7 @@ for i_model in max_trajectory_errors_amici.index:
     # get the best simulation: "current_row" comes from a pd..DataFrame, where
     # each column lists an ODE solver setting, each row a model. Column 1 is
     # the model name (discard for having only the numerical errors).
-    best_sim_error = np.min(current_row[2:])
+    best_sim_error = np.min(current_row[1:])
     # was the model accepted?
     model_accepted = best_sim_error < acceptance_threshold
     min_error.append(best_sim_error)
