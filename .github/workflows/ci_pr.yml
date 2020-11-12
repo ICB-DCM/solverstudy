@@ -27,9 +27,11 @@ jobs:
       
       - name: Download COPASI
         run: |
-          wget https://github.com/copasi/COPASI/releases/download/Build-228/COPASI-4.29.228-Linux-64bit.tar.gz
-          tar -xzvf COPASI-4.29.228-Linux-64bit.tar.gz
-          export COPASI_DIR_BIN=COPASI-4.29.228-Linux-64bit/bin
+          COPASI_VERSION="4.29.228-Linux-64bit"
+          wget "https://github.com/copasi/COPASI/releases/download/Build-228/COPASI-${COPASI_VERSION}.tar.gz"
+          tar -xzvf COPASI-${COPASI_VERSION}.tar.gz
+          mv COPASI-${COPASI_VERSION} COPASI
+          export COPASI_DIR_BIN=COPASI/bin
 
       - name: Install pip dependencies
         run: |

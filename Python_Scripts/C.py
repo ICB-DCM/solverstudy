@@ -28,7 +28,7 @@ elif DIR_BASE == 'TEST':
     DIR_BASE = DIR_TEST_BASE
 
 # Folder with COPASI binaries, user-dependent, to reproduce LSODA simulations
-DIR_COPASI_BIN = os.getenv('COPASI_DIR_BIN', 'COPASI-4.29.228-Linux-64bit/bin')
+DIR_COPASI_BIN = os.getenv('COPASI_DIR_BIN', 'COPASI/bin')
 
 
 ###############################################################################
