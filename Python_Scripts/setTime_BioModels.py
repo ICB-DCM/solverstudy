@@ -38,7 +38,7 @@ def timePointsBioModels(iModel):
     elif iModel == 'Froehlich2018':
         sim_start_time = 0
         sim_end_time = 100000000
-        sim_num_time_points = 3
+        sim_num_time_points = 2
         y_bound = 1
 
     elif iModel == 'Holzhutter2004':
@@ -166,5 +166,9 @@ def timePointsBioModels(iModel):
         sim_end_time = 300000
         sim_num_time_points = 51
         y_bound = 3500
-
-    return sim_start_time, sim_end_time, sim_num_time_points, y_bound
+    try:
+        return sim_start_time, sim_end_time, sim_num_time_points, y_bound
+    except UnboundLocalError:
+        print('Requested timepoints for biomodels model, but no info on '
+              'time points is present. This error occured for model:' + iModel)
+        return None, None, None, None

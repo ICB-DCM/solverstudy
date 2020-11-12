@@ -1,6 +1,7 @@
 """Constant definitions."""
 
 import os
+import enum
 
 ###############################################################################
 # Base folder
@@ -56,15 +57,20 @@ DIR_DATA_TOLERANCES = os.path.join(DIR_DATA, 'TolerancesStudy')
 # Base folder for all models
 DIR_MODELS = os.path.join(DIR_BASE, 'Models')
 # Folder for sedml and sbml model definitions
-DIR_MODELS_SEDML = os.path.join(DIR_MODELS, 'sedml')
+DIR_MODELS_SEDML = os.path.join(DIR_MODELS, 'sedml')  # TODO remove
 # Folder for a copy of the biomodels models
 DIR_MODELS_BIOMODELS = os.path.join(DIR_MODELS, 'biomodels')  # TODO remove
+# Folder with the final benchmark models (regrouped and adapted sbml files)
+DIR_MODELS_REGROUPED = os.path.join(DIR_MODELS, 'regrouped')
 # Base folder for the AMICI compilation files
 DIR_MODELS_AMICI_BASE = os.path.join(DIR_MODELS, 'amici')
 # Folder for all possible AMICI compilation files
 DIR_MODELS_AMICI = os.path.join(DIR_MODELS_AMICI_BASE, 'models')
 # Folder for only the final models for the main part of the study
 DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
+# Folder for all possible Copasi files
+DIR_MODELS_COPASI = os.path.join(DIR_MODELS, 'copasi', 'models')
+
 # Folder for trajectories simulated with AMICI
 DIR_MODELS_TRAJ_AMICI = os.path.join(DIR_MODELS, 'trajectories_amici')
 # Folder for reference trajectories
@@ -72,3 +78,17 @@ DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')
 # Folder for the original COPASI simulations of the biomodels models
 DIR_MODELS_TRAJ_REF_BIOMODELS = os.path.join(
     DIR_MODELS, 'trajectories_reference_biomodels')
+
+# Folder with COPASI binaries, user-dependent, te reproduce LSODA simulations
+DIR_COPASI_BIN = '/home/paulstapor/Dokumente/Programme/COPASI/bin'
+
+##############################################################################
+# Configurations for simulations
+# Using enum class create enumerations
+class simconfig(enum.Enum):
+   CPUTIME = 'cputime_study'
+   FAILURE = 'failure_study'
+   TRAJECTORY = 'trajectory_comparison'
+
+# repetitions for simulation when measuring cpu times, to have a roobust result
+repetitions_for_cpu_time_study = 25
