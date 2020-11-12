@@ -226,7 +226,7 @@ def adapt_and_save_models(model_info_df):
     for model_folder in model_folders:
         if not os.path.exists(os.path.join(DIR_MODELS_REGROUPED, model_folder)):
             os.mkdir(os.path.join(DIR_MODELS_REGROUPED, model_folder))
-    logfile = open('sedml_change.log', 'w')
+    logfile = open(os.path.join(DIR_BASE, 'sedml_change.log'), 'w')
     logfile.close()
     n_models = model_info_df.shape[0]
     for i_model in range(n_models):
@@ -272,7 +272,7 @@ def _adapt_and_save_model(model_details):
     assert sbml_file_name.split('.')[0] == sedml_task.getModelReference()
     sedml_submodel = sedml_file.getModel(sedml_task.getModelReference())
 
-    logfile = open('sedml_change.log', 'a')
+    logfile = open(os.path.join(DIR_BASE, 'sedml_change.log'), 'a')
     for change in sedml_submodel.getListOfChanges():
         # We iterate over all changes for this model in the SED-ML
         target = change.getTarget()

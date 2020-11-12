@@ -24,6 +24,12 @@ jobs:
         run: |
           sudo apt-get install \
             swig3.0 libatlas-base-dev libhdf5-serial-dev
+      
+      - name: Download COPASI
+        run: |
+          wget https://github.com/copasi/COPASI/releases/download/Build-228/COPASI-4.29.228-Linux-64bit.tar.gz
+          tar -xzvf COPASI-4.29.228-Linux-64bit.tar.gz
+          export COPASI_DIR_BIN=COPASI-4.29.228-Linux-64bit/bin
 
       - name: Install pip dependencies
         run: |

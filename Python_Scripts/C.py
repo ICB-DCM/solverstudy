@@ -27,6 +27,10 @@ elif DIR_BASE == 'CACHE':
 elif DIR_BASE == 'TEST':
     DIR_BASE = DIR_TEST_BASE
 
+# Folder with COPASI binaries, user-dependent, to reproduce LSODA simulations
+DIR_COPASI_BIN = os.getenv('COPASI_DIR_BIN', 'COPASI-4.29.228-Linux-64bit/bin')
+
+
 ###############################################################################
 # Configuration of the model list
 
@@ -41,15 +45,6 @@ BIOMODELS_MODEL_FILE = os.getenv(
     'SOLVERSTUDY_BIOMODELS_MODEL_FILE', 'biomodels_models.txt')
 INCLUDE_FROEHLICH = os.getenv('SOLVERSTUDY_INCLUDE_FROEHLICH', 'YES')
 
-###############################################################################
-# Data directories
-
-# Simulation data base folder
-DIR_DATA = os.path.join(DIR_BASE, 'Data')
-# Folder for most of the sub-studies
-DIR_DATA_WHOLESTUDY = os.path.join(DIR_DATA, 'WholeStudy')
-# Folder for the tolerances sub-study
-DIR_DATA_TOLERANCES = os.path.join(DIR_DATA, 'TolerancesStudy')
 
 ###############################################################################
 # Model directories
@@ -79,16 +74,28 @@ DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')
 DIR_MODELS_TRAJ_REF_BIOMODELS = os.path.join(
     DIR_MODELS, 'trajectories_reference_biomodels')
 
-# Folder with COPASI binaries, user-dependent, te reproduce LSODA simulations
-DIR_COPASI_BIN = '/home/paulstapor/Dokumente/Programme/COPASI/bin'
 
-##############################################################################
+###############################################################################
+# Result directories
+
+# Simulation data base folder
+DIR_RESULTS = os.path.join(DIR_BASE, 'results')
+# Folder for most of the sub-studies
+DIR_RESULTS_ALGORITHMS = os.path.join(DIR_RESULTS, 'algorithms')
+# Folder for the tolerances sub-study
+DIR_RESULTS_TOLERANCES = os.path.join(DIR_RESULTS, 'tolerances')
+
+
+###############################################################################
 # Configurations for simulations
+
 # Using enum class create enumerations
-class simconfig(enum.Enum):
-   CPUTIME = 'cputime_study'
-   FAILURE = 'failure_study'
-   TRAJECTORY = 'trajectory_comparison'
+class SIMCONFIG(enum.Enum):
+    """Enumeration of study subtypes."""
+    CPUTIME = 'cputime_study'
+    FAILURE = 'failure_study'
+    TRAJECTORY = 'trajectory_comparison'
+
 
 # repetitions for simulation when measuring cpu times, to have a roobust result
 repetitions_for_cpu_time_study = 25
