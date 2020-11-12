@@ -5,7 +5,7 @@ import logging
 
 
 from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_AMICI, DIR_MODELS_REGROUPED,
-               DIR_MODELS_TRAJ_AMICI, DIR_MODELS_TRAJ_REF, simconfig)
+               DIR_MODELS_TRAJ_AMICI, DIR_MODELS_TRAJ_REF, DIR_COPASI_BIN, simconfig)
 
 from simulation_wrapper_copasi import simulation_wrapper
 
@@ -20,11 +20,8 @@ logger = logging.getLogger()
 logging.basicConfig(filename=os.path.join(DIR_BASE, 'trajectoryComparisonCopasi.log'),
                     level=logging.DEBUG)
 
-# load the table with model information
-model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
-                         sep='\t')
 
-def compare_trajectories_copasi():
+def compare_trajectories_copasi(model_info):
     # set up a list with the numerical integration errors
     error_list = []
     max_trajectory_errors_copasi = []
@@ -100,7 +97,15 @@ def _compare_trajetory(trajectories, ref_traj, submodel_index):
     return max(errors)
 
 
-max_trajectory_errors_copasi = compare_trajectories_copasi()
-max_trajectory_errors_copasi.to_csv(
-    os.path.join(DIR_MODELS, 'max_trajectory_errors_copasi.tsv'),
-    sep='\t', index=False)
+if os.system(os.path.join(DIR_COPASI_BIN, 'CopasiSE') + ' --help') != 0:
+    print("Copasi seems to be not installed or the path to the Copasi binaries "
+          "is not properly set in Python_Scripts/C.py. Stopping.")
+else:
+    # load the table with model information
+    model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                             sep='\t')
+
+    max_trajectory_errors_copasi = compare_trajectories_copasi(model_info)
+    max_trajectory_errors_copasi.to_csv(
+        os.path.join(DIR_MODELS, 'max_trajectory_errors_copasi.tsv'),
+        sep='\t', index=False)

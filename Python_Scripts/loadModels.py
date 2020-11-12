@@ -92,9 +92,15 @@ def get_submodel_copasi(submodel_path: str,
         model_row = model_info.loc[model_info['copasi_path'] == submodel_path]
         id = int(model_row.index.values)
         if model_row.loc[id, 'amici_path_final'] == '':
-            return None
+            return None, None
+    else:
+        return None, None
 
-    return copasi_file
+    # import the sbml model
+    sbml_path = os.path.join(DIR_MODELS, model_row.loc[id, 'regrouped_path'])
+    sbml_model = (libsbml.readSBML(sbml_path)).getModel()
+
+    return copasi_file, sbml_model
 
 
 def get_submodel_list_copasi(model_name: str,
@@ -111,12 +117,15 @@ def get_submodel_list_copasi(model_name: str,
     model_rows = model_info.loc[model_info['short_id'] == model_name]
     # only take accepted models
     model_rows = model_rows[model_rows['accepted']]
-    submodel_paths = [path for path in model_rows['copasi']]
+    submodel_paths = [path for path in model_rows['copasi_path']]
 
     # collect the submodels
     copasi_file_list = []
+    sbml_model_list = []
     for submodel_path in submodel_paths:
-        copasi_file = get_submodel_copasi(submodel_path, model_info)
-        copasi_file_list.append(copasi_file)
+        copasi_file, sbml_model = get_submodel_copasi(submodel_path, model_info)
+        if copasi_file is not None:
+            copasi_file_list.append(copasi_file)
+            sbml_model_list.append(sbml_model)
 
-    return [cps_file for cps_file in copasi_file_list if cps_file is not None]
+    return copasi_file_list, sbml_model_list
