@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 from loadModels import get_submodel_list_copasi, get_submodel_copasi
-from C import simconfig, DIR_MODELS, DIR_COPASI_BIN
+from C import SIMCONFIG, DIR_MODELS, DIR_COPASI_BIN
 
 
 def simulation_wrapper(
@@ -44,7 +44,7 @@ def simulation_wrapper(
 
     # loop over models (=modules) to be simulated:
     for i_model, model in enumerate(copasi_file_list):
-        if simulation_mode == simconfig.CPUTIME:
+        if simulation_mode == SIMCONFIG.CPUTIME:
             # we want to repeatedly simulate the model
             if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
                 n_repetitions = 3
@@ -95,11 +95,11 @@ def simulation_wrapper(
         failures.append(rdata['status'] != 0)
 
         # Trajectories are more memory intensive. Only collect if needed
-        if simulation_mode == simconfig.TRAJECTORY:
+        if simulation_mode == SIMCONFIG.TRAJECTORY:
             trajectories.append(rdata['x'])
 
     # postprocess depending on purpose and return a dict
-    if simulation_mode == simconfig.TRAJECTORY:
+    if simulation_mode == SIMCONFIG.TRAJECTORY:
         return trajectories
     else:
         return _post_process_cputime(np.array(average_cpu_times_intern),
@@ -166,7 +166,7 @@ def _post_process_report_file(tmp_report_file,
     # if the file exists, read it
     results_df = pd.read_csv(tmp_report_file, sep='\t')
     cpu_time = results_df['(Timer)CPU Time'].values[-1]
-    if simulation_mode == simconfig.TRAJECTORY:
+    if simulation_mode == SIMCONFIG.TRAJECTORY:
         # We want trajectories. Hence, we keep them
         trajectories = results_df.drop(['Time', '(Timer)CPU Time',
                                         '(Timer)Wall Clock Time'], axis=1)

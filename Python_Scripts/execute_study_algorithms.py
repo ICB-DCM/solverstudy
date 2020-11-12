@@ -14,19 +14,21 @@ import os
 import pandas as pd
 import numpy as np
 
-from C import DIR_DATA_WHOLESTUDY, DIR_MODELS_AMICI_FINAL, DIR_MODELS_COPASI, \
-              DIR_BASE, DIR_MODELS, simconfig
+from C import (
+    DIR_MODELS_AMICI_FINAL, DIR_BASE, DIR_MODELS, DIR_RESULTS_ALGORITHMS,
+    SIMCONFIG)
 from simulation_wrapper_amici import simulation_wrapper as simulate_with_amici
 
 # create logger object
 logger = logging.getLogger()
 
 # initialize the log settings
-logging.basicConfig(filename=os.path.join(DIR_BASE, 'trajectoryComparison.log'),
-                    level=logging.DEBUG)
+logging.basicConfig(
+    filename=os.path.join(DIR_BASE, 'trajectoryComparison.log'),
+    level=logging.DEBUG)
 
 # Create new folder structure for study
-save_path = os.path.join(DIR_BASE, 'results', 'algorithms')
+save_path = DIR_RESULTS_ALGORITHMS
 if not os.path.exists(save_path):
     os.makedirs(save_path)
 
@@ -72,7 +74,7 @@ for setting in settings_amici:
         models_to_average = sum([acc for acc in list(model_rows['accepted'])])
 
         # run the simulation
-        result = simulate_with_amici(simulation_mode=simconfig.CPUTIME,
+        result = simulate_with_amici(simulation_mode=SIMCONFIG.CPUTIME,
                                      settings=setting, model_name=model_name)
 
         # save results in a dict
