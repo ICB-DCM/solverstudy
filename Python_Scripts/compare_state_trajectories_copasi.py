@@ -4,8 +4,7 @@ import os
 import logging
 
 
-from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_AMICI, DIR_MODELS_REGROUPED,
-               DIR_MODELS_TRAJ_AMICI, DIR_MODELS_TRAJ_REF, SIMCONFIG)
+from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_REGROUPED, SIMCONFIG)
 
 from simulation_wrapper_copasi import simulation_wrapper
 
@@ -17,12 +16,14 @@ base_path = DIR_MODELS_REGROUPED
 logger = logging.getLogger()
 
 # initialize the log settings
-logging.basicConfig(filename=os.path.join(DIR_BASE, 'trajectoryComparisonCopasi.log'),
-                    level=logging.DEBUG)
+logging.basicConfig(
+    filename=os.path.join(DIR_BASE, 'trajectoryComparisonCopasi.log'),
+    level=logging.DEBUG)
 
 # load the table with model information
 model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
                          sep='\t')
+
 
 def compare_trajectories_copasi():
     # set up a list with the numerical integration errors
@@ -65,15 +66,17 @@ def compare_trajectories_copasi():
         # save error
         max_trajectory_error = {'copasi_path': copasi_model_path}
         for setting in settings:
-            trajectories, = simulation_wrapper(simulation_mode=SIMCONFIG.TRAJECTORY,
-                                               settings=setting,
-                                               submodel_path=copasi_model_path)
+            trajectories, = simulation_wrapper(
+                simulation_mode=SIMCONFIG.TRAJECTORY,
+                settings=setting,
+                submodel_path=copasi_model_path)
 
             if trajectories is None:
                 # integration did not work
                 max_trajectory_error[setting['id']] = float('inf')
             else:
-                # integration worked. Compute a combination of abs and rel error
+                # integration worked. Compute a combination of abs and rel
+                #  error
                 max_trajectory_error[setting['id']] = \
                     _compare_trajetory(trajectories, ref_traj, i_submodel)
 

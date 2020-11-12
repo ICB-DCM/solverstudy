@@ -77,11 +77,11 @@ The AMICI version used for this project was 0.10.19. However, it was a commit fr
 
 ### 1.1 Download all sedml and sbml models from the JWS Online Database
 
-	script_download_all_sedml_models.py
+	script_download_jws_sedml_sbml.py
 
 ### 1.2 Download chosen sbml models from the BioModels Database
 
-	script_download_all_sbml_biomodels.py
+	script_download_biomodels_sbml.py
 
 ### 1.3 Import all sbml models to AMICI
 

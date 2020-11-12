@@ -3,17 +3,13 @@
 # Exit if a command fails
 set -e
 
-if [ -e SolverStudyTest ]; then
-  echo "./SolverStudyTest exists already, remove it first"
+if [ -e SolverStudyWork ]; then
+  echo "./SolverStudyWork exists already, remove it first"
   exit 1
 fi
 
 # Configure environment
-export SOLVERSTUDY_DIR_BASE=TEST
-export SOLVERSTUDY_JWS_MODEL_FILE="../Test/test_set_jws.txt"
-export SOLVERSTUDY_BIOMODELS_MODEL_SLUG_FILE="../Test/test_set_biomodels_slug.txt"
-export SOLVERSTUDY_BIOMODELS_MODEL_FILE="../Test/test_set_biomodels.txt"
-export SOLVERSTUDY_INCLUDE_FROEHLICH="No"
+export SOLVERSTUDY_DIR_BASE=WORK
 
 # Go to base directory
 cd Python_Scripts

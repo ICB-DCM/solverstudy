@@ -124,7 +124,8 @@ def _parse_model_name(sedml_model):
     return model_name, model_year
 
 
-def _check_biomodels_model(sedml_model, sbml_path, model_name, model_year, model_info):
+def _check_biomodels_model(
+        sedml_model, sbml_path, model_name, model_year, model_info):
     # only one sbml file, a benchmark model on its own.
     sedml_path = ''
     sbml_model = (libsbml.readSBML(sbml_path)).getModel()
