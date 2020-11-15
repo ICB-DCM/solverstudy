@@ -11,14 +11,14 @@ import urllib
 
 from util import is_empty
 from C import (
-    DIR_MODELS, USE_CACHED_REF_TRAJ,
+    DIR_BASE, DIR_MODELS, USE_CACHED_REF_TRAJ,
     DIR_TRAJ_REF, DIR_TRAJ_REF_JWS,
     DIR_TRAJ_REF_BIOMODELS,
     DIR_CACHE_TRAJ_REF_JWS, DIR_CACHE_TRAJ_REF_BIOMODELS)
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler('jws_trajectory_download.log')
+fh = logging.FileHandler(os.path.join(DIR_BASE, 'jws_trajectory_download.log'))
 fh.setLevel(logging.DEBUG)
 logger.addHandler(fh)
 logger.addHandler(logging.StreamHandler())
