@@ -1,4 +1,4 @@
-# AMICI import of a JWS sbml model from the model collection
+"""Import all models in AMICI"""
 
 import libsbml
 import amici

@@ -44,6 +44,7 @@ BIOMODELS_MODEL_SLUG_FILE = os.getenv(
 BIOMODELS_MODEL_FILE = os.getenv(
     'SOLVERSTUDY_BIOMODELS_MODEL_FILE', 'biomodels_models.txt')
 INCLUDE_FROEHLICH = os.getenv('SOLVERSTUDY_INCLUDE_FROEHLICH', 'YES')
+USE_CACHED_REF_TRAJ = os.getenv('SOLVERSTUDY_USE_CACHED_REF_TRAJ', 'YES')
 
 
 ###############################################################################
@@ -66,13 +67,18 @@ DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
 # Folder for all possible Copasi files
 DIR_MODELS_COPASI = os.path.join(DIR_MODELS, 'copasi', 'models')
 
-# Folder for trajectories simulated with AMICI
-DIR_MODELS_TRAJ_AMICI = os.path.join(DIR_MODELS, 'trajectories_amici')
+
+###############################################################################
+# Reference trajectories
 # Folder for reference trajectories
-DIR_MODELS_TRAJ_REF = os.path.join(DIR_MODELS, 'trajectories_reference')
-# Folder for the original COPASI simulations of the biomodels models
-DIR_MODELS_TRAJ_REF_BIOMODELS = os.path.join(
-    DIR_MODELS, 'trajectories_reference_biomodels')
+DIR_TRAJ_REF = os.path.join(DIR_BASE, 'trajectories_reference')
+# Constants to label various reference trajectories
+TRAJ_REF_JWS = 'trajectories_reference_jws'
+TRAJ_REF_BIOMODELS = 'trajectories_reference_biomodels'
+# Folder for JWS reference trajectories
+DIR_TRAJ_REF_JWS = os.path.join(DIR_TRAJ_REF, TRAJ_REF_JWS)
+# Folder for Biomodels reference trajectories
+DIR_TRAJ_REF_BIOMODELS = os.path.join(DIR_TRAJ_REF, TRAJ_REF_BIOMODELS)
 
 
 ###############################################################################
@@ -87,6 +93,19 @@ DIR_RESULTS_TOLERANCES = os.path.join(DIR_RESULTS, 'tolerances')
 
 
 ###############################################################################
+# Cache directories
+
+DIR_CACHE = os.path.join(DIR_BASE, '..', 'Cache')
+# Folder for cached reference trajectories
+DIR_CACHE_TRAJ_REF = os.path.join(DIR_CACHE, 'trajectories_reference')
+# Folder for cached JWS reference trajectories
+DIR_CACHE_TRAJ_REF_JWS = os.path.join(DIR_CACHE_TRAJ_REF, TRAJ_REF_JWS)
+# Folder for cached Biomodels reference trajectories
+DIR_CACHE_TRAJ_REF_BIOMODELS = os.path.join(
+    DIR_CACHE_TRAJ_REF, TRAJ_REF_BIOMODELS)
+
+
+###############################################################################
 # Configurations for simulations
 
 # Using enum class create enumerations
@@ -97,5 +116,5 @@ class SIMCONFIG(enum.Enum):
     TRAJECTORY = 'trajectory_comparison'
 
 
-# repetitions for simulation when measuring cpu times, to have a roobust result
+# repetitions for simulation when measuring cpu times, to have a robust result
 repetitions_for_cpu_time_study = 25

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Exit if a command fails
-set -e
+set -ev
 
 if [ -e SolverStudyTest ]; then
   echo "./SolverStudyTest exists already, remove it first"
@@ -14,6 +14,7 @@ export SOLVERSTUDY_JWS_MODEL_FILE="../Test/test_set_jws.txt"
 export SOLVERSTUDY_BIOMODELS_MODEL_SLUG_FILE="../Test/test_set_biomodels_slug.txt"
 export SOLVERSTUDY_BIOMODELS_MODEL_FILE="../Test/test_set_biomodels.txt"
 export SOLVERSTUDY_INCLUDE_FROEHLICH="No"
+export SOLVERSTUDY_USE_CACHED_REF_TRAJ="NO"
 
 # Go to base directory
 cd Python_Scripts
@@ -22,12 +23,15 @@ cd Python_Scripts
 time python script_download_jws_sedml_sbml.py
 time python script_download_biomodels_sbml.py
 
-# run model regrouping
+# Run model regrouping
 time python script_regroup_models.py
 
 # Run amici import and compilation
 time python sbml2amici.py
 # time python sbml2copasi.py # TBD: automated Copasi import
+
+# Get reference trajectories
+time python script_get_reference_trajectories.py
 
 # Run trajectory comparison
 time python compare_state_trajectories.py

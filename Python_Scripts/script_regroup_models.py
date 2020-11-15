@@ -15,7 +15,9 @@ import shutil
 import pandas as pd
 import re
 
-from C import (DIR_MODELS_SEDML, DIR_MODELS_REGROUPED, DIR_MODELS, DIR_BASE)
+from C import (
+    DIR_MODELS_SEDML, DIR_MODELS_REGROUPED, DIR_MODELS, DIR_BASE,
+    DIR_TRAJ_REF_JWS, DIR_TRAJ_REF_BIOMODELS)
 from setTime_BioModels import timePointsBioModels
 
 
@@ -225,8 +227,8 @@ def adapt_and_save_models(model_info_df):
 
     model_folders = list(set(model_info_df['short_id']))
     for model_folder in model_folders:
-        if not os.path.exists(os.path.join(DIR_MODELS_REGROUPED, model_folder)):
-            os.mkdir(os.path.join(DIR_MODELS_REGROUPED, model_folder))
+        os.makedirs(os.path.join(DIR_MODELS_REGROUPED, model_folder),
+                    exist_ok=True)
     logfile = open(os.path.join(DIR_BASE, 'sedml_change.log'), 'w')
     logfile.close()
     n_models = model_info_df.shape[0]
@@ -318,13 +320,12 @@ def _adapt_and_save_model(model_details):
 def link_reference_trajectories_to_amici_models(model_info_df):
     """
     We need to find the correct reference trajectory for each model.
-    This is not fully trivial, as some models come from biomodels, some from JWS
+    This is not fully trivial, as some models come from biomodels,
+    some from JWS.
     """
     ref_trajectory_paths = {}
-    path_ref_biomodels = os.path.abspath(os.path.join(
-        DIR_BASE, '..', 'Cache', 'trajectories_reference_biomodels'))
-    path_ref_jws = os.path.abspath(os.path.join(
-        DIR_BASE, '..', 'Cache', 'trajectories_reference_jws'))
+    path_ref_biomodels = DIR_TRAJ_REF_BIOMODELS
+    path_ref_jws = DIR_TRAJ_REF_JWS
 
     # iterate over models, write pyth to reference trajectory
     for sub_id in model_info_df.index:
@@ -334,13 +335,8 @@ def link_reference_trajectories_to_amici_models(model_info_df):
         if i_row['sedml_path'] == '':
             # from biomodels, the ref trajectories were simulated with Copasi
             model_suffix = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
-            name = 'trajectories_copasi_strictest_' + model_suffix.lower() + '.tsv'
-            if os.path.exists(os.path.join(path_ref_biomodels, name )):
-                # did it work with tolerances 1e-14, 1e-14?
-                ref = name
-            else:
-                raise Exception('Now ref trajectory found for model '
-                                + model_suffix)
+            name = f'trajectories_copasi_strictest_{model_suffix.lower()}.tsv'
+            ref = name
             # add the path
             ref = os.path.join(path_ref_biomodels, ref)
 
@@ -349,7 +345,8 @@ def link_reference_trajectories_to_amici_models(model_info_df):
             # refactor the name based on the sedml and the sbml file names
             name1 = (i_row['sedml_path'].split('/')[-1]).split('.')[0]
             name2 = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
-            ref = os.path.join(path_ref_jws, name1, name2, 'JWS_simulation.csv')
+            ref = os.path.join(
+                path_ref_jws, name1, name2, 'JWS_simulation.csv')
 
         ref_trajectory_paths[sub_id] = ref
 
