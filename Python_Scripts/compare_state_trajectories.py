@@ -18,8 +18,9 @@ base_path = DIR_MODELS_REGROUPED
 logger = logging.getLogger()
 
 # initialize the log settings
-logging.basicConfig(filename=os.path.join(DIR_BASE, 'trajectoryComparison.log'),
-                    level=logging.DEBUG)
+logging.basicConfig(
+    filename=os.path.join(DIR_BASE, 'trajectoryComparison.log'),
+    level=logging.DEBUG)
 
 # load the table with model information
 model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),

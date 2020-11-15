@@ -29,7 +29,7 @@ time python script_regroup_models.py
 time python sbml2amici.py
 # time python sbml2copasi.py # TBD: automated Copasi import
 
-# Run JWS trajectory comparison
+# Run trajectory comparison
 time python compare_state_trajectories.py
 
 # Select models to include in main study

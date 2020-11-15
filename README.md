@@ -4,74 +4,61 @@ This repository contains all python files and (supplementary) figures for the ma
 
 ## Preparations
 
-The study was performed on Linux (Ubuntu 20.10) with Anaconda python 3.8.5. 
-All scripts can be found under `Python_Scripts`, which we henceforth assume to be the working directory (`cd Python_Scripts`).
-We recommend the installation of a virtual environment using conda:
+The study was performed on Linux (Ubuntu 20.10) with Anaconda python 3.8.5
+(for Minoconda minor changes are necessary).
+All scripts can be found under `Python_Scripts`, which we henceforth assume
+to be the working directory (`cd Python_Scripts`).
+
+### Installation
+
+We recommend the installation of a virtual environment:
 
     conda create -n solverstudy python=3.8
     conda activate solverstudy
 
-All required dependencies can be installed via
+Make sure you use the correct python environment (e.g. `which pip`).
 
-    pip install -r ../Software/requirements.txt
-
-In the case of an virtual environment, the requirements must be 
-installed to the specific conda environment, i.e.,
-
-    ~/anaconda/envs/solverstudy/bin/pip install -r ../Software/requirements.txt
-
-or, if miniconda is used instead of anaconda:
-
-    ~/miniconda3/envs/solverstudy/bin/pip install -r ../Software/requirements.txt
-
-Furthermore, since AMICI requires BLAS support and swig, those need to be 
-installed if a new virtual environment was created. This is done for anaconda 
-(and with the respective changes for miniconda3) environments (on Linux) via
+As the employed simulation tool AMICI requires BLAS support and swig, those
+need to be installed. This is done for anaconda (on Linux) via
 
     conda install -n solverstudy -c conda-forge openblas
     conda install -n solverstudy -c anaconda swig
 
-The study writes and loads its data from a data base folder, which can be configured via the environment variable
+Check also the
+[AMICI installation requirements](https://github.com/amici-dev/amici/INSTALL.md).
 
-    export SOLVERSTUDY_DIR_BASE=WORK|CACHE|TEST
+All further required dependencies are defined, including the versions used in
+the study, in a file `requirements.txt`, and can be installed via
 
-where WORK, CACHE, TEST are conventions for dedicated working folders: WORK for development work, CACHE a cached version of WORK which is shipped with this repository, and TEST a smaller test collection.
+    pip install -r ../requirements.txt
 
-## 0 Problems that can occur
+### Environment configuration
 
-### 0.1 downloading this repository on Windows:
+The study writes and loads its data from a data base folder
+`SolverStudy{Work|Test}` located/created in the repository base folder,
+which can be configured via the environment variable
 
-names for specific models can be too long to save (error could occur e.g. for the model 'Morris2002')
-Work-around: Omit or rename such models
+    export SOLVERSTUDY_DIR_BASE=WORK|TEST
 
-### 0.2 using a different python interpreter than Anaconda
+where WORK, TEST are conventions for dedicated folders:
+WORK for development work, and TEST is for a smaller test collection.
 
-if a different python interpreter than Anaconda is used, the python package urlib or urlib3 might not work. 
-Thus, the download of all sedml models from the JWS database might fail (cf. step 1.1). 
+### Known problems
 
-### 0.3 working with python packages
+* Downloading this repository on Windows:
+  Names for specific models can be too long to save (error could occur e.g. for
+  the model 'Morris2002'). Work-around: Omit or rename such models
 
-if the package tqdm does not show a progress bar, the button "Emulate terminal in output console" in the
-python configurations must be switched on.
+* Using a different python interpreter than Anaconda
+  If a different python interpreter than Anaconda is used, the python package
+  urlib or urlib3 might not work. 
+  Thus, the download of all sedml models from the JWS database might fail (cf.
+  step 1.1).
 
-### 0.4 doing step 1 only partially
-
-in step 1, the main folder 'Benchmarking_of_numerical_ODE_integration_methods' with its subfolders 'BioModelsDatabase_models', 'json_files', 'sbml2amici' and 'sedml_models' will be created. 
-If some steps in 1 are skipped, other scripts from step 1 will fail!
-If some but not all steps in 1 are executed, the following scripts in step 2 might not work as intended. 
-To some extend, all scripts from step 2 onwards cover many possibilities, but maybe not all.
-Hence, to guarantee a successful reproduction of the study, please either execute step 1 with all substeps,
-or not at all.
-
-The study can be reproduced by following the order in which all scripts have to be executed.
-All python scripts can be found in 'Solver_Study/Python_Scripts'.
-The study was done by using the software versions listed in `Solver_Study/Software/requirements.txt`.
-When reproducing this study, all results are stored in a therefore created folder 'Benchmarking_of_numerical_ODE_integration_methods' on the same level as 
-the downloaded repository.
-
-### 0.5 different AMICI version used
-
-The AMICI version used for this project was 0.10.19. However, it was a commit from a feature branch and had different functionality than AMICI 0.10.19 from the master branch. In order to reproduce result easily, it may be useful to use 0.10.20 from the master branch, which has these features included, if finding the commit from the feature branch is too complicated.
+* Using more recent package versions
+  The exact versions used in this study are given in `requirements.txt`.
+  In principle, more recent versions should be applicable, which is desirable,
+  however minor modifications may be necessary if some API changed.
 
 ## 1 Create model collection 
 
