@@ -85,6 +85,8 @@ def get_submodel_copasi(submodel_path: str,
     """
 
     # load the amici model
+    if str(submodel_path) in ('', 'nan', 'NaN'):
+        return None, None
     copasi_file = os.path.join(DIR_MODELS, submodel_path)
 
     # if the amici import did not work, we don't want to consider this model

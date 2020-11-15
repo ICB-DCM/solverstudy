@@ -44,19 +44,19 @@ def simulation_wrapper(
     # collect failures
     failures = []
 
+    if simulation_mode == simconfig.CPUTIME:
+        # we want to repeatedly simulate the model
+        if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
+            n_repetitions = 3
+        else:
+            n_repetitions = 25
+    else:
+        n_repetitions = 1
+
     # loop over models (=modules) to be simulated:
     for i_model, model in enumerate(copasi_file_list):
         # get the corresponding SBML model
         sbml_model = sbml_model_list[i_model]
-
-        if simulation_mode == simconfig.CPUTIME:
-            # we want to repeatedly simulate the model
-            if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
-                n_repetitions = 3
-            else:
-                n_repetitions = 25
-        else:
-            n_repetitions = 1
 
         # collect cpu times
         cpu_times_intern = []
