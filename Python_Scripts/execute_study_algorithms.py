@@ -14,8 +14,9 @@ import os
 import pandas as pd
 import numpy as np
 
-from C import DIR_DATA_WHOLESTUDY, DIR_MODELS_AMICI_FINAL, DIR_MODELS_COPASI, \
-              DIR_BASE, DIR_MODELS, simconfig, DIR_COPASI_BIN
+from C import DIR_MODELS_AMICI_FINAL, DIR_RESULTS_ALGORITHMS, \
+              DIR_BASE, DIR_MODELS, SIMCONFIG, DIR_COPASI_BIN
+
 from simulation_wrapper_amici import simulation_wrapper as simulate_with_amici
 from simulation_wrapper_copasi import simulation_wrapper as simulate_with_copasi
 
@@ -23,8 +24,9 @@ from simulation_wrapper_copasi import simulation_wrapper as simulate_with_copasi
 logger = logging.getLogger()
 
 # initialize the log settings
-logging.basicConfig(filename=os.path.join(DIR_BASE, 'trajectoryComparison.log'),
-                    level=logging.DEBUG)
+logging.basicConfig(
+    filename=os.path.join(DIR_BASE, 'trajectoryComparison.log'),
+    level=logging.DEBUG)
 
 
 def run_study_amici(model_info):
@@ -54,7 +56,7 @@ def run_study_amici(model_info):
             models_to_average = sum([acc for acc in list(model_rows['accepted'])])
 
             # run the simulation
-            result = simulate_with_amici(simulation_mode=simconfig.CPUTIME,
+            result = simulate_with_amici(simulation_mode=SIMCONFIG.CPUTIME,
                                          settings=setting, model_name=model_name)
 
             # save results in a dict
@@ -99,7 +101,7 @@ def run_study_copasi(model_info):
             models_to_average = sum([acc for acc in list(model_rows['accepted'])])
 
             # run the simulation
-            result = simulate_with_copasi(simulation_mode=simconfig.CPUTIME,
+            result = simulate_with_copasi(simulation_mode=SIMCONFIG.CPUTIME,
                                           settings=setting, model_name=model_name)
 
             # save results in a dict
@@ -121,7 +123,7 @@ def run_study_copasi(model_info):
 
 
 # Create new folder structure for study
-save_path = os.path.join(DIR_BASE, 'results', 'algorithms')
+save_path = DIR_RESULTS_ALGORITHMS
 if not os.path.exists(save_path):
     os.makedirs(save_path)
 

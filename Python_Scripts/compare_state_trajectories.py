@@ -5,7 +5,7 @@ import logging
 
 
 from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_AMICI, DIR_MODELS_REGROUPED,
-               DIR_MODELS_TRAJ_AMICI, DIR_MODELS_TRAJ_REF, simconfig)
+               DIR_MODELS_TRAJ_AMICI, DIR_MODELS_TRAJ_REF, SIMCONFIG)
 
 from simulation_wrapper_amici import simulation_wrapper
 
@@ -66,7 +66,7 @@ def compare_trajectories():
         # save error
         max_trajectory_error = {'amici_path': amici_model_path}
         for setting in settings:
-            trajectories, = simulation_wrapper(simulation_mode=simconfig.TRAJECTORY,
+            trajectories, = simulation_wrapper(simulation_mode=SIMCONFIG.TRAJECTORY,
                                                settings=setting,
                                                submodel_path=amici_model_path)
 
