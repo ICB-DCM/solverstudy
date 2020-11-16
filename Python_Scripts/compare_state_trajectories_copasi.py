@@ -4,8 +4,8 @@ import os
 import logging
 
 
-from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_AMICI, DIR_MODELS_REGROUPED,
-               DIR_MODELS_TRAJ_AMICI, DIR_MODELS_TRAJ_REF, DIR_COPASI_BIN, simconfig)
+from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_REGROUPED, DIR_COPASI_BIN,
+               SIMCONFIG)
 
 from simulation_wrapper_copasi import simulation_wrapper
 
@@ -59,7 +59,7 @@ def compare_trajectories_copasi(model_info):
         # save error
         max_trajectory_error = {'copasi_path': copasi_model_path}
         for setting in settings:
-            trajectories, = simulation_wrapper(simulation_mode=simconfig.TRAJECTORY,
+            trajectories, = simulation_wrapper(simulation_mode=SIMCONFIG.TRAJECTORY,
                                                settings=setting,
                                                submodel_path=copasi_model_path)
 

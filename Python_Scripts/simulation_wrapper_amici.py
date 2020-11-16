@@ -16,7 +16,7 @@ import pandas as pd
 import os
 
 from loadModels import get_submodel_list, get_submodel
-from C import simconfig, DIR_MODELS, repetitions_for_cpu_time_study
+from C import SIMCONFIG, DIR_MODELS, repetitions_for_cpu_time_study
 
 def simulation_wrapper(
         simulation_mode: str,
@@ -68,7 +68,7 @@ def simulation_wrapper(
 
     # loop over models (=modules) to be simulated:
     for i_model, model in enumerate(amici_model_list):
-        if simulation_mode == simconfig.CPUTIME:
+        if simulation_mode == SIMCONFIG.CPUTIME:
             # we want to repeatedly simulate the model
             n_repetitions = repetitions_for_cpu_time_study
         else:
@@ -104,11 +104,11 @@ def simulation_wrapper(
         failures.append(rdata['status'] != 0)
 
         # Trajectories are more memory intensive. Only collect if needed
-        if simulation_mode == simconfig.TRAJECTORY:
+        if simulation_mode == SIMCONFIG.TRAJECTORY:
             trajectories.append(rdata['x'])
 
     # postprocess depending on purpose and return a dict
-    if simulation_mode == simconfig.TRAJECTORY:
+    if simulation_mode == SIMCONFIG.TRAJECTORY:
         return _post_process_trajectories(trajectories,
                                           failures,
                                           amici_model_list,

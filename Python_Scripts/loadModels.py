@@ -48,6 +48,7 @@ def get_submodel(submodel_path: str,
 
     return amici_model, sbml_model
 
+
 def get_submodel_list(model_name: str,
                       model_info: pd.DataFrame):
     """
