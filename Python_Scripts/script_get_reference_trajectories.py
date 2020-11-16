@@ -182,12 +182,11 @@ def link_reference_trajectories_to_amici_models():
         i_row = model_info.loc[sub_id]
 
         # we must discriminate between models from JWS and biomodels
-        if i_row['sedml_path'] == '':
+        if is_empty(i_row['sedml_path']):
             # from biomodels, the ref trajectories were simulated with Copasi
             model_suffix = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
             name = f'trajectories_copasi_strictest_{model_suffix.lower()}.tsv'
             ref = os.path.join(path_ref_biomodels, name)
-
         else:
             # from JWS online, reference trajectories were downloaded
             # refactor the name based on the sedml and the sbml file names
