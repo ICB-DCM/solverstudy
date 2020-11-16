@@ -28,13 +28,14 @@ time python script_regroup_models.py
 
 # Run amici import and compilation
 time python sbml2amici.py
-# time python sbml2copasi.py # TBD: automated Copasi import
+time python sbml2copasi.py
 
 # Get reference trajectories
 time python script_get_reference_trajectories.py
 
 # Run trajectory comparison
 time python compare_state_trajectories_amici.py
+time python compare_state_trajectories_copasi.py
 
 # Select models to include in main study
 time python filter_models_by_error.py

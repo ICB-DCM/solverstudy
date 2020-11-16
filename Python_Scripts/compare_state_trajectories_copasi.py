@@ -4,7 +4,8 @@ import os
 import logging
 
 
-from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_REGROUPED, SIMCONFIG)
+from C import (DIR_BASE, DIR_MODELS, DIR_MODELS_REGROUPED, DIR_COPASI_BIN,
+               SIMCONFIG)
 
 from simulation_wrapper_copasi import simulation_wrapper
 
@@ -20,37 +21,30 @@ logging.basicConfig(
     filename=os.path.join(DIR_BASE, 'trajectoryComparisonCopasi.log'),
     level=logging.DEBUG)
 
-# load the table with model information
-model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
-                         sep='\t')
 
-
-def compare_trajectories_copasi():
+def compare_trajectories_copasi(model_info):
     # set up a list with the numerical integration errors
     error_list = []
     max_trajectory_errors_copasi = []
 
     settings = [
         {
-            'id': f'atol:{atol}_rtol:{rtol}_linSol:{ls}_nonlinSol:{nls}_solAlg:{algo}',
+            'id': f'atol:{atol}_rtol:{rtol}_linSol:1_nonlinSol:2_solAlg:3',
             'atol': float(atol), 'rtol': float(rtol),
-            'linSol': ls, 'nonlinSol': nls, 'solAlg': algo}
+            'linSol': 1, 'nonlinSol': 2, 'solAlg': 9}
         for (atol, rtol) in
         (('1e-3', '1e-3'), ('1e-6', '1e-3'), ('1e-6', '1e-6'),
          ('1e-8', '1e-6'), ('1e-6', '1e-8'), ('1e-12', '1e-10'),
-         ('1e-10', '1e-12'), ('1e-16', '1e-8'), ('1e-8', '1e-16'),
-         ('1e-14', '1e-14'))
-        for ls in (1, 6, 7, 8, 9)
-        for nls in (1, 2)
-        for algo in (1, 2)
+         ('1e-10', '1e-12'), ('1e-16', '1e-8'), ('1e-14', '1e-14'),
+         ('1e-8', '1e-16'),)
     ]
 
     # if we're only testing, we don't want to check all settings
     if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
         settings = [
-            {'id': f'atol:1e-12_rtol:1e-10_linSol:9_nonlinSol:2_solAlg:2',
+            {'id': f'atol:1e-12_rtol:1e-10_linSol:1_nonlinSol:2_solAlg:3',
             'atol': 1.e-12, 'rtol': 1.e-10,
-            'linSol': 9, 'nonlinSol': 2, 'solAlg': 2}
+            'linSol': 1, 'nonlinSol': 2, 'solAlg': 3}
         ]
 
     for i_submodel in model_info.index:
@@ -103,7 +97,16 @@ def _compare_trajetory(trajectories, ref_traj, submodel_index):
     return max(errors)
 
 
-max_trajectory_errors_copasi = compare_trajectories_copasi()
-max_trajectory_errors_copasi.to_csv(
-    os.path.join(DIR_MODELS, 'max_trajectory_errors_copasi.tsv'),
-    sep='\t', index=False)
+if os.system(os.path.join(DIR_COPASI_BIN, 'CopasiSE') + ' --help') != 0:
+    raise AssertionError(
+        "Copasi seems to be not installed or the path to the Copasi "
+        "binaries is not properly set in Python_Scripts/C.py. Stopping.")
+else:
+    # load the table with model information
+    model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                             sep='\t')
+
+    max_trajectory_errors_copasi = compare_trajectories_copasi(model_info)
+    max_trajectory_errors_copasi.to_csv(
+        os.path.join(DIR_MODELS, 'max_trajectory_errors_copasi.tsv'),
+        sep='\t', index=False)
