@@ -96,13 +96,11 @@ DIR_RESULTS_TOLERANCES = os.path.join(DIR_RESULTS, 'tolerances')
 # Cache directories
 
 DIR_CACHE = os.path.join(DIR_BASE, '..', 'Cache')
-# Folder for cached reference trajectories
-DIR_CACHE_TRAJ_REF = os.path.join(DIR_CACHE, 'trajectories_reference')
 # Folder for cached JWS reference trajectories
-DIR_CACHE_TRAJ_REF_JWS = os.path.join(DIR_CACHE_TRAJ_REF, TRAJ_REF_JWS)
+DIR_CACHE_TRAJ_REF_JWS = os.path.join(DIR_CACHE, TRAJ_REF_JWS)
 # Folder for cached Biomodels reference trajectories
 DIR_CACHE_TRAJ_REF_BIOMODELS = os.path.join(
-    DIR_CACHE_TRAJ_REF, TRAJ_REF_BIOMODELS)
+    DIR_CACHE, TRAJ_REF_BIOMODELS)
 
 
 ###############################################################################
