@@ -15,6 +15,7 @@ export SOLVERSTUDY_BIOMODELS_MODEL_SLUG_FILE="../Test/test_set_biomodels_slug.tx
 export SOLVERSTUDY_BIOMODELS_MODEL_FILE="../Test/test_set_biomodels.txt"
 export SOLVERSTUDY_INCLUDE_FROEHLICH="No"
 export SOLVERSTUDY_USE_CACHED_REF_TRAJ="NO"
+export COPASI_DIR_BIN="../COPASI/bin"
 
 # Go to base directory
 cd Python_Scripts
