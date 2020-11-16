@@ -31,9 +31,7 @@ jobs:
           wget "https://github.com/copasi/COPASI/releases/download/Build-228/COPASI-${COPASI_VERSION}.tar.gz"
           tar -xzvf COPASI-${COPASI_VERSION}.tar.gz
           mv COPASI-${COPASI_VERSION} COPASI
-          echo `pwd`
           export DIR_COPASI_BIN=`pwd`/COPASI/bin
-          echo $DIR_COPASI_BIN
 
       - name: Install pip dependencies
         run: |
