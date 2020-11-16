@@ -34,7 +34,7 @@ time python sbml2amici.py
 time python script_get_reference_trajectories.py
 
 # Run trajectory comparison
-time python compare_state_trajectories.py
+time python compare_state_trajectories_amici.py
 
 # Select models to include in main study
 time python filter_models_by_error.py

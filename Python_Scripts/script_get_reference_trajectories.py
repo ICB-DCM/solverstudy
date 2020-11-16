@@ -122,14 +122,15 @@ def download_jws_reference_trajectory(
         target_type = (target.split('[')[0]).split(':')[4]
         if target_type not in {'species', 'parameter', 'compartment'}:
             logger.warning(
-                f"Trying to change a {target_type} in sbml model {sbml_file}, "
-                f"which AMICI does not support. Omitting")
-            continue
+                f"Requesting a {target_type} change in {sbml_file}, "
+                "which AMICI does not support. Keeping the change, but "
+                "this is likely to cause non-comparable trajectories.")
 
         # Target id
         target_id = target.split("'")[1]
         changes_list.append(f'{target_id}={value};')
 
+    # Get slug for JWS model simulation (heuristic, but seems to work)
     sbml_model = libsbml.readSBML(sbml_file).getModel()
     sbml_slug = None
     for jws_model_info in jws_model_infos:
@@ -148,6 +149,7 @@ def download_jws_reference_trajectory(
           'species=all;' + ''.join(changes_list)
     logger.info(f"JWS simulation URL: {url}")
 
+    # Create a temporary file for the json simulation
     _, tmp_json_file = tempfile.mkstemp()
     # JWS sometimes just returns an error output, then just retry
     while True:
@@ -161,7 +163,7 @@ def download_jws_reference_trajectory(
     os.makedirs(ref_folder, exist_ok=True)
     pd.read_json(tmp_json_file).to_csv(ref_file, sep='\t', index=False)
 
-    # Remove temporary file
+    # Remove temporary json file
     os.remove(tmp_json_file)
 
 
