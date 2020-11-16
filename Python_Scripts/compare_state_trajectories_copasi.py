@@ -94,9 +94,18 @@ def _compare_trajetory(trajectories, ref_traj, submodel_index):
             ref = ref_traj[key].values
             errors.append(np.max( np.abs(sim - ref) / (1 + ref) ))
         except KeyError:
+            # A species does not seem to exist...
             errors.append(float('inf'))
-            print('could not map the species ' + key  + ' in submodel '
+            print('Could not map the species ' + key  + ' in submodel '
                   + str(submodel_index) + '. Failed comparison.')
+        except ValueError:
+            # probably, a simulation has crashed...
+            errors.append(float('inf'))
+            print('Failed to compare trajectories to reference, as simulation '
+                  'was probably not successful for submodel '
+                  + str(submodel_index) + '. Failed comparison.')
+            break
+
     return max(errors)
 
 

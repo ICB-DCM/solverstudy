@@ -79,6 +79,11 @@ def _adapt_sbml_file(sbml_file):
         sbml_model_name = (sbml_file.split('.')[0]).split('/')[-1]
         sbml_model.setName(sbml_model_name)
     output_table = []
+    for compartment in sbml_model.getListOfCompartments():
+        # Copasi prioritizes species names over IDs
+        # We have to remove them to user IDs as identifiers in Copasi
+        compartment.unsetName()
+
     for species in sbml_model.getListOfSpecies():
         # Copasi prioritizes species names over IDs
         # We have to remove them to user IDs as identifiers in Copasi
