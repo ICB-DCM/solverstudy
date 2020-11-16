@@ -92,12 +92,13 @@ def get_submodel_copasi(submodel_path: str,
 
     # if the amici import did not work, we don't want to consider this model
     if 'amici_path_final' in model_info.keys():
+        model_row = model_info.loc[model_info['copasi_path_final'] == submodel_path]
+    elif 'amici_path' in model_info.keys():
         model_row = model_info.loc[model_info['copasi_path'] == submodel_path]
-        id = int(model_row.index.values)
-        if model_row.loc[id, 'amici_path_final'] == '':
-            return None, None
     else:
         return None, None
+
+    id = int(model_row.index.values)
 
     # import the sbml model
     sbml_path = os.path.join(DIR_MODELS, model_row.loc[id, 'regrouped_path'])
