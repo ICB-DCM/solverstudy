@@ -59,9 +59,9 @@ def get_reference_trajectories():
 
     # Loop over all models
     for i_submodel in model_info.index:
-        #if is_empty(model_info.loc[i_submodel, 'amici_path']):
-        #    # Only get references for amici importable models
-        #    continue
+        if is_empty(model_info.loc[i_submodel, 'amici_path']):
+            # Only get references for amici importable models
+            continue
 
         # Path of the sedml file
         sedml_file = model_info.loc[i_submodel, 'sedml_path']
