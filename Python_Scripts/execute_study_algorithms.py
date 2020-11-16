@@ -57,7 +57,7 @@ def run_study_amici(model_info):
             models_to_average = sum([acc for acc in list(model_rows['accepted'])])
 
             # run the simulation
-            result = simulate_with_amici(simulation_mode=simconfig.CPUTIME,
+            result = simulate_with_amici(simulation_mode=SIMCONFIG.CPUTIME,
                                          settings=setting, model_name=model_name)
 
             # save results in a dict
@@ -102,7 +102,7 @@ def run_study_copasi(model_info):
             models_to_average = sum([acc for acc in list(model_rows['accepted'])])
 
             # run the simulation
-            result = simulate_with_copasi(simulation_mode=simconfig.CPUTIME,
+            result = simulate_with_copasi(simulation_mode=SIMCONFIG.CPUTIME,
                                           settings=setting, model_name=model_name)
 
             # save results in a dict

@@ -75,6 +75,9 @@ def _adapt_sbml_file(sbml_file):
     # get the sbml model, adapt it for Copasi
     sbml_model = (libsbml.readSBML(sbml_file)).getModel()
     sbml_model_name = sbml_model.getName()
+    if sbml_model_name == '':
+        sbml_model_name = (sbml_file.split('.')[0]).split('/')[-1]
+        sbml_model.setName(sbml_model_name)
     output_table = []
     for species in sbml_model.getListOfSpecies():
         # Copasi prioritizes species names over IDs
