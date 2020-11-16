@@ -28,7 +28,7 @@ elif DIR_BASE == 'TEST':
     DIR_BASE = DIR_TEST_BASE
 
 # Folder with COPASI binaries, user-dependent, to reproduce LSODA simulations
-DIR_COPASI_BIN = os.getenv('COPASI_DIR_BIN', 'COPASI/bin')
+DIR_COPASI_BIN = os.getenv('COPASI_DIR_BIN', '../COPASI/bin')
 
 
 ###############################################################################
@@ -116,3 +116,19 @@ class SIMCONFIG(enum.Enum):
 
 # repetitions for simulation when measuring cpu times, to have a robust result
 repetitions_for_cpu_time_study = 25
+
+
+###############################################################################
+# Algorithm shorthands and labels
+
+LINSOL_DCT = {1: 'Dense', 6: 'GMRES', 7: 'BiCGStab', 8: 'SPTFQMR', 9: 'KLU'}
+NONLINSOL_DCT = {1: 'Functional', 2: 'Newton-type'}
+SOLALG_DCT = {1: 'Adams', 2: 'BDF'}
+ATOL_RTOLS = (
+    ('1e-8', '1e-6'), ('1e-6', '1e-8'), ('1e-12', '1e-10'), ('1e-10', '1e-12'),
+    ('1e-16', '1e-8'), ('1e-8', '1e-16'), ('1e-14', '1e-14'))
+
+
+###############################################################################
+# Figure output folder
+DIR_FIGURES = os.path.join(DIR_BASE, 'Figures')
