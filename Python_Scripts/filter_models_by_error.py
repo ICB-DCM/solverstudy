@@ -4,7 +4,7 @@ import os
 import shutil
 
 
-from C import DIR_MODELS, DIR_MODELS_AMICI, DIR_MODELS_AMICI_FINAL
+from C import DIR_MODELS, DIR_MODELS_AMICI_FINAL
 
 # load the table with model information
 model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
