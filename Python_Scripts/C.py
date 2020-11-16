@@ -66,7 +66,8 @@ DIR_MODELS_AMICI = os.path.join(DIR_MODELS_AMICI_BASE, 'models')
 DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
 # Folder for all possible Copasi files
 DIR_MODELS_COPASI = os.path.join(DIR_MODELS, 'copasi', 'models')
-
+# Folder for only the final models for the main part of the study
+DIR_MODELS_COPASI_FINAL = os.path.join(DIR_MODELS, 'copasi', 'models_final')
 
 ###############################################################################
 # Reference trajectories

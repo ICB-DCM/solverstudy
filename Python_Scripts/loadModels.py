@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 import libsbml
-from C import DIR_MODELS_REGROUPED, DIR_MODELS_AMICI, DIR_MODELS
+from C import DIR_MODELS_REGROUPED, DIR_MODELS
 
 
 def get_submodel(submodel_path: str,
