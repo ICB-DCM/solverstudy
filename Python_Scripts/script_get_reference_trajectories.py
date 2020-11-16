@@ -23,7 +23,7 @@ fh.setLevel(logging.DEBUG)
 logger.addHandler(fh)
 logger.addHandler(logging.StreamHandler())
 
-# load the table with model information
+# load the table with model information (global variable)
 model_info: pd.DataFrame = \
     pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'), sep='\t')
 
@@ -165,4 +165,47 @@ def download_jws_reference_trajectory(
     os.remove(tmp_json_file)
 
 
+def link_reference_trajectories_to_amici_models():
+    """
+    We need to find the correct reference trajectory for each model.
+    This is not fully trivial, as some models come from biomodels,
+    some from JWS.
+    """
+    # unset column
+    model_info['ref_trajectory_path'] = None
+
+    path_ref_biomodels = DIR_TRAJ_REF_BIOMODELS
+    path_ref_jws = DIR_TRAJ_REF_JWS
+
+    # iterate over models, write pyth to reference trajectory
+    for sub_id in model_info.index:
+        i_row = model_info.loc[sub_id]
+
+        # we must discriminate between models from JWS and biomodels
+        if i_row['sedml_path'] == '':
+            # from biomodels, the ref trajectories were simulated with Copasi
+            model_suffix = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
+            name = f'trajectories_copasi_strictest_{model_suffix.lower()}.tsv'
+            ref = os.path.join(path_ref_biomodels, name)
+
+        else:
+            # from JWS online, reference trajectories were downloaded
+            # refactor the name based on the sedml and the sbml file names
+            name1 = (i_row['sedml_path'].split('/')[-1]).split('.')[0]
+            name2 = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
+            ref = os.path.join(
+                path_ref_jws, name1, name2, 'JWS_simulation.csv')
+
+        # save path
+        model_info.loc[sub_id, 'ref_trajectory_path'] = ref
+
+
+# Get all reference trajectories
 get_reference_trajectories()
+
+# Update/set all reference trajectory paths
+link_reference_trajectories_to_amici_models()
+
+# Save the model info file again
+model_info.to_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                  sep='\t', index=False)

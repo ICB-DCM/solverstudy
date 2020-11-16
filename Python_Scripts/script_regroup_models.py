@@ -317,50 +317,9 @@ def _adapt_and_save_model(model_details):
     return final_file_name
 
 
-def link_reference_trajectories_to_amici_models(model_info_df):
-    """
-    We need to find the correct reference trajectory for each model.
-    This is not fully trivial, as some models come from biomodels,
-    some from JWS.
-    """
-    ref_trajectory_paths = {}
-    path_ref_biomodels = DIR_TRAJ_REF_BIOMODELS
-    path_ref_jws = DIR_TRAJ_REF_JWS
-
-    # iterate over models, write pyth to reference trajectory
-    for sub_id in model_info_df.index:
-        i_row = model_info_df.loc[sub_id]
-
-        # we must discriminate between models from JWS and biomodels
-        if i_row['sedml_path'] == '':
-            # from biomodels, the ref trajectories were simulated with Copasi
-            model_suffix = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
-            name = f'trajectories_copasi_strictest_{model_suffix.lower()}.tsv'
-            ref = name
-            # add the path
-            ref = os.path.join(path_ref_biomodels, ref)
-
-        else:
-            # from JWS online, reference trajectories were downloaded
-            # refactor the name based on the sedml and the sbml file names
-            name1 = (i_row['sedml_path'].split('/')[-1]).split('.')[0]
-            name2 = (i_row['sbml_path'].split('/')[-1]).split('.')[0]
-            ref = os.path.join(
-                path_ref_jws, name1, name2, 'JWS_simulation.csv')
-
-        ref_trajectory_paths[sub_id] = ref
-
-    # We've collected the paths of all reference trajectories.
-    # Now we append them to the dataframe
-    return model_info_df.join(pd.Series(ref_trajectory_paths,
-                                        name='ref_trajectory_path'))
-
-
 model_info_df = regroup_models()
 
 model_info_df = adapt_and_save_models(model_info_df)
-
-model_info_df = link_reference_trajectories_to_amici_models(model_info_df)
 
 model_info_df.to_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
                      sep='\t', index=False)
