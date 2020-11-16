@@ -1,3 +1,9 @@
+"""Get reference trajectories regarded as "ground truth".
+
+Either download or copy from /Cache, depending on environment variable
+`USE_CACHED_REF_TRAJ`.
+"""
+
 import libsedml
 import libsbml
 import os
