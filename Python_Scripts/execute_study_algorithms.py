@@ -15,7 +15,8 @@ import pandas as pd
 import numpy as np
 
 
-from C import DIR_MODELS_AMICI_FINAL, DIR_RESULTS_ALGORITHMS, \
+from C import DIR_MODELS_AMICI_FINAL, DIR_MODELS_COPASI_FINAL, \
+              DIR_RESULTS_ALGORITHMS, \
               DIR_BASE, DIR_MODELS, SIMCONFIG, DIR_COPASI_BIN
 
 from simulation_wrapper_amici import simulation_wrapper as simulate_with_amici
@@ -37,7 +38,7 @@ def run_study_amici(model_info):
             'id': f'atol_{atol}__rtol_{rtol}__linSol_{ls}__nonlinSol_{nls}__solAlg_{algo}',
             'atol': float(atol), 'rtol': float(rtol),
             'linSol': ls, 'nonlinSol': nls, 'solAlg': algo}
-        for (atol, rtol) in (('1e-6', '1e-6'), ('1e-8', '1e-6'), ('1e-6', '1e-8'),
+        for (atol, rtol) in (('1e-8', '1e-6'), ('1e-6', '1e-8'),
                              ('1e-12', '1e-10'), ('1e-10', '1e-12'),
                              ('1e-16', '1e-8'), ('1e-8', '1e-16'),
                              ('1e-14', '1e-14'))
@@ -85,7 +86,7 @@ def run_study_copasi(model_info):
             'id': f'atol_{atol}__rtol_{rtol}__linSol_1__nonlinSol_2__solAlg_3',
             'atol': float(atol), 'rtol': float(rtol),
             'linSol': 1, 'nonlinSol': 2, 'solAlg': 3}
-        for (atol, rtol) in (('1e-6', '1e-6'), ('1e-8', '1e-6'), ('1e-6', '1e-8'),
+        for (atol, rtol) in (('1e-8', '1e-6'), ('1e-6', '1e-8'),
                              ('1e-12', '1e-10'), ('1e-10', '1e-12'),
                              ('1e-16', '1e-8'), ('1e-8', '1e-16'),
                              ('1e-14', '1e-14'))
@@ -95,7 +96,7 @@ def run_study_copasi(model_info):
         # collect results as a list
         results = []
 
-        for model_name in sorted(os.listdir(DIR_MODELS_AMICI_FINAL)):
+        for model_name in sorted(os.listdir(DIR_MODELS_COPASI_FINAL)):
             # Get information about the current model
             model_rows = model_info[model_info['short_id'] == model_name]
             idx = model_rows.index.values[0]

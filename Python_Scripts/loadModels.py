@@ -121,7 +121,7 @@ def get_submodel_list_copasi(model_name: str,
     model_rows = model_info.loc[model_info['short_id'] == model_name]
     # only take accepted models
     model_rows = model_rows[model_rows['accepted']]
-    submodel_paths = [path for path in model_rows['copasi_path']]
+    submodel_paths = [path for path in model_rows['copasi_path_final']]
 
     # collect the submodels
     copasi_file_list = []
