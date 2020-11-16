@@ -26,10 +26,12 @@ def simulation_wrapper(
 
     # get the list of sbml models which belong to this benchmark model
     if submodel_path is None:
-        copasi_file_list = get_submodel_list_copasi(model_name, model_info)
+        copasi_file_list, sbml_model_list = \
+            get_submodel_list_copasi(model_name, model_info)
     else:
-        copasi_file = get_submodel_copasi(submodel_path, model_info)
+        copasi_file, sbml_model = get_submodel_copasi(submodel_path, model_info)
         copasi_file_list = [copasi_file]
+        sbml_model_list = [sbml_model]
 
     # get the path with the Copasi binaries
     CopasiSE = os.path.join(DIR_COPASI_BIN, 'CopasiSE')
@@ -42,16 +44,19 @@ def simulation_wrapper(
     # collect failures
     failures = []
 
+    if simulation_mode == SIMCONFIG.CPUTIME:
+        # we want to repeatedly simulate the model
+        if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
+            n_repetitions = 3
+        else:
+            n_repetitions = 25
+    else:
+        n_repetitions = 1
+
     # loop over models (=modules) to be simulated:
     for i_model, model in enumerate(copasi_file_list):
-        if simulation_mode == SIMCONFIG.CPUTIME:
-            # we want to repeatedly simulate the model
-            if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
-                n_repetitions = 3
-            else:
-                n_repetitions = 25
-        else:
-            n_repetitions = 1
+        # get the corresponding SBML model
+        sbml_model = sbml_model_list[i_model]
 
         # collect cpu times
         cpu_times_intern = []
@@ -74,7 +79,8 @@ def simulation_wrapper(
 
             # Copasi writes its results to a report file.
             # We need to post process it first and then remove it
-            rdata = _post_process_report_file(tmp_report_file, simulation_mode)
+            rdata = _post_process_report_file(tmp_report_file, simulation_mode,
+                                              sbml_model)
 
             # if simulation was not successful
             if rdata['status'] != 0:
@@ -87,7 +93,7 @@ def simulation_wrapper(
             cpu_times_intern.append(rdata['cpu_time'])
 
         # We need to remoe the temporary cps-file
-        os.system(f'rm {tmp_cps_file}')
+        os.remove(tmp_cps_file)
 
         # let's just always collect the stuff which is cheap anyway
         average_cpu_times_intern.append(np.array(cpu_times_intern))
@@ -145,7 +151,8 @@ def _apply_solver_settings(model, settings):
 
 
 def _post_process_report_file(tmp_report_file,
-                              simulation_mode):
+                              simulation_mode,
+                              sbml_model):
     """
     We want to postprocess the tsv file created by Copasi
 
@@ -165,18 +172,44 @@ def _post_process_report_file(tmp_report_file,
 
     # if the file exists, read it
     results_df = pd.read_csv(tmp_report_file, sep='\t')
-    cpu_time = results_df['(Timer)CPU Time'].values[-1]
+    cpu_time = float(results_df['(Timer)CPU Time'].values[-1])
     if simulation_mode == SIMCONFIG.TRAJECTORY:
         # We want trajectories. Hence, we keep them
-        trajectories = results_df.drop(['Time', '(Timer)CPU Time',
-                                        '(Timer)Wall Clock Time'], axis=1)
+        for rm_key in ('time', 'Time', '(Timer)CPU Time',
+                       '(Timer)Wall Clock Time'):
+            if  rm_key in results_df.keys():
+                results_df.drop(rm_key, axis=1, inplace=True)
+
+        # We also want to drop columns with constant species
+        # Copasi marks species concentrations with [], e.g., [RAS]
+        # We need to remove the "[]" to have species IDs as column names
+        new_keys = []
+        species_list = [spec.id for spec in sbml_model.getListOfSpecies()]
+        for i_key in list(results_df.keys()):
+            quantity = i_key[1:-1]
+            if quantity not in species_list:
+                results_df.drop(i_key, axis=1, inplace=True)
+                continue
+
+            species = sbml_model.getSpecies(quantity)
+            if species.constant == True or species.getBoundaryCondition() == True:
+                results_df.drop(i_key, axis=1, inplace=True)
+                continue
+
+            new_keys.append(quantity)
+
+        if new_keys:
+            results_df.columns = new_keys
+        else:
+            return {'status': -1, 'x': None}
+
     else:
-        trajectories = None
+        results_df = None
 
     # remove the temporary file
     os.remove(tmp_report_file)
     # return a dict
-    return {'status': status, 'x': trajectories, 'cpu_time': cpu_time}
+    return {'status': status, 'x': results_df, 'cpu_time': cpu_time}
 
 
 def _post_process_cputime(average_cpu_times_intern: np.ndarray,
@@ -212,37 +245,3 @@ def _post_process_cputime(average_cpu_times_intern: np.ndarray,
         'cpu_times_extern': average_cpu_times_extern.flatten(),
         'failure': False,
     }
-
-def _post_process_trajectories(trajectories,
-                               failures,
-                               amici_model_list,
-                               sbml_model_list):
-    """This script prunes out the constant species from the trajectory array
-    and returns a dataframe with the species ids as column names"""
-    pruned_trajectories = []
-
-    for i_model, sbml_model in enumerate(sbml_model_list):
-        # did the simulation fail? If so, return None
-        failure = failures[i_model]
-        if failure:
-            pruned_trajectories.append(None)
-            continue
-
-        trajectory = trajectories[i_model]
-        amici_model = amici_model_list[i_model]
-        species_ids = []
-        species_keep = []
-        for i_state, state in enumerate(amici_model.getStateIds()):
-            # unmark prohibited symbols:
-            if state[:6] == 'amici_':
-                state = state[6:]
-            species = sbml_model.getSpecies(state)
-            if species.constant == False and species.getBoundaryCondition() == False:
-                species_ids.append(state)
-                species_keep.append(i_state)
-
-        pruned_trajectories.append(
-            pd.DataFrame(data=trajectory[:, species_keep],
-                         columns=species_ids))
-
-    return pruned_trajectories

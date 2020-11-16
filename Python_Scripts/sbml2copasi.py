@@ -119,10 +119,10 @@ def _adapt_copasi_file(model_row, idx, cps_file, sbml_model_name, output_table):
     f_out = open(cps_file + '.temp', 'w')
 
     # read out info from dataframe
-    n_timepoints = model_row.loc[idx, 'n_timepoints']
+    n_timepoints = model_row.loc[idx, 'n_timepoints'] - 1 # for whatever reason, Copasi doesn't count the first timepoint...
     start_time = model_row.loc[idx, 'start_time']
     end_time = model_row.loc[idx, 'end_time']
-    time_step = (end_time - start_time) / (n_timepoints - 1)
+    time_step = (end_time - start_time) / n_timepoints
     for line in f_in:
         if 'type="timeCourse" scheduled="false" updateModel="false"' in line:
             # schedule time course, i.e., execute if called from command line
@@ -161,7 +161,7 @@ def _adapt_copasi_file(model_row, idx, cps_file, sbml_model_name, output_table):
 
         elif 'taskType="timeCourse" separator="&#x09;" precision="6"' in line:
             # make Copasi write a report file with species IDs and solution
-            f_out.write(line)
+            f_out.write(line.replace('precision="6"', 'precision="12"'))
             f_out.write(f'      <Table printTitle="1"> \n')
             f_out.write(f'\t\t<Object cn="CN=Root,Model={sbml_model_name},'
                         f'Reference=Time"/> \n')
@@ -185,23 +185,23 @@ def _adapt_copasi_file(model_row, idx, cps_file, sbml_model_name, output_table):
     os.system(f'mv {cps_file}.temp {cps_file}')
 
 
-# read and adapt .tsv file
-model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
-                         sep='\t')
-if 'copasi_path' not in model_info.keys():
-    # add path to amici_model
-    model_info = model_info.join(pd.Series([''] * model_info.shape[0],
-                                           name='copasi_path'))
-
 # check for COPASI installation
 if os.system(os.path.join(DIR_COPASI_BIN, 'CopasiSE') + ' --help') != 0:
-    raise Exception("Copasi seems to be not installed or the path toe the "
-                    "Copasi binaries is not properly set in "
-                    "Python_Scripts/C.py. Stopping.")
+    print("Copasi seems to be not installed or the path to the Copasi binaries "
+          "is not properly set in Python_Scripts/C.py. Stopping.")
 
-model_info = import_sbmls_in_copasi(model_info)
+else:
+    # read and adapt .tsv file
+    model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
+                             sep='\t')
+    if 'copasi_path' not in model_info.keys():
+        # add path to amici_model
+        model_info = model_info.join(pd.Series([''] * model_info.shape[0],
+                                               name='copasi_path'))
 
-# save .tsv file
-model_info.to_csv(
-    path_or_buf=os.path.join(models_base_path, 'model_summary.tsv'),
-    sep='\t', index=False)
+    model_info = import_sbmls_in_copasi(model_info)
+
+    # save .tsv file
+    model_info.to_csv(
+        path_or_buf=os.path.join(models_base_path, 'model_summary.tsv'),
+        sep='\t', index=False)
