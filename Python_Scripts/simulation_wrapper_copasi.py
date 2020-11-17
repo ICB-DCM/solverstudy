@@ -129,13 +129,13 @@ def _apply_solver_settings(model, settings):
     for line in f_in:
         if '<Parameter name="Relative Tolerance" type="unsigned' in line:
             # adapt relative integration error tolerance
-            f_out.write('<Parameter name="Relative Tolerance" '
-                        'type="unsignedFloat" value="1.0e-06"/>\n')
+            f_out.write(f'<Parameter name="Relative Tolerance" '
+                        f'type="unsignedFloat" value="{settings["rtol"]}"/>\n')
 
         elif '<Parameter name="Absolute Tolerance" type="unsigned' in line:
             # adapt absolute integration error tolerance
-            f_out.write('<Parameter name="Absolute Tolerance" '
-                        'type="unsignedFloat" value="1.0e-06"/>\n')
+            f_out.write(f'<Parameter name="Absolute Tolerance" '
+                        f'type="unsignedFloat" value="{settings["atol"]}"/>\n')
 
         elif '<Parameter name="Max Internal Steps" type="unsigned' in line:
             # adpapt number of integration steps

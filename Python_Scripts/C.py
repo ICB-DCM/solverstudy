@@ -1,4 +1,7 @@
-"""Constant definitions."""
+"""Constant definitions.
+
+This is the central file defining contants used everywhere throughout the study.
+"""
 
 import os
 import enum
@@ -66,10 +69,13 @@ DIR_MODELS_AMICI = os.path.join(DIR_MODELS_AMICI_BASE, 'models')
 DIR_MODELS_AMICI_FINAL = os.path.join(DIR_MODELS_AMICI_BASE, 'models_final')
 # Folder for all possible Copasi files
 DIR_MODELS_COPASI = os.path.join(DIR_MODELS, 'copasi', 'models')
+# Folder for only the final models for the main part of the study
+DIR_MODELS_COPASI_FINAL = os.path.join(DIR_MODELS, 'copasi', 'models_final')
 
 
 ###############################################################################
 # Reference trajectories
+
 # Folder for reference trajectories
 DIR_TRAJ_REF = os.path.join(DIR_BASE, 'trajectories_reference')
 # Constants to label various reference trajectories
@@ -113,7 +119,6 @@ class SIMCONFIG(enum.Enum):
     FAILURE = 'failure_study'
     TRAJECTORY = 'trajectory_comparison'
 
-
 # repetitions for simulation when measuring cpu times, to have a robust result
 repetitions_for_cpu_time_study = 25
 
@@ -131,4 +136,5 @@ ATOL_RTOLS = (
 
 ###############################################################################
 # Figure output folder
+
 DIR_FIGURES = os.path.join(DIR_BASE, 'Figures')

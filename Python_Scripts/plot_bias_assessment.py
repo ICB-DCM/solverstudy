@@ -24,18 +24,19 @@ for model in model_list:
     # get the first SBML model which belongs to this benchmark model
     # all SBML models of one benchmark have the same number of species and
     # reactions anyway, so we can just take the first to read out the values
-    mi = model_info[model_info['short_id'] == model].index.values[0]
+    mi = model_info[model_info['short_id'] == model].index.values
+    mi0 = model_info[model_info['short_id'] == model].index.values[0]
     # check if import worked
-    if model_info.loc[mi, 'amici_import'] != 'OK':
+    if all(model_info.loc[mi, 'amici_import'] != 'OK'):
         continue
 
     # we want to plot on log10-scale
-    n_species.append(np.log10(model_info.loc[mi, 'n_species']))
-    n_reactions.append(np.log10(model_info.loc[mi, 'n_reactions']))
+    n_species.append(np.log10(model_info.loc[mi0, 'n_species']))
+    n_reactions.append(np.log10(model_info.loc[mi0, 'n_reactions']))
     # collect the model name
     model_names.append(model)
     # collect whether the model was accepted or not
-    if model_info.loc[mi, 'accepted']:
+    if any(model_info.loc[mi, 'accepted']):
         accepted_label.append('accepted')
     else:
         accepted_label.append('rejected')

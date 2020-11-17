@@ -28,8 +28,3 @@ def rtol_from_fname(fname):
 
 def atol_from_fname(fname):
     return fname.split('.')[0].split('__')[0].split('_')[1]
-
-
-
-
-

@@ -42,9 +42,12 @@ def compare_trajectories_copasi(model_info):
     # if we're only testing, we don't want to check all settings
     if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
         settings = [
+            {'id': f'atol:1e-8_rtol:1e-6_linSol:1_nonlinSol:2_solAlg:3',
+            'atol': 1.e-8, 'rtol': 1.e-6,
+            'linSol': 1, 'nonlinSol': 2, 'solAlg': 3},
             {'id': f'atol:1e-12_rtol:1e-10_linSol:1_nonlinSol:2_solAlg:3',
-            'atol': 1.e-12, 'rtol': 1.e-10,
-            'linSol': 1, 'nonlinSol': 2, 'solAlg': 3}
+             'atol': 1.e-12, 'rtol': 1.e-10,
+             'linSol': 1, 'nonlinSol': 2, 'solAlg': 3}
         ]
 
     for i_submodel in model_info.index:
@@ -91,9 +94,18 @@ def _compare_trajetory(trajectories, ref_traj, submodel_index):
             ref = ref_traj[key].values
             errors.append(np.max( np.abs(sim - ref) / (1 + ref) ))
         except KeyError:
+            # A species does not seem to exist...
             errors.append(float('inf'))
-            print('could not map the species ' + key  + ' in submodel '
+            print('Could not map the species ' + key  + ' in submodel '
                   + str(submodel_index) + '. Failed comparison.')
+        except ValueError:
+            # probably, a simulation has crashed...
+            errors.append(float('inf'))
+            print('Failed to compare trajectories to reference, as simulation '
+                  'was probably not successful for submodel '
+                  + str(submodel_index) + '. Failed comparison.')
+            break
+
     return max(errors)
 
 

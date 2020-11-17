@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 import libsbml
-from C import DIR_MODELS_REGROUPED, DIR_MODELS_AMICI, DIR_MODELS
+from C import DIR_MODELS_REGROUPED, DIR_MODELS
 
 
 def get_submodel(submodel_path: str,
@@ -92,12 +92,13 @@ def get_submodel_copasi(submodel_path: str,
 
     # if the amici import did not work, we don't want to consider this model
     if 'amici_path_final' in model_info.keys():
+        model_row = model_info.loc[model_info['copasi_path_final'] == submodel_path]
+    elif 'amici_path' in model_info.keys():
         model_row = model_info.loc[model_info['copasi_path'] == submodel_path]
-        id = int(model_row.index.values)
-        if model_row.loc[id, 'amici_path_final'] == '':
-            return None, None
     else:
         return None, None
+
+    id = int(model_row.index.values)
 
     # import the sbml model
     sbml_path = os.path.join(DIR_MODELS, model_row.loc[id, 'regrouped_path'])
@@ -120,7 +121,7 @@ def get_submodel_list_copasi(model_name: str,
     model_rows = model_info.loc[model_info['short_id'] == model_name]
     # only take accepted models
     model_rows = model_rows[model_rows['accepted']]
-    submodel_paths = [path for path in model_rows['copasi_path']]
+    submodel_paths = [path for path in model_rows['copasi_path_final']]
 
     # collect the submodels
     copasi_file_list = []
