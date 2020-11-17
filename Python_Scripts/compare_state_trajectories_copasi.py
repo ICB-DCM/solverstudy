@@ -17,8 +17,9 @@ base_path = DIR_MODELS_REGROUPED
 logger = logging.getLogger()
 
 # initialize the log settings
-logging.basicConfig(filename=os.path.join(DIR_BASE, 'trajectoryComparisonCopasi.log'),
-                    level=logging.DEBUG)
+logging.basicConfig(
+    filename=os.path.join(DIR_BASE, 'trajectoryComparisonCopasi.log'),
+    level=logging.DEBUG)
 
 
 def compare_trajectories_copasi(model_info):
@@ -41,9 +42,12 @@ def compare_trajectories_copasi(model_info):
     # if we're only testing, we don't want to check all settings
     if os.getenv('SOLVERSTUDY_DIR_BASE', None) == 'TEST':
         settings = [
+            {'id': f'atol:1e-8_rtol:1e-6_linSol:1_nonlinSol:2_solAlg:3',
+            'atol': 1.e-8, 'rtol': 1.e-6,
+            'linSol': 1, 'nonlinSol': 2, 'solAlg': 3},
             {'id': f'atol:1e-12_rtol:1e-10_linSol:1_nonlinSol:2_solAlg:3',
-            'atol': 1.e-12, 'rtol': 1.e-10,
-            'linSol': 1, 'nonlinSol': 2, 'solAlg': 3}
+             'atol': 1.e-12, 'rtol': 1.e-10,
+             'linSol': 1, 'nonlinSol': 2, 'solAlg': 3}
         ]
 
     for i_submodel in model_info.index:
@@ -59,15 +63,17 @@ def compare_trajectories_copasi(model_info):
         # save error
         max_trajectory_error = {'copasi_path': copasi_model_path}
         for setting in settings:
-            trajectories, = simulation_wrapper(simulation_mode=SIMCONFIG.TRAJECTORY,
-                                               settings=setting,
-                                               submodel_path=copasi_model_path)
+            trajectories, = simulation_wrapper(
+                simulation_mode=SIMCONFIG.TRAJECTORY,
+                settings=setting,
+                submodel_path=copasi_model_path)
 
             if trajectories is None:
                 # integration did not work
                 max_trajectory_error[setting['id']] = float('inf')
             else:
-                # integration worked. Compute a combination of abs and rel error
+                # integration worked. Compute a combination of abs and rel
+                #  error
                 max_trajectory_error[setting['id']] = \
                     _compare_trajetory(trajectories, ref_traj, i_submodel)
 
@@ -88,15 +94,25 @@ def _compare_trajetory(trajectories, ref_traj, submodel_index):
             ref = ref_traj[key].values
             errors.append(np.max( np.abs(sim - ref) / (1 + ref) ))
         except KeyError:
+            # A species does not seem to exist...
             errors.append(float('inf'))
-            print('could not map the species ' + key  + ' in submodel '
+            print('Could not map the species ' + key  + ' in submodel '
                   + str(submodel_index) + '. Failed comparison.')
+        except ValueError:
+            # probably, a simulation has crashed...
+            errors.append(float('inf'))
+            print('Failed to compare trajectories to reference, as simulation '
+                  'was probably not successful for submodel '
+                  + str(submodel_index) + '. Failed comparison.')
+            break
+
     return max(errors)
 
 
 if os.system(os.path.join(DIR_COPASI_BIN, 'CopasiSE') + ' --help') != 0:
-    print("Copasi seems to be not installed or the path to the Copasi binaries "
-          "is not properly set in Python_Scripts/C.py. Stopping.")
+    raise AssertionError(
+        "Copasi seems to be not installed or the path to the Copasi "
+        "binaries is not properly set in Python_Scripts/C.py. Stopping.")
 else:
     # load the table with model information
     model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
