@@ -12,7 +12,7 @@ from C import DIR_MODELS
 # load the table with model information
 model_info = pd.read_csv('/home/paulstapor/Dokumente/Projekte/'
                          'ODE-solver-study/solverstudy/SolverStudyWork/'
-                         'Models/model_summary (Kopie).tsv', sep='\t')
+                         'Models/model_summary.tsv', sep='\t')
 
 # collect all models, for which import worked
 n_species = []
