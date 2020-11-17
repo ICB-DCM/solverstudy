@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="lou1" name="lou1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" spatialDimensions="0" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="Ib" name="Infected bottom" compartment="default" initialConcentration="39455" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="It" name="Infected top" compartment="default" initialConcentration="36931" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="Iv" name="Infected versatile" compartment="default" initialConcentration="234800" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="Sb" name="Susceptible bottom" compartment="default" initialConcentration="2590800" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="St" name="Susceptible top" compartment="default" initialConcentration="2425100" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="Sv" name="Susceptible versatile" compartment="default" initialConcentration="15418000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_7" id="Total_infected_MSM" name="Total_infected_MSM" constant="false"/>
+      <parameter metaid="metaid_8" id="betaBT" value="0.2563" constant="false"/>
+      <parameter metaid="metaid_9" id="betaBV" value="0.2826" constant="false"/>
+      <parameter metaid="metaid_10" id="betaTB" value="0.5786" constant="false"/>
+      <parameter metaid="metaid_11" id="betaTV" value="0.5653" constant="false"/>
+      <parameter metaid="metaid_12" id="betaVB" value="0.5786" constant="false"/>
+      <parameter metaid="metaid_13" id="betaVT" value="0.2563" constant="false"/>
+      <parameter metaid="metaid_14" id="betaVV" value="0.4239" constant="false"/>
+      <parameter metaid="metaid_15" id="dI" value="0.105" constant="false"/>
+      <parameter metaid="metaid_16" id="dM" value="0.022" constant="false"/>
+      <parameter metaid="metaid_17" id="lambdaB" value="0" constant="false"/>
+      <parameter metaid="metaid_18" id="lambdaT" value="0" constant="false"/>
+      <parameter metaid="metaid_19" id="lambdaV" value="0" constant="false"/>
+      <parameter metaid="metaid_20" id="rb" value="70817" constant="false"/>
+      <parameter metaid="metaid_21" id="rt" value="96667" constant="false"/>
+      <parameter metaid="metaid_22" id="rv" value="603950" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_23" variable="lambdaT">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> betaBT </ci>
+                <ci> Ib </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> betaVT </ci>
+                <ci> Iv </ci>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> Sb </ci>
+              <ci> Ib </ci>
+              <ci> Sv </ci>
+              <ci> Iv </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_24" variable="lambdaV">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> betaTV </ci>
+                <ci> It </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> betaBV </ci>
+                <ci> Ib </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> betaVV </ci>
+                <ci> Iv </ci>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> St </ci>
+              <ci> It </ci>
+              <ci> Sv </ci>
+              <ci> Iv </ci>
+              <ci> Sb </ci>
+              <ci> Ib </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_25" variable="lambdaB">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> betaTB </ci>
+                <ci> It </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> betaVB </ci>
+                <ci> Iv </ci>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> St </ci>
+              <ci> It </ci>
+              <ci> Sv </ci>
+              <ci> Iv </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_26" variable="Total_infected_MSM">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> It </ci>
+            <ci> Iv </ci>
+            <ci> Ib </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_28" id="v_1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_27" species="St" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> rt </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_31" id="v_10" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_29" species="Sb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_30" species="Ib" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> lambdaB </ci>
+              <ci> Sb </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_33" id="v_11" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_32" species="Sb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> dM </ci>
+              <ci> Sb </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_35" id="v_12" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_34" species="Ib" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> dI </ci>
+              <ci> Ib </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="v_2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_36" species="St" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_37" species="It" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> lambdaT </ci>
+              <ci> St </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_40" id="v_3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_39" species="St" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> dM </ci>
+              <ci> St </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_42" id="v_4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_41" species="It" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> dI </ci>
+              <ci> It </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_44" id="v_5" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_43" species="Sv" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> rv </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_47" id="v_6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_45" species="Sv" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_46" species="Iv" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> lambdaV </ci>
+              <ci> Sv </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_49" id="v_7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_48" species="Sv" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> dM </ci>
+              <ci> Sv </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_51" id="v_8" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_50" species="Iv" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> dI </ci>
+              <ci> Iv </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_53" id="v_9" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_52" species="Sb" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> rb </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

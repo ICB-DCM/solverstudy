@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_karin6" initialTime="0" outputStartTime="0" outputEndTime="40" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_karin6" name="karin6" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/karin6/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zd']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zsm']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zs']/@initialConcentration" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_pr']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_prm']/@value" newValue="0.15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lm']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lp']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_karin6" modelReference="model0_karin6" simulationReference="sim0_model0_karin6"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_karin6_zd">
+      <listOfVariables>
+        <variable id="zd" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zd']" taskReference="task0_model0_karin6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> zd </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin6_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_karin6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin6_zs">
+      <listOfVariables>
+        <variable id="zs" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zs']" taskReference="task0_model0_karin6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> zs </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin6_zsm">
+      <listOfVariables>
+        <variable id="zsm" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zsm']" taskReference="task0_model0_karin6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> zsm </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_zsm_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_karin6_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_karin6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_karin6_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_zd_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_karin6_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_karin6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_karin6_time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure4C" name="Figure 4C">
+      <listOfCurves>
+        <curve id="plot0_zd" name="Zd" logX="false" logY="false" xDataReference="plot0_zd_datagen0" yDataReference="task0_model0_karin6_zd"/>
+        <curve id="plot0_zs" name="Zs" logX="false" logY="false" xDataReference="task0_model0_karin6_time" yDataReference="task0_model0_karin6_zs"/>
+        <curve id="plot0_zsm" name="Mutant Zs" logX="false" logY="false" xDataReference="plot0_zsm_datagen0" yDataReference="task0_model0_karin6_zsm"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

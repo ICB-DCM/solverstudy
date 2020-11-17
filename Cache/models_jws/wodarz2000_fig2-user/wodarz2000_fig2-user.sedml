@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_wodarz2" initialTime="0" outputStartTime="0" outputEndTime="500" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_wodarz2" name="wodarz2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/wodarz1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y']/@initialConcentration" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x']/@initialConcentration" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='w']/@initialConcentration" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='a']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b']/@value" newValue="0.0015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='c']/@value" newValue="0.063"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='h']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lambda']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='q']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_wodarz2" modelReference="model0_wodarz2" simulationReference="sim0_model0_wodarz2"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_wodarz2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wodarz2_w">
+      <listOfVariables>
+        <variable id="w" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='w']" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> w </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_z_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_wodarz2_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_wodarz2_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_z_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_wodarz2_z" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_wodarz2_z </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wodarz2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wodarz2_z">
+      <listOfVariables>
+        <variable id="z" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wodarz2_y">
+      <listOfVariables>
+        <variable id="y" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y']" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> y </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wodarz2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_wodarz2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure2_Bottom" name="Figure 2 Bottom">
+      <listOfCurves>
+        <curve id="plot1_w" name="CTLp" logX="false" logY="true" xDataReference="task0_model0_wodarz2_time" yDataReference="task0_model0_wodarz2_w"/>
+        <curve id="plot2_z" name="CTLe" logX="false" logY="false" xDataReference="plot2_z_datagen0" yDataReference="plot2_z_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure2_Top" name="Figure 2 Top">
+      <listOfCurves>
+        <curve id="plot0_y" name="virus load" logX="false" logY="true" xDataReference="task0_model0_wodarz2_time" yDataReference="task0_model0_wodarz2_y"/>
+      </listOfCurves>
+    </plot2D>
+    <report id="csv0">
+      <listOfDataSets>
+        <dataSet id="csv0_time" label="time" name="time" dataReference="task0_model0_wodarz2_time"/>
+        <dataSet id="csv0_y" label="y" name="y" dataReference="task0_model0_wodarz2_y"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv1">
+      <listOfDataSets>
+        <dataSet id="csv1_time" label="time" name="time" dataReference="task0_model0_wodarz2_time"/>
+        <dataSet id="csv1_w" label="w" name="w" dataReference="task0_model0_wodarz2_w"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv2">
+      <listOfDataSets>
+        <dataSet id="csv2_time" label="time" name="time" dataReference="task0_model0_wodarz2_time"/>
+        <dataSet id="csv2_z" label="z" name="z" dataReference="task0_model0_wodarz2_z"/>
+      </listOfDataSets>
+    </report>
+  </listOfOutputs>
+</sedML>

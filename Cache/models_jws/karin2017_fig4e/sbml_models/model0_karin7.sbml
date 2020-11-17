@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="karin7" name="karin7">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" spatialDimensions="0" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="zd" name="zd" compartment="default" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="zs" name="zs" compartment="default" initialConcentration="0.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="zsm" name="zsm" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_4" id="k_pr" name="k_pr" value="1" constant="false"/>
+      <parameter metaid="metaid_5" id="k_prm" name="k_prm" value="0.166667" constant="false"/>
+      <parameter metaid="metaid_6" id="lm" name="lm" value="0.5" constant="false"/>
+      <parameter metaid="metaid_7" id="lp" name="lp" value="1" constant="false"/>
+      <parameter metaid="metaid_8" id="pr" name="pr" value="NaN" constant="false"/>
+      <parameter metaid="metaid_9" id="prm" name="prm" value="NaN" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_10" variable="prm">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <times/>
+                      <ci> k_prm </ci>
+                      <ci> zd </ci>
+                    </apply>
+                    <cn> 0.5 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <cn> 1 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn> 1 </cn>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <times/>
+                    <cn> 5 </cn>
+                    <ci> k_prm </ci>
+                    <ci> zd </ci>
+                  </apply>
+                  <cn> 4 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_11" variable="pr">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <times/>
+                      <ci> k_pr </ci>
+                      <ci> zd </ci>
+                    </apply>
+                    <cn> 0.5 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <cn> 1 </cn>
+            </apply>
+            <apply>
+              <plus/>
+              <cn> 1 </cn>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <times/>
+                    <cn> 5 </cn>
+                    <ci> k_pr </ci>
+                    <ci> zd </ci>
+                  </apply>
+                  <cn> 4 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_13" id="v1" name="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_12" species="zs" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 2 </cn>
+                  <ci> pr </ci>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <ci> lp </ci>
+              <ci> zs </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_15" id="v2" name="v2" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_14" species="zsm" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 2 </cn>
+                  <ci> prm </ci>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <ci> lp </ci>
+              <ci> zsm </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_19" id="v3" name="v3" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_16" species="zd" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_17" species="zsm"/>
+          <modifierSpeciesReference metaid="metaid_18" species="zs"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 2 </cn>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <ci> pr </ci>
+                  </apply>
+                  <ci> lp </ci>
+                  <ci> zs </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 2 </cn>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <ci> prm </ci>
+                  </apply>
+                  <ci> lp </ci>
+                  <ci> zsm </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> lm </ci>
+                <ci> zd </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event metaid="metaid_20" useValuesFromTriggerTime="false">
+        <trigger initialValue="false" persistent="false">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <cn type="integer"> 10 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <delay>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </delay>
+        <listOfEventAssignments>
+          <eventAssignment metaid="metaid_21" variable="zsm">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn> 0.01 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>

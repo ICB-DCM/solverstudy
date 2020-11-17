@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_rong2009b_fig2" initialTime="0" outputStartTime="0" outputEndTime="300" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_rong2009b_fig2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/rong3/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Vi']/@initialConcentration" newValue="50000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='L']/@initialConcentration" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Vni']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T1']/@initialConcentration" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T']/@initialConcentration" newValue="600000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='V']/@initialConcentration" newValue="50000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NN']/@value" newValue="4000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='a']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alphaL']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='c']/@value" newValue="23.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dL']/@value" newValue="0.004"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dT']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='delta']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='epsilonPI']/@value" newValue="0.65"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='epsilonRT']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k']/@value" newValue="2.4e-08"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lambda']/@value" newValue="10000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_rong2009b_fig2" modelReference="model0_rong2009b_fig2" simulationReference="sim0_model0_rong2009b_fig2"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_rong2009b_fig2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_rong2009b_fig2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_rong2009b_fig2_Vi">
+      <listOfVariables>
+        <variable id="Vi" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Vi']" taskReference="task0_model0_rong2009b_fig2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Vi </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_rong2009b_fig2_Vni">
+      <listOfVariables>
+        <variable id="Vni" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Vni']" taskReference="task0_model0_rong2009b_fig2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Vni </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_rong2009b_fig2_ratio">
+      <listOfVariables>
+        <variable id="task0_model0_rong2009b_fig2_ratio" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ratio']" taskReference="task0_model0_rong2009b_fig2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_rong2009b_fig2_ratio </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_rong2009b_fig2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_rong2009b_fig2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure2A" name="Figure 2A">
+      <listOfCurves>
+        <curve id="plot0_Vi" name="Vi" logX="false" logY="true" xDataReference="task0_model0_rong2009b_fig2_time" yDataReference="task0_model0_rong2009b_fig2_Vi"/>
+        <curve id="plot0_Vni" name="Vni" logX="false" logY="true" xDataReference="task0_model0_rong2009b_fig2_time" yDataReference="task0_model0_rong2009b_fig2_Vni"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure2B" name="Figure 2B">
+      <listOfCurves>
+        <curve id="plot1_ratio" name="Ratio of Vni to Vi" logX="false" logY="false" xDataReference="task0_model0_rong2009b_fig2_time" yDataReference="task0_model0_rong2009b_fig2_ratio"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

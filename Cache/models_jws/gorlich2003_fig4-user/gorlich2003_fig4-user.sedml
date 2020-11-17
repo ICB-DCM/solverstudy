@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_gorlich1" initialTime="0" outputStartTime="0" outputEndTime="30" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_gorlich1" name="gorlich1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/gorlich1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RCC1']/@initialConcentration" newValue="0.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGTP_nuc']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGTP_cy']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RCC1_RanGDP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGTP_RanBP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGAP']/@initialConcentration" newValue="0.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RCC1_Ran']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGDP_nuc']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGDP_cy']/@initialConcentration" newValue="5.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RCC1_RanGTP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanBP1']/@initialConcentration" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanGAP_RanGDP']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Km_GAP']/@value" newValue="0.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanGAP_RanGDP']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kcat_GAP']/@value" newValue="10.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanBP1_RanGDP']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Km']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanBP1_RanGDP']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kcat']/@value" newValue="10.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanGTP_binding']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='koff']/@value" newValue="0.0004"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanGTP_binding']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kon']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Nucleoplasmic_transfer']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kpermRanGDP']/@value" newValue="0.12"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Cytoplasmic_transfer']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kpermRanGTP']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanGTP_release']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r5']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RanGTP_release']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r4']/@value" newValue="55.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='GTP_binding']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r6']/@value" newValue="19.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='GTP_binding']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r3']/@value" newValue="0.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='GDP_dissociation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r7']/@value" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='GDP_dissociation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r2']/@value" newValue="21.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RCC1_binding']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r8']/@value" newValue="55.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='RCC1_binding']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='r1']/@value" newValue="74.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytoplasm']/@size" newValue="1.8e-11"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nucleus']/@size" newValue="1.2e-11"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_gorlich1" modelReference="model0_gorlich1" simulationReference="sim0_model0_gorlich1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_gorlich1_RanGTP_cy">
+      <listOfVariables>
+        <variable id="RanGTP_cy" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGTP_cy']" taskReference="task0_model0_gorlich1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> RanGTP_cy </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_gorlich1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_gorlich1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_gorlich1_RanGTP_nuc">
+      <listOfVariables>
+        <variable id="RanGTP_nuc" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RanGTP_nuc']" taskReference="task0_model0_gorlich1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> RanGTP_nuc </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_RanGTP_cy_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_gorlich1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_gorlich1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_gorlich1_time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_4" name="Figure 4">
+      <listOfCurves>
+        <curve id="plot0_RanGTP_cy" name="cytoplasmic RanGTP" logX="false" logY="true" xDataReference="plot0_RanGTP_cy_datagen0" yDataReference="task0_model0_gorlich1_RanGTP_cy"/>
+        <curve id="plot0_RanGTP_nuc" name="nuclear RanGTP" logX="false" logY="true" xDataReference="task0_model0_gorlich1_time" yDataReference="task0_model0_gorlich1_RanGTP_nuc"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

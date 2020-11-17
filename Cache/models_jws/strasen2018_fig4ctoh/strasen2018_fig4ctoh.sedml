@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_strasen1" initialTime="0" outputStartTime="0" outputEndTime="1450" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim_task_task0_model3_strasen1" initialTime="0" outputStartTime="0" outputEndTime="1450" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim_task_task0_model1_strasen1" initialTime="0" outputStartTime="0" outputEndTime="1450" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim_task_task0_model2_strasen1" initialTime="0" outputStartTime="0" outputEndTime="1450" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim_task_task0_model4_strasen1" initialTime="0" outputStartTime="0" outputEndTime="1450" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim5_model5_strasen2" initialTime="0" outputStartTime="0" outputEndTime="1440" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim6_model8_strasen5" initialTime="0" outputStartTime="0" outputEndTime="300" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim_task_task9_model9_strasen5" initialTime="0" outputStartTime="0" outputEndTime="300" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_strasen1" name="strasen1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Inactive_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb_In']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec_endo']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_R2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_mran']/@value" newValue="223.595257238"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R1_total']/@value" newValue="34.8728125405"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R2_total']/@value" newValue="34.9992000511"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_export_from_nuc']/@value" newValue="1.9986995525"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_import_to_nuc']/@value" newValue="0.371577202545"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_total']/@value" newValue="876.042139373"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_export_from_nuc']/@value" newValue="0.196810731389"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_import_to_nuc']/@value" newValue="0.0370885363056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_total']/@value" newValue="629.893021851"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Trimer_import_to_nuc']/@value" newValue="0.144032629743"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='export_cytoplasm']/@value" newValue="0.0304370916631"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='hill_fact1']/@value" newValue="3.98592596229"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_active_Rec_internalize']/@value" newValue="0.537380811094"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_R2_deg']/@value" newValue="1.00037810941"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_ligand_deg']/@value" newValue="2.72107173773"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_1_relative_speed']/@value" newValue="0.566651645025"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_2_relative_speed']/@value" newValue="0.245785368673"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R1']/@value" newValue="1.61229612948"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R2']/@value" newValue="8.70467633794"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_homotrimer']/@value" newValue="0.0164056196749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kf_homotrimer']/@value" newValue="4.48445616275"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_seq_kb']/@value" newValue="0.000881183442123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_trimer_dephos']/@value" newValue="2.60999282198"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k5']/@value" newValue="47.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Dephos']/@value" newValue="0.139418263063"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_S7_protein']/@value" newValue="0.218269773101"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_disso_Active_Rec']/@value" newValue="0.00103714944572"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_1']/@value" newValue="0.200920693213"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_2']/@value" newValue="0.625804952803"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_induced_S7_production']/@value" newValue="4.99901466409"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_medium']/@value" newValue="2018.93290163"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_phosphorylation']/@value" newValue="0.0701273900653"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kb_trimmer']/@value" newValue="1.60762398289"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R1']/@value" newValue="0.0586554820931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R2']/@value" newValue="0.00100039445582"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S2']/@value" newValue="0.000514148278553"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S4']/@value" newValue="0.00480202730243"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S7']/@value" newValue="0.00102253743337"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R1_activation']/@value" newValue="4.98547574132"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R2_activation']/@value" newValue="4.95555330964"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_Seq_S7_Rec']/@value" newValue="0.882166671316"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_trimmer']/@value" newValue="4.81430089969"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kin_deg_Ligand']/@value" newValue="0.720198437382"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNA1deg_S7']/@value" newValue="0.00521888597858"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNAdeg_S7']/@value" newValue="0.0990155435422"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mRNA_prod']/@value" newValue="0.0130886858359"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cyt']/@size" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nuc']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='TGFb_LIGAND_Dose']/@value" newValue="100"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_strasen1" name="model1_strasen1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='TGFb_LIGAND_Dose']/@value" newValue="25"/>
+      </listOfChanges>
+    </model>
+    <model id="model2_strasen1" name="model2_strasen1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='TGFb_LIGAND_Dose']/@value" newValue="5"/>
+      </listOfChanges>
+    </model>
+    <model id="model3_strasen1" name="model3_strasen1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='TGFb_LIGAND_Dose']/@value" newValue="2.5"/>
+      </listOfChanges>
+    </model>
+    <model id="model4_strasen1" name="model4_strasen1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='TGFb_LIGAND_Dose']/@value" newValue="1"/>
+      </listOfChanges>
+    </model>
+    <model id="model5_strasen2" name="strasen2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Inactive_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb_In']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec_endo']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_R2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_mran']/@value" newValue="223.595257238"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R1_total']/@value" newValue="34.8728125405"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R2_total']/@value" newValue="34.9992000511"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_export_from_nuc']/@value" newValue="1.9986995525"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_import_to_nuc']/@value" newValue="0.371577202545"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_total']/@value" newValue="876.042139373"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_export_from_nuc']/@value" newValue="0.196810731389"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_import_to_nuc']/@value" newValue="0.0370885363056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_total']/@value" newValue="629.893021851"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Trimer_import_to_nuc']/@value" newValue="0.144032629743"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='WASH_LIGAND']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='effective']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='export_cytoplasm']/@value" newValue="0.0304370916631"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='hill_fact1']/@value" newValue="3.98592596229"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_active_Rec_internalize']/@value" newValue="0.537380811094"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_R2_deg']/@value" newValue="1.00037810941"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_ligand_deg']/@value" newValue="2.72107173773"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_1_relative_speed']/@value" newValue="0.566651645025"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_2_relative_speed']/@value" newValue="0.245785368673"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R1']/@value" newValue="1.61229612948"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R2']/@value" newValue="8.70467633794"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_homotrimer']/@value" newValue="0.0164056196749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kf_homotrimer']/@value" newValue="4.48445616275"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_seq_kb']/@value" newValue="0.000881183442123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_trimer_dephos']/@value" newValue="2.60999282198"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kS4_effective_2']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Dephos']/@value" newValue="0.139418263063"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_S7_protein']/@value" newValue="0.218269773101"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_disso_Active_Rec']/@value" newValue="0.00103714944572"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_1']/@value" newValue="0.200920693213"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_2']/@value" newValue="0.625804952803"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_induced_S7_production']/@value" newValue="4.99901466409"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_medium']/@value" newValue="2018.93290163"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_phosphorylation']/@value" newValue="0.0701273900653"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kb_trimmer']/@value" newValue="1.60762398289"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R1']/@value" newValue="0.0586554820931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R2']/@value" newValue="0.00100039445582"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S2']/@value" newValue="0.000514148278553"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S4']/@value" newValue="0.00480202730243"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S7']/@value" newValue="0.00102253743337"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R1_activation']/@value" newValue="4.98547574132"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R2_activation']/@value" newValue="4.95555330964"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_Seq_S7_Rec']/@value" newValue="0.882166671316"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_trimmer']/@value" newValue="4.81430089969"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kin_deg_Ligand']/@value" newValue="0.720198437382"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNA1deg_S7']/@value" newValue="0.00521888597858"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNAdeg_S7']/@value" newValue="0.0990155435422"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mRNA_prod']/@value" newValue="0.0130886858359"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='offset_restimulation_2_5pM']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_restimulation_2_5pM']/@value" newValue="1.28428"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cyt']/@size" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nuc']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model6_strasen3" name="strasen3" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen3/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Inactive_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb_In']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec_endo']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_R2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_mran']/@value" newValue="223.595257238"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R1_total']/@value" newValue="34.8728125405"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R2_total']/@value" newValue="34.9992000511"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_export_from_nuc']/@value" newValue="1.9986995525"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_import_to_nuc']/@value" newValue="0.371577202545"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_total']/@value" newValue="876.042139373"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_export_from_nuc']/@value" newValue="0.196810731389"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_import_to_nuc']/@value" newValue="0.0370885363056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_total']/@value" newValue="629.893021851"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Trimer_import_to_nuc']/@value" newValue="0.144032629743"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='WASH_LIGAND']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='effective']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='export_cytoplasm']/@value" newValue="0.0304370916631"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='hill_fact1']/@value" newValue="3.98592596229"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_active_Rec_internalize']/@value" newValue="0.537380811094"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_R2_deg']/@value" newValue="1.00037810941"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_ligand_deg']/@value" newValue="2.72107173773"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_1_relative_speed']/@value" newValue="0.566651645025"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_2_relative_speed']/@value" newValue="0.245785368673"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R1']/@value" newValue="1.61229612948"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R2']/@value" newValue="8.70467633794"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_homotrimer']/@value" newValue="0.0164056196749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kf_homotrimer']/@value" newValue="4.48445616275"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_seq_kb']/@value" newValue="0.000881183442123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_trimer_dephos']/@value" newValue="2.60999282198"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kS4_effective_2']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Dephos']/@value" newValue="0.139418263063"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_S7_protein']/@value" newValue="0.218269773101"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_disso_Active_Rec']/@value" newValue="0.00103714944572"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_1']/@value" newValue="0.200920693213"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_2']/@value" newValue="0.625804952803"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_induced_S7_production']/@value" newValue="4.99901466409"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_medium']/@value" newValue="2018.93290163"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_phosphorylation']/@value" newValue="0.0701273900653"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kb_trimmer']/@value" newValue="1.60762398289"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R1']/@value" newValue="0.0586554820931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R2']/@value" newValue="0.00100039445582"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S2']/@value" newValue="0.000514148278553"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S4']/@value" newValue="0.00480202730243"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S7']/@value" newValue="0.00102253743337"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R1_activation']/@value" newValue="4.98547574132"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R2_activation']/@value" newValue="4.95555330964"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_Seq_S7_Rec']/@value" newValue="0.882166671316"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_trimmer']/@value" newValue="4.81430089969"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kin_deg_Ligand']/@value" newValue="0.720198437382"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNA1deg_S7']/@value" newValue="0.00521888597858"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNAdeg_S7']/@value" newValue="0.0990155435422"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mRNA_prod']/@value" newValue="0.0130886858359"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='offset_restimulation_2_5pM']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_restimulation_2_5pM']/@value" newValue="1.28428"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cyt']/@size" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nuc']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model7_strasen4" name="strasen4" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen4/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Inactive_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb_In']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec_endo']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_R2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_mran']/@value" newValue="223.595257238"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R1_total']/@value" newValue="34.8728125405"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R2_total']/@value" newValue="34.9992000511"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_export_from_nuc']/@value" newValue="1.9986995525"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_import_to_nuc']/@value" newValue="0.371577202545"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_total']/@value" newValue="876.042139373"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_export_from_nuc']/@value" newValue="0.196810731389"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_import_to_nuc']/@value" newValue="0.0370885363056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_total']/@value" newValue="629.893021851"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Trimer_import_to_nuc']/@value" newValue="0.144032629743"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='WASH_LIGAND']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='effective']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='export_cytoplasm']/@value" newValue="0.0304370916631"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='hill_fact1']/@value" newValue="3.98592596229"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_active_Rec_internalize']/@value" newValue="0.537380811094"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_R2_deg']/@value" newValue="1.00037810941"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_ligand_deg']/@value" newValue="2.72107173773"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_1_relative_speed']/@value" newValue="0.566651645025"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_2_relative_speed']/@value" newValue="0.245785368673"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R1']/@value" newValue="1.61229612948"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R2']/@value" newValue="8.70467633794"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_homotrimer']/@value" newValue="0.0164056196749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kf_homotrimer']/@value" newValue="4.48445616275"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_seq_kb']/@value" newValue="0.000881183442123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_trimer_dephos']/@value" newValue="2.60999282198"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kS4_effective_2']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Dephos']/@value" newValue="0.139418263063"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_S7_protein']/@value" newValue="0.218269773101"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_disso_Active_Rec']/@value" newValue="0.00103714944572"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_1']/@value" newValue="0.200920693213"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_2']/@value" newValue="0.625804952803"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_induced_S7_production']/@value" newValue="4.99901466409"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_medium']/@value" newValue="2018.93290163"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_phosphorylation']/@value" newValue="0.0701273900653"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kb_trimmer']/@value" newValue="1.60762398289"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R1']/@value" newValue="0.0586554820931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R2']/@value" newValue="0.00100039445582"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S2']/@value" newValue="0.000514148278553"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S4']/@value" newValue="0.00480202730243"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S7']/@value" newValue="0.00102253743337"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R1_activation']/@value" newValue="4.98547574132"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R2_activation']/@value" newValue="4.95555330964"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_Seq_S7_Rec']/@value" newValue="0.882166671316"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_trimmer']/@value" newValue="4.81430089969"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kin_deg_Ligand']/@value" newValue="0.720198437382"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNA1deg_S7']/@value" newValue="0.00521888597858"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNAdeg_S7']/@value" newValue="0.0990155435422"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mRNA_prod']/@value" newValue="0.0130886858359"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='offset_restimulation_2_5pM']/@value" newValue="0.0807"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_restimulation_2_5pM']/@value" newValue="0.9826"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cyt']/@size" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nuc']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model8_strasen5" name="strasen5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen5/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k5']/@value" newValue="47.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Inactive_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb_In']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec_endo']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_R2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Active_Rec']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pS2_pS2_S4_n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='DRB']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_mran']/@value" newValue="223.595257238"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R1_total']/@value" newValue="34.8728125405"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R2_total']/@value" newValue="34.9992000511"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_export_from_nuc']/@value" newValue="1.9986995525"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_import_to_nuc']/@value" newValue="0.371577202545"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S2_total']/@value" newValue="876.042139373"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_export_from_nuc']/@value" newValue="0.196810731389"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_import_to_nuc']/@value" newValue="0.0370885363056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='S4_total']/@value" newValue="629.893021851"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='TGFb_LIGAND_Dose']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Trimer_import_to_nuc']/@value" newValue="0.144032629743"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='export_cytoplasm']/@value" newValue="0.0304370916631"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='hill_fact1']/@value" newValue="3.98592596229"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_active_Rec_internalize']/@value" newValue="0.537380811094"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_R2_deg']/@value" newValue="1.00037810941"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_induced_ligand_deg']/@value" newValue="2.72107173773"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_1_relative_speed']/@value" newValue="0.566651645025"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_k_out_2_relative_speed']/@value" newValue="0.245785368673"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R1']/@value" newValue="1.61229612948"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_R2']/@value" newValue="8.70467633794"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kb_homotrimer']/@value" newValue="0.0164056196749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_kf_homotrimer']/@value" newValue="4.48445616275"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_seq_kb']/@value" newValue="0.000881183442123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='index_trimer_dephos']/@value" newValue="2.60999282198"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Dephos']/@value" newValue="0.139418263063"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_S7_protein']/@value" newValue="0.218269773101"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_disso_Active_Rec']/@value" newValue="0.00103714944572"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_1']/@value" newValue="0.200920693213"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_in_2']/@value" newValue="0.625804952803"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_induced_S7_production']/@value" newValue="4.99901466409"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_medium']/@value" newValue="2018.93290163"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_phosphorylation']/@value" newValue="0.0701273900653"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kb_trimmer']/@value" newValue="1.60762398289"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R1']/@value" newValue="0.0586554820931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_R2']/@value" newValue="0.00100039445582"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S2']/@value" newValue="0.000514148278553"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S4']/@value" newValue="0.00480202730243"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdeg_S7']/@value" newValue="0.00102253743337"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R1_activation']/@value" newValue="4.98547574132"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_R2_activation']/@value" newValue="4.95555330964"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_Seq_S7_Rec']/@value" newValue="0.882166671316"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kf_trimmer']/@value" newValue="4.81430089969"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kin_deg_Ligand']/@value" newValue="0.720198437382"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNA1deg_S7']/@value" newValue="0.00521888597858"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kmRNAdeg_S7']/@value" newValue="0.0990155435422"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mRNA_prod']/@value" newValue="0.0130886858359"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='offset_DRB']/@value" newValue="0.0286195"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_DRB']/@value" newValue="1.0205"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cyt']/@size" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nuc']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model9_strasen5" name="model9_strasen5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/strasen5/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='DRB']/@value" newValue="0.2"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_strasen1" modelReference="model0_strasen1" simulationReference="sim0_model0_strasen1"/>
+    <task id="task0_model1_strasen1" name="task0_model1_strasen1" modelReference="model1_strasen1" simulationReference="sim_task_task0_model1_strasen1"/>
+    <task id="task0_model2_strasen1" name="task0_model2_strasen1" modelReference="model2_strasen1" simulationReference="sim_task_task0_model2_strasen1"/>
+    <task id="task0_model3_strasen1" name="task0_model3_strasen1" modelReference="model3_strasen1" simulationReference="sim_task_task0_model3_strasen1"/>
+    <task id="task0_model4_strasen1" name="task0_model4_strasen1" modelReference="model4_strasen1" simulationReference="sim_task_task0_model4_strasen1"/>
+    <task id="task5_model5_strasen2" modelReference="model5_strasen2" simulationReference="sim5_model5_strasen2"/>
+    <task id="task6_model6_strasen3" modelReference="model6_strasen3" simulationReference="sim5_model5_strasen2"/>
+    <task id="task7_model7_strasen4" modelReference="model7_strasen4" simulationReference="sim5_model5_strasen2"/>
+    <task id="task8_model8_strasen5" modelReference="model8_strasen5" simulationReference="sim6_model8_strasen5"/>
+    <task id="task9_model9_strasen5" name="task9_model9_strasen5" modelReference="model9_strasen5" simulationReference="sim_task_task9_model9_strasen5"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="plot1_TGFB1_datagen0">
+      <listOfVariables>
+        <variable id="task0_model1_strasen1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model1_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model1_strasen1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_TGFB1_datagen1">
+      <listOfVariables>
+        <variable id="task0_model1_strasen1_TGFb" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TGFb']" taskReference="task0_model1_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model1_strasen1_TGFb </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_strasen2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_strasen2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_strasen2_NUC_CYT_SMAD2">
+      <listOfVariables>
+        <variable id="NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task5_model5_strasen2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_strasen3_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_strasen3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_strasen3_NUC_CYT_SMAD2">
+      <listOfVariables>
+        <variable id="NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task6_model6_strasen3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task7_model7_strasen4_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task7_model7_strasen4"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task7_model7_strasen4_NUC_CYT_SMAD2">
+      <listOfVariables>
+        <variable id="NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task7_model7_strasen4"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task8_model8_strasen5_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task8_model8_strasen5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task8_model8_strasen5_NUC_CYT_SMAD2_0">
+      <listOfVariables>
+        <variable id="task8_model8_strasen5_NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task8_model8_strasen5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_strasen5_NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_NUC_CYT_SMAD2_DRB_datagen0">
+      <listOfVariables>
+        <variable id="task9_model9_strasen5_time" symbol="urn:sedml:symbol:time" taskReference="task9_model9_strasen5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_strasen5_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_NUC_CYT_SMAD2_DRB_datagen1">
+      <listOfVariables>
+        <variable id="task9_model9_strasen5_NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task9_model9_strasen5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_strasen5_NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_25_datagen0">
+      <listOfVariables>
+        <variable id="task0_model1_strasen1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model1_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model1_strasen1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_25_datagen1">
+      <listOfVariables>
+        <variable id="task0_model1_strasen1_NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task0_model1_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model1_strasen1_NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_strasen1_NUC_CYT_SMAD2_0">
+      <listOfVariables>
+        <variable id="task0_model0_strasen1_NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task0_model0_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_strasen1_NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_strasen1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_5_datagen0">
+      <listOfVariables>
+        <variable id="task0_model2_strasen1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model2_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model2_strasen1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_5_datagen1">
+      <listOfVariables>
+        <variable id="task0_model2_strasen1_NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task0_model2_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model2_strasen1_NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_2_5_datagen0">
+      <listOfVariables>
+        <variable id="task0_model3_strasen1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model3_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model3_strasen1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_2_5_datagen1">
+      <listOfVariables>
+        <variable id="task0_model3_strasen1_NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task0_model3_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model3_strasen1_NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_1_datagen0">
+      <listOfVariables>
+        <variable id="task0_model4_strasen1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model4_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model4_strasen1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_NUC_CYT_SMAD2_1_datagen1">
+      <listOfVariables>
+        <variable id="task0_model4_strasen1_NUC_CYT_SMAD2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='NUC_CYT_SMAD2']" taskReference="task0_model4_strasen1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model4_strasen1_NUC_CYT_SMAD2 </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="plot0" name="Fig4C">
+      <listOfCurves>
+        <curve id="plot0_NUC_CYT_SMAD2_100" name="100 pM" logX="false" logY="false" xDataReference="task0_model0_strasen1_time" yDataReference="task0_model0_strasen1_NUC_CYT_SMAD2_0"/>
+        <curve id="plot0_NUC_CYT_SMAD2_25" name="25 pM" logX="false" logY="false" xDataReference="plot0_NUC_CYT_SMAD2_25_datagen0" yDataReference="plot0_NUC_CYT_SMAD2_25_datagen1"/>
+        <curve id="plot0_NUC_CYT_SMAD2_5" name="5 pM" logX="false" logY="false" xDataReference="plot0_NUC_CYT_SMAD2_5_datagen0" yDataReference="plot0_NUC_CYT_SMAD2_5_datagen1"/>
+        <curve id="plot0_NUC_CYT_SMAD2_2_5" name="2.5 pM" logX="false" logY="false" xDataReference="plot0_NUC_CYT_SMAD2_2_5_datagen0" yDataReference="plot0_NUC_CYT_SMAD2_2_5_datagen1"/>
+        <curve id="plot0_NUC_CYT_SMAD2_1" name="1 pM" logX="false" logY="false" xDataReference="plot0_NUC_CYT_SMAD2_1_datagen0" yDataReference="plot0_NUC_CYT_SMAD2_1_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot1" name="Fig4D">
+      <listOfCurves>
+        <curve id="plot1_TGFB1" logX="false" logY="false" xDataReference="plot1_TGFB1_datagen0" yDataReference="plot1_TGFB1_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot2" name="Fig4E">
+      <listOfCurves>
+        <curve id="plot2_NUC_CYT_SMAD2" name="NUC_CYT_SMAD2" logX="false" logY="false" xDataReference="task5_model5_strasen2_time" yDataReference="task5_model5_strasen2_NUC_CYT_SMAD2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot3" name="Fig4F">
+      <listOfCurves>
+        <curve id="plot3_NUC_CYT_SMAD2" name="NUC_CYT_SMAD2" logX="false" logY="false" xDataReference="task6_model6_strasen3_time" yDataReference="task6_model6_strasen3_NUC_CYT_SMAD2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot4" name="Fig4G">
+      <listOfCurves>
+        <curve id="plot4_NUC_CYT_SMAD2" name="NUC_CYT_SMAD2" logX="false" logY="false" xDataReference="task7_model7_strasen4_time" yDataReference="task7_model7_strasen4_NUC_CYT_SMAD2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot5" name="Fig4H">
+      <listOfCurves>
+        <curve id="plot5_NUC_CYT_SMAD2" name="NUC_CYT_SMAD2 Control" logX="false" logY="false" xDataReference="task8_model8_strasen5_time" yDataReference="task8_model8_strasen5_NUC_CYT_SMAD2_0"/>
+        <curve id="plot5_NUC_CYT_SMAD2_DRB" name="NUC_CYT_SMAD2 DRB" logX="false" logY="false" xDataReference="plot5_NUC_CYT_SMAD2_DRB_datagen0" yDataReference="plot5_NUC_CYT_SMAD2_DRB_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

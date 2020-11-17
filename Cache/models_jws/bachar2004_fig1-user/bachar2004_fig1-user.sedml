@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_bachar1" initialTime="0" outputStartTime="0" outputEndTime="600" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_bachar1" name="bachar1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/bachar1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I1']/@initialConcentration" newValue="50.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='S']/@initialConcentration" newValue="4950.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Alpha']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Beta']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='a']/@value" newValue="0.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='c']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d']/@value" newValue="0.0006"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.019"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.0159"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_bachar1" modelReference="model0_bachar1" simulationReference="sim0_model0_bachar1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_bachar1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bachar1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bachar1_I1">
+      <listOfVariables>
+        <variable id="I1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I1']" taskReference="task0_model0_bachar1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> I1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bachar1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bachar1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bachar1_I2">
+      <listOfVariables>
+        <variable id="I2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I2']" taskReference="task0_model0_bachar1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> I2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bachar1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bachar1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bachar1_N">
+      <listOfVariables>
+        <variable id="N" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='N']" taskReference="task0_model0_bachar1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> N </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="NumberOfInfectivesInStage1" name="Number of infectives in stage 1">
+      <listOfCurves>
+        <curve id="plot0_I1" name="I1" logX="false" logY="false" xDataReference="task0_model0_bachar1_time" yDataReference="task0_model0_bachar1_I1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="NumberOfInfectivesInStage2" name="Number of infectives in stage 2">
+      <listOfCurves>
+        <curve id="plot1_I2" name="I2" logX="false" logY="false" xDataReference="task0_model0_bachar1_time" yDataReference="task0_model0_bachar1_I2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="TotalActivePopulationSize" name="Total active populatio size">
+      <listOfCurves>
+        <curve id="plot2_N" name="N" logX="false" logY="false" xDataReference="task0_model0_bachar1_time" yDataReference="task0_model0_bachar1_N"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

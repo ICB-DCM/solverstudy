@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_kim3" initialTime="0" outputStartTime="0" outputEndTime="200" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_kim3" name="kim3" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/kim3/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P2']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P1']/@initialConcentration" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R1']/@initialConcentration" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R2']/@initialConcentration" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P2_prime']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P3_prime']/@initialConcentration" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P1_prime']/@initialConcentration" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_P1']/@value" newValue="0.22367"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_P1_prime']/@value" newValue="0.37048"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_P2']/@value" newValue="0.22367"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_P2_prime']/@value" newValue="0.37048"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_P3_prime']/@value" newValue="0.37048"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_R1']/@value" newValue="0.23521"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_R2']/@value" newValue="0.23521"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='i1']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n']/@value" newValue="9.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s1']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s2']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s3']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sP1R1']/@value" newValue="0.47305"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sP1_prime_P1']/@value" newValue="0.28687"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sP2R2']/@value" newValue="0.47305"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sP2_prime_P2']/@value" newValue="0.28687"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sP3_prime_P2_prime']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_kim3" modelReference="model0_kim3" simulationReference="sim0_model0_kim3"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_kim3_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_kim3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_kim3_P1_prime">
+      <listOfVariables>
+        <variable id="P1_prime" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P1_prime']" taskReference="task0_model0_kim3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> P1_prime </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_kim3_P2_prime">
+      <listOfVariables>
+        <variable id="P2_prime" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P2_prime']" taskReference="task0_model0_kim3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> P2_prime </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_kim3_i2">
+      <listOfVariables>
+        <variable id="i2" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='i2']" taskReference="task0_model0_kim3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> i2 </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3G" name="Figure 3G">
+      <listOfCurves>
+        <curve id="plot0_P1_prime" name="P1_prime" logX="false" logY="false" xDataReference="task0_model0_kim3_time" yDataReference="task0_model0_kim3_P1_prime"/>
+        <curve id="plot0_P2_prime" name="P2_prime" logX="false" logY="false" xDataReference="task0_model0_kim3_time" yDataReference="task0_model0_kim3_P2_prime"/>
+        <curve id="plot0_i2" name="i2" logX="false" logY="false" xDataReference="task0_model0_kim3_time" yDataReference="task0_model0_kim3_i2"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

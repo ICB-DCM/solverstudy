@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim1_model1_Komarova2003_BoneRemodelingv7exp_v5" initialTime="0" outputStartTime="0" outputEndTime="1000" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim3_model5_Komarova2003_BoneRemodelingv7exp_v5" initialTime="0" outputStartTime="0" outputEndTime="300" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim4_model6_Komarova2003_BoneRemodelingv7exp_v5" initialTime="0" outputStartTime="0" outputEndTime="1200" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim0_model0_Komarova2003_BoneRemodelingv7exp_v5" initialTime="0" outputStartTime="0" outputEndTime="150" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim2_model4_Komarova2003_BoneRemodelingv7exp_v5" initialTime="0" outputStartTime="0" outputEndTime="20" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model6_Komarova2003_BoneRemodelingv7exp_v5" name="Komarova2003_BoneRemodelingv7exp_v5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/komarova2003_boneremodelingv7exp_v5-user/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis_denominator']/@value" newValue="113.749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.0008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.26"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_z']/@value" newValue="90.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x2']/@value" newValue="1397.73"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x1']/@value" newValue="5.08098"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g22']/@value" newValue="0.09"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g21']/@value" newValue="-0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g12']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g11']/@value" newValue="1.09"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_resorption']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_formation']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1increaseOntime']/@value" newValue="500.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value2']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_On_Off']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_basal_value']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha2']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha1']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimesecond']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimefirst']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearanceduration']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_magnitude']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off_Piecewise']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Fig7A_R1_alpha_On_Off']/@value" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model5_Komarova2003_BoneRemodelingv7exp_v5" name="Komarova2003_BoneRemodelingv7exp_v5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/komarova2003_boneremodelingv7exp_v5-user/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis_denominator']/@value" newValue="113.749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.00057"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.285"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_z']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x2']/@value" newValue="921.124"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x1']/@value" newValue="1.23203"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g22']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g21']/@value" newValue="-0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g12']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g11']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_resorption']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_formation']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1increaseOntime']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value2']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_On_Off']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_basal_value']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha2']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha1']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimesecond']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimefirst']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearanceduration']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_magnitude']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off_Piecewise']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Fig7A_R1_alpha_On_Off']/@value" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model4_Komarova2003_BoneRemodelingv7exp_v5" name="Komarova2003_BoneRemodelingv7exp_v5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/komarova2003_boneremodelingv7exp_v5-user/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis_denominator']/@value" newValue="113.749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.0017"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.24"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_z']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x2']/@value" newValue="212.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x1']/@value" newValue="12.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g22']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g21']/@value" newValue="-0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g12']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g11']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_resorption']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_formation']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1increaseOntime']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value2']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_On_Off']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_basal_value']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha2']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha1']/@value" newValue="3.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimesecond']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimefirst']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearanceduration']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_magnitude']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off_Piecewise']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Fig7A_R1_alpha_On_Off']/@value" newValue="0.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model3_Komarova2003_BoneRemodelingv7exp_v5" name="Komarova2003_BoneRemodelingv7exp_v5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/komarova2003_boneremodelingv7exp_v5-user/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis_denominator']/@value" newValue="113.749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.0008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.285"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_z']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x2']/@value" newValue="1409.46"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x1']/@value" newValue="4.9502"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g22']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g21']/@value" newValue="-0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g12']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g11']/@value" newValue="1.105"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_resorption']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_formation']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1increaseOntime']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value2']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_basal_value']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha2']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha1']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimesecond']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimefirst']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearanceduration']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_magnitude']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off_Piecewise']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Fig7A_R1_alpha_On_Off']/@value" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model2_Komarova2003_BoneRemodelingv7exp_v5" name="Komarova2003_BoneRemodelingv7exp_v5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/komarova2003_boneremodelingv7exp_v5-user/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis_denominator']/@value" newValue="104.152"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.0008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.093"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_z']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x2']/@value" newValue="212.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x1']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g22']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g21']/@value" newValue="-0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g12']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g11']/@value" newValue="1.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_resorption']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_formation']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1increaseOntime']/@value" newValue="1000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value2']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_basal_value']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha2']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha1']/@value" newValue="3.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimesecond']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimefirst']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearanceduration']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_magnitude']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off_Piecewise']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Fig7A_R1_alpha_On_Off']/@value" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_Komarova2003_BoneRemodelingv7exp_v5" name="Komarova2003_BoneRemodelingv7exp_v5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/komarova2003_boneremodelingv7exp_v5-user/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha2']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis_denominator']/@value" newValue="104.152"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.0008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.093"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_z']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x2']/@value" newValue="212.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x1']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g22']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g21']/@value" newValue="-0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g12']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g11']/@value" newValue="1.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_resorption']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_formation']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1increaseOntime']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value2']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_basal_value']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha1']/@value" newValue="3.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimesecond']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimefirst']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearanceduration']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_magnitude']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off_Piecewise']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Fig7A_R1_alpha_On_Off']/@value" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model0_Komarova2003_BoneRemodelingv7exp_v5" name="Komarova2003_BoneRemodelingv7exp_v5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/komarova2003_boneremodelingv7exp_v5-user/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis_denominator']/@value" newValue="113.749"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.0017"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.24"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_z']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x2']/@value" newValue="212.132"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='initial_value_x1']/@value" newValue="11.06066"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g22']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g21']/@value" newValue="-0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g12']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='g11']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_resorption']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='flag_formation']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1increaseOntime']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value2']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_value']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_increase_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1_basal_value']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha2']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha1']/@value" newValue="3.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimesecond']/@value" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearancetimefirst']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ratex1appearanceduration']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_magnitude']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off_Piecewise']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Rate_x1_appearance_On_Off']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Fig7A_R1_alpha_On_Off']/@value" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task6_model6_Komarova2003_BoneRemodelingv7exp_v5" modelReference="model6_Komarova2003_BoneRemodelingv7exp_v5" simulationReference="sim4_model6_Komarova2003_BoneRemodelingv7exp_v5"/>
+    <task id="task5_model5_Komarova2003_BoneRemodelingv7exp_v5" modelReference="model5_Komarova2003_BoneRemodelingv7exp_v5" simulationReference="sim3_model5_Komarova2003_BoneRemodelingv7exp_v5"/>
+    <task id="task4_model4_Komarova2003_BoneRemodelingv7exp_v5" modelReference="model4_Komarova2003_BoneRemodelingv7exp_v5" simulationReference="sim2_model4_Komarova2003_BoneRemodelingv7exp_v5"/>
+    <task id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5" modelReference="model3_Komarova2003_BoneRemodelingv7exp_v5" simulationReference="sim1_model1_Komarova2003_BoneRemodelingv7exp_v5"/>
+    <task id="task2_model2_Komarova2003_BoneRemodelingv7exp_v5" modelReference="model2_Komarova2003_BoneRemodelingv7exp_v5" simulationReference="sim1_model1_Komarova2003_BoneRemodelingv7exp_v5"/>
+    <task id="task1_model1_Komarova2003_BoneRemodelingv7exp_v5" modelReference="model1_Komarova2003_BoneRemodelingv7exp_v5" simulationReference="sim1_model1_Komarova2003_BoneRemodelingv7exp_v5"/>
+    <task id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5" modelReference="model0_Komarova2003_BoneRemodelingv7exp_v5" simulationReference="sim0_model0_Komarova2003_BoneRemodelingv7exp_v5"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis_0">
+      <listOfVariables>
+        <variable id="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis']" taskReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_x2">
+      <listOfVariables>
+        <variable id="x2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" taskReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_Komarova2003_BoneRemodelingv7exp_v5_x1">
+      <listOfVariables>
+        <variable id="x1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" taskReference="task1_model1_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_Komarova2003_BoneRemodelingv7exp_v5_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_z">
+      <listOfVariables>
+        <variable id="z" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']" taskReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_x1_variable_0">
+      <listOfVariables>
+        <variable id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_x1_variable" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='x1_variable']" taskReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_Komarova2003_BoneRemodelingv7exp_v5_x1_variable </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis_0">
+      <listOfVariables>
+        <variable id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_z_yaxis']" taskReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_time_2">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_plot_x2_yaxis_0">
+      <listOfVariables>
+        <variable id="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_plot_x2_yaxis" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='plot_x2_yaxis']" taskReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_Komarova2003_BoneRemodelingv7exp_v5_plot_x2_yaxis </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_z">
+      <listOfVariables>
+        <variable id="z" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']" taskReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_x2">
+      <listOfVariables>
+        <variable id="x2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" taskReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_x1">
+      <listOfVariables>
+        <variable id="x1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" taskReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_z">
+      <listOfVariables>
+        <variable id="z" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']" taskReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_x2">
+      <listOfVariables>
+        <variable id="x2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" taskReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_x1">
+      <listOfVariables>
+        <variable id="x1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" taskReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_time_2">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task4_model4_Komarova2003_BoneRemodelingv7exp_v5_x1">
+      <listOfVariables>
+        <variable id="x1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" taskReference="task4_model4_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task4_model4_Komarova2003_BoneRemodelingv7exp_v5_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task4_model4_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_x2">
+      <listOfVariables>
+        <variable id="x2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" taskReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_x1">
+      <listOfVariables>
+        <variable id="x1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" taskReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_time_2">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3A_OB" name="Figure 3A OB">
+      <listOfCurves>
+        <curve id="Fig_3_A_OB_plot_OB" name="Osteoblasts" logX="false" logY="false" xDataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_time_1" yDataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_x2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3A_OC" name="Figure 3A OC">
+      <listOfCurves>
+        <curve id="Fig_3_A_OC_plot_OC" name="Osteoclasts" logX="false" logY="false" xDataReference="task1_model1_Komarova2003_BoneRemodelingv7exp_v5_time" yDataReference="task1_model1_Komarova2003_BoneRemodelingv7exp_v5_x1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3B" name="Figure 3B">
+      <listOfCurves>
+        <curve id="Fig_3_B_Z_plot_Z" name="Bone mass (%)" logX="false" logY="false" xDataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_time_0" yDataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis_0"/>
+      </listOfCurves>
+    </plot2D>
+    <report id="csv1">
+      <listOfDataSets>
+        <dataSet id="csv1_time" label="time" name="time" dataReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_time_0"/>
+        <dataSet id="csv1_z" label="z" name="z" dataReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_z"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv4">
+      <listOfDataSets>
+        <dataSet id="csv4_time" label="time" name="time" dataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_time_0"/>
+        <dataSet id="csv4_plot_z_yaxis" label="plot_z_yaxis" name="plot_z_yaxis" dataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis_0"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv6">
+      <listOfDataSets>
+        <dataSet id="csv6_time" label="time" name="time" dataReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_time_1"/>
+        <dataSet id="csv6_x2" label="x2" name="x2" dataReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_x2"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv8">
+      <listOfDataSets>
+        <dataSet id="csv8_time" label="time" name="time" dataReference="task4_model4_Komarova2003_BoneRemodelingv7exp_v5_time"/>
+        <dataSet id="csv8_x1" label="x1" name="x1" dataReference="task4_model4_Komarova2003_BoneRemodelingv7exp_v5_x1"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv10">
+      <listOfDataSets>
+        <dataSet id="csv10_time" label="time" name="time" dataReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_time_1"/>
+        <dataSet id="csv10_x2" label="x2" name="x2" dataReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_x2"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv12">
+      <listOfDataSets>
+        <dataSet id="csv12_time" label="time" name="time" dataReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_time_2"/>
+        <dataSet id="csv12_x1" label="x1" name="x1" dataReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_x1"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv14">
+      <listOfDataSets>
+        <dataSet id="csv14_time" label="time" name="time" dataReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_time_0"/>
+        <dataSet id="csv14_z" label="z" name="z" dataReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_z"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv0">
+      <listOfDataSets>
+        <dataSet id="csv0_time" label="time" name="time" dataReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_time_1"/>
+        <dataSet id="csv0_plot_x2_yaxis" label="plot_x2_yaxis" name="plot_x2_yaxis" dataReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_plot_x2_yaxis_0"/>
+        <dataSet id="csv0_x1_variable" label="x1_variable" name="x1_variable" dataReference="task0_model0_Komarova2003_BoneRemodelingv7exp_v5_x1_variable_0"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv2">
+      <listOfDataSets>
+        <dataSet id="csv2_time" label="time" name="time" dataReference="task1_model1_Komarova2003_BoneRemodelingv7exp_v5_time"/>
+        <dataSet id="csv2_x1" label="x1" name="x1" dataReference="task1_model1_Komarova2003_BoneRemodelingv7exp_v5_x1"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv3">
+      <listOfDataSets>
+        <dataSet id="csv3_time" label="time" name="time" dataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_time_1"/>
+        <dataSet id="csv3_x2" label="x2" name="x2" dataReference="task2_model2_Komarova2003_BoneRemodelingv7exp_v5_x2"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv5">
+      <listOfDataSets>
+        <dataSet id="csv5_time" label="time" name="time" dataReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_time_2"/>
+        <dataSet id="csv5_x1" label="x1" name="x1" dataReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_x1"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv7">
+      <listOfDataSets>
+        <dataSet id="csv7_time" label="time" name="time" dataReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_time_0"/>
+        <dataSet id="csv7_plot_z_yaxis" label="plot_z_yaxis" name="plot_z_yaxis" dataReference="task3_model3_Komarova2003_BoneRemodelingv7exp_v5_plot_z_yaxis_0"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv9">
+      <listOfDataSets>
+        <dataSet id="csv9_time" label="time" name="time" dataReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_time_2"/>
+        <dataSet id="csv9_x1" label="x1" name="x1" dataReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_x1"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv11">
+      <listOfDataSets>
+        <dataSet id="csv11_time" label="time" name="time" dataReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_time_0"/>
+        <dataSet id="csv11_z" label="z" name="z" dataReference="task5_model5_Komarova2003_BoneRemodelingv7exp_v5_z"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv13">
+      <listOfDataSets>
+        <dataSet id="csv13_time" label="time" name="time" dataReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_time_1"/>
+        <dataSet id="csv13_x2" label="x2" name="x2" dataReference="task6_model6_Komarova2003_BoneRemodelingv7exp_v5_x2"/>
+      </listOfDataSets>
+    </report>
+  </listOfOutputs>
+</sedML>

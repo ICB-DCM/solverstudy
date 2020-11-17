@@ -1,0 +1,1337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="butenas1" name="butenas1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" id="compartment_1" name="compartment_1" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="ATIII" name="ATIII" compartment="compartment_1" initialConcentration="3.4e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01008"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_2" id="II" name="II" compartment="compartment_1" initialConcentration="1.4e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00734"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_3" id="IIa" name="IIa" compartment="compartment_1" initialConcentration="1e-09" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00734"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_4" id="IIa_ATIII" name="IIa_ATIII" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00734"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01008"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_5" id="IX" name="IX" compartment="compartment_1" initialConcentration="9e-08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00740"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_6" id="IXa" name="IXa" compartment="compartment_1" initialConcentration="2.1e-10" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00740"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_7" id="IXa_ATIII" name="IXa_ATIII" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_7">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00740"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01008"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_8" id="IXa_VIIIa" name="IXa_VIIIa" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_8">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00451"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00740"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_9" id="IXa_VIIIa_X" name="IXa_VIIIa_X" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_9">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00451"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00740"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_10" id="TF" name="TF" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_10">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_11" id="TFPI" name="TFPI" compartment="compartment_1" initialConcentration="2.5e-09" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P10646"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_12" id="TF_VII" name="TF_VII" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_12">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_13" id="TF_VIIa" name="TF_VIIa" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_13">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_14" id="TF_VIIa_ATIII" name="TF_VIIa_ATIII" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01008"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_15" id="TF_VIIa_IX" name="TF_VIIa_IX" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00740"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_16" id="TF_VIIa_X" name="TF_VIIa_X" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_16">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_17" id="TF_VIIa_Xa" name="TF_VIIa_Xa" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_18" id="TF_VIIa_Xa_TFPI" name="TF_VIIa_Xa_TFPI" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_18">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P10646"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13726"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_19" id="V" name="V" compartment="compartment_1" initialConcentration="2e-08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P12259"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_20" id="VII" name="VII" compartment="compartment_1" initialConcentration="1e-08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_21" id="VIII" name="VIII" compartment="compartment_1" initialConcentration="7e-10" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_21">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00451"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_22" id="VIIIa" name="VIIIa" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_22">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00451"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_23" id="VIIIa1_L" name="VIIIa1_L" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_23">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00451"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_24" id="VIIIa2" name="VIIIa2" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_24">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00451"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_25" id="VIIa" name="VIIa" compartment="compartment_1" initialConcentration="1e-10" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_25">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P08709"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_26" id="Va" name="Va" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_26">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P12259"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_27" id="X" name="X" compartment="compartment_1" initialConcentration="1.6e-07" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_27">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_28" id="Xa" name="Xa" compartment="compartment_1" initialConcentration="9.4e-11" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_28">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_29" id="Xa_ATIII" name="Xa_ATIII" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_29">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01008"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_30" id="Xa_TFPI" name="Xa_TFPI" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_30">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P10646"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_31" id="Xa_Va" name="Xa_Va" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_31">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P12259"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_32" id="Xa_Va_II" name="Xa_Va_II" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_32">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00734"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P12259"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00742"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_33" id="mIIa" name="mIIa" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_33">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00734"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_34" id="mIIa_ATIII" name="mIIa_ATIII" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_34">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00734"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01008"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_35" id="IIa_plus_1_2mIIa" name="IIa+1.2mIIa" value="1e-09" constant="false"/>
+      <parameter metaid="metaid_36" sboTerm="SBO:0000038" id="k1" name="k1" value="0.0031" constant="true"/>
+      <parameter metaid="metaid_37" sboTerm="SBO:0000035" id="k10" name="k10" value="6" constant="true"/>
+      <parameter metaid="metaid_38" sboTerm="SBO:0000038" id="k11" name="k11" value="19" constant="true"/>
+      <parameter metaid="metaid_39" sboTerm="SBO:0000036" id="k12" name="k12" value="22000000" constant="true"/>
+      <parameter metaid="metaid_40" sboTerm="SBO:0000038" id="k13" name="k13" value="2.4" constant="true"/>
+      <parameter metaid="metaid_41" sboTerm="SBO:0000036" id="k14" name="k14" value="10000000" constant="true"/>
+      <parameter metaid="metaid_42" sboTerm="SBO:0000035" id="k15" name="k15" value="1.8" constant="true"/>
+      <parameter metaid="metaid_43" sboTerm="SBO:0000036" id="k16" name="k16" value="7500" constant="true"/>
+      <parameter metaid="metaid_44" sboTerm="SBO:0000036" id="k17" name="k17" value="20000000" constant="true"/>
+      <parameter metaid="metaid_45" sboTerm="SBO:0000038" id="k18" name="k18" value="0.005" constant="true"/>
+      <parameter metaid="metaid_46" sboTerm="SBO:0000036" id="k19" name="k19" value="10000000" constant="true"/>
+      <parameter metaid="metaid_47" sboTerm="SBO:0000036" id="k2" name="k2" value="3200000" constant="true"/>
+      <parameter metaid="metaid_48" sboTerm="SBO:0000038" id="k20" name="k20" value="0.001" constant="true"/>
+      <parameter metaid="metaid_49" sboTerm="SBO:0000036" id="k21" name="k21" value="100000000" constant="true"/>
+      <parameter metaid="metaid_50" sboTerm="SBO:0000035" id="k22" name="k22" value="8.2" constant="true"/>
+      <parameter metaid="metaid_51" sboTerm="SBO:0000039" id="k23" name="k23" value="22000" constant="true"/>
+      <parameter metaid="metaid_52" sboTerm="SBO:0000035" id="k24" name="k24" value="0.006" constant="true"/>
+      <parameter metaid="metaid_53" sboTerm="SBO:0000035" id="k25" name="k25" value="0.001" constant="true"/>
+      <parameter metaid="metaid_54" sboTerm="SBO:0000036" id="k26" name="k26" value="20000000" constant="true"/>
+      <parameter metaid="metaid_55" sboTerm="SBO:0000038" id="k27" name="k27" value="0.2" constant="true"/>
+      <parameter metaid="metaid_56" sboTerm="SBO:0000036" id="k28" name="k28" value="400000000" constant="true"/>
+      <parameter metaid="metaid_57" sboTerm="SBO:0000038" id="k29" name="k29" value="103" constant="true"/>
+      <parameter metaid="metaid_58" sboTerm="SBO:0000038" id="k3" name="k3" value="0.0031" constant="true"/>
+      <parameter metaid="metaid_59" sboTerm="SBO:0000036" id="k30" name="k30" value="100000000" constant="true"/>
+      <parameter metaid="metaid_60" sboTerm="SBO:0000035" id="k31" name="k31" value="63.5" constant="true"/>
+      <parameter metaid="metaid_61" sboTerm="SBO:0000036" id="k32" name="k32" value="15000000" constant="true"/>
+      <parameter metaid="metaid_62" sboTerm="SBO:0000038" id="k33" name="k33" value="0.00036" constant="true"/>
+      <parameter metaid="metaid_63" sboTerm="SBO:0000036" id="k34" name="k34" value="900000" constant="true"/>
+      <parameter metaid="metaid_64" sboTerm="SBO:0000038" id="k35" name="k35" value="0.00011" constant="true"/>
+      <parameter metaid="metaid_65" sboTerm="SBO:0000036" id="k36" name="k36" value="320000000" constant="true"/>
+      <parameter metaid="metaid_66" sboTerm="SBO:0000036" id="k37" name="k37" value="50000000" constant="true"/>
+      <parameter metaid="metaid_67" sboTerm="SBO:0000036" id="k38" name="k38" value="1500" constant="true"/>
+      <parameter metaid="metaid_68" sboTerm="SBO:0000036" id="k39" name="k39" value="7100" constant="true"/>
+      <parameter metaid="metaid_69" sboTerm="SBO:0000036" id="k4" name="k4" value="23000000" constant="true"/>
+      <parameter metaid="metaid_70" sboTerm="SBO:0000036" id="k40" name="k40" value="490" constant="true"/>
+      <parameter metaid="metaid_71" sboTerm="SBO:0000036" id="k41" name="k41" value="7100" constant="true"/>
+      <parameter metaid="metaid_72" sboTerm="SBO:0000036" id="k42" name="k42" value="230" constant="true"/>
+      <parameter metaid="metaid_73" sboTerm="SBO:0000036" id="k43" name="k43" value="5700" constant="true"/>
+      <parameter metaid="metaid_74" sboTerm="SBO:0000036" id="k44" name="k44" value="3000000" constant="true"/>
+      <parameter metaid="metaid_75" sboTerm="SBO:0000036" id="k5" name="k5" value="440000" constant="true"/>
+      <parameter metaid="metaid_76" sboTerm="SBO:0000036" id="k6" name="k6" value="13000000" constant="true"/>
+      <parameter metaid="metaid_77" sboTerm="SBO:0000036" id="k7" name="k7" value="23000" constant="true"/>
+      <parameter metaid="metaid_78" sboTerm="SBO:0000038" id="k8" name="k8" value="1.05" constant="true"/>
+      <parameter metaid="metaid_79" sboTerm="SBO:0000036" id="k9" name="k9" value="25000000" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_80" variable="IIa_plus_1_2mIIa">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> IIa </ci>
+            <apply>
+              <times/>
+              <cn> 1.2 </cn>
+              <ci> mIIa </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_84" id="R1" name="R1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_81" sboTerm="SBO:0000010" species="TF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_82" sboTerm="SBO:0000010" species="VII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_83" sboTerm="SBO:0000011" species="TF_VII" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> TF </ci>
+                  <ci> VII </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> TF_VII </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_89" id="R10" name="R10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_85" sboTerm="SBO:0000461" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_86" sboTerm="SBO:0000010" species="VIII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_87" sboTerm="SBO:0000461" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_88" sboTerm="SBO:0000011" species="VIIIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k17 </ci>
+              <ci> IIa </ci>
+              <ci> VIII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_93" id="R11" name="R11" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_90" sboTerm="SBO:0000010" species="IXa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_91" sboTerm="SBO:0000010" species="VIIIa" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_92" sboTerm="SBO:0000011" species="IXa_VIIIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k19 </ci>
+                  <ci> IXa </ci>
+                  <ci> VIIIa </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k18 </ci>
+                  <ci> IXa_VIIIa </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_97" id="R12" name="R12" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_94" sboTerm="SBO:0000010" species="IXa_VIIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_95" sboTerm="SBO:0000010" species="X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_96" sboTerm="SBO:0000011" species="IXa_VIIIa_X" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k21 </ci>
+                  <ci> IXa_VIIIa </ci>
+                  <ci> X </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k20 </ci>
+                  <ci> IXa_VIIIa_X </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_101" id="R12b" name="R12b" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_98" sboTerm="SBO:0000010" species="IXa_VIIIa_X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_99" sboTerm="SBO:0000011" species="IXa_VIIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_100" sboTerm="SBO:0000011" species="Xa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k22 </ci>
+              <ci> IXa_VIIIa_X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_105" id="R13" name="R13" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_102" sboTerm="SBO:0000010" species="VIIIa" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_103" sboTerm="SBO:0000011" species="VIIIa1_L" stoichiometry="1"/>
+          <speciesReference metaid="metaid_104" sboTerm="SBO:0000011" species="VIIIa2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k24 </ci>
+                  <ci> VIIIa </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k23 </ci>
+                  <ci> VIIIa1_L </ci>
+                  <ci> VIIIa2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_111" id="R14" name="R14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_106" sboTerm="SBO:0000010" species="IXa_VIIIa_X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_107" sboTerm="SBO:0000011" species="VIIIa1_L" stoichiometry="1"/>
+          <speciesReference metaid="metaid_108" sboTerm="SBO:0000011" species="VIIIa2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_109" sboTerm="SBO:0000011" species="X" stoichiometry="1"/>
+          <speciesReference metaid="metaid_110" sboTerm="SBO:0000011" species="IXa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k25 </ci>
+              <ci> IXa_VIIIa_X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_116" id="R15" name="R15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_112" sboTerm="SBO:0000010" species="IXa_VIIIa" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_113" sboTerm="SBO:0000011" species="VIIIa1_L" stoichiometry="1"/>
+          <speciesReference metaid="metaid_114" sboTerm="SBO:0000011" species="VIIIa2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_115" sboTerm="SBO:0000011" species="IXa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k25 </ci>
+              <ci> IXa_VIIIa </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_121" id="R16" name="R16" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_117" sboTerm="SBO:0000461" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_118" sboTerm="SBO:0000010" species="V" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_119" sboTerm="SBO:0000461" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_120" sboTerm="SBO:0000011" species="Va" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k26 </ci>
+              <ci> IIa </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_125" id="R17" name="R17" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_122" sboTerm="SBO:0000010" species="Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_123" sboTerm="SBO:0000010" species="Va" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_124" sboTerm="SBO:0000011" species="Xa_Va" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k28 </ci>
+                  <ci> Xa </ci>
+                  <ci> Va </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k27 </ci>
+                  <ci> Xa_Va </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_129" id="R18" name="R18" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_126" sboTerm="SBO:0000010" species="Xa_Va" stoichiometry="1"/>
+          <speciesReference metaid="metaid_127" sboTerm="SBO:0000010" species="II" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_128" sboTerm="SBO:0000011" species="Xa_Va_II" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k30 </ci>
+                  <ci> Xa_Va </ci>
+                  <ci> II </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k29 </ci>
+                  <ci> Xa_Va_II </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_133" id="R18b" name="R18b" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_130" sboTerm="SBO:0000010" species="Xa_Va_II" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_131" sboTerm="SBO:0000011" species="Xa_Va" stoichiometry="1"/>
+          <speciesReference metaid="metaid_132" sboTerm="SBO:0000011" species="mIIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k31 </ci>
+              <ci> Xa_Va_II </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_138" id="R19" name="R19" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_134" sboTerm="SBO:0000010" species="mIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_135" sboTerm="SBO:0000461" species="Xa_Va" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_136" sboTerm="SBO:0000011" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_137" sboTerm="SBO:0000461" species="Xa_Va" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k32 </ci>
+              <ci> mIIa </ci>
+              <ci> Xa_Va </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_142" id="R2" name="R2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_139" sboTerm="SBO:0000010" species="TF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_140" sboTerm="SBO:0000010" species="VIIa" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_141" sboTerm="SBO:0000011" species="TF_VIIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k4 </ci>
+                  <ci> TF </ci>
+                  <ci> VIIa </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k3 </ci>
+                  <ci> TF_VIIa </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_146" id="R20" name="R20" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_143" sboTerm="SBO:0000010" species="Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_144" sboTerm="SBO:0000010" species="TFPI" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_145" sboTerm="SBO:0000011" species="Xa_TFPI" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k34 </ci>
+                  <ci> Xa </ci>
+                  <ci> TFPI </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k33 </ci>
+                  <ci> Xa_TFPI </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_150" id="R21" name="R21" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_147" sboTerm="SBO:0000010" species="TF_VIIa_Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_148" sboTerm="SBO:0000010" species="TFPI" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_149" sboTerm="SBO:0000011" species="TF_VIIa_Xa_TFPI" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k36 </ci>
+                  <ci> TF_VIIa_Xa </ci>
+                  <ci> TFPI </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k35 </ci>
+                  <ci> TF_VIIa_Xa_TFPI </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_154" id="R22" name="R22" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_151" sboTerm="SBO:0000010" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_152" sboTerm="SBO:0000010" species="Xa_TFPI" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_153" sboTerm="SBO:0000011" species="TF_VIIa_Xa_TFPI" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k37 </ci>
+              <ci> TF_VIIa </ci>
+              <ci> Xa_TFPI </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_158" id="R23" name="R23" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_155" sboTerm="SBO:0000010" species="Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_156" sboTerm="SBO:0000010" species="ATIII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_157" sboTerm="SBO:0000011" species="Xa_ATIII" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k38 </ci>
+              <ci> Xa </ci>
+              <ci> ATIII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_162" id="R24" name="R24" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_159" sboTerm="SBO:0000010" species="mIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_160" sboTerm="SBO:0000010" species="ATIII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_161" sboTerm="SBO:0000011" species="mIIa_ATIII" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k39 </ci>
+              <ci> mIIa </ci>
+              <ci> ATIII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_166" id="R25" name="R25" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_163" sboTerm="SBO:0000010" species="IXa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_164" sboTerm="SBO:0000010" species="ATIII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_165" sboTerm="SBO:0000011" species="IXa_ATIII" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k40 </ci>
+              <ci> IXa </ci>
+              <ci> ATIII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_170" id="R26" name="R26" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_167" sboTerm="SBO:0000010" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_168" sboTerm="SBO:0000010" species="ATIII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_169" sboTerm="SBO:0000011" species="IIa_ATIII" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k41 </ci>
+              <ci> IIa </ci>
+              <ci> ATIII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_174" id="R27" name="R27" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_171" sboTerm="SBO:0000010" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_172" sboTerm="SBO:0000010" species="ATIII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_173" sboTerm="SBO:0000011" species="TF_VIIa_ATIII" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k42 </ci>
+              <ci> TF_VIIa </ci>
+              <ci> ATIII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_179" id="R28" name="R28" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_175" sboTerm="SBO:0000461" species="IXa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_176" sboTerm="SBO:0000010" species="X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_177" sboTerm="SBO:0000461" species="IXa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_178" sboTerm="SBO:0000011" species="Xa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k43 </ci>
+              <ci> IXa </ci>
+              <ci> X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_184" id="R29" name="R29" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_180" sboTerm="SBO:0000461" species="mIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_181" sboTerm="SBO:0000010" species="V" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_182" sboTerm="SBO:0000461" species="mIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_183" sboTerm="SBO:0000011" species="Va" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k44 </ci>
+              <ci> mIIa </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_189" id="R3" name="R3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_185" sboTerm="SBO:0000461" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_186" sboTerm="SBO:0000010" species="VII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_187" sboTerm="SBO:0000461" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_188" sboTerm="SBO:0000011" species="VIIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k5 </ci>
+              <ci> TF_VIIa </ci>
+              <ci> VII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_194" id="R4" name="R4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_190" sboTerm="SBO:0000461" species="Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_191" sboTerm="SBO:0000010" species="VII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_192" sboTerm="SBO:0000461" species="Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_193" sboTerm="SBO:0000011" species="VIIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k6 </ci>
+              <ci> Xa </ci>
+              <ci> VII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_199" id="R5" name="R5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_195" sboTerm="SBO:0000461" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_196" sboTerm="SBO:0000010" species="VII" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_197" sboTerm="SBO:0000461" species="IIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_198" sboTerm="SBO:0000011" species="VIIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k7 </ci>
+              <ci> IIa </ci>
+              <ci> VII </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_203" id="R6" name="R6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_200" sboTerm="SBO:0000010" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_201" sboTerm="SBO:0000010" species="X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_202" sboTerm="SBO:0000011" species="TF_VIIa_X" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> TF_VIIa </ci>
+                  <ci> X </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> TF_VIIa_X </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_206" id="R6b" name="R6b" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_204" sboTerm="SBO:0000010" species="TF_VIIa_X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_205" sboTerm="SBO:0000011" species="TF_VIIa_Xa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k10 </ci>
+              <ci> TF_VIIa_X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_210" id="R7" name="R7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_207" sboTerm="SBO:0000010" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_208" sboTerm="SBO:0000010" species="Xa" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_209" sboTerm="SBO:0000011" species="TF_VIIa_Xa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k12 </ci>
+                  <ci> TF_VIIa </ci>
+                  <ci> Xa </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k11 </ci>
+                  <ci> TF_VIIa_Xa </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_214" id="R8" name="R8" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_211" sboTerm="SBO:0000010" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_212" sboTerm="SBO:0000010" species="IX" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_213" sboTerm="SBO:0000011" species="TF_VIIa_IX" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k14 </ci>
+                  <ci> TF_VIIa </ci>
+                  <ci> IX </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k13 </ci>
+                  <ci> TF_VIIa_IX </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_218" id="R8b" name="R8b" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_215" sboTerm="SBO:0000010" species="TF_VIIa_IX" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_216" sboTerm="SBO:0000011" species="TF_VIIa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_217" sboTerm="SBO:0000011" species="IXa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k15 </ci>
+              <ci> TF_VIIa_IX </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_223" id="R9" name="R9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_219" sboTerm="SBO:0000461" species="Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_220" sboTerm="SBO:0000010" species="II" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_221" sboTerm="SBO:0000461" species="Xa" stoichiometry="1"/>
+          <speciesReference metaid="metaid_222" sboTerm="SBO:0000011" species="IIa" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k16 </ci>
+              <ci> Xa </ci>
+              <ci> II </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

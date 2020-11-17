@@ -1,0 +1,2016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="liu2" name="liu2">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="function_1" name="my-MM">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k </ci>
+            </bvar>
+            <bvar>
+              <ci> E </ci>
+            </bvar>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> Km </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> k </ci>
+                <ci> E </ci>
+                <ci> S </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> Km </ci>
+                <ci> S </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="volume" name="volume">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="nano_mole" name="nano mole">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_2" id="nM" name="nM">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+          <unit kind="litre" exponent="1" scale="-1" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_3" sboTerm="SBO:0000290" id="compartment" name="compartment" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/fma/FMA:62970"/>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005576"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_4" sboTerm="SBO:0000252" id="C1" name="C1" compartment="compartment" initialConcentration="2470" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8815.1"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_5" sboTerm="SBO:0000252" id="C2" name="C2" compartment="compartment" initialConcentration="310" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P06681"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8260.1"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_6" sboTerm="SBO:0000252" id="C2a" name="C2a" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8331.2"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_7" sboTerm="SBO:0000252" id="C2b" name="C2b" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_7">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8600.2"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_8" sboTerm="SBO:0000252" id="C3" name="C3" compartment="compartment" initialConcentration="4650" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_8">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8213.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01024"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_9" sboTerm="SBO:0000252" id="C3a" name="C3a" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_9">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8086.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P01024"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_10" sboTerm="SBO:0000252" id="C3b" name="C3b" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_10">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8621.1"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_11" sboTerm="SBO:0000252" id="C4" name="C4" compartment="compartment" initialConcentration="770" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26761.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P0C0L4"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P0C0L5"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_12" sboTerm="SBO:0000252" id="C4BP" name="C4BP" compartment="compartment" initialConcentration="260" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_12">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04003"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_13" sboTerm="SBO:0000297" id="C4BP_C4b" name="C4BP/C4b" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_13">
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04003"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26471.1"/>
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_14" sboTerm="SBO:0000297" id="C4BP_GlcNac_LF_CRP" name="C4BP/GlcNac/LF/CRP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04003"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_15" sboTerm="SBO:0000297" id="C4BP_PC_CRP" name="C4BP/PC/CRP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04003"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_16" sboTerm="SBO:0000297" id="C4BP_PC_CRP_LF" name="C4BP/PC/CRP/LF" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_16">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04003"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_17" sboTerm="SBO:0000252" id="C4a" name="C4a" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P0C0L4"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P0C0L5"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_25991.1"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_18" sboTerm="SBO:0000252" id="C4b" name="C4b" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_18">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P0C0L5"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P0C0L4"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26471.1"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_19" sboTerm="SBO:0000297" id="C4b_C2a" name="C4b/C2a" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8331.2"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26471.1"/>
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_20" sboTerm="SBO:0000297" id="C4b_C2a_C4BP" name="C4b/C2a/C4BP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26471.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04003"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8331.2"/>
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_21" sboTerm="SBO:0000252" id="CRP" name="CRP" compartment="compartment" initialConcentration="2" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_21">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                  <rdf:li rdf:resource="http://identifiers.org/interpro/IPR001759"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_27052.1"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_22" sboTerm="SBO:0000247" id="GlcNac" name="GlcNac" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_22">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00140"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_23" sboTerm="SBO:0000297" id="GlcNac_HF" name="GlcNac/HF" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_23">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_24" sboTerm="SBO:0000297" id="GlcNac_HF_MASP" name="GlcNac/HF/MASP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_24">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00187"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_25" sboTerm="SBO:0000247" id="GlcNac_LF" name="GlcNac/LF" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_25">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_26" sboTerm="SBO:0000297" id="GlcNac_LF_C1_MASP" name="GlcNac/LF/C1/MASP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_26">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00187"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8815.1"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_27" sboTerm="SBO:0000297" id="GlcNac_LF_CRP" name="GlcNac/LF/CRP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_27">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_28" sboTerm="SBO:0000297" id="GlcNac_LF_CRP_C1" name="GlcNac/LF/CRP/C1" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_28">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8815.1"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_29" sboTerm="SBO:0000297" id="GlcNac_LF_CRP_MASP" name="GlcNac/LF/CRP/MASP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_29">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00187"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_30" sboTerm="SBO:0000297" id="GlcNac_LF_MASP" name="GlcNac/LF/MASP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_30">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:506227"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00187"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_31" sboTerm="SBO:0000252" id="HF" name="HF" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_32" sboTerm="SBO:0000252" id="LF" name="LF" compartment="compartment" initialConcentration="20" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_32">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_33" sboTerm="SBO:0000252" id="MASP" name="MASP" compartment="compartment" initialConcentration="6.8" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_33">
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00187"/>
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_34" sboTerm="SBO:0000247" id="PC" name="PC" compartment="compartment" initialConcentration="0.0327796" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_34">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00588"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_35" sboTerm="SBO:0000297" id="PC_CRP" name="PC/CRP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_35">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_36" sboTerm="SBO:0000297" id="PC_CRP_C1" name="PC/CRP/C1" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_36">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8815.1"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_37" sboTerm="SBO:0000297" id="PC_CRP_LF" name="PC/CRP/LF" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_37">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_38" sboTerm="SBO:0000297" id="PC_CRP_LF_C1" name="PC/CRP/LF/C1" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_38">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8815.1"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_39" sboTerm="SBO:0000297" id="PC_CRP_LF_C1_MASP" name="PC/CRP/LF/C1/MASP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_39">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00187"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8815.1"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_40" sboTerm="SBO:0000297" id="PC_CRP_LF_MASP" name="PC/CRP/LF/MASP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_40">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18132"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q15485"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P02741"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00187"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_41" sboTerm="SBO:0000252" id="X" name="X" compartment="compartment" initialConcentration="0.0005" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_42" sboTerm="SBO:0000252" id="dC3b" name="dC3b" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_42">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26114.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0009986"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_43" sboTerm="SBO:0000297" id="dC4b_C2a" name="dC4b/C2a" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_43">
+              <bqbiol:hasProperty>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0009986"/>
+                </rdf:Bag>
+              </bqbiol:hasProperty>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_44" sboTerm="SBO:0000297" id="dC4b_C2a_C4BP" name="dC4b/C2a/C4BP" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_44">
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04003"/>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0009986"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8331.2"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26471.1"/>
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_45" sboTerm="SBO:0000297" id="iC4b_C2a" name="iC4b/C2a" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_45">
+              <bqbiol:hasVersion>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_26471.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/REACT_8331.2"/>
+                </rdf:Bag>
+              </bqbiol:hasVersion>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_46" sboTerm="SBO:0000339" id="ka01_1" name="ka01_1" value="0.0275999" constant="true"/>
+      <parameter metaid="metaid_47" sboTerm="SBO:0000338" id="ka01_2" name="ka01_2" value="0.0109" constant="true"/>
+      <parameter metaid="metaid_48" sboTerm="SBO:0000339" id="ka02_1" name="ka02_1" value="0.00074" constant="true"/>
+      <parameter metaid="metaid_49" sboTerm="SBO:0000338" id="ka02_2" name="ka02_2" value="0.0011" constant="true"/>
+      <parameter metaid="metaid_50" sboTerm="SBO:0000025" id="ka03_1" name="ka03_1" value="2" constant="true"/>
+      <parameter metaid="metaid_51" sboTerm="SBO:0000027" id="ka03_2" name="ka03_2" value="500" constant="true"/>
+      <parameter metaid="metaid_52" sboTerm="SBO:0000025" id="ka04_1" name="ka04_1" value="10.5" constant="true"/>
+      <parameter metaid="metaid_53" sboTerm="SBO:0000027" id="ka04_2" name="ka04_2" value="2500" constant="true"/>
+      <parameter metaid="metaid_54" sboTerm="SBO:0000339" id="kb01_1" name="kb01_1" value="0.091011109910329" constant="true"/>
+      <parameter metaid="metaid_55" sboTerm="SBO:0000338" id="kb01_2" name="kb01_2" value="0.0508205528375529" constant="true"/>
+      <parameter metaid="metaid_56" sboTerm="SBO:0000033" id="kb02_1" name="kb02_1" value="0.0368010796682635" constant="true"/>
+      <parameter metaid="metaid_57" sboTerm="SBO:0000338" id="kb02_2" name="kb02_2" value="0.1" constant="true"/>
+      <parameter metaid="metaid_58" sboTerm="SBO:0000025" id="kb03_1" name="kb03_1" value="66.3776807395383" constant="true"/>
+      <parameter metaid="metaid_59" sboTerm="SBO:0000027" id="kb03_2" name="kb03_2" value="829.115813389061" constant="true"/>
+      <parameter metaid="metaid_60" sboTerm="SBO:0000025" id="kb04_1" name="kb04_1" value="1.1" constant="true"/>
+      <parameter metaid="metaid_61" sboTerm="SBO:0000027" id="kb04_2" name="kb04_2" value="2000" constant="true"/>
+      <parameter metaid="metaid_62" sboTerm="SBO:0000339" id="kc01_1" name="kc01_1" value="0.64564661669102" constant="true"/>
+      <parameter metaid="metaid_63" sboTerm="SBO:0000338" id="kc01_2" name="kc01_2" value="0.194551104058408" constant="true"/>
+      <parameter metaid="metaid_64" sboTerm="SBO:0000035" id="kc02" name="kc02" value="0.000591152775857994" constant="true"/>
+      <parameter metaid="metaid_65" sboTerm="SBO:0000035" id="kc03_1" name="kc03_1" value="0.414004459949002" constant="true"/>
+      <parameter metaid="metaid_66" sboTerm="SBO:0000038" id="kc03_2" name="kc03_2" value="0.99647572245388" constant="true"/>
+      <parameter metaid="metaid_67" sboTerm="SBO:0000035" id="kc04_1" name="kc04_1" value="0.977836567576895" constant="true"/>
+      <parameter metaid="metaid_68" sboTerm="SBO:0000038" id="kc04_2" name="kc04_2" value="0.199162432258527" constant="true"/>
+      <parameter metaid="metaid_69" sboTerm="SBO:0000339" id="kd01_1" name="kd01_1" value="7.07e-05" constant="true"/>
+      <parameter metaid="metaid_70" sboTerm="SBO:0000338" id="kd01_2" name="kd01_2" value="7.23e-05" constant="true"/>
+      <parameter metaid="metaid_71" sboTerm="SBO:0000339" id="kd02_1" name="kd02_1" value="0.0368010796682635" constant="true"/>
+      <parameter metaid="metaid_72" sboTerm="SBO:0000338" id="kd02_2" name="kd02_2" value="0.1" constant="true"/>
+      <parameter metaid="metaid_73" sboTerm="SBO:0000025" id="kd03_1" name="kd03_1" value="66.3776807395383" constant="true"/>
+      <parameter metaid="metaid_74" sboTerm="SBO:0000027" id="kd03_2" name="kd03_2" value="829.115813389061" constant="true"/>
+      <parameter metaid="metaid_75" sboTerm="SBO:0000025" id="kd04_1" name="kd04_1" value="1.1" constant="true"/>
+      <parameter metaid="metaid_76" sboTerm="SBO:0000027" id="kd04_2" name="kd04_2" value="2000" constant="true"/>
+      <parameter metaid="metaid_77" sboTerm="SBO:0000339" id="kd05_1" name="kd05_1" value="0.00074" constant="true"/>
+      <parameter metaid="metaid_78" sboTerm="SBO:0000338" id="kd05_2" name="kd05_2" value="0.0011" constant="true"/>
+      <parameter metaid="metaid_79" sboTerm="SBO:0000025" id="kd06_1" name="kd06_1" value="2" constant="true"/>
+      <parameter metaid="metaid_80" sboTerm="SBO:0000027" id="kd06_2" name="kd06_2" value="500" constant="true"/>
+      <parameter metaid="metaid_81" sboTerm="SBO:0000025" id="kd07_1" name="kd07_1" value="10.5" constant="true"/>
+      <parameter metaid="metaid_82" sboTerm="SBO:0000027" id="kd07_2" name="kd07_2" value="2500" constant="true"/>
+      <parameter metaid="metaid_83" sboTerm="SBO:0000339" id="kd08_1" name="kd08_1" value="0.0368010796682635" constant="true"/>
+      <parameter metaid="metaid_84" sboTerm="SBO:0000338" id="kd08_2" name="kd08_2" value="0.1" constant="true"/>
+      <parameter metaid="metaid_85" sboTerm="SBO:0000339" id="kd09_1" name="kd09_1" value="0.00074" constant="true"/>
+      <parameter metaid="metaid_86" sboTerm="SBO:0000338" id="kd09_2" name="kd09_2" value="0.0011" constant="true"/>
+      <parameter metaid="metaid_87" sboTerm="SBO:0000025" id="kd10_1" name="kd10_1" value="71.1705760475931" constant="true"/>
+      <parameter metaid="metaid_88" sboTerm="SBO:0000027" id="kd10_2" name="kd10_2" value="3796.22684377655" constant="true"/>
+      <parameter metaid="metaid_89" sboTerm="SBO:0000025" id="kd11_1" name="kd11_1" value="38.9625903487667" constant="true"/>
+      <parameter metaid="metaid_90" sboTerm="SBO:0000027" id="kd11_2" name="kd11_2" value="5972.30640657865" constant="true"/>
+      <parameter metaid="metaid_91" sboTerm="SBO:0000339" id="ke01_1" name="ke01_1" value="7.07e-05" constant="true"/>
+      <parameter metaid="metaid_92" sboTerm="SBO:0000338" id="ke01_2" name="ke01_2" value="0.0001" constant="true"/>
+      <parameter metaid="metaid_93" sboTerm="SBO:0000339" id="ke02_1" name="ke02_1" value="0.00074" constant="true"/>
+      <parameter metaid="metaid_94" sboTerm="SBO:0000338" id="ke02_2" name="ke02_2" value="0.0011" constant="true"/>
+      <parameter metaid="metaid_95" sboTerm="SBO:0000025" id="ke03_1" name="ke03_1" value="2" constant="true"/>
+      <parameter metaid="metaid_96" sboTerm="SBO:0000027" id="ke03_2" name="ke03_2" value="500" constant="true"/>
+      <parameter metaid="metaid_97" sboTerm="SBO:0000025" id="ke04_1" name="ke04_1" value="10.5" constant="true"/>
+      <parameter metaid="metaid_98" sboTerm="SBO:0000027" id="ke04_2" name="ke04_2" value="2500" constant="true"/>
+      <parameter metaid="metaid_99" sboTerm="SBO:0000339" id="ke05_1" name="ke05_1" value="0.0368010796682635" constant="true"/>
+      <parameter metaid="metaid_100" sboTerm="SBO:0000338" id="ke05_2" name="ke05_2" value="0.1" constant="true"/>
+      <parameter metaid="metaid_101" sboTerm="SBO:0000025" id="ke06_1" name="ke06_1" value="66.3776807395383" constant="true"/>
+      <parameter metaid="metaid_102" sboTerm="SBO:0000027" id="ke06_2" name="ke06_2" value="829.115813389061" constant="true"/>
+      <parameter metaid="metaid_103" sboTerm="SBO:0000025" id="ke07_1" name="ke07_1" value="1.1" constant="true"/>
+      <parameter metaid="metaid_104" sboTerm="SBO:0000027" id="ke07_2" name="ke07_2" value="2000" constant="true"/>
+      <parameter metaid="metaid_105" sboTerm="SBO:0000339" id="kf01_1" name="kf01_1" value="0.969998277173144" constant="true"/>
+      <parameter metaid="metaid_106" sboTerm="SBO:0000338" id="kf01_2" name="kf01_2" value="0.069020578737621" constant="true"/>
+      <parameter metaid="metaid_107" sboTerm="SBO:0000339" id="kf02_1" name="kf02_1" value="0.969998277173144" constant="true"/>
+      <parameter metaid="metaid_108" sboTerm="SBO:0000338" id="kf02_2" name="kf02_2" value="0.069020578737621" constant="true"/>
+      <parameter metaid="metaid_109" sboTerm="SBO:0000036" id="kf03" name="kf03" value="0.0613537204215846" constant="true"/>
+      <parameter metaid="metaid_110" sboTerm="SBO:0000339" id="kf04_1" name="kf04_1" value="0.613416050428938" constant="true"/>
+      <parameter metaid="metaid_111" sboTerm="SBO:0000338" id="kf04_2" name="kf04_2" value="0.983691204042155" constant="true"/>
+      <parameter metaid="metaid_112" sboTerm="SBO:0000036" id="kf05" name="kf05" value="0.980777558937884" constant="true"/>
+      <parameter metaid="metaid_113" sboTerm="SBO:0000339" id="kf06_1" name="kf06_1" value="0.613416050428938" constant="true"/>
+      <parameter metaid="metaid_114" sboTerm="SBO:0000338" id="kf06_2" name="kf06_2" value="0.983691204042155" constant="true"/>
+      <parameter metaid="metaid_115" sboTerm="SBO:0000339" id="kf07_1" name="kf07_1" value="0.613416050428938" constant="true"/>
+      <parameter metaid="metaid_116" sboTerm="SBO:0000338" id="kf07_2" name="kf07_2" value="0.983691204042155" constant="true"/>
+      <parameter metaid="metaid_117" sboTerm="SBO:0000339" id="kg01_1" name="kg01_1" value="0.091011109910329" constant="true"/>
+      <parameter metaid="metaid_118" sboTerm="SBO:0000338" id="kg01_2" name="kg01_2" value="0.0508205528375529" constant="true"/>
+      <parameter metaid="metaid_119" sboTerm="SBO:0000339" id="kg02_1" name="kg02_1" value="0.0368010796682635" constant="true"/>
+      <parameter metaid="metaid_120" sboTerm="SBO:0000338" id="kg02_2" name="kg02_2" value="0.1" constant="true"/>
+      <parameter metaid="metaid_121" sboTerm="SBO:0000025" id="kg03_1" name="kg03_1" value="66.3776807395383" constant="true"/>
+      <parameter metaid="metaid_122" sboTerm="SBO:0000027" id="kg03_2" name="kg03_2" value="829.115813389061" constant="true"/>
+      <parameter metaid="metaid_123" sboTerm="SBO:0000025" id="kg04_1" name="kg04_1" value="1.1" constant="true"/>
+      <parameter metaid="metaid_124" sboTerm="SBO:0000027" id="kg04_2" name="kg04_2" value="2000" constant="true"/>
+      <parameter metaid="metaid_125" sboTerm="SBO:0000035" id="kt01" name="kt01" value="0.000342266" constant="true"/>
+      <parameter metaid="metaid_126" sboTerm="SBO:0000035" id="kt02" name="kt02" value="0.492901" constant="true"/>
+      <parameter metaid="metaid_127" sboTerm="SBO:0000035" id="kt03" name="kt03" value="0.0470911" constant="true"/>
+      <parameter metaid="metaid_128" sboTerm="SBO:0000339" id="kt04_1" name="kt04_1" value="0" constant="true"/>
+      <parameter metaid="metaid_129" sboTerm="SBO:0000338" id="kt04_2" name="kt04_2" value="0" constant="true"/>
+      <parameter metaid="metaid_130" sboTerm="SBO:0000472" id="mC3" name="mC3" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_131" variable="mC3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> dC3b </ci>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_135" sboTerm="SBO:0000177" id="a_01" name="a_01" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_132" species="PC" stoichiometry="1"/>
+          <speciesReference metaid="metaid_133" species="CRP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_134" species="PC_CRP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> ka01_1 </ci>
+                  <ci> PC </ci>
+                  <ci> CRP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ka01_2 </ci>
+                  <ci> PC_CRP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_139" sboTerm="SBO:0000177" id="a_02" name="a_02" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_136" species="PC_CRP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_137" species="C1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_138" species="PC_CRP_C1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> ka02_1 </ci>
+                  <ci> PC_CRP </ci>
+                  <ci> C1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ka02_2 </ci>
+                  <ci> PC_CRP_C1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_144" sboTerm="SBO:0000178" id="a_03" name="a_03" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_140" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_141" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_142" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_143" sboTerm="SBO:0000460" species="PC_CRP_C1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> ka03_1 </ci>
+                <ci> PC_CRP_C1 </ci>
+                <ci> C4 </ci>
+                <ci> ka03_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_149" sboTerm="SBO:0000178" id="a_04" name="a_04" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_145" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_146" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_147" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_148" sboTerm="SBO:0000460" species="PC_CRP_C1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> ka04_1 </ci>
+                <ci> PC_CRP_C1 </ci>
+                <ci> C2 </ci>
+                <ci> ka04_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_153" sboTerm="SBO:0000177" id="b_01" name="b_01" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_150" species="GlcNac" stoichiometry="1"/>
+          <speciesReference metaid="metaid_151" species="LF" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_152" species="GlcNac_LF" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kb01_1 </ci>
+                  <ci> GlcNac </ci>
+                  <ci> LF </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kb01_2 </ci>
+                  <ci> GlcNac_LF </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_157" sboTerm="SBO:0000177" id="b_02" name="b_02" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_154" species="GlcNac_LF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_155" species="MASP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_156" species="GlcNac_LF_MASP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kb02_1 </ci>
+                  <ci> GlcNac_LF </ci>
+                  <ci> MASP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kb02_2 </ci>
+                  <ci> GlcNac_LF_MASP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_162" sboTerm="SBO:0000178" id="b_03" name="b_03" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_158" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_159" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_160" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_161" sboTerm="SBO:0000460" species="GlcNac_LF_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kb03_1 </ci>
+                <ci> GlcNac_LF_MASP </ci>
+                <ci> C4 </ci>
+                <ci> kb03_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_167" sboTerm="SBO:0000178" id="b_04" name="b_04" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_163" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_164" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_165" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_166" sboTerm="SBO:0000460" species="GlcNac_LF_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kb04_1 </ci>
+                <ci> GlcNac_LF_MASP </ci>
+                <ci> C2 </ci>
+                <ci> kb04_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_171" sboTerm="SBO:0000177" id="c_01" name="c_01" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_168" species="C4b" stoichiometry="1"/>
+          <speciesReference metaid="metaid_169" species="C2a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_170" species="C4b_C2a" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kc01_1 </ci>
+                  <ci> C4b </ci>
+                  <ci> C2a </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kc01_2 </ci>
+                  <ci> C4b_C2a </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_177" sboTerm="SBO:0000177" id="c_02" name="c_02" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_172" species="C4b_C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_173" species="C3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_174" species="C4b_C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_175" species="C3a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_176" species="C3b" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> kc02 </ci>
+              <ci> C4b_C2a </ci>
+              <ci> C3 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_180" sboTerm="SBO:0000185" id="c_03" name="c_03" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_178" species="C3b" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_179" species="dC3b" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kc03_1 </ci>
+                  <ci> C3b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kc03_2 </ci>
+                  <ci> dC3b </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_183" sboTerm="SBO:0000185" id="c_04" name="c_04" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_181" species="C4b_C2a" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_182" species="dC4b_C2a" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kc04_1 </ci>
+                  <ci> C4b_C2a </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kc04_2 </ci>
+                  <ci> dC4b_C2a </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_187" sboTerm="SBO:0000177" id="d_01" name="d_01" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_184" species="PC_CRP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_185" species="LF" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_186" species="PC_CRP_LF" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kd01_1 </ci>
+                  <ci> PC_CRP </ci>
+                  <ci> LF </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kd01_2 </ci>
+                  <ci> PC_CRP_LF </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_191" sboTerm="SBO:0000177" id="d_02" name="d_02" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_188" species="PC_CRP_LF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_189" species="MASP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_190" species="PC_CRP_LF_MASP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kd02_1 </ci>
+                  <ci> PC_CRP_LF </ci>
+                  <ci> MASP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kd02_2 </ci>
+                  <ci> PC_CRP_LF_MASP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_196" sboTerm="SBO:0000178" id="d_03" name="d_03" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_192" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_193" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_194" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_195" sboTerm="SBO:0000460" species="PC_CRP_LF_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kd03_1 </ci>
+                <ci> PC_CRP_LF_MASP </ci>
+                <ci> C4 </ci>
+                <ci> kd03_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_201" sboTerm="SBO:0000178" id="d_04" name="d_04" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_197" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_198" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_199" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_200" sboTerm="SBO:0000460" species="PC_CRP_LF_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kd04_1 </ci>
+                <ci> PC_CRP_LF_MASP </ci>
+                <ci> C2 </ci>
+                <ci> kd04_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_205" sboTerm="SBO:0000177" id="d_05" name="d_05" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_202" species="PC_CRP_LF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_203" species="C1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_204" species="PC_CRP_LF_C1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kd05_1 </ci>
+                  <ci> PC_CRP_LF </ci>
+                  <ci> C1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kd05_2 </ci>
+                  <ci> PC_CRP_LF_C1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_210" sboTerm="SBO:0000178" id="d_06" name="d_06" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_206" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_207" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_208" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_209" sboTerm="SBO:0000460" species="PC_CRP_LF_C1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kd06_1 </ci>
+                <ci> PC_CRP_LF_C1 </ci>
+                <ci> C4 </ci>
+                <ci> kd06_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_215" sboTerm="SBO:0000178" id="d_07" name="d_07" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_211" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_212" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_213" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_214" sboTerm="SBO:0000460" species="PC_CRP_LF_C1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kd07_1 </ci>
+                <ci> PC_CRP_LF_C1 </ci>
+                <ci> C2 </ci>
+                <ci> kd07_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_219" sboTerm="SBO:0000177" id="d_08" name="d_08" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_216" species="PC_CRP_LF_C1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_217" species="MASP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_218" species="PC_CRP_LF_C1_MASP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kd08_1 </ci>
+                  <ci> PC_CRP_LF_C1 </ci>
+                  <ci> MASP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kd08_2 </ci>
+                  <ci> PC_CRP_LF_C1_MASP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_223" sboTerm="SBO:0000177" id="d_09" name="d_09" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_220" species="PC_CRP_LF_MASP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_221" species="C1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_222" species="PC_CRP_LF_C1_MASP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kd09_1 </ci>
+                  <ci> PC_CRP_LF_MASP </ci>
+                  <ci> C1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kd09_2 </ci>
+                  <ci> PC_CRP_LF_C1_MASP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_228" sboTerm="SBO:0000178" id="d_10" name="d_10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_224" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_225" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_226" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_227" sboTerm="SBO:0000460" species="PC_CRP_LF_C1_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kd10_1 </ci>
+                <ci> PC_CRP_LF_C1_MASP </ci>
+                <ci> C4 </ci>
+                <ci> kd10_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_233" sboTerm="SBO:0000178" id="d_11" name="d_11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_229" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_230" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_231" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_232" sboTerm="SBO:0000460" species="PC_CRP_LF_C1_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kd11_1 </ci>
+                <ci> PC_CRP_LF_C1_MASP </ci>
+                <ci> C2 </ci>
+                <ci> kd11_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_237" sboTerm="SBO:0000177" id="e_01" name="e_01" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_234" species="GlcNac_LF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_235" species="CRP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_236" species="GlcNac_LF_CRP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> ke01_1 </ci>
+                  <ci> GlcNac_LF </ci>
+                  <ci> CRP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ke01_2 </ci>
+                  <ci> GlcNac_LF_CRP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_241" sboTerm="SBO:0000177" id="e_02" name="e_02" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_238" species="GlcNac_LF_CRP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_239" species="C1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_240" species="GlcNac_LF_CRP_C1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> ke02_1 </ci>
+                  <ci> GlcNac_LF_CRP </ci>
+                  <ci> C1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ke02_2 </ci>
+                  <ci> GlcNac_LF_CRP_C1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_246" sboTerm="SBO:0000178" id="e_03" name="e_03" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_242" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_243" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_244" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_245" sboTerm="SBO:0000460" species="GlcNac_LF_CRP_C1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> ke03_1 </ci>
+                <ci> GlcNac_LF_CRP_C1 </ci>
+                <ci> C4 </ci>
+                <ci> ke03_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_251" sboTerm="SBO:0000178" id="e_04" name="e_04" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_247" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_248" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_249" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_250" sboTerm="SBO:0000460" species="GlcNac_LF_CRP_C1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> ke04_1 </ci>
+                <ci> GlcNac_LF_CRP_C1 </ci>
+                <ci> C2 </ci>
+                <ci> ke04_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_255" sboTerm="SBO:0000177" id="e_05" name="e_05" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_252" species="GlcNac_LF_CRP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_253" species="MASP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_254" species="GlcNac_LF_CRP_MASP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> ke05_1 </ci>
+                  <ci> GlcNac_LF_CRP </ci>
+                  <ci> MASP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ke05_2 </ci>
+                  <ci> GlcNac_LF_CRP_MASP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_260" sboTerm="SBO:0000178" id="e_06" name="e_06" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_256" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_257" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_258" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_259" sboTerm="SBO:0000460" species="GlcNac_LF_CRP_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> ke06_1 </ci>
+                <ci> GlcNac_LF_CRP_MASP </ci>
+                <ci> C4 </ci>
+                <ci> ke06_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_265" sboTerm="SBO:0000178" id="e_07" name="e_07" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_261" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_262" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_263" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_264" sboTerm="SBO:0000460" species="GlcNac_LF_CRP_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> ke07_1 </ci>
+                <ci> GlcNac_LF_CRP_MASP </ci>
+                <ci> C2 </ci>
+                <ci> ke07_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_269" sboTerm="SBO:0000177" id="f_01" name="f_01" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_266" species="C4BP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_267" species="PC_CRP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_268" species="C4BP_PC_CRP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kf01_1 </ci>
+                  <ci> C4BP </ci>
+                  <ci> PC_CRP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kf01_2 </ci>
+                  <ci> C4BP_PC_CRP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_273" sboTerm="SBO:0000177" id="f_02" name="f_02" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_270" species="C4BP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_271" species="GlcNac_LF_CRP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_272" species="C4BP_GlcNac_LF_CRP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kf02_1 </ci>
+                  <ci> C4BP </ci>
+                  <ci> GlcNac_LF_CRP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kf02_2 </ci>
+                  <ci> C4BP_GlcNac_LF_CRP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_278" sboTerm="SBO:0000176" id="f_03" name="f_03" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_274" species="C4b_C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_275" species="C4BP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_276" species="iC4b_C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_277" species="C4BP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> kf03 </ci>
+              <ci> C4b_C2a </ci>
+              <ci> C4BP </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_282" sboTerm="SBO:0000177" id="f_04" name="f_04" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_279" species="C4BP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_280" species="C4b" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_281" species="C4BP_C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kf04_1 </ci>
+                  <ci> C4BP </ci>
+                  <ci> C4b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kf04_2 </ci>
+                  <ci> C4BP_C4b </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_288" sboTerm="SBO:0000180" id="f_05" name="f_05" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_283" species="C4b_C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_284" species="C4BP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_285" species="C4b" stoichiometry="1"/>
+          <speciesReference metaid="metaid_286" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_287" species="C4BP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> kf05 </ci>
+              <ci> C4b_C2a </ci>
+              <ci> C4BP </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_292" sboTerm="SBO:0000177" id="f_06" name="f_06" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_289" species="C4b_C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_290" species="C4BP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_291" species="C4b_C2a_C4BP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kf06_1 </ci>
+                  <ci> C4b_C2a </ci>
+                  <ci> C4BP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kf06_2 </ci>
+                  <ci> C4b_C2a_C4BP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_296" sboTerm="SBO:0000177" id="f_07" name="f_07" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_293" species="dC4b_C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_294" species="C4BP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_295" species="dC4b_C2a_C4BP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kf07_1 </ci>
+                  <ci> dC4b_C2a </ci>
+                  <ci> C4BP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kf07_2 </ci>
+                  <ci> dC4b_C2a_C4BP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_300" sboTerm="SBO:0000177" id="g_01" name="g_01" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_297" species="X" stoichiometry="1"/>
+          <speciesReference metaid="metaid_298" species="HF" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_299" species="GlcNac_HF" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kg01_1 </ci>
+                  <ci> X </ci>
+                  <ci> HF </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kg01_2 </ci>
+                  <ci> GlcNac_HF </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_304" sboTerm="SBO:0000177" id="g_02" name="g_02" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_301" species="GlcNac_HF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_302" species="MASP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_303" species="GlcNac_HF_MASP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kg02_1 </ci>
+                  <ci> GlcNac_HF </ci>
+                  <ci> MASP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kg02_2 </ci>
+                  <ci> GlcNac_HF_MASP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_309" sboTerm="SBO:0000178" id="g_03" name="g_03" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_305" species="C4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_306" species="C4a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_307" species="C4b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_308" sboTerm="SBO:0000460" species="GlcNac_HF_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kg03_1 </ci>
+                <ci> GlcNac_HF_MASP </ci>
+                <ci> C4 </ci>
+                <ci> kg03_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_314" sboTerm="SBO:0000178" id="g_04" name="g_04" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_310" species="C2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_311" species="C2a" stoichiometry="1"/>
+          <speciesReference metaid="metaid_312" species="C2b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_313" sboTerm="SBO:0000460" species="GlcNac_HF_MASP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> kg04_1 </ci>
+                <ci> GlcNac_HF_MASP </ci>
+                <ci> C2 </ci>
+                <ci> kg04_2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_317" sboTerm="SBO:0000185" id="t_01" name="t_01" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_316" species="C4BP" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> k1_4 </ci>
+              <ci> C4BP </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_315" id="k1_4" name="k1" value="0.000342266"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_320" sboTerm="SBO:0000185" id="t_02" name="t_02" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_319" species="C3b" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> k1_4 </ci>
+              <ci> C3b </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_318" id="k1_4" name="k1" value="0.492901"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_323" sboTerm="SBO:0000185" id="t_03" name="t_03" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_322" species="C4b_C2a" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> k1_4 </ci>
+              <ci> C4b_C2a </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_321" id="k1_4" name="k1" value="0.0470911"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_329" sboTerm="SBO:0000177" id="t_04" name="t_04" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_326" species="C4BP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_327" species="PC_CRP_LF" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_328" species="C4BP_PC_CRP_LF" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1_4 </ci>
+                  <ci> C4BP </ci>
+                  <ci> PC_CRP_LF </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> C4BP_PC_CRP_LF </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_324" id="k1_4" name="k1" value="0"/>
+            <parameter metaid="metaid_325" id="k2" name="k2" value="0"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

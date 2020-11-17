@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_karin2" initialTime="0" outputStartTime="0" outputEndTime="15" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_karin2" name="karin2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/karin2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y']/@initialConcentration" newValue="5.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']/@initialConcentration" newValue="5.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zmut']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='M']/@value" newValue="25.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lambdaMinus']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mu']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_karin2" modelReference="model0_karin2" simulationReference="sim0_model0_karin2"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_karin2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_karin2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin2_z">
+      <listOfVariables>
+        <variable id="z" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z']" taskReference="task0_model0_karin2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin2_zmut">
+      <listOfVariables>
+        <variable id="zmut" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='zmut']" taskReference="task0_model0_karin2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> zmut </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="csv0_time_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_karin2_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_karin2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_karin2_time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure1D" name="Figure 1D">
+      <listOfCurves>
+        <curve id="plot0_z" name="z" logX="false" logY="false" xDataReference="task0_model0_karin2_time" yDataReference="task0_model0_karin2_z"/>
+        <curve id="plot0_zmut" name="zmut" logX="false" logY="false" xDataReference="task0_model0_karin2_time" yDataReference="task0_model0_karin2_zmut"/>
+      </listOfCurves>
+    </plot2D>
+    <report id="Figure1Dcsv" name="Figure 1D csv">
+      <listOfDataSets>
+        <dataSet id="csv0_time" label="time" name="time" dataReference="csv0_time_datagen0"/>
+        <dataSet id="csv0_z" label="z" name="z" dataReference="task0_model0_karin2_z"/>
+        <dataSet id="csv0_zmut" label="zmut" name="zmut" dataReference="task0_model0_karin2_zmut"/>
+      </listOfDataSets>
+    </report>
+  </listOfOutputs>
+</sedML>

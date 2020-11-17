@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_goldbeter5" initialTime="0" outputStartTime="0" outputEndTime="80" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_goldbeter5" name="goldbeter5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/goldbeter5/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P2']/@initialConcentration" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M']/@initialConcentration" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P0']/@initialConcentration" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P1']/@initialConcentration" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pn']/@initialConcentration" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rVd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kd']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rVd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vd']/@value" newValue="0.95"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rmRNAd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vm']/@value" newValue="0.65"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rmRNAd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Km']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rPn2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2']/@value" newValue="1.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP2n']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k1']/@value" newValue="1.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP21']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K4']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP21']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V4']/@value" newValue="2.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP12']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K3']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP12']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V3']/@value" newValue="5.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP10']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K2']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP10']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V2']/@value" newValue="1.58"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP01']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K1']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rP01']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V1']/@value" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rTL']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ks']/@value" newValue="0.38"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rM']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='n']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rM']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='KI']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='rM']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vs']/@value" newValue="0.76"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='CYTOPLASM']/@size" newValue="1e-15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000004']/@size" newValue="1e-15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1e-15"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_goldbeter5" modelReference="model0_goldbeter5" simulationReference="sim0_model0_goldbeter5"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_goldbeter5_M">
+      <listOfVariables>
+        <variable id="M" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M']" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> M </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter5_P0">
+      <listOfVariables>
+        <variable id="P0" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P0']" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> P0 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter5_P1">
+      <listOfVariables>
+        <variable id="P1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P1']" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> P1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter5_P2">
+      <listOfVariables>
+        <variable id="P2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P2']" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> P2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter5_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter5_Pn">
+      <listOfVariables>
+        <variable id="Pn" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pn']" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Pn </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_M_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_goldbeter5_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_goldbeter5_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_P0_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_goldbeter5_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_goldbeter5_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_P1_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_goldbeter5_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_goldbeter5_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_P2_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_goldbeter5_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_goldbeter5_time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_2" name="Figure 2">
+      <listOfCurves>
+        <curve id="plot0_M" name="PER mRNA" logX="false" logY="false" xDataReference="plot0_M_datagen0" yDataReference="task0_model0_goldbeter5_M"/>
+        <curve id="plot0_P0" name="unphosphorylated PER" logX="false" logY="false" xDataReference="plot0_P0_datagen0" yDataReference="task0_model0_goldbeter5_P0"/>
+        <curve id="plot0_P1" name="monophosphorylated PER" logX="false" logY="false" xDataReference="plot0_P1_datagen0" yDataReference="task0_model0_goldbeter5_P1"/>
+        <curve id="plot0_P2" name="biphosphorylated PER" logX="false" logY="false" xDataReference="plot0_P2_datagen0" yDataReference="task0_model0_goldbeter5_P2"/>
+        <curve id="plot0_Pn" name="nuclear PER" logX="false" logY="false" xDataReference="task0_model0_goldbeter5_time" yDataReference="task0_model0_goldbeter5_Pn"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

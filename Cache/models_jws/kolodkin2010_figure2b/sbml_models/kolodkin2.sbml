@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="kolodkin2" name="kolodkin2" substanceUnits="nmol" timeUnits="min" volumeUnits="L" extentUnits="nM">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="TR" name="TR">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Kapf </ci>
+            </bvar>
+            <bvar>
+              <ci> Cvar </ci>
+            </bvar>
+            <bvar>
+              <ci> Kapb </ci>
+            </bvar>
+            <bvar>
+              <ci> Nvar </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> Cvar </ci>
+                <ci> Kapf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> Kapb </ci>
+                <ci> Nvar </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="nM" name="nM">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="min" name="min">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="60"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_2" id="nmol" name="nmol">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_3" id="L" name="L">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_4" sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_5" id="Lc" name="Lc" compartment="default_compartment" initialConcentration="0.005" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_6" id="Ln_" name="Ln" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="NRLn" name="NRLn" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="NRn" name="NRn" compartment="default_compartment" initialConcentration="370" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="RE" name="RE" compartment="default_compartment" initialConcentration="3.7" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="REL" name="REL" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_11" id="Kapb" value="3.24e-11" constant="false"/>
+      <parameter metaid="metaid_12" id="Kapf" value="3.24e-11" constant="false"/>
+      <parameter metaid="metaid_13" id="Vcytosol" value="1.55e-12" constant="false"/>
+      <parameter metaid="metaid_14" id="Vnucleus" value="4.5e-13" constant="false"/>
+      <parameter metaid="metaid_15" id="k1" value="60" constant="false"/>
+      <parameter metaid="metaid_16" id="k12" value="60" constant="false"/>
+      <parameter metaid="metaid_17" id="k2" value="60" constant="false"/>
+      <parameter metaid="metaid_18" id="k22" value="60" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_22" id="v_1" name="v_1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_19" species="NRLn" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_20" species="RE" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_21" species="REL" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k1 </ci>
+                <ci> NRLn </ci>
+                <ci> RE </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k2 </ci>
+                <ci> REL </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_25" id="v_2" name="v_2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_23" species="Lc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_24" species="Ln_" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <ci> TR </ci>
+                <ci> Kapf </ci>
+                <ci> Lc </ci>
+                <ci> Kapb </ci>
+                <ci> Ln_ </ci>
+              </apply>
+              <ci> Vnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_31" id="v_3" name="v_3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_26" species="Ln_" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_27" species="NRn" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_28" species="NRLn" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_29" species="RE"/>
+          <modifierSpeciesReference metaid="metaid_30" species="REL"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k22 </ci>
+                  <ci> NRLn </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k12 </ci>
+                <ci> Ln_ </ci>
+                <ci> NRn </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRLn </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> RE </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> Ln_ </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRn </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> REL </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRLn </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> RE </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> Ln_ </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRn </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> REL </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

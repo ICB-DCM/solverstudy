@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="clancy1" name="clancy1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="cell" name="cell" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="c1" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="c2" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="c3" compartment="cell" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="i" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="o" compartment="cell" initialConcentration="0.06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_6" id="F" value="96.485" constant="false"/>
+      <parameter metaid="metaid_7" id="Gk" value="0" constant="false"/>
+      <parameter metaid="metaid_8" id="R" value="8.314" constant="false"/>
+      <parameter metaid="metaid_9" id="Temp" value="310" constant="false"/>
+      <parameter metaid="metaid_10" id="a" value="0" constant="false"/>
+      <parameter metaid="metaid_11" id="aa" value="0" constant="false"/>
+      <parameter metaid="metaid_12" id="ai" value="0" constant="false"/>
+      <parameter metaid="metaid_13" id="ain" value="2.172" constant="false"/>
+      <parameter metaid="metaid_14" id="b" value="0" constant="false"/>
+      <parameter metaid="metaid_15" id="bb" value="0" constant="false"/>
+      <parameter metaid="metaid_16" id="bi" value="0" constant="false"/>
+      <parameter metaid="metaid_17" id="bin" value="1.077" constant="false"/>
+      <parameter metaid="metaid_18" id="ik" value="0" constant="false"/>
+      <parameter metaid="metaid_19" id="ki" value="140" constant="false"/>
+      <parameter metaid="metaid_20" id="ko" value="5.4" constant="false"/>
+      <parameter metaid="metaid_21" id="u" value="0" constant="false"/>
+      <parameter metaid="metaid_22" id="v" value="-40" constant="false"/>
+      <parameter metaid="metaid_23" id="vhold" value="-40" constant="false"/>
+      <parameter metaid="metaid_24" id="vk" value="0" constant="false"/>
+      <parameter metaid="metaid_25" id="vtest" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_26" variable="aa">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.0655 </cn>
+            <apply>
+              <exp/>
+              <apply>
+                <times/>
+                <cn> 0.05547153 </cn>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <minus/>
+                    <cn> 36 </cn>
+                  </apply>
+                  <ci> v </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_27" variable="ik">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> Gk </ci>
+            <apply>
+              <minus/>
+              <ci> v </ci>
+              <ci> vk </ci>
+            </apply>
+            <ci> o </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_28" variable="a">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.0555 </cn>
+            <apply>
+              <exp/>
+              <apply>
+                <times/>
+                <cn> 0.05547153 </cn>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <minus/>
+                    <cn> 12 </cn>
+                  </apply>
+                  <ci> v </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_29" variable="b">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.002357 </cn>
+            <apply>
+              <exp/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <cn> 0.036588 </cn>
+                </apply>
+                <ci> v </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_30" variable="Gk">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.0135 </cn>
+            <apply>
+              <power/>
+              <ci> ko </ci>
+              <cn> 0.59 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_31" variable="bi">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 1.03007202707417 </cn>
+            <apply>
+              <exp/>
+              <apply>
+                <times/>
+                <cn> 0.000942 </cn>
+                <ci> v </ci>
+              </apply>
+            </apply>
+            <apply>
+              <power/>
+              <apply>
+                <power/>
+                <ci> ko </ci>
+                <apply>
+                  <minus/>
+                  <cn> 1 </cn>
+                </apply>
+              </apply>
+              <cn> 0.3 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_32" variable="u">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> ai </ci>
+              <ci> bb </ci>
+            </apply>
+            <ci> bi </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_33" variable="bb">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.0029357 </cn>
+            <apply>
+              <exp/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <cn> 0.02158 </cn>
+                </apply>
+                <ci> v </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_34" variable="vk">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> R </ci>
+              <ci> Temp </ci>
+              <apply>
+                <ln/>
+                <apply>
+                  <divide/>
+                  <ci> ko </ci>
+                  <ci> ki </ci>
+                </apply>
+              </apply>
+            </apply>
+            <ci> F </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_35" variable="ai">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <cn> 1.9755 </cn>
+              <apply>
+                <exp/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn> 0.02352 </cn>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn> 25 </cn>
+                    <ci> v </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <ci> ko </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_36" variable="v">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <ci> vtest </ci>
+              <apply>
+                <and/>
+                <apply>
+                  <lt/>
+                  <cn> 50 </cn>
+                  <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                </apply>
+                <apply>
+                  <leq/>
+                  <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                  <cn> 300 </cn>
+                </apply>
+              </apply>
+            </piece>
+            <otherwise>
+              <ci> vhold </ci>
+            </otherwise>
+          </piecewise>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_39" id="reaction0000001" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_37" species="c3" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_38" species="c2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> b </ci>
+                    <ci> c2 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> a </ci>
+                  <ci> c3 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_42" id="reaction0000002" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_40" species="c2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_41" species="c1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> bin </ci>
+                    <ci> c1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ain </ci>
+                  <ci> c2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_45" id="reaction0000003" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_43" species="c1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_44" species="o" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> aa </ci>
+                  <ci> c1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> bb </ci>
+                  <ci> o </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_48" id="reaction0000004" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_46" species="o" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_47" species="i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> ai </ci>
+                    <ci> i </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> bi </ci>
+                  <ci> o </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_51" id="reaction0000005" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_49" species="c1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_50" species="i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> aa </ci>
+                  <ci> c1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> u </ci>
+                  <ci> i </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

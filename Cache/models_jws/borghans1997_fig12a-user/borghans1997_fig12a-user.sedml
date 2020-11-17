@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_borghans3" initialTime="0" outputStartTime="0" outputEndTime="50" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_borghans3" name="borghans3" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/borghans3/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Y']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='X']/@initialConcentration" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Z']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='EC']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v3s']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K3s']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v3s']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vm3s']/@value" newValue="0.169"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v2s']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K2s']/@value" newValue="0.0265"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v2s']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vm2s']/@value" newValue="1.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kf']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kf']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v3i']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K3z']/@value" newValue="0.022"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v3i']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K3y']/@value" newValue="0.065"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v3i']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vm3i']/@value" newValue="25.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v2i']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K2i']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='v2i']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vm2i']/@value" newValue="3.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vin']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='v1']/@value" newValue="0.012"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vin']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='v0']/@value" newValue="0.015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytosol']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='extracellular']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='intravesicular1']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='intravesicular2']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_borghans3" modelReference="model0_borghans3" simulationReference="sim0_model0_borghans3"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_borghans3_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_borghans3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_borghans3_X">
+      <listOfVariables>
+        <variable id="X" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='X']" taskReference="task0_model0_borghans3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> X </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_borghans3_Y">
+      <listOfVariables>
+        <variable id="Y" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Y']" taskReference="task0_model0_borghans3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Y </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_borghans3_Z">
+      <listOfVariables>
+        <variable id="Z" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Z']" taskReference="task0_model0_borghans3"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Z </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_12A" name="Figure 12A">
+      <listOfCurves>
+        <curve id="plot0_X" name="X" logX="false" logY="false" xDataReference="task0_model0_borghans3_time" yDataReference="task0_model0_borghans3_X"/>
+        <curve id="plot0_Y" name="Y" logX="false" logY="false" xDataReference="task0_model0_borghans3_time" yDataReference="task0_model0_borghans3_Y"/>
+        <curve id="plot0_Z" name="Z" logX="false" logY="false" xDataReference="task0_model0_borghans3_time" yDataReference="task0_model0_borghans3_Z"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

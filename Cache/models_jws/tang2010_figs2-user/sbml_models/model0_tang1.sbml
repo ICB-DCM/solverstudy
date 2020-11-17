@@ -1,0 +1,1692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="tang1" name="tang1">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="item" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_1" id="cytosol" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_2" id="AggP1" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="AggP2" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="AggP3" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="AggP4" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="AggP5" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="AggP_Proteasome" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="AggPolyQ1" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="AggPolyQ2" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="AggPolyQ3" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="AggPolyQ4" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" id="AggPolyQ5" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" id="MisP" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_14" id="MisP_Proteasome" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_15" id="NatP" compartment="cytosol" initialAmount="19500" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_16" id="PIdeath" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_17" id="PolyQ" compartment="cytosol" initialAmount="1000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P42858"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_18" id="PolyQ_Proteasome" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_19" id="Proteasome" compartment="cytosol" initialAmount="1000" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0000502"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_20" id="ROS" compartment="cytosol" initialAmount="10" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_21" id="SeqAggP" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_22" id="Sink" compartment="cytosol" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_23" id="Source" compartment="cytosol" initialAmount="1" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_24" id="mRFPu" compartment="cytosol" initialAmount="300" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_25" id="mRFPu_Proteasome" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_26" id="p38" compartment="cytosol" initialAmount="100" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_27" id="p38_P" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_28" id="p38death" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_29" id="kPIdeath" value="2.5e-08" constant="true"/>
+      <parameter metaid="metaid_30" id="kactp38" value="5e-06" constant="true"/>
+      <parameter metaid="metaid_31" id="kagg2MisP" value="1e-10" constant="true"/>
+      <parameter metaid="metaid_32" id="kaggMisP" value="1e-11" constant="true"/>
+      <parameter metaid="metaid_33" id="kaggPolyQ" value="5e-08" constant="true"/>
+      <parameter metaid="metaid_34" id="kalive" value="1" constant="false"/>
+      <parameter metaid="metaid_35" id="kbinMisPProt" value="5e-08" constant="true"/>
+      <parameter metaid="metaid_36" id="kbinPolyQ" value="5e-08" constant="true"/>
+      <parameter metaid="metaid_37" id="kbinmRFPu" value="5e-07" constant="true"/>
+      <parameter metaid="metaid_38" id="kdegMisP" value="0.01" constant="true"/>
+      <parameter metaid="metaid_39" id="kdegPolyQ" value="0.0025" constant="true"/>
+      <parameter metaid="metaid_40" id="kdegmRFPu" value="0.005" constant="true"/>
+      <parameter metaid="metaid_41" id="kdisaggMisP1" value="5e-07" constant="true"/>
+      <parameter metaid="metaid_42" id="kdisaggMisP2" value="4e-07" constant="true"/>
+      <parameter metaid="metaid_43" id="kdisaggMisP3" value="3e-07" constant="true"/>
+      <parameter metaid="metaid_44" id="kdisaggMisP4" value="2e-07" constant="true"/>
+      <parameter metaid="metaid_45" id="kdisaggMisP5" value="1e-07" constant="true"/>
+      <parameter metaid="metaid_46" id="kdisaggPolyQ1" value="5e-07" constant="true"/>
+      <parameter metaid="metaid_47" id="kdisaggPolyQ2" value="4e-07" constant="true"/>
+      <parameter metaid="metaid_48" id="kdisaggPolyQ3" value="3e-07" constant="true"/>
+      <parameter metaid="metaid_49" id="kdisaggPolyQ4" value="2e-07" constant="true"/>
+      <parameter metaid="metaid_50" id="kdisaggPolyQ5" value="1e-07" constant="true"/>
+      <parameter metaid="metaid_51" id="kgenROS" value="0.0017" constant="true"/>
+      <parameter metaid="metaid_52" id="kgenROSAggP" value="5e-06" constant="true"/>
+      <parameter metaid="metaid_53" id="kgenROSSeqAggP" value="1e-07" constant="true"/>
+      <parameter metaid="metaid_54" id="kgenROSp38" value="0.0007" constant="true"/>
+      <parameter metaid="metaid_55" id="kinactp38" value="0.002" constant="true"/>
+      <parameter metaid="metaid_56" id="kinhprot" value="5e-09" constant="true"/>
+      <parameter metaid="metaid_57" id="kmisfold" value="2e-06" constant="true"/>
+      <parameter metaid="metaid_58" id="kp38act" value="1" constant="false"/>
+      <parameter metaid="metaid_59" id="kp38death" value="9e-08" constant="true"/>
+      <parameter metaid="metaid_60" id="kproteff" value="1" constant="false"/>
+      <parameter metaid="metaid_61" id="krefold" value="8e-05" constant="true"/>
+      <parameter metaid="metaid_62" id="krelMisPProt" value="1e-08" constant="true"/>
+      <parameter metaid="metaid_63" id="krelPolyQ" value="1e-09" constant="true"/>
+      <parameter metaid="metaid_64" id="krelmRFPu" value="1e-08" constant="true"/>
+      <parameter metaid="metaid_65" id="kremROS" value="0.0002" constant="true"/>
+      <parameter metaid="metaid_66" id="kseqAggPProt" value="5e-07" constant="true"/>
+      <parameter metaid="metaid_67" id="kseqMisP" value="1e-09" constant="true"/>
+      <parameter metaid="metaid_68" id="kseqMisPProt" value="5e-07" constant="true"/>
+      <parameter metaid="metaid_69" id="kseqPolyQ" value="8e-07" constant="true"/>
+      <parameter metaid="metaid_70" id="kseqPolyQProt" value="5e-07" constant="true"/>
+      <parameter metaid="metaid_71" id="kseqmRFPu" value="1e-10" constant="true"/>
+      <parameter metaid="metaid_72" id="kseqmRFPuProt" value="5e-07" constant="true"/>
+      <parameter metaid="metaid_73" id="ksynNatP" value="2.4" constant="true"/>
+      <parameter metaid="metaid_74" id="ksynPolyQ" value="0.007" constant="true"/>
+      <parameter metaid="metaid_75" id="ksynmRFPu" value="0.138" constant="true"/>
+      <parameter metaid="metaid_76" id="oligomers" name="oligomers" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_77" variable="oligomers">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> AggPolyQ1 </ci>
+            <ci> AggPolyQ2 </ci>
+            <ci> AggPolyQ3 </ci>
+            <ci> AggPolyQ4 </ci>
+            <ci> AggPolyQ5 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_81" id="AggP_ProteasomeSequestering" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_78" species="SeqAggP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_79" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_80" species="SeqAggP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kseqAggPProt </ci>
+              <ci> AggP_Proteasome </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_85" id="MisPInclusionGrowth" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_82" species="SeqAggP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_83" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_84" species="SeqAggP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kseqMisP </ci>
+              <ci> MisP </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_88" id="MisP_Aggregation1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_86" species="MisP" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_87" species="AggP1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kaggMisP </ci>
+              <ci> MisP </ci>
+              <apply>
+                <minus/>
+                <ci> MisP </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <cn> 0.5 </cn>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_92" id="MisP_Aggregation2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_89" species="AggP1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_90" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_91" species="AggP2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kagg2MisP </ci>
+              <ci> MisP </ci>
+              <ci> AggP1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_96" id="MisP_Aggregation3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_93" species="AggP2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_94" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_95" species="AggP3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kagg2MisP </ci>
+              <ci> MisP </ci>
+              <ci> AggP2 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_100" id="MisP_Aggregation4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_97" species="AggP3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_98" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_99" species="AggP4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kagg2MisP </ci>
+              <ci> MisP </ci>
+              <ci> AggP3 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_104" id="MisP_Aggregation5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_101" species="AggP4" stoichiometry="1"/>
+          <speciesReference metaid="metaid_102" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_103" species="AggP5" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kagg2MisP </ci>
+              <ci> MisP </ci>
+              <ci> AggP4 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_107" id="MisP_Degradation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_105" species="MisP_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_106" species="Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdegMisP </ci>
+              <ci> MisP_Proteasome </ci>
+              <ci> kalive </ci>
+              <ci> kproteff </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_110" id="MisP_Disaggregation1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_108" species="AggP1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_109" species="MisP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggMisP1 </ci>
+              <ci> AggP1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_114" id="MisP_Disaggregation2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_111" species="AggP2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_112" species="AggP1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_113" species="MisP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggMisP2 </ci>
+              <ci> AggP2 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_118" id="MisP_Disaggregation3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_115" species="AggP3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_116" species="AggP2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_117" species="MisP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggMisP3 </ci>
+              <ci> AggP3 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_122" id="MisP_Disaggregation4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_119" species="AggP4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_120" species="AggP3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_121" species="MisP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggMisP4 </ci>
+              <ci> AggP4 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_126" id="MisP_Disaggregation5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_123" species="AggP5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_124" species="AggP4" stoichiometry="1"/>
+          <speciesReference metaid="metaid_125" species="MisP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggMisP5 </ci>
+              <ci> AggP5 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_130" id="MisP_InclusionFormation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_127" species="AggP5" stoichiometry="1"/>
+          <speciesReference metaid="metaid_128" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_129" species="SeqAggP" stoichiometry="7"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kagg2MisP </ci>
+              <ci> MisP </ci>
+              <ci> AggP5 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_134" id="MisP_ProteasomeBinding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_131" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_132" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_133" species="MisP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kbinMisPProt </ci>
+              <ci> MisP </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_138" id="MisP_ProteasomeRelease" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_135" species="MisP_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_136" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_137" species="MisP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> krelMisPProt </ci>
+              <ci> MisP_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_142" id="MisP_ProteasomeSequestering" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_139" species="SeqAggP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_140" species="MisP_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_141" species="SeqAggP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kseqMisPProt </ci>
+              <ci> MisP_Proteasome </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_147" id="Misfolding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_143" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_144" species="NatP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_145" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_146" species="MisP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kmisfold </ci>
+              <ci> NatP </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_151" id="P38DeathPathway" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_148" species="p38_P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_149" species="p38death" stoichiometry="1"/>
+          <speciesReference metaid="metaid_150" species="p38_P" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kp38death </ci>
+              <ci> p38_P </ci>
+              <ci> kalive </ci>
+              <ci> kp38act </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_155" id="PIDeathPathway" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_152" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_153" species="PIdeath" stoichiometry="1"/>
+          <speciesReference metaid="metaid_154" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kPIdeath </ci>
+              <ci> AggP_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_160" id="PolyQAggregation1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_156" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_157" species="PolyQ" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_158" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_159" species="AggPolyQ1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kaggPolyQ </ci>
+              <ci> PolyQ </ci>
+              <apply>
+                <minus/>
+                <ci> PolyQ </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+              <cn> 0.5 </cn>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> ROS </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <cn type="integer"> 10 </cn>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> ROS </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_166" id="PolyQAggregation2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_161" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_162" species="AggPolyQ1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_163" species="PolyQ" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_164" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_165" species="AggPolyQ2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kaggPolyQ </ci>
+              <ci> PolyQ </ci>
+              <ci> AggPolyQ1 </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> ROS </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <cn type="integer"> 10 </cn>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> ROS </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_172" id="PolyQAggregation3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_167" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_168" species="AggPolyQ2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_169" species="PolyQ" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_170" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_171" species="AggPolyQ3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kaggPolyQ </ci>
+              <ci> PolyQ </ci>
+              <ci> AggPolyQ2 </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> ROS </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <cn type="integer"> 10 </cn>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> ROS </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_178" id="PolyQAggregation4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_173" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_174" species="AggPolyQ3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_175" species="PolyQ" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_176" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_177" species="AggPolyQ4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kaggPolyQ </ci>
+              <ci> PolyQ </ci>
+              <ci> AggPolyQ3 </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> ROS </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <cn type="integer"> 10 </cn>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> ROS </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_184" id="PolyQAggregation5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_179" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_180" species="AggPolyQ4" stoichiometry="1"/>
+          <speciesReference metaid="metaid_181" species="PolyQ" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_182" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_183" species="AggPolyQ5" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kaggPolyQ </ci>
+              <ci> PolyQ </ci>
+              <ci> AggPolyQ4 </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> ROS </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <cn type="integer"> 10 </cn>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> ROS </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_187" id="PolyQDegradation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_185" species="PolyQ_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_186" species="Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdegPolyQ </ci>
+              <ci> PolyQ_Proteasome </ci>
+              <ci> kalive </ci>
+              <ci> kproteff </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_190" id="PolyQDisaggregation1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_188" species="AggPolyQ1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_189" species="PolyQ" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggPolyQ1 </ci>
+              <ci> AggPolyQ1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_194" id="PolyQDisaggregation2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_191" species="AggPolyQ2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_192" species="AggPolyQ1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_193" species="PolyQ" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggPolyQ2 </ci>
+              <ci> AggPolyQ2 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_198" id="PolyQDisaggregation3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_195" species="AggPolyQ3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_196" species="AggPolyQ2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_197" species="PolyQ" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggPolyQ3 </ci>
+              <ci> AggPolyQ3 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_202" id="PolyQDisaggregation4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_199" species="AggPolyQ4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_200" species="AggPolyQ3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_201" species="PolyQ" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggPolyQ4 </ci>
+              <ci> AggPolyQ4 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_206" id="PolyQDisaggregation5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_203" species="AggPolyQ5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_204" species="AggPolyQ4" stoichiometry="1"/>
+          <speciesReference metaid="metaid_205" species="PolyQ" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdisaggPolyQ5 </ci>
+              <ci> AggPolyQ5 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_210" id="PolyQInclusionFormation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_207" species="AggPolyQ5" stoichiometry="1"/>
+          <speciesReference metaid="metaid_208" species="PolyQ" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_209" species="SeqAggP" stoichiometry="7"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kaggPolyQ </ci>
+              <ci> PolyQ </ci>
+              <ci> AggPolyQ5 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_214" id="PolyQInclusionGrowth" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_211" species="SeqAggP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_212" species="PolyQ" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_213" species="SeqAggP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kseqPolyQ </ci>
+              <ci> PolyQ </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_218" id="PolyQ_ProteasomeSequestering" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_215" species="SeqAggP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_216" species="PolyQ_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_217" species="SeqAggP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kseqPolyQProt </ci>
+              <ci> PolyQ_Proteasome </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_222" id="ProteasomeInhibition1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_219" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_220" species="AggPolyQ1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_221" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggPolyQ1 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_226" id="ProteasomeInhibition2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_223" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_224" species="AggPolyQ2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_225" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggPolyQ2 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_230" id="ProteasomeInhibition3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_227" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_228" species="AggPolyQ3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_229" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggPolyQ3 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_234" id="ProteasomeInhibition4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_231" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_232" species="AggPolyQ4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_233" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggPolyQ4 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_238" id="ProteasomeInhibition5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_235" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_236" species="AggPolyQ5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_237" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggPolyQ5 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_242" id="ProteasomeInhibitionAggP1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_239" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_240" species="AggP1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_241" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggP1 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_246" id="ProteasomeInhibitionAggP2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_243" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_244" species="AggP2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_245" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggP2 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_250" id="ProteasomeInhibitionAggP3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_247" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_248" species="AggP3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_249" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggP3 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_254" id="ProteasomeInhibitionAggP4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_251" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_252" species="AggP4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_253" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggP4 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_258" id="ProteasomeInhibitionAggP5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_255" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_256" species="AggP5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_257" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinhprot </ci>
+              <ci> AggP5 </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_261" id="ProteinSynthesis" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_259" species="Source" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_260" species="NatP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ksynNatP </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_265" id="ROSgenerationAggPProteasome" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_262" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_263" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_264" species="AggP_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_268" id="ROSgenerationBasal" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_266" species="Source" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_267" species="ROS" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROS </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_272" id="ROSgenerationSeqAggP" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_269" species="SeqAggP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_270" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_271" species="SeqAggP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSSeqAggP </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_276" id="ROSgenerationSmallAggP1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_273" species="AggP1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_274" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_275" species="AggP1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_280" id="ROSgenerationSmallAggP2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_277" species="AggP2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_278" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_279" species="AggP2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP2 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_284" id="ROSgenerationSmallAggP3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_281" species="AggP3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_282" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_283" species="AggP3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP3 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_288" id="ROSgenerationSmallAggP4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_285" species="AggP4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_286" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_287" species="AggP4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP4 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_292" id="ROSgenerationSmallAggP5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_289" species="AggP5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_290" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_291" species="AggP5" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggP5 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_296" id="ROSgenerationSmallAggPolyQ1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_293" species="AggPolyQ1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_294" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_295" species="AggPolyQ1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggPolyQ1 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_300" id="ROSgenerationSmallAggPolyQ2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_297" species="AggPolyQ2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_298" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_299" species="AggPolyQ2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggPolyQ2 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_304" id="ROSgenerationSmallAggPolyQ3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_301" species="AggPolyQ3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_302" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_303" species="AggPolyQ3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggPolyQ3 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_308" id="ROSgenerationSmallAggPolyQ4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_305" species="AggPolyQ4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_306" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_307" species="AggPolyQ4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggPolyQ4 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_312" id="ROSgenerationSmallAggPolyQ5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_309" species="AggPolyQ5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_310" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_311" species="AggPolyQ5" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSAggP </ci>
+              <ci> AggPolyQ5 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_315" id="ROSremoval" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_313" species="ROS" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_314" species="Sink" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kremROS </ci>
+              <ci> ROS </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_318" id="Refolding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_316" species="MisP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_317" species="NatP" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> krefold </ci>
+              <ci> MisP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_321" id="mRFPuDegradation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_319" species="mRFPu_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_320" species="Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdegmRFPu </ci>
+              <ci> mRFPu_Proteasome </ci>
+              <ci> kalive </ci>
+              <ci> kproteff </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_325" id="mRFPuProteasomeBinding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_322" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_323" species="mRFPu" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_324" species="mRFPu_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kbinmRFPu </ci>
+              <ci> mRFPu </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_329" id="mRFPuProteasomeRelease" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_326" species="mRFPu_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_327" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_328" species="mRFPu" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> krelmRFPu </ci>
+              <ci> mRFPu_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_333" id="mRFPuProteasomeSequestering" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_330" species="SeqAggP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_331" species="mRFPu_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_332" species="SeqAggP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kseqmRFPuProt </ci>
+              <ci> mRFPu_Proteasome </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_337" id="mRFPuSequestering" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_334" species="SeqAggP" stoichiometry="1"/>
+          <speciesReference metaid="metaid_335" species="mRFPu" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_336" species="SeqAggP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kseqmRFPu </ci>
+              <ci> mRFPu </ci>
+              <ci> SeqAggP </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_340" id="mRFPuSynthesis" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_338" species="Source" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_339" species="mRFPu" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ksynmRFPu </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_344" id="p38_P_ROS_Generation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_341" species="p38_P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_342" species="ROS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_343" species="p38_P" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kgenROSp38 </ci>
+              <ci> p38_P </ci>
+              <ci> kp38act </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_349" id="p38activation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_345" species="p38" stoichiometry="1"/>
+          <speciesReference metaid="metaid_346" species="ROS" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_347" species="p38_P" stoichiometry="1"/>
+          <speciesReference metaid="metaid_348" species="ROS" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kactp38 </ci>
+              <ci> ROS </ci>
+              <ci> p38 </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_352" id="p38inactivation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_350" species="p38_P" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_351" species="p38" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kinactp38 </ci>
+              <ci> p38_P </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_355" id="polyQSynthesis" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_353" species="Source" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_354" species="PolyQ" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ksynPolyQ </ci>
+              <ci> Source </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_359" id="polyqProteasomeBinding" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_356" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_357" species="PolyQ" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_358" species="PolyQ_Proteasome" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kbinPolyQ </ci>
+              <ci> PolyQ </ci>
+              <ci> Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_363" id="polyqProteasomeRelease" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_360" species="PolyQ_Proteasome" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_361" species="Proteasome" stoichiometry="1"/>
+          <speciesReference metaid="metaid_362" species="PolyQ" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> krelPolyQ </ci>
+              <ci> PolyQ_Proteasome </ci>
+              <ci> kalive </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event metaid="metaid_364" id="PIcellDeath" useValuesFromTriggerTime="true">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <gt/>
+              <ci> PIdeath </ci>
+              <cn type="integer"> 0 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment metaid="metaid_365" variable="kalive">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event metaid="metaid_366" id="p38cellDeath" useValuesFromTriggerTime="true">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <gt/>
+              <ci> p38death </ci>
+              <cn type="integer"> 0 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment metaid="metaid_367" variable="kalive">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_ribeiro1" initialTime="0" outputStartTime="0" outputEndTime="730" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_ribeiro1" name="ribeiro1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/ribeiro1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Nplus']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha']/@value" newValue="0.125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dN']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p']/@value" newValue="0.00092"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sigma']/@value" newValue="0.032"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model2_ribeiro1" name="ribeiro1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/ribeiro1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']/@initialConcentration" newValue="200.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Nplus']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha']/@value" newValue="0.125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dN']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p']/@value" newValue="0.00092"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sigma']/@value" newValue="0.032"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_ribeiro1" name="ribeiro1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/ribeiro1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']/@initialConcentration" newValue="50.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Nplus']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha']/@value" newValue="0.125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dN']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p']/@value" newValue="0.00092"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sigma']/@value" newValue="0.032"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_ribeiro1" modelReference="model0_ribeiro1" simulationReference="sim0_model0_ribeiro1"/>
+    <task id="task1_model1_ribeiro1" modelReference="model1_ribeiro1" simulationReference="sim0_model0_ribeiro1"/>
+    <task id="task2_model2_ribeiro1" modelReference="model2_ribeiro1" simulationReference="sim0_model0_ribeiro1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task1_model1_ribeiro1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_ribeiro1_ratio">
+      <listOfVariables>
+        <variable id="ratio" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='ratio']" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ratio </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task2_model2_ribeiro1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task2_model2_ribeiro1_ratio">
+      <listOfVariables>
+        <variable id="ratio" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='ratio']" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ratio </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_ribeiro1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_ribeiro1_ratio">
+      <listOfVariables>
+        <variable id="task0_model0_ribeiro1_ratio" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ratio']" taskReference="task0_model0_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_ribeiro1_ratio </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_ratio_datagen0">
+      <listOfVariables>
+        <variable id="task1_model1_ribeiro1_time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_ribeiro1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_ratio_datagen1">
+      <listOfVariables>
+        <variable id="task1_model1_ribeiro1_ratio" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ratio']" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_ribeiro1_ratio </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_ratio_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_ribeiro1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_ribeiro1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_ratio_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_ribeiro1_ratio" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ratio']" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_ribeiro1_ratio </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_ribeiro1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_ribeiro1_NN">
+      <listOfVariables>
+        <variable id="NN" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> NN </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task2_model2_ribeiro1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task2_model2_ribeiro1_NN">
+      <listOfVariables>
+        <variable id="NN" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> NN </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_ribeiro1_NN">
+      <listOfVariables>
+        <variable id="NN" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']" taskReference="task0_model0_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> NN </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_ribeiro1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_NN_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_ribeiro1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_ribeiro1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_NN_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_ribeiro1_NN" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']" taskReference="task2_model2_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_ribeiro1_NN </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_NN_datagen0">
+      <listOfVariables>
+        <variable id="task1_model1_ribeiro1_time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_ribeiro1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_NN_datagen1">
+      <listOfVariables>
+        <variable id="task1_model1_ribeiro1_NN" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NN']" taskReference="task1_model1_ribeiro1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_ribeiro1_NN </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure4_Left_ratio_Nplus_to_N" name="Figure 4 Left">
+      <listOfCurves>
+        <curve id="plot0_ratio" name="N = 10" logX="false" logY="false" xDataReference="task0_model0_ribeiro1_time" yDataReference="task0_model0_ribeiro1_ratio"/>
+        <curve id="plot1_ratio" name="N = 50" logX="false" logY="false" xDataReference="plot1_ratio_datagen0" yDataReference="plot1_ratio_datagen1"/>
+        <curve id="plot2_ratio" name="N = 200" logX="false" logY="false" xDataReference="plot2_ratio_datagen0" yDataReference="plot2_ratio_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure4_Right_N" name="Figure 4 Right">
+      <listOfCurves>
+        <curve id="plot1_NN" name="N = 10" logX="false" logY="false" xDataReference="task0_model0_ribeiro1_time" yDataReference="task0_model0_ribeiro1_NN"/>
+        <curve id="plot3_NN" name="N = 200" logX="false" logY="false" xDataReference="plot3_NN_datagen0" yDataReference="plot3_NN_datagen1"/>
+        <curve id="plot2_NN" name="N = 50" logX="false" logY="false" xDataReference="plot2_NN_datagen0" yDataReference="plot2_NN_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <report id="csv0">
+      <listOfDataSets>
+        <dataSet id="csv0_time" label="time" name="time" dataReference="task0_model0_ribeiro1_time"/>
+        <dataSet id="csv0_ratio" label="ratio" name="ratio" dataReference="task0_model0_ribeiro1_ratio"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv2">
+      <listOfDataSets>
+        <dataSet id="csv2_time" label="time" name="time" dataReference="task2_model2_ribeiro1_time"/>
+        <dataSet id="csv2_ratio" label="ratio" name="ratio" dataReference="task2_model2_ribeiro1_ratio"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv4">
+      <listOfDataSets>
+        <dataSet id="csv4_time" label="time" name="time" dataReference="task1_model1_ribeiro1_time"/>
+        <dataSet id="csv4_NN" label="NN" name="NN" dataReference="task1_model1_ribeiro1_NN"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv1">
+      <listOfDataSets>
+        <dataSet id="csv1_time" label="time" name="time" dataReference="task1_model1_ribeiro1_time"/>
+        <dataSet id="csv1_ratio" label="ratio" name="ratio" dataReference="task1_model1_ribeiro1_ratio"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv3">
+      <listOfDataSets>
+        <dataSet id="csv3_time" label="time" name="time" dataReference="task0_model0_ribeiro1_time"/>
+        <dataSet id="csv3_NN" label="NN" name="NN" dataReference="task0_model0_ribeiro1_NN"/>
+      </listOfDataSets>
+    </report>
+    <report id="csv5">
+      <listOfDataSets>
+        <dataSet id="csv5_time" label="time" name="time" dataReference="task2_model2_ribeiro1_time"/>
+        <dataSet id="csv5_NN" label="NN" name="NN" dataReference="task2_model2_ribeiro1_NN"/>
+      </listOfDataSets>
+    </report>
+  </listOfOutputs>
+</sedML>

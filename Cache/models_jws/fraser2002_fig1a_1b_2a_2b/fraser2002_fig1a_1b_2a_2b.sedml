@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <notes>SEDML's for the models fraser1 and fraser2 on JWS Online.</notes>
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_fraser1" initialTime="0" outputStartTime="0" outputEndTime="50" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_fraser1" source="https://jjj.bio.vu.nl/models/fraser1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a1']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a3']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a2']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x3']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='eta1']" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='eta2']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='eta3']" newValue="5.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='default']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mu']" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='at']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sigma']" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma']" newValue="0.01"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_fraser2" source="https://jjj.bio.vu.nl/models/fraser2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a1']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a3']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a2']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x3']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='eta1']" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='eta2']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='eta3']" newValue="5.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='default']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mu']" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='at']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sigma']" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma']" newValue="0.01"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_fraser1" modelReference="model0_fraser1" simulationReference="sim0_model0_fraser1"/>
+    <task id="task1_model1_fraser2" modelReference="model1_fraser2" simulationReference="sim0_model0_fraser1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="plot0_a1_datagen">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_a1">
+      <listOfVariables>
+        <variable id="a1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a1']" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> a1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_a2_datagen">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_a3">
+      <listOfVariables>
+        <variable id="a3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a3']" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> a3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_x1_datagen">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_x1">
+      <listOfVariables>
+        <variable id="x1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_x2_datagen">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_x3">
+      <listOfVariables>
+        <variable id="x3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x3']" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_fraser2_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_fraser2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_fraser2_a2">
+      <listOfVariables>
+        <variable id="a2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a2']" taskReference="task1_model1_fraser2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> a2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_x2_0">
+      <listOfVariables>
+        <variable id="x2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_fraser2_x2">
+      <listOfVariables>
+        <variable id="x2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']" taskReference="task1_model1_fraser2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_x2_1_datagen_1">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_x2" symbol="urn:sedml:symbol:x2" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_x2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_a2_0">
+      <listOfVariables>
+        <variable id="a2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='a2']" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> a2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_a2_datagen_1">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_a2" symbol="urn:sedml:symbol:a2" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_a2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_x2_1_datagen_0">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fraser1_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_fraser2_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_fraser2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_a2_datagen_0">
+      <listOfVariables>
+        <variable id="task0_model0_fraser1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fraser1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_fraser1_time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="plot0" name="Figure 1A">
+      <listOfCurves>
+        <curve id="plot0_a1" name="uncontrollable replicating antigen" logX="false" logY="true" xDataReference="plot0_a1_datagen" yDataReference="task0_model0_fraser1_a1"/>
+        <curve id="plot0_a2" name="controlled replicating antigen" logX="false" logY="true" xDataReference="plot0_a2_datagen" yDataReference="task0_model0_fraser1_a2_0"/>
+        <curve id="plot0_a3" name="non-replicating antigen" logX="false" logY="true" xDataReference="task0_model0_fraser1_time_0" yDataReference="task0_model0_fraser1_a3"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot1" name="Figure 1B">
+      <listOfCurves>
+        <curve id="plot1_x2" name="controlled replicating antigen" logX="false" logY="true" xDataReference="plot1_x2_datagen" yDataReference="task0_model0_fraser1_x2_0"/>
+        <curve id="plot1_x3" name="uncontrollable replicating antigen" logX="false" logY="true" xDataReference="task0_model0_fraser1_time_1" yDataReference="task0_model0_fraser1_x3"/>
+        <curve id="plot1_x1" name="non-replicating antigen" logX="false" logY="true" xDataReference="plot1_x1_datagen" yDataReference="task0_model0_fraser1_x1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot2" name="Figure 2A">
+      <listOfCurves>
+        <curve id="plot2_a2" name="with antigen clearance" logX="false" logY="true" xDataReference="task1_model1_fraser2_time_0" yDataReference="task1_model1_fraser2_a2"/>
+        <curve id="plot1_a2_2" name="without antigen clearance" logX="false" logY="true" xDataReference="plot1_a2_datagen_0" yDataReference="plot1_a2_datagen_1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot3" name="Figure 2B">
+      <listOfCurves>
+        <curve id="plot3_x2" name="with antigen clearance" logX="false" logY="true" xDataReference="task1_model1_fraser2_time_1" yDataReference="task1_model1_fraser2_x2"/>
+        <curve id="plot3_x2_1" name="without antigen clearance" logX="false" logY="true" xDataReference="plot3_x2_1_datagen_0" yDataReference="plot3_x2_1_datagen_1"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

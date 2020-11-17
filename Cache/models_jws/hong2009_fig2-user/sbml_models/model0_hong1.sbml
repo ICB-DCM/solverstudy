@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" version="3">
+  <model id="hong1" name="hong1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000290" id="system" name="system" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005623"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" sboTerm="SBO:0000252" id="CP" name="Monomer clock proteins (PER)" compartment="system" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O15516"/>
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_2" sboTerm="SBO:0000297" id="CP2" name="Dimer form of clock proteins (PER/PER)" compartment="system" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O15516"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_3" id="M" name="Messenger RNA of the clock proteins (Per mRNA)" compartment="system" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00046"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33699"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_4" sboTerm="SBO:0000296" id="TF" name="Transcription factor (BMAL1/CLK)" compartment="system" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/O00327"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P49759"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_5" id="CPtot" name="Total amount of clock proteins (PER on Fig. 2)" value="0" constant="false"/>
+      <parameter metaid="metaid_6" sboTerm="SBO:0000196" id="Dex" name="Dex" value="0" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:41879"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="metaid_7" id="IC" name="Inactive complex of clock dimers and transcription factor" value="0" constant="false"/>
+      <parameter metaid="metaid_8" id="ICtot" name="TFtot" value="1" constant="true">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Inactive complex of clock dimers and transcription factor: IC=TFtot-TF</p>
+        </notes>
+      </parameter>
+      <parameter metaid="metaid_9" id="IR_pulse_duration" name="IR_pulse_duration" value="2" constant="true"/>
+      <parameter metaid="metaid_10" id="J" name="J" value="0.3" constant="true"/>
+      <parameter metaid="metaid_11" id="Jp" name="Jp" value="0.05" constant="true"/>
+      <parameter metaid="metaid_12" id="TFtot" name="TFtot" value="0.5" constant="false"/>
+      <parameter metaid="metaid_13" id="chk2" name="chk2" value="0" constant="false"/>
+      <parameter metaid="metaid_14" id="chk2ToggleOnOff" name="chk2ToggleOnOff" value="1" constant="false"/>
+      <parameter metaid="metaid_15" id="chk2_value" name="chk2_value" value="0.25" constant="false"/>
+      <parameter metaid="metaid_16" id="chk2c" name="chk2c" value="0" constant="false"/>
+      <parameter metaid="metaid_17" id="chk2c_value" name="chk2c_value" value="0.1" constant="false"/>
+      <parameter metaid="metaid_18" id="chk2pulseactive" name="chk2pulseactive" value="1" constant="true"/>
+      <parameter metaid="metaid_19" id="chk2pulseactive_elim" name="chk2pulseactive_elim" value="1" constant="false"/>
+      <parameter metaid="metaid_20" id="chk2pulseactive_elim_elim" name="chk2pulseactive_elim_elim" value="0" constant="false"/>
+      <parameter metaid="metaid_21" id="chk2pulseonoff" name="chk2pulseonoff" value="0" constant="false"/>
+      <parameter metaid="metaid_22" id="function_1" value="0" constant="false"/>
+      <parameter metaid="metaid_23" id="function_4_r1" value="0" constant="false"/>
+      <parameter metaid="metaid_24" id="function_4_r13" value="0" constant="false"/>
+      <parameter metaid="metaid_25" id="function_4_r17" value="0" constant="false"/>
+      <parameter metaid="metaid_26" id="function_4_r2" value="0" constant="false"/>
+      <parameter metaid="metaid_27" id="function_4_r8" value="0" constant="false"/>
+      <parameter metaid="metaid_28" id="initialValue_CP" value="0.039" constant="false"/>
+      <parameter metaid="metaid_29" id="initialValue_CP2" value="0.088" constant="false"/>
+      <parameter metaid="metaid_30" id="initialValue_M" value="1.35" constant="false"/>
+      <parameter metaid="metaid_31" id="initialValue_TF" value="0.06" constant="false"/>
+      <parameter metaid="metaid_32" id="ka" name="ka" value="100" constant="true"/>
+      <parameter metaid="metaid_33" id="kcp2d" name="kcp2d" value="0.0525" constant="true"/>
+      <parameter metaid="metaid_34" id="kcpd" name="kcpd" value="0.525" constant="true"/>
+      <parameter metaid="metaid_35" id="kcps" name="kcps" value="0.5" constant="true"/>
+      <parameter metaid="metaid_36" id="kd" name="kd" value="0.01" constant="true"/>
+      <parameter metaid="metaid_37" id="kica" name="kica" value="20" constant="true"/>
+      <parameter metaid="metaid_38" id="kicd" name="kicd" value="0.01" constant="true"/>
+      <parameter metaid="metaid_39" id="kmd" name="kmd" value="0.1" constant="true"/>
+      <parameter metaid="metaid_40" id="kms" name="kms" value="1" constant="true"/>
+      <parameter metaid="metaid_41" id="kp1" name="kp1" value="10" constant="true"/>
+      <parameter metaid="metaid_42" id="kp2" name="kp2" value="0.1" constant="true"/>
+      <parameter metaid="metaid_43" id="n" name="n" value="2" constant="true"/>
+      <parameter metaid="metaid_44" id="trigOFFtime" name="trigOFFtime" value="0" constant="false"/>
+      <parameter metaid="metaid_45" id="trigONtime" name="trigONtime" value="4" constant="true"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment metaid="metaid_46" symbol="CP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> initialValue_CP </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_47" symbol="CP2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> initialValue_CP2 </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_48" symbol="M">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> initialValue_M </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_49" symbol="TF">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> initialValue_TF </ci>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfRules>
+      <assignmentRule metaid="metaid_50" variable="IC">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> TFtot </ci>
+            <ci> TF </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_51" variable="function_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> kcps </ci>
+            <ci> M </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_52" variable="function_4_r17">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kp2 </ci>
+                <ci> IC </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> Jp </ci>
+                <ci> CP </ci>
+                <apply>
+                  <times/>
+                  <cn> 2 </cn>
+                  <ci> CP2 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 2 </cn>
+                  <ci> IC </ci>
+                </apply>
+              </apply>
+            </apply>
+            <ci> system </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_53" variable="function_4_r2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kms </ci>
+                <apply>
+                  <power/>
+                  <ci> TF </ci>
+                  <ci> n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> J </ci>
+                  <ci> n </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> TF </ci>
+                  <ci> n </ci>
+                </apply>
+              </apply>
+            </apply>
+            <ci> system </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_54" variable="chk2pulseonoff">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> chk2pulseactive </ci>
+            <apply>
+              <plus/>
+              <ci> chk2pulseactive_elim_elim </ci>
+              <ci> chk2pulseactive_elim </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_55" variable="function_4_r8">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kp1 </ci>
+                <ci> CP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> Jp </ci>
+                <ci> CP </ci>
+                <apply>
+                  <times/>
+                  <cn> 2 </cn>
+                  <ci> CP2 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 2 </cn>
+                  <ci> IC </ci>
+                </apply>
+              </apply>
+            </apply>
+            <ci> system </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_56" variable="function_4_r13">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kp2 </ci>
+                <ci> CP2 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> Jp </ci>
+                <ci> CP </ci>
+                <apply>
+                  <times/>
+                  <cn> 2 </cn>
+                  <ci> CP2 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 2 </cn>
+                  <ci> IC </ci>
+                </apply>
+              </apply>
+            </apply>
+            <ci> system </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_57" variable="function_4_r1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> Dex </ci>
+            <ci> system </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_58" variable="CPtot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> CP </ci>
+            <apply>
+              <times/>
+              <cn> 2 </cn>
+              <ci> CP2 </ci>
+            </apply>
+            <apply>
+              <times/>
+              <cn> 2 </cn>
+              <ci> IC </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_59" variable="trigOFFtime">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> trigONtime </ci>
+            <ci> IR_pulse_duration </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_60" variable="chk2c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> chk2ToggleOnOff </ci>
+            <ci> chk2pulseonoff </ci>
+            <apply>
+              <divide/>
+              <ci> chk2c_value </ci>
+              <ci> IR_pulse_duration </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_61" variable="chk2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> chk2ToggleOnOff </ci>
+            <ci> chk2pulseonoff </ci>
+            <apply>
+              <divide/>
+              <ci> chk2_value </ci>
+              <ci> IR_pulse_duration </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_63" id="r1" name="r1" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_62" species="M" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> function_4_r1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_66" id="r10" name="r10" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_64" species="TF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_65" species="CP2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> kicd </ci>
+              <ci> IC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_68" id="r11" name="r11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_67" species="CP2" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> kcp2d </ci>
+              <ci> CP2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_71" id="r12" name="r12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_69" species="TF" stoichiometry="1"/>
+          <speciesReference metaid="metaid_70" species="CP2" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> kica </ci>
+              <ci> CP2 </ci>
+              <ci> TF </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_74" id="r13" name="r13" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_72" species="CP2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_73" species="CP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> function_4_r13 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_76" id="r14" name="r14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_75" species="CP2" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> chk2 </ci>
+              <ci> CP2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_78" id="r15" name="r15" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_77" species="TF" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> kcp2d </ci>
+              <ci> IC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_80" id="r16" name="r16" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_79" species="TF" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> chk2c </ci>
+              <ci> IC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_84" id="r17" name="r17" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_81" species="TF" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_82" species="CP"/>
+          <modifierSpeciesReference metaid="metaid_83" species="CP2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> function_4_r17 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_87" id="r2" name="r2" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_85" species="M" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_86" species="TF"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> function_4_r2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_89" id="r3" name="r3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_88" species="M" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> kmd </ci>
+              <ci> M </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_92" id="r4" name="r4" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_90" species="CP" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_91" species="M"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> function_1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_94" id="r5" name="r5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_93" species="CP" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> kcpd </ci>
+              <ci> CP </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_97" id="r6" name="r6" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_95" species="CP" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_96" species="CP2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> ka </ci>
+              <apply>
+                <power/>
+                <ci> CP </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_100" id="r7" name="r7" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_98" species="CP2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_99" species="CP" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> kd </ci>
+              <ci> CP2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_103" id="r8" name="r8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_101" species="CP" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_102" species="CP2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> function_4_r8 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_105" id="r9" name="r9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_104" species="CP" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> system </ci>
+              <ci> chk2 </ci>
+              <ci> CP </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event metaid="metaid_106" id="trigON" name="trigON">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <ci> trigONtime </ci>
+            </apply>
+          </math>
+        </trigger>
+        <delay>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </delay>
+        <listOfEventAssignments>
+          <eventAssignment metaid="metaid_107" variable="chk2pulseactive_elim">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event metaid="metaid_108" id="trigOFF" name="trigOFF">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <ci> trigOFFtime </ci>
+            </apply>
+          </math>
+        </trigger>
+        <delay>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </delay>
+        <listOfEventAssignments>
+          <eventAssignment metaid="metaid_109" variable="chk2pulseactive_elim_elim">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 1 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>

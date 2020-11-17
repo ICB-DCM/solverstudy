@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_karin5" initialTime="0" outputStartTime="0" outputEndTime="57600" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_karin5" name="karin5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/karin5/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='g']/@initialConcentration" newValue="4.966667"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='beta']/@initialConcentration" newValue="400.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mbeta']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='tamox']/@initialConcentration" newValue="0.27"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ins']/@initialConcentration" newValue="11.42"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alpha']/@value" newValue="8.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k']/@value" newValue="6.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_karin5" modelReference="model0_karin5" simulationReference="sim0_model0_karin5"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_karin5_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_karin5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin5_g">
+      <listOfVariables>
+        <variable id="g" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='g']" taskReference="task0_model0_karin5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> g </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin5_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_karin5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_karin5_perMutatedBcells">
+      <listOfVariables>
+        <variable id="task0_model0_karin5_perMutatedBcells" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='perMutatedBcells']" taskReference="task0_model0_karin5"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_karin5_perMutatedBcells </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure2C" name="Figure 2C">
+      <listOfCurves>
+        <curve id="plot1_perMutatedBcells" name="% Mutated beta-cells" logX="false" logY="false" xDataReference="task0_model0_karin5_time" yDataReference="task0_model0_karin5_perMutatedBcells"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure2D" name="Figure 2D">
+      <listOfCurves>
+        <curve id="plot0_g" name="Induced GCK mutants" logX="false" logY="false" xDataReference="task0_model0_karin5_time" yDataReference="task0_model0_karin5_g"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>
