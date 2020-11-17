@@ -12,15 +12,17 @@ from util import (
 
 
 # Solver algorithm
-sol_alg = '1'
 non_lin_sol = '2'
 
 # Sub-select files for solver algorithm and non-linear solver
 # And remove (1e-6, 1e-6) tolerance combination
 files = [f for f in os.listdir(DIR_RESULTS_ALGORITHMS)
-         if solalg_from_fname(f) == sol_alg and
+         if (solalg_from_fname(f) in ['1', '2'] and
+         linsol_from_fname(f) in ['1', '9'] and
          nonlinsol_from_fname(f) == non_lin_sol and
-         ((atol_from_fname(f), rtol_from_fname(f)) in ATOL_RTOLS)]
+         ((atol_from_fname(f), rtol_from_fname(f)) in ATOL_RTOLS)) or (
+         solalg_from_fname(f) == '3' and
+         ((atol_from_fname(f), rtol_from_fname(f)) in ATOL_RTOLS))]
 
 # Extract times and numbers of state variables
 times = []
@@ -29,6 +31,28 @@ for f in files:
     df = pd.read_csv(os.path.join(DIR_RESULTS_ALGORITHMS, f), sep='\t')
     times.append(df['median_intern'])
     states.append(df['n_species'])
+
+solver_dct = {
+    11: 'AM, Dense',
+    12: 'BDF, Dense',
+    13: 'AM, KLU',
+    14: 'BDF, KLU',
+    15: 'LSODA'
+}
+
+for i_f, f in enumerate(files):
+    if solalg_from_fname(f) == '1' and linsol_from_fname(f) == '1':
+        files[i_f] = f.replace("linSol_1", "linSol_11")
+    elif solalg_from_fname(f) == '2' and linsol_from_fname(f) == '1':
+        files[i_f] = f.replace("linSol_1", "linSol_12")
+    elif solalg_from_fname(f) == '1' and linsol_from_fname(f) == '9':
+        files[i_f] = f.replace("linSol_9", "linSol_13")
+    elif solalg_from_fname(f) == '2' and linsol_from_fname(f) == '9':
+        files[i_f] = f.replace("linSol_9", "linSol_14")
+    elif solalg_from_fname(f) == '3' and linsol_from_fname(f) == '1':
+        files[i_f] = f.replace("linSol_1", "linSol_15")
+    else:
+        raise ValueError("Unexpected result file")
 
 # Figure object
 fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 5))
@@ -61,14 +85,14 @@ for f, time, state in zip(files, times, states):
     states_for_linsol.setdefault(linsol, []).extend(list(state))
 
 # To numpy
-for linsol in LINSOL_DCT:
+for linsol in solver_dct:
     times_for_linsol[linsol] = np.asarray(times_for_linsol[linsol])
     states_for_linsol[linsol] = np.asarray(states_for_linsol[linsol])
 
 # Linear regression in log10 space (for both variables)
 #  Tuples of slope, intercept, minimum and maximum considered value
 reg_for_linsol = {}
-for linsol in LINSOL_DCT:
+for linsol in solver_dct:
     _states = states_for_linsol[linsol]
     _times = times_for_linsol[linsol]
     nan_mask = ~np.isnan(_states) & ~np.isnan(_times)
@@ -77,18 +101,17 @@ for linsol in LINSOL_DCT:
                          np.log10(_times[nan_mask]))
     reg_for_linsol[linsol] = \
         slope, intercept, min(_states[nan_mask]), max(_states[nan_mask])
-print(reg_for_linsol)
 
 # Colors
-colors_lin_sol = {1: '#d73027', 6: '#fc8d59', 7: '#fee090', 8: '#91bfdb',
-                  9: '#4575b4'}
-colors_lin_sol_arr = [colors_lin_sol[linsol] for linsol in LINSOL_DCT]
+colors_lin_sol = {11: '#d73027', 12: '#fc8d59', 13: '#91bfdb',
+                  14: '#4575b4', 15: '#1B5E20'}
+colors_lin_sol_arr = [colors_lin_sol[linsol] for linsol in solver_dct]
 
 # Plot
-for linsol in LINSOL_DCT:
+for linsol in solver_dct:
     # Value scatter plot
     ax.scatter(states_for_linsol[linsol], times_for_linsol[linsol],
-               # label=LINSOL_DCT[linsol],
+               # label=solver_dct[linsol],
                alpha=alpha, c=colors_lin_sol[linsol], s=marker_size)
     # Regression line (transformed from log10 to linear space)
     grad, intercept, min_state, max_state = reg_for_linsol[linsol]
@@ -96,21 +119,21 @@ for linsol in LINSOL_DCT:
     ax.plot([min_state, max_state],
             10 ** (intercept + grad * np.log10([min_state, max_state])),
             c=colors_lin_sol[linsol],
-            label=f'{LINSOL_DCT[linsol]}: slope = {np.round(grad, 4)}')
+            label=f'{solver_dct[linsol]}: slope = {np.round(grad, 4)}')
 
 # Legend (same for both plots)
 ax.legend(loc=1, fontsize=labelsize - 1, frameon=False)
 
 # Axis bounds
-xmin = min(np.nanmin(states_for_linsol[linsol]) for linsol in LINSOL_DCT)
-xmax = max(np.nanmax(states_for_linsol[linsol]) for linsol in LINSOL_DCT)
+xmin = min(np.nanmin(states_for_linsol[linsol]) for linsol in solver_dct)
+xmax = max(np.nanmax(states_for_linsol[linsol]) for linsol in solver_dct)
 ax.set_xlim([xmin/1.3, xmax*1.3])
-ymin = min(np.nanmin(times_for_linsol[linsol]) for linsol in LINSOL_DCT)
-ymax = max(np.nanmax(times_for_linsol[linsol]) for linsol in LINSOL_DCT)
+ymin = min(np.nanmin(times_for_linsol[linsol]) for linsol in solver_dct)
+ymax = max(np.nanmax(times_for_linsol[linsol]) for linsol in solver_dct)
 ax.set_ylim([ymin * 0.5, ymax*2])
 
 # Plot text 'A'
-ax.text(-0.13, 1, 'A', fontsize=labelsize + 5, transform=ax.transAxes)
+ax.text(-0.13, 1, 'C', fontsize=labelsize + 5, transform=ax.transAxes)
 
 ###############################################################################
 # Box plot of computation times, colored by linear solver, separated by
@@ -138,9 +161,9 @@ for linsol, vals in times_for_linsol_atolrtol.items():
         np.asarray([vals[atolrtol] for atolrtol in ATOL_RTOLS])
 
 n_tol = len(ATOL_RTOLS)
-n_linsol = len(LINSOL_DCT)
+n_linsol = len(solver_dct)
 
-for i_linsol, linsol in enumerate(LINSOL_DCT.keys()):
+for i_linsol, linsol in enumerate(solver_dct.keys()):
     vals = times_for_linsol_atolrtol[linsol]
     # remove nans
     vals = [val[~np.isnan(val)] for val in vals]
@@ -200,14 +223,14 @@ ax.text(-0.07, -0.1, 'Rel. tol.:',  fontsize=labelsize, transform=ax.transAxes,
         verticalalignment='bottom')
 
 # Plot text 'B'
-ax.text(-0.13, 1, 'B', fontsize=labelsize + 5, transform=ax.transAxes)
+ax.text(-0.13, 1, 'D', fontsize=labelsize + 5, transform=ax.transAxes)
 
 # Condense layout
 plt.tight_layout()
 
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
-plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp1.pdf"))
-plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp1.png"))
+plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main_COPASI.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main_COPASI.png"))
 
 #plt.show()

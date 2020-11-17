@@ -1,236 +1,196 @@
-# Supplementary Plot --- Figure S2
-# script to plot Scatter Plot and Box Plot for non-linear solver study
-
-import pandas as pd
 import os
 import numpy as np
+import pandas as pd
+import scipy.stats as stats
 import matplotlib.pyplot as plt
 
-from averageTime import averaging
-from LinearRegression import linearRegression
-from C import DIR_DATA_WHOLESTUDY
+from C import (
+    DIR_RESULTS_ALGORITHMS, NONLINSOL_DCT, ATOL_RTOLS, DIR_FIGURES)
+from util import (
+    solalg_from_fname, nonlinsol_from_fname, linsol_from_fname,
+    atol_from_fname, rtol_from_fname)
 
-left = 0.07
-bottom = 0.1
-width = 0.43
-height = 0.85
-row_factor = 0.47
-column_factor = 0.22
-rotation_factor = 90
 
-ax1 = plt.axes([left, bottom, width, height])
-ax2 = plt.axes([left + row_factor, bottom, width, height])
+solalg = '2'  # AM
+linsol = '9'  # KLU
 
-solAlg = '2'
-LinSol = '9'
+# Sub-select files for solver algorithm and non-linear solver
+# And remove (1e-6, 1e-6) tolerance combination
+files = [f for f in os.listdir(DIR_RESULTS_ALGORITHMS)
+         if solalg_from_fname(f) == solalg and
+         linsol_from_fname(f) == linsol and
+         nonlinsol_from_fname(f) in ['1', '2'] and
+         ((atol_from_fname(f), rtol_from_fname(f)) in ATOL_RTOLS)]
 
-###############################################################################
-# subplot 1: linear regressions of combined scatter plots
+# Extract times and numbers of state variables
+times = []
+states = []
+for f in files:
+    df = pd.read_csv(os.path.join(DIR_RESULTS_ALGORITHMS, f), sep='\t')
+    times.append(df['median_intern'])
+    states.append(df['n_species'])
 
-# list of all 14 data frames for better indexing in the future
-all_intern_columns = [pd.DataFrame(columns=[]) for _ in range(14)]
-column_names = []
-
-base_path = DIR_DATA_WHOLESTUDY
-
-# choose only the correct files
-all_files = sorted(os.listdir(base_path))
-correct_files = []
-for iFile in range(0, len(all_files)):
-    if all_files[iFile].split('_')[0] == solAlg and all_files[iFile].split('_')[2] == LinSol:
-        correct_files.append(all_files[iFile])
-
-# open all .tsv linear solver files + save right column in data frame
-for iCorrectFile in range(0, len(correct_files)):  # each .tsv file
-    next_tsv = pd.read_csv(os.path.join(
-        base_path, correct_files[iCorrectFile]), sep='\t')
-
-    # reset after each iteration
-    next_time_value = []
-    num_x = []
-
-    # open next file
-    next_tsv = averaging(next_tsv)
-
-    # get the correct values
-    for iFile in range(0, len(next_tsv['id'])):
-        if next_tsv['t_intern_ms'][iFile] != 0:
-            next_time_value.append(next_tsv['t_intern_ms'][iFile])
-            num_x.append(next_tsv['state_variables'][iFile])
-
-    # append new column to existing data frame with correct log10 values
-    column_names.append('simulation_time')
-    all_intern_columns[iCorrectFile]['state_variables'] = pd.Series(num_x)
-    all_intern_columns[iCorrectFile]['simulation_time'] = \
-        pd.Series(next_time_value)
-
-# plot scatter plot and linear regressions of all data points for the
-#  accompanying linear solver
+# Figure object
+fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 5))
 fontsize = 12
 labelsize = 8
-alpha = 0.5
+alpha = 0.7
 marker_size = 2
-ax1.set_xscale('log')
-ax1.set_yscale('log')
-ax1.set_xlim([0.8, 2000])
-ax1.set_ylim([0.2, 100000])
-ax1.set_xlabel('Number of state variables', fontsize=fontsize)
-ax1.set_ylabel('Simulation time [ms]', fontsize=fontsize)
-ax1.tick_params(labelsize=labelsize)
-
-linSol_for_Legend = ['Functional', 'Newton-type']
-colors = ['#e66101', '#5e3c99']
-for iLinearSolverDataPoints in range(0, int(len(correct_files)/7)):
-    # concatenate Data Frames in categories of linear solver data points
-    vertically_stacked_tsv = pd.concat(
-        [all_intern_columns[7*iLinearSolverDataPoints],
-         all_intern_columns[7*iLinearSolverDataPoints + 1],
-         all_intern_columns[7*iLinearSolverDataPoints + 2],
-         all_intern_columns[7*iLinearSolverDataPoints + 3],
-         all_intern_columns[7*iLinearSolverDataPoints + 4],
-         all_intern_columns[7*iLinearSolverDataPoints + 5],
-         all_intern_columns[7*iLinearSolverDataPoints + 6]], axis=0)
-    vertically_stacked_tsv = vertically_stacked_tsv.reset_index(drop=True)
-
-    # do a linear regression
-    y_axis_interception, slope = linearRegression(
-        vertically_stacked_tsv, 'state_variables', 'simulation_time')
-
-    # plot a scatter plot + linear regressions
-    num_x = [np.log10(p) for p in vertically_stacked_tsv['state_variables']]
-    data_simulation_time = [
-        np.log10(q) for q in vertically_stacked_tsv['simulation_time']]
-    data_regression = [l[0] for l in [
-        10 ** k for k in [y_axis_interception + j for j in [
-            slope * i for i in num_x]]]]
-    exp_num_x = [10 ** m for m in list(num_x)]
-    exp_simulation_time = [10 ** n for n in list(data_simulation_time)]
-    ax1.scatter(exp_num_x, exp_simulation_time, s=marker_size, alpha=alpha,
-                c=colors[iLinearSolverDataPoints])
-    ax1.plot(exp_num_x, data_regression, c=colors[iLinearSolverDataPoints],
-             label=linSol_for_Legend[iLinearSolverDataPoints] + ': slope = ' +
-             str(np.round(slope[0], 4)))
-
-# plot legend
-ax1.legend(loc=2, fontsize=fontsize - 2, frameon=False)
-
-# make top and right boxlines invisible
-ax1.spines['top'].set_visible(False)
-ax1.spines['right'].set_visible(False)
-
-# plot text 'A'
-ax1.text(-0.13, 1, 'A', fontsize=labelsize + 5, transform=ax1.transAxes)
 
 ###############################################################################
-# subplot 2: box plot over computation times
+# Scatter plot of all data points with color coding and linear regression
+#  by the linear solver
 
-first_set = []
-second_set = []
-third_set = []
-fourth_set = []
-fifth_set = []
-sixth_set = []
-seventh_set = []
-for iDataFrame in range(0, len(all_intern_columns)):
-    if iDataFrame in [0, 7]:
-        first_set.append(list(all_intern_columns[iDataFrame]['simulation_time']))
-    elif iDataFrame in [1, 8]:
-        second_set.append(list(all_intern_columns[iDataFrame]['simulation_time']))
-    elif iDataFrame in [2, 9]:
-        third_set.append(list(all_intern_columns[iDataFrame]['simulation_time']))
-    elif iDataFrame in [3, 10]:
-        fourth_set.append(list(all_intern_columns[iDataFrame]['simulation_time']))
-    elif iDataFrame in [4, 11]:
-        fifth_set.append(list(all_intern_columns[iDataFrame]['simulation_time']))
-    elif iDataFrame in [5, 12]:
-        sixth_set.append(list(all_intern_columns[iDataFrame]['simulation_time']))
-    elif iDataFrame in [6, 13]:
-        seventh_set.append(list(all_intern_columns[iDataFrame]['simulation_time']))
+ax = axes[0]
 
-# get all elements in one list and add empty spaces to enhance clarity
-total_data = first_set + [[]] + second_set + [[]] + third_set + [[]] + \
-             fourth_set + [[]] + fifth_set + [[]] + sixth_set + [[]] + \
-             seventh_set
+# Plot layout
+ax.set_xscale('log')
+ax.set_yscale('log')
+ax.set_xlabel('Number of state variables', fontsize=fontsize)
+ax.set_ylabel('Simulation time [ms]', fontsize=fontsize)
+ax.tick_params(labelsize=labelsize)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
 
-# plot boxplot
-bp = ax2.boxplot(total_data, sym='+', widths=0.5, patch_artist=True,
-                 positions=range(1, 21))
+# Group by linear solver
+times_for_nonlinsol = {}
+states_for_nonlinsol = {}
+for f, time, state in zip(files, times, states):
+    nonlinsol = int(nonlinsol_from_fname(f))
+    times_for_nonlinsol.setdefault(nonlinsol, []).extend(list(time * 1000))
+    states_for_nonlinsol.setdefault(nonlinsol, []).extend(list(state))
 
-# set more options
-ax2.set_yscale('log')
-ax2.spines['top'].set_visible(False)
-ax2.spines['right'].set_visible(False)
-ax2.set_ylim([0.2, 100000])
+# To numpy
+for nonlinsol in NONLINSOL_DCT:
+    times_for_nonlinsol[nonlinsol] = np.asarray(times_for_nonlinsol[nonlinsol])
+    states_for_nonlinsol[nonlinsol] = np.asarray(states_for_nonlinsol[nonlinsol])
 
-# change colour for each set
-color1 = colors[0]
-color2 = colors[1]
+# Linear regression in log10 space (for both variables)
+#  Tuples of slope, intercept, minimum and maximum considered value
+reg_for_nonlinsol = {}
+for nonlinsol in NONLINSOL_DCT:
+    _states = states_for_nonlinsol[nonlinsol]
+    _times = times_for_nonlinsol[nonlinsol]
+    nan_mask = ~np.isnan(_states) & ~np.isnan(_times)
+    slope, intercept, _, _, _ = \
+        stats.linregress(np.log10(_states[nan_mask]),
+                         np.log10(_times[nan_mask]))
+    reg_for_nonlinsol[nonlinsol] = \
+        slope, intercept, min(_states[nan_mask]), max(_states[nan_mask])
 
-colors = [color1, color2, 'white', color1, color2, 'white',
-          color1, color2, 'white', color1, color2, 'white',
-          color1, color2, 'white', color1, color2, 'white',
-          color1, color2]
+# Colors
+colors_nonlinsol = {1: '#e66101', 2: '#5e3c99'}
 
-# for bplot in bp:
-for patch, color in zip(bp['boxes'], colors):
-    patch.set_facecolor(color)
-for whisker in bp['whiskers']:
-    whisker.set(color='#7570b3', linewidth=1)
-for cap in bp['caps']:
-    cap.set(color='#7570b3', linewidth=1)
-for median in bp['medians']:
-    median.set(color='black', linewidth=2)
-for flier in bp['fliers']:
-    flier.set(marker='+', color='#e7298a', alpha=0.5, markersize=3)
+# Plot
+for nonlinsol in NONLINSOL_DCT:
+    # Value scatter plot
+    ax.scatter(states_for_nonlinsol[nonlinsol], times_for_nonlinsol[nonlinsol],
+               # label=solver_dct[nonlinsol],
+               alpha=alpha, c=colors_nonlinsol[nonlinsol], s=marker_size)
+    # Regression line (transformed from log10 to linear space)
+    grad, intercept, min_state, max_state = reg_for_nonlinsol[nonlinsol]
+    uq_states = np.sort(np.unique(states_for_nonlinsol[nonlinsol]))
+    ax.plot([min_state, max_state],
+            10 ** (intercept + grad * np.log10([min_state, max_state])),
+            c=colors_nonlinsol[nonlinsol],
+            label=f'{NONLINSOL_DCT[nonlinsol]}: slope = {np.round(grad, 4)}')
 
-ax2.tick_params(labelsize=labelsize)
-ax2.set_xticklabels([])
-ax2.set_xlim([0, 21])
-specific_xticks = ax2.xaxis.get_major_ticks()
+# Legend (same for both plots)
+ax.legend(loc=0, fontsize=labelsize - 1, frameon=False)
 
-# create major and minor ticklabels
-Abs_xTickLabels = ['', '', r'$10^{-6}$', '', '', r'$10^{-8}$',
-                   '', '', r'$10^{-8}$', '', '', r'$10^{-10}$',
-                   '', '', r'$10^{-12}$', '', '', r'$10^{-14}$',
-                   '', '', r'$10^{-16}$']
-Rel_xTickLabels = ['', '', r'$10^{-8}$', '', '', r'$10^{-6}$',
-                   '', '', r'$10^{-16}$', '', '', r'$10^{-12}$',
-                   '', '', r'$10^{-10}$', '', '', r'$10^{-14}$',
-                   '', '', r'$10^{-8}$']
+# Axis bounds
+xmin = min(np.nanmin(states_for_nonlinsol[nonlinsol]) for nonlinsol in NONLINSOL_DCT)
+xmax = max(np.nanmax(states_for_nonlinsol[nonlinsol]) for nonlinsol in NONLINSOL_DCT)
+ax.set_xlim([xmin/1.3, xmax*1.3])
+ymin = min(np.nanmin(times_for_nonlinsol[nonlinsol]) for nonlinsol in NONLINSOL_DCT)
+ymax = max(np.nanmax(times_for_nonlinsol[nonlinsol]) for nonlinsol in NONLINSOL_DCT)
+ax.set_ylim([ymin * 0.5, ymax*2])
 
-ax2.set_xticks(list(range(21)))
-main_list_1 = [x - 0.5 for x in list(range(21))]
-minor_list_1 = [x - 0.501 for x in list(range(21))]
-ax2.set_xticks(main_list_1, minor=False)
-ax2.set_xticks(minor_list_1, minor=True)
-ax2.set_xticklabels(Abs_xTickLabels, fontsize=labelsize)
-ax2.set_xticklabels(Rel_xTickLabels, minor=True, fontsize=labelsize)
-ax2.tick_params(axis='x', which='major', pad=5)
-ax2.tick_params(axis='x', which='minor', pad=20)
-ax2.text(-0.1, -0.05, 'Abs. tol.: ', fontsize=labelsize,
-         transform=ax2.transAxes)
-ax2.text(-0.1, -0.10, 'Rel. tol.: ', fontsize=labelsize,
-         transform=ax2.transAxes)
-specific_xticks_major = ax2.xaxis.get_major_ticks()
-for iTick in range(1,21):
-    specific_xticks_major[iTick].set_visible(False)
-for iTick in [2, 5, 8, 11, 14, 17, 20]:
-    specific_xticks_major[iTick].set_visible(True)
-specific_xticks_minor = ax2.xaxis.get_minor_ticks()
-for iTick in range(1,21):
-    specific_xticks_minor[iTick].set_visible(False)
-for iTick in [2, 5, 8, 11, 14, 17, 20]:
-    specific_xticks_minor[iTick].set_visible(True)
+# Plot text 'A'
+ax.text(-0.13, 1, 'A', fontsize=labelsize + 5, transform=ax.transAxes)
 
-# plot text 'B'
-ax2.text(-0.13, 1, 'B', fontsize=labelsize + 5, transform=ax2.transAxes)
+###############################################################################
+# Box plot of computation times, colored by linear solver, separated by
+#  tolerances
 
-# better layout
+# Configure axes
+ax = axes[1]
+ax.set_yscale('log')
+ax.tick_params(labelsize=labelsize)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+# Group by tolerances, and then nonlinear solver
+times_for_nonlinsol_atolrtol = {}
+for f, time in zip(files, times):
+    nonlinsol = int(nonlinsol_from_fname(f))
+    atol = atol_from_fname(f)
+    rtol = rtol_from_fname(f)
+    times_for_nonlinsol_atolrtol.setdefault(nonlinsol, {}).\
+        setdefault((atol, rtol), []).extend(list(time*1000))
+
+# To dict of lists
+for nonlinsol, vals in times_for_nonlinsol_atolrtol.items():
+    times_for_nonlinsol_atolrtol[nonlinsol] = \
+        np.asarray([vals[atolrtol] for atolrtol in ATOL_RTOLS])
+
+n_tol = len(ATOL_RTOLS)
+n_nonlinsol = len(NONLINSOL_DCT)
+
+for i_nonlinsol, nonlinsol in enumerate(NONLINSOL_DCT.keys()):
+    vals = times_for_nonlinsol_atolrtol[nonlinsol]
+    # remove nans
+    vals = [val[~np.isnan(val)] for val in vals]
+    # Plot boxplot for the given linear solver
+    bp = ax.boxplot(
+        vals,
+        positions=np.arange(n_tol) + (i_nonlinsol+1) / (n_nonlinsol+1) - 0.5,
+        sym="+", widths=0.1, patch_artist=True)
+    # Prettify plot
+    for patch in bp['boxes']:
+        patch.set_facecolor(colors_nonlinsol[nonlinsol])
+    for whisker in bp['whiskers']:
+        whisker.set(color='#7570b3', linewidth=1)
+    for cap in bp['caps']:
+        cap.set(color='#7570b3', linewidth=1)
+    for median in bp['medians']:
+        median.set(color='black', linewidth=2)
+    for flier in bp['fliers']:
+        flier.set(marker='+', color='#e7298a', alpha=alpha, markersize=3)
+
+# x axis labels
+x_ticks = np.arange(n_tol)
+
+a_labels = [f'$10^{{{tol[0].split("e")[1]}}}$' for tol in ATOL_RTOLS]
+r_labels = [f'$10^{{{tol[1].split("e")[1]}}}$' for tol in ATOL_RTOLS]
+
+# Axis limits
+ax.set_ylim([ymin * 0.5, ymax*2])
+ax.set_xlim([-0.5, n_tol - 0.5])
+
+ax.set_xticks(x_ticks)
+ax.set_xticklabels([])
+for i_tol, (a_label, r_label) in enumerate(zip(a_labels, r_labels)):
+    ax.text((i_tol+0.5) / (n_tol), -0.06, a_label, fontsize=labelsize,
+            transform=ax.transAxes,
+            horizontalalignment='center', verticalalignment='bottom')
+    ax.text((i_tol+0.5) / (n_tol), -0.1, r_label, fontsize=labelsize,
+            transform=ax.transAxes,
+            horizontalalignment='center', verticalalignment='bottom')
+ax.text(-0.07, -0.06, 'Abs. tol.:', fontsize=labelsize, transform=ax.transAxes,
+        verticalalignment='bottom')
+ax.text(-0.07, -0.1, 'Rel. tol.:',  fontsize=labelsize, transform=ax.transAxes,
+        verticalalignment='bottom')
+
+# Plot text 'B'
+ax.text(-0.13, 1, 'B', fontsize=labelsize + 5, transform=ax.transAxes)
+
+# Condense layout
 plt.tight_layout()
 
-# change plotting size
-fig = plt.gcf()
-fig.set_size_inches(18.5, 10.5)
+# Save plot
+os.makedirs(DIR_FIGURES, exist_ok=True)
+plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.png"))
 
-# show figure
-plt.show()
+#plt.show()
