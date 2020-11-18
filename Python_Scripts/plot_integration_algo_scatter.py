@@ -8,32 +8,54 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 
-from averageTime import averaging
-from C import DIR_DATA_WHOLESTUDY
-
-base_path = DIR_DATA_WHOLESTUDY
-Adams_base_path = base_path
-BDF_base_path = base_path
+from C import (
+    DIR_RESULTS_ALGORITHMS, LINSOL_DCT, ATOL_RTOLS, NONLINSOL_DCT, SOLALG_DCT,
+    DIR_FIGURES)
 
 # general plotting settings
-plt.rcParams['figure.figsize'] = [15.0, 7.]
+plt.rcParams['figure.figsize'] = [12.0, 5.5]
 plt.rcParams['figure.dpi'] = 80
-plt.rcParams['savefig.dpi'] = 200
-plt.rcParams['font.size'] = 17
+plt.rcParams['savefig.dpi'] = 300
+plt.rcParams['font.size'] = 16
 
-# open .tsv files
-list_directory_general = sorted(os.listdir(base_path))
-list_directory_adams = []
-list_directory_bdf = []
-for iFile in range(0, int(len(list_directory_general)/2)):
-    adams_split = list_directory_general[iFile].split('_')
-    bdf_split = list_directory_general[iFile + int(
-        len(list_directory_general)/2)].split('_')
-    if adams_split[1] == '2' and adams_split[2] == '9':
-        list_directory_adams.append(list_directory_general[iFile])
-    if bdf_split[1] == '2'and bdf_split[2] == '9':
-        list_directory_bdf.append(list_directory_general[
-            iFile + int(len(list_directory_general)/2)])
+
+# get the data
+data_am = []
+data_bdf = []
+data_lsoda = []
+data_states = []
+for atol, rtol in ATOL_RTOLS:
+    # AM algorithm
+    f_am = f"atol_{atol}__rtol_{rtol}__linSol_9__nonlinSol_2__solAlg_1.tsv"
+    df_am = pd.read_csv(
+        os.path.join(DIR_RESULTS_ALGORITHMS, f_am), sep='\t', index_col=0)
+    df_am.sort_index(inplace=True)
+    data_am.append(df_am['median_intern'].values)
+    # get number of state variables
+    data_states.append(df_am['n_species'].values)
+
+    # BDF algorithm
+    f_bdf = f"atol_{atol}__rtol_{rtol}__linSol_9__nonlinSol_2__solAlg_2.tsv"
+    df_bdf = pd.read_csv(
+        os.path.join(DIR_RESULTS_ALGORITHMS, f_bdf), sep='\t', index_col=0)
+    df_bdf.sort_index(inplace=True)
+    data_bdf.append(df_bdf['median_intern'].values)
+
+    # LSODA algorithm
+    f_lsoda = f"atol_{atol}__rtol_{rtol}__linSol_1__nonlinSol_2__solAlg_3.tsv"
+    df_lsoda = pd.read_csv(
+        os.path.join(DIR_RESULTS_ALGORITHMS, f_lsoda), sep='\t', index_col=0)
+    df_lsoda.sort_index(inplace=True)
+    data_lsoda.append(df_lsoda['median_intern'].values)
+
+data_am = np.array(data_am)
+data_am = data_am.reshape((data_am.size,))
+data_bdf = np.array(data_bdf)
+data_bdf = data_bdf.reshape((data_bdf.size,))
+data_lsoda = np.array(data_lsoda)
+data_lsoda = data_lsoda.reshape((data_lsoda.size,))
+data_states = np.array(data_states)
+data_states = data_states.reshape((data_states.size,))
 
 # create list of doubles for scatter plot
 adams_bdf_x = [] # red
@@ -61,58 +83,45 @@ bdf_zero_y = []
 equal_zero_x = []
 equal_zero_y = []
 
-for iTsvFile in range(0, len(list_directory_adams)):
-    adams_tsv_file = pd.read_csv(os.path.join(
-        Adams_base_path, list_directory_adams[iTsvFile]), sep='\t')
-    bdf_tsv_file = pd.read_csv(os.path.join(
-        BDF_base_path, list_directory_bdf[iTsvFile]), sep='\t')
+for iModel in range(0, len(data_am)):
+    x_adams_data = 1000 * data_am[iModel]
+    y_bdf_data = 1000 * data_bdf[iModel]
+    states_data = data_states[iModel]
 
-    # average from 211 to 167 models
-    adams_tsv_file = averaging(adams_tsv_file)
-    bdf_tsv_file = averaging(bdf_tsv_file)
+    if np.isfinite(x_adams_data) and np.isfinite(y_bdf_data):
+        if x_adams_data > y_bdf_data:
+            bdf_adams_x.append(x_adams_data)
+            bdf_adams_y.append(y_bdf_data)
+            ratio_adams_bdf.append(np.log10(x_adams_data / y_bdf_data))
+            num_states_adams_bdf.append(states_data)
+        elif y_bdf_data > x_adams_data:
+            adams_bdf_x.append(x_adams_data)
+            adams_bdf_y.append(y_bdf_data)
+            ratio_bdf_adams.append(np.log10(x_adams_data / y_bdf_data))
+            num_states_bdf_adams.append(states_data)
+        elif x_adams_data == y_bdf_data:
+            equal_x.append(x_adams_data)
+            equal_y.append(y_bdf_data)
+            ratio_equal.append(np.log10(x_adams_data / y_bdf_data))
+            num_states_equal.append(states_data)
 
-    for iModel in range(0, len(adams_tsv_file['t_intern_ms'])):
-        x_adams_data = adams_tsv_file['t_intern_ms'][iModel]
-        y_bdf_data = bdf_tsv_file['t_intern_ms'][iModel]
-        states_data = adams_tsv_file['state_variables'][iModel]
+    elif (not np.isfinite(x_adams_data)) and np.isfinite(y_bdf_data):
+        adams_zero_x.append(3000)
+        adams_zero_y.append(y_bdf_data)
+        ratio_adams_zero.append(np.log10(400.))
+        num_states_adams_zero.append(states_data)
 
-        if x_adams_data != 0 and y_bdf_data != 0:
-            if x_adams_data > y_bdf_data:
-                bdf_adams_x.append(x_adams_data)
-                bdf_adams_y.append(y_bdf_data)
-                ratio_adams_bdf.append(np.log10(x_adams_data / y_bdf_data))
-                num_states_adams_bdf.append(states_data)
-            elif y_bdf_data > x_adams_data:
-                adams_bdf_x.append(x_adams_data)
-                adams_bdf_y.append(y_bdf_data)
-                ratio_bdf_adams.append(np.log10(x_adams_data / y_bdf_data))
-                num_states_bdf_adams.append(states_data)
-            elif x_adams_data == y_bdf_data:
-                equal_x.append(x_adams_data)
-                equal_y.append(y_bdf_data)
-                ratio_equal.append(np.log10(x_adams_data / y_bdf_data))
-                num_states_equal.append(states_data)
+    elif np.isfinite(x_adams_data) and (not np.isfinite(y_bdf_data)):
+        bdf_zero_x.append(x_adams_data)
+        bdf_zero_y.append(3000)
+        ratio_bdf_zero.append(-np.log10(400.))
+        num_states_bdf_zero.append(states_data)
 
-        elif x_adams_data == 0 and y_bdf_data != 0:
-            adams_zero_x.append(3000)
-            adams_zero_y.append(y_bdf_data)
-            ratio_adams_zero.append(np.log10(400.))
-            num_states_adams_zero.append(states_data)
-
-        elif x_adams_data != 0 and y_bdf_data == 0:
-            bdf_zero_x.append(x_adams_data)
-            bdf_zero_y.append(3000)
-            ratio_bdf_zero.append(-np.log10(400.))
-            num_states_bdf_zero.append(states_data)
-
-        elif x_adams_data == 0 and y_bdf_data == 0:
-            equal_zero_x.append(3000)
-            equal_zero_y.append(3000)
-            ratio_equal_zero.append(np.log10(float('nan')))
-            num_states_equal_zero.append(states_data)
-
-    # display progress
-    print(iTsvFile)
+    elif (not np.isfinite(x_adams_data)) and (not np.isfinite(y_bdf_data)):
+        equal_zero_x.append(3000)
+        equal_zero_y.append(3000)
+        ratio_equal_zero.append(np.log10(float('nan')))
+        num_states_equal_zero.append(states_data)
 
 # print some interesting properties --- look for the biggest/smallest values
 print('adams_bdf_x_smallest: ' + str(sorted(adams_bdf_x)[0]))
@@ -176,13 +185,19 @@ bdf_adams_x, bdf_adams_y, kde_blue = \
 ax = plt.axes([0.08, 0.11, 0.37, 0.84])
 ax2 = plt.axes([0.57, 0.11, 0.40, 0.84])
 z = range(0,3000)
+AM_faster = round(100 * len(adams_bdf_x) / data_am.size, 2)
+BDF_faster = round(100 * len(bdf_adams_x) / data_am.size, 2)
+AM_failed = round(100 * len(adams_zero_x) / data_am.size, 2)
+BDF_failed = round(100 * len(bdf_zero_x) / data_am.size, 2)
+both_failed = round(100 * len(equal_zero_x) / data_am.size, 2)
 plt1 = ax.scatter(
     adams_bdf_x, adams_bdf_y, s=marker_size, c=kde_orange, cmap=cm_1,
-    label='AM faster: ' + str(round(len(adams_bdf_x) / len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %',
+    label=f'AM faster: {AM_faster}%',
     zorder=10, clip_on=False, alpha=alpha)
 plt2 = ax.scatter(
     bdf_adams_x, bdf_adams_y, s=marker_size, c=kde_blue, cmap=cm_2,
-    label='BDF faster: ' + str(round(len(bdf_adams_x) / len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %', zorder=10, clip_on=False, alpha=alpha)
+    label=f'BDF faster: {BDF_faster}%',
+    zorder=10, clip_on=False, alpha=alpha)
 plt3 = ax.scatter(
     equal_x, equal_y, s=marker_size, c='grey', zorder=10, clip_on=False,
     alpha=alpha)
@@ -208,8 +223,8 @@ ax.set_ylabel('BDF simulation time [ms]', fontsize=fontsize)
 # plot legend manually
 ax.plot(0.4, 1750, 'o', fillstyle='full', c='orange', markersize=marker_size)
 ax.plot(0.4, 950, 'o', fillstyle='full', c='blue', markersize=marker_size)
-ax.text(0.6, 1500, 'AM faster: ' + str(round(len(adams_bdf_x) / len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %', fontsize=fontsize)
-ax.text(0.6, 800, 'BDF faster: ' + str(round(len(bdf_adams_x)/len(adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %', fontsize=fontsize)
+ax.text(0.6, 1500, f'AM faster: {AM_faster}%', fontsize=fontsize)
+ax.text(0.6, 800, f'BDF faster: {BDF_faster}%', fontsize=fontsize)
 
 plt.tick_params(labelsize=labelsize)
 ax.spines['top'].set_linestyle(linestyle)
@@ -220,16 +235,13 @@ ax.spines['top'].set_color('grey')
 ax.spines['right'].set_color('grey')
 
 # write text over axis
-ax.text(3500, 25,'only AM failed: ' + str(round(len(adams_zero_x) / len(
-    adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %',
+ax.text(3500, 25, f'only AM failed: {AM_failed}%',
         fontsize=fontsize, rotation=-90, va='center')
-ax.text(25, 3500, 'only BDF failed: ' + str(round(len(bdf_zero_x) / len(
-    adams_tsv_file['t_intern_ms'])*100/len(list_directory_adams), 2)) + ' %',
+ax.text(25, 3500, f'only BDF failed: {BDF_failed}%',
         fontsize=fontsize, ha='center')
 ax.text(5000, 3500, 'Both failed:', fontsize=fontsize,
         ha='center')
-ax.text(8000, 2400, str(round(len(equal_zero_x) / len(adams_tsv_file[
-    't_intern_ms'])*100/len(list_directory_adams), 2)) + ' %',
+ax.text(8000, 2400, f'{both_failed}%',
         fontsize=fontsize, ha='center', va='center')
 
 # plot text 'A'

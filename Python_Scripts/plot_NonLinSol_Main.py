@@ -43,7 +43,7 @@ failures[(2, 3)] += [np.nan for _ in range(
 colors = {
     (1, 1): '#fdb863', (1, 2): '#e66101',
     (2, 1): '#b2abd2', (2, 2): '#5e3c99',
-    (2, 3): '#1B5E20'}
+    (2, 3): '#9e9e9e'}
 
 labels = {
     (1, 1): 'Functional AM', (1, 2): 'Functional BDF',
@@ -94,7 +94,7 @@ ax.text(-3, -10, 'Rel. tol.:',
 
 # Legend
 ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.3),
-          ncol=4, frameon=False, fontsize=fontsize)
+          ncol=5, frameon=False, fontsize=fontsize)
 
 # Decoration
 ax.set_ylabel('Failure rate [%]', fontsize=fontsize)
