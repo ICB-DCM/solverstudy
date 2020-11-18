@@ -27,7 +27,8 @@ for atol in ATOLS_ALL:
             f"atol_{atol}__rtol_{rtol}__linSol_{LINSOL_IDS['KLU']}" \
             f"__nonlinSol_{NONLINSOL_IDS['Newton-type']}" \
             f"__solAlg_{SOLALG_IDS['BDF']}.tsv")
-        df = pd.read_csv(f, sep='\t')
+        # Read in and sort
+        df = pd.read_csv(f, sep='\t', index_col=0).sort_index()
         failure_rate = 100 * sum(df['failure']) / df.shape[0]
         failures[(atol, rtol)] = failure_rate
         times[(atol, rtol)] = np.array(df['median_intern'])
