@@ -131,7 +131,7 @@ for f, time in zip(files, times):
     times_for_linsol_atolrtol.setdefault(linsol, {}).\
         setdefault((atol, rtol), []).extend(list(time*1000))
 
-# To dict of lists
+# To dict of lists, in correct order
 for linsol, vals in times_for_linsol_atolrtol.items():
     times_for_linsol_atolrtol[linsol] = \
         np.asarray([vals[atolrtol] for atolrtol in ATOL_RTOLS])
@@ -200,6 +200,9 @@ ax.text(-0.07, -0.1, 'Rel. tol.:',  fontsize=labelsize, transform=ax.transAxes,
 
 # Plot text 'B'
 ax.text(-0.13, 1, 'B', fontsize=labelsize + 5, transform=ax.transAxes)
+
+###############################################################################
+# Finishing
 
 # Condense layout
 plt.tight_layout()
