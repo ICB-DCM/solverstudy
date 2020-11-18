@@ -209,4 +209,4 @@ os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main.png"))
 
-#plt.show()
+plt.show()

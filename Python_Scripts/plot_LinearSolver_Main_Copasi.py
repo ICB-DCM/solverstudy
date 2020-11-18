@@ -229,8 +229,9 @@ ax.text(-0.13, 1, 'D', fontsize=labelsize + 5, transform=ax.transAxes)
 plt.tight_layout()
 
 # Save plot
+DIR_FIGURES = '../figures'
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main_COPASI.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main_COPASI.png"))
 
-#plt.show()
+plt.show()

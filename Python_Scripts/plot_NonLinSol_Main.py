@@ -29,15 +29,26 @@ for linsol in LINSOL_DCT:
     for key in failures:
         failures[key].append(np.nan)
 
+# add LSODA
+for atol, rtol in ATOL_RTOLS:
+    f = f"atol_{atol}__rtol_{rtol}__linSol_1__nonlinSol_2__solAlg_3.tsv"
+    df = pd.read_csv(os.path.join(DIR_RESULTS_ALGORITHMS, f), sep='\t')
+    failures.setdefault((2, 3), []).append(
+        100 * sum(df['failure']) / df.shape[0])
+failures[(2, 3)] += [np.nan for _ in range(
+    len(failures[(1,1)]) - len(failures[(2,3)]) )]
+
 # Translate to single arrays
 
 colors = {
     (1, 1): '#fdb863', (1, 2): '#e66101',
-    (2, 1): '#b2abd2', (2, 2): '#5e3c99'}
+    (2, 1): '#b2abd2', (2, 2): '#5e3c99',
+    (2, 3): '#1B5E20'}
 
 labels = {
     (1, 1): 'Functional AM', (1, 2): 'Functional BDF',
-    (2, 1): 'Newton AM', (2, 2): 'Newton BDF'}
+    (2, 1): 'Newton AM', (2, 2): 'Newton BDF',
+    (2, 3): 'Newton LSODA',}
 
 xs = np.arange(len(failures[(1, 1)]))
 
