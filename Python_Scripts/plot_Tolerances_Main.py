@@ -1,134 +1,81 @@
-# Main Manuscript Plot --- Figure 4
-# script to create box plot with percentiles and median with failure rates
-
 import os
 import numpy as np
 import pandas as pd
+import scipy.stats as stats
 import matplotlib.pyplot as plt
 
-from averageTime import averaging
-from C import DIR_DATA_TOLERANCES
+from C import (
+    DIR_RESULTS_TOLERANCES, LINSOL_DCT, LINSOL_IDS, NONLINSOL_IDS, SOLALG_IDS,
+    DIR_FIGURES, ATOL_RTOLS_ALL, ATOLS_ALL, RTOLS_ALL)
+from util import (
+    solalg_from_fname, nonlinsol_from_fname, linsol_from_fname,
+    atol_from_fname, rtol_from_fname)
 
-Multistep_Method = 'BDF'
-prefix = '2_'
-
-tolerance_path = os.path.join(DIR_DATA_TOLERANCES, Multistep_Method)
-
-# main .tsv file to norm all other files
-main_tsv = pd.read_csv(os.path.join(
-    tolerance_path, prefix + '06_06.tsv'), sep='\t')
-
-# get new .tsv file
-main_tsv = averaging(main_tsv)
-
-# set two axes objects
-figure = plt.figure()
-ax1 = figure.add_axes([0.11, 0.55, 0.86, 0.4])  # ax = plt.axes()
-ax2 = figure.add_axes([0.11, 0.22, 0.86, 0.28])
-ax3 = figure.add_axes([0.11, 0.15, 0.86, 0.05])
-
-# get list for all data
-xTickLabel = []
-total_data = []
-
-# open all .tsv tolerance files
-tolerance_files_old = sorted(os.listdir(tolerance_path))
-# del tolerance_files[0]
-tolerance_files = []
-for iTolFile in range(0, len(tolerance_files_old)):
-    if len(tolerance_files_old[iTolFile].split(prefix)) > 2:
-        tolerance_files.append(
-            tolerance_files_old[iTolFile].split('_')[1] + '_' +
-            tolerance_files_old[iTolFile].split('_')[2])
-    else:
-        tolerance_files.append(tolerance_files_old[iTolFile].split(prefix)[1])
-
-###############################################################################
-# 1.PART: create Box Plot
-
-all_averaged_files = []
-tolerance_files.insert(6, '')
-tolerance_files.insert(13, '')
-tolerance_files.insert(20, '')
-tolerance_files.insert(27, '')
-tolerance_files.insert(34, '')
-for iTolerance in range(0, len(tolerance_files)):
-
-    # get empty data in there
-    if iTolerance == 6 or iTolerance == 13 or iTolerance == 20 or \
-            iTolerance == 27 or iTolerance == 34:
-        total_data.append([])
-
-    else:
-        # open next .tsv file
-        next_tsv = pd.read_csv(os.path.join(
-            tolerance_path, prefix + tolerance_files[iTolerance]), sep='\t')
-
-        # get new .tsv file
-        next_tsv = averaging(next_tsv)
-        all_averaged_files.append(next_tsv)
-
-        normed_list = []
-        for iFile in range(0, len(main_tsv['id'])):
-            main_intern = main_tsv['t_intern_ms'][iFile]
-            next_intern = next_tsv['t_intern_ms'][iFile]
-
-            # norm all internal + external time by 06_06
-            if main_intern == 0:
-                # quotient = 0
-                quotient = next_intern
-            else:
-                quotient = next_intern / main_intern
-
-            # leave out value iff zero
-            if quotient == 0:
-                'No 0 values allowed!'
-            else:
-                normed_list.append(quotient)
-
-        # add list to total_data
-        total_data.append(normed_list)
-
-# create box_plot
-linestyle = (0, (2, 5, 2, 5))
-linewidth = 0.1
-
+# Figure object
+fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(12, 6))
 fontsize = 12
 labelsize = 8
-titlesize = 30 + 4
+alpha = 0.7
+marker_size = 2
 
-rotation = 45
-ax1.set_yscale('log')
-print(np.shape(total_data))
-bp = ax1.boxplot(total_data, sym='+', widths=0.5, patch_artist=True,
-                 positions=range(1, 42))  # , manage_ticks=True)
+# Get failure rates and simulation times
+failures = {}
+times = {}
+for atol in ATOLS_ALL:
+    for rtol in RTOLS_ALL:
+        f = os.path.join(
+            DIR_RESULTS_TOLERANCES,
+            f"atol_{atol}__rtol_{rtol}__linSol_{LINSOL_IDS['KLU']}" \
+            f"__nonlinSol_{NONLINSOL_IDS['Newton-type']}" \
+            f"__solAlg_{SOLALG_IDS['BDF']}.tsv")
+        df = pd.read_csv(f, sep='\t')
+        failure_rate = 100 * sum(df['failure']) / df.shape[0]
+        failures[(atol, rtol)] = failure_rate
+        times[(atol, rtol)] = np.array(df['median_intern'])
 
-####### set more options
-ax1.spines['top'].set_visible(False)
-ax1.spines['right'].set_visible(False)
-# ax2.spines['top'].set_linestyle(linestyle)
-# ax2.spines['top'].set_linewidth(linewidth)
-# ax2.spines['right'].set_linestyle(linestyle)
-# ax2.spines['right'].set_linewidth(linewidth)
+# Counters, same but whatever
+n_atol = len(ATOLS_ALL)
+n_rtol = len(RTOLS_ALL)
 
-ax1.set_ylim([0.1, 100])
-# change colour for each set
-color1 = '#66c2a5'
-color2 = '#fc8d62'
-color3 = '#8da0cb'
-color4 = '#e78ac3'
-color5 = '#a6d854'
-color6 = '#ffd92f'
+xs = np.arange(n_atol * n_rtol + (n_atol - 1))
 
-colors = [color1, color1, color1, color1, color1, color1, 'white',
-          color2, color2, color2, color2, color2, color2, 'white',
-          color3, color3, color3, color3, color3, color3, 'white',
-          color4, color4, color4, color4, color4, color4, 'white',
-          color5, color5, color5, color5, color5, color5, 'white',
-          color6, color6, color6, color6, color6, color6]
+colors = ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854', '#ffd92f']
 
-# for bplot in bp:
-for patch, color in zip(bp['boxes'], colors):
+# Normalize simulation times by (1e-6, 1e-6)
+ref_tol = ('1e-6', '1e-6')
+for atol in ATOLS_ALL:
+    for rtol in RTOLS_ALL:
+        if (atol, rtol) != ('1e-6', '1e-6'):
+            times[(atol, rtol)] /= times[ref_tol]
+times[ref_tol] /= times[ref_tol]
+
+# Flat arrays
+failures_flat = []
+times_flat = []
+colors_flat = []
+
+for i_atol, atol in enumerate(ATOLS_ALL):
+    for rtol in RTOLS_ALL:
+        failures_flat.append(failures[(atol, rtol)])
+        times_flat.append(times[(atol, rtol)][~np.isnan(times[(atol, rtol)])])
+        colors_flat.append(colors[i_atol])
+    # Empty
+    if i_atol < n_atol - 1:
+        failures_flat.append(np.nan)
+        times_flat.append(np.array([]))
+        colors_flat.append('white')
+
+###############################################################################
+# Figure 1: Simulation times box plot
+
+ax = axes[0]
+
+bp = ax.boxplot(
+    times_flat,
+    positions=xs,
+    widths=0.5, patch_artist=True)
+# Prettify plot
+for patch, color in zip(bp['boxes'], colors_flat):
     patch.set_facecolor(color)
 for whisker in bp['whiskers']:
     whisker.set(color='#7570b3', linewidth=1)
@@ -137,152 +84,67 @@ for cap in bp['caps']:
 for median in bp['medians']:
     median.set(color='black', linewidth=2)
 for flier in bp['fliers']:
-    flier.set(marker='+', color='#e7298a', alpha=0.5, markersize=3)
+    flier.set(marker='+', color='#e7298a', alpha=alpha, markersize=3)
 
-# ax1.set_title('Comparison of percentiles and median', fontsize=titlesize, fontweight='bold')
-ax1.set_ylabel('Relative simulation time', fontsize=fontsize)
-ax1.tick_params(labelsize=labelsize)
-ax1.set_xticklabels([])
-ax1.set_xlim([0, 42])
-specific_xticks = ax1.xaxis.get_major_ticks()
-for iTick in [0, 7, 14, 21, 28, 35]:
-    specific_xticks[iTick].set_visible(False)
-
-# add grit
-ax1.yaxis.grid(True, linestyle='-', which='both', color='lightgrey',
-               alpha=0.25)
+ax.set_ylabel("Relative simulation time")
+ax.set_yscale('log')
+ax.tick_params(labelsize=labelsize)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ticks = xs[~np.isnan(failures_flat)]
+ax.set_xticks(ticks)
+ax.set_xticklabels([])
+ax.set_xlim([-1, len(failures_flat)])
+ax.yaxis.grid(True, linestyle='-', which='both', color='lightgrey', alpha=0.25)
 
 # plot text 'A'
-ax1.text(-0.12, 1, 'A', fontsize=fontsize + 3, transform=ax1.transAxes)
+ax.text(-0.05, 1, 'A', fontsize=fontsize + 3, transform=ax.transAxes)
 
 ###############################################################################
-# 2.PART: add bar plot with failure rate
+# Figure 2: Failure rates bar plot
 
-fontsize = 12
-labelsize = 8
-titlesize = 30
+ax = axes[1]
 
-all_percentages = []
-counter = 0
-for iTolerance in range(0, len(all_averaged_files) + 5):
-    if iTolerance in [6, 13, 20, 27, 34]:
-        all_percentages.append(0)
-        counter += 1
-        continue
+ax.bar(x=xs, height=failures_flat, color=colors_flat, width=0.5,
+       edgecolor='black')
 
-    # get new .tsv file
-    next_tsv = all_averaged_files[iTolerance - counter]
-    # next_tsv = averaging(next_tsv)
+ax.set_ylabel("Failure rate [%]")
+#ax.set_yscale('log')
+ax.tick_params(labelsize=labelsize)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.set_xticks(ticks)
+ax.set_xticklabels([])
+ax.set_xlim([-1, len(failures_flat)])
+ax.yaxis.grid(True, linestyle='-', which='both', color='lightgrey', alpha=0.25)
 
-    # store non-zero and zero values
-    non_zero_value_counter = 0
-    zero_value_counter = 0
-    for iFile in range(0, len(next_tsv['id'])):
-        next_intern = next_tsv['t_intern_ms'][iFile]
-        if next_intern == 0:
-            zero_value_counter += 1
-        else:
-            non_zero_value_counter += 1
+# x labels
+a_labels = [f'$10^{{{tol.split("e")[1]}}}$' for tol in ATOLS_ALL]
+r_labels = [f'$10^{{{tol.split("e")[1]}}}$' for tol in RTOLS_ALL]
 
-    # store percentage
-    all_percentages.append(
-        100 - round(non_zero_value_counter / (
-            non_zero_value_counter + zero_value_counter) * 100, 4))
-print(np.shape(all_percentages))
-
-# create bar plot
-# colors to use:  '#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854'
-plot_barplot_top = ax2.bar(
-    x=list(range(0, 41)), height=all_percentages, width=0.5,
-    edgecolor='black', color=colors)
-plot_barplot_bottom = ax3.bar(
-    x=list(range(0, 41)), height=all_percentages, width=0.5, edgecolor='black',
-    color=colors)
-
-# need linear plot to display 0% with cut after 40% and jump to 70%
-ax2.set_ylim([0.1, 100])
-ax3.set_ylim([0, 0.09])
-
-# hide the spines between ax2 and ax3
-ax2.spines['bottom'].set_visible(False)
-ax3.spines['top'].set_visible(False)
-ax3.xaxis.tick_bottom()
-ax2.set_xticks([])
-ax2.set_xticklabels([])
-ax2.spines['top'].set_visible(False)
-ax2.spines['right'].set_visible(False)
-ax3.spines['right'].set_visible(False)
-ax2.set_yscale('log')
-ax3.set_yscale('linear')
-ax2.set_xlim([-1, 41])
-ax3.set_xlim([-1, 41])
-ax3.set_yticklabels(['0'])
-ax3.set_yticks([0])
-ax2.tick_params(labelsize=labelsize)
-ax3.tick_params(labelsize=labelsize)
-plt.text(-0.07, -0.12, 'Failure rate [%]', fontsize=fontsize, rotation=90,
-         transform=ax2.transAxes)
-
-# add cut-lines
-d = 0.007  # how big to make the diagonal lines in axes coordinates
-kwargs = dict(transform=ax2.transAxes, color='k', clip_on=False)
-ax2.plot((-d, +d), (d, d), **kwargs)  # top-left line
-kwargs.update(transform=ax3.transAxes, color='k', clip_on=False)
-ax3.plot((-d, +d), (1, 1), **kwargs)  # bottom-left line
-
-# add grit
-ax2.yaxis.grid(True, linestyle='-', which='both', color='lightgrey',
-               alpha=0.25)
-ax3.yaxis.grid(True, linestyle='-', which='both', color='lightgrey',
-               alpha=0.25)
-
-# create major and minor ticklabels
-# ax2.minorticks_on()
-Abs_xTickLabels = [r'$10^{-6}$', '', '', '', '', '', '',
-                   r'$10^{-8}$', '', '', '', '', '', '',
-                   r'$10^{-10}$', '', '', '', '', '', '',
-                   r'$10^{-12}$', '', '', '', '', '', '',
-                   r'$10^{-14}$', '', '', '', '', '', '',
-                   r'$10^{-16}$']
-Rel_xTckLabels = [
-    r'$10^{-6}$', r'$10^{-8}$', r'$10^{-10}$', r'$10^{-12}$', r'$10^{-14}$', r'$10^{-16}$', '',
-    r'$10^{-6}$', r'$10^{-8}$', r'$10^{-10}$', r'$10^{-12}$', r'$10^{-14}$', r'$10^{-16}$', '',
-    r'$10^{-6}$', r'$10^{-8}$', r'$10^{-10}$', r'$10^{-12}$', r'$10^{-14}$', r'$10^{-16}$', '',
-    r'$10^{-6}$', r'$10^{-8}$', r'$10^{-10}$', r'$10^{-12}$', r'$10^{-14}$', r'$10^{-16}$', '',
-    r'$10^{-6}$', r'$10^{-8}$', r'$10^{-10}$', r'$10^{-12}$', r'$10^{-14}$', r'$10^{-16}$', '',
-    r'$10^{-6}$', r'$10^{-8}$', r'$10^{-10}$', r'$10^{-12}$', r'$10^{-14}$', r'$10^{-16}$']
-
-ax1.set_xticks(list(range(42)))
-ax1.set_yscale('log')
-ax3.set_xticks(list(range(42)))
-minor_list_1 = [x + 0.001 for x in list(range(42))]
-ax3.set_xticks(minor_list_1, minor=True)
-ax3.set_xticklabels(Abs_xTickLabels, fontsize=labelsize, rotation=rotation)
-ax3.set_xticklabels(Rel_xTckLabels, minor=True, fontsize=labelsize,
-                    rotation=rotation)
-ax3.tick_params(axis='x', which='major', pad=6)
-ax3.tick_params(axis='x', which='minor', pad=26)
-ax3.text(-0.1, -1.5, 'Abs. tol.: ', fontsize=fontsize, transform=ax3.transAxes)
-ax3.text(-0.1, -2.5, 'Rel. tol.: ', fontsize=fontsize, transform=ax3.transAxes)
-specific_xticks_major = ax3.xaxis.get_major_ticks()
-for iTick in [6, 13, 20, 27, 34, 41]:
-    specific_xticks_major[iTick].set_visible(False)
-specific_xticks_minor = ax3.xaxis.get_minor_ticks()
-for iTick in [6, 13, 20, 27, 34, 41]:
-    specific_xticks_minor[iTick].set_visible(False)
+for i_atol, atol in enumerate(ATOLS_ALL):
+    for i_rtol, rtol in enumerate(RTOLS_ALL):
+        if i_rtol == 0:
+            ax.text(i_atol*(n_atol+1), -15, a_labels[i_atol], fontsize=labelsize,
+                    transform=ax.transData, rotation=45,
+                    horizontalalignment='center', verticalalignment='bottom')
+        ax.text(i_atol*(n_atol+1) + i_rtol, -25, r_labels[i_rtol], fontsize=labelsize,
+                transform=ax.transData, rotation=45,
+                horizontalalignment='center', verticalalignment='bottom')
+ax.text(-3, -15, 'Abs. tol.:', fontsize=labelsize+1, transform=ax.transData,
+        verticalalignment='bottom')
+ax.text(-3, -25, 'Rel. tol.:',  fontsize=labelsize+1, transform=ax.transData,
+        verticalalignment='bottom')
 
 # plot text 'B'
-ax2.text(-0.12, 1, 'B', fontsize=fontsize + 3, transform=ax2.transAxes)
+ax.text(-0.05, 1, 'B', fontsize=fontsize + 3, transform=ax.transAxes)
 
-## better layout
+# Condense layout
 plt.tight_layout()
 
-# change plotting size
-fig = plt.gcf()
-fig.set_size_inches(18.5, 10.5)
+# Save plot
+os.makedirs(DIR_FIGURES, exist_ok=True)
+plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.png"))
 
-# save figure
-# plt.savefig('../paper_SolverSettings/Figures/Study_2/Tolerances_BoxPlot_BarPlot_' + Multistep_Method + '.pdf')
-
-# show figure
-plt.show()
+#plt.show()

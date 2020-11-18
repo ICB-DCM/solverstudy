@@ -119,6 +119,7 @@ class SIMCONFIG(enum.Enum):
     FAILURE = 'failure_study'
     TRAJECTORY = 'trajectory_comparison'
 
+
 # repetitions for simulation when measuring cpu times, to have a robust result
 repetitions_for_cpu_time_study = 25
 
@@ -126,12 +127,25 @@ repetitions_for_cpu_time_study = 25
 ###############################################################################
 # Algorithm shorthands and labels
 
+# Mappings index -> string
 LINSOL_DCT = {1: 'Dense', 6: 'GMRES', 7: 'BiCGStab', 8: 'SPTFQMR', 9: 'KLU'}
 NONLINSOL_DCT = {1: 'Functional', 2: 'Newton-type'}
 SOLALG_DCT = {1: 'Adams', 2: 'BDF'}
 ATOL_RTOLS = (
     ('1e-8', '1e-6'), ('1e-6', '1e-8'), ('1e-12', '1e-10'), ('1e-10', '1e-12'),
     ('1e-16', '1e-8'), ('1e-8', '1e-16'), ('1e-14', '1e-14'))
+# All tolerance combinations used in the tolerances study
+ATOLS_ALL = ('1e-6', '1e-8', '1e-10', '1e-12', '1e-14', '1e-16')
+RTOLS_ALL = ('1e-6', '1e-8', '1e-10', '1e-12', '1e-14', '1e-16')
+ATOL_RTOLS_ALL = [
+    (atol, rtol)
+    for atol in ATOLS_ALL
+    for rtol in RTOLS_ALL]
+
+# Inverting the mapping, string -> index
+LINSOL_IDS = {id: ix for ix, id in LINSOL_DCT.items()}
+NONLINSOL_IDS = {id: ix for ix, id in NONLINSOL_DCT.items()}
+SOLALG_IDS = {id: ix for ix, id in SOLALG_DCT.items()}
 
 
 ###############################################################################
