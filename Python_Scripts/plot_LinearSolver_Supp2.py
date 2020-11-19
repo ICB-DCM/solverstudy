@@ -47,7 +47,7 @@ for atol, rtol in ATOL_RTOLS:
 
 # Colors
 colors = {1: '#d73027', 6: '#fc8d59', 7: '#fee090', 8: '#91bfdb', 9: '#4575b4',
-          42: '#9e9e9e'}
+          42: '#838282'}
 
 # Tolerance labels
 tol_labels = [(f'$10^{{{atol.split("e")[1]}}}$',

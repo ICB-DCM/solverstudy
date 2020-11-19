@@ -43,7 +43,7 @@ failures[(2, 3)] += [np.nan for _ in range(
 colors = {
     (1, 1): '#fdb863', (1, 2): '#e66101',
     (2, 1): '#b2abd2', (2, 2): '#5e3c99',
-    (2, 3): '#9e9e9e'}
+    (2, 3): '#838282'}
 
 labels = {
     (1, 1): 'Functional AM', (1, 2): 'Functional BDF',

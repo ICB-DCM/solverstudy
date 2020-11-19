@@ -297,7 +297,7 @@ for linsol in solver_dct:
 
 # Colors
 colors_lin_sol = {11: '#fc8d59', 12: '#d73027', 13: '#91bfdb',
-                  14: '#4575b4', 15: '#9e9e9e'}
+                  14: '#4575b4', 15: '#838282'}
 colors_lin_sol_arr = [colors_lin_sol[linsol] for linsol in solver_dct]
 
 # Plot
