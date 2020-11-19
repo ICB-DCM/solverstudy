@@ -1,196 +1,113 @@
-# Supplementary Plot --- Figure S5
-# script to plot a histogram for all tolerance settings with success rates
-
 import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from averageTime import averaging
-from C import DIR_DATA_TOLERANCES
+from C import (
+    DIR_RESULTS_TOLERANCES, LINSOL_IDS, NONLINSOL_IDS, SOLALG_IDS,
+    DIR_FIGURES, ATOLS_ALL, RTOLS_ALL)
 
-tolerance_path = os.path.join(DIR_DATA_TOLERANCES, 'BDF')
+n_atol = len(ATOLS_ALL)
+n_rtol = len(RTOLS_ALL)
 
-# main .tsv file to norm all other files
-main_tsv = pd.read_csv(os.path.join(
-    tolerance_path, '2_06_06.tsv'), sep='\t')
+# Figure object
+fig, axes = plt.subplots(nrows=n_atol, ncols=n_rtol, figsize=(14, 12))
+fontsize = 12
+labelsize = 8
+alpha = 0.7
+marker_size = 2
 
-# plot as histogram
-fontsize = 17
-labelsize = 14
-titlesize = 30
-left = 0.065
-bottom = 0.8
-width = 0.135
-height = 0.127
-row_factor = 0.155
-column_factor = 0.142
-rotation_factor = 90
-ylim = [0.7, 200]
-xlim = [-1, 2]
-bins = 40
+# Get failure rates and simulation times
+failures = {}
+times = {}
+for atol in ATOLS_ALL:
+    for rtol in RTOLS_ALL:
+        f = os.path.join(
+            DIR_RESULTS_TOLERANCES,
+            f"atol_{atol}__rtol_{rtol}__linSol_{LINSOL_IDS['KLU']}" \
+            f"__nonlinSol_{NONLINSOL_IDS['Newton-type']}" \
+            f"__solAlg_{SOLALG_IDS['BDF']}.tsv")
+        # Read in and sort
+        df = pd.read_csv(f, sep='\t', index_col=0).sort_index()
+        failure_rate = 100 * sum(df['failure']) / df.shape[0]
+        failures[(atol, rtol)] = failure_rate
+        times[(atol, rtol)] = np.array(df['median_intern'])
 
-# get new .tsv file
-main_tsv = averaging(main_tsv)
+# Normalize simulation times by (1e-6, 1e-6)
+ref_tol = ('1e-6', '1e-6')
+for atol in ATOLS_ALL:
+    for rtol in RTOLS_ALL:
+        if (atol, rtol) != ('1e-6', '1e-6'):
+            times[(atol, rtol)] /= times[ref_tol]
+times[ref_tol] /= times[ref_tol]
 
-# open all .tsv tolerance files
-tolerance_files = sorted(os.listdir(tolerance_path))
-for iTolerance in range(0, len(tolerance_files)):
-    next_tsv = pd.read_csv(os.path.join(
-        tolerance_path, tolerance_files[iTolerance]), sep='\t')
+# Log-scale
+#times = {(atol, rtol): np.log10(times[(atol, rtol)])
+#         for rtol in RTOLS_ALL for atol in ATOLS_ALL}
 
-    # get new .tsv file
-    next_tsv = averaging(next_tsv)
+# x bounds
+xmin = min(np.nanmin(times[(atol, rtol)])
+           for rtol in RTOLS_ALL for atol in ATOLS_ALL)
+xmax = max(np.nanmax(times[(atol, rtol)])
+           for rtol in RTOLS_ALL for atol in ATOLS_ALL)
+# For same-width bins on log-scale
+#bins = np.linspace(xmin, xmax, num=20)
+bins = np.logspace(np.log10(xmin), np.log10(xmax), num=20, base=10)
 
-    zero_values_counter = 0
-    main_intern_is_0_counter = 0
-    normed_list = []
-    for iFile in range(0, len(main_tsv['id'])):
-        main_intern = main_tsv['t_intern_ms'][iFile]
-        next_intern = next_tsv['t_intern_ms'][iFile]
+a_labels = [f'$10^{{{tol.split("e")[1]}}}$' for tol in ATOLS_ALL]
+r_labels = [f'$10^{{{tol.split("e")[1]}}}$' for tol in RTOLS_ALL]
 
-        # norm all internal + external time by 06_06
-        if main_intern == 0:
-            quotient = 0
+for i_atol, atol in enumerate(ATOLS_ALL):
+    for i_rtol, rtol in enumerate(RTOLS_ALL):
+        # Note: the the first coordinate is y, the second coordinate is x
+        ax = axes[i_atol, i_rtol]
+
+        # Histogram
+        ax.hist(times[(atol, rtol)], bins=bins)
+
+        # Failure rate
+        ax.text(0.9, 0.9, f"{failures[(atol, rtol)]:.1f}%",
+                ha='right', va='top', transform=ax.transAxes)
+
+        # Axes decorations
+        ax.set_xlim([xmin, xmax])
+        ax.set_xscale('log')
+        ax.set_yscale('log')
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        if i_rtol > 0:
+            ax.set_yticks([])
         else:
-            quotient = next_intern / main_intern
+            ax.set_ylabel(a_labels[i_atol])
+        if i_atol < n_atol - 1:
+            ax.set_xticks([])
+        if i_atol == 0:
+            ax.set_xlabel(r_labels[i_rtol])
+            ax.xaxis.set_label_position('top')
 
-        # leave out value if zero but only count for the success rate if next_intern = 0
-        if next_intern == 0:
-            zero_values_counter += 1
-            'No 0 values allowed!'
-        elif main_intern == 0:
-            main_intern_is_0_counter += 1
-            continue
-        else:
-            normed_list.append(np.log10(quotient))
+# Get extreme y bounds, ignoring 1e-6, 1e-6 for max
+ymin = min(ax.get_ylim()[0] for ax in axes.flatten())
+ymax = max(ax.get_ylim()[1] for ax in axes.flatten()[1:])
 
-    # for xlim control
-    if sorted(normed_list, reverse=True)[0] > 10:
-        print('Need bigger xlim: ' +
-              str(sorted(normed_list, reverse=True)[0]) + ' ; ' +
-              main_tsv['id'][iFile] + ' ; ' + tolerance_files[iTolerance])
+# Apply maximum to all
+for ax in axes.flatten():
+    ax.set_ylim([ymin, ymax])
 
-    # get absolute and relative tolerance number
-    _, abs_tol, rest = tolerance_files[iTolerance].split('_')
-    rel_tol = rest.split('.')[0]
-    if abs_tol[0] == '0':
-        abs_tol = abs_tol[1]
-    if rel_tol[0] == '0':
-        rel_tol = rel_tol[1]
+# Labels
+fig.text(0.5, 0.01, "Relative simulation time", ha='center', va='center',
+         fontsize=fontsize)
+fig.text(0.01, 0.5, "Number of models", ha='center', va='center',
+         rotation='vertical', fontsize=fontsize)
 
-    # create axes
-    if iTolerance in range(0,6):
-        ax1 = plt.axes([left + iTolerance * row_factor, bottom, width, height])
-        ax1.set_xlim(xlim)
-        ax1.set_ylim(ylim)
-        ax1.tick_params(labelbottom=False)
-        if iTolerance == 0:
-            ax1.text(-0.25, 0.5, r'$10^{-' + str(abs_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes,
-                     rotation=rotation_factor)
-            ax1.text(0.5, 1.1, r'$10^{-' + str(rel_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes)
-        if iTolerance in range(1,6):
-            ax1.tick_params(labelleft=False)
-            ax1.text(0.5, 1.1, r'$10^{-' + str(rel_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes)
-    elif iTolerance in range(6,12):
-        ax1 = plt.axes([left + (iTolerance - 6) * row_factor,
-                        bottom - 1 * column_factor ,width, height])
-        ax1.set_xlim(xlim)
-        ax1.set_ylim(ylim)
-        ax1.tick_params(labelbottom=False)
-        if iTolerance == 6:
-            ax1.text(-0.25, 0.5, r'$10^{-' + str(abs_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes,
-                     rotation=rotation_factor)
-        if iTolerance in range(7,12):
-            ax1.tick_params(labelleft=False)
-    elif iTolerance in range(12,18):
-        ax1 = plt.axes([left + (iTolerance - 12) * row_factor,
-                        bottom - 2 * column_factor , width, height])
-        ax1.set_xlim(xlim)
-        ax1.set_ylim(ylim)
-        ax1.tick_params(labelbottom=False)
-        if iTolerance == 12:
-            ax1.text(-0.25, 0.5, r'$10^{-' + str(abs_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes,
-                     rotation=rotation_factor)
-        if iTolerance in range(13,18):
-            ax1.tick_params(labelleft=False)
-    elif iTolerance in range(18, 24):
-        ax1 = plt.axes([left + (iTolerance - 18) * row_factor,
-                        bottom - 3 * column_factor , width, height])
-        ax1.set_xlim(xlim)
-        ax1.set_ylim(ylim)
-        ax1.tick_params(labelbottom=False)
-        if iTolerance == 18:
-            ax1.text(-0.25, 0.5, r'$10^{-' + str(abs_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes,
-                     rotation=rotation_factor)
-        if iTolerance in range(19,24):
-            ax1.tick_params(labelleft=False)
-    elif iTolerance in range(24,30):
-        ax1 = plt.axes([left + (iTolerance - 24) * row_factor,
-                        bottom - 4 * column_factor , width, height])
-        ax1.set_xlim(xlim)
-        ax1.set_ylim(ylim)
-        ax1.tick_params(labelbottom=False)
-        if iTolerance == 24:
-            ax1.text(-0.25, 0.5, r'$10^{-' + str(abs_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes,
-                     rotation=rotation_factor)
-        if iTolerance in range(25,30):
-            ax1.tick_params(labelleft=False)
-    elif iTolerance in range(30,36):
-        ax1 = plt.axes([left + (iTolerance - 30) * row_factor,
-                        bottom - 5 * column_factor , width, height])
-        ax1.set_xlim(xlim)
-        ax1.set_ylim(ylim)
-        if iTolerance == 30:
-            ax1.text(-0.25, 0.5, r'$10^{-' + str(abs_tol) + '}$',
-                     fontsize=fontsize, transform=ax1.transAxes,
-                     rotation=rotation_factor)
-        if iTolerance in range(31,36):
-            ax1.tick_params(labelleft=False)
+fig.text(0.5, 0.97, "Rel. tol.", ha='center', va='center')
+fig.text(0.03, 0.5, "Abs. tol.", rotation='vertical', ha='center', va='center')
 
-    ax1.set_yscale('log')
-    ax1.set_xticklabels([r'$10^{-1}$', r'$10^{0}$', r'$10^{1}$', r'$10^{2}$'])
-    ax1.tick_params(labelsize=labelsize)
-    if iTolerance == 0:
-        plot_histogram = ax1.hist(x=normed_list, range=None, bins=bins,
-                                  log=False)
-    else:
-        plot_histogram = ax1.hist(x=normed_list, range=None, bins=bins,
-                                  log=False)
-    plt.text(x=1, y=90, s=str(round(100 - (
-        len(normed_list) + main_intern_is_0_counter) / (
-        len(normed_list) +
-        zero_values_counter + main_intern_is_0_counter) * 100, 2)) +
-        ' %', fontsize=fontsize)
+# Condense layout
+plt.tight_layout(rect=[0.03, 0.03, 0.97, 0.97])
 
-    # make top and right boxlines invisible
-    ax1.spines['top'].set_visible(False)
-    ax1.spines['right'].set_visible(False)
+# Save plot
+os.makedirs(DIR_FIGURES, exist_ok=True)
+plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Supp.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Supp.png"))
 
-
-# set global labels
-plt.text(-5.7, 6.8, 'Rel.tol.:', fontsize=fontsize, transform=ax1.transAxes)
-plt.text(-6.18, 6.7, 'Abs.tol.:', fontsize=fontsize, transform=ax1.transAxes)
-plt.text(-3.2, -0.55, 'Relative simulation time', fontsize=fontsize + 5,
-         transform=ax1.transAxes)
-plt.text(-6.18, 2.1, 'Number of models', fontsize=fontsize + 5,
-         transform=ax1.transAxes, rotation=90)
-
-# better layout
-plt.tight_layout()
-
-# change plotting size
-plt.rcParams['figure.figsize'] = [15.0, 7.]
-plt.rcParams['figure.dpi'] = 80
-plt.rcParams['savefig.dpi'] = 200
-plt.rcParams['font.size'] = 17
-
-# show figure
-plt.show()
+#plt.show()
