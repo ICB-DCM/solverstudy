@@ -13,10 +13,18 @@ from C import (
     DIR_FIGURES)
 
 # general plotting settings
-plt.rcParams['figure.figsize'] = [12.0, 5.5]
-plt.rcParams['figure.dpi'] = 80
+plt.rcParams['figure.figsize'] = [12.0, 16.5]
+plt.rcParams['figure.dpi'] = 55
 plt.rcParams['savefig.dpi'] = 300
 plt.rcParams['font.size'] = 16
+
+axs = []
+axs.append(plt.axes([0.08, 0.31 * 0.11 + .005, 0.37, 0.32 * .84]))
+axs.append(plt.axes([0.57, 0.31 * 0.11 + .005, 0.40, 0.32 * 0.84]))
+axs.append(plt.axes([0.08, 0.31 * 0.11 + .34, 0.37, 0.32 * 0.84]))
+axs.append(plt.axes([0.57, 0.31 * 0.11 + .34, 0.40, 0.32 * 0.84]))
+axs.append(plt.axes([0.08, 0.31 * 0.11 + .675, 0.37, 0.32 * 0.84]))
+axs.append(plt.axes([0.57, 0.31 * 0.11 + .675, 0.40, 0.32 * 0.84]))
 
 
 # get the data
@@ -57,270 +65,299 @@ data_lsoda = data_lsoda.reshape((data_lsoda.size,))
 data_states = np.array(data_states)
 data_states = data_states.reshape((data_states.size,))
 
-# create list of doubles for scatter plot
-adams_bdf_x = [] # red
-adams_bdf_y = []
-bdf_adams_x = [] # blue
-bdf_adams_y = []
-ratio_adams_bdf = []
-ratio_bdf_adams = []
-ratio_equal = []
-ratio_adams_zero = []
-ratio_bdf_zero = []
-ratio_equal_zero = []
-num_states_adams_bdf = []
-num_states_bdf_adams = []
-num_states_equal = []
-num_states_adams_zero = []
-num_states_bdf_zero = []
-num_states_equal_zero = []
-equal_x = [] # yellow
-equal_y = []
-adams_zero_x = []
-adams_zero_y = []
-bdf_zero_x = []
-bdf_zero_y = []
-equal_zero_x = []
-equal_zero_y = []
-
-for iModel in range(0, len(data_am)):
-    x_adams_data = 1000 * data_am[iModel]
-    y_bdf_data = 1000 * data_bdf[iModel]
-    states_data = data_states[iModel]
-
-    if np.isfinite(x_adams_data) and np.isfinite(y_bdf_data):
-        if x_adams_data > y_bdf_data:
-            bdf_adams_x.append(x_adams_data)
-            bdf_adams_y.append(y_bdf_data)
-            ratio_adams_bdf.append(np.log10(x_adams_data / y_bdf_data))
-            num_states_adams_bdf.append(states_data)
-        elif y_bdf_data > x_adams_data:
-            adams_bdf_x.append(x_adams_data)
-            adams_bdf_y.append(y_bdf_data)
-            ratio_bdf_adams.append(np.log10(x_adams_data / y_bdf_data))
-            num_states_bdf_adams.append(states_data)
-        elif x_adams_data == y_bdf_data:
-            equal_x.append(x_adams_data)
-            equal_y.append(y_bdf_data)
-            ratio_equal.append(np.log10(x_adams_data / y_bdf_data))
-            num_states_equal.append(states_data)
-
-    elif (not np.isfinite(x_adams_data)) and np.isfinite(y_bdf_data):
-        adams_zero_x.append(3000)
-        adams_zero_y.append(y_bdf_data)
-        ratio_adams_zero.append(np.log10(400.))
-        num_states_adams_zero.append(states_data)
-
-    elif np.isfinite(x_adams_data) and (not np.isfinite(y_bdf_data)):
-        bdf_zero_x.append(x_adams_data)
-        bdf_zero_y.append(3000)
-        ratio_bdf_zero.append(-np.log10(400.))
-        num_states_bdf_zero.append(states_data)
-
-    elif (not np.isfinite(x_adams_data)) and (not np.isfinite(y_bdf_data)):
-        equal_zero_x.append(3000)
-        equal_zero_y.append(3000)
-        ratio_equal_zero.append(np.log10(float('nan')))
-        num_states_equal_zero.append(states_data)
-
-# print some interesting properties --- look for the biggest/smallest values
-print('adams_bdf_x_smallest: ' + str(sorted(adams_bdf_x)[0]))
-print('adams_bdf_y_smallest: ' + str(sorted(adams_bdf_y)[0]))
-print('bdf_adams_x_smallest: ' + str(sorted(bdf_adams_x)[0]))
-print('bdf_adams_y_smallest: ' + str(sorted(bdf_adams_y)[0]))
-print('adams_zero_x_smallest: ' + str(sorted(adams_zero_x)[0]))
-print('adams_zero_y_smallest: ' + str(sorted(adams_zero_y)[0]))
-print('equal_zero_x_smallest: ' + str(sorted(equal_zero_x)[0]))
-print('equal_zero_y_smallest: ' + str(sorted(equal_zero_y)[0]))
-print('adams_bdf_x_largest: ' + str(sorted(adams_bdf_x, reverse=True)[0]))
-print('adams_bdf_y_largest: ' + str(sorted(adams_bdf_y, reverse=True)[0]))
-print('bdf_adams_x_largest: ' + str(sorted(bdf_adams_x, reverse=True)[0]))
-print('bdf_adams_y_largest: ' + str(sorted(bdf_adams_y, reverse=True)[0]))
-print('adams_zero_x_largest: ' + str(sorted(adams_zero_x, reverse=True)[0]))
-print('adams_zero_y_largest: ' + str(sorted(adams_zero_y, reverse=True)[0]))
-print('equal_zero_x_largest: ' + str(sorted(equal_zero_x, reverse=True)[0]))
-print('equal_zero_y_largest: ' + str(sorted(equal_zero_y, reverse=True)[0]))
-print('len(equal_zero_x): ' + str(len(equal_zero_x)))
-print('len(equal_zero_y): ' + str(len(equal_zero_y)))
-
-# plot a scatter plot + diagonal line
-linestyle = (0, (2, 5, 2, 5))
-linewidth = 1
-fontsize = 17
-labelsize = 10
-titlesize = 30
-alpha = 1
-marker_size = 2
-
 # create custom colormap
-colors_1 = [(1, 0.9, 0.6, 0.3), (0.96, 0.41, 0, 1)]
-cm_1 = LinearSegmentedColormap.from_list('test', colors_1, N=30)
-colors_2 = [(0.8, 0.95, 1, 0.3), (0, 0.21, 0.46, 1)]
-cm_2 = LinearSegmentedColormap.from_list('test', colors_2, N=30)
+darkest_am = (0.96, 0.41, 0, 1)
+colors_am = [(1, 0.9, 0.6, 0.3), darkest_am]
+cm_am = LinearSegmentedColormap.from_list('test', colors_am, N=30)
+darkest_bdf = (0, 0.21, 0.46, 1)
+colors_bdf = [(0.8, 0.95, 1, 0.3), darkest_bdf]
+cm_bdf = LinearSegmentedColormap.from_list('test', colors_bdf, N=30)
+darkest_lsoda = (0.55, 0.6, 0.5, 1)
+colors_lsoda = [(0.9, 1, 0.8, 0.3), darkest_lsoda]
+cm_lsoda = LinearSegmentedColormap.from_list('test', colors_lsoda, N=30)
 
-# Calculate the point density
-# orange
-grid_orange = np.vstack([np.log(adams_bdf_x), np.log(adams_bdf_y)])
-kde_orange = gaussian_kde(grid_orange)(grid_orange)
-# blue
-grid_blue = np.vstack([np.log(bdf_adams_x), np.log(bdf_adams_y)])
-kde_blue = gaussian_kde(grid_blue)(grid_blue)
+def plot_scatter_times(data_setting_a, data_setting_b,
+                       setting_a_name, setting_b_name,
+                       colormap_a, colormap_b,
+                       color_name_a, color_name_b,
+                       lower_bound, upper_bound, ratio_bound,
+                       ax_left, ax_right, letter_left, letter_right):
+    # create list of doubles for scatter plot
+    setting_a_better_x = [] # red
+    setting_a_better_y = []
+    setting_b_better_x = [] # blue
+    setting_b_better_y = []
+    ratio_a_over_b = []
+    ratio_b_over_a = []
+    ratio_equal = []
+    ratio_setting_a_failed = []
+    ratio_setting_b_failed = []
+    ratio_both_failed = []
+    n_states_setting_a_better = []
+    n_states_setting_b_better = []
+    num_states_equal = []
+    n_states_setting_a_failed = []
+    n_states_setting_b_failed = []
+    n_states_both_failed = []
+    equal_x = [] # yellow
+    equal_y = []
+    setting_a_failed_x = []
+    setting_a_failed_y = []
+    setting_b_failed_x = []
+    setting_b_failed_y = []
+    both_failed_x = []
+    both_failed_y = []
 
-# Sort the points by density, so that the densest points are plotted last
-# orange
-ids_orange = kde_orange.argsort()
-adams_bdf_x, adams_bdf_y, kde_orange = \
-    np.array(adams_bdf_x)[ids_orange],\
-    np.array(adams_bdf_y)[ids_orange],\
-    np.array(kde_orange)[ids_orange]
-# blue
-ids_blue = kde_blue.argsort()
-bdf_adams_x, bdf_adams_y, kde_blue = \
-    np.array(bdf_adams_x)[ids_blue],\
-    np.array(bdf_adams_y)[ids_blue],\
-    np.array(kde_blue)[ids_blue]
+    for iModel in range(0, len(data_am)):
+        x_data_a = 1000 * data_setting_a[iModel]
+        y_data_b = 1000 * data_setting_b[iModel]
+        states_data = data_states[iModel]
 
+        if np.isfinite(x_data_a) and np.isfinite(y_data_b):
+            if x_data_a > y_data_b:
+                setting_b_better_x.append(x_data_a)
+                setting_b_better_y.append(y_data_b)
+                ratio_a_over_b.append(np.log10(x_data_a / y_data_b))
+                n_states_setting_b_better.append(states_data)
+            elif y_data_b > x_data_a:
+                setting_a_better_x.append(x_data_a)
+                setting_a_better_y.append(y_data_b)
+                ratio_b_over_a.append(np.log10(x_data_a / y_data_b))
+                n_states_setting_a_better.append(states_data)
+            elif x_data_a == y_data_b:
+                equal_x.append(x_data_a)
+                equal_y.append(y_data_b)
+                ratio_equal.append(np.log10(x_data_a / y_data_b))
+                num_states_equal.append(states_data)
 
-# plot scatter plot
-ax = plt.axes([0.08, 0.11, 0.37, 0.84])
-ax2 = plt.axes([0.57, 0.11, 0.40, 0.84])
-z = range(0,3000)
-AM_faster = round(100 * len(adams_bdf_x) / data_am.size, 2)
-BDF_faster = round(100 * len(bdf_adams_x) / data_am.size, 2)
-AM_failed = round(100 * len(adams_zero_x) / data_am.size, 2)
-BDF_failed = round(100 * len(bdf_zero_x) / data_am.size, 2)
-both_failed = round(100 * len(equal_zero_x) / data_am.size, 2)
-plt1 = ax.scatter(
-    adams_bdf_x, adams_bdf_y, s=marker_size, c=kde_orange, cmap=cm_1,
-    label=f'AM faster: {AM_faster}%',
-    zorder=10, clip_on=False, alpha=alpha)
-plt2 = ax.scatter(
-    bdf_adams_x, bdf_adams_y, s=marker_size, c=kde_blue, cmap=cm_2,
-    label=f'BDF faster: {BDF_faster}%',
-    zorder=10, clip_on=False, alpha=alpha)
-plt3 = ax.scatter(
-    equal_x, equal_y, s=marker_size, c='grey', zorder=10, clip_on=False,
-    alpha=alpha)
-plt4 = ax.scatter(
-    adams_zero_x, adams_zero_y, c='orange', cmap=cm_2, marker='D',
-    s=marker_size, facecolors='none', edgecolors='blue', zorder=10,
-    clip_on=False)
-plt5 = ax.scatter(
-    bdf_zero_x, bdf_zero_y, c='blue', cmap=cm_1, s=marker_size,
-    facecolors='none', edgecolors='orange', marker='D', zorder=10,
-    clip_on=False)
-plt6 = ax.scatter(
-    equal_zero_x, equal_zero_y, s=marker_size, facecolors='none',
-    edgecolors='grey', marker='D', zorder=10, clip_on=False)
-ax.plot(z, c='black', zorder=20)
-ax.set_xlim([0.2, 3000])
-ax.set_ylim([0.2, 3000])
-ax.set_xscale('log')
-ax.set_yscale('log')
-ax.set_xlabel('AM simulation time [ms]', fontsize=fontsize)
-ax.set_ylabel('BDF simulation time [ms]', fontsize=fontsize)
+        elif (not np.isfinite(x_data_a)) and np.isfinite(y_data_b):
+            setting_a_failed_x.append(upper_bound)
+            setting_a_failed_y.append(y_data_b)
+            ratio_setting_a_failed.append(np.log10(ratio_bound))
+            n_states_setting_a_failed.append(states_data)
 
-# plot legend manually
-ax.plot(0.4, 1750, 'o', fillstyle='full', c='orange', markersize=marker_size)
-ax.plot(0.4, 950, 'o', fillstyle='full', c='blue', markersize=marker_size)
-ax.text(0.6, 1500, f'AM faster: {AM_faster}%', fontsize=fontsize)
-ax.text(0.6, 800, f'BDF faster: {BDF_faster}%', fontsize=fontsize)
+        elif np.isfinite(x_data_a) and (not np.isfinite(y_data_b)):
+            setting_b_failed_x.append(x_data_a)
+            setting_b_failed_y.append(upper_bound)
+            ratio_setting_b_failed.append(-np.log10(ratio_bound))
+            n_states_setting_b_failed.append(states_data)
 
-plt.tick_params(labelsize=labelsize)
-ax.spines['top'].set_linestyle(linestyle)
-ax.spines['top'].set_linewidth(linewidth)
-ax.spines['right'].set_linestyle(linestyle)
-ax.spines['right'].set_linewidth(linewidth)
-ax.spines['top'].set_color('grey')
-ax.spines['right'].set_color('grey')
+        elif (not np.isfinite(x_data_a)) and (not np.isfinite(y_data_b)):
+            both_failed_x.append(upper_bound)
+            both_failed_y.append(upper_bound)
+            ratio_both_failed.append(np.log10(float('nan')))
+            n_states_both_failed.append(states_data)
 
-# write text over axis
-ax.text(3500, 25, f'only AM failed: {AM_failed}%',
-        fontsize=fontsize, rotation=-90, va='center')
-ax.text(25, 3500, f'only BDF failed: {BDF_failed}%',
-        fontsize=fontsize, ha='center')
-ax.text(5000, 3500, 'Both failed:', fontsize=fontsize,
-        ha='center')
-ax.text(8000, 2400, f'{both_failed}%',
-        fontsize=fontsize, ha='center', va='center')
+    # plot a scatter plot + diagonal line
+    linestyle = (0, (2, 5, 2, 5))
+    linewidth = 1
+    fontsize = 16
+    labelsize = 12
+    alpha = 1
+    marker_size = 2
 
-# plot text 'A'
-ax.text(-0.18, 1, 'A', fontsize=fontsize + 5, transform=ax.transAxes)
+    # Calculate the point density
+    # color setting a
+    grid_color_a = np.vstack([np.log(setting_a_better_x),
+                              np.log(setting_a_better_y)])
+    kde_color_a = gaussian_kde(grid_color_a)(grid_color_a)
+    # color setting b
+    grid_color_b = np.vstack([np.log(setting_b_better_x),
+                              np.log(setting_b_better_y)])
+    kde_color_b = gaussian_kde(grid_color_b)(grid_color_b)
 
-
-# choose second axes object
-plt.sca(ax2)
-
-# create and adapt spines
-ax2.spines['left'].set_visible(False)
-ax2.spines['right'].set_visible(False)
-ax2.spines['top'].set_visible(False)
-
-# plot left and right "spines"
-plt.plot([-np.log10(400), -np.log10(400)], [0.8, 2000], '--', color='grey',
-         linestyle=linestyle, linewidth=linewidth)
-plt.plot([np.log10(400), np.log10(400)], [0.8, 2000], '--', color='grey',
-         linestyle=linestyle, linewidth=linewidth)
-
-# plot data
-plt.scatter(ratio_adams_bdf, num_states_adams_bdf,
-            s=marker_size, c=kde_blue, cmap=cm_2, alpha=alpha,
-            zorder=10, clip_on=False)
-plt.scatter(ratio_bdf_adams, num_states_bdf_adams,
-            s=marker_size, c=kde_orange, cmap=cm_1, alpha=alpha,
-            zorder=10, clip_on=False)
-plt.scatter(ratio_equal, num_states_equal,
-            s=marker_size, c='grey', alpha=alpha,
-            zorder=100, clip_on=False)
-plt.scatter(ratio_adams_zero, num_states_adams_zero,
-            s=marker_size, c='blue', cmap=cm_2, alpha=alpha,
-            zorder=10, clip_on=False)
-plt.scatter(ratio_bdf_zero, num_states_bdf_zero,
-            s=marker_size, c='orange', cmap=cm_1, alpha=alpha, marker='D',
-            facecolors='none', edgecolors='blue', zorder=10, clip_on=False)
-plt.scatter(ratio_equal_zero, num_states_equal_zero,
-            s=marker_size, c='grey', cmap=cm_1, alpha=alpha, marker='D',
-            facecolors='none', edgecolors='grey', zorder=100, clip_on=False)
+    # Sort the points by density, so that the densest points are plotted last
+    # color for setting a
+    ids_color_a = kde_color_a.argsort()
+    setting_a_better_x, setting_a_better_y, kde_color_a = \
+        np.array(setting_a_better_x)[ids_color_a],\
+        np.array(setting_a_better_y)[ids_color_a],\
+        np.array(kde_color_a)[ids_color_a]
+    # color for setting b
+    ids_color_b = kde_color_b.argsort()
+    setting_b_better_x, setting_b_better_y, kde_color_b = \
+        np.array(setting_b_better_x)[ids_color_b],\
+        np.array(setting_b_better_y)[ids_color_b],\
+        np.array(kde_color_b)[ids_color_b]
 
 
-# plot central spine
-plt.plot([0, 0], [.8, 2000], 'k-', linewidth=linewidth)
-plt.plot([-.05, .05], [1000, 1000], 'k-', linewidth=linewidth)
-for iMajor in range(3):
-    plt.plot([-.05, .05], [10**iMajor, 10**iMajor], 'k-', linewidth=linewidth)
-    for iMinor in range(2,10):
-        plt.plot([-.02, .02], [iMinor * 10**iMajor, iMinor * 10**iMajor],
-                 'k-',linewidth=linewidth)
+    # plot scatter plot
+    a_faster_percentage = round(100 * len(setting_a_better_x) / data_am.size, 2)
+    b_faster_percentage = round(100 * len(setting_b_better_x) / data_am.size, 2)
+    a_failed_percentage = round(100 * len(setting_a_failed_x) / data_am.size, 2)
+    b_failed_percentage = round(100 * len(setting_b_failed_x) / data_am.size, 2)
+    both_failed_percentage = round(100 * len(both_failed_x) / data_am.size, 2)
+    plt1 = ax_left.scatter(
+        setting_a_better_x, setting_a_better_y,
+        s=marker_size, c=kde_color_a, cmap=colormap_a,
+        label=f'{setting_a_name} faster: {a_faster_percentage}%',
+        zorder=10, clip_on=False, alpha=alpha)
+    plt2 = ax_left.scatter(
+        setting_b_better_x, setting_b_better_y,
+        s=marker_size, c=kde_color_b, cmap=colormap_b,
+        label=f'{setting_b_name} faster: {b_faster_percentage}%',
+        zorder=10, clip_on=False, alpha=alpha)
+    plt3 = ax_left.scatter(
+        equal_x, equal_y, s=marker_size, c='grey', zorder=10, clip_on=False,
+        alpha=alpha)
+    plt4 = ax_left.scatter(
+        setting_a_failed_x, setting_a_failed_y,
+        c=color_name_a, cmap=colormap_b, marker='D',
+        s=marker_size, facecolors='none', edgecolors=color_name_b, zorder=10,
+        clip_on=False)
+    plt5 = ax_left.scatter(
+        setting_b_failed_x, setting_b_failed_y,
+        c=color_name_b, cmap=colormap_a, s=marker_size,
+        facecolors='none', edgecolors=color_name_a, marker='D', zorder=10,
+        clip_on=False)
+    plt6 = ax_left.scatter(
+        both_failed_x, both_failed_y, s=marker_size, facecolors='none',
+        edgecolors='grey', marker='D', zorder=10, clip_on=False)
+    ax_left.plot([lower_bound, upper_bound], [lower_bound, upper_bound],
+            c='black', zorder=20)
+    ax_left.set_xlim([lower_bound, upper_bound])
+    ax_left.set_ylim([lower_bound, upper_bound])
+    ax_left.set_xscale('log')
+    ax_left.set_yscale('log')
+    ax_left.set_xlabel(f'{setting_a_name} simulation time [ms]', fontsize=fontsize)
+    ax_left.set_ylabel(f'{setting_b_name} simulation time [ms]', fontsize=fontsize)
 
-# formatting
-ax2.set_yscale('log')
-ax2.set_ylim((0.8, 1900))
-ax2.set_xlim((-np.log10(450), np.log10(450)))
-ax2.set_yticks([])
-plt.minorticks_off()
-ax2.text(0, 2000, 'Number of state variables', fontsize=fontsize, ha='center')
-ax2.text(-0.1, 1, '$10^0$', fontsize=fontsize, va='center', ha='right')
-ax2.text(-0.1, 10, '$10^1$', fontsize=fontsize, va='center', ha='right')
-ax2.text(-0.1, 100, '$10^2$', fontsize=fontsize, va='center', ha='right')
-ax2.text(-0.1, 1000, '$10^3$', fontsize=fontsize, va='center', ha='right')
-ax2.set_xlabel('Computation time ratio AM / BDF', fontsize=fontsize)
-plt.xticks([-np.log10(400), -2, -1, 0, 1, 2, np.log10(400)],
-           ['', '$10^{-2}$', '$10^{-1}$', '1', '$10^1$', '$10^2$',
-            ''], fontsize=fontsize)
-ax2.text(-np.log10(600), 20, 'BDF failed', fontsize=fontsize, rotation=90,
-         ha='center')
-ax2.text(np.log10(600), 20, 'AM failed', fontsize=fontsize, rotation=-90,
-         ha='center')
+    geo_mean_bounds = np.sqrt(upper_bound * lower_bound)
+    beyond_bound = upper_bound * 1.15
 
-# plot text 'B'
-ax.text(-0.08, 1, 'B', fontsize=fontsize + 5, transform=ax2.transAxes)
+    # plot legend manually
+    ax_left.text(.2 * geo_mean_bounds, .25 * upper_bound,
+                 f'{setting_a_name} faster: {a_faster_percentage}%',
+                 fontsize=fontsize, va='top', ha='center',
+                 color=color_name_a)
+    ax_left.text(geo_mean_bounds, 4 * lower_bound,
+                 f'{setting_b_name} faster: {b_faster_percentage}%',
+                 fontsize=fontsize, va='bottom', ha='left',
+                 color=color_name_b)
+
+    plt.tick_params(labelsize=labelsize)
+    ax_left.spines['top'].set_linestyle(linestyle)
+    ax_left.spines['top'].set_linewidth(linewidth)
+    ax_left.spines['right'].set_linestyle(linestyle)
+    ax_left.spines['right'].set_linewidth(linewidth)
+    ax_left.spines['top'].set_color('grey')
+    ax_left.spines['right'].set_color('grey')
+
+    # write text over axis
+    ax_left.text(beyond_bound, geo_mean_bounds,
+            f'only {setting_a_name} failed: {a_failed_percentage}%',
+            fontsize=fontsize, rotation=-90, va='center', ha='left')
+    ax_left.text(geo_mean_bounds, beyond_bound,
+            f'only {setting_b_name} failed: {b_failed_percentage}%',
+            fontsize=fontsize, ha='center', va='bottom')
+    ax_left.text(beyond_bound, beyond_bound,
+            'Both failed:', fontsize=fontsize, ha='center', va='bottom')
+    ax_left.text(beyond_bound, upper_bound, f'{both_failed_percentage}%',
+            fontsize=fontsize, ha='left', va='top')
+
+    # plot text 'A'
+    ax_left.text(-0.18, 1, letter_left, fontsize=fontsize + 5,
+                 transform=ax_left.transAxes)
+
+    plt.sca(ax_right)
+    # create and adapt spines
+    ax_right.spines['left'].set_visible(False)
+    ax_right.spines['right'].set_visible(False)
+    ax_right.spines['top'].set_visible(False)
+
+    # plot left and right "spines"
+    max_model_size = 2000
+    plt.plot([-np.log10(ratio_bound), -np.log10(ratio_bound)],
+             [0.8, max_model_size], '--', color='grey',
+             linestyle=linestyle, linewidth=linewidth)
+    plt.plot([np.log10(ratio_bound), np.log10(ratio_bound)],
+             [0.8, max_model_size], '--', color='grey',
+             linestyle=linestyle, linewidth=linewidth)
+
+    # plot data
+    plt.scatter(ratio_a_over_b, n_states_setting_b_better,
+                s=marker_size, c=kde_color_b, cmap=colormap_b, alpha=alpha,
+                zorder=10, clip_on=False)
+    plt.scatter(ratio_b_over_a, n_states_setting_a_better,
+                s=marker_size, c=kde_color_a, cmap=colormap_a, alpha=alpha,
+                zorder=10, clip_on=False)
+    plt.scatter(ratio_equal, num_states_equal,
+                s=marker_size, c='grey', alpha=alpha,
+                zorder=100, clip_on=False)
+    plt.scatter(ratio_setting_a_failed, n_states_setting_a_failed,
+                s=marker_size, c=color_name_b, cmap=colormap_b, alpha=alpha,
+                zorder=10, clip_on=False)
+    plt.scatter(ratio_setting_b_failed, n_states_setting_b_failed,
+                s=marker_size, c=color_name_a, cmap=colormap_a,
+                alpha=alpha, marker='D',
+                facecolors='none', edgecolors=color_name_a,
+                zorder=10, clip_on=False)
+    plt.scatter(ratio_both_failed, n_states_both_failed,
+                s=marker_size, c='grey', alpha=alpha, marker='D',
+                facecolors='none', edgecolors='grey', zorder=100, clip_on=False)
+
+    # plot central spine with ticks
+    plt.plot([0, 0], [.8, max_model_size], 'k-', linewidth=linewidth)
+    plt.plot([-.05, .05], [1e3, 1e3], 'k-', linewidth=linewidth)
+    for iMajor in range(3):
+        plt.plot([-.05, .05], [10 ** iMajor, 10 ** iMajor], 'k-',
+                 linewidth=linewidth)
+        for iMinor in range(2, 10):
+            plt.plot([-.02, .02],
+                     [iMinor * 10 ** iMajor, iMinor * 10 ** iMajor],
+                     'k-', linewidth=linewidth)
+
+    # formatting
+    ax_right.set_yscale('log')
+    ax_right.set_ylim((0.8, max_model_size))
+    ax_right.set_xlim((-np.log10(ratio_bound * 1.15),
+                       np.log10(ratio_bound * 1.15)))
+    ax_right.set_yticks([])
+    plt.minorticks_off()
+
+    beyond_bound_side = ratio_bound * 1.15
+    ax_right.text(0, max_model_size * 1.1, 'Number of state variables',
+                  fontsize=fontsize, ha='center', va='bottom')
+    ax_right.text(-0.1, 1, '$10^0$', fontsize=fontsize, va='center', ha='right')
+    ax_right.text(-0.1, 10, '$10^1$', fontsize=fontsize, va='center', ha='right')
+    ax_right.text(-0.1, 100, '$10^2$', fontsize=fontsize, va='center', ha='right')
+    ax_right.text(-0.1, 1000, '$10^3$', fontsize=fontsize, va='center', ha='right')
+    ax_right.set_xlabel(f'Computation time ratio {setting_a_name} / {setting_b_name}',
+                        fontsize=fontsize)
+    plt.xticks([-np.log10(ratio_bound), -2, -1, 0, 1, 2, np.log10(ratio_bound)],
+               ['', '$10^{-2}$', '$10^{-1}$', '1', '$10^1$', '$10^2$',
+                ''], fontsize=fontsize)
+    ax_right.text(-np.log10(beyond_bound_side), np.sqrt(max_model_size),
+                  f'{setting_b_name} failed', fontsize=fontsize, rotation=90,
+                  ha='right', va='center')
+    ax_right.text(np.log10(beyond_bound_side), np.sqrt(max_model_size),
+                  f'{setting_a_name} failed', fontsize=fontsize, rotation=-90,
+                  ha='left', va='center')
+
+    # plot text 'B'
+    ax_right.text(-0.08, 1, letter_right,
+            fontsize=fontsize + 5, transform=ax_right.transAxes)
 
 
-# change plotting size
-plt.gcf().subplots_adjust(bottom=0.2)
+plot_scatter_times(data_am, data_bdf, 'AM', 'BDF',
+                   cm_am, cm_bdf, darkest_am, darkest_bdf,
+                   0.05, 2e3, 400,
+                   axs[4], axs[5], 'A', 'B')
 
-# better layout
-plt.tight_layout()
+plot_scatter_times(data_lsoda, data_am, 'LSODA', 'AM',
+                   cm_lsoda, cm_am, darkest_lsoda, darkest_am,
+                   0.05, 2e5, 400,
+                   axs[2], axs[3], 'C', 'D')
+
+plot_scatter_times(data_lsoda, data_bdf, 'LSODA', 'BDF',
+                   cm_lsoda, cm_bdf, darkest_lsoda, darkest_bdf,
+                   0.05, 2e5, 400,
+                   axs[0], axs[1], 'E', 'F')
+
+# Save plot
+os.makedirs(DIR_FIGURES, exist_ok=True)
+plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.png"))
 
 # show figure
 plt.show()
