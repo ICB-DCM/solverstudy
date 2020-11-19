@@ -1,13 +1,13 @@
 # Solver Study
 
-This repository contains all python files and (supplementary) figures for the manuscript 'Benchmarking of numerical integration methods for ODE models of biological systems'.
+This repository contains all python files and (supplementary) figures for the
+manuscript "Benchmarking of numerical integration methods for ODE models of
+biological systems'.
 
 ## Preparations
 
 The study was performed on Linux (Ubuntu 20.10) with Anaconda python 3.8.5
 (for Minoconda minor changes are necessary).
-All scripts can be found under `Python_Scripts`, which we henceforth assume
-to be the working directory (`cd Python_Scripts`).
 
 ### Installation
 
@@ -16,10 +16,11 @@ We recommend the installation of a virtual environment:
     conda create -n solverstudy python=3.8
     conda activate solverstudy
 
-Make sure you use the correct python environment (e.g. `which pip`).
+Make sure you use the correct python environment (e.g. `which pip`,
+`which python`).
 
 As the employed simulation tool AMICI requires BLAS support and swig, those
-need to be installed. This is done for anaconda (on Linux) via
+need to be installed. This is done for anaconda via
 
     conda install -n solverstudy -c conda-forge openblas
     conda install -n solverstudy -c anaconda swig
@@ -30,7 +31,7 @@ Check also the
 All further required dependencies are defined, including the versions used in
 the study, in a file `requirements.txt`, and can be installed via
 
-    pip install -r ../requirements.txt
+    pip install -r requirements.txt
 
 ### Environment configuration
 
@@ -38,10 +39,15 @@ The study writes and loads its data from a data base folder
 `SolverStudy{Work|Test}` located/created in the repository base folder,
 which can be configured via the environment variable
 
-    export SOLVERSTUDY_DIR_BASE=WORK|TEST
+    export SOLVERSTUDY_DIR_BASE=WORK|TEST|CACHE
 
-where WORK, TEST are conventions for dedicated folders:
-WORK for development work, and TEST is for a smaller test collection.
+where WORK, TEST, CACHE are conventions for dedicated folders:
+WORK for development work, TEST is for a smaller test collection, and CACHE
+contains a cached version of the essential data used in the study, shipped with
+the repository.
+
+All scripts can be found under `Python_Scripts`, which we henceforth assume
+to be the working directory (`cd Python_Scripts`).
 
 ### Known problems
 
@@ -60,88 +66,63 @@ WORK for development work, and TEST is for a smaller test collection.
   In principle, more recent versions should be applicable, which is desirable,
   however minor modifications may be necessary if some API changed.
 
+### Tests
+
+We run some very basic unit tests, using a smaller test set. The tests can be
+found under `Test`, and are run automatically on GitHub via `.github`.
+
+The tests can be run via
+
+    bash Test/run_tests.sh
+
 ## 1 Create model collection 
 
-### 1.1 Download all sedml and sbml models from the JWS Online Database
+Note: The whole study can also be run via a single call to
 
-	script_download_jws_sedml_sbml.py
+    bash Bash_Scripts/run_study.sh
 
-### 1.2 Download chosen sbml models from the BioModels Database
+### 1.1 Model download
 
-	script_download_biomodels_sbml.py
+Download SEDML and SBML models from JWS and SBML models from Biomodels:
 
-### 1.3 Import all sbml models to AMICI
+    python script_download_jws_sedml_sbml.py
+    python script_download_biomodels_sbml.py
 
-	sbml2amici.py
+### 1.2 Regroup models
 
-### 1.4 Compare the state trajectories of the local simulation of all JWS models to the in-built simulation routine of JWS
+    python script_regroup_models.py
 
-	compareStateTrajectories_JWS_1.py
-	compareStateTrajectories_JWS_2.py
+### 1.3 Import to AMICI and COPASI
 
-### 1.6 Compare the state trajectories of the local simulation of all selected BioModels models who can be simulated to the in-built simulation routine of COPASI
+    python sbml2amici.py
+    python sbml2copasi.py
 
-	compareStateTrajectories_BioModels_1.py
-	compareStateTrajectories_BioModels_2.py
+### 1.4 Get reference trajectories
 
-### 1.7 Finalize the model collection by excluding all models that could not be imported of have non-matching trajectories
+The reference trajectories are by default imported from local Cache, but can
+be downloaded from JWS via setting the environment flag
+`SOLVERSTUDY_USE_CACHED_REF_TRAJ="YES"`. Rerunning the Biomodels reference
+trajectories currently requires manual compilation.
 
-	selectModelsForMain.py
+    python script_get_reference_trajectories.py
 
-To skip step 1, the whole benchmark collection is available in 'Solver_Study/Models'.
-If step 1 was skipped, the main folder 'Benchmarking_of_numerical_ODE_integration_methods' or the subfolders 'BioModelsDatabase_models', 'json_files', 'sbml2amici' and 'sedml_models' will not exist. 
-In this case, the next functions will automatically take the results from 'Solver_Study/Models' of the repository.
-Additionally, the main folder 'Benchmarking_of_numerical_ODE_integration_methods' will be created. 
+### 1.5 Compare AMICI and COPASI simulations to the reference trajectories
 
-## 2 Solver settings study
+    python compare_state_trajectories_amici.py
+    python compare_state_trajectories_copasi.py
 
-### 2.1 Get all Data
+### 1.6 Select models to include in the study
 
-	execute_WholeStudy.py
-	execute_Tolerances.py
+    python filter_models_by_error.py
 
-To skip step 2.1, all data files can be found in 'Solver_Study/Data'
-If step 2.1 was skipped, the subfolder 'Data' will not exist.
-If step 1 was skipped, the subfolder 'json_files' will not exist.
-In this case, the next functions will automatically take the results from 'Solver_Study/Data' of the repository. 
+## 2 Main study
 
-### 2.2 Visualize all results according to the order seen in the paper
+The main study consists of two parts: an algorithm study and a tolerance study:
 
-Remark: All figures created by the following scripts are not stored automatically! Thus, the main folder 'Benchmarking_of_numerical_ODE_integration_methods' will not be created if it does not already exists.
+    python execute_study_algorithms.py
+    python execute_study_tolerances.py
 
-##### 2.2.1 Basic Properties
+## 3 Figure generation
 
-	plot_BasicProperties_Main.py (Main Manuscript, Figure 1)
- 	plot_BasicProperties_Supp.py (Supplementary, Figure S1)
-
-##### 2.2.2 Non-linear solver study
-
-Remark: plot_NonLinSol_Main.py displays only the bottom part of Figure 2 while the upper part was created via InkScape
-
-	plot_NonLinSol_Main.py (Main Manuscript, Figure 2)
-	plot_NonLinSol_Supp.py (Supplementary, Figure S2)
-
-##### 2.2.3 Linear solver study
-
-	plot_LinearSolver_Main.py (Main Manuscript, Figure 3)
-	plot_LinearSolver_Supp1.py (Supplementary, Figure S3)
-	plot_LinearSolver_Supp2.py (Supplementary, Figure S4)
-
-##### 2.2.4 Tolerances study
-	
-	plot_Tolerances_Main.py (Main Manuscript, Figure 4)
-	plot_Tolerances_Supp.py (Supplementary, Figure S5)
-
-##### 2.2.5 Solver algorithm study
-
-	plot_SolAlg_Main.py (Main Manuscript, Figure 5)
-	plot_SolAlg_Supp1.py (Supplementary, Figure S6)
-	plot_SolAlg_Supp2.py (Supplementary, Figure S7)
-
-To skip step 2.2, all figures can be found in 'Solver_Study/Figures'.
-
-### 2.3 Get the complete benchmark collection list containing all 167 models
-
-	TableOfAllBenchmarkModels.py
-
-If the folder 'Benchmarking_of_numerical_ODE_integration_methods/Data' does not exist, to display the table, please save it manually on some directory of your choice
+All figures used in the main manuscript and the supplementary information
+can be generated via the scripts entitled `Python_Scripts/plot_*`.

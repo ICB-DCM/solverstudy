@@ -1,3 +1,5 @@
+"""Extract some basic information on model numbers."""
+
 import os
 import pandas as pd
 
