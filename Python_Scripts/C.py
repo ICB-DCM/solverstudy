@@ -128,7 +128,7 @@ repetitions_for_cpu_time_study = 25
 # Algorithm shorthands and labels
 
 # Mappings index -> string
-LINSOL_DCT = {1: 'Dense', 6: 'GMRES', 7: 'BiCGStab', 8: 'SPTFQMR', 9: 'KLU'}
+LINSOL_DCT = {1: 'Dense', 6: 'GMRES', 7: 'BiCGStab', 8: 'TFQMR', 9: 'KLU'}
 NONLINSOL_DCT = {1: 'Functional', 2: 'Newton-type'}
 SOLALG_DCT = {1: 'Adams', 2: 'BDF'}
 ATOL_RTOLS = (

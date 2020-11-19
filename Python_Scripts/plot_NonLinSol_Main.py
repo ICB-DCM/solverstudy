@@ -110,4 +110,4 @@ os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Main.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Main.png"))
 
-plt.show()
+#plt.show()

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib import cm
 
 
-from C import DIR_MODELS, DIR_MODELS_AMICI, DIR_MODELS_AMICI_FINAL
+from C import DIR_MODELS, DIR_FIGURES
 
 # load the table with model information
 #model_info = pd.read_csv(os.path.join(DIR_MODELS, 'model_summary.tsv'),
@@ -162,8 +162,12 @@ plt.ylim((-10, 420))
 ax = plt.gca()
 ax.text(.5e-4, 390, 'final acceptance threshold', ha='right', fontsize=12)
 
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
 # plot
 plt.gcf().set_size_inches((15.0, 10.0))
-plt.savefig('../figures/Figure_S1.pdf')
-plt.savefig('../figures/Figure_S1.png', dpi=300)
+os.makedirs(DIR_FIGURES, exist_ok=True)
+plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.pdf'))
+plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.png'), dpi=300)
 

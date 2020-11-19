@@ -7,12 +7,11 @@ import pandas as pd
 import seaborn as sns
 import copy
 
-from C import DIR_MODELS
+from C import DIR_MODELS, DIR_FIGURES
 
 # load the table with model information
-model_info = pd.read_csv('/home/paulstapor/Dokumente/Projekte/'
-                         'ODE-solver-study/solverstudy/SolverStudyWork/'
-                         'Models/model_summary.tsv', sep='\t')
+model_info = pd.read_csv(os.path.join(
+    DIR_MODELS, 'model_summary.tsv'), sep='\t')
 
 # collect all models, for which import worked
 n_species = []
@@ -98,8 +97,9 @@ sns.histplot(data=data.loc[data['Composition'] == 'accepted'], y='number of reac
              binrange=[0, 3.5])
 
 plt.gcf().set_size_inches((9.0, 9.0))
-plt.savefig('../figures/bias_assessment.pdf')
-plt.savefig('../figures/bias_assessment.png', dpi=300)
+os.makedirs(DIR_FIGURES, exist_ok=True)
+plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.pdf'))
+plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.png'), dpi=300)
 
 species_all = all_models['number of species'].values
 species_acc = all_models[all_models['Composition'] ==

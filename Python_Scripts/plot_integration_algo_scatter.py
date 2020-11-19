@@ -360,4 +360,4 @@ plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.png"))
 
 # show figure
-plt.show()
+#plt.show()

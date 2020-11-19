@@ -45,4 +45,8 @@ time python filter_models_by_error.py
 time python execute_study_algorithms.py
 time python execute_study_tolerances.py
 
-# TODO Run Plots
+# Run plots
+time python model_numbers.py
+for plot_script in `ls plot_*`; do
+  time python $plot_script
+done
