@@ -1,19 +1,16 @@
+"""Statistical tests: Fisher's exact test on various targets."""
+
 import os
-import numpy as np
 import pandas as pd
 import scipy.stats as stats
-from typing import List
+from typing import List, Tuple
 
 from C import (
     DIR_RESULTS_ALGORITHMS, LINSOL_DCT, NONLINSOL_DCT, SOLALG_DCT, ATOL_RTOLS)
-from util import (
-    solalg_from_fname, nonlinsol_from_fname, linsol_from_fname,
-    atol_from_fname, rtol_from_fname)
 
-# Number of failures for every setting
+# Number of failures and successes for every setting
 failures = {}
 successes = {}
-n_model = None
 for solalg, solalg_s in SOLALG_DCT.items():
     for nonlinsol, nonlinsol_s in NONLINSOL_DCT.items():
         for linsol, linsol_s in LINSOL_DCT.items():
@@ -22,25 +19,21 @@ for solalg, solalg_s in SOLALG_DCT.items():
                     f"__nonlinSol_{nonlinsol}__solAlg_{solalg}.tsv"
                 df = pd.read_csv(
                     os.path.join(DIR_RESULTS_ALGORITHMS, f), sep='\t')
-                if n_model is None:
-                    n_model = df.shape[0]
-                else:
-                    assert n_model == df.shape[0]
                 failures[(solalg_s, nonlinsol_s, linsol_s, (atol, rtol))] = \
                     sum(df['failure'])
-                successes[(solalg_s, nonlinsol_s, linsol_s, (atol, rtol))]  = \
-                    n_model - sum(df['failure'])
+                successes[(solalg_s, nonlinsol_s, linsol_s, (atol, rtol))] = \
+                    df.shape[0] - sum(df['failure'])
 
 
 def to_arr(str_or_arr: str) -> List:
-    """Keep iterable, convert string to iterable."""
+    """Keep if iterable, convert string to iterable."""
     if isinstance(str_or_arr, str):
         str_or_arr = [str_or_arr]
     return str_or_arr
 
 
 def sumit(vals, solalgs=None, nonlinsols=None, linsols=None,
-          tols=None) -> float:
+          tols=None) -> int:
     """Sum over non-specified variables"""
     # Default: all
     if solalgs is None:
@@ -59,8 +52,8 @@ def sumit(vals, solalgs=None, nonlinsols=None, linsols=None,
                for atol, rtol in to_arr(tols))
 
 
-def fisher_test(fail1, pass1, fail2, pass2):
-    """Perform an exact fisher test.
+def fisher_test(fail1: int, pass1: int, fail2: int, pass2: int) -> None:
+    """Perform an exact fisher test on failure and success numbers.
     :returns: oddsratio, p_value
     """
     table = [[fail1, pass1], [fail2, pass2]]
@@ -68,11 +61,15 @@ def fisher_test(fail1, pass1, fail2, pass2):
     print(stats.fisher_exact(table))
 
 
-def sumit_both(solalgs=None, nonlinsols=None, linsols=None, tols=None):
-    """Short to get failure and success number."""
+def sumit_both(solalgs=None, nonlinsols=None, linsols=None, tols=None
+               ) -> Tuple[int, int]:
+    """Shortform to get failure and success number as tuple."""
     return (sumit(failures, solalgs, nonlinsols, linsols, tols),
             sumit(successes, solalgs, nonlinsols, linsols, tols))
 
+
+###############################################################################
+# Various outputs
 
 print("Adams vs BDF")
 fisher_test(*sumit_both(solalgs='Adams'),
@@ -84,5 +81,22 @@ for nonlinsol in NONLINSOL_DCT.values():
                 *sumit_both(solalgs='BDF', nonlinsols=nonlinsol))
     for linsol in LINSOL_DCT.values():
         print(f"Adams vs BDF for nonlinsol {nonlinsol}, linsol {linsol}")
-        fisher_test(*sumit_both(solalgs='Adams', nonlinsols=nonlinsol, linsols=linsol),
-                    *sumit_both(solalgs='BDF', nonlinsols=nonlinsol, linsols=linsol))
+        fisher_test(*sumit_both(solalgs='Adams', nonlinsols=nonlinsol,
+                                linsols=linsol),
+                    *sumit_both(solalgs='BDF', nonlinsols=nonlinsol,
+                                linsols=linsol))
+
+print("\nFunctional vs Newton")
+fisher_test(*sumit_both(nonlinsols='Functional'),
+            *sumit_both(nonlinsols='Newton-type'))
+
+for solalg in SOLALG_DCT.values():
+    print(f"\nFunctional vs Newton for solalg {solalg}")
+    fisher_test(*sumit_both(solalgs=solalg, nonlinsols='Functional'),
+                *sumit_both(solalgs=solalg, nonlinsols='Newton-type'))
+    for linsol in LINSOL_DCT.values():
+        print(f"Functional vs Newton for solalg {solalg}, linsol {linsol}")
+        fisher_test(*sumit_both(solalgs=solalg, nonlinsols='Functional',
+                                linsols=linsol),
+                    *sumit_both(solalgs=solalg, nonlinsols='Newton-type',
+                                linsols=linsol))

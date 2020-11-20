@@ -45,4 +45,15 @@ time python filter_models_by_error.py
 time python execute_study_algorithms.py
 time python execute_study_tolerances.py
 
-# TODO Run plots
+# Run plots
+for script in `ls plot_*`; do
+  if [ $script != "plot_Figure_S1.py" ] \
+      && [ $script != "plot_integration_algo_scatter.py" ]; then
+    python $script
+  fi
+done
+
+# Run further analyses
+for script in `ls stats_*`; do
+  python $script
+done
