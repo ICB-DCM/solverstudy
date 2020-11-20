@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" level="2" version="1">
+  <model id="vanHeerden2" name="vanHeerden2">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="volume" name="volume">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="length" name="length">
+        <listOfUnits>
+          <unit kind="metre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_2" id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_3" id="time" name="time">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_4" id="area" name="area">
+        <listOfUnits>
+          <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_5" id="compartment" name="compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_6" id="EtOH" name="EtOH" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_7" id="Glycerol" name="Glycerol" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_8" id="PiVac" name="PiVac" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_9" id="atp" name="atp" compartment="compartment" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="fbp" name="fbp" compartment="compartment" initialConcentration="2" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="g6p" name="g6p" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_12" id="phos" name="phos" compartment="compartment" initialConcentration="10" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_13" id="KATPASE" name="KATPASE" value="10" constant="true"/>
+      <parameter metaid="metaid_14" id="KMLGADP" name="KMLGADP" value="0.1" constant="true"/>
+      <parameter metaid="metaid_15" id="KMLGF16P" name="KMLGF16P" value="1" constant="true"/>
+      <parameter metaid="metaid_16" id="KMLGP" name="KMLGP" value="2" constant="true"/>
+      <parameter metaid="metaid_17" id="KMPFKATP" name="KMPFKATP" value="0.1" constant="true"/>
+      <parameter metaid="metaid_18" id="KiPFKATP" name="KiPFKATP" value="3" constant="true"/>
+      <parameter metaid="metaid_19" id="VMAXGLYC" name="VMAXGLYC" value="0" constant="true"/>
+      <parameter metaid="metaid_20" id="VMAXLG" name="VMAXLG" value="10" constant="true"/>
+      <parameter metaid="metaid_21" id="VMAXPFK" name="VMAXPFK" value="10" constant="true"/>
+      <parameter metaid="metaid_22" id="atot" name="atot" value="5" constant="true"/>
+      <parameter metaid="metaid_23" id="k6" name="k6" value="0.3" constant="true"/>
+      <parameter metaid="metaid_24" id="pT" name="pT" value="10" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_28" id="v1" name="v1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="atp" stoichiometry="2"/>
+          <speciesReference metaid="metaid_26" species="g6p" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_27" species="fbp" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> VMAXPFK </ci>
+                <ci> atp </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> KMPFKATP </ci>
+                <apply>
+                  <times/>
+                  <ci> atp </ci>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> atp </ci>
+                      <ci> KiPFKATP </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_33" id="v2" name="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_29" species="phos" stoichiometry="2"/>
+          <speciesReference metaid="metaid_30" species="fbp" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_31" species="atp" stoichiometry="4"/>
+          <speciesReference metaid="metaid_32" species="EtOH" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> VMAXLG </ci>
+                <apply>
+                  <divide/>
+                  <ci> fbp </ci>
+                  <apply>
+                    <plus/>
+                    <ci> KMLGF16P </ci>
+                    <ci> fbp </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <minus/>
+                    <ci> atot </ci>
+                    <ci> atp </ci>
+                  </apply>
+                  <ci> KMLGADP </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> phos </ci>
+                  <ci> KMLGP </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <minus/>
+                      <ci> atot </ci>
+                      <ci> atp </ci>
+                    </apply>
+                    <ci> KMLGADP </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> phos </ci>
+                    <ci> KMLGP </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_36" id="v3" name="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_34" species="atp" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_35" species="phos" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> KATPASE </ci>
+              <ci> atp </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_39" id="v4" name="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_37" species="PiVac" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_38" species="phos" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k6 </ci>
+              <apply>
+                <minus/>
+                <ci> pT </ci>
+                <ci> phos </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_43" id="v5" name="v5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_40" species="fbp" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_41" species="Glycerol" stoichiometry="1"/>
+          <speciesReference metaid="metaid_42" species="phos" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> VMAXGLYC </ci>
+              <apply>
+                <divide/>
+                <ci> fbp </ci>
+                <apply>
+                  <plus/>
+                  <ci> KMLGF16P </ci>
+                  <ci> fbp </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="sedaghat1" name="sedaghat1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="L" compartment="default" initialConcentration="7237784.79589" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="P" compartment="default" initialConcentration="1174269000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="U" compartment="default" initialConcentration="72377847958.9" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_4" id="alphaQ" value="0.0005" constant="false"/>
+      <parameter metaid="metaid_5" id="alphaR" value="5e-06" constant="false"/>
+      <parameter metaid="metaid_6" id="beta" value="5.2000106e-12" constant="false"/>
+      <parameter metaid="metaid_7" id="deltaL" value="0.0001" constant="false"/>
+      <parameter metaid="metaid_8" id="deltaP" value="0.5" constant="false"/>
+      <parameter metaid="metaid_9" id="deltaU" value="0.02" constant="false"/>
+      <parameter metaid="metaid_10" id="lambda" value="2000000000" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_12" id="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_11" species="U" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> lambda </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_14" id="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_13" species="U" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaU </ci>
+              <ci> U </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_17" id="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_15" species="U" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_16" species="P" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> beta </ci>
+              <ci> P </ci>
+              <ci> U </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_19" id="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_18" species="P" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaP </ci>
+              <ci> P </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_22" id="v5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_20" species="P" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_21" species="L" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> alphaR </ci>
+              <ci> P </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_25" id="v6" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_23" species="P" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_24" species="L"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> alphaQ </ci>
+              <ci> L </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_27" id="v7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_26" species="L" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaL </ci>
+              <ci> L </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_29" id="v8" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_28" species="L" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> alphaQ </ci>
+              <ci> L </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

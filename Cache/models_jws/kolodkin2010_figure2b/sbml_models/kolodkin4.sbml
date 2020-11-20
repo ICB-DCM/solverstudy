@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="kolodkin4" name="kolodkin4" substanceUnits="nmol" timeUnits="min" volumeUnits="L" extentUnits="nM">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="TR">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Kapf </ci>
+            </bvar>
+            <bvar>
+              <ci> Cvar </ci>
+            </bvar>
+            <bvar>
+              <ci> Kapb </ci>
+            </bvar>
+            <bvar>
+              <ci> Nvar </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> Cvar </ci>
+                <ci> Kapf </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> Kapb </ci>
+                <ci> Nvar </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="nmol" name="nmol">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="L" name="L">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_2" id="min" name="min">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="60"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_3" id="nM" name="nM">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_4" sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_5" id="Lc" compartment="default_compartment" initialConcentration="0.005" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_6" id="Ln_" name="Ln_" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="NR" compartment="default_compartment" initialConcentration="83.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="NRLc" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="NRLn" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="NRc" compartment="default_compartment" initialConcentration="83.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="RE" compartment="default_compartment" initialConcentration="3.7" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" id="REL" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_13" id="EXTERNAL" value="0" constant="false"/>
+      <parameter metaid="metaid_14" id="Kapb" value="3.24e-11" constant="false"/>
+      <parameter metaid="metaid_15" id="Kapb4" value="5.4e-12" constant="false"/>
+      <parameter metaid="metaid_16" id="Kapb5" value="5.4e-12" constant="false"/>
+      <parameter metaid="metaid_17" id="Kapf" value="3.24e-11" constant="false"/>
+      <parameter metaid="metaid_18" id="Kapf4" value="5.4e-12" constant="false"/>
+      <parameter metaid="metaid_19" id="Kapf5" value="5.4e-12" constant="false"/>
+      <parameter metaid="metaid_20" id="Vcytosol" value="1.55e-12" constant="false"/>
+      <parameter metaid="metaid_21" id="Vnucleus" value="4.5e-13" constant="false"/>
+      <parameter metaid="metaid_22" id="k1" value="60" constant="false"/>
+      <parameter metaid="metaid_23" id="k12" value="60" constant="false"/>
+      <parameter metaid="metaid_24" id="k13" value="60" constant="false"/>
+      <parameter metaid="metaid_25" id="k2" value="60" constant="false"/>
+      <parameter metaid="metaid_26" id="k22" value="60" constant="false"/>
+      <parameter metaid="metaid_27" id="k23" value="60" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_31" id="v_1" name="v_1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_28" species="NRLn" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_29" species="RE" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_30" species="REL" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k1 </ci>
+                <ci> NRLn </ci>
+                <ci> RE </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k2 </ci>
+                <ci> REL </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_34" id="v_2" name="v_2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_32" species="Lc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_33" species="Ln_" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <ci> TR </ci>
+                <ci> Kapf </ci>
+                <ci> Lc </ci>
+                <ci> Kapb </ci>
+                <ci> Ln_ </ci>
+              </apply>
+              <ci> Vnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="v_3" name="v_3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_35" species="Ln_" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_36" species="NR" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_37" species="NRLn" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k12 </ci>
+                <ci> Ln_ </ci>
+                <ci> NR </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k22 </ci>
+                <ci> NRLn </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_42" id="v_4" name="v_4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_39" species="NRc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_40" species="NRLc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_41" species="Lc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k13 </ci>
+                <ci> Lc </ci>
+                <ci> NRc </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k23 </ci>
+                <ci> NRLc </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_45" id="v_5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_43" species="NRc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_44" species="NR" stoichiometry="3.44444444444444" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <ci> TR </ci>
+                <ci> Kapf4 </ci>
+                <ci> NRc </ci>
+                <ci> Kapb4 </ci>
+                <ci> NR </ci>
+              </apply>
+              <ci> Vcytosol </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_54" id="v_6" name="v_6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_46" species="NRLc" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_47" species="NRLn" stoichiometry="3.44444444444444" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_48" species="RE"/>
+          <modifierSpeciesReference metaid="metaid_49" species="Ln_"/>
+          <modifierSpeciesReference metaid="metaid_50" species="Lc"/>
+          <modifierSpeciesReference metaid="metaid_51" species="REL"/>
+          <modifierSpeciesReference metaid="metaid_52" species="NRc"/>
+          <modifierSpeciesReference metaid="metaid_53" species="NR"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <divide/>
+                <apply>
+                  <ci> TR </ci>
+                  <ci> Kapf5 </ci>
+                  <ci> NRLc </ci>
+                  <ci> Kapb5 </ci>
+                  <ci> NRLn </ci>
+                </apply>
+                <ci> Vcytosol </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRLn </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> RE </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> Ln_ </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NR </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRc </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRLc </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> REL </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRLn </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> RE </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> Ln_ </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NR </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRc </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> NRLc </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 0 </cn>
+                <ci> REL </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

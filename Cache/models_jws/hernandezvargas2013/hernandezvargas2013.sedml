@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_esteban2013" initialTime="0" outputStartTime="0" outputEndTime="3650" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_esteban2013" source="https://jjj.bio.vu.nl/models/hernandezvargas1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TStar']" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M']" newValue="150.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MStar']" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T']" newValue="1000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='V']" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='deltaT']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pT']" newValue="38.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CM']" newValue="220.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='default']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='deltaM']" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='deltaV']" newValue="2.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kM']" newValue="4.33e-08"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rhoT']" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sT']" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rhoM']" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sM']" newValue="0.15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kT']" newValue="4.57e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='deltaTStar']" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pM']" newValue="35.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='deltaMStar']" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CT']" newValue="300.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_esteban2013" modelReference="model0_esteban2013" simulationReference="sim0_model0_esteban2013"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_esteban2013_CD4plusTcells_0">
+      <listOfVariables>
+        <variable id="task0_model0_esteban2013_CD4plusTcells" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CD4plusTcells']" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_esteban2013_CD4plusTcells </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_time_0">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_time_1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_time_2">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_time_3">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_viruscopiesperml">
+      <listOfVariables>
+        <variable id="viruscopiesperml" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='viruscopiesperml']" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> viruscopiesperml </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_TStar">
+      <listOfVariables>
+        <variable id="TStar" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TStar']" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> TStar </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_M">
+      <listOfVariables>
+        <variable id="M" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M']" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> M </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_esteban2013_MStar">
+      <listOfVariables>
+        <variable id="MStar" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MStar']" taskReference="task0_model0_esteban2013"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> MStar </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="plot0" name="Figure 1A">
+      <listOfCurves>
+        <curve id="plot0_CD4plusTcells" logX="false" logY="false" xDataReference="task0_model0_esteban2013_time_0" yDataReference="task0_model0_esteban2013_CD4plusTcells_0"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot1" name="Figure 1B">
+      <listOfCurves>
+        <curve id="plot1_viruscopiesperml" logX="false" logY="false" xDataReference="task0_model0_esteban2013_time_1" yDataReference="task0_model0_esteban2013_viruscopiesperml"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot2" name="Figure 1C">
+      <listOfCurves>
+        <curve id="plot2_TStar" logX="false" logY="false" xDataReference="task0_model0_esteban2013_time_2" yDataReference="task0_model0_esteban2013_TStar"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot3" name="Figure 1D">
+      <listOfCurves>
+        <curve id="plot3_M" logX="false" logY="false" xDataReference="task0_model0_esteban2013_time_3" yDataReference="task0_model0_esteban2013_M"/>
+        <curve id="plot3_MStar" logX="false" logY="false" xDataReference="task0_model0_esteban2013_time_3" yDataReference="task0_model0_esteban2013_MStar"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

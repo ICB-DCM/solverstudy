@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_bucher1" initialTime="0" outputStartTime="0" outputEndTime="600" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_bucher1" name="bucher1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/bucher1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLpOH_m']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='AS_b']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='AS_m']/@initialConcentration" newValue="8797.15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASoOH_m']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASL_b']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASL_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASL_m']/@initialConcentration" newValue="30.56"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASoOH_b']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASoOH_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLpOH_b']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLoOH_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLoOH_b']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASpOH_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASpOH_b']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASpOH_m']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='AS_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLoOH_m']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLpOH_c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASLoOH_Km1']/@value" newValue="3900.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASLoOH_Vmax']/@value" newValue="39.1342"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASLpOH_Km1']/@value" newValue="1400.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASLpOH_Vmax']/@value" newValue="17.4446"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASoOH_Km1']/@value" newValue="29700.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASoOH_Vmax']/@value" newValue="47.4985"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASpOH_Km1']/@value" newValue="25600.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CYP3A4_ASpOH_Vmax']/@value" newValue="15.7336"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Export_ASL_k']/@value" newValue="0.021822"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Export_ASLoOH_k']/@value" newValue="0.0026674"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Export_ASLpOH_k']/@value" newValue="0.0011319"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Export_AS_k']/@value" newValue="0.002166"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Export_ASoOH_k']/@value" newValue="0.0015983"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Export_ASpOH_k']/@value" newValue="0.00079526"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Import_ASL_k']/@value" newValue="0.2754"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Import_ASLoOH_k']/@value" newValue="0.026122"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Import_ASLpOH_k']/@value" newValue="0.033729"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Import_AS_k']/@value" newValue="0.020335"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Import_ASoOH_k']/@value" newValue="0.00038875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Import_ASpOH_k']/@value" newValue="0.0039614"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Prot_k1']/@value" newValue="8.52"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='UGT1A3_AS_KI1']/@value" newValue="75000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='UGT1A3_AS_Km1']/@value" newValue="12000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='UGT1A3_AS_Vmax']/@value" newValue="13.5862"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='fu_AS']/@value" newValue="0.22"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='fu_ASL']/@value" newValue="0.22"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_CR_ASL_c']/@value" newValue="3.55e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_CR_ASL_m']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_PON_ASL_c']/@value" newValue="0.0043734"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_PON_OH_c']/@value" newValue="0.0039829"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cell']/@size" newValue="0.0142"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='medium']/@size" newValue="2.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_bucher1" modelReference="model0_bucher1" simulationReference="sim0_model0_bucher1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASoOH_m">
+      <listOfVariables>
+        <variable id="ASoOH_m" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASoOH_m']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASoOH_m </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASL_m">
+      <listOfVariables>
+        <variable id="ASL_m" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASL_m']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASL_m </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASLpOH_m">
+      <listOfVariables>
+        <variable id="ASLpOH_m" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLpOH_m']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASLpOH_m </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASLoOH_m">
+      <listOfVariables>
+        <variable id="ASLoOH_m" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLoOH_m']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASLoOH_m </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_AS_c">
+      <listOfVariables>
+        <variable id="AS_c" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='AS_c']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> AS_c </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASpOH_c">
+      <listOfVariables>
+        <variable id="ASpOH_c" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASpOH_c']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASpOH_c </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASoOH_c">
+      <listOfVariables>
+        <variable id="ASoOH_c" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASoOH_c']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASoOH_c </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASL_c">
+      <listOfVariables>
+        <variable id="ASL_c" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASL_c']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASL_c </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASLpOH_c">
+      <listOfVariables>
+        <variable id="ASLpOH_c" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLpOH_c']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASLpOH_c </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASLoOH_c">
+      <listOfVariables>
+        <variable id="ASLoOH_c" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASLoOH_c']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASLoOH_c </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_AS_m">
+      <listOfVariables>
+        <variable id="AS_m" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='AS_m']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> AS_m </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bucher1_ASpOH_m">
+      <listOfVariables>
+        <variable id="ASpOH_m" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ASpOH_m']" taskReference="task0_model0_bucher1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ASpOH_m </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_2_AS_in_cytosol" name="Figure 2 AS in cytosol">
+      <listOfCurves>
+        <curve id="plot6_AS_c" name="AS in cytosol" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_AS_c"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_AS_in_medium" name="Figure 2 AS in medium">
+      <listOfCurves>
+        <curve id="plot0_AS_m" name="AS in medium" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_AS_m"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASL_in_cytosol" name="Figure 2 ASL in cytosol">
+      <listOfCurves>
+        <curve id="plot9_ASL_c" name="ASL in cytosol" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASL_c"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASL_in_medium" name="Figure 2 ASL in medium">
+      <listOfCurves>
+        <curve id="plot3_ASL_m" name="ASL in medium" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASL_m"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASLoOH_in_cytosol" name="Figure 2 ASLoOH in cytosol">
+      <listOfCurves>
+        <curve id="plot11_ASLoOH_c" name="ASLoOH in cytosol" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASLoOH_c"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASLoOH_in_medium" name="Figure 2 ASLoOH in medium">
+      <listOfCurves>
+        <curve id="plot5_ASLoOH_m" name="ASLoOH in medium" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASLoOH_m"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASLpOH_in_cytosol" name="Figure 2 ASLpOH in cytosol">
+      <listOfCurves>
+        <curve id="plot10_ASLpOH_c" name="ASLpOH in cytosol" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASLpOH_c"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASLpOH_in_medium" name="Figure 2 ASLpOH in medium">
+      <listOfCurves>
+        <curve id="plot4_ASLpOH_m" name="ASLpOH in medium" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASLpOH_m"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASoOH_in_cytosol" name="Figure 2 ASoOH in cytosol">
+      <listOfCurves>
+        <curve id="plot8_ASoOH_c" name="ASoOH in cytosol" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASoOH_c"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASoOH_in_medium" name="Figure 2 ASoOH in medium">
+      <listOfCurves>
+        <curve id="plot2_ASoOH_m" name="ASoOH in medium" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASoOH_m"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASpOH_in_cytosol" name="Figure 2 ASpOH in cytosol">
+      <listOfCurves>
+        <curve id="plot7_ASpOH_c" name="ASpOH in cytosol" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASpOH_c"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_ASpOH_in_medium" name="Figure 2 ASpOH in medium">
+      <listOfCurves>
+        <curve id="plot1_ASpOH_m" name="ASpOH in medium" logX="false" logY="false" xDataReference="task0_model0_bucher1_time" yDataReference="task0_model0_bucher1_ASpOH_m"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

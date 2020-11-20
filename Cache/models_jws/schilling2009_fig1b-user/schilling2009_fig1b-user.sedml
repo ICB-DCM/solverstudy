@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_schilling1" initialTime="0" outputStartTime="0" outputEndTime="60" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_schilling1" name="schilling1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/schilling1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cell']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_ppMEK']/@value" newValue="40.5364"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_ppERK']/@value" newValue="13.5981"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_pJAK2']/@value" newValue="0.21008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_pEpoR']/@value" newValue="0.493312"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='scale_SOS']/@value" newValue="1.10228"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ppERK_neg_feedback_on_mSOS']/@value" newValue="5122.68"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pSOS_dephosphorylation']/@value" newValue="0.124944"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pRaf_dephosphorylation']/@value" newValue="0.374228"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pJAK2_dephosphorylation_by_actSHP1']/@value" newValue="0.368384"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pEpoR_dephosphorylation_by_actSHP1']/@value" newValue="1.19995"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mSOS_release_from_membrane']/@value" newValue="15.5956"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='mSOS_induced_Raf_phosphorylation']/@value" newValue="0.144515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='actSHP1_deactivation']/@value" newValue="0.0248773"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Second_MEK_dephosphorylation']/@value" newValue="0.0732724"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Second_MEK2_phosphorylation_by_pRaf']/@value" newValue="215.158"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Second_MEK1_phosphorylation_by_pRaf']/@value" newValue="667.957"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Second_ERK_dephosphorylation']/@value" newValue="3.00453"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Second_ERK2_phosphorylation_by_ppMEK']/@value" newValue="53.0816"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Second_ERK1_phosphorylation_by_ppMEK']/@value" newValue="59.5251"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='SOS_recruitment_by_pEpoR']/@value" newValue="0.10271"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='SHP1_delay']/@value" newValue="0.408408"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='SHP1_activation_by_pEpoR']/@value" newValue="0.408408"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='JAK2_phosphorylation_by_Epo']/@value" newValue="0.0122149"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='First_MEK_dephosphorylation']/@value" newValue="0.130937"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='First_MEK2_phosphorylation_by_pRaf']/@value" newValue="3.11919"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='First_MEK1_phosphorylation_by_pRaf']/@value" newValue="0.687193"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='First_ERK_dephosphorylation']/@value" newValue="39.0886"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='First_ERK2_phosphorylation_by_ppMEK']/@value" newValue="2.44361"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='First_ERK1_phosphorylation_by_ppMEK']/@value" newValue="2.4927"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='EpoR_phosphorylation_by_pJAK2']/@value" newValue="3.15714"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay01_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pERK2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Epo']/@initialConcentration" newValue="50.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ERK2']/@initialConcentration" newValue="21.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ERK1']/@initialConcentration" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Raf']/@initialConcentration" newValue="3.7719"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pERK1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pEpoR']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pSOS']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay04_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pMEK1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay02_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pMEK2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='SHP1']/@initialConcentration" newValue="10.7991"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay08_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='JAK2']/@initialConcentration" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MEK1']/@initialConcentration" newValue="24.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MEK2']/@initialConcentration" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='SOS']/@initialConcentration" newValue="2.5101"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay06_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='EpoR']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pJAK2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay05_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pRaf']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ppMEK2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ppMEK1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mSOS']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='actSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay07_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Delay03_mSHP1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ppERK1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ppERK2']/@initialConcentration" newValue="0.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_schilling1" modelReference="model0_schilling1" simulationReference="sim0_model0_schilling1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_schilling1_rescaled_SOS">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_SOS" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_SOS']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_SOS </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_rescaled_pSOS">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_pSOS" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_pSOS']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_pSOS </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_rescaled_ppERK2">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_ppERK2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_ppERK2']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_ppERK2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_rescaled_ppERK1">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_ppERK1" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_ppERK1']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_ppERK1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_rescaled_ppMEK2">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_ppMEK2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_ppMEK2']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_ppMEK2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_rescaled_ppMEK1">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_ppMEK1" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_ppMEK1']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_ppMEK1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_rescaled_pEpoR">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_pEpoR" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_pEpoR']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_pEpoR </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_rescaled_pJAK2">
+      <listOfVariables>
+        <variable id="task0_model0_schilling1_rescaled_pJAK2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='rescaled_pJAK2']" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_schilling1_rescaled_pJAK2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schilling1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schilling1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_1B_SOS" name="Figure 1B SOS">
+      <listOfCurves>
+        <curve id="plot7_rescaled_SOS" name="SOS" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_SOS"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1B_pEpoR" name="Figure 1B pEpoR">
+      <listOfCurves>
+        <curve id="plot1_rescaled_pEpoR" name="pEpoR" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_pEpoR"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1B_pJAK2" name="Figure 1B pJAK2">
+      <listOfCurves>
+        <curve id="plot0_rescaled_pJAK2" name="pJAK2" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_pJAK2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1B_pSOS" name="Figure 1B pSOS">
+      <listOfCurves>
+        <curve id="plot6_rescaled_pSOS" name="pSOS" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_pSOS"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1B_ppERK1" name="Figure 1B ppERK1">
+      <listOfCurves>
+        <curve id="plot4_rescaled_ppERK1" name="ppERK1" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_ppERK1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1B_ppERK2" name="Figure 1B ppERK2">
+      <listOfCurves>
+        <curve id="plot5_rescaled_ppERK2" name="ppERK2" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_ppERK2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1B_ppMEK1" name="Figure 1B ppMEK1">
+      <listOfCurves>
+        <curve id="plot2_rescaled_ppMEK1" name="ppMEK1" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_ppMEK1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1B_ppMEK2" name="Figure 1B ppMEK2">
+      <listOfCurves>
+        <curve id="plot3_rescaled_ppMEK2" name="ppMEK2" logX="false" logY="false" xDataReference="task0_model0_schilling1_time" yDataReference="task0_model0_schilling1_rescaled_ppMEK2"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

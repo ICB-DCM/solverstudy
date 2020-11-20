@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_friedland1" initialTime="0" outputStartTime="0" outputEndTime="160" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_friedland1" name="friedland1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/friedland1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mT3cr']/@initialConcentration" newValue="0.00566438"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='taRNA']/@initialConcentration" newValue="0.006796941377"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mT7cr']/@initialConcentration" newValue="0.3569405099"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ara']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pT7']/@initialConcentration" newValue="0.05230744612"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mGFPcr']/@initialConcentration" newValue="0.176991329"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pT3']/@initialConcentration" newValue="6.41674e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pGFP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='cAra']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dAra']/@value" newValue="0.1201"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mGFP']/@value" newValue="0.07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mT3']/@value" newValue="0.0701"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mT7']/@value" newValue="0.0706"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pGFP']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pT3']/@value" newValue="0.0069"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pT7']/@value" newValue="0.0056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_taRNA']/@value" newValue="0.1177"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_ara']/@value" newValue="0.0571"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_pT3']/@value" newValue="3.006"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_pT7']/@value" newValue="3.8009"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='km3']/@value" newValue="7.9075"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='km7']/@value" newValue="3.0455"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n3']/@value" newValue="0.8892"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n7']/@value" newValue="2.602"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse1_length']/@value" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse1_start']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse2_length']/@value" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse3_length']/@value" newValue="5.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_conc']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_flag']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_interval']/@value" newValue="20.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mGFPcr']/@value" newValue="0.0123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mT3cr']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mT7cr']/@value" newValue="0.0252"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pGFP']/@value" newValue="0.1007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pT3']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pT7']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_taRNA']/@value" newValue="0.0008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sT']/@value" newValue="0.8467"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pGFPk']/@value" newValue="0.9923"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pT3k']/@value" newValue="0.0115"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pT7k']/@value" newValue="0.0766"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cell']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_friedland1" name="friedland1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/friedland1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mT3cr']/@initialConcentration" newValue="0.00566438"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='taRNA']/@initialConcentration" newValue="0.006796941377"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mT7cr']/@initialConcentration" newValue="0.3569405099"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ara']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pT7']/@initialConcentration" newValue="0.05230744612"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mGFPcr']/@initialConcentration" newValue="0.176991329"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pT3']/@initialConcentration" newValue="6.41674e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pGFP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='cAra']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dAra']/@value" newValue="0.1201"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mGFP']/@value" newValue="0.07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mT3']/@value" newValue="0.0701"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mT7']/@value" newValue="0.0706"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pGFP']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pT3']/@value" newValue="0.0069"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pT7']/@value" newValue="0.0056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_taRNA']/@value" newValue="0.1177"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_ara']/@value" newValue="0.0571"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_pT3']/@value" newValue="3.006"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_pT7']/@value" newValue="3.8009"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='km3']/@value" newValue="7.9075"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='km7']/@value" newValue="3.0455"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n3']/@value" newValue="0.8892"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n7']/@value" newValue="2.602"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse1_length']/@value" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse1_start']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse2_length']/@value" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse3_length']/@value" newValue="-1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_conc']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_flag']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_interval']/@value" newValue="20.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mGFPcr']/@value" newValue="0.0123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mT3cr']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mT7cr']/@value" newValue="0.0252"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pGFP']/@value" newValue="0.1007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pT3']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pT7']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_taRNA']/@value" newValue="0.0008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sT']/@value" newValue="0.8467"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pGFPk']/@value" newValue="0.9923"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pT3k']/@value" newValue="0.0115"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pT7k']/@value" newValue="0.0766"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cell']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model2_friedland1" name="friedland1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/friedland1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mT3cr']/@initialConcentration" newValue="0.00566438"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='taRNA']/@initialConcentration" newValue="0.006796941377"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mT7cr']/@initialConcentration" newValue="0.3569405099"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ara']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pT7']/@initialConcentration" newValue="0.05230744612"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='mGFPcr']/@initialConcentration" newValue="0.176991329"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pT3']/@initialConcentration" newValue="6.41674e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pGFP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='cAra']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='dAra']/@value" newValue="0.1201"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mGFP']/@value" newValue="0.07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mT3']/@value" newValue="0.0701"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_mT7']/@value" newValue="0.0706"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pGFP']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pT3']/@value" newValue="0.0069"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_pT7']/@value" newValue="0.0056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_taRNA']/@value" newValue="0.1177"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_ara']/@value" newValue="0.0571"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_pT3']/@value" newValue="3.006"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_pT7']/@value" newValue="3.8009"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='km3']/@value" newValue="7.9075"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='km7']/@value" newValue="3.0455"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n3']/@value" newValue="0.8892"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n7']/@value" newValue="2.602"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse1_length']/@value" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse1_start']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse2_length']/@value" newValue="11.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse3_length']/@value" newValue="22.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_conc']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_flag']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pulse_interval']/@value" newValue="20.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mGFPcr']/@value" newValue="0.0123"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mT3cr']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_mT7cr']/@value" newValue="0.0252"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pGFP']/@value" newValue="0.1007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pT3']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_pT7']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s0_taRNA']/@value" newValue="0.0008"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sT']/@value" newValue="0.8467"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pGFPk']/@value" newValue="0.9923"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pT3k']/@value" newValue="0.0115"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='s_pT7k']/@value" newValue="0.0766"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cell']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task1_model1_friedland1" modelReference="model1_friedland1" simulationReference="sim0_model0_friedland1"/>
+    <task id="task0_model0_friedland1" modelReference="model0_friedland1" simulationReference="sim0_model0_friedland1"/>
+    <task id="task2_model2_friedland1" modelReference="model2_friedland1" simulationReference="sim0_model0_friedland1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task1_model1_friedland1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_friedland1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_friedland1_pGFP">
+      <listOfVariables>
+        <variable id="pGFP" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pGFP']" taskReference="task1_model1_friedland1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> pGFP </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_S5" name="Figure S5">
+      <listOfCurves>
+        <curve id="plot0_pGFP" name="pGFP two pulses" logX="false" logY="false" xDataReference="task1_model1_friedland1_time" yDataReference="task1_model1_friedland1_pGFP"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

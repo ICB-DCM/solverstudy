@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" level="2" version="1">
+  <model id="tiago3" name="tiago3">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" id="c1" name="Organism" spatialDimensions="3" size="1" constant="true"/>
+      <compartment metaid="metaid_1" id="default" name="Environment" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0043245"/>
+                  <rdf:li rdf:resource="http://identifiers.org/fma/FMA:20394"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_2" id="s1" name="iron_in_Plasma" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="s10" name="iron_ions_Outside" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="s11" name="iron_in_Heart" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="s12" name="iron_in_Lungs" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="s13" name="iron_in_Kidneys" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="s14" name="iron_in_Testes" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="s15" name="iron_in_Stomach" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="s16" name="iron_in_Fat" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="s17" name="iron_in_Brain" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="s2" name="iron_in_Bone Marrow" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" id="s3" name="iron_in_RBC" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" id="s4" name="iron_in_Spleen" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_14" id="s5" name="iron_in_Liver" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_15" id="s6" name="iron_in_Muscle" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_16" id="s7" name="iron_in_Duodenum" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_17" id="s8" name="iron_in_Integument" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_18" id="s9" name="iron_in_Intestine" compartment="c1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction metaid="metaid_22" id="re1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_20" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_21" species="s2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_19" id="k1" name="1kp_bon" value="6.92"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_26" id="re10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_24" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_25" species="s7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_23" id="k1" name="10kp_duo" value="0.038"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_30" id="re11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_28" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_29" species="s9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_27" id="k1" name="3kp_int" value="0.93"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_34" id="re12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_32" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_33" species="s8" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_31" id="k1" name="6kp_intg" value="1.33"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="re14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_36" species="s9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_37" species="s10" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s9 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_35" id="k1" name="25kint_out" value="0.22"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_42" id="re15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_40" species="s8" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_41" species="s10" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s8 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_39" id="k1" name="24kintg_out" value="0.072"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_46" id="re16" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_44" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_45" species="s11" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_43" id="k1" name="12kp_hea" value="0.36"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_50" id="re17" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_48" species="s11" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_49" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s11 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_47" id="k1" name="21khea_p" value="0.17"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_54" id="re18" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_52" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_53" species="s12" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_51" id="k1" name="9kp_lun" value="0.63"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_58" id="re19" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_56" species="s12" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_57" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s12 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_55" id="k1" name="19klung_p" value="0.086"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_62" id="re2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_60" species="s2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_61" species="s3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s2 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_59" id="k1" name="27kbon_rbc" value="0.5"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_66" id="re22" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_64" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_65" species="s13" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_63" id="k1" name="2kp_kid" value="1.62"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_70" id="re23" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_68" species="s13" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_69" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s13 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_67" id="k1" name="14kkid_p" value="0.23"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_74" id="re24" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_72" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_73" species="s14" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_71" id="k1" name="13kp_tes" value="0.043"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_78" id="re25" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_76" species="s14" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_77" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s14 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_75" id="k1" name="22ktes_p" value="0.067"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_82" id="re26" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_80" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_81" species="s15" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_79" id="k1" name="5kp_sto" value="0.27"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_86" id="re28" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_84" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_85" species="s16" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_83" id="k1" name="7kp_fat" value="0.066"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_90" id="re29" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_88" species="s16" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_89" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s16 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_87" id="k1" name="17kfat_p" value="0.099"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_94" id="re3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_92" species="s3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_93" species="s4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s3 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_91" id="k1" name="29krbc_spl" value="0.032"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_98" id="re30" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_96" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_97" species="s17" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_95" id="k1" name="11kp_bra" value="0.021"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_102" id="re31" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_100" species="s17" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_101" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s17 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_99" id="k1" name="20kbra_p" value="0.028"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_106" id="re32" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_104" species="s7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_105" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> s7 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_103" id="k1" name="26kduo_p" value="0.24"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_110" id="re33" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_108" species="s15" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_109" species="s10" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> s15 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_107" id="k1" name="16ksto_out" value="0.29"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_114" id="re4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_112" species="s4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_113" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s4 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_111" id="k1" name="23kspl_p" value="1.91"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_118" id="re5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_116" species="s2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_117" species="s4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s2 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_115" id="k1" name="28kbon_spl" value="0.046"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_122" id="re6" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_120" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_121" species="s5" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_119" id="k1" name="4kp_liv" value="5.25"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_126" id="re7" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_124" species="s5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_125" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s5 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_123" id="k1" name="15kliv_p" value="0.1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_130" id="re8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_128" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_129" species="s6" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s1 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_127" id="k1" name="8kp_mus" value="2.52"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_134" id="re9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_132" species="s6" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_133" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s6 </ci>
+              <ci> k1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_131" id="k1" name="18kmus_p" value="0.14"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

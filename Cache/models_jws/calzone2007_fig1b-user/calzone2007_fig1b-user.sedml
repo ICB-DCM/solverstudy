@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_calzone1" initialTime="0" outputStartTime="0" outputEndTime="250" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_calzone1" name="calzone1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/calzone1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MPFn']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='StgPc']/@initialConcentration" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FZYa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Xm']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Stgm']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Stgn']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Stgc']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MPFc']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='N']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Wee1n']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='preMPFc']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Wee1Pn']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Xp']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='StgPn']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Wee1c']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IEa_1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='preMPFn']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='E_1']/@value" newValue="7e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jafzy']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jaie']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jastg']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jawee']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jifzy']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jiie']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jistg']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jiwee']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Jm']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='StringT']/@value" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Wee1T']/@value" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='factor_1']/@value" newValue="1.95"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kafzy']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kaie']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kastg']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kastgp']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kawee']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdc']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdm']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdmp']/@value" newValue="0.002"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdn']/@value" newValue="1.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdnp']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdstg']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kez_1']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kifzy']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kiie']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kins_1']/@value" newValue="0.08"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kinw_1']/@value" newValue="0.04"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kistg']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kiwee']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kiweep']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kout_1']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kouts_1']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='koutw_1']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ksc']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ksstg']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kstg']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kstgp']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ksxm_1']/@value" newValue="0.0005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ksxp_1']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kt']/@value" newValue="0.15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kwee']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kweep']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytoplasm']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nuclei']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_calzone1" modelReference="model0_calzone1" simulationReference="sim0_model0_calzone1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_calzone1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_MPFc">
+      <listOfVariables>
+        <variable id="MPFc" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MPFc']" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> MPFc </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_StgPc">
+      <listOfVariables>
+        <variable id="StgPc" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='StgPc']" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> StgPc </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_Wee1c">
+      <listOfVariables>
+        <variable id="Wee1c" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Wee1c']" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Wee1c </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_CycBT">
+      <listOfVariables>
+        <variable id="CycBT" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='CycBT']" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> CycBT </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_MPFn">
+      <listOfVariables>
+        <variable id="MPFn" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='MPFn']" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> MPFn </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_StgPn">
+      <listOfVariables>
+        <variable id="StgPn" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='StgPn']" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> StgPn </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_calzone1_Wee1n">
+      <listOfVariables>
+        <variable id="Wee1n" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Wee1n']" taskReference="task0_model0_calzone1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Wee1n </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_1BBottom" name="Figure 1B Bottom">
+      <listOfCurves>
+        <curve id="plot1_MPFn" name="MPFn" logX="false" logY="false" xDataReference="task0_model0_calzone1_time" yDataReference="task0_model0_calzone1_MPFn"/>
+        <curve id="plot1_StgPn" name="StgPn" logX="false" logY="false" xDataReference="task0_model0_calzone1_time" yDataReference="task0_model0_calzone1_StgPn"/>
+        <curve id="plot1_Wee1n" name="Wee1n" logX="false" logY="false" xDataReference="task0_model0_calzone1_time" yDataReference="task0_model0_calzone1_Wee1n"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_1BTop" name="Figure 1B Top">
+      <listOfCurves>
+        <curve id="plot0_MPFc" name="MPFc" logX="false" logY="false" xDataReference="task0_model0_calzone1_time" yDataReference="task0_model0_calzone1_MPFc"/>
+        <curve id="plot0_StgPc" name="StgPc" logX="false" logY="false" xDataReference="task0_model0_calzone1_time" yDataReference="task0_model0_calzone1_StgPc"/>
+        <curve id="plot0_Wee1c" name="Wee1c" logX="false" logY="false" xDataReference="task0_model0_calzone1_time" yDataReference="task0_model0_calzone1_Wee1c"/>
+        <curve id="plot0_CycBT" name="CycBT" logX="false" logY="false" xDataReference="task0_model0_calzone1_time" yDataReference="task0_model0_calzone1_CycBT"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

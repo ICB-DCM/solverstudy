@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="rong1" name="rong1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="T" compartment="default" initialConcentration="1000000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="TEstar" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="Tstar" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="V" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_5" id="b" value="0.01" constant="false"/>
+      <parameter metaid="metaid_6" id="c" value="23" constant="false"/>
+      <parameter metaid="metaid_7" id="d" value="0.01" constant="false"/>
+      <parameter metaid="metaid_8" id="delta" value="1" constant="false"/>
+      <parameter metaid="metaid_9" id="deltaE" value="0.7" constant="false"/>
+      <parameter metaid="metaid_10" id="k" value="2.4e-08" constant="false"/>
+      <parameter metaid="metaid_11" id="lambda" value="10000" constant="false"/>
+      <parameter metaid="metaid_12" id="p" value="4000" constant="false"/>
+      <parameter metaid="metaid_13" id="phi" value="0.8" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_15" id="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_14" species="T" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> lambda </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_17" id="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_16" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d </ci>
+              <ci> T </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_21" id="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_18" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_19" species="TEstar" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_20" species="V"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> T </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_24" id="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_22" species="TEstar" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_23" species="T" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> b </ci>
+              <ci> TEstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_27" id="v5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="TEstar" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_26" species="Tstar" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> phi </ci>
+              <ci> TEstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_29" id="v6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_28" species="TEstar" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaE </ci>
+              <ci> TEstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_31" id="v7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_30" species="Tstar" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> delta </ci>
+              <ci> Tstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_34" id="v8" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_32" species="V" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_33" species="Tstar"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> p </ci>
+              <ci> Tstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_36" id="v9" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_35" species="V" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> c </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

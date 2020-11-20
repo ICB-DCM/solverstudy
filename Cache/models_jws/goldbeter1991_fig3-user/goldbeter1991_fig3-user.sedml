@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_goldbeter2" initialTime="0" outputStartTime="0" outputEndTime="100" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_goldbeter2" name="goldbeter2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/goldbeter2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Mvar']/@initialConcentration" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='X']/@initialConcentration" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Cvar']/@initialConcentration" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K1']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K2']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K3']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K4']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kc']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kd']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='V2']/@value" newValue="1.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='V4']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VM1']/@value" newValue="3.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VM3']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='cell']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kd']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='vd']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='vi']/@value" newValue="0.025"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default_compartment']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_goldbeter2" modelReference="model0_goldbeter2" simulationReference="sim0_model0_goldbeter2"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_goldbeter2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter2_X">
+      <listOfVariables>
+        <variable id="X" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='X']" taskReference="task0_model0_goldbeter2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> X </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter2_Cvar">
+      <listOfVariables>
+        <variable id="Cvar" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Cvar']" taskReference="task0_model0_goldbeter2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Cvar </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_goldbeter2_Mvar">
+      <listOfVariables>
+        <variable id="Mvar" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Mvar']" taskReference="task0_model0_goldbeter2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Mvar </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_Cvar_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_goldbeter2_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_goldbeter2_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_Mvar_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_goldbeter2_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_goldbeter2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_goldbeter2_time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3" name="Figure 3">
+      <listOfCurves>
+        <curve id="plot0_Cvar" name="C" logX="false" logY="false" xDataReference="plot0_Cvar_datagen0" yDataReference="task0_model0_goldbeter2_Cvar"/>
+        <curve id="plot0_Mvar" name="M" logX="false" logY="false" xDataReference="plot0_Mvar_datagen0" yDataReference="task0_model0_goldbeter2_Mvar"/>
+        <curve id="plot0_X" name="X" logX="false" logY="false" xDataReference="task0_model0_goldbeter2_time" yDataReference="task0_model0_goldbeter2_X"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

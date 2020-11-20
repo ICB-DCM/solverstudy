@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfDataDescriptions>
+    <dataDescription id="penkler_glc_data" name="penkler_glc_data" source="https://seek.sysmo-db.org/data_files/1159/download?version=1">
+      <listOfDataSources>
+        <dataSource id="penkler_data_time" indexSet="time"/>
+        <dataSource id="penkler_data_glc_1" indexSet="GLCrun1"/>
+        <dataSource id="penkler_data_glc_2" indexSet="GLCrun2"/>
+        <dataSource id="penkler_data_lac_1" indexSet="LACrun1"/>
+        <dataSource id="penkler_data_lac_2" indexSet="LACrun2"/>
+        <dataSource id="penkler_data_pyr_1" indexSet="PYRrun1"/>
+        <dataSource id="penkler_data_pyr_2" indexSet="PYRrun2"/>
+        <dataSource id="penkler_data_gly_1" indexSet="GLYrun1"/>
+        <dataSource id="penkler_data_gly_2" indexSet="GLYrun2"/>
+      </listOfDataSources>
+    </dataDescription>
+  </listOfDataDescriptions>
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_penkler2aa" initialTime="0" outputStartTime="0" outputEndTime="90" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_penkler2aa" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/penkler2aa/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='g3pPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pyrPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='g6pPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='glyEX']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pyrEX']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='b13pgPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='adpPF']" newValue="0.042"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='glcEX']" newValue="13.1884"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p3gPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='atpPF']" newValue="0.042"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='nadhPF']" newValue="0.042"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='dhapPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='gapPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pepPF']" newValue="0.00028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='lacEX']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='f16bpPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p2gPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='glcPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='f6pPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='nadPF']" newValue="0.042"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='lacPF']" newValue="0.0028"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcAdpPF']" newValue="0.0015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcAtpPF']" newValue="0.0015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcB13pgPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcDhapPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcF16bpPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcF6pPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcG6pPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcGapPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcGlcEX']" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcGlcPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcGly3pPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcGlyEX']" newValue="3.79121e-11"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcLacEX']" newValue="3.79121e-11"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcLacPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcNadPF']" newValue="0.0015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcNadhPF']" newValue="0.0015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcP2gPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcP3gPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcPepPF']" newValue="1e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcPyrEX']" newValue="3.79121e-11"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ConcPyrPF']" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KadpPFvHK']" newValue="0.000846735"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KadpPFvPFK']" newValue="0.00074176"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KadpPFvPGK']" newValue="0.00015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KadpPFvPK']" newValue="0.000317"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KatpPFvHK']" newValue="0.00069647"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KatpPFvPFK']" newValue="0.0007862"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KatpPFvPGK']" newValue="0.00077"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kb13pgPFvGAPDH']" newValue="2.359e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kb13pgPFvPGK']" newValue="1.34e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KdPFvLACtr']" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KdPFvPYRtr']" newValue="0.0007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KdhapPFvALD']" newValue="0.00011"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KdhapPFvG3PDH']" newValue="0.00034"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KdhapPFvTPI']" newValue="0.001954"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvALD']" newValue="9e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvENO']" newValue="4.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvG3PDH']" newValue="32600.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvHK']" newValue="1310.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvPGI']" newValue="0.33"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvPGK']" newValue="3200.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvPGM']" newValue="0.19"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KeqPFvTPI']" newValue="0.04545"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kf16bpPFvALD']" newValue="6.84e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kf16bpPFvPFK']" newValue="0.003626"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kf6pPFvPFK']" newValue="0.00109454"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kf6pPFvPGI']" newValue="9.6651e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kg3pPFvG3PDH']" newValue="0.00398"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kg6pPFvHK']" newValue="4.3e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kg6pPFvPGI']" newValue="0.00100774"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KgapPFvALD']" newValue="4.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KgapPFvGAPDH']" newValue="0.000917"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KgapPFvTPI']" newValue="0.000337"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KglcPFvHK']" newValue="0.000168613"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KiadpPFvPK']" newValue="0.002"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KiatpPFvHK']" newValue="0.026"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KiatpPFvPK']" newValue="0.00182"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KilacPFvPYRtr']" newValue="0.000358"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KipepPFvPK']" newValue="0.00292"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KipepPFvTPI']" newValue="1.59e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KipyrPFvLACtr']" newValue="0.00163"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KipyrPFvPK']" newValue="0.105"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KlacPFvLACtr']" newValue="0.0038"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KlacPFvLDH']" newValue="0.003611"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KmPFvATPASE']" newValue="0.0045"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KmPFvGLCtr']" newValue="0.000213"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KnadPFvG3PDH']" newValue="0.00051"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KnadPFvGAPDH']" newValue="0.0005662"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KnadPFvLDH']" newValue="0.000234"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KnadhPFvG3PDH']" newValue="9e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KnadhPFvGAPDH']" newValue="2.87e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KnadhPFvLDH']" newValue="4.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kp2gPFvENO']" newValue="0.000521"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kp2gPFvPGM']" newValue="0.000318"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kp3gPFvPGK']" newValue="0.000267"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kp3gPFvPGM']" newValue="0.00173"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KpepPFvENO']" newValue="0.00129"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KpepPFvPK']" newValue="0.000406"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KpyrPFvLDH']" newValue="0.000133"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='KpyrPFvPYRtr']" newValue="0.0157"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='LPFvPK']" newValue="0.255"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvALD']" newValue="0.0569593147718"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvATPASE']" newValue="0.345"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvENO']" newValue="0.286295503195"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvGAPDH']" newValue="0.656263383259"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvGLCtr']" newValue="0.0468"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvHK']" newValue="0.083"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvLACtr']" newValue="0.598"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvPFK']" newValue="0.41"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvPGI']" newValue="0.800428265477"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvPGM']" newValue="0.186937901488"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvPK']" newValue="0.762"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvPYRtr']" newValue="0.216"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VPFvTPI']" newValue="1.50599571726"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Vex']" newValue="2637.68"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VfPFvG3PDH']" newValue="0.012"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VfPFvLDH']" newValue="0.542612419668"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Vpf']" newValue="28.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VrPFvGAPDH']" newValue="0.243199143455"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VrPFvLDH']" newValue="0.290792291203"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='VrPFvPGK']" newValue="0.353533190557"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='alphaPFvGLCtr']" newValue="0.91"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='h']" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kPFvGLYtr']" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pHConversionFactor']" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='phEX']" newValue="7.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='phPF']" newValue="7.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_penkler2aa" modelReference="model0_penkler2aa" simulationReference="sim0_model0_penkler2aa"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="plot1_lac2_data_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_lac2_data_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_lac_2" target="#penkler_data_lac_2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_lac_2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_lac1_data_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_lac1_data_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_lac_1" target="#penkler_data_lac_1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_lac_1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_lacEX_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_penkler2aa_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_penkler2aa_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_lacEX_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_penkler2aa_lacEX" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='lacEX']" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> task0_model0_penkler2aa_lacEX </ci>
+              <cn> 0.0106 </cn>
+            </apply>
+            <cn type="integer"> 28 </cn>
+          </apply>
+          <cn type="integer"> 1000 </cn>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_pyr_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_pyr_2" target="#penkler_data_pyr_2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_pyr_2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_pyr_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_penkler2aa_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_penkler2aa_glcEX">
+      <listOfVariables>
+        <variable id="glcEX" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='glcEX']" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> glcEX </ci>
+              <cn> 0.0106 </cn>
+            </apply>
+            <cn type="integer"> 28 </cn>
+          </apply>
+          <cn type="integer"> 1000 </cn>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_pyr1_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_pyr1_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_pyr_1" target="#penkler_data_pyr_1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_pyr_1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_glc1Data_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_glc1Data_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_glc_1" target="#penkler_data_glc_1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_glc_1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_pyrEX_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_penkler2aa_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_penkler2aa_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_pyrEX_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_penkler2aa_pyrEX" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pyrEX']" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> task0_model0_penkler2aa_pyrEX </ci>
+              <cn> 0.0106 </cn>
+            </apply>
+            <cn type="integer"> 28 </cn>
+          </apply>
+          <cn type="integer"> 1000 </cn>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_glc2Data_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_glc2Data_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_glc_2" target="#penkler_data_glc_2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_glc_2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_gly1_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_gly1_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_gly_1" target="#penkler_data_gly_1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_gly_1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_gly2_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_gly2_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_gly_2" target="#penkler_data_gly_2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_gly_2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_lac2Data_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_lac2Data_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_lac_2" target="#penkler_data_lac_2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_lac_2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_lac1Data_datagen0">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_time" target="#penkler_data_time"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_lac1Data_datagen1">
+      <listOfVariables>
+        <variable id="penkler_glc_data_penkler_data_lac_1" target="#penkler_data_lac_1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> penkler_glc_data_penkler_data_lac_1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_glyEX_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_penkler2aa_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_penkler2aa_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_glyEX_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_penkler2aa_glyEX" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='glyEX']" taskReference="task0_model0_penkler2aa"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <times/>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> task0_model0_penkler2aa_glyEX </ci>
+              <cn> 0.0106 </cn>
+            </apply>
+            <cn type="integer"> 28 </cn>
+          </apply>
+          <cn type="integer"> 1000 </cn>
+        </apply>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="plot0" name="plot0">
+      <listOfCurves>
+        <curve id="plot0_glcEX" name="glcEX" logX="false" logY="false" xDataReference="task0_model0_penkler2aa_time" yDataReference="task0_model0_penkler2aa_glcEX"/>
+        <curve id="plot0_glc1Data" name="glc1Data" logX="false" logY="false" xDataReference="plot0_glc1Data_datagen0" yDataReference="plot0_glc1Data_datagen1"/>
+        <curve id="plot0_glc2Data" name="glc2Data" logX="false" logY="false" xDataReference="plot0_glc2Data_datagen0" yDataReference="plot0_glc2Data_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot1" name="plot1">
+      <listOfCurves>
+        <curve id="plot1_lac1_data" name="lac1Data" logX="false" logY="false" xDataReference="plot1_lac1_data_datagen0" yDataReference="plot1_lac1_data_datagen1"/>
+        <curve id="plot1_lacEX" name="lacEX" logX="false" logY="false" xDataReference="plot1_lacEX_datagen0" yDataReference="plot1_lacEX_datagen1"/>
+        <curve id="plot1_lac2_data" name="lac2Data" logX="false" logY="false" xDataReference="plot1_lac2_data_datagen0" yDataReference="plot1_lac2_data_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot2" name="plot2">
+      <listOfCurves>
+        <curve id="plot2_pyr2" name="pyr2Data" logX="false" logY="false" xDataReference="plot2_pyr_datagen0" yDataReference="plot2_pyr_datagen1"/>
+        <curve id="plot2_pyr1" name="pyr1Data" logX="false" logY="false" xDataReference="plot2_pyr1_datagen0" yDataReference="plot2_pyr1_datagen1"/>
+        <curve id="plot2_pyrEX" name="pyrEX" logX="false" logY="false" xDataReference="plot2_pyrEX_datagen0" yDataReference="plot2_pyrEX_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot3" name="plot3">
+      <listOfCurves>
+        <curve id="plot3_gly1" name="gly1Data" logX="false" logY="false" xDataReference="plot3_gly1_datagen0" yDataReference="plot3_gly1_datagen1"/>
+        <curve id="plot3_gly2" name="gly2Data" logX="false" logY="false" xDataReference="plot3_gly2_datagen0" yDataReference="plot3_gly2_datagen1"/>
+        <curve id="plot3_glyEX" name="glyEX" logX="false" logY="false" xDataReference="plot3_glyEX_datagen0" yDataReference="plot3_glyEX_datagen1"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

@@ -1,0 +1,2617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="strasen8" name="strasen8">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="Function_for_reaction40_3_0" name="Function for reaction40_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S2_export_from_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> nuc </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_n </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> S2_export_from_nuc_C3 </ci>
+              <ci> pS2_n </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction15_0" name="Function for reaction15">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Inactive_Rec </ci>
+            </bvar>
+            <bvar>
+              <ci> index_seq_kb </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_Seq_S7_Rec </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Inactive_Rec </ci>
+              <ci> index_seq_kb </ci>
+              <ci> kf_Seq_S7_Rec </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction8_0" name="Function for reaction8">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Active_Rec </ci>
+            </bvar>
+            <bvar>
+              <ci> index_kb_R1 </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_R1_activation </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Active_Rec </ci>
+              <ci> index_kb_R1 </ci>
+              <ci> kf_R1_activation </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction3_0" name="Function for reaction3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> TGFb </ci>
+            </bvar>
+            <bvar>
+              <ci> TGFb_R2_surface </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_R2_activation </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> TGFb </ci>
+              <ci> TGFb_R2_surface </ci>
+              <ci> kf_R2_activation </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction16_0" name="Function for reaction16">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Inactive_Rec </ci>
+            </bvar>
+            <bvar>
+              <ci> index_induced_ligand_deg </ci>
+            </bvar>
+            <bvar>
+              <ci> kin_deg_Ligand </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Inactive_Rec </ci>
+              <ci> index_induced_ligand_deg </ci>
+              <ci> kin_deg_Ligand </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction5_0" name="Function for reaction5">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Active_R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> index_kb_R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_R2_activation </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Active_R2 </ci>
+              <ci> index_kb_R2 </ci>
+              <ci> kf_R2_activation </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction35_3_0" name="Function for reaction35_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S2_c </ci>
+            </bvar>
+            <bvar>
+              <ci> S2_import_to_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> cyt </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> S2_c </ci>
+              <ci> S2_import_to_nuc_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction41_2_0" name="Function for reaction41_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Trimer_import_to_nuc </ci>
+            </bvar>
+            <bvar>
+              <ci> cyt </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_pS2_S4_c </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> Trimer_import_to_nuc </ci>
+              <ci> pS2_pS2_S4_c </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction52_3_0" name="Function for reaction52_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Smad7mRNA1 </ci>
+            </bvar>
+            <bvar>
+              <ci> export_cytoplasm </ci>
+            </bvar>
+            <bvar>
+              <ci> nuc </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> Smad7mRNA1 </ci>
+              <ci> export_cytoplasm </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction32_3_0" name="Function for reaction32_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> index_kb_homotrimer </ci>
+            </bvar>
+            <bvar>
+              <ci> kb_trimmer </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_pS2_pS2_c </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> index_kb_homotrimer </ci>
+              <ci> kb_trimmer </ci>
+              <ci> pS2_pS2_pS2_c </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction44_4_0" name="Function for reaction44_4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> index_trimer_dephos </ci>
+            </bvar>
+            <bvar>
+              <ci> k_Dephos_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_pS2_S4_n </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> index_trimer_dephos </ci>
+              <ci> k_Dephos_C3 </ci>
+              <ci> pS2_pS2_S4_n </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction20_2_0" name="Function for reaction20_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> TGFb_R1_endo </ci>
+            </bvar>
+            <bvar>
+              <ci> index_k_out_1_relative_speed_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> k_in_R1_C3 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> TGFb_R1_endo </ci>
+              <ci> index_k_out_1_relative_speed_C3 </ci>
+              <ci> k_in_R1_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction33_2" name="Function for reaction33_2_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> index_kf_homotrimer </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_trimmer </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_n </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> index_kf_homotrimer </ci>
+              <ci> kf_trimmer </ci>
+              <apply>
+                <power/>
+                <ci> pS2_n </ci>
+                <cn type="integer"> 3 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction53_1_0" name="Function for reaction53_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Smad7mRNA </ci>
+            </bvar>
+            <bvar>
+              <ci> k_S7_protein_C3 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Smad7mRNA </ci>
+              <ci> k_S7_protein_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction38_3_0" name="Function for reaction38_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S4_export_from_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> S4_n </ci>
+            </bvar>
+            <bvar>
+              <ci> nuc </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> S4_n </ci>
+              <ci> S4_export_from_nuc_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction1_0" name="Function for reaction1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> TGFb </ci>
+            </bvar>
+            <bvar>
+              <ci> TGFb_R2_surface </ci>
+            </bvar>
+            <bvar>
+              <ci> k_medium </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_R2_activation </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> TGFb </ci>
+                <ci> TGFb_R2_surface </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+              <ci> k_medium </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction17_0" name="Function for reaction17">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Inactive_Rec </ci>
+            </bvar>
+            <bvar>
+              <ci> index_induced_R2_deg </ci>
+            </bvar>
+            <bvar>
+              <ci> kdeg_R2 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Inactive_Rec </ci>
+              <ci> index_induced_R2_deg </ci>
+              <ci> kdeg_R2 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction6_0" name="Function for reaction6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Active_R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> index_kb_R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> k_medium </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_R2_activation </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Active_R2 </ci>
+                <ci> index_kb_R2 </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+              <ci> k_medium </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction22_2_0" name="Function for reaction22_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Active_Rec </ci>
+            </bvar>
+            <bvar>
+              <ci> index_active_Rec_internalize_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> k_in_R1_C3 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Active_Rec </ci>
+              <ci> index_active_Rec_internalize_C3 </ci>
+              <ci> k_in_R1_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction26" name="Function for reaction26">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Active_Rec_endo </ci>
+            </bvar>
+            <bvar>
+              <ci> S2_c </ci>
+            </bvar>
+            <bvar>
+              <ci> k_phosphorylation </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Active_Rec_endo </ci>
+              <ci> S2_c </ci>
+              <ci> k_phosphorylation </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction36_3_0" name="Function for reaction36_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S2_export_from_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2_n </ci>
+            </bvar>
+            <bvar>
+              <ci> nuc </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> S2_n </ci>
+              <ci> S2_export_from_nuc_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction31_2" name="Function for reaction31_2_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> index_kf_homotrimer </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_trimmer </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_c </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> index_kf_homotrimer </ci>
+              <ci> kf_trimmer </ci>
+              <apply>
+                <power/>
+                <ci> pS2_c </ci>
+                <cn type="integer"> 3 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction37_3_0" name="Function for reaction37_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S4_c </ci>
+            </bvar>
+            <bvar>
+              <ci> S4_import_to_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> cyt </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> S4_c </ci>
+              <ci> S4_import_to_nuc_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction21_2_0" name="Function for reaction21_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> TGFb_R2_endo </ci>
+            </bvar>
+            <bvar>
+              <ci> index_k_out_2_relative_speed_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> k_in_R2_C3 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> TGFb_R2_endo </ci>
+              <ci> index_k_out_2_relative_speed_C3 </ci>
+              <ci> k_in_R2_C3 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction39_3_0" name="Function for reaction39_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S2_import_to_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> cyt </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_c </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> S2_import_to_nuc_C3 </ci>
+              <ci> pS2_c </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction45_3" name="Function for reaction45_3_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S2_export_from_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2_import_to_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2_total_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> kdeg_S2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> S2_total_C3 </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> S2_import_to_nuc_C3 </ci>
+                    <ci> kdeg_S2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> S2_export_from_nuc_C3 </ci>
+                    <ci> kdeg_S2 </ci>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> kdeg_S2 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 2 </cn>
+                  <ci> S2_import_to_nuc_C3 </ci>
+                </apply>
+                <ci> S2_export_from_nuc_C3 </ci>
+                <ci> kdeg_S2 </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction46_3" name="Function for reaction46_3_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> S4_export_from_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> S4_import_to_nuc_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> S4_total_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> kdeg_S4 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> S4_total_C3 </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> S4_import_to_nuc_C3 </ci>
+                    <ci> kdeg_S4 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> S4_export_from_nuc_C3 </ci>
+                    <ci> kdeg_S4 </ci>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <ci> kdeg_S4 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 2 </cn>
+                  <ci> S4_import_to_nuc_C3 </ci>
+                </apply>
+                <ci> S4_export_from_nuc_C3 </ci>
+                <ci> kdeg_S4 </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction2_0" name="Function for reaction2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> TGFb </ci>
+            </bvar>
+            <bvar>
+              <ci> TGFb_R2_surface </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_R2_activation </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> TGFb </ci>
+              <ci> TGFb_R2_surface </ci>
+              <ci> kf_R2_activation </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction47_3" name="Function for reaction47_3_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> R1_total_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> index_k_out_1_relative_speed_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> k_in_R1_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> kdeg_R1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> R1_total_C3 </ci>
+                <ci> k_in_R1_C3 </ci>
+                <apply>
+                  <power/>
+                  <ci> kdeg_R1 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <ci> k_in_R1_C3 </ci>
+                  <ci> kdeg_R1 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> kdeg_R1 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> index_k_out_1_relative_speed_C3 </ci>
+                  <ci> k_in_R1_C3 </ci>
+                  <ci> kdeg_R1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction48_1" name="Function for reaction48_1_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> R2_total_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> index_k_out_2_relative_speed_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> k_in_R2_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> kdeg_R2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> R2_total_C3 </ci>
+                <ci> k_in_R2_C3 </ci>
+                <apply>
+                  <power/>
+                  <ci> kdeg_R2 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <ci> k_in_R2_C3 </ci>
+                  <ci> kdeg_R2 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> kdeg_R2 </ci>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> index_k_out_2_relative_speed_C3 </ci>
+                  <ci> k_in_R2_C3 </ci>
+                  <ci> kdeg_R2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction34_2_0" name="Function for reaction34_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> index_kb_homotrimer </ci>
+            </bvar>
+            <bvar>
+              <ci> kb_trimmer </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_pS2_pS2_n </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> index_kb_homotrimer </ci>
+              <ci> kb_trimmer </ci>
+              <ci> pS2_pS2_pS2_n </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction42" name="Function for reaction42">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Trimer_import_to_nuc </ci>
+            </bvar>
+            <bvar>
+              <ci> cyt </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_pS2_pS2_c </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> Trimer_import_to_nuc </ci>
+              <ci> pS2_pS2_pS2_c </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction51_3_0" name="Function for reaction51_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> DRB </ci>
+            </bvar>
+            <bvar>
+              <ci> K_mran </ci>
+            </bvar>
+            <bvar>
+              <ci> S7KD </ci>
+            </bvar>
+            <bvar>
+              <ci> hill_fact1 </ci>
+            </bvar>
+            <bvar>
+              <ci> k_induced_S7_production_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> mRNA_prod_C3 </ci>
+            </bvar>
+            <bvar>
+              <ci> pS2_pS2_S4_n </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> DRB </ci>
+              <ci> S7KD </ci>
+              <apply>
+                <plus/>
+                <ci> mRNA_prod_C3 </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> k_induced_S7_production_C3 </ci>
+                    <apply>
+                      <power/>
+                      <ci> pS2_pS2_S4_n </ci>
+                      <ci> hill_fact1 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> K_mran </ci>
+                      <ci> hill_fact1 </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> pS2_pS2_S4_n </ci>
+                      <ci> hill_fact1 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Function_for_reaction4_0" name="Function for reaction4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Active_R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> index_kb_R2 </ci>
+            </bvar>
+            <bvar>
+              <ci> kf_R2_activation </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Active_R2 </ci>
+              <ci> index_kb_R2 </ci>
+              <ci> kf_R2_activation </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="time" name="time">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="60"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="item" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_2" id="cyt" name="cyt" spatialDimensions="3" size="2" constant="true"/>
+      <compartment metaid="metaid_3" id="nuc" name="nuc" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_4" id="Active_R2" name="Active_R2" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="Active_Rec" name="Active_Rec" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="Active_Rec_endo" name="Active_Rec_endo" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="Inactive_Rec" name="Inactive_Rec" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="S2_c" name="S2_c" compartment="cyt" initialConcentration="1146.01803838863" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="S2_n" name="S2_n" compartment="nuc" initialConcentration="189.761470115617" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="S4_c" name="S4_c" compartment="cyt" initialConcentration="143.916431450302" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="S4_n" name="S4_n" compartment="nuc" initialConcentration="203.589335374132" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" id="S7" name="S7" compartment="cyt" initialConcentration="12.4243231076787" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" id="Smad7mRNA" name="Smad7mRNA" compartment="cyt" initialConcentration="0.103311072468942" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_14" id="Smad7mRNA1" name="Smad7mRNA1" compartment="nuc" initialConcentration="0.67216411877982" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_15" id="TGFb" name="TGFb" compartment="cyt" initialConcentration="100" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_16" id="TGFb_In" name="TGFb_In" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_17" id="TGFb_R1_endo" name="TGFb_R1_endo" compartment="cyt" initialConcentration="30.5746825808989" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_18" id="TGFb_R1_surface" name="TGFb_R1_surface" compartment="cyt" initialConcentration="39.1453163247034" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_19" id="TGFb_R2_endo" name="TGFb_R2_endo" compartment="cyt" initialConcentration="33.8506390142416" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_20" id="TGFb_R2_surface" name="TGFb_R2_surface" compartment="cyt" initialConcentration="15.3419048677147" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_21" id="pS2_c" name="pS2_c" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_22" id="pS2_n" name="pS2_n" compartment="nuc" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_23" id="pS2_pS2_S4_c" name="pS2_pS2_S4_c" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_24" id="pS2_pS2_S4_n" name="pS2_pS2_S4_n" compartment="nuc" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_25" id="pS2_pS2_pS2_c" name="pS2_pS2_pS2_c" compartment="cyt" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_26" id="pS2_pS2_pS2_n" name="pS2_pS2_pS2_n" compartment="nuc" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_27" id="DRB" name="DRB" value="1" constant="true"/>
+      <parameter metaid="metaid_28" id="K_mran" name="K_mran" value="223.586" constant="true"/>
+      <parameter metaid="metaid_29" id="NUC_CYT_SMAD2" name="NUC/CYT SMAD2" value="0.165583318725447" constant="false"/>
+      <parameter metaid="metaid_30" id="R1_total_C3" name="R1_total_C3" value="69.7199989056023" constant="true"/>
+      <parameter metaid="metaid_31" id="R2_total_C3" name="R2_total_C3" value="49.1925438819563" constant="true"/>
+      <parameter metaid="metaid_32" id="S2_export_from_nuc_C3" name="S2_export_from_nuc_C3" value="3.00430865315074" constant="true"/>
+      <parameter metaid="metaid_33" id="S2_import_to_nuc_C3" name="S2_import_to_nuc_C3" value="0.248774260500559" constant="true"/>
+      <parameter metaid="metaid_34" id="S2_total_C3" name="S2_total_C3" value="1335.77950850425" constant="true"/>
+      <parameter metaid="metaid_35" id="S4_export_from_nuc_C3" name="S4_export_from_nuc_C3" value="0.0984718694215043" constant="true"/>
+      <parameter metaid="metaid_36" id="S4_import_to_nuc_C3" name="S4_import_to_nuc_C3" value="0.0730474752631315" constant="true"/>
+      <parameter metaid="metaid_37" id="S4_total_C3" name="S4_total_C3" value="347.505766824434" constant="true"/>
+      <parameter metaid="metaid_38" id="S7KD" name="S7KD" value="1" constant="true"/>
+      <parameter metaid="metaid_39" id="Trimer_import_to_nuc" name="Trimer_import_to_nuc" value="0.144035002432848" constant="true"/>
+      <parameter metaid="metaid_40" id="export_cytoplasm" name="export_cytoplasm" value="0.0304372961307751" constant="true"/>
+      <parameter metaid="metaid_41" id="hill_fact1" name="hill_fact1" value="3.98630224594983" constant="true"/>
+      <parameter metaid="metaid_42" id="index_active_Rec_internalize_C3" name="index_active_Rec_internalize_C3" value="1.0379108128956" constant="true"/>
+      <parameter metaid="metaid_43" id="index_induced_R2_deg" name="index_induced_R2_deg" value="1.00037776866312" constant="true"/>
+      <parameter metaid="metaid_44" id="index_induced_ligand_deg" name="index_induced_ligand_deg" value="2.72106513634098" constant="true"/>
+      <parameter metaid="metaid_45" id="index_k_out_1_relative_speed_C3" name="index_k_out_1_relative_speed_C3" value="1.13287434679021" constant="true"/>
+      <parameter metaid="metaid_46" id="index_k_out_2_relative_speed_C3" name="index_k_out_2_relative_speed_C3" value="0.450697494637432" constant="true"/>
+      <parameter metaid="metaid_47" id="index_kb_R1" name="index_kb_R1" value="1.61290474569122" constant="true"/>
+      <parameter metaid="metaid_48" id="index_kb_R2" name="index_kb_R2" value="8.70498854136694" constant="true"/>
+      <parameter metaid="metaid_49" id="index_kb_homotrimer" name="index_kb_homotrimer" value="0.0163921522930962" constant="true"/>
+      <parameter metaid="metaid_50" id="index_kf_homotrimer" name="index_kf_homotrimer" value="4.4857919268227" constant="true"/>
+      <parameter metaid="metaid_51" id="index_seq_kb" name="index_seq_kb" value="0.000865131944828012" constant="true"/>
+      <parameter metaid="metaid_52" id="index_trimer_dephos" name="index_trimer_dephos" value="2.61013820571304" constant="true"/>
+      <parameter metaid="metaid_53" id="k_Dephos_C3" name="k_Dephos_C3" value="0.0707018316477647" constant="true"/>
+      <parameter metaid="metaid_54" id="k_S7_protein_C3" name="k_S7_protein_C3" value="0.123149764012103" constant="true"/>
+      <parameter metaid="metaid_55" id="k_disso_Active_Rec" name="k_disso_Active_Rec" value="0.00103940411358367" constant="true"/>
+      <parameter metaid="metaid_56" id="k_in_R1_C3" name="k_in_R1_C3" value="0.397836393488341" constant="true"/>
+      <parameter metaid="metaid_57" id="k_in_R2_C3" name="k_in_R2_C3" value="0.396038887562465" constant="true"/>
+      <parameter metaid="metaid_58" id="k_induced_S7_production_C3" name="k_induced_S7_production_C3" value="2.9510868497" constant="true"/>
+      <parameter metaid="metaid_59" id="k_medium" name="k_medium" value="2000000" constant="true"/>
+      <parameter metaid="metaid_60" id="k_phosphorylation" name="k_phosphorylation" value="0.0701560191772152" constant="true"/>
+      <parameter metaid="metaid_61" id="kb_trimmer" name="kb_trimmer" value="1.6077346670684" constant="true"/>
+      <parameter metaid="metaid_62" id="kdeg_R1" name="kdeg_R1" value="0.0586584495713968" constant="true"/>
+      <parameter metaid="metaid_63" id="kdeg_R2" name="kdeg_R2" value="0.0010003937382472" constant="true"/>
+      <parameter metaid="metaid_64" id="kdeg_S2" name="kdeg_S2" value="0.000514084012175461" constant="true"/>
+      <parameter metaid="metaid_65" id="kdeg_S4" name="kdeg_S4" value="0.00480202699360057" constant="true"/>
+      <parameter metaid="metaid_66" id="kdeg_S7" name="kdeg_S7" value="0.00102401829734485" constant="true"/>
+      <parameter metaid="metaid_67" id="kf_R1_activation" name="kf_R1_activation" value="4.98548548076033" constant="true"/>
+      <parameter metaid="metaid_68" id="kf_R2_activation" name="kf_R2_activation" value="4.95559496701657" constant="true"/>
+      <parameter metaid="metaid_69" id="kf_Seq_S7_Rec" name="kf_Seq_S7_Rec" value="0.882455038106022" constant="true"/>
+      <parameter metaid="metaid_70" id="kf_trimmer" name="kf_trimmer" value="4.81424700307387" constant="true"/>
+      <parameter metaid="metaid_71" id="kin_deg_Ligand" name="kin_deg_Ligand" value="0.720182234635314" constant="true"/>
+      <parameter metaid="metaid_72" id="kmRNA1deg_S7" name="kmRNA1deg_S7" value="0.00523181439900629" constant="true"/>
+      <parameter metaid="metaid_73" id="kmRNAdeg_S7" name="kmRNAdeg_S7" value="0.0990158065483902" constant="true"/>
+      <parameter metaid="metaid_74" id="kout_deg_Ligand_100pM" name="kout_deg_Ligand_100pM" value="0.00036189622" constant="true"/>
+      <parameter metaid="metaid_75" id="mRNA_prod_C3" name="mRNA_prod_C3" value="0.0239754962469105" constant="true"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment metaid="metaid_76" symbol="TGFb_R1_surface">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> R1_total_C3 </ci>
+              <ci> kdeg_R1 </ci>
+              <apply>
+                <plus/>
+                <ci> kdeg_R1 </ci>
+                <apply>
+                  <times/>
+                  <ci> index_k_out_1_relative_speed_C3 </ci>
+                  <ci> k_in_R1_C3 </ci>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> k_in_R1_C3 </ci>
+                <ci> kdeg_R1 </ci>
+              </apply>
+              <apply>
+                <power/>
+                <ci> kdeg_R1 </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <times/>
+                <ci> index_k_out_1_relative_speed_C3 </ci>
+                <ci> k_in_R1_C3 </ci>
+                <ci> kdeg_R1 </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_77" symbol="TGFb_R2_surface">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> R2_total_C3 </ci>
+              <ci> kdeg_R2 </ci>
+              <apply>
+                <plus/>
+                <ci> kdeg_R2 </ci>
+                <apply>
+                  <times/>
+                  <ci> index_k_out_2_relative_speed_C3 </ci>
+                  <ci> k_in_R2_C3 </ci>
+                </apply>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> k_in_R2_C3 </ci>
+                <ci> kdeg_R2 </ci>
+              </apply>
+              <apply>
+                <power/>
+                <ci> kdeg_R2 </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <times/>
+                <ci> index_k_out_2_relative_speed_C3 </ci>
+                <ci> k_in_R2_C3 </ci>
+                <ci> kdeg_R2 </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_78" symbol="TGFb_R1_endo">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> R1_total_C3 </ci>
+              <ci> k_in_R1_C3 </ci>
+              <ci> kdeg_R1 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> k_in_R1_C3 </ci>
+                <ci> kdeg_R1 </ci>
+              </apply>
+              <apply>
+                <power/>
+                <ci> kdeg_R1 </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <times/>
+                <ci> index_k_out_1_relative_speed_C3 </ci>
+                <ci> k_in_R1_C3 </ci>
+                <ci> kdeg_R1 </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_79" symbol="TGFb_R2_endo">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> R2_total_C3 </ci>
+              <ci> k_in_R2_C3 </ci>
+              <ci> kdeg_R2 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> k_in_R2_C3 </ci>
+                <ci> kdeg_R2 </ci>
+              </apply>
+              <apply>
+                <power/>
+                <ci> kdeg_R2 </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <times/>
+                <ci> index_k_out_2_relative_speed_C3 </ci>
+                <ci> k_in_R2_C3 </ci>
+                <ci> kdeg_R2 </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_80" symbol="S2_c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> S2_total_C3 </ci>
+              <apply>
+                <plus/>
+                <ci> S2_export_from_nuc_C3 </ci>
+                <ci> kdeg_S2 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> S2_import_to_nuc_C3 </ci>
+              </apply>
+              <ci> S2_export_from_nuc_C3 </ci>
+              <ci> kdeg_S2 </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_81" symbol="S4_c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> S4_total_C3 </ci>
+              <apply>
+                <plus/>
+                <ci> S4_export_from_nuc_C3 </ci>
+                <ci> kdeg_S4 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> S4_import_to_nuc_C3 </ci>
+              </apply>
+              <ci> S4_export_from_nuc_C3 </ci>
+              <ci> kdeg_S4 </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_82" symbol="Smad7mRNA">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> export_cytoplasm </ci>
+              <ci> mRNA_prod_C3 </ci>
+            </apply>
+            <apply>
+              <times/>
+              <cn type="integer"> 2 </cn>
+              <ci> kmRNAdeg_S7 </ci>
+              <apply>
+                <plus/>
+                <ci> export_cytoplasm </ci>
+                <ci> kmRNA1deg_S7 </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_83" symbol="Smad7mRNA1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> mRNA_prod_C3 </ci>
+            <apply>
+              <plus/>
+              <ci> export_cytoplasm </ci>
+              <ci> kmRNA1deg_S7 </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_84" symbol="S7">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> export_cytoplasm </ci>
+              <ci> k_S7_protein_C3 </ci>
+              <ci> mRNA_prod_C3 </ci>
+            </apply>
+            <apply>
+              <times/>
+              <cn type="integer"> 2 </cn>
+              <ci> kdeg_S7 </ci>
+              <ci> kmRNAdeg_S7 </ci>
+              <apply>
+                <plus/>
+                <ci> export_cytoplasm </ci>
+                <ci> kmRNA1deg_S7 </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_85" symbol="S2_n">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <cn type="integer"> 2 </cn>
+              <ci> S2_total_C3 </ci>
+              <ci> S2_import_to_nuc_C3 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> S2_import_to_nuc_C3 </ci>
+              </apply>
+              <ci> S2_export_from_nuc_C3 </ci>
+              <ci> kdeg_S2 </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment metaid="metaid_86" symbol="S4_n">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <cn type="integer"> 2 </cn>
+              <ci> S4_total_C3 </ci>
+              <ci> S4_import_to_nuc_C3 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> S4_import_to_nuc_C3 </ci>
+              </apply>
+              <ci> S4_export_from_nuc_C3 </ci>
+              <ci> kdeg_S4 </ci>
+            </apply>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfRules>
+      <assignmentRule metaid="metaid_87" variable="NUC_CYT_SMAD2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn> 2 </cn>
+                <ci> pS2_pS2_S4_n </ci>
+              </apply>
+              <ci> pS2_n </ci>
+              <ci> S2_n </ci>
+              <apply>
+                <times/>
+                <cn> 3 </cn>
+                <ci> pS2_pS2_pS2_n </ci>
+              </apply>
+            </apply>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn> 2 </cn>
+                <ci> pS2_pS2_S4_c </ci>
+              </apply>
+              <ci> pS2_c </ci>
+              <ci> S2_c </ci>
+              <apply>
+                <times/>
+                <cn> 3 </cn>
+                <ci> pS2_pS2_pS2_c </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_90" id="reaction1" name="reaction1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_88" species="TGFb" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_89" species="TGFb_R2_surface"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction1_0 </ci>
+                <ci> TGFb </ci>
+                <ci> TGFb_R2_surface </ci>
+                <ci> k_medium </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_94" id="reaction10" name="reaction10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_91" species="Active_Rec_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_92" species="TGFb_R2_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_93" species="TGFb_In" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_R1 </ci>
+              <ci> Active_Rec_endo </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_98" id="reaction11" name="reaction11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_95" species="Active_Rec_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_96" species="TGFb_R1_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_97" species="TGFb_R2_endo" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kin_deg_Ligand </ci>
+              <ci> Active_Rec_endo </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_100" id="reaction12" name="reaction12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_99" species="TGFb_R1_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_R1 </ci>
+              <ci> TGFb_R1_endo </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_102" id="reaction13" name="reaction13" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_101" species="TGFb_R2_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_R2 </ci>
+              <ci> TGFb_R2_endo </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_106" id="reaction14" name="reaction14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_103" species="Active_Rec" stoichiometry="1"/>
+          <speciesReference metaid="metaid_104" species="S7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_105" species="Inactive_Rec" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kf_Seq_S7_Rec </ci>
+              <ci> Active_Rec </ci>
+              <ci> S7 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_110" id="reaction15" name="reaction15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_107" species="Inactive_Rec" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_108" species="Active_Rec" stoichiometry="1"/>
+          <speciesReference metaid="metaid_109" species="S7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction15_0 </ci>
+                <ci> Inactive_Rec </ci>
+                <ci> index_seq_kb </ci>
+                <ci> kf_Seq_S7_Rec </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_115" id="reaction16" name="reaction16" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_111" species="Inactive_Rec" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_112" species="TGFb_R1_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_113" species="TGFb_R2_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_114" species="S7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction16_0 </ci>
+                <ci> Inactive_Rec </ci>
+                <ci> index_induced_ligand_deg </ci>
+                <ci> kin_deg_Ligand </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_120" id="reaction17" name="reaction17" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_116" species="Inactive_Rec" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_117" species="TGFb_R1_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_118" species="TGFb_In" stoichiometry="1"/>
+          <speciesReference metaid="metaid_119" species="S7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction17_0 </ci>
+                <ci> Inactive_Rec </ci>
+                <ci> index_induced_R2_deg </ci>
+                <ci> kdeg_R2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_123" id="reaction18" name="reaction18" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_121" species="TGFb_R1_surface" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_122" species="TGFb_R1_endo" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k_in_R1_C3 </ci>
+              <ci> TGFb_R1_surface </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_126" id="reaction19" name="reaction19" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_124" species="TGFb_R2_surface" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_125" species="TGFb_R2_endo" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k_in_R2_C3 </ci>
+              <ci> TGFb_R2_surface </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_129" id="reaction2" name="reaction2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_127" species="TGFb_R2_surface" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_128" species="TGFb"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction2_0 </ci>
+                <ci> TGFb </ci>
+                <ci> TGFb_R2_surface </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_132" id="reaction20" name="reaction20" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_130" species="TGFb_R1_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_131" species="TGFb_R1_surface" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction20_2_0 </ci>
+                <ci> TGFb_R1_endo </ci>
+                <ci> index_k_out_1_relative_speed_C3 </ci>
+                <ci> k_in_R1_C3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_135" id="reaction21" name="reaction21" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_133" species="TGFb_R2_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_134" species="TGFb_R2_surface" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction21_2_0 </ci>
+                <ci> TGFb_R2_endo </ci>
+                <ci> index_k_out_2_relative_speed_C3 </ci>
+                <ci> k_in_R2_C3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_138" id="reaction22" name="reaction22" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_136" species="Active_Rec" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_137" species="Active_Rec_endo" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction22_2_0 </ci>
+                <ci> Active_Rec </ci>
+                <ci> index_active_Rec_internalize_C3 </ci>
+                <ci> k_in_R1_C3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_143" id="reaction23" name="reaction23" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_139" species="Active_Rec_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_140" species="TGFb_R1_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_141" species="TGFb_R2_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_142" species="TGFb_In" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> k_disso_Active_Rec </ci>
+              <ci> Active_Rec_endo </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_145" id="reaction24" name="reaction24" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_144" species="TGFb_In" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kin_deg_Ligand </ci>
+              <ci> TGFb_In </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_147" id="reaction25" name="reaction25" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_146" species="TGFb" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kout_deg_Ligand_100pM </ci>
+              <ci> TGFb </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_151" id="reaction26" name="reaction26" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_148" species="S2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_149" species="pS2_c" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_150" species="Active_Rec_endo"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction26 </ci>
+                <ci> Active_Rec_endo </ci>
+                <ci> S2_c </ci>
+                <ci> k_phosphorylation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_155" id="reaction27" name="reaction27" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_152" species="pS2_c" stoichiometry="2"/>
+          <speciesReference metaid="metaid_153" species="S4_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_154" species="pS2_pS2_S4_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kf_trimmer </ci>
+              <apply>
+                <power/>
+                <ci> pS2_c </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> S4_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_159" id="reaction28" name="reaction28" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_156" species="pS2_pS2_S4_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_157" species="pS2_c" stoichiometry="2"/>
+          <speciesReference metaid="metaid_158" species="S4_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kb_trimmer </ci>
+              <ci> pS2_pS2_S4_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_163" id="reaction29" name="reaction29" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_160" species="pS2_n" stoichiometry="2"/>
+          <speciesReference metaid="metaid_161" species="S4_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_162" species="pS2_pS2_S4_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kf_trimmer </ci>
+              <apply>
+                <power/>
+                <ci> pS2_n </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> S4_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_167" id="reaction3" name="reaction3" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_164" species="Active_R2" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_165" species="TGFb"/>
+          <modifierSpeciesReference metaid="metaid_166" species="TGFb_R2_surface"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction3_0 </ci>
+                <ci> TGFb </ci>
+                <ci> TGFb_R2_surface </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_171" id="reaction30" name="reaction30" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_168" species="pS2_pS2_S4_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_169" species="pS2_n" stoichiometry="2"/>
+          <speciesReference metaid="metaid_170" species="S4_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kb_trimmer </ci>
+              <ci> pS2_pS2_S4_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_174" id="reaction31" name="reaction31" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_172" species="pS2_c" stoichiometry="3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_173" species="pS2_pS2_pS2_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction31_2 </ci>
+                <ci> index_kf_homotrimer </ci>
+                <ci> kf_trimmer </ci>
+                <ci> pS2_c </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_177" id="reaction32" name="reaction32" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_175" species="pS2_pS2_pS2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_176" species="pS2_c" stoichiometry="3"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction32_3_0 </ci>
+                <ci> index_kb_homotrimer </ci>
+                <ci> kb_trimmer </ci>
+                <ci> pS2_pS2_pS2_c </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_180" id="reaction33" name="reaction33" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_178" species="pS2_n" stoichiometry="3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_179" species="pS2_pS2_pS2_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <apply>
+                <ci> Function_for_reaction33_2 </ci>
+                <ci> index_kf_homotrimer </ci>
+                <ci> kf_trimmer </ci>
+                <ci> pS2_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_183" id="reaction34" name="reaction34" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_181" species="pS2_pS2_pS2_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_182" species="pS2_n" stoichiometry="3"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <apply>
+                <ci> Function_for_reaction34_2_0 </ci>
+                <ci> index_kb_homotrimer </ci>
+                <ci> kb_trimmer </ci>
+                <ci> pS2_pS2_pS2_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_186" id="reaction35" name="reaction35" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_184" species="S2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_185" species="S2_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction35_3_0 </ci>
+              <ci> S2_c </ci>
+              <ci> S2_import_to_nuc_C3 </ci>
+              <ci> cyt </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_189" id="reaction36" name="reaction36" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_187" species="S2_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_188" species="S2_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction36_3_0 </ci>
+              <ci> S2_export_from_nuc_C3 </ci>
+              <ci> S2_n </ci>
+              <ci> nuc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_192" id="reaction37" name="reaction37" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_190" species="S4_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_191" species="S4_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction37_3_0 </ci>
+              <ci> S4_c </ci>
+              <ci> S4_import_to_nuc_C3 </ci>
+              <ci> cyt </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_195" id="reaction38" name="reaction38" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_193" species="S4_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_194" species="S4_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction38_3_0 </ci>
+              <ci> S4_export_from_nuc_C3 </ci>
+              <ci> S4_n </ci>
+              <ci> nuc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_198" id="reaction39" name="reaction39" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_196" species="pS2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_197" species="pS2_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction39_3_0 </ci>
+              <ci> S2_import_to_nuc_C3 </ci>
+              <ci> cyt </ci>
+              <ci> pS2_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_200" id="reaction4" name="reaction4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_199" species="Active_R2" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction4_0 </ci>
+                <ci> Active_R2 </ci>
+                <ci> index_kb_R2 </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_203" id="reaction40" name="reaction40" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_201" species="pS2_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_202" species="pS2_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction40_3_0 </ci>
+              <ci> S2_export_from_nuc_C3 </ci>
+              <ci> nuc </ci>
+              <ci> pS2_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_206" id="reaction41" name="reaction41" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_204" species="pS2_pS2_S4_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_205" species="pS2_pS2_S4_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction41_2_0 </ci>
+              <ci> Trimer_import_to_nuc </ci>
+              <ci> cyt </ci>
+              <ci> pS2_pS2_S4_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_209" id="reaction42" name="reaction42" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_207" species="pS2_pS2_pS2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_208" species="pS2_pS2_pS2_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction42 </ci>
+              <ci> Trimer_import_to_nuc </ci>
+              <ci> cyt </ci>
+              <ci> pS2_pS2_pS2_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_212" id="reaction43" name="reaction43" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_210" species="pS2_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_211" species="S2_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> k_Dephos_C3 </ci>
+              <ci> pS2_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_217" id="reaction44" name="reaction44" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_213" species="pS2_pS2_S4_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_214" species="pS2_n" stoichiometry="1"/>
+          <speciesReference metaid="metaid_215" species="S2_n" stoichiometry="1"/>
+          <speciesReference metaid="metaid_216" species="S4_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <apply>
+                <ci> Function_for_reaction44_4_0 </ci>
+                <ci> index_trimer_dephos </ci>
+                <ci> k_Dephos_C3 </ci>
+                <ci> pS2_pS2_S4_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_219" id="reaction45" name="reaction45" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_218" species="S2_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction45_3 </ci>
+                <ci> S2_export_from_nuc_C3 </ci>
+                <ci> S2_import_to_nuc_C3 </ci>
+                <ci> S2_total_C3 </ci>
+                <ci> kdeg_S2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_221" id="reaction46" name="reaction46" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_220" species="S4_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction46_3 </ci>
+                <ci> S4_export_from_nuc_C3 </ci>
+                <ci> S4_import_to_nuc_C3 </ci>
+                <ci> S4_total_C3 </ci>
+                <ci> kdeg_S4 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_223" id="reaction47" name="reaction47" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_222" species="TGFb_R1_surface" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction47_3 </ci>
+                <ci> R1_total_C3 </ci>
+                <ci> index_k_out_1_relative_speed_C3 </ci>
+                <ci> k_in_R1_C3 </ci>
+                <ci> kdeg_R1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_225" id="reaction48" name="reaction48" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_224" species="TGFb_R2_surface" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction48_1 </ci>
+                <ci> R2_total_C3 </ci>
+                <ci> index_k_out_2_relative_speed_C3 </ci>
+                <ci> k_in_R2_C3 </ci>
+                <ci> kdeg_R2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_228" id="reaction5" name="reaction5" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_226" species="TGFb_R2_surface" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_227" species="Active_R2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction5_0 </ci>
+                <ci> Active_R2 </ci>
+                <ci> index_kb_R2 </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_231" id="reaction51" name="reaction51" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_229" species="Smad7mRNA1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_230" species="pS2_pS2_S4_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <apply>
+                <ci> Function_for_reaction51_3_0 </ci>
+                <ci> DRB </ci>
+                <ci> K_mran </ci>
+                <ci> S7KD </ci>
+                <ci> hill_fact1 </ci>
+                <ci> k_induced_S7_production_C3 </ci>
+                <ci> mRNA_prod_C3 </ci>
+                <ci> pS2_pS2_S4_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_234" id="reaction52" name="reaction52" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_232" species="Smad7mRNA1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_233" species="Smad7mRNA" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> Function_for_reaction52_3_0 </ci>
+              <ci> Smad7mRNA1 </ci>
+              <ci> export_cytoplasm </ci>
+              <ci> nuc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_237" id="reaction53" name="reaction53" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_235" species="S7" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_236" species="Smad7mRNA"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction53_1_0 </ci>
+                <ci> Smad7mRNA </ci>
+                <ci> k_S7_protein_C3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_239" id="reaction54" name="reaction54" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_238" species="S2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> S2_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_241" id="reaction55" name="reaction55" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_240" species="S2_n" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> S2_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_243" id="reaction56" name="reaction56" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_242" species="pS2_n" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> pS2_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_245" id="reaction57" name="reaction57" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_244" species="pS2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> pS2_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_247" id="reaction58" name="reaction58" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_246" species="S4_c" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_S4 </ci>
+              <ci> S4_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_249" id="reaction59" name="reaction59" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_248" species="S4_n" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kdeg_S4 </ci>
+              <ci> S4_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_252" id="reaction6" name="reaction6" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_250" species="TGFb" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_251" species="Active_R2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction6_0 </ci>
+                <ci> Active_R2 </ci>
+                <ci> index_kb_R2 </ci>
+                <ci> k_medium </ci>
+                <ci> kf_R2_activation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_256" id="reaction60" name="reaction60" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_253" species="pS2_pS2_S4_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_254" species="pS2_c" stoichiometry="1"/>
+          <speciesReference metaid="metaid_255" species="S4_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> pS2_pS2_S4_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_259" id="reaction61" name="reaction61" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_257" species="pS2_pS2_S4_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_258" species="pS2_c" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_S4 </ci>
+              <ci> pS2_pS2_S4_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_262" id="reaction62" name="reaction62" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_260" species="pS2_pS2_pS2_c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_261" species="pS2_c" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> pS2_pS2_pS2_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_266" id="reaction63" name="reaction63" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_263" species="pS2_pS2_S4_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_264" species="pS2_n" stoichiometry="1"/>
+          <speciesReference metaid="metaid_265" species="S4_n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> pS2_pS2_S4_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_269" id="reaction64" name="reaction64" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_267" species="pS2_pS2_S4_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_268" species="pS2_n" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kdeg_S4 </ci>
+              <ci> pS2_pS2_S4_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_272" id="reaction65" name="reaction65" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_270" species="pS2_pS2_pS2_n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_271" species="pS2_n" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kdeg_S2 </ci>
+              <ci> pS2_pS2_pS2_n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_274" id="reaction66" name="reaction66" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_273" species="Smad7mRNA1" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuc </ci>
+              <ci> kmRNA1deg_S7 </ci>
+              <ci> Smad7mRNA1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_276" id="reaction67" name="reaction67" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_275" species="Smad7mRNA" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kmRNAdeg_S7 </ci>
+              <ci> Smad7mRNA </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_278" id="reaction68" name="reaction68" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_277" species="S7" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_S7 </ci>
+              <ci> S7 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_282" id="reaction7" name="reaction7" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_279" species="TGFb_R1_surface" stoichiometry="1"/>
+          <speciesReference metaid="metaid_280" species="Active_R2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_281" species="Active_Rec" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kf_R1_activation </ci>
+              <ci> TGFb_R1_surface </ci>
+              <ci> Active_R2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_286" id="reaction8" name="reaction8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_283" species="Active_Rec" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_284" species="TGFb_R1_surface" stoichiometry="1"/>
+          <speciesReference metaid="metaid_285" species="Active_R2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <apply>
+                <ci> Function_for_reaction8_0 </ci>
+                <ci> Active_Rec </ci>
+                <ci> index_kb_R1 </ci>
+                <ci> kf_R1_activation </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_290" id="reaction9" name="reaction9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_287" species="Active_Rec_endo" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_288" species="TGFb_R1_endo" stoichiometry="1"/>
+          <speciesReference metaid="metaid_289" species="TGFb_In" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cyt </ci>
+              <ci> kdeg_R2 </ci>
+              <ci> Active_Rec_endo </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

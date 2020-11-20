@@ -1,4 +1,7 @@
-"""Constant definitions."""
+"""Constant definitions.
+
+This is the central file defining contants used everywhere throughout the study.
+"""
 
 import os
 import enum
@@ -28,7 +31,7 @@ elif DIR_BASE == 'TEST':
     DIR_BASE = DIR_TEST_BASE
 
 # Folder with COPASI binaries, user-dependent, to reproduce LSODA simulations
-DIR_COPASI_BIN = os.getenv('COPASI_DIR_BIN', 'COPASI/bin')
+DIR_COPASI_BIN = os.getenv('COPASI_DIR_BIN', '../COPASI/bin')
 
 
 ###############################################################################
@@ -69,8 +72,10 @@ DIR_MODELS_COPASI = os.path.join(DIR_MODELS, 'copasi', 'models')
 # Folder for only the final models for the main part of the study
 DIR_MODELS_COPASI_FINAL = os.path.join(DIR_MODELS, 'copasi', 'models_final')
 
+
 ###############################################################################
 # Reference trajectories
+
 # Folder for reference trajectories
 DIR_TRAJ_REF = os.path.join(DIR_BASE, 'trajectories_reference')
 # Constants to label various reference trajectories
@@ -117,3 +122,33 @@ class SIMCONFIG(enum.Enum):
 
 # repetitions for simulation when measuring cpu times, to have a robust result
 repetitions_for_cpu_time_study = 25
+
+
+###############################################################################
+# Algorithm shorthands and labels
+
+# Mappings index -> string
+LINSOL_DCT = {1: 'Dense', 6: 'GMRES', 7: 'BiCGStab', 8: 'TFQMR', 9: 'KLU'}
+NONLINSOL_DCT = {1: 'Functional', 2: 'Newton-type'}
+SOLALG_DCT = {1: 'Adams', 2: 'BDF'}
+ATOL_RTOLS = (
+    ('1e-8', '1e-6'), ('1e-6', '1e-8'), ('1e-12', '1e-10'), ('1e-10', '1e-12'),
+    ('1e-16', '1e-8'), ('1e-8', '1e-16'), ('1e-14', '1e-14'))
+# All tolerance combinations used in the tolerances study
+ATOLS_ALL = ('1e-6', '1e-8', '1e-10', '1e-12', '1e-14', '1e-16')
+RTOLS_ALL = ('1e-6', '1e-8', '1e-10', '1e-12', '1e-14', '1e-16')
+ATOL_RTOLS_ALL = [
+    (atol, rtol)
+    for atol in ATOLS_ALL
+    for rtol in RTOLS_ALL]
+
+# Inverting the mapping, string -> index
+LINSOL_IDS = {id: ix for ix, id in LINSOL_DCT.items()}
+NONLINSOL_IDS = {id: ix for ix, id in NONLINSOL_DCT.items()}
+SOLALG_IDS = {id: ix for ix, id in SOLALG_DCT.items()}
+
+
+###############################################################################
+# Figure output folder
+
+DIR_FIGURES = os.path.join(DIR_BASE, 'Figures')

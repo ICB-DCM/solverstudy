@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" version="3">
+  <model id="ferreira1" name="ferreira1">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="hour_default" name="hour (default)">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_1" id="compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_2" id="Amadori" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="CML" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="Glucose" compartment="compartment" initialConcentration="0.25" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_5" id="Glyoxal" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C14448"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:34779"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_6" id="Lysine" compartment="compartment" initialConcentration="0.0034" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:25094"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_7" id="Schiff" compartment="compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_8" id="Fraction_Amadori" value="0" constant="false"/>
+      <parameter metaid="metaid_9" id="Fraction_CML" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_10" variable="Fraction_Amadori">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> Amadori </ci>
+            <cn> 0.0034 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_11" variable="Fraction_CML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> CML </ci>
+            <cn> 0.0034 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_17" id="v1a" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_14" species="Lysine" stoichiometry="1"/>
+          <speciesReference metaid="metaid_15" species="Glucose" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_16" species="Schiff" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> p1 </ci>
+              <ci> k1a </ci>
+              <ci> Glucose </ci>
+              <ci> Lysine </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_12" id="p1" value="0.115"/>
+            <parameter metaid="metaid_13" id="k1a" value="0.09"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_22" id="v1b" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_19" species="Schiff" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_20" species="Lysine" stoichiometry="1"/>
+          <speciesReference metaid="metaid_21" species="Glucose" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> k1b </ci>
+              <ci> Schiff </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_18" id="k1b" value="0.36"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_27" id="v2a" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="Schiff" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_26" species="Amadori" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> p2 </ci>
+              <ci> k2a </ci>
+              <ci> Schiff </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_23" id="p2" value="0.75"/>
+            <parameter metaid="metaid_24" id="k2a" value="0.033"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_32" id="v2b" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_30" species="Amadori" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_31" species="Schiff" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> p2 </ci>
+              <ci> k2b </ci>
+              <ci> Amadori </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_28" id="p2" value="0.75"/>
+            <parameter metaid="metaid_29" id="k2b" value="0.0012"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="v3" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_36" species="Glucose" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_37" species="Glyoxal" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> ox </ci>
+              <ci> p3 </ci>
+              <ci> k3 </ci>
+              <apply>
+                <power/>
+                <apply>
+                  <divide/>
+                  <ci> Glucose </ci>
+                  <cn> 0.25 </cn>
+                </apply>
+                <cn> 0.36 </cn>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_33" id="ox" value="1"/>
+            <parameter metaid="metaid_34" id="p3" value="1"/>
+            <parameter metaid="metaid_35" id="k3" value="7.92e-07"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_44" id="v4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_42" species="Amadori" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_43" species="CML" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> ox </ci>
+              <ci> p4 </ci>
+              <ci> k4 </ci>
+              <ci> Amadori </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_39" id="ox" value="1"/>
+            <parameter metaid="metaid_40" id="p4" value="1"/>
+            <parameter metaid="metaid_41" id="k4" value="8.6e-05"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_51" id="v5" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_48" species="Lysine" stoichiometry="1"/>
+          <speciesReference metaid="metaid_49" species="Glyoxal" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_50" species="CML" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> ox </ci>
+              <ci> p5 </ci>
+              <ci> k5 </ci>
+              <ci> Glyoxal </ci>
+              <ci> Lysine </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_45" id="ox" value="1"/>
+            <parameter metaid="metaid_46" id="p5" value="1"/>
+            <parameter metaid="metaid_47" id="k5" value="0.019"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_54" id="v5b" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_53" species="Glyoxal" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> k5b </ci>
+              <ci> Glyoxal </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_52" id="k5b" value="0.0017"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_60" id="v6" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_58" species="Schiff" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_59" species="CML" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> ox </ci>
+              <ci> p6 </ci>
+              <ci> k3 </ci>
+              <apply>
+                <power/>
+                <apply>
+                  <divide/>
+                  <ci> Schiff </ci>
+                  <cn> 0.25 </cn>
+                </apply>
+                <cn> 0.36 </cn>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_55" id="ox" value="1"/>
+            <parameter metaid="metaid_56" id="p6" value="2.7"/>
+            <parameter metaid="metaid_57" id="k3" value="7.92e-07"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_66" id="v7a" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_64" species="Lysine" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_65" species="Schiff"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <cn> 0.05 </cn>
+              <ci> ox </ci>
+              <ci> p7 </ci>
+              <ci> k3 </ci>
+              <apply>
+                <power/>
+                <apply>
+                  <divide/>
+                  <ci> Schiff </ci>
+                  <cn> 0.25 </cn>
+                </apply>
+                <cn> 0.36 </cn>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_61" id="ox" value="1"/>
+            <parameter metaid="metaid_62" id="p7" value="60"/>
+            <parameter metaid="metaid_63" id="k3" value="7.92e-07"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_72" id="v7b" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_70" species="Glyoxal" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_71" species="Schiff"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <cn> 0.005 </cn>
+              <ci> ox </ci>
+              <ci> p7 </ci>
+              <ci> k3 </ci>
+              <apply>
+                <power/>
+                <apply>
+                  <divide/>
+                  <ci> Schiff </ci>
+                  <cn> 0.25 </cn>
+                </apply>
+                <cn> 0.36 </cn>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_67" id="ox" value="1"/>
+            <parameter metaid="metaid_68" id="p7" value="60"/>
+            <parameter metaid="metaid_69" id="k3" value="7.92e-07"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_77" id="v7c" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_76" species="Schiff" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <ci> ox </ci>
+              <ci> p7 </ci>
+              <ci> k3 </ci>
+              <apply>
+                <power/>
+                <apply>
+                  <divide/>
+                  <ci> Schiff </ci>
+                  <cn> 0.25 </cn>
+                </apply>
+                <cn> 0.36 </cn>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_73" id="ox" value="1"/>
+            <parameter metaid="metaid_74" id="p7" value="60"/>
+            <parameter metaid="metaid_75" id="k3" value="7.92e-07"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

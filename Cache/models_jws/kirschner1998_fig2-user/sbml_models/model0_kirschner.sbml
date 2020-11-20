@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="kirschner1" name="kirschner1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="T" compartment="default" initialConcentration="1000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="V" compartment="default" initialConcentration="3" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_3" id="VMULTIPLIED" value="0" constant="false"/>
+      <parameter metaid="metaid_4" id="b1" value="14" constant="false"/>
+      <parameter metaid="metaid_5" id="b2" value="1" constant="false"/>
+      <parameter metaid="metaid_6" id="c" value="0.007" constant="false"/>
+      <parameter metaid="metaid_7" id="g" value="30" constant="false"/>
+      <parameter metaid="metaid_8" id="k" value="0.00025" constant="false"/>
+      <parameter metaid="metaid_9" id="mu" value="0.002" constant="false"/>
+      <parameter metaid="metaid_10" id="s1" value="2" constant="false"/>
+      <parameter metaid="metaid_11" id="s2" value="1.5" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_12" variable="VMULTIPLIED">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 1000 </cn>
+            <ci> V </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_14" id="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_13" species="T" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> s1 </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_17" id="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_15" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_16" species="V"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> s2 </ci>
+                <ci> V </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> b1 </ci>
+                <ci> V </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_19" id="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_18" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mu </ci>
+              <ci> T </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_22" id="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_20" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_21" species="V"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> T </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_24" id="v5" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_23" species="V" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> g </ci>
+                <ci> V </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> b2 </ci>
+                <ci> V </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_27" id="v6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="V" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_26" species="T"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> c </ci>
+              <ci> T </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

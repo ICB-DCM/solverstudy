@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_fridlyand1" initialTime="0" outputStartTime="0" outputEndTime="200000" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_fridlyand1" name="fridlyand1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/fridlyand1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kkca']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IP3_cyt']/@initialConcentration" newValue="0.33"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Ca_cyt']/@initialConcentration" newValue="0.085"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Na_cyt']/@initialConcentration" newValue="9858.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ATP_cyt']/@initialConcentration" newValue="932.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Ca_er']/@initialConcentration" newValue="22.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ca_ec']/@value" newValue="2600.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Cm']/@value" newValue="6158.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='F']/@value" newValue="9.6485e+16"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_cyt']/@value" newValue="132400.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_ec']/@value" newValue="8000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kcah']/@value" newValue="9.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kcap']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kcar']/@value" newValue="200.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kcarp']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kdd']/@value" newValue="17.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kip3']/@value" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Kipca']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Knaca']/@value" newValue="0.75"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Krca']/@value" newValue="0.077"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ksup']/@value" newValue="150400.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ktd']/@value" newValue="26.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Ktt']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Na_ec']/@value" newValue="140000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='P']/@value" newValue="4950.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Pcaer']/@value" newValue="0.105"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Pip3']/@value" newValue="1.2e-15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Pleak']/@value" newValue="1e-16"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Pmcap']/@value" newValue="2000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Pnak']/@value" newValue="600.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Sn']/@value" newValue="7.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='TV']/@value" newValue="26.73"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='V_CRAN']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Vcah']/@value" newValue="-19.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Vn']/@value" newValue="-14.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Vtau']/@value" newValue="-75.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='a']/@value" newValue="65.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b']/@value" newValue="20.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b5_ast']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b_1']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b_2']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b_3']/@value" newValue="1.72e-17"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b_4']/@value" newValue="0.0002"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b_6']/@value" newValue="6e-07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='c']/@value" newValue="20.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f5_ast']/@value" newValue="0.002"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_1']/@value" newValue="2.5e-10"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_2']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_3']/@value" newValue="0.172"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_4']/@value" newValue="1.5e-08"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_6']/@value" newValue="11.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='fer']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='fi']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gmKDr']/@value" newValue="3000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gm_CRAN']/@value" newValue="0.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gmkatp']/@value" newValue="24000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gmkca']/@value" newValue="130.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gmna']/@value" newValue="1200.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gmvca']/@value" newValue="770.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gnaca']/@value" newValue="271.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kadp']/@value" newValue="0.00037"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='katp']/@value" newValue="5e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='katpca']/@value" newValue="5e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdip']/@value" newValue="4e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kip']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='ksg']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='Cytoplasm']/@size" newValue="7.64e-13"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='ER']/@size" newValue="2.8e-13"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_fridlyand1" modelReference="model0_fridlyand1" simulationReference="sim0_model0_fridlyand1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_fridlyand1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_Ca_cyt">
+      <listOfVariables>
+        <variable id="Ca_cyt" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Ca_cyt']" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Ca_cyt </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_Ca_er">
+      <listOfVariables>
+        <variable id="Ca_er" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Ca_er']" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Ca_er </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_IP3_cyt">
+      <listOfVariables>
+        <variable id="IP3_cyt" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IP3_cyt']" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> IP3_cyt </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_ATP_cyt">
+      <listOfVariables>
+        <variable id="ATP_cyt" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ATP_cyt']" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ATP_cyt </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_fridlyand1_Na_cyt">
+      <listOfVariables>
+        <variable id="Na_cyt" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Na_cyt']" taskReference="task0_model0_fridlyand1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Na_cyt </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3A" name="Figure 3A">
+      <listOfCurves>
+        <curve id="plot0_Ca_cyt" name="Ca_cyt" logX="false" logY="false" xDataReference="task0_model0_fridlyand1_time" yDataReference="task0_model0_fridlyand1_Ca_cyt"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3C" name="Figure 3C">
+      <listOfCurves>
+        <curve id="plot1_Ca_er" name="Ca_er" logX="false" logY="false" xDataReference="task0_model0_fridlyand1_time" yDataReference="task0_model0_fridlyand1_Ca_er"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3D" name="Figure 3D">
+      <listOfCurves>
+        <curve id="plot3_ATP_cyt" name="ATP_cyt" logX="false" logY="false" xDataReference="task0_model0_fridlyand1_time" yDataReference="task0_model0_fridlyand1_ATP_cyt"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3E" name="Figure 3E">
+      <listOfCurves>
+        <curve id="plot2_IP3_cyt" name="IP3_cyt" logX="false" logY="false" xDataReference="task0_model0_fridlyand1_time" yDataReference="task0_model0_fridlyand1_IP3_cyt"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3F" name="Figure 3F">
+      <listOfCurves>
+        <curve id="plot4_Na_cyt" name="Na_cyt" logX="false" logY="false" xDataReference="task0_model0_fridlyand1_time" yDataReference="task0_model0_fridlyand1_Na_cyt"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

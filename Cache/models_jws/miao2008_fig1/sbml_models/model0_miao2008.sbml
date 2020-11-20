@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="miao1" name="miao1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="T" compartment="default" initialConcentration="32554830" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="Tm" compartment="default" initialConcentration="134173" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="Tmw" compartment="default" initialConcentration="9818" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="Tw" compartment="default" initialConcentration="26180" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_5" id="kM" value="1.51e-09" constant="false"/>
+      <parameter metaid="metaid_6" id="kR" value="4.3e-10" constant="false"/>
+      <parameter metaid="metaid_7" id="kW" value="1.11e-09" constant="false"/>
+      <parameter metaid="metaid_8" id="qM" value="4.15e-09" constant="false"/>
+      <parameter metaid="metaid_9" id="qW" value="1.1e-09" constant="false"/>
+      <parameter metaid="metaid_10" id="rho" value="0.015" constant="false"/>
+      <parameter metaid="metaid_11" id="rhoM" value="-0.0229" constant="false"/>
+      <parameter metaid="metaid_12" id="rhoMW" value="0.000568" constant="false"/>
+      <parameter metaid="metaid_13" id="rhoW" value="0.00713" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_15" id="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_14" species="T" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> rho </ci>
+              <ci> T </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_18" id="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_16" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_17" species="Tm" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kM </ci>
+              <ci> T </ci>
+              <ci> Tm </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_21" id="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_19" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_20" species="Tw" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kW </ci>
+              <ci> T </ci>
+              <ci> Tw </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_26" id="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_22" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_23" species="Tm" stoichiometry="0.25" constant="true"/>
+          <speciesReference metaid="metaid_24" species="Tmw" stoichiometry="0.5" constant="true"/>
+          <speciesReference metaid="metaid_25" species="Tw" stoichiometry="0.25" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kR </ci>
+              <ci> T </ci>
+              <ci> Tmw </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_28" id="v5" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_27" species="Tm" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> rhoM </ci>
+              <ci> Tm </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_32" id="v6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_29" species="Tm" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_30" species="Tmw" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_31" species="Tw"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> qM </ci>
+              <ci> Tm </ci>
+              <ci> Tw </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_34" id="v7" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_33" species="Tw" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> rhoW </ci>
+              <ci> Tw </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="v8" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_35" species="Tw" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_36" species="Tmw" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_37" species="Tm"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> qW </ci>
+              <ci> Tm </ci>
+              <ci> Tw </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_40" id="v9" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_39" species="Tmw" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> rhoMW </ci>
+              <ci> Tmw </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

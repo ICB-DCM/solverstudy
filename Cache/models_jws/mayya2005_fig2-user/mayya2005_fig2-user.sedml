@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_mayya1" initialTime="0" outputStartTime="0" outputEndTime="5000" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_mayya1" name="mayya1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/mayya1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='sol']/@size" newValue="14.625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nuc']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nm']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='PstatDimerisation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kf_PstatDimerisation']/@value" newValue="0.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='PstatDimerisation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kr_PstatDimerisation']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='statDephosphorylation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kcat_dephos']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='statDephosphorylation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Km_dephos']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='statPhosphorylation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kcat_phos']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='statPhosphorylation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Km_phos']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='PstatDimerisationNuc']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kf_PstatDimerisation']/@value" newValue="0.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='PstatDimerisationNuc']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kr_PstatDimerisation']/@value" newValue="0.03"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='PstatDimer__import']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='PstatDimer_impMax']/@value" newValue="0.045"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='PstatDimer__import']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kpsd_imp']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='stat_export']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='stat_expMax']/@value" newValue="-0.06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='stat_export']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Ks_exp']/@value" newValue="0.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='stat_import']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='stat_impMax']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='stat_import']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Ks_imp']/@value" newValue="3.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='stat_sol']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PstatDimer_nuc']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='species_test']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pstat_nuc']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pstat_sol']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PstatDimer_sol']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='stat_nuc']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='statPhosphatase_nuc']/@initialConcentration" newValue="0.05"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_mayya1" modelReference="model0_mayya1" simulationReference="sim0_model0_mayya1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_mayya1_PstatDimer_sol">
+      <listOfVariables>
+        <variable id="PstatDimer_sol" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PstatDimer_sol']" taskReference="task0_model0_mayya1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> PstatDimer_sol </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_mayya1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_mayya1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_mayya1_stat_sol">
+      <listOfVariables>
+        <variable id="stat_sol" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='stat_sol']" taskReference="task0_model0_mayya1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> stat_sol </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_mayya1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_mayya1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_mayya1_statKinase_sol">
+      <listOfVariables>
+        <variable id="statKinase_sol" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='statKinase_sol']" taskReference="task0_model0_mayya1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> statKinase_sol </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_mayya1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_mayya1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_2_Dimer" name="Figure 2 Dimer">
+      <listOfCurves>
+        <curve id="plot2_PstatDimer_sol" name="PstatDimer_sol" logX="false" logY="false" xDataReference="task0_model0_mayya1_time" yDataReference="task0_model0_mayya1_PstatDimer_sol"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_Kinase" name="Figure 2 Kinase">
+      <listOfCurves>
+        <curve id="plot0_statKinase_sol" name="statKinase_sol" logX="false" logY="false" xDataReference="task0_model0_mayya1_time" yDataReference="task0_model0_mayya1_statKinase_sol"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_sol" name="Figure 2 Sol">
+      <listOfCurves>
+        <curve id="plot1_stat_sol" name="stat_sol" logX="false" logY="false" xDataReference="task0_model0_mayya1_time" yDataReference="task0_model0_mayya1_stat_sol"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

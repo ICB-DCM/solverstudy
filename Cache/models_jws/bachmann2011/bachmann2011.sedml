@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfDataDescriptions>
+    <dataDescription id="bachmann_data" name="MSB Bachmann - Experimental quantitative immunoblotting data" source="https://fairdomhub.org/data_files/1329/download?version=1">
+      <listOfDataSources>
+        <dataSource id="bachmann_data_time_var" indexSet="time"/>
+        <dataSource id="bachmann_data_pjak2_var" indexSet="pJAK2"/>
+        <dataSource id="bachmann_data_pepor_var" indexSet="pEpoR"/>
+        <dataSource id="bachmann_data_cis_var" indexSet="CIS"/>
+        <dataSource id="bachmann_data_socs3_var" indexSet="SOCS3"/>
+        <dataSource id="bachmann_data_tstat5_var" indexSet="tSTAT5"/>
+        <dataSource id="bachmann_data_pstat5_var" indexSet="pSTAT5"/>
+      </listOfDataSources>
+    </dataDescription>
+  </listOfDataDescriptions>
+  <listOfSimulations>
+    <uniformTimeCourse id="sim1" initialTime="0" outputStartTime="0" outputEndTime="240" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="bachmann" name="bachmann" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/bachmann/sbml/"/>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task_bachmann" name="task_bachmann" modelReference="bachmann" simulationReference="sim1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="curve_cis_datagen0">
+      <listOfVariables>
+        <variable id="task_bachmann_time" symbol="urn:sedml:symbol:time" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task_bachmann_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="curve_pstat5_datagen0">
+      <listOfVariables>
+        <variable id="task_bachmann_time" symbol="urn:sedml:symbol:time" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task_bachmann_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="curve_tstat5_datagen0">
+      <listOfVariables>
+        <variable id="task_bachmann_time" symbol="urn:sedml:symbol:time" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task_bachmann_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="curve_pepor_datagen0">
+      <listOfVariables>
+        <variable id="task_bachmann_time" symbol="urn:sedml:symbol:time" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task_bachmann_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_pjak2" name="pJAK2">
+      <listOfVariables>
+        <variable id="EpoRpJAK2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='EpoRpJAK2']" taskReference="task_bachmann"/>
+        <variable id="p12EpoRpJAK2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p12EpoRpJAK2']" taskReference="task_bachmann"/>
+        <variable id="p1EpoRpJAK2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p1EpoRpJAK2']" taskReference="task_bachmann"/>
+        <variable id="p2EpoRpJAK2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p2EpoRpJAK2']" taskReference="task_bachmann"/>
+        <variable id="init_EpoRJAK2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='init_EpoRJAK2']" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <listOfParameters>
+        <parameter id="offset_pJAK2" value="0.00947"/>
+        <parameter id="scale_pJAK2" value="0.883"/>
+      </listOfParameters>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <plus/>
+          <ci> offset_pJAK2 </ci>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <cn type="integer"> 2 </cn>
+              <ci> scale_pJAK2 </ci>
+              <apply>
+                <plus/>
+                <ci> EpoRpJAK2 </ci>
+                <ci> p12EpoRpJAK2 </ci>
+                <ci> p1EpoRpJAK2 </ci>
+                <ci> p2EpoRpJAK2 </ci>
+              </apply>
+            </apply>
+            <ci> init_EpoRJAK2 </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="curve_pjak2_datagen0">
+      <listOfVariables>
+        <variable id="task_bachmann_time" symbol="urn:sedml:symbol:time" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task_bachmann_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_time" name="time">
+      <listOfVariables>
+        <variable id="time" name="time" symbol="urn:sedml:symbol:time" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_pepor" name="pEpoR">
+      <listOfVariables>
+        <variable id="p12EpoRpJAK2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p12EpoRpJAK2']" taskReference="task_bachmann"/>
+        <variable id="p1EpoRpJAK2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p1EpoRpJAK2']" taskReference="task_bachmann"/>
+        <variable id="p2EpoRpJAK2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='p2EpoRpJAK2']" taskReference="task_bachmann"/>
+        <variable id="init_EpoRJAK2" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='init_EpoRJAK2']" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <listOfParameters>
+        <parameter id="offset_pEpoR" value="0.00439"/>
+        <parameter id="scale_pEpoR" value="0.256"/>
+      </listOfParameters>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <plus/>
+          <ci> offset_pEpoR </ci>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <cn type="integer"> 16 </cn>
+              <ci> scale_pEpoR </ci>
+              <apply>
+                <plus/>
+                <ci> p12EpoRpJAK2 </ci>
+                <ci> p1EpoRpJAK2 </ci>
+                <ci> p2EpoRpJAK2 </ci>
+              </apply>
+            </apply>
+            <ci> init_EpoRJAK2 </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_cis" name="CIS">
+      <listOfVariables>
+        <variable id="CIS" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='CIS']" taskReference="task_bachmann"/>
+        <variable id="CISEqc" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CISEqc']" taskReference="task_bachmann"/>
+        <variable id="CISRNAEqc" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='CISRNAEqc']" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <listOfParameters>
+        <parameter id="offset_CIS" value="0.0265"/>
+        <parameter id="scale_CIS" value="16.4"/>
+      </listOfParameters>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <plus/>
+          <ci> offset_CIS </ci>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> CIS </ci>
+              <ci> scale_CIS </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> CISEqc </ci>
+              <ci> CISRNAEqc </ci>
+            </apply>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_socs3" name="SOCS3">
+      <listOfVariables>
+        <variable id="SOCS3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='SOCS3']" taskReference="task_bachmann"/>
+        <variable id="SOCS3Eqc" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='SOCS3Eqc']" taskReference="task_bachmann"/>
+        <variable id="SOCS3RNAEqc" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='SOCS3RNAEqc']" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <listOfParameters>
+        <parameter id="offset_SOCS3" value="0.114"/>
+        <parameter id="scale_SOCS3" value="15.5"/>
+      </listOfParameters>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <plus/>
+          <ci> offset_SOCS3 </ci>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> SOCS3 </ci>
+              <ci> scale_SOCS3 </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> SOCS3Eqc </ci>
+              <ci> SOCS3RNAEqc </ci>
+            </apply>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_tstat5" name="tSTAT5">
+      <listOfVariables>
+        <variable id="STAT5" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='STAT5']" taskReference="task_bachmann"/>
+        <variable id="pSTAT5" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pSTAT5']" taskReference="task_bachmann"/>
+        <variable id="init_STAT5" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='init_STAT5']" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <listOfParameters>
+        <parameter id="scale_tSTAT5" value="0.762"/>
+      </listOfParameters>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <apply>
+            <times/>
+            <ci> scale_tSTAT5 </ci>
+            <apply>
+              <plus/>
+              <ci> STAT5 </ci>
+              <ci> pSTAT5 </ci>
+            </apply>
+          </apply>
+          <ci> init_STAT5 </ci>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_pstat5" name="pSTAT5">
+      <listOfVariables>
+        <variable id="pSTAT5" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pSTAT5']" taskReference="task_bachmann"/>
+        <variable id="init_STAT5" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='init_STAT5']" taskReference="task_bachmann"/>
+      </listOfVariables>
+      <listOfParameters>
+        <parameter id="offset_pSTAT5" value="0.00109"/>
+        <parameter id="scale_pSTAT5" value="1.47"/>
+      </listOfParameters>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <plus/>
+          <ci> offset_pSTAT5 </ci>
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> scale_pSTAT5 </ci>
+              <ci> pSTAT5 </ci>
+            </apply>
+            <ci> init_STAT5 </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_data_time" name="time">
+      <listOfVariables>
+        <variable id="time" target="#bachmann_data_time_var"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_data_pjak2" name="pJAK2">
+      <listOfVariables>
+        <variable id="pjak2" target="#bachmann_data_pjak2_var"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> pjak2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_data_pepor" name="pEpoR">
+      <listOfVariables>
+        <variable id="pEpoR" target="#bachmann_data_pepor_var"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> pEpoR </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_data_cis" name="CIS">
+      <listOfVariables>
+        <variable id="CIS" target="#bachmann_data_cis_var"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> CIS </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_data_socs3" name="SOCS3">
+      <listOfVariables>
+        <variable id="SOCS3" target="#bachmann_data_socs3_var"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> SOCS3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_data_tstat5" name="tSTAT5">
+      <listOfVariables>
+        <variable id="tSTAT5" target="#bachmann_data_tstat5_var"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> tSTAT5 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="bachmann_data_pstat5" name="pSTAT5">
+      <listOfVariables>
+        <variable id="pSTAT5" target="#bachmann_data_pstat5_var"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> pSTAT5 </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="plot_a_pjak2" name="Figure A1 pJAK2">
+      <listOfCurves>
+        <curve id="curve_pjak2" name="pJAK2" logX="false" logY="false" xDataReference="curve_pjak2_datagen0" yDataReference="bachmann_pjak2"/>
+        <curve id="curve_pjak2_exp" name="pJAK2" logX="false" logY="false" xDataReference="bachmann_data_time" yDataReference="bachmann_data_pjak2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot_a_pepor" name="Figure A2 pEpoR">
+      <listOfCurves>
+        <curve id="curve_pepor" name="pEpoR" logX="false" logY="false" xDataReference="curve_pepor_datagen0" yDataReference="bachmann_pepor"/>
+        <curve id="curve_pepor_exp" name="pEpoR" logX="false" logY="false" xDataReference="bachmann_data_time" yDataReference="bachmann_data_pepor"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot_a_tstat5" name="Figure A3 tSTAT5">
+      <listOfCurves>
+        <curve id="curve_tstat5" name="tSTAT5" logX="false" logY="false" xDataReference="curve_tstat5_datagen0" yDataReference="bachmann_tstat5"/>
+        <curve id="curve_tstat5_data" name="tSTAT5" logX="false" logY="false" xDataReference="bachmann_data_time" yDataReference="bachmann_data_tstat5"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot_a_pstat5" name="Figure A4 pSTAT5">
+      <listOfCurves>
+        <curve id="curve_pstat5" name="pSTAT5" logX="false" logY="false" xDataReference="curve_pstat5_datagen0" yDataReference="bachmann_pstat5"/>
+        <curve id="curve_pstat5_data" name="pSTAT5" logX="false" logY="false" xDataReference="bachmann_data_time" yDataReference="bachmann_data_pstat5"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot_a_cis" name="Figure A5 CIS">
+      <listOfCurves>
+        <curve id="curve_cis" name="CIS" logX="false" logY="false" xDataReference="curve_cis_datagen0" yDataReference="bachmann_cis"/>
+        <curve id="curve_cis_data" name="CIS" logX="false" logY="false" xDataReference="bachmann_data_time" yDataReference="bachmann_data_cis"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="plot_a_socs3" name="Figure A6 SOCS3">
+      <listOfCurves>
+        <curve id="curve_socs3" name="SOCS3" logX="false" logY="false" xDataReference="bachmann_time" yDataReference="bachmann_socs3"/>
+        <curve id="curve_socs3_data" name="SOCS3" logX="false" logY="false" xDataReference="bachmann_data_time" yDataReference="bachmann_data_socs3"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

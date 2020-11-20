@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_chassagnole1" initialTime="0" outputStartTime="0" outputEndTime="120" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_chassagnole1" name="chassagnole1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/chassagnole1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='phos']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='asp']/@initialConcentration" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='adp']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='hs']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='thr']/@initialConcentration" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='nadph']/@initialConcentration" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='asa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='aspp']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='atp']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='hsp']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='nadp']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vatpase']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='prot']/@value" newValue="202.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vatpase']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='katpase']/@value" newValue="4.1e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vnadph_endo']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='prot']/@value" newValue="202.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vnadph_endo']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='knadph']/@value" newValue="5.4e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k4iatp']/@value" newValue="4.35"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k4thr']/@value" newValue="1.09"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k4hs']/@value" newValue="0.11"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k4ihs']/@value" newValue="4.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k4atp']/@value" newValue="0.072"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k4lys']/@value" newValue="9.45"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='lys']/@value" newValue="0.46"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhk']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='vm4f']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vtsy']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k5hsp']/@value" newValue="0.31"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vtsy']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='vm5']/@value" newValue="0.0434"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k3nadp']/@value" newValue="0.067"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k3nadph']/@value" newValue="0.037"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k3hs']/@value" newValue="3.39"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k3asa']/@value" newValue="0.24"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='alpha3']/@value" newValue="3.93"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='nhdh1']/@value" newValue="1.41"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k3thr']/@value" newValue="0.097"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k3eq']/@value" newValue="3162.27766017"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vhdh']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='vm3f']/@value" newValue="1.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vasd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2nadp']/@value" newValue="0.144"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vasd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2nadph']/@value" newValue="0.029"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vasd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2p']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vasd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2asa']/@value" newValue="0.11"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vasd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2aspp']/@value" newValue="0.022"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vasd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2eq']/@value" newValue="56.4150334574"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vasd']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='vm2f']/@value" newValue="0.1812"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k13adp']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k13atp']/@value" newValue="0.22"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k13aspp']/@value" newValue="0.017"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k13']/@value" newValue="0.32"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='nak3']/@value" newValue="2.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k1lys']/@value" newValue="0.391"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='lys']/@value" newValue="0.46"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='vm13']/@value" newValue="0.0722"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k1adp']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k1atp']/@value" newValue="0.98"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k1aspp']/@value" newValue="0.017"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='alpha']/@value" newValue="2.47"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='nak1']/@value" newValue="4.09"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k1thr']/@value" newValue="0.167"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k11']/@value" newValue="0.97"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='keqak']/@value" newValue="0.00064"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='vak']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='vm11']/@value" newValue="0.15"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_chassagnole1" modelReference="model0_chassagnole1" simulationReference="sim0_model0_chassagnole1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_chassagnole1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_chassagnole1_asa">
+      <listOfVariables>
+        <variable id="asa" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='asa']" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> asa </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_chassagnole1_asp">
+      <listOfVariables>
+        <variable id="asp" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='asp']" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> asp </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_chassagnole1_hs">
+      <listOfVariables>
+        <variable id="hs" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='hs']" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> hs </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_chassagnole1_nadph">
+      <listOfVariables>
+        <variable id="nadph" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='nadph']" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> nadph </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_chassagnole1_thr">
+      <listOfVariables>
+        <variable id="thr" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='thr']" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> thr </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_chassagnole1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_chassagnole1_atp">
+      <listOfVariables>
+        <variable id="atp" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='atp']" taskReference="task0_model0_chassagnole1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> atp </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_2Fi" name="Figure 2Fi">
+      <listOfCurves>
+        <curve id="plot0_asa" name="asa" logX="false" logY="false" xDataReference="task0_model0_chassagnole1_time" yDataReference="task0_model0_chassagnole1_asa"/>
+        <curve id="plot0_asp" name="asp" logX="false" logY="false" xDataReference="task0_model0_chassagnole1_time" yDataReference="task0_model0_chassagnole1_asp"/>
+        <curve id="plot0_hs" name="hs" logX="false" logY="false" xDataReference="task0_model0_chassagnole1_time" yDataReference="task0_model0_chassagnole1_hs"/>
+        <curve id="plot0_nadph" name="nadph" logX="false" logY="false" xDataReference="task0_model0_chassagnole1_time" yDataReference="task0_model0_chassagnole1_nadph"/>
+        <curve id="plot0_thr" name="thr" logX="false" logY="false" xDataReference="task0_model0_chassagnole1_time" yDataReference="task0_model0_chassagnole1_thr"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2Fii" name="Figure 2Fii">
+      <listOfCurves>
+        <curve id="plot1_atp" name="atp" logX="false" logY="false" xDataReference="task0_model0_chassagnole1_time" yDataReference="task0_model0_chassagnole1_atp"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

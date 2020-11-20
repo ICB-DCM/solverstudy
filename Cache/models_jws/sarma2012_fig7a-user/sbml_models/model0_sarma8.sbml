@@ -1,0 +1,2043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="sarma8" name="sarma8">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="function_4_3_1" name="function_4_3_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> A </ci>
+            </bvar>
+            <bvar>
+              <ci> K3 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ka </ci>
+            </bvar>
+            <bvar>
+              <ci> k3 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_1 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_2 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_3 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_7 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> k3 </ci>
+                    <ci> species_1 </ci>
+                    <ci> species_2 </ci>
+                  </apply>
+                  <ci> K3 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> species_2 </ci>
+                    <ci> K3 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> species_3 </ci>
+                    <ci> K3 </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> A </ci>
+                      <ci> species_7 </ci>
+                    </apply>
+                    <ci> Ka </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> species_7 </ci>
+                    <ci> Ka </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_5" name="22">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> P3_n </ci>
+            </bvar>
+            <bvar>
+              <ci> M_P_n </ci>
+            </bvar>
+            <bvar>
+              <ci> M_PP_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k22 </ci>
+            </bvar>
+            <bvar>
+              <ci> K22 </ci>
+            </bvar>
+            <bvar>
+              <ci> K22i </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k22 </ci>
+                  <ci> P3_n </ci>
+                  <ci> M_P_n </ci>
+                </apply>
+                <ci> K22 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> M_P_n </ci>
+                  <ci> K22 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> M_PP_n </ci>
+                  <ci> K22i </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4" name="21">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> M_PP_n </ci>
+            </bvar>
+            <bvar>
+              <ci> M_P_n </ci>
+            </bvar>
+            <bvar>
+              <ci> P3_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k21 </ci>
+            </bvar>
+            <bvar>
+              <ci> K21 </ci>
+            </bvar>
+            <bvar>
+              <ci> K21i </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k21 </ci>
+                  <ci> P3_n </ci>
+                  <ci> M_PP_n </ci>
+                </apply>
+                <ci> K21 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> M_PP_n </ci>
+                  <ci> K21 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> M_P_n </ci>
+                  <ci> K21i </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_3" name="15">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k15 </ci>
+            </bvar>
+            <bvar>
+              <ci> P3mRNA </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> k15 </ci>
+              <ci> P3mRNA </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_2" name="12">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> V12 </ci>
+            </bvar>
+            <bvar>
+              <ci> n12 </ci>
+            </bvar>
+            <bvar>
+              <ci> K12 </ci>
+            </bvar>
+            <bvar>
+              <ci> M_PP_n </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V12 </ci>
+                <apply>
+                  <power/>
+                  <ci> M_PP_n </ci>
+                  <ci> n12 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <ci> K12 </ci>
+                  <ci> n12 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <ci> M_PP_n </ci>
+                  <ci> n12 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_1" name="11">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k11f </ci>
+            </bvar>
+            <bvar>
+              <ci> ppERK_c </ci>
+            </bvar>
+            <bvar>
+              <ci> k11b </ci>
+            </bvar>
+            <bvar>
+              <ci> ppERK_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k11f </ci>
+                <ci> ppERK_c </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k11b </ci>
+                <ci> ppERK_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_10_1" name="function_4_10_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K10 </ci>
+            </bvar>
+            <bvar>
+              <ci> k10 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_10 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_6 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_7 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> species_10 </ci>
+                  <ci> species_6 </ci>
+                </apply>
+                <ci> K10 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> species_7 </ci>
+                  <ci> K10 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> species_6 </ci>
+                  <ci> K10 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_9_1" name="function_4_9_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K9 </ci>
+            </bvar>
+            <bvar>
+              <ci> k9 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_10 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_6 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_7 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> species_10 </ci>
+                  <ci> species_7 </ci>
+                </apply>
+                <ci> K9 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> species_7 </ci>
+                  <ci> K9 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> species_6 </ci>
+                  <ci> K9 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_6_1" name="function_4_6_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K6 </ci>
+            </bvar>
+            <bvar>
+              <ci> k6 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_3 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_4 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_9 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k6 </ci>
+                  <ci> species_9 </ci>
+                  <ci> species_3 </ci>
+                </apply>
+                <ci> K6 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> species_4 </ci>
+                  <ci> K6 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> species_3 </ci>
+                  <ci> K6 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_5_1" name="function_4_5_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K5 </ci>
+            </bvar>
+            <bvar>
+              <ci> k5 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_3 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_4 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_9 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k5 </ci>
+                  <ci> species_9 </ci>
+                  <ci> species_4 </ci>
+                </apply>
+                <ci> K5 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> species_4 </ci>
+                  <ci> K5 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> species_3 </ci>
+                  <ci> K5 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_2_1" name="function_4_2_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K2 </ci>
+            </bvar>
+            <bvar>
+              <ci> k2 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_1 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_8 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> species_8 </ci>
+                  <ci> species_1 </ci>
+                </apply>
+                <ci> K2 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> species_1 </ci>
+                  <ci> K2 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_8_1" name="function_4_8_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K8 </ci>
+            </bvar>
+            <bvar>
+              <ci> k8 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_4 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_5 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_6 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> species_4 </ci>
+                  <ci> species_6 </ci>
+                </apply>
+                <ci> K8 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> species_5 </ci>
+                  <ci> K8 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> species_6 </ci>
+                  <ci> K8 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_7_1" name="function_4_7_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K7 </ci>
+            </bvar>
+            <bvar>
+              <ci> k7 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_4 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_5 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_6 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> species_4 </ci>
+                  <ci> species_5 </ci>
+                </apply>
+                <ci> K7 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> species_5 </ci>
+                  <ci> K7 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> species_6 </ci>
+                  <ci> K7 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_4_1" name="function_4_4_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> A </ci>
+            </bvar>
+            <bvar>
+              <ci> K4 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ka </ci>
+            </bvar>
+            <bvar>
+              <ci> k4 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_1 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_2 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_3 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_7 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> k4 </ci>
+                    <ci> species_1 </ci>
+                    <ci> species_3 </ci>
+                  </apply>
+                  <ci> K4 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> species_3 </ci>
+                    <ci> K4 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> species_2 </ci>
+                    <ci> K4 </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> A </ci>
+                      <ci> species_7 </ci>
+                    </apply>
+                    <ci> Ka </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> species_7 </ci>
+                    <ci> Ka </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4_1_1" name="function_4_1_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> K1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KI </ci>
+            </bvar>
+            <bvar>
+              <ci> V1 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_0 </ci>
+            </bvar>
+            <bvar>
+              <ci> species_7 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> V1 </ci>
+                  <ci> species_0 </ci>
+                </apply>
+                <ci> K1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> species_0 </ci>
+                    <ci> K1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> species_7 </ci>
+                    <ci> KI </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="volume" name="volume">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_2" id="compartment_0" name="compartment" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005623"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_3" id="species_0" name="MKKK" compartment="compartment_0" initialConcentration="999.999903688753" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04049"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_4" id="species_1" name="MKKK_P" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04049"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_5" id="species_10" name="P3" compartment="compartment_0" initialConcentration="499.999975922188" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P51452"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_6" id="species_11" name="M_PP_n" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005634"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P28482"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_7" sboTerm="SBO:0000311" id="species_12" name="PreP3_mRNA" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_7">
+              <bqbiol:encodes>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005634"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P51452"/>
+                </rdf:Bag>
+              </bqbiol:encodes>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_8" sboTerm="SBO:0000312" id="species_13" name="P3mRNA" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_8">
+              <bqbiol:encodes>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005634"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P51452"/>
+                </rdf:Bag>
+              </bqbiol:encodes>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_9" id="species_14" name="P3_c" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_9">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005737"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P51452"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_10" sboTerm="SBO:0000291" id="species_15" name="pP3_c" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="species_16" name="M_n" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005634"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P28482"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_12" id="species_17" name="M_P_n" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_12">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005634"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P28482"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_13" id="species_18" name="P3_n" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_13">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005634"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P51452"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_14" id="species_2" name="MKK" compartment="compartment_0" initialConcentration="3999.99961475501" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q02750"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_15" id="species_3" name="MKK_P" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q02750"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_16" id="species_4" name="MKK_PP" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_16">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q02750"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_17" id="species_5" name="M" compartment="compartment_0" initialConcentration="999.999903688753" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P28482"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_18" id="species_6" name="M_P" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_18">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P28482"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_19" id="species_7" name="M_PP" compartment="compartment_0" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00562"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P28482"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_20" id="species_8" name="P1" compartment="compartment_0" initialConcentration="99.9999903688752" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P51452"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_21" id="species_9" name="P2" compartment="compartment_0" initialConcentration="499.999951844377" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_21">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P51452"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction metaid="metaid_32" id="reaction_0" name="1" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_32">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="species_0" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_26" species="species_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_27" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_28" species="species_0"/>
+          <modifierSpeciesReference metaid="metaid_29" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_30" species="species_0"/>
+          <modifierSpeciesReference metaid="metaid_31" species="species_7"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_1_1 </ci>
+                <ci> K1 </ci>
+                <ci> KI </ci>
+                <ci> V1 </ci>
+                <ci> species_0 </ci>
+                <ci> species_7 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_22" id="V1" name="V1" value="2.5"/>
+            <parameter metaid="metaid_23" id="KI" name="KI" value="9"/>
+            <parameter metaid="metaid_24" id="K1" name="K1" value="20"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_50" id="reaction_1" name="3" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_50">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_37" species="species_2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_38" species="species_3" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_39" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_40" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_41" species="species_2"/>
+          <modifierSpeciesReference metaid="metaid_42" species="species_1"/>
+          <modifierSpeciesReference metaid="metaid_43" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_44" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_45" species="species_2"/>
+          <modifierSpeciesReference metaid="metaid_46" species="species_1"/>
+          <modifierSpeciesReference metaid="metaid_47" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_48" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_49" species="species_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_3_1 </ci>
+                <ci> A </ci>
+                <ci> K3 </ci>
+                <ci> Ka </ci>
+                <ci> k3 </ci>
+                <ci> species_1 </ci>
+                <ci> species_2 </ci>
+                <ci> species_3 </ci>
+                <ci> species_7 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_33" id="k3" name="k3" value="0.1"/>
+            <parameter metaid="metaid_34" id="Ka" name="Ka" value="500"/>
+            <parameter metaid="metaid_35" id="K3" name="K3" value="20"/>
+            <parameter metaid="metaid_36" id="A" name="A" value="10"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_59" id="reaction_10" name="11" reversible="true" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_59">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0051169"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_53" species="species_7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_54" species="species_11" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_55" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_56" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_57" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_58" species="species_7"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> k11f </ci>
+                <ci> species_7 </ci>
+                <ci> k11b </ci>
+                <ci> species_11 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_51" id="k11b" name="k11b" value="2.86"/>
+            <parameter metaid="metaid_52" id="k11f" name="k11f" value="10.34"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_67" id="reaction_11" name="12" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_67">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0009299"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference metaid="metaid_63" species="species_12" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_64" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_65" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_66" species="species_11"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_2 </ci>
+                <ci> V12 </ci>
+                <ci> n12 </ci>
+                <ci> K12 </ci>
+                <ci> species_11 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_60" id="K12" name="K12" value="169"/>
+            <parameter metaid="metaid_61" id="n12" name="n12" value="3.97"/>
+            <parameter metaid="metaid_62" id="V12" name="V12" value="29.24"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_73" id="reaction_12" name="13" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_73">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0006397"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_69" species="species_12" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_70" species="species_13" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_71" species="species_12"/>
+          <modifierSpeciesReference metaid="metaid_72" species="species_12"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <ci> k1 </ci>
+              <ci> species_12 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_68" id="k1" name="k1" value="0.022"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_78" id="reaction_13" name="14" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_78">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0006406"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_75" species="species_13" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_76" species="species_13"/>
+          <modifierSpeciesReference metaid="metaid_77" species="species_13"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <ci> k1 </ci>
+              <ci> species_13 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_74" id="k1" name="k1" value="0.0078"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_84" id="reaction_14" name="15" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_84">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0002181"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference metaid="metaid_80" species="species_14" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_81" species="species_13"/>
+          <modifierSpeciesReference metaid="metaid_82" species="species_13"/>
+          <modifierSpeciesReference metaid="metaid_83" species="species_13"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_3 </ci>
+                <ci> k15 </ci>
+                <ci> species_13 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_79" id="k15" name="k15" value="0.0012"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_89" id="reaction_15" name="17" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_89">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0051169"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_86" species="species_14" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_87" species="species_14"/>
+          <modifierSpeciesReference metaid="metaid_88" species="species_14"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <ci> k1 </ci>
+              <ci> species_14 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_85" id="k1" name="k1" value="0.00025"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_98" id="reaction_16" name="19" reversible="true" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_98">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0051169"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_92" species="species_5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_93" species="species_16" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_94" species="species_16"/>
+          <modifierSpeciesReference metaid="metaid_95" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_96" species="species_16"/>
+          <modifierSpeciesReference metaid="metaid_97" species="species_5"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> species_5 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> species_16 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_90" id="k2" name="k2" value="2.86"/>
+            <parameter metaid="metaid_91" id="k1" name="k1" value="10.34"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_107" id="reaction_17" name="20" reversible="true" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_107">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0051169"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_101" species="species_6" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_102" species="species_17" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_103" species="species_17"/>
+          <modifierSpeciesReference metaid="metaid_104" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_105" species="species_17"/>
+          <modifierSpeciesReference metaid="metaid_106" species="species_6"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> species_6 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> species_17 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_99" id="k2" name="k2" value="2.86"/>
+            <parameter metaid="metaid_100" id="k1" name="k1" value="10.34"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_116" id="reaction_18" name="16" reversible="true" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_116">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0051169"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_110" species="species_14" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_111" species="species_18" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_112" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_113" species="species_14"/>
+          <modifierSpeciesReference metaid="metaid_114" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_115" species="species_14"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> species_14 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> species_18 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_108" id="k2" name="k2" value="15.4"/>
+            <parameter metaid="metaid_109" id="k1" name="k1" value="22.56"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_130" id="reaction_19" name="21" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_130">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_120" species="species_11" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_121" species="species_17" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_122" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_123" species="species_17"/>
+          <modifierSpeciesReference metaid="metaid_124" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_125" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_126" species="species_17"/>
+          <modifierSpeciesReference metaid="metaid_127" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_128" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_129" species="species_17"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4 </ci>
+                <ci> species_11 </ci>
+                <ci> species_17 </ci>
+                <ci> species_18 </ci>
+                <ci> k21 </ci>
+                <ci> K21 </ci>
+                <ci> K21i </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_117" id="K21i" name="K21i" value="87"/>
+            <parameter metaid="metaid_118" id="K21" name="K21" value="10300"/>
+            <parameter metaid="metaid_119" id="k21" name="k21" value="0.68"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_148" id="reaction_2" name="4" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_148">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_135" species="species_3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_136" species="species_4" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_137" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_138" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_139" species="species_2"/>
+          <modifierSpeciesReference metaid="metaid_140" species="species_1"/>
+          <modifierSpeciesReference metaid="metaid_141" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_142" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_143" species="species_2"/>
+          <modifierSpeciesReference metaid="metaid_144" species="species_1"/>
+          <modifierSpeciesReference metaid="metaid_145" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_146" species="species_2"/>
+          <modifierSpeciesReference metaid="metaid_147" species="species_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_4_1 </ci>
+                <ci> A </ci>
+                <ci> K4 </ci>
+                <ci> Ka </ci>
+                <ci> k4 </ci>
+                <ci> species_1 </ci>
+                <ci> species_2 </ci>
+                <ci> species_3 </ci>
+                <ci> species_7 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_131" id="k4" name="k4" value="0.1"/>
+            <parameter metaid="metaid_132" id="Ka" name="Ka" value="500"/>
+            <parameter metaid="metaid_133" id="K4" name="K4" value="20"/>
+            <parameter metaid="metaid_134" id="A" name="A" value="10"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_162" id="reaction_20" name="22" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_162">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_152" species="species_17" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_153" species="species_16" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_154" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_155" species="species_17"/>
+          <modifierSpeciesReference metaid="metaid_156" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_157" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_158" species="species_17"/>
+          <modifierSpeciesReference metaid="metaid_159" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_160" species="species_11"/>
+          <modifierSpeciesReference metaid="metaid_161" species="species_18"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_5 </ci>
+                <ci> species_18 </ci>
+                <ci> species_17 </ci>
+                <ci> species_11 </ci>
+                <ci> k22 </ci>
+                <ci> K22 </ci>
+                <ci> K22i </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_149" id="K22i" name="K22i" value="10300"/>
+            <parameter metaid="metaid_150" id="K22" name="K22" value="87"/>
+            <parameter metaid="metaid_151" id="k22" name="k22" value="0.31"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_167" id="reaction_21" name="18" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_167">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0006406"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_164" species="species_18" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_165" species="species_18"/>
+          <modifierSpeciesReference metaid="metaid_166" species="species_18"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <ci> k1 </ci>
+              <ci> species_18 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_163" id="k1" name="k1" value="0.00025"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_180" id="reaction_3" name="7" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_180">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_170" species="species_5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_171" species="species_6" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_172" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_173" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_174" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_175" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_176" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_177" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_178" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_179" species="species_4"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_7_1 </ci>
+                <ci> K7 </ci>
+                <ci> k7 </ci>
+                <ci> species_4 </ci>
+                <ci> species_5 </ci>
+                <ci> species_6 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_168" id="k7" name="k7" value="0.1"/>
+            <parameter metaid="metaid_169" id="K7" name="K7" value="20"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_193" id="reaction_4" name="8" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_193">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016310"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_183" species="species_6" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_184" species="species_7" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_185" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_186" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_187" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_188" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_189" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_190" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_191" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_192" species="species_4"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_8_1 </ci>
+                <ci> K8 </ci>
+                <ci> k8 </ci>
+                <ci> species_4 </ci>
+                <ci> species_5 </ci>
+                <ci> species_6 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_181" id="k8" name="k8" value="0.1"/>
+            <parameter metaid="metaid_182" id="K8" name="K8" value="20"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_203" id="reaction_5" name="2" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_203">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_196" species="species_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_197" species="species_0" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_198" species="species_8"/>
+          <modifierSpeciesReference metaid="metaid_199" species="species_1"/>
+          <modifierSpeciesReference metaid="metaid_200" species="species_8"/>
+          <modifierSpeciesReference metaid="metaid_201" species="species_1"/>
+          <modifierSpeciesReference metaid="metaid_202" species="species_8"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_2_1 </ci>
+                <ci> K2 </ci>
+                <ci> k2 </ci>
+                <ci> species_1 </ci>
+                <ci> species_8 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_194" id="k2" name="k2" value="0.025"/>
+            <parameter metaid="metaid_195" id="K2" name="K2" value="200"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_216" id="reaction_6" name="5" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_216">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_206" species="species_4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_207" species="species_3" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_208" species="species_9"/>
+          <modifierSpeciesReference metaid="metaid_209" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_210" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_211" species="species_9"/>
+          <modifierSpeciesReference metaid="metaid_212" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_213" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_214" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_215" species="species_9"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_5_1 </ci>
+                <ci> K5 </ci>
+                <ci> k5 </ci>
+                <ci> species_3 </ci>
+                <ci> species_4 </ci>
+                <ci> species_9 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_204" id="k5" name="k5" value="0.1"/>
+            <parameter metaid="metaid_205" id="K5" name="K5" value="200"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_229" id="reaction_7" name="6" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_229">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_219" species="species_3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_220" species="species_2" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_221" species="species_9"/>
+          <modifierSpeciesReference metaid="metaid_222" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_223" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_224" species="species_9"/>
+          <modifierSpeciesReference metaid="metaid_225" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_226" species="species_3"/>
+          <modifierSpeciesReference metaid="metaid_227" species="species_4"/>
+          <modifierSpeciesReference metaid="metaid_228" species="species_9"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_6_1 </ci>
+                <ci> K6 </ci>
+                <ci> k6 </ci>
+                <ci> species_3 </ci>
+                <ci> species_4 </ci>
+                <ci> species_9 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_217" id="k6" name="k6" value="0.1"/>
+            <parameter metaid="metaid_218" id="K6" name="K6" value="200"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_243" id="reaction_8" name="9" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_243">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_232" species="species_7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_233" species="species_6" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_234" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_235" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_236" species="species_10"/>
+          <modifierSpeciesReference metaid="metaid_237" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_238" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_239" species="species_10"/>
+          <modifierSpeciesReference metaid="metaid_240" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_241" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_242" species="species_10"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_9_1 </ci>
+                <ci> K9 </ci>
+                <ci> k9 </ci>
+                <ci> species_10 </ci>
+                <ci> species_6 </ci>
+                <ci> species_7 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_230" id="k9" name="k9" value="0.1"/>
+            <parameter metaid="metaid_231" id="K9" name="K9" value="200"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_257" id="reaction_9" name="10" reversible="false" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_257">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0016311"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_246" species="species_6" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_247" species="species_5" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_248" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_249" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_250" species="species_10"/>
+          <modifierSpeciesReference metaid="metaid_251" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_252" species="species_6"/>
+          <modifierSpeciesReference metaid="metaid_253" species="species_10"/>
+          <modifierSpeciesReference metaid="metaid_254" species="species_5"/>
+          <modifierSpeciesReference metaid="metaid_255" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_256" species="species_10"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_0 </ci>
+              <apply>
+                <ci> function_4_10_1 </ci>
+                <ci> K10 </ci>
+                <ci> k10 </ci>
+                <ci> species_10 </ci>
+                <ci> species_6 </ci>
+                <ci> species_7 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_244" id="k10" name="k10" value="0.1"/>
+            <parameter metaid="metaid_245" id="K10" name="K10" value="200"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

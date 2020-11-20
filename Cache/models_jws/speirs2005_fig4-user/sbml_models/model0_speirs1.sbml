@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="speirs1" name="speirs1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="x" compartment="default" initialConcentration="500000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="xD" compartment="default" initialConcentration="55000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="y" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="yD" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_5" id="a" value="0" constant="false"/>
+      <parameter metaid="metaid_6" id="gamma" value="0.00785" constant="false"/>
+      <parameter metaid="metaid_7" id="lambda" value="0.026" constant="false"/>
+      <parameter metaid="metaid_8" id="mu" value="0.000764" constant="false"/>
+      <parameter metaid="metaid_9" id="p" value="1" constant="false"/>
+      <parameter metaid="metaid_10" id="q" value="100" constant="false"/>
+      <parameter metaid="metaid_11" id="v" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_12" variable="v">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <ci> x </ci>
+              <ci> y </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> x </ci>
+              <ci> xD </ci>
+              <ci> y </ci>
+              <ci> yD </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_14" id="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_13" species="x" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> lambda </ci>
+              <ci> x </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_17" id="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_15" species="x" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_16" species="y" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> a </ci>
+              <ci> x </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_20" id="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_18" species="x" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_19" species="xD" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mu </ci>
+              <ci> x </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_22" id="v4" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_21" species="y" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> lambda </ci>
+              <ci> p </ci>
+              <ci> y </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_25" id="v5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_23" species="y" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_24" species="yD" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mu </ci>
+              <ci> q </ci>
+              <ci> y </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_27" id="v6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_26" species="xD" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> gamma </ci>
+              <ci> xD </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_29" id="v7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_28" species="yD" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> gamma </ci>
+              <ci> yD </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

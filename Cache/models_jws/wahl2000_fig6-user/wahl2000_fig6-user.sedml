@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_wahl1" initialTime="0" outputStartTime="0" outputEndTime="10000" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_wahl1" name="wahl1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/wahl1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='w']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x']/@initialConcentration" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y3']/@initialConcentration" newValue="0.45"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y2']/@initialConcentration" newValue="0.45"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z2']/@initialConcentration" newValue="0.072103"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z3']/@initialConcentration" newValue="0.0180258"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='a']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta1']/@value" newValue="0.08"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta2']/@value" newValue="0.075"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta3']/@value" newValue="0.06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='c1']/@value" newValue="0.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='c2']/@value" newValue="0.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='c3']/@value" newValue="0.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k3']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lambda']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='q']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='default']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_wahl1" modelReference="model0_wahl1" simulationReference="sim0_model0_wahl1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_wahl1_y1">
+      <listOfVariables>
+        <variable id="y1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y1']" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> y1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_y2">
+      <listOfVariables>
+        <variable id="y2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y2']" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> y2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_y3">
+      <listOfVariables>
+        <variable id="y3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='y3']" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> y3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_w">
+      <listOfVariables>
+        <variable id="w" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='w']" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> w </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_z1">
+      <listOfVariables>
+        <variable id="z1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z1']" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_z2">
+      <listOfVariables>
+        <variable id="z2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z2']" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z2 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_wahl1_z3">
+      <listOfVariables>
+        <variable id="z3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='z3']" taskReference="task0_model0_wahl1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> z3 </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure6_Bottom" name="Figure 6 Immune response">
+      <listOfCurves>
+        <curve id="plot1_w" name="w" logX="false" logY="false" xDataReference="task0_model0_wahl1_time" yDataReference="task0_model0_wahl1_w"/>
+        <curve id="plot1_z1" name="z1" logX="false" logY="false" xDataReference="task0_model0_wahl1_time" yDataReference="task0_model0_wahl1_z1"/>
+        <curve id="plot1_z2" name="z2" logX="false" logY="false" xDataReference="task0_model0_wahl1_time" yDataReference="task0_model0_wahl1_z2"/>
+        <curve id="plot1_z3" name="z3" logX="false" logY="false" xDataReference="task0_model0_wahl1_time" yDataReference="task0_model0_wahl1_z3"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure6_Middle" name="Figure 6 Virus load">
+      <listOfCurves>
+        <curve id="plot0_y1" name="y1" logX="false" logY="false" xDataReference="task0_model0_wahl1_time" yDataReference="task0_model0_wahl1_y1"/>
+        <curve id="plot0_y2" name="y2" logX="false" logY="false" xDataReference="task0_model0_wahl1_time" yDataReference="task0_model0_wahl1_y2"/>
+        <curve id="plot0_y3" name="y3" logX="false" logY="false" xDataReference="task0_model0_wahl1_time" yDataReference="task0_model0_wahl1_y3"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

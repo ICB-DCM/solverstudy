@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="kouril6">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" spatialDimensions="0" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="ADP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="ATP" compartment="default" initialConcentration="10" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="BPG" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="P3G" compartment="default" initialConcentration="4.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="pep" compartment="default" initialConcentration="5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="phos" name="phos" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="pyr" compartment="default" initialConcentration="0.1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_8" id="KiADP" value="1.01661161972841" constant="false"/>
+      <parameter metaid="metaid_9" id="KpgkADP" value="0.374683891073216" constant="false"/>
+      <parameter metaid="metaid_10" id="KpgkATP" value="9.30939957007288" constant="false"/>
+      <parameter metaid="metaid_11" id="KpgkBPG" value="0.00824346710166223" constant="false"/>
+      <parameter metaid="metaid_12" id="KpgkP3G" value="0.567800672197298" constant="false"/>
+      <parameter metaid="metaid_13" id="VmfPGK" value="17.2125572084323" constant="false"/>
+      <parameter metaid="metaid_14" id="VmrPGK" value="37.9602642543915" constant="false"/>
+      <parameter metaid="metaid_15" id="kPK" value="10" constant="false"/>
+      <parameter metaid="metaid_16" id="kd" value="0.736416" constant="false"/>
+      <parameter metaid="metaid_17" id="protPGK" value="0.0034" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_22" id="v1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_18" species="ATP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_19" species="P3G" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_20" species="ADP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_21" species="BPG" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> protPGK </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <minus/>
+                        <ci> VmrPGK </ci>
+                      </apply>
+                      <ci> ADP </ci>
+                      <ci> BPG </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KpgkADP </ci>
+                      <ci> KpgkBPG </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> VmfPGK </ci>
+                      <ci> ATP </ci>
+                      <ci> P3G </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KpgkATP </ci>
+                      <ci> KpgkP3G </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> ADP </ci>
+                    <ci> KiADP </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <divide/>
+                      <ci> P3G </ci>
+                      <ci> KpgkP3G </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> ATP </ci>
+                        <ci> KpgkATP </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <divide/>
+                      <ci> BPG </ci>
+                      <ci> KpgkBPG </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> ADP </ci>
+                        <ci> KpgkADP </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_27" id="v2" reversible="true" fast="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_27">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.40"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="metaid_23" species="ADP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_24" species="pep" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_25" species="ATP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_26" species="pyr" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kPK </ci>
+              <ci> ADP </ci>
+              <ci> pep </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_31" id="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_28" species="BPG" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_29" species="phos" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_30" species="P3G" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kd </ci>
+              <ci> BPG </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

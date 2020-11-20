@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="kolodkin_sim" initialTime="0" outputStartTime="0" outputEndTime="30" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="kolodkin1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/kolodkin1/sbml/"/>
+    <model id="kolodkin2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/kolodkin2/sbml/"/>
+    <model id="kolodkin3" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/kolodkin3/sbml/"/>
+    <model id="kolodkin4" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/kolodkin4/sbml/"/>
+    <model id="kolodkin5" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/kolodkin5/sbml/"/>
+    <model id="kolodkin6" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/kolodkin6/sbml/"/>
+  </listOfModels>
+  <listOfTasks>
+    <task id="kolodkin1_task" modelReference="kolodkin1" simulationReference="kolodkin_sim"/>
+    <task id="kolodkin2_task" modelReference="kolodkin2" simulationReference="kolodkin_sim"/>
+    <task id="kolodkin3_task" modelReference="kolodkin3" simulationReference="kolodkin_sim"/>
+    <task id="kolodkin4_task" modelReference="kolodkin4" simulationReference="kolodkin_sim"/>
+    <task id="kolodkin5_task" modelReference="kolodkin5" simulationReference="kolodkin_sim"/>
+    <task id="kolodkin6_task" modelReference="kolodkin6" simulationReference="kolodkin_sim"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="kolodkin1_gen_time" name="time kolodkin1">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="kolodkin1_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin1_gen_transresp" name="Transcriptional Response kolodkin1">
+      <listOfVariables>
+        <variable id="REL" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='REL']" taskReference="kolodkin1_task"/>
+        <variable id="ReNR" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ReNR']" taskReference="kolodkin1_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <ci> REL </ci>
+          <apply>
+            <plus/>
+            <ci> ReNR </ci>
+            <ci> REL </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin2_gen_time" name="time kolodkin2">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="kolodkin2_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin2_gen_transresp" name="Transcriptional Response kolodkin2">
+      <listOfVariables>
+        <variable id="REL" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='REL']" taskReference="kolodkin2_task"/>
+        <variable id="RE" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RE']" taskReference="kolodkin2_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <ci> REL </ci>
+          <apply>
+            <plus/>
+            <ci> RE </ci>
+            <ci> REL </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin3_gen_time" name="time kolodkin3">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="kolodkin3_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin3_gen_transresp" name="Transcriptional Response kolodkin3">
+      <listOfVariables>
+        <variable id="REL" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='REL']" taskReference="kolodkin3_task"/>
+        <variable id="RE" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RE']" taskReference="kolodkin3_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <ci> REL </ci>
+          <apply>
+            <plus/>
+            <ci> RE </ci>
+            <ci> REL </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin4_gen_time" name="time kolodkin4">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="kolodkin4_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin4_gen_transresp" name="Transcriptional Response kolodkin4">
+      <listOfVariables>
+        <variable id="REL" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='REL']" taskReference="kolodkin4_task"/>
+        <variable id="RE" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RE']" taskReference="kolodkin4_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <ci> REL </ci>
+          <apply>
+            <plus/>
+            <ci> RE </ci>
+            <ci> REL </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin5_gen_time" name="time kolodkin5">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="kolodkin5_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin5_gen_transresp" name="Transcriptional Response kolodkin5">
+      <listOfVariables>
+        <variable id="REL" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='REL']" taskReference="kolodkin5_task"/>
+        <variable id="RE" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RE']" taskReference="kolodkin5_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <ci> REL </ci>
+          <apply>
+            <plus/>
+            <ci> RE </ci>
+            <ci> REL </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin6_gen_time" name="time kolodkin6">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="kolodkin6_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="kolodkin6_gen_transresp" name="Transcriptional Response kolodkin6">
+      <listOfVariables>
+        <variable id="REL" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='REL']" taskReference="kolodkin6_task"/>
+        <variable id="RE" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RE']" taskReference="kolodkin6_task"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <divide/>
+          <ci> REL </ci>
+          <apply>
+            <plus/>
+            <ci> RE </ci>
+            <ci> REL </ci>
+          </apply>
+        </apply>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="kolodkin_figure2B" name="Kolodkin Figure 2B">
+      <listOfCurves>
+        <curve id="kolodkin1_curve" name="Design 1" logX="false" logY="false" xDataReference="kolodkin1_gen_time" yDataReference="kolodkin1_gen_transresp"/>
+        <curve id="kolodkin2_curve" name="Design 2" logX="false" logY="false" xDataReference="kolodkin2_gen_time" yDataReference="kolodkin2_gen_transresp"/>
+        <curve id="kolodkin3_curve" name="Design 3" logX="false" logY="false" xDataReference="kolodkin3_gen_time" yDataReference="kolodkin3_gen_transresp"/>
+        <curve id="kolodkin4_curve" name="Design 4" logX="false" logY="false" xDataReference="kolodkin4_gen_time" yDataReference="kolodkin4_gen_transresp"/>
+        <curve id="kolodkin5_curve" name="Design 5" logX="false" logY="false" xDataReference="kolodkin5_gen_time" yDataReference="kolodkin5_gen_transresp"/>
+        <curve id="kolodkin6_curve" name="Design 6" logX="false" logY="false" xDataReference="kolodkin6_gen_time" yDataReference="kolodkin6_gen_transresp"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

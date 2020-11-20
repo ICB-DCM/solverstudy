@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_brands1" initialTime="0" outputStartTime="0" outputEndTime="40" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_brands1" name="brands1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/brands1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Fru']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Triose']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Cn']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Formic_acid']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='lys_R']/@initialConcentration" newValue="15.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Acetic_acid']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Melanoidin']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Amadori']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='AMP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Glu']/@initialConcentration" newValue="160.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='C5']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J11']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K11']/@value" newValue="0.12514"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J10']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K10']/@value" newValue="0.00015"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J9']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K9']/@value" newValue="0.14359"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J8']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K8']/@value" newValue="0.11134"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K7']/@value" newValue="0.00018"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K6']/@value" newValue="0.00439"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K5']/@value" newValue="0.00712"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K4']/@value" newValue="0.0011"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J3']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K3']/@value" newValue="0.00047"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K2']/@value" newValue="0.00509"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='_J1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K1']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_brands1" modelReference="model0_brands1" simulationReference="sim0_model0_brands1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_brands1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_Fru">
+      <listOfVariables>
+        <variable id="Fru" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Fru']" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Fru </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_Glu">
+      <listOfVariables>
+        <variable id="Glu" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Glu']" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Glu </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_Acetic_acid">
+      <listOfVariables>
+        <variable id="Acetic_acid" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Acetic_acid']" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Acetic_acid </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_Formic_acid">
+      <listOfVariables>
+        <variable id="Formic_acid" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Formic_acid']" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Formic_acid </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_Amadori">
+      <listOfVariables>
+        <variable id="Amadori" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Amadori']" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Amadori </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_lys_R">
+      <listOfVariables>
+        <variable id="lys_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='lys_R']" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> lys_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_brands1_Melanoidin">
+      <listOfVariables>
+        <variable id="Melanoidin" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Melanoidin']" taskReference="task0_model0_brands1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Melanoidin </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_2i" name="Figure 2i">
+      <listOfCurves>
+        <curve id="plot0_Fru" name="Fru" logX="false" logY="false" xDataReference="task0_model0_brands1_time" yDataReference="task0_model0_brands1_Fru"/>
+        <curve id="plot0_Glu" name="Glu" logX="false" logY="false" xDataReference="task0_model0_brands1_time" yDataReference="task0_model0_brands1_Glu"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2ii" name="Figure 2ii">
+      <listOfCurves>
+        <curve id="plot1_Acetic_acid" name="Acetic_acid" logX="false" logY="false" xDataReference="task0_model0_brands1_time" yDataReference="task0_model0_brands1_Acetic_acid"/>
+        <curve id="plot1_Formic_acid" name="Formic_acid" logX="false" logY="false" xDataReference="task0_model0_brands1_time" yDataReference="task0_model0_brands1_Formic_acid"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2iii" name="Figure 2iii">
+      <listOfCurves>
+        <curve id="plot2_Amadori" name="Amadori" logX="false" logY="false" xDataReference="task0_model0_brands1_time" yDataReference="task0_model0_brands1_Amadori"/>
+        <curve id="plot2_lys_R" name="lys_R" logX="false" logY="false" xDataReference="task0_model0_brands1_time" yDataReference="task0_model0_brands1_lys_R"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2iv" name="Figure 2iv">
+      <listOfCurves>
+        <curve id="plot3_Melanoidin" name="Melanoidin" logX="false" logY="false" xDataReference="task0_model0_brands1_time" yDataReference="task0_model0_brands1_Melanoidin"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

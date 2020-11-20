@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_BIOMD0000000037" initialTime="0" outputStartTime="0" outputEndTime="25" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_BIOMD0000000037" name="Marwan2003 - Genetics, regulatory hierarchy between genes" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/marwan1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Yi']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pr']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Xi']/@initialConcentration" newValue="6.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Ya']/@initialConcentration" newValue="0.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Xa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='S']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pfr']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='prepreS']/@initialConcentration" newValue="200.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='V']/@initialConcentration" newValue="30.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pi']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='preS']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Photoreceptor_decay']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='V_degradation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_v']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='S_degradation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_s']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='V_formation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='alpha2']/@value" newValue="50.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='S_formation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='alpha1']/@value" newValue="30.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Glucose_sensor_inactivation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kG']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='S_generation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ky']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='preS_formation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kx']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Transducer_inactivation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kai']/@value" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Transducer_activation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kia']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Photoreceptor_inactivation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='IrSrPr']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Photoreceptor_activation']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='IfrSfrPfr']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_BIOMD0000000037" modelReference="model0_BIOMD0000000037" simulationReference="sim0_model0_BIOMD0000000037"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_BIOMD0000000037_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_BIOMD0000000037"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_BIOMD0000000037_S">
+      <listOfVariables>
+        <variable id="S" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='S']" taskReference="task0_model0_BIOMD0000000037"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> S </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure5B" name="Figure 5B">
+      <listOfCurves>
+        <curve id="plot0_S" name="S" logX="false" logY="false" xDataReference="task0_model0_BIOMD0000000037_time" yDataReference="task0_model0_BIOMD0000000037_S"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

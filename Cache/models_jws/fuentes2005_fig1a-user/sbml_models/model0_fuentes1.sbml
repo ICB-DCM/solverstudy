@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="fuentes1" name="fuentes1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default_compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="e" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="ez" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="w" compartment="default_compartment" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="z" compartment="default_compartment" initialConcentration="2.4e-05" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_5" id="k1" value="0.004" constant="false"/>
+      <parameter metaid="metaid_6" id="k21" value="1000" constant="false"/>
+      <parameter metaid="metaid_7" id="k22" value="0.00021" constant="false"/>
+      <parameter metaid="metaid_8" id="k3" value="0.00054" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_12" id="v_1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_9" species="z" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_10" species="e" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_11" species="w" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> z </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_16" id="v_2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_13" species="e" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_14" species="z" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_15" species="ez" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k21 </ci>
+                <ci> e </ci>
+                <ci> z </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k22 </ci>
+                <ci> ez </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_20" id="v_3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_17" species="ez" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_18" species="e" stoichiometry="2" constant="true"/>
+          <speciesReference metaid="metaid_19" species="w" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k3 </ci>
+              <ci> ez </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

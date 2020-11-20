@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_alexander2" initialTime="0" outputStartTime="0" outputEndTime="160" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_alexander2" name="alexander2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/alexander2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='E']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='G']/@initialConcentration" newValue="100000000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b1']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta']/@value" newValue="200.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma']/@value" newValue="2000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k']/@value" newValue="50000000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lambdaE']/@value" newValue="1000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muA']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muE']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muG']/@value" newValue="5.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muR']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi1']/@value" newValue="0.016"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sigma1']/@value" newValue="3e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='v_max']/@value" newValue="125000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='body']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_alexander2" name="alexander2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/alexander2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='E']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='G']/@initialConcentration" newValue="100000000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='b1']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='beta']/@value" newValue="200.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma']/@value" newValue="2000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k']/@value" newValue="50000000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='lambdaE']/@value" newValue="1000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muA']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muE']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muG']/@value" newValue="5.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='muR']/@value" newValue="0.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi1']/@value" newValue="0.016"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='sigma1']/@value" newValue="3e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='v_max']/@value" newValue="125000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='body']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_alexander2" modelReference="model0_alexander2" simulationReference="sim0_model0_alexander2"/>
+    <task id="task1_model1_alexander2" modelReference="model1_alexander2" simulationReference="sim0_model0_alexander2"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task1_model1_alexander2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_alexander2_A">
+      <listOfVariables>
+        <variable id="A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task1_model1_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_alexander2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_alexander2_E">
+      <listOfVariables>
+        <variable id="E" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='E']" taskReference="task1_model1_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> E </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_alexander2_R">
+      <listOfVariables>
+        <variable id="R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task1_model1_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_alexander2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_alexander2_G">
+      <listOfVariables>
+        <variable id="G" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='G']" taskReference="task1_model1_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> G </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_alexander2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_alexander2_E">
+      <listOfVariables>
+        <variable id="E" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='E']" taskReference="task0_model0_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> E </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_alexander2_R">
+      <listOfVariables>
+        <variable id="R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task0_model0_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_alexander2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_alexander2_G">
+      <listOfVariables>
+        <variable id="G" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='G']" taskReference="task0_model0_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> G </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_alexander2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_alexander2_A">
+      <listOfVariables>
+        <variable id="A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task0_model0_alexander2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> A </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_2_Left_A" name="Figure 2 Left A">
+      <listOfCurves>
+        <curve id="plot2_A" name="A" logX="false" logY="false" xDataReference="task0_model0_alexander2_time" yDataReference="task0_model0_alexander2_A"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_Left_E_and_R" name="Figure 2 Left E and R">
+      <listOfCurves>
+        <curve id="plot0_E" name="E" logX="false" logY="false" xDataReference="task0_model0_alexander2_time" yDataReference="task0_model0_alexander2_E"/>
+        <curve id="plot0_R" name="R" logX="false" logY="false" xDataReference="task0_model0_alexander2_time" yDataReference="task0_model0_alexander2_R"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_Left_G" name="Figure 2 Left G">
+      <listOfCurves>
+        <curve id="plot1_G" name="G" logX="false" logY="false" xDataReference="task0_model0_alexander2_time" yDataReference="task0_model0_alexander2_G"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_Right_A" name="Figure 2 Right A">
+      <listOfCurves>
+        <curve id="plot3_A" name="A" logX="false" logY="false" xDataReference="task1_model1_alexander2_time" yDataReference="task1_model1_alexander2_A"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_Right_E_and_R" name="Figure 2 Right E and R">
+      <listOfCurves>
+        <curve id="plot4_E" name="E" logX="false" logY="false" xDataReference="task1_model1_alexander2_time" yDataReference="task1_model1_alexander2_E"/>
+        <curve id="plot4_R" name="R" logX="false" logY="false" xDataReference="task1_model1_alexander2_time" yDataReference="task1_model1_alexander2_R"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_2_Right_G" name="Figure 2 Right G">
+      <listOfCurves>
+        <curve id="plot5_G" name="G" logX="false" logY="false" xDataReference="task1_model1_alexander2_time" yDataReference="task1_model1_alexander2_G"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

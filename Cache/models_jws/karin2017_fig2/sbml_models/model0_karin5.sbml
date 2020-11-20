@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="karin5" name="karin5">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="beta" name="beta" compartment="default" initialConcentration="400" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="g" name="g" compartment="default" initialConcentration="4.966667" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="ins" name="ins" compartment="default" initialConcentration="11.42" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="mbeta" name="mbeta" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="tamox" name="tamox" compartment="default" initialConcentration="0.27" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_6" id="alpha" name="alpha" value="8.4" constant="false"/>
+      <parameter metaid="metaid_7" id="ego" name="ego" constant="false"/>
+      <parameter metaid="metaid_8" id="gamma" name="gamma" constant="false"/>
+      <parameter metaid="metaid_9" id="k" name="k" value="6" constant="false"/>
+      <parameter metaid="metaid_10" id="lambdamg" name="lambdamg" constant="false"/>
+      <parameter metaid="metaid_11" id="lambdamgmut" name="lambdamgmut" constant="false"/>
+      <parameter metaid="metaid_12" id="lambdapg" name="lambdapg" constant="false"/>
+      <parameter metaid="metaid_13" id="lambdapgmut" name="lambdapgmut" constant="false"/>
+      <parameter metaid="metaid_14" id="perMutatedBcells" name="perMutatedBcells" constant="false"/>
+      <parameter metaid="metaid_15" id="r0" name="r0" constant="false"/>
+      <parameter metaid="metaid_16" id="si" name="si" constant="false"/>
+      <parameter metaid="metaid_17" id="sigma" name="sigma" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_18" variable="lambdapg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn> 0.1 </cn>
+            <apply>
+              <plus/>
+              <cn> 1 </cn>
+              <apply>
+                <power/>
+                <apply>
+                  <divide/>
+                  <cn> 8.4 </cn>
+                  <ci> g </ci>
+                </apply>
+                <cn> 1.7 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_19" variable="lambdamg">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.2 </cn>
+            <apply>
+              <plus/>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> g </ci>
+                      <cn> 4 </cn>
+                    </apply>
+                    <cn> 8 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <cn> 15 </cn>
+                      <ci> g </ci>
+                    </apply>
+                    <cn> 6 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_20" variable="lambdamgmut">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 0.2 </cn>
+            <apply>
+              <plus/>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> k </ci>
+                        <ci> g </ci>
+                      </apply>
+                      <cn> 4 </cn>
+                    </apply>
+                    <cn> 8 </cn>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <cn> 1 </cn>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <cn> 15 </cn>
+                      <apply>
+                        <times/>
+                        <ci> k </ci>
+                        <ci> g </ci>
+                      </apply>
+                    </apply>
+                    <cn> 6 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_21" variable="gamma">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn> 432 </cn>
+            <apply>
+              <times/>
+              <cn> 24 </cn>
+              <cn> 60 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_22" variable="r0">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 864 </cn>
+              <apply>
+                <times/>
+                <cn> 24 </cn>
+                <cn> 60 </cn>
+              </apply>
+            </apply>
+            <cn> 18 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_23" variable="ego">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn> 1.44 </cn>
+            <apply>
+              <times/>
+              <cn> 24 </cn>
+              <cn> 60 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_24" variable="si">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn> 0.72 </cn>
+            <apply>
+              <times/>
+              <cn> 24 </cn>
+              <cn> 60 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_25" variable="sigma">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn> 43.2 </cn>
+            <apply>
+              <times/>
+              <cn> 24 </cn>
+              <cn> 60 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_26" variable="lambdapgmut">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <cn> 0.1 </cn>
+            <apply>
+              <plus/>
+              <cn> 1 </cn>
+              <apply>
+                <power/>
+                <apply>
+                  <divide/>
+                  <cn> 8.4 </cn>
+                  <apply>
+                    <times/>
+                    <ci> k </ci>
+                    <ci> g </ci>
+                  </apply>
+                </apply>
+                <cn> 1.7 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_27" variable="perMutatedBcells">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn> 100 </cn>
+            <apply>
+              <divide/>
+              <ci> mbeta </ci>
+              <ci> beta </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_30" id="v1" name="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_28" species="g" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_29" species="ins"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <ci> r0 </ci>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> ego </ci>
+                  <apply>
+                    <times/>
+                    <ci> si </ci>
+                    <ci> ins </ci>
+                  </apply>
+                </apply>
+                <ci> g </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_35" id="v2" name="v2" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_31" species="ins" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_32" species="beta"/>
+          <modifierSpeciesReference metaid="metaid_33" species="mbeta"/>
+          <modifierSpeciesReference metaid="metaid_34" species="g"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> beta </ci>
+                    <ci> sigma </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <divide/>
+                        <ci> alpha </ci>
+                        <ci> g </ci>
+                      </apply>
+                      <cn> 1.7 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> mbeta </ci>
+                    <ci> sigma </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <divide/>
+                        <ci> alpha </ci>
+                        <apply>
+                          <times/>
+                          <ci> k </ci>
+                          <ci> g </ci>
+                        </apply>
+                      </apply>
+                      <cn> 1.7 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> gamma </ci>
+                <ci> ins </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="v3" name="v3" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_36" species="beta" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_37" species="tamox"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 24 </cn>
+                  <cn type="integer"> 60 </cn>
+                </apply>
+              </apply>
+              <ci> beta </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <ci> lambdapg </ci>
+                  <ci> lambdamg </ci>
+                </apply>
+                <ci> tamox </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_42" id="v4" name="v4" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_39" species="mbeta" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_40" species="beta"/>
+          <modifierSpeciesReference metaid="metaid_41" species="tamox"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 24 </cn>
+                  <cn type="integer"> 60 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <ci> mbeta </ci>
+                  <apply>
+                    <minus/>
+                    <ci> lambdapgmut </ci>
+                    <ci> lambdamgmut </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> beta </ci>
+                  <ci> tamox </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_44" id="v5" name="v5" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_43" species="tamox" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn type="integer"> 24 </cn>
+                  <cn type="integer"> 60 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <cn> 1.5 </cn>
+              </apply>
+              <apply>
+                <ln/>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> tamox </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

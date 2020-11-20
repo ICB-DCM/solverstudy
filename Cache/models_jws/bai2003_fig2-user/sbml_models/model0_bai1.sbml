@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="bai1" name="bai1">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="Mass_Action_2_1" name="Mass_Action_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> S1 </ci>
+              <ci> S2 </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_0" id="cell" name="cell" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005623"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="D_1" name="D" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9JKW8"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P25322"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_2" id="E_1" name="E" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P97377"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q61457"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_3" id="RS_1" name="RS" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q61501"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_4" id="R_1" name="R" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P13405"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_5" id="X_1" name="X" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="theta_1" name="theta" compartment="cell" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q61501"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_7" id="GF_1" name="GF" value="6.3" constant="true"/>
+      <parameter metaid="metaid_8" id="RT_1" name="RT" value="2.5" constant="true"/>
+      <parameter metaid="metaid_9" id="Rb_phos" name="Rb_phosphorylated" value="0" constant="false"/>
+      <parameter metaid="metaid_10" id="aD_1" name="aD" value="0.4" constant="true"/>
+      <parameter metaid="metaid_11" id="aE_1" name="aE" value="0.16" constant="true"/>
+      <parameter metaid="metaid_12" id="aF_1" name="aF" value="0.9" constant="true"/>
+      <parameter metaid="metaid_13" id="aX_1" name="aX" value="0.08" constant="true"/>
+      <parameter metaid="metaid_14" id="atheta_1" name="atheta" value="0.05" constant="true"/>
+      <parameter metaid="metaid_15" id="dD_1" name="dD" value="0.4" constant="true"/>
+      <parameter metaid="metaid_16" id="dE_1" name="dE" value="0.2" constant="true"/>
+      <parameter metaid="metaid_17" id="dX_1" name="dX" value="1.04" constant="true"/>
+      <parameter metaid="metaid_18" id="dtheta_1" name="dtheta" value="0.12" constant="true"/>
+      <parameter metaid="metaid_19" id="fC_1_1" name="fe" value="0.003" constant="true"/>
+      <parameter metaid="metaid_20" id="f_1" name="f" value="0.35" constant="true"/>
+      <parameter metaid="metaid_21" id="g_1" name="g" value="0.528" constant="true"/>
+      <parameter metaid="metaid_22" id="k1_1" name="k1" value="0.05" constant="true"/>
+      <parameter metaid="metaid_23" id="k2_1" name="k2" value="1000" constant="true"/>
+      <parameter metaid="metaid_24" id="k3_1" name="k3" value="1.5" constant="true"/>
+      <parameter metaid="metaid_25" id="pD_1" name="pD" value="0.48" constant="true"/>
+      <parameter metaid="metaid_26" id="pE_1" name="pE" value="0.096" constant="true"/>
+      <parameter metaid="metaid_27" id="pS_1" name="pS" value="0.6" constant="true"/>
+      <parameter metaid="metaid_28" id="pX_1" name="pX" value="0.48" constant="true"/>
+      <parameter metaid="metaid_29" id="qD_1" name="qD" value="0.6" constant="true"/>
+      <parameter metaid="metaid_30" id="qE_1" name="qE" value="0.6" constant="true"/>
+      <parameter metaid="metaid_31" id="qX_1" name="qX" value="0.8" constant="true"/>
+      <parameter metaid="metaid_32" id="qtheta_1" name="qtheta" value="0.3" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_33" variable="Rb_phos">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <minus/>
+              <ci> RT_1 </ci>
+              <ci> RS_1 </ci>
+            </apply>
+            <ci> R_1 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_37" id="E2Fdegradationviacellcycleprogression_1" name="E2F degradation via cell cycle progression" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_34" species="theta_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_35" species="theta_1"/>
+          <modifierSpeciesReference metaid="metaid_36" species="X_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> dtheta_1 </ci>
+              <apply>
+                <divide/>
+                <ci> X_1 </ci>
+                <apply>
+                  <plus/>
+                  <ci> qtheta_1 </ci>
+                  <ci> X_1 </ci>
+                </apply>
+              </apply>
+              <ci> theta_1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_39" id="_1" name="cyclinD synthesis" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_38" species="D_1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> aD_1 </ci>
+              <apply>
+                <divide/>
+                <ci> GF_1 </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> k1_1 </ci>
+                    <apply>
+                      <minus/>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                  </apply>
+                  <ci> GF_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_44" id="_2" name="pRB/E2F complex dissociation via cyclin D" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_40" species="RS_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_41" species="theta_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_42" species="RS_1"/>
+          <modifierSpeciesReference metaid="metaid_43" species="D_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> pD_1 </ci>
+                  <ci> RS_1 </ci>
+                  <ci> D_1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> qD_1 </ci>
+                  <ci> RS_1 </ci>
+                  <ci> D_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_49" id="cellcycleprogression_1" name="cell cycle progression go" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_45" species="X_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_46" species="E_1"/>
+          <modifierSpeciesReference metaid="metaid_47" species="theta_1"/>
+          <modifierSpeciesReference metaid="metaid_48" species="X_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <ci> aX_1 </ci>
+                  <ci> E_1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> f_1 </ci>
+                  <ci> theta_1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> g_1 </ci>
+                  <apply>
+                    <power/>
+                    <ci> X_1 </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_52" id="cellcycleprogressionslow_1" name="cell cycle progression slow" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_50" species="X_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_51" species="X_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> dX_1 </ci>
+              <ci> X_1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_56" id="cyclinD_1" name="cyclinD degradation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_53" species="D_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_54" species="D_1"/>
+          <modifierSpeciesReference metaid="metaid_55" species="E_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> dD_1 </ci>
+              <ci> E_1 </ci>
+              <ci> D_1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_60" id="cyclinEdegradation_1" name="cyclinE degradation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_57" species="E_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_58" species="X_1"/>
+          <modifierSpeciesReference metaid="metaid_59" species="E_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> dE_1 </ci>
+              <ci> X_1 </ci>
+              <ci> E_1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_63" id="cyclinEsynthesis_1" name="cyclinE synthesis" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_61" species="E_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_62" species="theta_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> aE_1 </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> GF_1 </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> k2_1 </ci>
+                      <apply>
+                        <minus/>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <ci> GF_1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> aF_1 </ci>
+                  <ci> theta_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_68" id="null2_1" name="pRB/E2F complex dissociation via cyclin E" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_64" species="RS_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_65" species="theta_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_66" species="RS_1"/>
+          <modifierSpeciesReference metaid="metaid_67" species="E_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> pE_1 </ci>
+                  <ci> RS_1 </ci>
+                  <ci> E_1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> qE_1 </ci>
+                  <ci> RS_1 </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_71" id="null3_1" name="E2F synthesis" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_69" species="theta_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_70" species="theta_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <ci> atheta_1 </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> GF_1 </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> k3_1 </ci>
+                      <apply>
+                        <minus/>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <ci> GF_1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> fC_1_1 </ci>
+                  <ci> theta_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_75" id="pRBdeplation_1" name="pRB/E2F complex association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_72" species="R_1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_73" species="theta_1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_74" species="RS_1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> Mass_Action_2_1 </ci>
+                <ci> pS_1 </ci>
+                <ci> R_1 </ci>
+                <ci> theta_1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_80" id="pRBsynthesis_1" name="pRB synthesis" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_76" species="R_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_77" species="RS_1"/>
+          <modifierSpeciesReference metaid="metaid_78" species="R_1"/>
+          <modifierSpeciesReference metaid="metaid_79" species="X_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> pX_1 </ci>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <minus/>
+                      <ci> RT_1 </ci>
+                      <ci> RS_1 </ci>
+                    </apply>
+                    <ci> R_1 </ci>
+                  </apply>
+                  <ci> X_1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <minus/>
+                      <apply>
+                        <plus/>
+                        <ci> qX_1 </ci>
+                        <ci> RT_1 </ci>
+                      </apply>
+                      <ci> RS_1 </ci>
+                    </apply>
+                    <ci> R_1 </ci>
+                  </apply>
+                  <ci> X_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

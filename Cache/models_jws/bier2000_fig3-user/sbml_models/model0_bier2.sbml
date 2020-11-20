@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="bier2" name="bier2">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000290" id="compartment" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005623"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" sboTerm="SBO:0000247" id="G1" name="Glucose_1" compartment="compartment" initialConcentration="6.6" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_2" sboTerm="SBO:0000247" id="G2" name="Glucose_2" compartment="compartment" initialConcentration="10.3" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00293"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17234"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_3" sboTerm="SBO:0000247" id="T1" name="ATP_1" compartment="compartment" initialConcentration="7.6" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_4" sboTerm="SBO:0000247" id="T2" name="ATP_2" compartment="compartment" initialConcentration="0.41" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_5" id="Tdiff" name="Tdiff" value="0" constant="false"/>
+      <parameter metaid="metaid_6" id="Tsum" name="Tsum" value="0" constant="false"/>
+      <parameter metaid="metaid_7" id="V_in" value="0.36" constant="true">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">V_in represents the constant glucose inflow</p>
+        </notes>
+      </parameter>
+      <parameter metaid="metaid_8" id="epsilon" value="0.01" constant="true"/>
+      <parameter metaid="metaid_9" id="k1" value="0.02" constant="true">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">k1 represents the phosphofructo kinase activity</p>
+        </notes>
+      </parameter>
+      <parameter metaid="metaid_10" id="km" value="13" constant="true"/>
+      <parameter metaid="metaid_11" id="kp" value="6" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_12" variable="Tsum">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> T2 </ci>
+            <ci> T1 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_13" variable="Tdiff">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> T2 </ci>
+            <ci> T1 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_16" id="vG1toT1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_14" species="G1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_15" species="T1" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> G1 </ci>
+              <ci> T1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_19" id="vG2toT2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_17" species="G2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_18" species="T2" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> G2 </ci>
+              <ci> T2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_22" id="vIn" name="vIn" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_20" species="G1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_21" species="G2" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> V_in </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_24" id="vOut1T1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_23" species="T1" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kp </ci>
+                <ci> T1 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> km </ci>
+                <ci> T1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_26" id="vOut1T2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="T2" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> kp </ci>
+                <ci> T2 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> km </ci>
+                <ci> T2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_29" id="vT2toT1" name="vT2toT1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_27" species="T2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_28" species="T1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> epsilon </ci>
+              <apply>
+                <minus/>
+                <ci> T2 </ci>
+                <ci> T1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

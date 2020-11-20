@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="bajaria1" name="bajaria1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="MB" compartment="default" initialConcentration="550" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="ML" compartment="default" initialConcentration="110000000000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="NB" compartment="default" initialConcentration="450" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="NL" compartment="default" initialConcentration="90000000000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_5" id="K1" value="100000000000" constant="false"/>
+      <parameter metaid="metaid_6" id="R" value="6.5e+19" constant="false"/>
+      <parameter metaid="metaid_7" id="SUMB" value="0" constant="false"/>
+      <parameter metaid="metaid_8" id="SUML" value="0" constant="false"/>
+      <parameter metaid="metaid_9" id="alpha" value="5000000" constant="false"/>
+      <parameter metaid="metaid_10" id="beta" value="2e-07" constant="false"/>
+      <parameter metaid="metaid_11" id="eMB" value="10" constant="false"/>
+      <parameter metaid="metaid_12" id="eML" value="0.25" constant="false"/>
+      <parameter metaid="metaid_13" id="eNB" value="40" constant="false"/>
+      <parameter metaid="metaid_14" id="eNL" value="1" constant="false"/>
+      <parameter metaid="metaid_15" id="lambda" value="0.1" constant="false"/>
+      <parameter metaid="metaid_16" id="muM" value="0.003" constant="false"/>
+      <parameter metaid="metaid_17" id="muN" value="0.002" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_18" variable="SUMB">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> MB </ci>
+            <ci> NB </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_19" variable="SUML">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> ML </ci>
+            <ci> NL </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_22" id="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_20" species="NB" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_21" species="NL"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> beta </ci>
+              <ci> eNL </ci>
+              <ci> NL </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_24" id="v10" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_23" species="ML" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> eML </ci>
+              <ci> ML </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_26" id="v11" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="ML" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muM </ci>
+              <ci> ML </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_28" id="v12" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_27" species="NL" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 90000000000 </cn>
+              <apply>
+                <power/>
+                <cn> 0.97 </cn>
+                <apply>
+                  <divide/>
+                  <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                  <cn type="integer"> 365 </cn>
+                </apply>
+              </apply>
+              <ci> muN </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_31" id="v13" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_29" species="ML" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_30" species="NL"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <ci> R </ci>
+              <apply>
+                <plus/>
+                <ci> K1 </ci>
+                <ci> NL </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_33" id="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_32" species="NB" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> eNB </ci>
+              <ci> NB </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_36" id="v3" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_34" species="MB" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_35" species="ML"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> beta </ci>
+              <ci> eML </ci>
+              <ci> ML </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_37" species="MB" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> eMB </ci>
+              <ci> MB </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_41" id="v5" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_39" species="NL" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_40" species="NB"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> alpha </ci>
+              <ci> eNB </ci>
+              <ci> NB </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_43" id="v6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_42" species="NL" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> eNL </ci>
+              <ci> NL </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_45" id="v7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_44" species="NL" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muN </ci>
+              <ci> NL </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_48" id="v8" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_46" species="ML" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_47" species="NL"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> lambda </ci>
+              <ci> muN </ci>
+              <ci> NL </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_51" id="v9" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_49" species="ML" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_50" species="MB"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> alpha </ci>
+              <ci> eMB </ci>
+              <ci> MB </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

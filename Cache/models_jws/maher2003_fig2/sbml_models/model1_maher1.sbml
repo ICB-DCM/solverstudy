@@ -1,0 +1,4585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="maher1" name="maher1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="XX" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_2" id="amp" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="ampE" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="arg" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="argE" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="argQ" name="argQ" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="argQE" name="argQE" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="argR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="argRE" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="as" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="asE" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" id="asR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" id="asRE" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_14" id="asp" compartment="default" initialConcentration="0.0001" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_15" id="aspE" compartment="default" initialConcentration="0.0001" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_16" id="asppool" compartment="default" initialConcentration="0.001" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_17" id="atp" compartment="default" initialConcentration="0.0015" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_18" id="atpE" compartment="default" initialConcentration="0.0015" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_19" id="atppool" compartment="default" initialConcentration="0.002" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_20" id="cit" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_21" id="citE" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_22" id="citR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_23" id="citRE" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_24" id="citims" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_25" id="citimsR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_26" id="citmat" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_27" id="citmatR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_28" id="cp" compartment="default" initialConcentration="1e-05" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_29" id="cpR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_30" id="cpe" compartment="default" initialConcentration="1e-05" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_31" id="cpeE" compartment="default" initialConcentration="0.0005" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_32" id="cpeR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_33" id="cpeRE" compartment="default" initialConcentration="2.26667e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_34" id="cpims" compartment="default" initialConcentration="1e-05" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_35" id="cpimsR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_36" id="cppool" compartment="default" initialConcentration="0.015" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_37" id="fum" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_38" id="fumE" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_39" id="orn" compartment="default" initialConcentration="0.0002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_40" id="ornE" compartment="default" initialConcentration="0.0002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_41" id="ornims" compartment="default" initialConcentration="0.00045" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_42" id="ornmat" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_43" id="pi" compartment="default" initialConcentration="0.0001" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_44" id="ppi" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_45" id="ppiE" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_46" id="ure" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_47" id="ureE" compartment="default" initialConcentration="1e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_48" id="ureR" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_49" id="ureRE" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_50" id="Kiarg" value="0.0007" constant="false"/>
+      <parameter metaid="metaid_51" id="ampfinal" value="5e-05" constant="false"/>
+      <parameter metaid="metaid_52" id="argfac" value="1" constant="false"/>
+      <parameter metaid="metaid_53" id="aslAdj" value="1" constant="false"/>
+      <parameter metaid="metaid_54" id="assAdj" value="2" constant="false"/>
+      <parameter metaid="metaid_55" id="cellV" value="3.868e-05" constant="false"/>
+      <parameter metaid="metaid_56" id="cytV" value="2.47552e-05" constant="false"/>
+      <parameter metaid="metaid_57" id="e10" value="1.49288e-05" constant="false"/>
+      <parameter metaid="metaid_58" id="e20" value="6.25e-06" constant="false"/>
+      <parameter metaid="metaid_59" id="e30" value="3.4375e-06" constant="false"/>
+      <parameter metaid="metaid_60" id="e40" value="1.20984e-05" constant="false"/>
+      <parameter metaid="metaid_61" id="e40E" value="2.28177e-08" constant="false"/>
+      <parameter metaid="metaid_62" id="eV" value="0.00196132" constant="false"/>
+      <parameter metaid="metaid_63" id="fm" value="1" constant="false"/>
+      <parameter metaid="metaid_64" id="fmE" value="1" constant="false"/>
+      <parameter metaid="metaid_65" id="fumfinal" value="1e-05" constant="false"/>
+      <parameter metaid="metaid_66" id="imsV" value="4.09389e-06" constant="false"/>
+      <parameter metaid="metaid_67" id="k10e2" value="640000" constant="false"/>
+      <parameter metaid="metaid_68" id="k11e2" value="50" constant="false"/>
+      <parameter metaid="metaid_69" id="k12e2" value="170000" constant="false"/>
+      <parameter metaid="metaid_70" id="k1e1" value="17000000" constant="false"/>
+      <parameter metaid="metaid_71" id="k1e2" value="240000" constant="false"/>
+      <parameter metaid="metaid_72" id="k1e3" value="2700000" constant="false"/>
+      <parameter metaid="metaid_73" id="k1e4" value="10000000" constant="false"/>
+      <parameter metaid="metaid_74" id="k2e1" value="63" constant="false"/>
+      <parameter metaid="metaid_75" id="k2e2" value="2.3" constant="false"/>
+      <parameter metaid="metaid_76" id="k2e3" value="70" constant="false"/>
+      <parameter metaid="metaid_77" id="k2e4" value="54000" constant="false"/>
+      <parameter metaid="metaid_78" id="k3e1" value="2100000" constant="false"/>
+      <parameter metaid="metaid_79" id="k3e2" value="350000" constant="false"/>
+      <parameter metaid="metaid_80" id="k3e3" value="75" constant="false"/>
+      <parameter metaid="metaid_81" id="k3e4" value="5300" constant="false"/>
+      <parameter metaid="metaid_82" id="k4e1" value="1000" constant="false"/>
+      <parameter metaid="metaid_83" id="k4e2" value="10" constant="false"/>
+      <parameter metaid="metaid_84" id="k4e3" value="1500000" constant="false"/>
+      <parameter metaid="metaid_85" id="k4e4" value="30000" constant="false"/>
+      <parameter metaid="metaid_86" id="k5e1" value="3000" constant="false"/>
+      <parameter metaid="metaid_87" id="k5e2" value="480000" constant="false"/>
+      <parameter metaid="metaid_88" id="k5e3" value="1100" constant="false"/>
+      <parameter metaid="metaid_89" id="k5e4" value="10000000" constant="false"/>
+      <parameter metaid="metaid_90" id="k6e1" value="90000" constant="false"/>
+      <parameter metaid="metaid_91" id="k6e2" value="10" constant="false"/>
+      <parameter metaid="metaid_92" id="k6e3" value="700000" constant="false"/>
+      <parameter metaid="metaid_93" id="k7e1" value="2600" constant="false"/>
+      <parameter metaid="metaid_94" id="k7e2" value="20" constant="false"/>
+      <parameter metaid="metaid_95" id="k8e1" value="500000" constant="false"/>
+      <parameter metaid="metaid_96" id="k8e2" value="890000" constant="false"/>
+      <parameter metaid="metaid_97" id="k9e2" value="50" constant="false"/>
+      <parameter metaid="metaid_98" id="kamp" value="0.00630208" constant="false"/>
+      <parameter metaid="metaid_99" id="kampCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_100" id="kampCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_101" id="kargCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_102" id="kargCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_103" id="kargQCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_104" id="kargQCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_105" id="kargRCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_106" id="kargRCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_107" id="kasCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_108" id="kasCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_109" id="kasRCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_110" id="kasRCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_111" id="kasp" value="0.000315104" constant="false"/>
+      <parameter metaid="metaid_112" id="kaspCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_113" id="kaspCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_114" id="katp" value="0.000157552" constant="false"/>
+      <parameter metaid="metaid_115" id="katpCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_116" id="katpCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_117" id="kcitCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_118" id="kcitCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_119" id="kcitRCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_120" id="kcitRCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_121" id="kcitci" value="10000" constant="false"/>
+      <parameter metaid="metaid_122" id="kcitic" value="60468.6" constant="false"/>
+      <parameter metaid="metaid_123" id="kcitim" value="100" constant="false"/>
+      <parameter metaid="metaid_124" id="kcitmi" value="60.7717" constant="false"/>
+      <parameter metaid="metaid_125" id="kcp" value="2.65143e-07" constant="false"/>
+      <parameter metaid="metaid_126" id="kcpeCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_127" id="kcpeCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_128" id="kcpeRCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_129" id="kcpeRCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_130" id="kcpei" value="10000" constant="false"/>
+      <parameter metaid="metaid_131" id="kcpie" value="60468.6" constant="false"/>
+      <parameter metaid="metaid_132" id="kcpim" value="0.822751" constant="false"/>
+      <parameter metaid="metaid_133" id="kcpmi" value="0.5" constant="false"/>
+      <parameter metaid="metaid_134" id="kfum" value="0.0315104" constant="false"/>
+      <parameter metaid="metaid_135" id="kfumCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_136" id="kfumCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_137" id="kornCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_138" id="kornCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_139" id="kornci" value="10000" constant="false"/>
+      <parameter metaid="metaid_140" id="kornic" value="60468.6" constant="false"/>
+      <parameter metaid="metaid_141" id="kornim" value="110" constant="false"/>
+      <parameter metaid="metaid_142" id="kornmi" value="66.8489" constant="false"/>
+      <parameter metaid="metaid_143" id="kpi" value="0.0231588" constant="false"/>
+      <parameter metaid="metaid_144" id="kppi" value="0.0315104" constant="false"/>
+      <parameter metaid="metaid_145" id="kppiCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_146" id="kppiCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_147" id="kure" value="0.315104" constant="false"/>
+      <parameter metaid="metaid_148" id="kureCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_149" id="kureCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_150" id="kureRCE" value="10000000" constant="false"/>
+      <parameter metaid="metaid_151" id="kureRCEREV" value="126217" constant="false"/>
+      <parameter metaid="metaid_152" id="matV" value="6.73651e-06" constant="false"/>
+      <parameter metaid="metaid_153" id="mitoV" value="1.08304e-05" constant="false"/>
+      <parameter metaid="metaid_154" id="nucV" value="3.0944e-06" constant="false"/>
+      <parameter metaid="metaid_155" id="otcAdj" value="1" constant="false"/>
+      <parameter metaid="metaid_156" id="pifinal" value="5e-05" constant="false"/>
+      <parameter metaid="metaid_157" id="ppifinal" value="1e-05" constant="false"/>
+      <parameter metaid="metaid_158" id="sampleV" value="0.002" constant="false"/>
+      <parameter metaid="metaid_159" id="steadyStateUreaProdn" value="7.80047e-12" constant="false"/>
+      <parameter metaid="metaid_160" id="urefinal" value="1e-06" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_167" id="v_1" name="v_1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_161" species="ornmat" stoichiometry="148445" constant="true"/>
+          <speciesReference metaid="metaid_162" species="cp" stoichiometry="148445" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_163" species="pi" stoichiometry="148445" constant="true"/>
+          <speciesReference metaid="metaid_164" species="citmat" stoichiometry="148445" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_165" species="citmatR"/>
+          <modifierSpeciesReference metaid="metaid_166" species="cpR"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> otcAdj </ci>
+                    <ci> k1e1 </ci>
+                    <ci> k3e1 </ci>
+                    <ci> k5e1 </ci>
+                    <ci> k7e1 </ci>
+                    <ci> cp </ci>
+                    <ci> ornmat </ci>
+                    <ci> e10 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k7e1 </ci>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k5e1 </ci>
+                        <ci> k7e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e1 </ci>
+                        <ci> k4e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> matV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> otcAdj </ci>
+                    <ci> k2e1 </ci>
+                    <ci> k4e1 </ci>
+                    <ci> k6e1 </ci>
+                    <ci> k8e1 </ci>
+                    <ci> citmat </ci>
+                    <ci> pi </ci>
+                    <ci> e10 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k7e1 </ci>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k5e1 </ci>
+                        <ci> k7e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e1 </ci>
+                        <ci> k4e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> matV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_174" id="v_10" name="v_10" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_168" species="asR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_169" species="fum" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_170" species="argR" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_171" species="argQ"/>
+          <modifierSpeciesReference metaid="metaid_172" species="as"/>
+          <modifierSpeciesReference metaid="metaid_173" species="arg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> aslAdj </ci>
+                    <ci> k1e3 </ci>
+                    <ci> k3e3 </ci>
+                    <ci> k5e3 </ci>
+                    <ci> asR </ci>
+                    <ci> e30 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k5e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                      <ci> k1e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k3e3 </ci>
+                        <ci> k5e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <ci> k2e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k6e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k4e3 </ci>
+                      <ci> k6e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> fum </ci>
+                      <ci> k1e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> aslAdj </ci>
+                    <ci> k2e3 </ci>
+                    <ci> k4e3 </ci>
+                    <ci> k6e3 </ci>
+                    <ci> fum </ci>
+                    <ci> argR </ci>
+                    <ci> e30 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k5e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                      <ci> k1e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k3e3 </ci>
+                        <ci> k5e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <ci> k2e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k6e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k4e3 </ci>
+                      <ci> k6e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> fum </ci>
+                      <ci> k1e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_180" id="v_11" name="v_11" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_175" species="arg" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_176" species="ure" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_177" species="orn" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_178" species="argR"/>
+          <modifierSpeciesReference metaid="metaid_179" species="argQ"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> argfac </ci>
+                  <ci> k1e4 </ci>
+                  <ci> k3e4 </ci>
+                  <ci> k4e4 </ci>
+                  <ci> arg </ci>
+                  <ci> e40 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> k4e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k5e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                    <ci> orn </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k1e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k3e4 </ci>
+                      <ci> k4e4 </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <ci> arg </ci>
+                      <ci> argR </ci>
+                      <apply>
+                        <times/>
+                        <ci> fm </ci>
+                        <ci> argQ </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_186" id="v_12" name="v_12" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_181" species="argR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_182" species="ureR" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_183" species="orn" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_184" species="argQ"/>
+          <modifierSpeciesReference metaid="metaid_185" species="arg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> argfac </ci>
+                  <ci> k1e4 </ci>
+                  <ci> k3e4 </ci>
+                  <ci> k4e4 </ci>
+                  <ci> argR </ci>
+                  <ci> e40 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> k4e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k5e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                    <ci> orn </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k1e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k3e4 </ci>
+                      <ci> k4e4 </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <ci> arg </ci>
+                      <ci> argR </ci>
+                      <apply>
+                        <times/>
+                        <ci> fm </ci>
+                        <ci> argQ </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_192" id="v_13" name="v_13" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_187" species="argQ" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_188" species="ure" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_189" species="orn" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_190" species="argR"/>
+          <modifierSpeciesReference metaid="metaid_191" species="arg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> argfac </ci>
+                  <ci> fm </ci>
+                  <ci> k1e4 </ci>
+                  <ci> k3e4 </ci>
+                  <ci> k4e4 </ci>
+                  <ci> argQ </ci>
+                  <ci> e40 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> k4e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k5e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                    <ci> orn </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k1e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k3e4 </ci>
+                      <ci> k4e4 </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <ci> arg </ci>
+                      <ci> argR </ci>
+                      <apply>
+                        <times/>
+                        <ci> fm </ci>
+                        <ci> argQ </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_198" id="v_14" name="v_14" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_193" species="argE" stoichiometry="509.861" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_194" species="ureE" stoichiometry="509.861" constant="true"/>
+          <speciesReference metaid="metaid_195" species="ornE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_196" species="argQE"/>
+          <modifierSpeciesReference metaid="metaid_197" species="argRE"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> argfac </ci>
+                  <ci> k1e4 </ci>
+                  <ci> k3e4 </ci>
+                  <ci> k4e4 </ci>
+                  <ci> argE </ci>
+                  <ci> e40E </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> k4e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k5e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                    <ci> ornE </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k1e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k3e4 </ci>
+                      <ci> k4e4 </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <ci> argE </ci>
+                      <ci> argRE </ci>
+                      <apply>
+                        <times/>
+                        <ci> fmE </ci>
+                        <ci> argQE </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> eV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_204" id="v_15" name="v_15" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_199" species="argRE" stoichiometry="509.861" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_200" species="ureRE" stoichiometry="509.861" constant="true"/>
+          <speciesReference metaid="metaid_201" species="ornE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_202" species="argQE"/>
+          <modifierSpeciesReference metaid="metaid_203" species="argE"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> argfac </ci>
+                  <ci> k1e4 </ci>
+                  <ci> k3e4 </ci>
+                  <ci> k4e4 </ci>
+                  <ci> argRE </ci>
+                  <ci> e40E </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> k4e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k5e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                    <ci> ornE </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k1e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k3e4 </ci>
+                      <ci> k4e4 </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <ci> argE </ci>
+                      <ci> argRE </ci>
+                      <apply>
+                        <times/>
+                        <ci> fmE </ci>
+                        <ci> argQE </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> eV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_210" id="v_16" name="v_16" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_205" species="argQE" stoichiometry="509.861" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_206" species="ureE" stoichiometry="509.861" constant="true"/>
+          <speciesReference metaid="metaid_207" species="ornE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_208" species="argRE"/>
+          <modifierSpeciesReference metaid="metaid_209" species="argE"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> argfac </ci>
+                  <ci> fm </ci>
+                  <ci> k1e4 </ci>
+                  <ci> k3e4 </ci>
+                  <ci> k4e4 </ci>
+                  <ci> argQE </ci>
+                  <ci> e40E </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> k4e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k5e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k2e4 </ci>
+                      <ci> k3e4 </ci>
+                    </apply>
+                    <ci> ornE </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k1e4 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> k3e4 </ci>
+                      <ci> k4e4 </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <ci> argE </ci>
+                      <ci> argRE </ci>
+                      <apply>
+                        <times/>
+                        <ci> fmE </ci>
+                        <ci> argQE </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci> eV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_213" id="v_17" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_211" species="orn" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_212" species="ornims" stoichiometry="244266" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kornci </ci>
+                <ci> orn </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kornic </ci>
+                <ci> ornims </ci>
+                <ci> imsV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_216" id="v_18" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_214" species="ornims" stoichiometry="244266" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_215" species="ornmat" stoichiometry="148445" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kornim </ci>
+                <ci> ornims </ci>
+                <ci> imsV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kornmi </ci>
+                <ci> ornmat </ci>
+                <ci> matV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_219" id="v_19" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_217" species="cppool" stoichiometry="509.861" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_218" species="cpeE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kcp </ci>
+              <ci> cppool </ci>
+              <ci> eV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_226" id="v_2" name="v_2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_220" species="ornmat" stoichiometry="148445" constant="true"/>
+          <speciesReference metaid="metaid_221" species="cpR" stoichiometry="148445" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_222" species="pi" stoichiometry="148445" constant="true"/>
+          <speciesReference metaid="metaid_223" species="citmatR" stoichiometry="148445" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_224" species="cp"/>
+          <modifierSpeciesReference metaid="metaid_225" species="citmat"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> otcAdj </ci>
+                    <ci> k1e1 </ci>
+                    <ci> k3e1 </ci>
+                    <ci> k5e1 </ci>
+                    <ci> k7e1 </ci>
+                    <ci> cpR </ci>
+                    <ci> ornmat </ci>
+                    <ci> e10 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k7e1 </ci>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k5e1 </ci>
+                        <ci> k7e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e1 </ci>
+                        <ci> k4e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> matV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> otcAdj </ci>
+                    <ci> k2e1 </ci>
+                    <ci> k4e1 </ci>
+                    <ci> k6e1 </ci>
+                    <ci> k8e1 </ci>
+                    <ci> citmatR </ci>
+                    <ci> pi </ci>
+                    <ci> e10 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k7e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k4e1 </ci>
+                        <ci> k5e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k7e1 </ci>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k5e1 </ci>
+                        <ci> k7e1 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e1 </ci>
+                        <ci> k4e1 </ci>
+                      </apply>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k4e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e1 </ci>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cp </ci>
+                        <ci> cpR </ci>
+                      </apply>
+                      <ci> ornmat </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k5e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e1 </ci>
+                      <ci> k6e1 </ci>
+                      <ci> k8e1 </ci>
+                      <ci> ornmat </ci>
+                      <ci> pi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> citmat </ci>
+                        <ci> citmatR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> matV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_229" id="v_20" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_227" species="cpe" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_228" species="cpims" stoichiometry="244266" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcpei </ci>
+                <ci> cpe </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcpie </ci>
+                <ci> cpims </ci>
+                <ci> imsV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_232" id="v_21" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_230" species="cpims" stoichiometry="244266" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_231" species="cp" stoichiometry="148445" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcpim </ci>
+                <ci> cpims </ci>
+                <ci> imsV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcpmi </ci>
+                <ci> cp </ci>
+                <ci> matV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_235" id="v_22" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_233" species="cpeR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_234" species="cpimsR" stoichiometry="244266" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcpei </ci>
+                <ci> cpeR </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcpie </ci>
+                <ci> cpimsR </ci>
+                <ci> imsV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_238" id="v_23" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_236" species="cpimsR" stoichiometry="244266" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_237" species="cpR" stoichiometry="148445" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcpim </ci>
+                <ci> cpimsR </ci>
+                <ci> imsV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcpmi </ci>
+                <ci> cpR </ci>
+                <ci> matV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_241" id="v_24" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_239" species="atppool" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_240" species="atp" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> katp </ci>
+              <ci> atppool </ci>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_244" id="v_25" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_242" species="asppool" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_243" species="asp" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kasp </ci>
+              <ci> asppool </ci>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_247" id="v_26" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_245" species="ppi" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_246" species="XX" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kppi </ci>
+              <ci> ppi </ci>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_250" id="v_27" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_248" species="fum" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_249" species="XX" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kfum </ci>
+              <ci> fum </ci>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_253" id="v_28" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_251" species="pi" stoichiometry="148445" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_252" species="XX" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kpi </ci>
+              <ci> pi </ci>
+              <ci> matV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_256" id="v_29" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_254" species="amp" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_255" species="XX" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kamp </ci>
+              <ci> amp </ci>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_259" id="v_3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_257" species="citmat" stoichiometry="148445" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_258" species="citims" stoichiometry="244266" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcitmi </ci>
+                <ci> citmat </ci>
+                <ci> matV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcitim </ci>
+                <ci> citims </ci>
+                <ci> imsV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_262" id="v_30" name="v_30" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_260" species="ure" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_261" species="XX" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kure </ci>
+              <ci> ure </ci>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_265" id="v_31" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_263" species="ureR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_264" species="XX" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn type="integer"> 0 </cn>
+              <apply>
+                <times/>
+                <ci> kure </ci>
+                <ci> ureR </ci>
+              </apply>
+              <ci> cytV </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_268" id="v_32" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_266" species="cit" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_267" species="citE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcitCE </ci>
+                <ci> cit </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcitCEREV </ci>
+                <ci> citE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_271" id="v_33" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_269" species="citR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_270" species="citRE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcitRCE </ci>
+                <ci> citR </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcitRCEREV </ci>
+                <ci> citRE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_274" id="v_34" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_272" species="atp" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_273" species="atpE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> katpCE </ci>
+                <ci> atp </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> katpCEREV </ci>
+                <ci> atpE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_277" id="v_35" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_275" species="asp" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_276" species="aspE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kaspCE </ci>
+                <ci> asp </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kaspCEREV </ci>
+                <ci> aspE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_280" id="v_36" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_278" species="amp" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_279" species="ampE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kampCE </ci>
+                <ci> amp </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kampCEREV </ci>
+                <ci> ampE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_283" id="v_37" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_281" species="ppi" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_282" species="ppiE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kppiCE </ci>
+                <ci> ppi </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kppiCEREV </ci>
+                <ci> ppiE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_286" id="v_38" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_284" species="as" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_285" species="asE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kasCE </ci>
+                <ci> as </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kasCEREV </ci>
+                <ci> asE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_289" id="v_39" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_287" species="asR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_288" species="asRE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kasRCE </ci>
+                <ci> asR </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kasRCEREV </ci>
+                <ci> asRE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_292" id="v_4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_290" species="citmatR" stoichiometry="148445" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_291" species="citimsR" stoichiometry="244266" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcitmi </ci>
+                <ci> citmatR </ci>
+                <ci> matV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcitim </ci>
+                <ci> citimsR </ci>
+                <ci> imsV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_295" id="v_40" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_293" species="fum" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_294" species="fumE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kfumCE </ci>
+                <ci> fum </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kfumCEREV </ci>
+                <ci> fumE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_298" id="v_41" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_296" species="argQ" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_297" species="argQE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kargQCE </ci>
+                <ci> argQ </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kargQCEREV </ci>
+                <ci> argQE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_301" id="v_42" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_299" species="arg" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_300" species="argE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kargCE </ci>
+                <ci> arg </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kargCEREV </ci>
+                <ci> argE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_304" id="v_43" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_302" species="argR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_303" species="argRE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kargRCE </ci>
+                <ci> argR </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kargRCEREV </ci>
+                <ci> argRE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_307" id="v_44" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_305" species="ure" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_306" species="ureE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kureCE </ci>
+                <ci> ure </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kureCEREV </ci>
+                <ci> ureE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_310" id="v_45" name="v_45" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_308" species="ureR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_309" species="ureRE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kureRCE </ci>
+                <ci> ureR </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kureRCEREV </ci>
+                <ci> ureRE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_313" id="v_46" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_311" species="orn" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_312" species="ornE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kornCE </ci>
+                <ci> orn </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kornCEREV </ci>
+                <ci> ornE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_316" id="v_47" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_314" species="cpe" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_315" species="cpeE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcpeCE </ci>
+                <ci> cpe </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcpeCEREV </ci>
+                <ci> cpeE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_319" id="v_48" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_317" species="cpeR" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_318" species="cpeRE" stoichiometry="509.861" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcpeRCE </ci>
+                <ci> cpeR </ci>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcpeRCEREV </ci>
+                <ci> cpeRE </ci>
+                <ci> eV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_322" id="v_5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_320" species="citims" stoichiometry="244266" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_321" species="cit" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcitic </ci>
+                <ci> citims </ci>
+                <ci> imsV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcitci </ci>
+                <ci> cit </ci>
+                <ci> cytV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_325" id="v_6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_323" species="citimsR" stoichiometry="244266" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_324" species="citR" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kcitic </ci>
+                <ci> citimsR </ci>
+                <ci> imsV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kcitci </ci>
+                <ci> citR </ci>
+                <ci> cytV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_337" id="v_7" name="v_7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_326" species="cit" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_327" species="atp" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_328" species="asp" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_329" species="ppi" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_330" species="as" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_331" species="amp" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_332" species="asR"/>
+          <modifierSpeciesReference metaid="metaid_333" species="citR"/>
+          <modifierSpeciesReference metaid="metaid_334" species="argQ"/>
+          <modifierSpeciesReference metaid="metaid_335" species="argR"/>
+          <modifierSpeciesReference metaid="metaid_336" species="arg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> k1e2 </ci>
+                    <ci> k3e2 </ci>
+                    <ci> k5e2 </ci>
+                    <ci> k7e2 </ci>
+                    <ci> k9e2 </ci>
+                    <ci> k11e2 </ci>
+                    <ci> cit </ci>
+                    <ci> atp </ci>
+                    <ci> asp </ci>
+                    <ci> assAdj </ci>
+                    <ci> e20 </ci>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <plus/>
+                            <ci> arg </ci>
+                            <ci> argR </ci>
+                            <ci> argQ </ci>
+                          </apply>
+                          <ci> Kiarg </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <minus/>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k9e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k9e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> ppi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k4e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k4e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> k2e2 </ci>
+                    <ci> k4e2 </ci>
+                    <ci> k6e2 </ci>
+                    <ci> k8e2 </ci>
+                    <ci> k10e2 </ci>
+                    <ci> k12e2 </ci>
+                    <ci> ppi </ci>
+                    <ci> amp </ci>
+                    <ci> as </ci>
+                    <ci> assAdj </ci>
+                    <ci> e20 </ci>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <plus/>
+                            <ci> arg </ci>
+                            <ci> argR </ci>
+                            <ci> argQ </ci>
+                          </apply>
+                          <ci> Kiarg </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <minus/>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k9e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k9e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> ppi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k4e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k4e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_349" id="v_8" name="v_8" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_338" species="citR" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_339" species="atp" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_340" species="asp" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_341" species="ppi" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_342" species="asR" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_343" species="amp" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_344" species="argR"/>
+          <modifierSpeciesReference metaid="metaid_345" species="argQ"/>
+          <modifierSpeciesReference metaid="metaid_346" species="as"/>
+          <modifierSpeciesReference metaid="metaid_347" species="cit"/>
+          <modifierSpeciesReference metaid="metaid_348" species="arg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> k1e2 </ci>
+                    <ci> k3e2 </ci>
+                    <ci> k5e2 </ci>
+                    <ci> k7e2 </ci>
+                    <ci> k9e2 </ci>
+                    <ci> k11e2 </ci>
+                    <ci> citR </ci>
+                    <ci> atp </ci>
+                    <ci> asp </ci>
+                    <ci> assAdj </ci>
+                    <ci> e20 </ci>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <plus/>
+                            <ci> arg </ci>
+                            <ci> argR </ci>
+                            <ci> argQ </ci>
+                          </apply>
+                          <ci> Kiarg </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <minus/>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k9e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k9e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> ppi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k4e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k4e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> k2e2 </ci>
+                    <ci> k4e2 </ci>
+                    <ci> k6e2 </ci>
+                    <ci> k8e2 </ci>
+                    <ci> k10e2 </ci>
+                    <ci> k12e2 </ci>
+                    <ci> ppi </ci>
+                    <ci> amp </ci>
+                    <ci> asR </ci>
+                    <ci> assAdj </ci>
+                    <ci> e20 </ci>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <plus/>
+                            <ci> arg </ci>
+                            <ci> argR </ci>
+                            <ci> argQ </ci>
+                          </apply>
+                          <ci> Kiarg </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <minus/>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k9e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k7e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k9e2 </ci>
+                          <ci> k11e2 </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k11e2 </ci>
+                      <ci> ppi </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k9e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k7e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> ppi </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k6e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k4e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k6e2 </ci>
+                        <ci> k7e2 </ci>
+                      </apply>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k2e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k4e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k2e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> k4e2 </ci>
+                          <ci> k6e2 </ci>
+                        </apply>
+                      </apply>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k1e2 </ci>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> cit </ci>
+                        <ci> citR </ci>
+                      </apply>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> k3e2 </ci>
+                      <ci> k5e2 </ci>
+                      <ci> k8e2 </ci>
+                      <ci> k10e2 </ci>
+                      <ci> k12e2 </ci>
+                      <ci> atp </ci>
+                      <ci> asp </ci>
+                      <ci> ppi </ci>
+                      <ci> amp </ci>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_356" id="v_9" name="v_9" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_350" species="as" stoichiometry="40395.6" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_351" species="fum" stoichiometry="40395.6" constant="true"/>
+          <speciesReference metaid="metaid_352" species="arg" stoichiometry="40395.6" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_353" species="asR"/>
+          <modifierSpeciesReference metaid="metaid_354" species="argQ"/>
+          <modifierSpeciesReference metaid="metaid_355" species="argR"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> aslAdj </ci>
+                    <ci> k1e3 </ci>
+                    <ci> k3e3 </ci>
+                    <ci> k5e3 </ci>
+                    <ci> as </ci>
+                    <ci> e30 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k5e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                      <ci> k1e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k3e3 </ci>
+                        <ci> k5e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <ci> k2e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k6e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k4e3 </ci>
+                      <ci> k6e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> fum </ci>
+                      <ci> k1e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> aslAdj </ci>
+                    <ci> k2e3 </ci>
+                    <ci> k4e3 </ci>
+                    <ci> k6e3 </ci>
+                    <ci> fum </ci>
+                    <ci> arg </ci>
+                    <ci> e30 </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> k5e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                      </apply>
+                      <ci> k1e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k3e3 </ci>
+                        <ci> k5e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <ci> k2e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k6e3 </ci>
+                      <apply>
+                        <plus/>
+                        <ci> k2e3 </ci>
+                        <ci> k3e3 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> fum </ci>
+                      <apply>
+                        <plus/>
+                        <ci> arg </ci>
+                        <ci> argR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> k4e3 </ci>
+                      <ci> k6e3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <plus/>
+                        <ci> as </ci>
+                        <ci> asR </ci>
+                        <apply>
+                          <times/>
+                          <ci> fm </ci>
+                          <ci> argQ </ci>
+                        </apply>
+                      </apply>
+                      <ci> fum </ci>
+                      <ci> k1e3 </ci>
+                      <ci> k4e3 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cytV </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

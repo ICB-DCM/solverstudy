@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="ratushny5" name="ratushny5">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000290" id="univ" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_0">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0005623"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" sboTerm="SBO:0000252" id="P1" compartment="univ" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/go/GO:0003675"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_2" sboTerm="SBO:0000011" id="Target" compartment="univ" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_3" id="Kd" value="1e-05" constant="true"/>
+      <parameter metaid="metaid_4" id="Ksp" value="0.001" constant="true"/>
+      <parameter metaid="metaid_5" id="P2" value="40" constant="true"/>
+      <parameter metaid="metaid_6" id="dsp1ksp" value="0" constant="false"/>
+      <parameter metaid="metaid_7" id="dsp1p2kd" value="0" constant="false"/>
+      <parameter metaid="metaid_8" id="h" value="2" constant="true"/>
+      <parameter metaid="metaid_9" id="k0" value="0.1" constant="true"/>
+      <parameter metaid="metaid_10" id="ka" value="40" constant="true"/>
+      <parameter metaid="metaid_11" id="ks" value="10" constant="true"/>
+      <parameter metaid="metaid_12" id="ku" value="0.1" constant="true"/>
+      <parameter metaid="metaid_13" id="s" value="1000" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_14" variable="dsp1p2kd">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <ci> Kd </ci>
+              <cn> 2 </cn>
+            </apply>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <cn> 1 </cn>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <plus/>
+                    <ci> dsp1ksp </ci>
+                    <ci> P2 </ci>
+                  </apply>
+                  <ci> Kd </ci>
+                </apply>
+              </apply>
+              <apply>
+                <power/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <plus/>
+                      <cn> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <plus/>
+                          <ci> dsp1ksp </ci>
+                          <ci> P2 </ci>
+                        </apply>
+                        <ci> Kd </ci>
+                      </apply>
+                    </apply>
+                    <cn> 2 </cn>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <cn> 4 </cn>
+                      <ci> dsp1ksp </ci>
+                      <ci> P2 </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> Kd </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn> 0.5 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_15" variable="dsp1ksp">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <ci> Ksp </ci>
+              <cn> 2 </cn>
+            </apply>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <cn> 1 </cn>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <plus/>
+                    <ci> s </ci>
+                    <apply>
+                      <times/>
+                      <ci> P1 </ci>
+                      <ci> univ </ci>
+                    </apply>
+                  </apply>
+                  <ci> Ksp </ci>
+                </apply>
+              </apply>
+              <apply>
+                <power/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <plus/>
+                      <cn> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <plus/>
+                          <ci> s </ci>
+                          <apply>
+                            <times/>
+                            <ci> P1 </ci>
+                            <ci> univ </ci>
+                          </apply>
+                        </apply>
+                        <ci> Ksp </ci>
+                      </apply>
+                    </apply>
+                    <cn> 2 </cn>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <cn> 4 </cn>
+                      <ci> s </ci>
+                      <ci> P1 </ci>
+                      <ci> univ </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> Ksp </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn> 0.5 </cn>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_17" id="___r1" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_16" species="P1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> ks </ci>
+                <apply>
+                  <plus/>
+                  <ci> k0 </ci>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> dsp1p2kd </ci>
+                      <ci> ka </ci>
+                    </apply>
+                    <ci> h </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> dsp1p2kd </ci>
+                    <ci> ka </ci>
+                  </apply>
+                  <ci> h </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_20" id="___r2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_19" species="P1" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> __RATE__ </ci>
+              <ci> P1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_18" id="__RATE__" value="0.1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_22" id="___r3" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_21" species="Target" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> ks </ci>
+                <apply>
+                  <plus/>
+                  <ci> k0 </ci>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> dsp1p2kd </ci>
+                      <ci> ka </ci>
+                    </apply>
+                    <ci> h </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> dsp1p2kd </ci>
+                    <ci> ka </ci>
+                  </apply>
+                  <ci> h </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_25" id="___r4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_24" species="Target" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> __RATE__ </ci>
+              <ci> Target </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_23" id="__RATE__" value="0.1"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

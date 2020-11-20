@@ -45,4 +45,4 @@ time python filter_models_by_error.py
 time python execute_study_algorithms.py
 time python execute_study_tolerances.py
 
-# TODO Run Plots
+# TODO Run plots

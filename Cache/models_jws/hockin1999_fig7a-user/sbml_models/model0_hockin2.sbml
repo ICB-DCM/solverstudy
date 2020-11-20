@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="hockin2" name="hockin2">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" id="compartment_1" name="compartment_1" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="APC" name="APC" compartment="compartment_1" initialConcentration="1e-08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_2" id="HC" name="HC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="HC3" name="HC3" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="HC36" name="HC36" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="HC5" name="HC5" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="HC53" name="HC53" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="HC536" name="HC536" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="HC56" name="HC56" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="LC" name="LC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="LC_APC" name="LC_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_10">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_11" id="Va" name="Va" compartment="compartment_1" initialConcentration="2e-07" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P12259"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_12" id="Va3" name="Va3" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" id="Va36" name="Va36" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_14" id="Va36_APC" name="Va36_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_15" id="Va3_APC" name="Va3_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_16" id="Va5" name="Va5" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_17" id="Va53" name="Va53" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_18" id="Va536" name="Va536" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_19" id="Va536_APC" name="Va536_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_20" id="Va53_APC" name="Va53_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_21" id="Va56" name="Va56" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_22" id="Va56_APC" name="Va56_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_22">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_23" id="Va5_APC" name="Va5_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_23">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_24" id="VaA3" name="VaA3" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_25" id="VaA36" name="VaA36" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_26" id="VaA53" name="VaA53" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_27" id="VaA536" name="VaA536" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_28" id="VaLCA1" name="VaLCA1" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_29" id="VaLCA1_APC" name="VaLCA1_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_29">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_30" id="Va_APC" name="Va_APC" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_30">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P12259"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P04070"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_31" sboTerm="SBO:0000036" id="k1" name="k1" value="100000000" constant="true"/>
+      <parameter metaid="metaid_32" sboTerm="SBO:0000039" id="k10" name="k10" value="2630" constant="true"/>
+      <parameter metaid="metaid_33" sboTerm="SBO:0000038" id="k2" name="k2" value="0.7" constant="true"/>
+      <parameter metaid="metaid_34" sboTerm="SBO:0000035" id="k3" name="k3" value="0.064" constant="true"/>
+      <parameter metaid="metaid_35" sboTerm="SBO:0000035" id="k5" name="k5" value="1" constant="true"/>
+      <parameter metaid="metaid_36" sboTerm="SBO:0000035" id="k6" name="k6" value="0.00052" constant="true"/>
+      <parameter metaid="metaid_37" sboTerm="SBO:0000035" id="k7" name="k7" value="0.028" constant="true"/>
+      <parameter metaid="metaid_38" sboTerm="SBO:0000039" id="k8" name="k8" value="2570" constant="true"/>
+      <parameter metaid="metaid_39" sboTerm="SBO:0000035" id="k9" name="k9" value="1.72e-05" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_43" id="r1" name="r1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_40" sboTerm="SBO:0000010" species="Va" stoichiometry="1"/>
+          <speciesReference metaid="metaid_41" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_42" sboTerm="SBO:0000011" species="Va_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> Va </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> Va_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_46" id="r10" name="r10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_44" sboTerm="SBO:0000010" species="Va56_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_45" sboTerm="SBO:0000011" species="Va536_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k3 </ci>
+              <ci> Va56_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_49" id="r11" name="r11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_47" sboTerm="SBO:0000010" species="Va5_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_48" sboTerm="SBO:0000011" species="Va53_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k3 </ci>
+              <ci> Va5_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_52" id="r12" name="r12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_50" sboTerm="SBO:0000010" species="Va53_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_51" sboTerm="SBO:0000011" species="Va536_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k6 </ci>
+              <ci> Va53_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_55" id="r13" name="r13" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_53" sboTerm="SBO:0000010" species="Va_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_54" sboTerm="SBO:0000011" species="Va3_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k3 </ci>
+              <ci> Va_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_58" id="r14" name="r14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_56" sboTerm="SBO:0000010" species="Va3_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_57" sboTerm="SBO:0000011" species="Va36_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k6 </ci>
+              <ci> Va3_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_61" id="r15" name="r15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_59" sboTerm="SBO:0000010" species="Va36_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_60" sboTerm="SBO:0000011" species="Va536_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k5 </ci>
+              <ci> Va36_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_64" id="r16" name="r16" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_62" sboTerm="SBO:0000010" species="Va3_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_63" sboTerm="SBO:0000011" species="Va53_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k5 </ci>
+              <ci> Va3_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_68" id="r17" name="r17" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_65" sboTerm="SBO:0000010" species="Va" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_66" sboTerm="SBO:0000011" species="HC" stoichiometry="1"/>
+          <speciesReference metaid="metaid_67" sboTerm="SBO:0000011" species="LC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> Va </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> HC </ci>
+                  <ci> LC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_72" id="r18" name="r18" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_69" sboTerm="SBO:0000010" species="Va5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_70" sboTerm="SBO:0000011" species="HC5" stoichiometry="1"/>
+          <speciesReference metaid="metaid_71" sboTerm="SBO:0000011" species="LC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> Va5 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> HC5 </ci>
+                  <ci> LC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_76" id="r19" name="r19" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_73" sboTerm="SBO:0000010" species="Va3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_74" sboTerm="SBO:0000011" species="HC3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_75" sboTerm="SBO:0000011" species="LC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> Va3 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> HC3 </ci>
+                  <ci> LC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_80" id="r2" name="r2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_77" sboTerm="SBO:0000010" species="Va3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_78" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_79" sboTerm="SBO:0000011" species="Va3_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> Va3 </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> Va3_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_84" id="r20" name="r20" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_81" sboTerm="SBO:0000010" species="Va56" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_82" sboTerm="SBO:0000011" species="HC56" stoichiometry="1"/>
+          <speciesReference metaid="metaid_83" sboTerm="SBO:0000011" species="LC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> Va56 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> HC56 </ci>
+                  <ci> LC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_88" id="r21" name="r21" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_85" sboTerm="SBO:0000010" species="Va53" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_86" sboTerm="SBO:0000011" species="HC53" stoichiometry="1"/>
+          <speciesReference metaid="metaid_87" sboTerm="SBO:0000011" species="LC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> Va53 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> HC53 </ci>
+                  <ci> LC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_92" id="r22" name="r22" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_89" sboTerm="SBO:0000010" species="Va36" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_90" sboTerm="SBO:0000011" species="HC36" stoichiometry="1"/>
+          <speciesReference metaid="metaid_91" sboTerm="SBO:0000011" species="LC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> Va36 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> HC36 </ci>
+                  <ci> LC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_96" id="r23" name="r23" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_93" sboTerm="SBO:0000010" species="Va536" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_94" sboTerm="SBO:0000011" species="HC536" stoichiometry="1"/>
+          <speciesReference metaid="metaid_95" sboTerm="SBO:0000011" species="LC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> Va536 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> HC536 </ci>
+                  <ci> LC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_100" id="r24" name="r24" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_97" sboTerm="SBO:0000010" species="LC" stoichiometry="1"/>
+          <speciesReference metaid="metaid_98" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_99" sboTerm="SBO:0000011" species="LC_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> LC </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> LC_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_104" id="r25" name="r25" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_101" sboTerm="SBO:0000010" species="Va3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_102" sboTerm="SBO:0000011" species="VaA3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_103" sboTerm="SBO:0000011" species="VaLCA1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va3 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> VaA3 </ci>
+                  <ci> VaLCA1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_108" id="r26" name="r26" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_105" sboTerm="SBO:0000010" species="Va53" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_106" sboTerm="SBO:0000011" species="VaA53" stoichiometry="1"/>
+          <speciesReference metaid="metaid_107" sboTerm="SBO:0000011" species="VaLCA1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va53 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> VaA53 </ci>
+                  <ci> VaLCA1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_112" id="r27" name="r27" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_109" sboTerm="SBO:0000010" species="Va36" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_110" sboTerm="SBO:0000011" species="VaA36" stoichiometry="1"/>
+          <speciesReference metaid="metaid_111" sboTerm="SBO:0000011" species="VaLCA1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va36 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> VaA36 </ci>
+                  <ci> VaLCA1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_116" id="r28" name="r28" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_113" sboTerm="SBO:0000010" species="Va536" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_114" sboTerm="SBO:0000011" species="VaA536" stoichiometry="1"/>
+          <speciesReference metaid="metaid_115" sboTerm="SBO:0000011" species="VaLCA1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va536 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> VaA536 </ci>
+                  <ci> VaLCA1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_120" id="r29" name="r29" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_117" sboTerm="SBO:0000010" species="Va3_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_118" sboTerm="SBO:0000011" species="VaA3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_119" sboTerm="SBO:0000011" species="VaLCA1_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va3_APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> VaA3 </ci>
+                  <ci> VaLCA1_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_124" id="r3" name="r3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_121" sboTerm="SBO:0000010" species="Va5" stoichiometry="1"/>
+          <speciesReference metaid="metaid_122" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_123" sboTerm="SBO:0000011" species="Va5_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> Va5 </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> Va5_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_128" id="r30" name="r30" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_125" sboTerm="SBO:0000010" species="Va53_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_126" sboTerm="SBO:0000011" species="VaA53" stoichiometry="1"/>
+          <speciesReference metaid="metaid_127" sboTerm="SBO:0000011" species="VaLCA1_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va53_APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> VaA53 </ci>
+                  <ci> VaLCA1_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_132" id="r31" name="r31" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_129" sboTerm="SBO:0000010" species="Va36_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_130" sboTerm="SBO:0000011" species="VaA36" stoichiometry="1"/>
+          <speciesReference metaid="metaid_131" sboTerm="SBO:0000011" species="VaLCA1_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va36_APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k8 </ci>
+                  <ci> VaA36 </ci>
+                  <ci> VaLCA1_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_136" id="r32" name="r32" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_133" sboTerm="SBO:0000010" species="Va536_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_134" sboTerm="SBO:0000011" species="VaA536" stoichiometry="1"/>
+          <speciesReference metaid="metaid_135" sboTerm="SBO:0000011" species="VaLCA1_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> Va536_APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> VaA536 </ci>
+                  <ci> VaLCA1_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_140" id="r33" name="r33" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_137" sboTerm="SBO:0000010" species="VaLCA1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_138" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_139" sboTerm="SBO:0000011" species="VaLCA1_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> VaLCA1 </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> VaLCA1_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_144" id="r4" name="r4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_141" sboTerm="SBO:0000010" species="Va53" stoichiometry="1"/>
+          <speciesReference metaid="metaid_142" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_143" sboTerm="SBO:0000011" species="Va53_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> Va53 </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> Va53_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_148" id="r5" name="r5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_145" sboTerm="SBO:0000010" species="Va56" stoichiometry="1"/>
+          <speciesReference metaid="metaid_146" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_147" sboTerm="SBO:0000011" species="Va56_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> Va56 </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> Va56_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_152" id="r6" name="r6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_149" sboTerm="SBO:0000010" species="Va36" stoichiometry="1"/>
+          <speciesReference metaid="metaid_150" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_151" sboTerm="SBO:0000011" species="Va36_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> Va36 </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> Va36_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_156" id="r7" name="r7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_153" sboTerm="SBO:0000010" species="Va536" stoichiometry="1"/>
+          <speciesReference metaid="metaid_154" sboTerm="SBO:0000010" species="APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_155" sboTerm="SBO:0000011" species="Va536_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> Va536 </ci>
+                  <ci> APC </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> Va536_APC </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_159" id="r8" name="r8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_157" sboTerm="SBO:0000010" species="Va_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_158" sboTerm="SBO:0000011" species="Va5_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k5 </ci>
+              <ci> Va_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_162" id="r9" name="r9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_160" sboTerm="SBO:0000010" species="Va5_APC" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_161" sboTerm="SBO:0000011" species="Va56_APC" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <ci> k6 </ci>
+              <ci> Va5_APC </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_bartholome2007" initialTime="0" outputStartTime="0" outputEndTime="60" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_bartholome2007" name="bartholome2007" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/bartholome1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x1']/@initialConcentration" newValue="88.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x4']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x5']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p1']/@value" newValue="0.0025"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p10']/@value" newValue="1.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p11']/@value" newValue="1000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p12']/@value" newValue="0.0003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p2']/@value" newValue="0.0784"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p3']/@value" newValue="0.0013"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p4']/@value" newValue="0.0827"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p5']/@value" newValue="0.0091"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p6']/@value" newValue="6.4e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p7']/@value" newValue="0.0397"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p8']/@value" newValue="1000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='p9']/@value" newValue="0.0098"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='apical']/@size" newValue="1.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='basolat']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cell']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_bartholome2007" modelReference="model0_bartholome2007" simulationReference="sim0_model0_bartholome2007"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_bartholome2007_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bartholome2007"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bartholome2007_x5">
+      <listOfVariables>
+        <variable id="x5" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='x5']" taskReference="task0_model0_bartholome2007"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> x5 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bartholome2007_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bartholome2007"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bartholome2007_BSP_cell">
+      <listOfVariables>
+        <variable id="BSP_cell" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BSP_cell']" taskReference="task0_model0_bartholome2007"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> BSP_cell </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3i" name="Figure 3i">
+      <listOfCurves>
+        <curve id="plot0_x5" name="x5 OATP1B3-ABCC2" logX="false" logY="false" xDataReference="task0_model0_bartholome2007_time" yDataReference="task0_model0_bartholome2007_x5"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3ii" name="Figure 3ii">
+      <listOfCurves>
+        <curve id="plot1_BSP_cell" name="x3 + x4 OATP1B3-ABCC2" logX="false" logY="false" xDataReference="task0_model0_bartholome2007_time" yDataReference="task0_model0_bartholome2007_BSP_cell"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

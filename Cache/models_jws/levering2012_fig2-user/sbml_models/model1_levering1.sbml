@@ -1,0 +1,1827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="levering1" name="levering1">
+    <listOfFunctionDefinitions>
+      <functionDefinition id="function_3" name="CK 1S 2P irr mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vmax </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KmP1 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> P2 </ci>
+                      <ci> KmP2 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_4" name="CK 3S 2P mod GAPDH">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> S3 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS3 </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> Vmax </ci>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KmS1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> S2 </ci>
+                    <ci> KmS2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> S3 </ci>
+                    <ci> KmS3 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> Vmax </ci>
+                    <ci> Keq </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> KmP1 </ci>
+                      <ci> KmP2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KmS1 </ci>
+                      <ci> KmS2 </ci>
+                      <ci> KmS3 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P1 </ci>
+                    <ci> KmP1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P2 </ci>
+                    <ci> KmP2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S1 </ci>
+                        <ci> KmS1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S2 </ci>
+                        <ci> KmS2 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S3 </ci>
+                        <ci> KmS3 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P1 </ci>
+                        <ci> KmP1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P2 </ci>
+                        <ci> KmP2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_2" name="CK 1S 2P (double) mod FBA">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> Vmax </ci>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KmS1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> Vmax </ci>
+                    <ci> Keq </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> KmP1 </ci>
+                      <ci> KmP1 </ci>
+                    </apply>
+                    <ci> KmS1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P1 </ci>
+                    <ci> KmP1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P2 </ci>
+                    <ci> KmP1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> P1 </ci>
+                  <ci> KmP1 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> P1 </ci>
+                    <ci> KmP1 </ci>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_9" name="CK 2S 2P (1 double) 1Mm irr mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Ki </ci>
+            </bvar>
+            <bvar>
+              <ci> Ivar </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P3 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <ci> Ki </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Ki </ci>
+                    <ci> Ivar </ci>
+                  </apply>
+                </apply>
+                <ci> Vmax </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KmS2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S1 </ci>
+                        <ci> KmS1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S2 </ci>
+                        <ci> KmS2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P1 </ci>
+                        <ci> KmP1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P2 </ci>
+                        <ci> KmP2 </ci>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> P3 </ci>
+                          <ci> KmP2 </ci>
+                        </apply>
+                        <cn type="integer"> 2 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_10" name="CK mixed acid irr 2 mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Km_trioseP </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <bvar>
+              <ci> trioseP </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> pyruvate </ci>
+            </bvar>
+            <bvar>
+              <ci> Km_pyruvate </ci>
+            </bvar>
+            <bvar>
+              <ci> NADH </ci>
+            </bvar>
+            <bvar>
+              <ci> Km_NADH </ci>
+            </bvar>
+            <bvar>
+              <ci> ADP </ci>
+            </bvar>
+            <bvar>
+              <ci> Km_ADP </ci>
+            </bvar>
+            <bvar>
+              <pi/>
+            </bvar>
+            <bvar>
+              <ci> Km_Pi </ci>
+            </bvar>
+            <bvar>
+              <ci> mixedacid </ci>
+            </bvar>
+            <bvar>
+              <ci> Km_mixedacid </ci>
+            </bvar>
+            <bvar>
+              <ci> NAD </ci>
+            </bvar>
+            <bvar>
+              <ci> Km_NAD </ci>
+            </bvar>
+            <bvar>
+              <ci> ATP </ci>
+            </bvar>
+            <bvar>
+              <ci> Km_ATP </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> Km_trioseP </ci>
+                    <ci> n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> Km_trioseP </ci>
+                      <ci> n </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> trioseP </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> Vmax </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> pyruvate </ci>
+                    <ci> Km_pyruvate </ci>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> NADH </ci>
+                    <ci> Km_NADH </ci>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> ADP </ci>
+                  <ci> Km_ADP </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <pi/>
+                  <ci> Km_Pi </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> pyruvate </ci>
+                        <ci> Km_pyruvate </ci>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> pyruvate </ci>
+                          <ci> Km_pyruvate </ci>
+                        </apply>
+                        <cn type="integer"> 2 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> NADH </ci>
+                        <ci> Km_NADH </ci>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> NADH </ci>
+                          <ci> Km_NADH </ci>
+                        </apply>
+                        <cn type="integer"> 2 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> ADP </ci>
+                        <ci> Km_ADP </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <pi/>
+                        <ci> Km_Pi </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> mixedacid </ci>
+                        <ci> Km_mixedacid </ci>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> mixedacid </ci>
+                          <ci> Km_mixedacid </ci>
+                        </apply>
+                        <cn type="integer"> 2 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> NAD </ci>
+                        <ci> Km_NAD </ci>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> NAD </ci>
+                          <ci> Km_NAD </ci>
+                        </apply>
+                        <cn type="integer"> 2 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> ATP </ci>
+                        <ci> Km_ATP </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_11" name="CK 2S 2P 1Mp 1Mm irr mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> KmMm </ci>
+            </bvar>
+            <bvar>
+              <ci> Mm </ci>
+            </bvar>
+            <bvar>
+              <ci> Mp </ci>
+            </bvar>
+            <bvar>
+              <ci> KmMp </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <ci> KmMm </ci>
+                  <apply>
+                    <plus/>
+                    <ci> KmMm </ci>
+                    <ci> Mm </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> Mp </ci>
+                  <apply>
+                    <plus/>
+                    <ci> KmMp </ci>
+                    <ci> Mp </ci>
+                  </apply>
+                </apply>
+                <ci> Vmax </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KmS2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S1 </ci>
+                        <ci> KmS1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S2 </ci>
+                        <ci> KmS2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P1 </ci>
+                        <ci> KmP1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P2 </ci>
+                        <ci> KmP2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_7" name="CK LDH irr 2 mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> FBP </ci>
+            </bvar>
+            <bvar>
+              <pi/>
+            </bvar>
+            <bvar>
+              <ci> Km_FBPPi </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <divide/>
+                    <ci> FBP </ci>
+                    <pi/>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <divide/>
+                      <ci> FBP </ci>
+                      <pi/>
+                    </apply>
+                    <ci> Km_FBPPi </ci>
+                  </apply>
+                </apply>
+                <ci> Vmax </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KmS2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S1 </ci>
+                        <ci> KmS1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S2 </ci>
+                        <ci> KmS2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P1 </ci>
+                        <ci> KmP1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P2 </ci>
+                        <ci> KmP2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_8" name="CK atpase mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vmax </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KmS1 </ci>
+                  </apply>
+                  <ci> n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KmS1 </ci>
+                  </apply>
+                  <ci> n </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_1" name="CK 2S 2P irr mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vmax </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KmS2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S1 </ci>
+                        <ci> KmS1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S2 </ci>
+                        <ci> KmS2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P1 </ci>
+                        <ci> KmP1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P2 </ci>
+                        <ci> KmP2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_6" name="CK 2S 2P 1Mp 1Mm PYK mod">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> KmMm </ci>
+            </bvar>
+            <bvar>
+              <ci> n </ci>
+            </bvar>
+            <bvar>
+              <ci> Mm </ci>
+            </bvar>
+            <bvar>
+              <ci> Mp </ci>
+            </bvar>
+            <bvar>
+              <ci> KmMp </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> KmMm </ci>
+                    <ci> n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> KmMm </ci>
+                      <ci> n </ci>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <ci> Mm </ci>
+                      <ci> n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> Mp </ci>
+                  <apply>
+                    <plus/>
+                    <ci> KmMp </ci>
+                    <ci> Mp </ci>
+                  </apply>
+                </apply>
+                <ci> Vmax </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KmS1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KmS2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S1 </ci>
+                        <ci> KmS1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S2 </ci>
+                        <ci> KmS2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P1 </ci>
+                        <ci> KmP1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P2 </ci>
+                        <ci> KmP2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="function_5" name="CK 2S 2P mod ENO">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KmP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> Vmax </ci>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KmS1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> S2 </ci>
+                    <ci> KmS2 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> Vmax </ci>
+                    <ci> Keq </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> KmP1 </ci>
+                      <ci> KmP2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KmS1 </ci>
+                      <ci> KmS2 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P1 </ci>
+                    <ci> KmP1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P2 </ci>
+                    <ci> KmP2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S1 </ci>
+                        <ci> KmS1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> S2 </ci>
+                        <ci> KmS2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P1 </ci>
+                        <ci> KmP1 </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> P2 </ci>
+                        <ci> KmP2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_1" id="compartment_1" name="Intracellular" spatialDimensions="3" size="0.029" constant="true"/>
+      <compartment metaid="metaid_2" id="compartment_2" name="Extracellular" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_3" id="species_1" name="G6P" compartment="compartment_1" initialConcentration="0.15" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="species_10" name="NAD" compartment="compartment_1" initialConcentration="0.29498069056645" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="species_11" name="NADH" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="species_12" name="lactate" compartment="compartment_2" initialConcentration="0.129512064231058" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="species_13" name="Pi extra" compartment="compartment_2" initialConcentration="50" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="species_14" name="mixed acids" compartment="compartment_2" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="species_15" name="Glucose" compartment="compartment_2" initialConcentration="5.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="species_2" name="FBP" compartment="compartment_1" initialConcentration="1.07" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="species_3" name="triose-P" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" id="species_4" name="BPG" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" id="species_5" name="PEP pool" compartment="compartment_1" initialConcentration="1.81059067186003e-06" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_14" id="species_6" name="pyruvate" compartment="compartment_1" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_15" id="species_7" name="Pi intra" compartment="compartment_1" initialConcentration="20.0119171920932" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_16" id="species_8" name="ADP" compartment="compartment_1" initialConcentration="7.17601986150924" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_17" id="species_9" name="ATP" compartment="compartment_1" initialConcentration="0.41" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction metaid="metaid_27" id="reaction_1" name="pfk" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_23" species="species_1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_24" species="species_9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_25" species="species_2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_26" species="species_8" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <ci> function_1 </ci>
+                <ci> Vmax </ci>
+                <ci> species_1 </ci>
+                <ci> KmS1 </ci>
+                <ci> species_9 </ci>
+                <ci> KmS2 </ci>
+                <ci> species_2 </ci>
+                <ci> KmP1 </ci>
+                <ci> species_8 </ci>
+                <ci> KmP2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_18" id="Vmax" name="Vmax" value="20.1788"/>
+            <parameter metaid="metaid_19" id="KmS1" name="KmS1" value="0.435043"/>
+            <parameter metaid="metaid_20" id="KmS2" name="KmS2" value="1.24214"/>
+            <parameter metaid="metaid_21" id="KmP1" name="KmP1" value="57.9978"/>
+            <parameter metaid="metaid_22" id="KmP2" name="KmP2" value="0.0300039"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_46" id="reaction_10" name="pfl" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_38" species="species_6" stoichiometry="2"/>
+          <speciesReference metaid="metaid_39" species="species_11" stoichiometry="2"/>
+          <speciesReference metaid="metaid_40" species="species_8" stoichiometry="1"/>
+          <speciesReference metaid="metaid_41" species="species_7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_42" species="species_14" stoichiometry="2"/>
+          <speciesReference metaid="metaid_43" species="species_10" stoichiometry="2"/>
+          <speciesReference metaid="metaid_44" species="species_9" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_45" species="species_3"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_10 </ci>
+              <ci> Km_trioseP </ci>
+              <ci> n </ci>
+              <ci> species_3 </ci>
+              <ci> Vmax </ci>
+              <ci> species_6 </ci>
+              <ci> Km_pyruvate </ci>
+              <ci> species_11 </ci>
+              <ci> Km_NADH </ci>
+              <ci> species_8 </ci>
+              <ci> Km_ADP </ci>
+              <ci> species_7 </ci>
+              <ci> Km_Pi </ci>
+              <ci> species_14 </ci>
+              <ci> Km_mixedacid </ci>
+              <ci> species_10 </ci>
+              <ci> Km_NAD </ci>
+              <ci> species_9 </ci>
+              <ci> Km_ATP </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_28" id="Km_trioseP" name="Km_trioseP" value="0.000636807"/>
+            <parameter metaid="metaid_29" id="n" name="n" value="3"/>
+            <parameter metaid="metaid_30" id="Vmax" name="Vmax" value="1.98963"/>
+            <parameter metaid="metaid_31" id="Km_pyruvate" name="Km_pyruvate" value="0.512794"/>
+            <parameter metaid="metaid_32" id="Km_NADH" name="Km_NADH" value="0.595578"/>
+            <parameter metaid="metaid_33" id="Km_ADP" name="Km_ADP" value="0.0010005"/>
+            <parameter metaid="metaid_34" id="Km_Pi" name="Km_Pi" value="98.5706"/>
+            <parameter metaid="metaid_35" id="Km_mixedacid" name="Km_mixedacid" value="34.4637"/>
+            <parameter metaid="metaid_36" id="Km_NAD" name="Km_NAD" value="0.0366518"/>
+            <parameter metaid="metaid_37" id="Km_ATP" name="Km_ATP" value="97.0156"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_60" id="reaction_11" name="pts" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_54" species="species_15" stoichiometry="1"/>
+          <speciesReference metaid="metaid_55" species="species_5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_56" species="species_1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_57" species="species_6" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_58" species="species_2"/>
+          <modifierSpeciesReference metaid="metaid_59" species="species_7"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_11 </ci>
+              <ci> KmMm </ci>
+              <ci> species_2 </ci>
+              <ci> species_7 </ci>
+              <ci> KmMp </ci>
+              <ci> Vmax </ci>
+              <ci> species_15 </ci>
+              <ci> KmS1 </ci>
+              <ci> species_5 </ci>
+              <ci> KmS2 </ci>
+              <ci> species_1 </ci>
+              <ci> KmP1 </ci>
+              <ci> species_6 </ci>
+              <ci> KmP2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_47" id="KmMm" name="KmMm" value="30.1418"/>
+            <parameter metaid="metaid_48" id="KmMp" name="KmMp" value="1.0273"/>
+            <parameter metaid="metaid_49" id="Vmax" name="Vmax" value="0.22786"/>
+            <parameter metaid="metaid_50" id="KmS1" name="KmS1" value="0.149998"/>
+            <parameter metaid="metaid_51" id="KmS2" name="KmS2" value="0.0215991"/>
+            <parameter metaid="metaid_52" id="KmP1" name="KmP1" value="99.0911"/>
+            <parameter metaid="metaid_53" id="KmP2" name="KmP2" value="67.0551"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_67" id="reaction_2" name="fba" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_65" species="species_2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_66" species="species_3" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <ci> function_2 </ci>
+                <ci> Vmax </ci>
+                <ci> species_2 </ci>
+                <ci> KmS1 </ci>
+                <ci> Keq </ci>
+                <ci> KmP1 </ci>
+                <ci> species_3 </ci>
+                <ci> species_3 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_61" id="Keq" name="Keq" value="0.056"/>
+            <parameter metaid="metaid_62" id="KmP1" name="KmP1" value="17.6344"/>
+            <parameter metaid="metaid_63" id="Vmax" name="Vmax" value="2.64502"/>
+            <parameter metaid="metaid_64" id="KmS1" name="KmS1" value="1.69961"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_75" id="reaction_3" name="fbp" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_72" species="species_2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_73" species="species_1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_74" species="species_7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <ci> function_3 </ci>
+                <ci> Vmax </ci>
+                <ci> species_2 </ci>
+                <ci> KmS1 </ci>
+                <ci> species_1 </ci>
+                <ci> KmP1 </ci>
+                <ci> species_7 </ci>
+                <ci> KmP2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_68" id="Vmax" name="Vmax" value="183.348"/>
+            <parameter metaid="metaid_69" id="KmS1" name="KmS1" value="48.7658"/>
+            <parameter metaid="metaid_70" id="KmP1" name="KmP1" value="0.0147529"/>
+            <parameter metaid="metaid_71" id="KmP2" name="KmP2" value="10.8927"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_88" id="reaction_4" name="gapdh" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_83" species="species_3" stoichiometry="1"/>
+          <speciesReference metaid="metaid_84" species="species_10" stoichiometry="1"/>
+          <speciesReference metaid="metaid_85" species="species_7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_86" species="species_4" stoichiometry="1"/>
+          <speciesReference metaid="metaid_87" species="species_11" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <ci> function_4 </ci>
+                <ci> Vmax </ci>
+                <ci> species_3 </ci>
+                <ci> KmS1 </ci>
+                <ci> species_10 </ci>
+                <ci> KmS2 </ci>
+                <ci> species_7 </ci>
+                <ci> KmS3 </ci>
+                <ci> Keq </ci>
+                <ci> KmP1 </ci>
+                <ci> KmP2 </ci>
+                <ci> species_4 </ci>
+                <ci> species_11 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_76" id="Vmax" name="Vmax" value="37.1894"/>
+            <parameter metaid="metaid_77" id="KmS1" name="KmS1" value="0.080501"/>
+            <parameter metaid="metaid_78" id="KmS2" name="KmS2" value="1.71631"/>
+            <parameter metaid="metaid_79" id="KmS3" name="KmS3" value="2.01006"/>
+            <parameter metaid="metaid_80" id="Keq" name="Keq" value="0.0007"/>
+            <parameter metaid="metaid_81" id="KmP1" name="KmP1" value="0.00500025"/>
+            <parameter metaid="metaid_82" id="KmP2" name="KmP2" value="0.0565221"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_99" id="reaction_5" name="eno" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_95" species="species_4" stoichiometry="1"/>
+          <speciesReference metaid="metaid_96" species="species_8" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_97" species="species_5" stoichiometry="1"/>
+          <speciesReference metaid="metaid_98" species="species_9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <ci> function_5 </ci>
+                <ci> Vmax </ci>
+                <ci> species_4 </ci>
+                <ci> KmS1 </ci>
+                <ci> species_8 </ci>
+                <ci> KmS2 </ci>
+                <ci> Keq </ci>
+                <ci> KmP1 </ci>
+                <ci> KmP2 </ci>
+                <ci> species_5 </ci>
+                <ci> species_9 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_89" id="Vmax" name="Vmax" value="5.96394"/>
+            <parameter metaid="metaid_90" id="KmS1" name="KmS1" value="0.0184256"/>
+            <parameter metaid="metaid_91" id="KmS2" name="KmS2" value="0.02"/>
+            <parameter metaid="metaid_92" id="Keq" name="Keq" value="27.55"/>
+            <parameter metaid="metaid_93" id="KmP1" name="KmP1" value="0.0598516"/>
+            <parameter metaid="metaid_94" id="KmP2" name="KmP2" value="1.71656"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_114" id="reaction_6" name="pyk" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_108" species="species_5" stoichiometry="1"/>
+          <speciesReference metaid="metaid_109" species="species_8" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_110" species="species_6" stoichiometry="1"/>
+          <speciesReference metaid="metaid_111" species="species_9" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_112" species="species_7"/>
+          <modifierSpeciesReference metaid="metaid_113" species="species_2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <ci> function_6 </ci>
+                <ci> KmMm </ci>
+                <ci> n </ci>
+                <ci> species_7 </ci>
+                <ci> species_2 </ci>
+                <ci> KmMp </ci>
+                <ci> Vmax </ci>
+                <ci> species_5 </ci>
+                <ci> KmS1 </ci>
+                <ci> species_8 </ci>
+                <ci> KmS2 </ci>
+                <ci> species_6 </ci>
+                <ci> KmP1 </ci>
+                <ci> species_9 </ci>
+                <ci> KmP2 </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_100" id="KmMm" name="KmMm" value="12.3101"/>
+            <parameter metaid="metaid_101" id="n" name="n" value="3"/>
+            <parameter metaid="metaid_102" id="KmMp" name="KmMp" value="0.732078"/>
+            <parameter metaid="metaid_103" id="Vmax" name="Vmax" value="28.4132"/>
+            <parameter metaid="metaid_104" id="KmS1" name="KmS1" value="0.0957467"/>
+            <parameter metaid="metaid_105" id="KmS2" name="KmS2" value="8.06159"/>
+            <parameter metaid="metaid_106" id="KmP1" name="KmP1" value="80.2894"/>
+            <parameter metaid="metaid_107" id="KmP2" name="KmP2" value="13.267"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_127" id="reaction_7" name="ldh" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_121" species="species_6" stoichiometry="1"/>
+          <speciesReference metaid="metaid_122" species="species_11" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_123" species="species_12" stoichiometry="1"/>
+          <speciesReference metaid="metaid_124" species="species_10" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_125" species="species_2"/>
+          <modifierSpeciesReference metaid="metaid_126" species="species_7"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_7 </ci>
+              <ci> species_2 </ci>
+              <ci> species_7 </ci>
+              <ci> Km_FBPPi </ci>
+              <ci> Vmax </ci>
+              <ci> species_6 </ci>
+              <ci> KmS1 </ci>
+              <ci> species_11 </ci>
+              <ci> KmS2 </ci>
+              <ci> species_12 </ci>
+              <ci> KmP1 </ci>
+              <ci> species_10 </ci>
+              <ci> KmP2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_115" id="Km_FBPPi" name="Km_FBPPi" value="0.00020138"/>
+            <parameter metaid="metaid_116" id="Vmax" name="Vmax" value="996.558"/>
+            <parameter metaid="metaid_117" id="KmS1" name="KmS1" value="0.664325"/>
+            <parameter metaid="metaid_118" id="KmS2" name="KmS2" value="0.020014"/>
+            <parameter metaid="metaid_119" id="KmP1" name="KmP1" value="99.8592"/>
+            <parameter metaid="metaid_120" id="KmP2" name="KmP2" value="21.7749"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_134" id="reaction_8" name="atpase" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_131" species="species_9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_132" species="species_8" stoichiometry="1"/>
+          <speciesReference metaid="metaid_133" species="species_7" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment_1 </ci>
+              <apply>
+                <ci> function_8 </ci>
+                <ci> Vmax </ci>
+                <ci> species_9 </ci>
+                <ci> KmS1 </ci>
+                <ci> n </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_128" id="Vmax" name="Vmax" value="18.8352"/>
+            <parameter metaid="metaid_129" id="KmS1" name="KmS1" value="4.65629"/>
+            <parameter metaid="metaid_130" id="n" name="n" value="3"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_146" id="reaction_9" name="Pi transport" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_141" species="species_13" stoichiometry="1"/>
+          <speciesReference metaid="metaid_142" species="species_9" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_143" species="species_7" stoichiometry="2"/>
+          <speciesReference metaid="metaid_144" species="species_8" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_145" species="species_7"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> function_9 </ci>
+              <ci> Ki </ci>
+              <ci> species_7 </ci>
+              <ci> Vmax </ci>
+              <ci> species_13 </ci>
+              <ci> KmS1 </ci>
+              <ci> species_9 </ci>
+              <ci> KmS2 </ci>
+              <ci> species_8 </ci>
+              <ci> KmP1 </ci>
+              <ci> species_7 </ci>
+              <ci> KmP2 </ci>
+              <ci> species_7 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_135" id="Ki" name="Ki" value="0.885733"/>
+            <parameter metaid="metaid_136" id="Vmax" name="Vmax" value="1.91757"/>
+            <parameter metaid="metaid_137" id="KmS1" name="KmS1" value="8.91361"/>
+            <parameter metaid="metaid_138" id="KmS2" name="KmS2" value="5.84632"/>
+            <parameter metaid="metaid_139" id="KmP1" name="KmP1" value="90.6089"/>
+            <parameter metaid="metaid_140" id="KmP2" name="KmP2" value="0.205858"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

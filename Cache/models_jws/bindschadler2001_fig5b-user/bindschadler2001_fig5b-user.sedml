@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_bindschadler1" initialTime="0" outputStartTime="0" outputEndTime="30" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_bindschadler1" name="bindschadler1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/bindschadler1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='h2']/@initialConcentration" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='c2']/@initialConcentration" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='c1']/@initialConcentration" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='h1']/@initialConcentration" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R1']/@value" newValue="6.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R3']/@value" newValue="50.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='R5']/@value" newValue="1.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="44.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k2']/@value" newValue="26.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k3']/@value" newValue="1.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='r2']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='r4']/@value" newValue="20.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='diffusion']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='D']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Open_to_Inactivated_Cell2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='p']/@value" newValue="0.2778"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jleak_Cell2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Jleak']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jpump_Cell2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kp']/@value" newValue="0.18"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jpump_Cell2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vp']/@value" newValue="1.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jreceptor_Cell2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='p']/@value" newValue="0.2778"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jreceptor_Cell2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kf']/@value" newValue="28.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Open_to_Inactivated_Cell1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='p']/@value" newValue="0.2778"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jleak_Cell1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Jleak']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jpump_Cell1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kp']/@value" newValue="0.18"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jpump_Cell1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vp']/@value" newValue="1.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jreceptor_Cell1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='p']/@value" newValue="0.2778"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Jreceptor_Cell1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kf']/@value" newValue="28.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_bindschadler1" modelReference="model0_bindschadler1" simulationReference="sim0_model0_bindschadler1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_bindschadler1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bindschadler1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bindschadler1_c1">
+      <listOfVariables>
+        <variable id="c1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='c1']" taskReference="task0_model0_bindschadler1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> c1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bindschadler1_c2">
+      <listOfVariables>
+        <variable id="c2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='c2']" taskReference="task0_model0_bindschadler1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> c2 </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_5B" name="Figure 5B">
+      <listOfCurves>
+        <curve id="plot0_c1" name="c1" logX="false" logY="false" xDataReference="task0_model0_bindschadler1_time" yDataReference="task0_model0_bindschadler1_c1"/>
+        <curve id="plot0_c2" name="c2" logX="false" logY="false" xDataReference="task0_model0_bindschadler1_time" yDataReference="task0_model0_bindschadler1_c2"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

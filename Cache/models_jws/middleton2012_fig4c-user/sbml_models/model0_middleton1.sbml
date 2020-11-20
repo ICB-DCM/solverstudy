@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="middleton1" name="middleton1">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="time" name="time">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="length" name="length">
+        <listOfUnits>
+          <unit kind="metre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_2" id="area" name="area">
+        <listOfUnits>
+          <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_3" id="volume" name="volume">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_4" id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_5" id="default" spatialDimensions="3" size="1" units="volume" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005623"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_6" id="s1" name="GA4" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32902"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_7" sboTerm="SBO:0000291" id="s11" name="ga20ox_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_8" sboTerm="SBO:0000291" id="s15" name="gid_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_9" id="s16" name="DELLA" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_9">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9LQT8"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_10" id="s2" name="GID" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_10">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9MAA7"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_11" id="s22" name="DELLA_U" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9LQT8"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_12" id="s23" name="GA12" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_12">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:30088"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_13" id="s24" name="GA15" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_13">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29590"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_14" id="s25" name="GA24" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32906"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_15" id="s26" name="GA9" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29605"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_16" id="s27" name="GA20ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_16">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G25420"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_17" id="s28" name="GA3ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G21690"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_18" id="s29" name="GA9-GA3ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_18">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G21690"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29605"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_19" sboTerm="SBO:0000291" id="s3" name="GA12_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_20" id="s30" name="GA24-GA20ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G25420"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32906"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_21" id="s31" name="GA15-GA20ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_21">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G25420"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:29590"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_22" id="s32" name="GA12-GA20ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_22">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G25420"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:30088"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_23" sboTerm="SBO:0000291" id="s33" name="GID_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_24" sboTerm="SBO:0000291" id="s34" name="della_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_25" sboTerm="SBO:0000291" id="s35" name="ga3ox_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_26" id="s36" name="GA4-GID-DELLA2" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_26">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9LQT8"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9MAA7"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32902"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_27" id="s39" name="ga20ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_27">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G25420"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_28" id="s40" name="della" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_28">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9LQT8"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_29" id="s41" name="ga3ox" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_29">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.genes/ath:AT4G21690"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_30" id="s42" name="gid" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_30">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9MAA7"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_31" id="s45" name="GA4-GID-DELLA1" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_31">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9MAA7"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9LQT8"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32902"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_32" sboTerm="SBO:0000291" id="s5" name="GA3ox_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_33" sboTerm="SBO:0000291" id="s6" name="GA20ox_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_34" id="s62" name="GA4-GID-closed" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_34">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9MAA7"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32902"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_35" id="s65" name="GA4-GID" compartment="default" initialAmount="0.01" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_35">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9MAA7"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:32902"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_36" sboTerm="SBO:0000291" id="s66" name="GA4_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_37" sboTerm="SBO:0000291" id="s67" name="sa5_degraded" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_38" sboTerm="SBO:0000291" id="s68" name="sa6_degraded" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_39" sboTerm="SBO:0000291" id="s69" name="sa7_degraded" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_40" sboTerm="SBO:0000291" id="s7" name="DELLA_source" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_41" sboTerm="SBO:0000291" id="s70" name="sa8_degraded" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_42" sboTerm="SBO:0000291" id="s71" name="sa1_degraded" compartment="default" initialAmount="0" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_43" id="Pmem" name="Pmem" value="2.66664" units="substance" constant="true"/>
+      <parameter metaid="metaid_44" id="R" name="R" value="1" units="substance" constant="true"/>
+      <parameter metaid="metaid_45" id="appliedGA4" name="appliedGA4" value="2" units="substance" constant="true"/>
+      <parameter metaid="metaid_46" id="muDELLA" name="muDELLA" value="0.070794578438414" units="substance" constant="true"/>
+      <parameter metaid="metaid_47" id="muGA" name="muGA" value="0.290804218727464" units="substance" constant="true"/>
+      <parameter metaid="metaid_48" id="muGA20ox" name="muGA20ox" value="0.047770755070625" units="substance" constant="true"/>
+      <parameter metaid="metaid_49" id="muGA3ox" name="muGA3ox" value="0.102600014140148" units="substance" constant="true"/>
+      <parameter metaid="metaid_50" id="muGID" name="muGID" value="0.045708818961487" units="substance" constant="true"/>
+      <parameter metaid="metaid_51" id="omegaGA12" name="omegaGA12" value="0.006602803853512" units="substance" constant="false"/>
+      <parameter metaid="metaid_52" id="omegaGA12ga13" name="omegaGA12ga13" value="0.006602803853512" units="substance" constant="true"/>
+      <parameter metaid="metaid_53" id="omegaGA4" name="omegaGA4" value="0" units="substance" constant="false"/>
+      <parameter metaid="metaid_54" id="tGA4off" name="tGA4off" value="620" units="substance" constant="true"/>
+      <parameter metaid="metaid_55" id="tGA4on" name="tGA4on" value="500" units="substance" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_56" variable="omegaGA12">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> R </ci>
+            <ci> omegaGA12ga13 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_63" id="re1" name="GA4-GID association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_58" species="s2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_59" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_60" species="s65" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_61" species="s2"/>
+          <modifierSpeciesReference metaid="metaid_62" species="s1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> la </ci>
+              <ci> s1 </ci>
+              <ci> s2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_57" id="la" name="la" value="1.35" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_70" id="re10" name="GA15-GA20ox association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_65" species="s27" stoichiometry="1"/>
+          <speciesReference metaid="metaid_66" species="s24" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_67" species="s31" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_68" species="s27"/>
+          <modifierSpeciesReference metaid="metaid_69" species="s24"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ka15 </ci>
+              <ci> s24 </ci>
+              <ci> s27 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_64" id="ka15" name="ka15" value="2073.22402517968" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_76" id="re11" name="GA15.GA20ox dissociation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_72" species="s31" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_73" species="s27" stoichiometry="1"/>
+          <speciesReference metaid="metaid_74" species="s24" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_75" species="s31"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kd15 </ci>
+              <ci> s31 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_71" id="kd15" name="kd15" value="0.008827838388125" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_82" id="re12" name="GA24 production" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_78" species="s31" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_79" species="s25" stoichiometry="1"/>
+          <speciesReference metaid="metaid_80" species="s27" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_81" species="s31"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> km15 </ci>
+              <ci> s31 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_77" id="km15" name="km15" value="763.777072066507" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_89" id="re13" name="GA24-GA20ox association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_84" species="s27" stoichiometry="1"/>
+          <speciesReference metaid="metaid_85" species="s25" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_86" species="s30" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_87" species="s27"/>
+          <modifierSpeciesReference metaid="metaid_88" species="s25"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ka24 </ci>
+              <ci> s25 </ci>
+              <ci> s27 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_83" id="ka24" name="ka24" value="3099.18915892587" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_95" id="re14" name="GA24.GA20ox dissociation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_91" species="s30" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_92" species="s27" stoichiometry="1"/>
+          <speciesReference metaid="metaid_93" species="s25" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_94" species="s30"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kd24 </ci>
+              <ci> s30 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_90" id="kd24" name="kd24" value="0.01588492846351" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_101" id="re15" name="GA9 production" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_97" species="s30" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_98" species="s26" stoichiometry="1"/>
+          <speciesReference metaid="metaid_99" species="s27" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_100" species="s30"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> km24 </ci>
+              <ci> s30 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_96" id="km24" name="km24" value="2.58846077319221" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_108" id="re16" name="GA9-GA3ox association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_103" species="s28" stoichiometry="1"/>
+          <speciesReference metaid="metaid_104" species="s26" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_105" species="s29" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_106" species="s28"/>
+          <modifierSpeciesReference metaid="metaid_107" species="s26"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ka9 </ci>
+              <ci> s26 </ci>
+              <ci> s28 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_102" id="ka9" name="ka9" value="2073.22402517968" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_114" id="re17" name="GA9.GA3ox dissociation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_110" species="s29" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_111" species="s28" stoichiometry="1"/>
+          <speciesReference metaid="metaid_112" species="s26" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_113" species="s29"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kd9 </ci>
+              <ci> s29 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_109" id="kd9" name="kd9" value="0.008827838388125" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_120" id="re18" name="GA4 production" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_116" species="s29" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_117" species="s1" stoichiometry="1"/>
+          <speciesReference metaid="metaid_118" species="s28" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_119" species="s29"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> km9 </ci>
+              <ci> s29 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_115" id="km9" name="km9" value="763.777072066507" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_125" id="re19" name="GA4.GID lid closing" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_122" species="s65" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_123" species="s62" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_124" species="s65"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> q </ci>
+              <ci> s65 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_121" id="q" name="q" value="0.025118864315096" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_131" id="re2" name="GA4.GID dissociation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_127" species="s65" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_128" species="s2" stoichiometry="1"/>
+          <speciesReference metaid="metaid_129" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_130" species="s65"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ld </ci>
+              <ci> s65 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_126" id="ld" name="ld" value="2.84315148627376" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_136" id="re20" name="GA4.GID-Closed lid opening" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_133" species="s62" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_134" species="s65" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_135" species="s62"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> p </ci>
+              <ci> s62 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_132" id="p" name="p" value="0.077624711662869" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_142" id="re21" name="della translation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_138" species="s7" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_139" species="s16" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_140" species="s40"/>
+          <modifierSpeciesReference metaid="metaid_141" species="s40"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaDELLA </ci>
+              <ci> s40 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_137" id="deltaDELLA" name="deltaDELLA" value="0.000527749140286577" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_148" id="re22" name="ga20ox translation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_144" species="s6" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_145" species="s27" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_146" species="s39"/>
+          <modifierSpeciesReference metaid="metaid_147" species="s39"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaGA20ox </ci>
+              <ci> s39 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_143" id="deltaGA20ox" name="deltaGA20ox" value="0.192990314378105" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_154" id="re23" name="ga3ox translation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_150" species="s5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_151" species="s28" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_152" species="s41"/>
+          <modifierSpeciesReference metaid="metaid_153" species="s41"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaGA3ox </ci>
+              <ci> s41 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_149" id="deltaGA3ox" name="deltaGA3ox" value="0.019299031437811" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_160" id="re24" name="gid translation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_156" species="s33" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_157" species="s2" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_158" species="s42"/>
+          <modifierSpeciesReference metaid="metaid_159" species="s42"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> deltaGID </ci>
+              <ci> s42 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_155" id="deltaGID" name="deltaGA3ox" value="19.2990314378105" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_166" id="re27" name="ga20ox transcription (activated by DELLA)" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_162" species="s11" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_163" species="s39" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_164" species="s16"/>
+          <modifierSpeciesReference metaid="metaid_165" species="s16"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> muGA20ox </ci>
+                <ci> s16 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s16 </ci>
+                <ci> thetaGA20ox </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_161" id="thetaGA20ox" name="thetaGA20ox" value="0.6383" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_172" id="re28" name="gid transcription (activated by DELLA)" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_168" species="s15" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_169" species="s42" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_170" species="s16"/>
+          <modifierSpeciesReference metaid="metaid_171" species="s16"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> muGID </ci>
+                <ci> s16 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s16 </ci>
+                <ci> thetaGID </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_167" id="thetaGID" name="thetaGID" value="0.00055995" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_178" id="re29" name="della transcription (repressed by DELLA)" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_174" species="s34" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_175" species="s40" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_176" species="s16"/>
+          <modifierSpeciesReference metaid="metaid_177" species="s16"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> muDELLA </ci>
+                <ci> thetaDELLA </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s16 </ci>
+                <ci> thetaDELLA </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_173" id="thetaDELLA" name="thetaDELLA" value="0.01" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_185" id="re3" name="GA4.GID-DELLA1 association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_180" species="s16" stoichiometry="1"/>
+          <speciesReference metaid="metaid_181" species="s62" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_182" species="s45" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_183" species="s16"/>
+          <modifierSpeciesReference metaid="metaid_184" species="s62"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ua1 </ci>
+              <ci> s62 </ci>
+              <ci> s16 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_179" id="ua1" name="ua1" value="10" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_191" id="re30" name="ga3ox transcription (activated by DELLA)" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_187" species="s35" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_188" species="s41" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_189" species="s16"/>
+          <modifierSpeciesReference metaid="metaid_190" species="s16"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> muGA3ox </ci>
+                <ci> s16 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> s16 </ci>
+                <ci> thetaGA3ox </ci>
+              </apply>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_186" id="thetaGA3ox" name="thetaGA3ox" value="0.0082" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_195" id="re31" name="della decay" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_192" species="s40" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_193" species="s34" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_194" species="s40"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muDELLA </ci>
+              <ci> s40 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_199" id="re32" name="gid decay" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_196" species="s42" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_197" species="s15" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_198" species="s42"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muGID </ci>
+              <ci> s42 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_203" id="re33" name="ga20ox decay" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_200" species="s39" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_201" species="s11" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_202" species="s39"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muGA20ox </ci>
+              <ci> s39 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_207" id="re34" name="ga3ox decay" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_204" species="s41" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_205" species="s35" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_206" species="s41"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muGA3ox </ci>
+              <ci> s41 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_212" id="re35" name="GA20ox decay" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_209" species="s27" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_210" species="s6" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_211" species="s27"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> gammaGA20ox </ci>
+              <ci> s27 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_208" id="gammaGA20ox" name="gammaGA20ox" value="3.514" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_217" id="re37" name="GID decay" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_214" species="s2" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_215" species="s33" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_216" species="s2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> gammaGID </ci>
+              <ci> s2 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_213" id="gammaGID" name="gammaGID" value="3.514" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_222" id="re38" name="GA3ox decay" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_219" species="s28" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_220" species="s5" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_221" species="s28"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> gammaGA3ox </ci>
+              <ci> s28 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_218" id="gammaGA3ox" name="gammaGA3ox" value="3.514" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_229" id="re39" name="GA4.GID-DELLA2 association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_224" species="s16" stoichiometry="1"/>
+          <speciesReference metaid="metaid_225" species="s62" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_226" species="s36" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_227" species="s16"/>
+          <modifierSpeciesReference metaid="metaid_228" species="s62"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ua2 </ci>
+              <ci> s62 </ci>
+              <ci> s16 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_223" id="ua2" name="ua2" value="316.2278" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_235" id="re4" name="GA4.GID.DELLA1 dissociation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_231" species="s45" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_232" species="s16" stoichiometry="1"/>
+          <speciesReference metaid="metaid_233" species="s62" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_234" species="s45"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ud1 </ci>
+              <ci> s45 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_230" id="ud1" name="ud1" value="0.133045441797809" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_241" id="re40" name="GA4.GID.DELLA2 dissociation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_237" species="s36" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_238" species="s16" stoichiometry="1"/>
+          <speciesReference metaid="metaid_239" species="s62" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_240" species="s36"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ud2 </ci>
+              <ci> s36 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_236" id="ud2" name="ud2" value="2.8184" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_245" id="re41" name="GA4 supply" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_243" species="s66" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_244" species="s1" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> Pmem </ci>
+              <ci> A1 </ci>
+              <ci> omegaGA4 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_242" id="A1" name="A1" value="0.0307" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_249" id="re42" name="degradation of GA12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_246" species="s23" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_247" species="s67" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_248" species="s23"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muGA </ci>
+              <ci> s23 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_253" id="re43" name="degradation of GA15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_250" species="s24" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_251" species="s68" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_252" species="s24"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muGA </ci>
+              <ci> s24 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_257" id="re44" name="degradation of GA24" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_254" species="s25" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_255" species="s69" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_256" species="s25"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muGA </ci>
+              <ci> s25 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_261" id="re45" name="degradation of GA9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_258" species="s26" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_259" species="s70" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_260" species="s26"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muGA </ci>
+              <ci> s26 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_266" id="re46" name="degradation of GA4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_263" species="s1" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_264" species="s71" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_265" species="s1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <plus/>
+                <ci> muGA </ci>
+                <apply>
+                  <times/>
+                  <ci> Pmem </ci>
+                  <ci> B1 </ci>
+                </apply>
+              </apply>
+              <ci> s1 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_262" id="B1" name="B1" value="0.00039795" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_272" id="re5" name="DELLA ubiquitination" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_268" species="s45" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_269" species="s22" stoichiometry="1"/>
+          <speciesReference metaid="metaid_270" species="s62" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_271" species="s45"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> um </ci>
+              <ci> s45 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_267" id="um" name="um" value="6.92208879449283" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_275" id="re6" name="GA12 supply" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_273" species="s3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_274" species="s23" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> omegaGA12 </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_282" id="re7" name="GA12-GA20ox association" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_277" species="s27" stoichiometry="1"/>
+          <speciesReference metaid="metaid_278" species="s23" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_279" species="s32" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_280" species="s27"/>
+          <modifierSpeciesReference metaid="metaid_281" species="s23"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ka12 </ci>
+              <ci> s23 </ci>
+              <ci> s27 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_276" id="ka12" name="ka12" value="2904.11853677638" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_288" id="re8" name="GA12.GA20ox dissociation" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_284" species="s32" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_285" species="s27" stoichiometry="1"/>
+          <speciesReference metaid="metaid_286" species="s23" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_287" species="s32"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kd12 </ci>
+              <ci> s32 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_283" id="kd12" name="kd12" value="2.67298621993027" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_294" id="re9" name="GA15 production" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_290" species="s32" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_291" species="s24" stoichiometry="1"/>
+          <speciesReference metaid="metaid_292" species="s27" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_293" species="s32"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> km12 </ci>
+              <ci> s32 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter metaid="metaid_289" id="km12" name="km12" value="198.80427707769" units="substance"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event metaid="metaid_295" id="AddGA4" name="AddGA4" useValuesFromTriggerTime="true">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <gt/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <ci> tGA4on </ci>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment metaid="metaid_296" variable="omegaGA4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> appliedGA4 </ci>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event metaid="metaid_297" id="RemoveGA4" name="RemoveGA4" useValuesFromTriggerTime="true">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <gt/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <ci> tGA4off </ci>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment metaid="metaid_298" variable="omegaGA4">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>

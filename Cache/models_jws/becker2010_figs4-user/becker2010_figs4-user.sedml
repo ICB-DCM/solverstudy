@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_becker2" initialTime="0" outputStartTime="0" outputEndTime="60" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_becker2" name="becker2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/becker2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='EpoR']/@initialConcentration" newValue="76.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='dSAve']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='dSAvi']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='SAv_EpoR']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='SAv_EpoRi']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='SAv']/@initialConcentration" newValue="999.293"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Bmax_SAv']/@value" newValue="76.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kde']/@value" newValue="0.0164042"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kdi']/@value" newValue="0.00317871"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kex_SAv']/@value" newValue="0.01101"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='koff_SAv']/@value" newValue="0.00679946"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kon_SAv']/@value" newValue="2.29402e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kt']/@value" newValue="0.0329366"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cell']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cellsurface']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='medium']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_becker2" modelReference="model0_becker2" simulationReference="sim0_model0_becker2"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_becker2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_becker2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_becker2_SAv_EpoR">
+      <listOfVariables>
+        <variable id="SAv_EpoR" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='SAv_EpoR']" taskReference="task0_model0_becker2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> SAv_EpoR </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_becker2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_becker2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_becker2_SAv_cells">
+      <listOfVariables>
+        <variable id="SAv_cells" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='SAv_cells']" taskReference="task0_model0_becker2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> SAv_cells </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_becker2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_becker2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_becker2_SAv_medium">
+      <listOfVariables>
+        <variable id="SAv_medium" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='SAv_medium']" taskReference="task0_model0_becker2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> SAv_medium </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_S4_SAv_cells" name="Figure S4 SAv in cells">
+      <listOfCurves>
+        <curve id="plot1_SAv_cells" name="SAv_cells" logX="false" logY="false" xDataReference="task0_model0_becker2_time" yDataReference="task0_model0_becker2_SAv_cells"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_S4_SAv_medium" name="Figure S4 SAv in medium">
+      <listOfCurves>
+        <curve id="plot2_SAv_medium" name="SAv_medium" logX="false" logY="false" xDataReference="task0_model0_becker2_time" yDataReference="task0_model0_becker2_SAv_medium"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_S4_SAv_surface" name="Figure S4 SAv in surface">
+      <listOfCurves>
+        <curve id="plot0_SAv_EpoR" name="SAv_EpoR" logX="false" logY="false" xDataReference="task0_model0_becker2_time" yDataReference="task0_model0_becker2_SAv_EpoR"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

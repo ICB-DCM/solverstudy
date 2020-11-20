@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_bier2" initialTime="0" outputStartTime="0" outputEndTime="1000" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_bier2" name="bier2" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/bier2/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T2']/@initialConcentration" newValue="0.41"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='G2']/@initialConcentration" newValue="10.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='G1']/@initialConcentration" newValue="6.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T1']/@initialConcentration" newValue="7.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='V_in']/@value" newValue="0.36"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='epsilon']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k1']/@value" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='km']/@value" newValue="13.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kp']/@value" newValue="6.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_bier2" modelReference="model0_bier2" simulationReference="sim0_model0_bier2"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_bier2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bier2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bier2_Tsum">
+      <listOfVariables>
+        <variable id="task0_model0_bier2_Tsum" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Tsum']" taskReference="task0_model0_bier2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_bier2_Tsum </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bier2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bier2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bier2_Tdiff">
+      <listOfVariables>
+        <variable id="task0_model0_bier2_Tdiff" target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='Tdiff']" taskReference="task0_model0_bier2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_bier2_Tdiff </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bier2_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_bier2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bier2_T1">
+      <listOfVariables>
+        <variable id="T1" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T1']" taskReference="task0_model0_bier2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> T1 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_bier2_T2">
+      <listOfVariables>
+        <variable id="T2" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T2']" taskReference="task0_model0_bier2"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> T2 </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3_T1_and_T2" name="Figure 3 T1 and T2">
+      <listOfCurves>
+        <curve id="plot2_T1" name="T1" logX="false" logY="false" xDataReference="task0_model0_bier2_time" yDataReference="task0_model0_bier2_T1"/>
+        <curve id="plot2_T2" name="T2" logX="false" logY="false" xDataReference="task0_model0_bier2_time" yDataReference="task0_model0_bier2_T2"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3_T2_sum_T1" name="Figure 3 T2 + T1">
+      <listOfCurves>
+        <curve id="plot0_Tsum" name="T2 + T1" logX="false" logY="false" xDataReference="task0_model0_bier2_time" yDataReference="task0_model0_bier2_Tsum"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3_T2_dif_T1" name="Figure 3 T2 - T1">
+      <listOfCurves>
+        <curve id="plot1_Tdiff" name="T2 - T1" logX="false" logY="false" xDataReference="task0_model0_bier2_time" yDataReference="task0_model0_bier2_Tdiff"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

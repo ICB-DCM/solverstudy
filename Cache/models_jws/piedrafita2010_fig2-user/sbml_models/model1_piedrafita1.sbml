@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="piedrafita1" name="piedrafita1">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="per_time_per_M" name="per_time_per_M">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+          <unit kind="mole" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_1" id="per_time" name="per_time">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="metaid_2" id="sec" name="sec">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_3" sboTerm="SBO:0000290" id="env" name="environment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_4" sboTerm="SBO:0000240" id="S" compartment="env" initialConcentration="4" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_5" sboTerm="SBO:0000240" id="ST" compartment="env" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" sboTerm="SBO:0000240" id="STU" compartment="env" initialConcentration="5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" sboTerm="SBO:0000240" id="STUS" compartment="env" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" sboTerm="SBO:0000240" id="STUST" compartment="env" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" sboTerm="SBO:0000240" id="STUSU" compartment="env" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" sboTerm="SBO:0000240" id="SU" compartment="env" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" sboTerm="SBO:0000240" id="SUST" compartment="env" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" sboTerm="SBO:0000240" id="SUSTU" compartment="env" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" sboTerm="SBO:0000240" id="T" compartment="env" initialConcentration="2" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_14" sboTerm="SBO:0000240" id="U" compartment="env" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_15" sboTerm="SBO:0000339" id="k1" value="10" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_16" sboTerm="SBO:0000035" id="k10" value="0.05" units="per_time" constant="true"/>
+      <parameter metaid="metaid_17" sboTerm="SBO:0000039" id="k10r" value="0.05" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_18" sboTerm="SBO:0000035" id="k11" value="0" units="per_time" constant="false"/>
+      <parameter metaid="metaid_19" sboTerm="SBO:0000038" id="k1r" value="10" units="per_time" constant="true"/>
+      <parameter metaid="metaid_20" sboTerm="SBO:0000339" id="k2" value="10" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_21" sboTerm="SBO:0000038" id="k2r" value="10" units="per_time" constant="true"/>
+      <parameter metaid="metaid_22" sboTerm="SBO:0000035" id="k3" value="2" units="per_time" constant="true"/>
+      <parameter metaid="metaid_23" sboTerm="SBO:0000039" id="k3r" value="1" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_24" sboTerm="SBO:0000035" id="k4" value="0.3" units="per_time" constant="true"/>
+      <parameter metaid="metaid_25" sboTerm="SBO:0000339" id="k5" value="1" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_26" sboTerm="SBO:0000038" id="k5r" value="1" units="per_time" constant="true"/>
+      <parameter metaid="metaid_27" sboTerm="SBO:0000339" id="k6" value="1" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_28" sboTerm="SBO:0000038" id="k6r" value="1" units="per_time" constant="true"/>
+      <parameter metaid="metaid_29" sboTerm="SBO:0000035" id="k7" value="0.1" units="per_time" constant="true"/>
+      <parameter metaid="metaid_30" sboTerm="SBO:0000039" id="k7r" value="0.1" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_31" sboTerm="SBO:0000035" id="k8" value="0" units="per_time" constant="false"/>
+      <parameter metaid="metaid_32" sboTerm="SBO:0000339" id="k9" value="0.1" units="per_time_per_M" constant="true"/>
+      <parameter metaid="metaid_33" sboTerm="SBO:0000038" id="k9r" value="0.05" units="per_time" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_34" variable="k11">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> k4 </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_35" variable="k8">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> k4 </ci>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_39" sboTerm="SBO:0000210" id="reaction1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_36" species="STU" stoichiometry="1"/>
+          <speciesReference metaid="metaid_37" species="S" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_38" species="STUS" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k1 </ci>
+                  <ci> S </ci>
+                  <ci> STU </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k1r </ci>
+                  <ci> STUS </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_43" sboTerm="SBO:0000178" id="reaction10" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_40" species="STUSU" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_41" species="SU" stoichiometry="1"/>
+          <speciesReference metaid="metaid_42" species="STU" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k10 </ci>
+                  <ci> STUSU </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k10r </ci>
+                  <ci> STU </ci>
+                  <ci> SU </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_45" sboTerm="SBO:0000179" id="reaction11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_44" species="ST" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <ci> k11 </ci>
+              <ci> ST </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_49" sboTerm="SBO:0000210" id="reaction2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_46" species="STUS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_47" species="T" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_48" species="STUST" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k2 </ci>
+                  <ci> T </ci>
+                  <ci> STUS </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k2r </ci>
+                  <ci> STUST </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_53" sboTerm="SBO:0000178" id="reaction3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_50" species="STUST" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_51" species="STU" stoichiometry="1"/>
+          <speciesReference metaid="metaid_52" species="ST" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k3 </ci>
+                  <ci> STUST </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k3r </ci>
+                  <ci> ST </ci>
+                  <ci> STU </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_55" sboTerm="SBO:0000179" id="reaction4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_54" species="STU" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <ci> k4 </ci>
+              <ci> STU </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_59" sboTerm="SBO:0000210" id="reaction5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_56" species="ST" stoichiometry="1"/>
+          <speciesReference metaid="metaid_57" species="SU" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_58" species="SUST" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k5 </ci>
+                  <ci> ST </ci>
+                  <ci> SU </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k5r </ci>
+                  <ci> SUST </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_63" sboTerm="SBO:0000210" id="reaction6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_60" species="SUST" stoichiometry="1"/>
+          <speciesReference metaid="metaid_61" species="U" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_62" species="SUSTU" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k6 </ci>
+                  <ci> U </ci>
+                  <ci> SUST </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k6r </ci>
+                  <ci> SUSTU </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_67" sboTerm="SBO:0000178" id="reaction7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_64" species="SUSTU" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_65" species="SU" stoichiometry="1"/>
+          <speciesReference metaid="metaid_66" species="STU" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k7 </ci>
+                  <ci> SUSTU </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k7r </ci>
+                  <ci> STU </ci>
+                  <ci> SU </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_69" sboTerm="SBO:0000179" id="reaction8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_68" species="SU" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <ci> k8 </ci>
+              <ci> SU </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_73" sboTerm="SBO:0000210" id="reaction9" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_70" species="STUS" stoichiometry="1"/>
+          <speciesReference metaid="metaid_71" species="U" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_72" species="STUSU" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> env </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k9 </ci>
+                  <ci> U </ci>
+                  <ci> STUS </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k9r </ci>
+                  <ci> STUSU </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

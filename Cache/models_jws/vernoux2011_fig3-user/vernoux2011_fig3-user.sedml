@@ -1,0 +1,2587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_vernoux1" initialTime="0" outputStartTime="0" outputEndTime="2000" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model23_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model22_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model21_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model20_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model19_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model18_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model17_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model16_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model15_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model14_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model13_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model12_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model11_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model10_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model9_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model8_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model7_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model6_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model5_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.4"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model4_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model3_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model2_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model0_vernoux1" name="vernoux1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/vernoux1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='compartment_0000001']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_D']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='w_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_I']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='pi_A']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_II']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_IA']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='k_Am']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='gamma_I']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_c']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='f_A']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_r']/@value" newValue="0.007"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_II']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_IA']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_I']/@value" newValue="0.05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='d_A']/@value" newValue="0.003"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_aux']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_II']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='K_IA']/@value" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='B_d']/@value" newValue="100.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']/@initialConcentration" newValue="10.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']/@initialConcentration" newValue="10.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task23_model23_vernoux1" modelReference="model23_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task22_model22_vernoux1" modelReference="model22_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task21_model21_vernoux1" modelReference="model21_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task20_model20_vernoux1" modelReference="model20_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task19_model19_vernoux1" modelReference="model19_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task18_model18_vernoux1" modelReference="model18_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task17_model17_vernoux1" modelReference="model17_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task16_model16_vernoux1" modelReference="model16_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task15_model15_vernoux1" modelReference="model15_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task14_model14_vernoux1" modelReference="model14_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task13_model13_vernoux1" modelReference="model13_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task12_model12_vernoux1" modelReference="model12_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task11_model11_vernoux1" modelReference="model11_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task10_model10_vernoux1" modelReference="model10_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task9_model9_vernoux1" modelReference="model9_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task8_model8_vernoux1" modelReference="model8_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task7_model7_vernoux1" modelReference="model7_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task6_model6_vernoux1" modelReference="model6_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task5_model5_vernoux1" modelReference="model5_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task4_model4_vernoux1" modelReference="model4_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task3_model3_vernoux1" modelReference="model3_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task2_model2_vernoux1" modelReference="model2_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task1_model1_vernoux1" modelReference="model1_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+    <task id="task0_model0_vernoux1" modelReference="model0_vernoux1" simulationReference="sim0_model0_vernoux1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="plot21_R_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_R_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_R_datagen1">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_R_datagen0">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_R_datagen1">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_R_datagen0">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_R_datagen1">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_R_datagen0">
+      <listOfVariables>
+        <variable id="task1_model1_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_vernoux1"/>
+        <variable id="task21_model21_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_R_datagen1">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_R_datagen0">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_R_datagen1">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_R_datagen0">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_R_datagen1">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_R_datagen0">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_R_datagen1">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_R_datagen0">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_R_datagen1">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_R_datagen0">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_R_datagen1">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_R_datagen0">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_R_datagen1">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_R_datagen0">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_R_datagen1">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_R_datagen0">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_R_datagen1">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_R_datagen0">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_R_datagen1">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_R_datagen0">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_R_datagen1">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_R_datagen0">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_R_datagen1">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_R_datagen0">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_R_datagen1">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_R_datagen0">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_R_datagen1">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_R_datagen0">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_R_datagen1">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_R_datagen0">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_R_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_R_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_R">
+      <listOfVariables>
+        <variable id="R" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='R']" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> R </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_D_IA_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_D_IA_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_D_IA">
+      <listOfVariables>
+        <variable id="D_IA" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_IA']" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> D_IA </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task1_model1_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_D_II_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_D_II_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_D_II">
+      <listOfVariables>
+        <variable id="D_II" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='D_II']" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> D_II </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_A_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_A_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_A_datagen1">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_A_datagen0">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_A_datagen1">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_A_datagen0">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_A_datagen1">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_A_datagen0">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_A_datagen1">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_A_datagen0">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_A_datagen1">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_A_datagen0">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_A_datagen1">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_A_datagen0">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_A_datagen1">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_A_datagen0">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_A_datagen1">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_A_datagen0">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_A_datagen1">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_A_datagen0">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_A_datagen1">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_A_datagen0">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_A_datagen1">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_A_datagen0">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_A_datagen1">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_A_datagen0">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_A_datagen1">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_A_datagen0">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_A_datagen1">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_A_datagen0">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_A_datagen1">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_A_datagen0">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_A_datagen1">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_A_datagen0">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_A_datagen1">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_A_datagen0">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_A_datagen1">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_A_datagen0">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_A_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_A_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_A">
+      <listOfVariables>
+        <variable id="A" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A']" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> A </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_I_datagen1">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot21_I_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_I_datagen1">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot20_I_datagen0">
+      <listOfVariables>
+        <variable id="task23_model23_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task23_model23_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task23_model23_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_I_datagen1">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot19_I_datagen0">
+      <listOfVariables>
+        <variable id="task22_model22_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task22_model22_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task22_model22_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_I_datagen1">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot18_I_datagen0">
+      <listOfVariables>
+        <variable id="task21_model21_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task21_model21_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task21_model21_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_I_datagen1">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot17_I_datagen0">
+      <listOfVariables>
+        <variable id="task20_model20_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task20_model20_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task20_model20_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_I_datagen1">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot16_I_datagen0">
+      <listOfVariables>
+        <variable id="task19_model19_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task19_model19_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task19_model19_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_I_datagen1">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot15_I_datagen0">
+      <listOfVariables>
+        <variable id="task18_model18_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task18_model18_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task18_model18_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_I_datagen1">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot14_I_datagen0">
+      <listOfVariables>
+        <variable id="task17_model17_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task17_model17_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task17_model17_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_I_datagen1">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot13_I_datagen0">
+      <listOfVariables>
+        <variable id="task16_model16_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task16_model16_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task16_model16_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_I_datagen3">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot12_I_datagen2">
+      <listOfVariables>
+        <variable id="task15_model15_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task15_model15_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task15_model15_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_I_datagen1">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot11_I_datagen0">
+      <listOfVariables>
+        <variable id="task11_model11_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task11_model11_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task11_model11_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_I_datagen1">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot10_I_datagen0">
+      <listOfVariables>
+        <variable id="task10_model10_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task10_model10_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task10_model10_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_I_datagen1">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot9_I_datagen0">
+      <listOfVariables>
+        <variable id="task9_model9_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task9_model9_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task9_model9_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_I_datagen1">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot8_I_datagen0">
+      <listOfVariables>
+        <variable id="task8_model8_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task8_model8_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task8_model8_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_I_datagen1">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot7_I_datagen0">
+      <listOfVariables>
+        <variable id="task7_model7_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task7_model7_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task7_model7_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_I_datagen1">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot6_I_datagen0">
+      <listOfVariables>
+        <variable id="task6_model6_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task6_model6_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task6_model6_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_I_datagen1">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot5_I_datagen0">
+      <listOfVariables>
+        <variable id="task5_model5_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task5_model5_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task5_model5_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_I_datagen1">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot4_I_datagen0">
+      <listOfVariables>
+        <variable id="task4_model4_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task4_model4_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task4_model4_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_I_datagen1">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_I_datagen0">
+      <listOfVariables>
+        <variable id="task3_model3_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_I_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_I_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_vernoux1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_vernoux1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_I">
+      <listOfVariables>
+        <variable id="I" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='I']" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> I </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task1_model1_vernoux1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_vernoux1_aux">
+      <listOfVariables>
+        <variable id="aux" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='aux']" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> aux </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_vernoux1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_vernoux1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3_ARF" name="Figure 3 ARF">
+      <listOfCurves>
+        <curve id="plot21_A" name="pi_A = 2" logX="false" logY="false" xDataReference="plot21_A_datagen0" yDataReference="plot21_A_datagen1"/>
+        <curve id="plot20_A" name="pi_A = 1.9" logX="false" logY="false" xDataReference="plot20_A_datagen0" yDataReference="plot20_A_datagen1"/>
+        <curve id="plot19_A" name="pi_A = 1.8" logX="false" logY="false" xDataReference="plot19_A_datagen0" yDataReference="plot19_A_datagen1"/>
+        <curve id="plot18_A" name="pi_A = 1.7" logX="false" logY="false" xDataReference="plot18_A_datagen0" yDataReference="plot18_A_datagen1"/>
+        <curve id="plot17_A" name="pi_A = 1.6" logX="false" logY="false" xDataReference="plot17_A_datagen0" yDataReference="plot17_A_datagen1"/>
+        <curve id="plot16_A" name="pi_A = 1.5" logX="false" logY="false" xDataReference="plot16_A_datagen0" yDataReference="plot16_A_datagen1"/>
+        <curve id="plot15_A" name="pi_A = 1.4" logX="false" logY="false" xDataReference="plot15_A_datagen0" yDataReference="plot15_A_datagen1"/>
+        <curve id="plot14_A" name="pi_A = 1.3" logX="false" logY="false" xDataReference="plot14_A_datagen0" yDataReference="plot14_A_datagen1"/>
+        <curve id="plot13_A" name="pi_A = 1.2" logX="false" logY="false" xDataReference="plot13_A_datagen0" yDataReference="plot13_A_datagen1"/>
+        <curve id="plot12_A" name="pi_A = 1.1" logX="false" logY="false" xDataReference="plot12_A_datagen0" yDataReference="plot12_A_datagen1"/>
+        <curve id="plot11_A" name="pi_A = 1" logX="false" logY="false" xDataReference="plot11_A_datagen0" yDataReference="plot11_A_datagen1"/>
+        <curve id="plot10_A" name="pi_A = 0.9" logX="false" logY="false" xDataReference="plot10_A_datagen0" yDataReference="plot10_A_datagen1"/>
+        <curve id="plot9_A" name="pi_A = 0.8" logX="false" logY="false" xDataReference="plot9_A_datagen0" yDataReference="plot9_A_datagen1"/>
+        <curve id="plot8_A" name="pi_A = 0.7" logX="false" logY="false" xDataReference="plot8_A_datagen0" yDataReference="plot8_A_datagen1"/>
+        <curve id="plot7_A" name="pi_A = 0.6" logX="false" logY="false" xDataReference="plot7_A_datagen0" yDataReference="plot7_A_datagen1"/>
+        <curve id="plot6_A" name="pi_A = 0.5" logX="false" logY="false" xDataReference="plot6_A_datagen0" yDataReference="plot6_A_datagen1"/>
+        <curve id="plot5_A" name="pi_A = 0.4" logX="false" logY="false" xDataReference="plot5_A_datagen0" yDataReference="plot5_A_datagen1"/>
+        <curve id="plot4_A" name="pi_A = 0.3" logX="false" logY="false" xDataReference="plot4_A_datagen0" yDataReference="plot4_A_datagen1"/>
+        <curve id="plot3_A" name="pi_A = 0.2" logX="false" logY="false" xDataReference="plot3_A_datagen0" yDataReference="plot3_A_datagen1"/>
+        <curve id="plot2_A" name="pi_A = 0.1" logX="false" logY="false" xDataReference="plot2_A_datagen0" yDataReference="plot2_A_datagen1"/>
+        <curve id="plot1_A" name="pi_A = 0" logX="false" logY="false" xDataReference="task1_model1_vernoux1_time" yDataReference="task1_model1_vernoux1_A"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3_AUX" name="Figure 3 AUX">
+      <listOfCurves>
+        <curve id="plot0_aux" name="aux" logX="false" logY="false" xDataReference="task0_model0_vernoux1_time" yDataReference="task0_model0_vernoux1_aux"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3_AUXIAA" name="Figure 3 AUX/IAA">
+      <listOfCurves>
+        <curve id="plot21_I" name="pi_A = 2" logX="false" logY="false" xDataReference="plot21_I_datagen0" yDataReference="plot21_I_datagen1"/>
+        <curve id="plot20_I" name="pi_A = 1.9" logX="false" logY="false" xDataReference="plot20_I_datagen0" yDataReference="plot20_I_datagen1"/>
+        <curve id="plot19_I" name="pi_A = 1.8" logX="false" logY="false" xDataReference="plot19_I_datagen0" yDataReference="plot19_I_datagen1"/>
+        <curve id="plot18_I" name="pi_A = 1.7" logX="false" logY="false" xDataReference="plot18_I_datagen0" yDataReference="plot18_I_datagen1"/>
+        <curve id="plot17_I" name="pi_A = 1.6" logX="false" logY="false" xDataReference="plot17_I_datagen0" yDataReference="plot17_I_datagen1"/>
+        <curve id="plot16_I" name="pi_A = 1.5" logX="false" logY="false" xDataReference="plot16_I_datagen0" yDataReference="plot16_I_datagen1"/>
+        <curve id="plot15_I" name="pi_A = 1.4" logX="false" logY="false" xDataReference="plot15_I_datagen0" yDataReference="plot15_I_datagen1"/>
+        <curve id="plot14_I" name="pi_A = 1.3" logX="false" logY="false" xDataReference="plot14_I_datagen0" yDataReference="plot14_I_datagen1"/>
+        <curve id="plot13_I" name="pi_A = 1.2" logX="false" logY="false" xDataReference="plot13_I_datagen0" yDataReference="plot13_I_datagen1"/>
+        <curve id="plot12_I" name="pi_A = 1.1" logX="false" logY="false" xDataReference="plot12_I_datagen2" yDataReference="plot12_I_datagen3"/>
+        <curve id="plot11_I" name="pi_A = 1" logX="false" logY="false" xDataReference="plot11_I_datagen0" yDataReference="plot11_I_datagen1"/>
+        <curve id="plot10_I" name="pi_A = 0.9" logX="false" logY="false" xDataReference="plot10_I_datagen0" yDataReference="plot10_I_datagen1"/>
+        <curve id="plot9_I" name="pi_A = 0.8" logX="false" logY="false" xDataReference="plot9_I_datagen0" yDataReference="plot9_I_datagen1"/>
+        <curve id="plot8_I" name="pi_A = 0.7" logX="false" logY="false" xDataReference="plot8_I_datagen0" yDataReference="plot8_I_datagen1"/>
+        <curve id="plot7_I" name="pi_A = 0.6" logX="false" logY="false" xDataReference="plot7_I_datagen0" yDataReference="plot7_I_datagen1"/>
+        <curve id="plot6_I" name="pi_A = 0.5" logX="false" logY="false" xDataReference="plot6_I_datagen0" yDataReference="plot6_I_datagen1"/>
+        <curve id="plot5_I" name="pi_A = 0.4" logX="false" logY="false" xDataReference="plot5_I_datagen0" yDataReference="plot5_I_datagen1"/>
+        <curve id="plot4_I" name="pi_A = 0.3" logX="false" logY="false" xDataReference="plot4_I_datagen0" yDataReference="plot4_I_datagen1"/>
+        <curve id="plot3_I" name="pi_A = 0.2" logX="false" logY="false" xDataReference="plot3_I_datagen0" yDataReference="plot3_I_datagen1"/>
+        <curve id="plot2_I" name="pi_A = 0.1" logX="false" logY="false" xDataReference="plot2_I_datagen0" yDataReference="plot2_I_datagen1"/>
+        <curve id="plot1_I" name="pi_A = 0" logX="false" logY="false" xDataReference="task1_model1_vernoux1_time" yDataReference="task1_model1_vernoux1_I"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3_AUXIAAARF" name="Figure 3 AUXIAAARF">
+      <listOfCurves>
+        <curve id="plot21_D_IA" name="pi_A = 2" logX="false" logY="false" xDataReference="plot21_D_IA_datagen0" yDataReference="plot21_D_IA_datagen1"/>
+        <curve id="plot20_D_IA" name="pi_A = 1.9" logX="false" logY="false" xDataReference="plot20_D_IA_datagen0" yDataReference="plot20_D_IA_datagen1"/>
+        <curve id="plot19_D_IA" name="pi_A = 1.8" logX="false" logY="false" xDataReference="plot19_D_IA_datagen0" yDataReference="plot19_D_IA_datagen1"/>
+        <curve id="plot18_D_IA" name="pi_A = 1.7" logX="false" logY="false" xDataReference="plot18_D_IA_datagen0" yDataReference="plot18_D_IA_datagen1"/>
+        <curve id="plot17_D_IA" name="pi_A = 1.6" logX="false" logY="false" xDataReference="plot17_D_IA_datagen0" yDataReference="plot17_D_IA_datagen1"/>
+        <curve id="plot16_D_IA" name="pi_A = 1.5" logX="false" logY="false" xDataReference="plot16_D_IA_datagen0" yDataReference="plot16_D_IA_datagen1"/>
+        <curve id="plot15_D_IA" name="pi_A = 1.4" logX="false" logY="false" xDataReference="plot15_D_IA_datagen0" yDataReference="plot15_D_IA_datagen1"/>
+        <curve id="plot14_D_IA" name="pi_A = 1.3" logX="false" logY="false" xDataReference="plot14_D_IA_datagen0" yDataReference="plot14_D_IA_datagen1"/>
+        <curve id="plot13_D_IA" name="pi_A = 1.2" logX="false" logY="false" xDataReference="plot13_D_IA_datagen0" yDataReference="plot13_D_IA_datagen1"/>
+        <curve id="plot12_D_IA" name="pi_A = 1.1" logX="false" logY="false" xDataReference="plot12_D_IA_datagen0" yDataReference="plot12_D_IA_datagen1"/>
+        <curve id="plot11_D_IA" name="pi_A = 1" logX="false" logY="false" xDataReference="plot11_D_IA_datagen0" yDataReference="plot11_D_IA_datagen1"/>
+        <curve id="plot10_D_IA" name="pi_A = 0.9" logX="false" logY="false" xDataReference="plot10_D_IA_datagen0" yDataReference="plot10_D_IA_datagen1"/>
+        <curve id="plot9_D_IA" name="pi_A = 0.8" logX="false" logY="false" xDataReference="plot9_D_IA_datagen0" yDataReference="plot9_D_IA_datagen1"/>
+        <curve id="plot8_D_IA" name="pi_A = 0.7" logX="false" logY="false" xDataReference="plot8_D_IA_datagen0" yDataReference="plot8_D_IA_datagen1"/>
+        <curve id="plot7_D_IA" name="pi_A = 0.6" logX="false" logY="false" xDataReference="plot7_D_IA_datagen0" yDataReference="plot7_D_IA_datagen1"/>
+        <curve id="plot6_D_IA" name="pi_A = 0.5" logX="false" logY="false" xDataReference="plot6_D_IA_datagen0" yDataReference="plot6_D_IA_datagen1"/>
+        <curve id="plot5_D_IA" name="pi_A = 0.4" logX="false" logY="false" xDataReference="plot5_D_IA_datagen0" yDataReference="plot5_D_IA_datagen1"/>
+        <curve id="plot4_D_IA" name="pi_A = 0.3" logX="false" logY="false" xDataReference="plot4_D_IA_datagen0" yDataReference="plot4_D_IA_datagen1"/>
+        <curve id="plot3_D_IA" name="pi_A = 0.2" logX="false" logY="false" xDataReference="plot3_D_IA_datagen0" yDataReference="plot3_D_IA_datagen1"/>
+        <curve id="plot2_D_IA" name="pi_A = 0.1" logX="false" logY="false" xDataReference="plot2_D_IA_datagen0" yDataReference="plot2_D_IA_datagen1"/>
+        <curve id="plot1_D_IA" name="pi_A = 0" logX="false" logY="false" xDataReference="task1_model1_vernoux1_time" yDataReference="task1_model1_vernoux1_D_IA"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3_AUXIAAAUXIAA" name="Figure 3 AUXIAAAUXIAA">
+      <listOfCurves>
+        <curve id="plot21_D_II" name="pi_A = 2" logX="false" logY="false" xDataReference="plot21_D_II_datagen0" yDataReference="plot21_D_II_datagen1"/>
+        <curve id="plot20_D_II" name="pi_A = 1.9" logX="false" logY="false" xDataReference="plot20_D_II_datagen0" yDataReference="plot20_D_II_datagen1"/>
+        <curve id="plot19_D_II" name="pi_A = 1.8" logX="false" logY="false" xDataReference="plot19_D_II_datagen0" yDataReference="plot19_D_II_datagen1"/>
+        <curve id="plot18_D_II" name="pi_A = 1.7" logX="false" logY="false" xDataReference="plot18_D_II_datagen0" yDataReference="plot18_D_II_datagen1"/>
+        <curve id="plot17_D_II" name="pi_A = 1.6" logX="false" logY="false" xDataReference="plot17_D_II_datagen0" yDataReference="plot17_D_II_datagen1"/>
+        <curve id="plot16_D_II" name="pi_A = 1.5" logX="false" logY="false" xDataReference="plot16_D_II_datagen0" yDataReference="plot16_D_II_datagen1"/>
+        <curve id="plot15_D_II" name="pi_A = 1.4" logX="false" logY="false" xDataReference="plot15_D_II_datagen0" yDataReference="plot15_D_II_datagen1"/>
+        <curve id="plot14_D_II" name="pi_A = 1.3" logX="false" logY="false" xDataReference="plot14_D_II_datagen0" yDataReference="plot14_D_II_datagen1"/>
+        <curve id="plot13_D_II" name="pi_A = 1.2" logX="false" logY="false" xDataReference="plot13_D_II_datagen0" yDataReference="plot13_D_II_datagen1"/>
+        <curve id="plot12_D_II" name="pi_A = 1.1" logX="false" logY="false" xDataReference="plot12_D_II_datagen0" yDataReference="plot12_D_II_datagen1"/>
+        <curve id="plot11_D_II" name="pi_A = 1" logX="false" logY="false" xDataReference="plot11_D_II_datagen0" yDataReference="plot11_D_II_datagen1"/>
+        <curve id="plot10_D_II" name="pi_A = 0.9" logX="false" logY="false" xDataReference="plot10_D_II_datagen0" yDataReference="plot10_D_II_datagen1"/>
+        <curve id="plot9_D_II" name="pi_A = 0.8" logX="false" logY="false" xDataReference="plot9_D_II_datagen0" yDataReference="plot9_D_II_datagen1"/>
+        <curve id="plot8_D_II" name="pi_A = 0.7" logX="false" logY="false" xDataReference="plot8_D_II_datagen0" yDataReference="plot8_D_II_datagen1"/>
+        <curve id="plot7_D_II" name="pi_A = 0.6" logX="false" logY="false" xDataReference="plot7_D_II_datagen0" yDataReference="plot7_D_II_datagen1"/>
+        <curve id="plot6_D_II" name="pi_A = 0.5" logX="false" logY="false" xDataReference="plot6_D_II_datagen0" yDataReference="plot6_D_II_datagen1"/>
+        <curve id="plot5_D_II" name="pi_A = 0.4" logX="false" logY="false" xDataReference="plot5_D_II_datagen0" yDataReference="plot5_D_II_datagen1"/>
+        <curve id="plot4_D_II" name="pi_A = 0.3" logX="false" logY="false" xDataReference="plot4_D_II_datagen0" yDataReference="plot4_D_II_datagen1"/>
+        <curve id="plot3_D_II" name="pi_A = 0.2" logX="false" logY="false" xDataReference="plot3_D_II_datagen0" yDataReference="plot3_D_II_datagen1"/>
+        <curve id="plot2_D_II" name="pi_A = 0.1" logX="false" logY="false" xDataReference="plot2_D_II_datagen0" yDataReference="plot2_D_II_datagen1"/>
+        <curve id="plot1_D_II" name="pi_A = 0" logX="false" logY="false" xDataReference="task1_model1_vernoux1_time" yDataReference="task1_model1_vernoux1_D_II"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3_mRNA" name="Figure 3 mRNA">
+      <listOfCurves>
+        <curve id="plot21_R" name="pi_A = 2" logX="false" logY="false" xDataReference="plot21_R_datagen0" yDataReference="plot21_R_datagen1"/>
+        <curve id="plot20_R" name="pi_A = 1.9" logX="false" logY="false" xDataReference="plot20_R_datagen0" yDataReference="plot20_R_datagen1"/>
+        <curve id="plot19_R" name="pi_A = 1.8" logX="false" logY="false" xDataReference="plot19_R_datagen0" yDataReference="plot19_R_datagen1"/>
+        <curve id="plot18_R" name="pi_A = 1.7" logX="false" logY="false" xDataReference="plot18_R_datagen0" yDataReference="plot18_R_datagen1"/>
+        <curve id="plot17_R" name="pi_A = 1.6" logX="false" logY="false" xDataReference="plot17_R_datagen0" yDataReference="plot17_R_datagen1"/>
+        <curve id="plot16_R" name="pi_A = 1.5" logX="false" logY="false" xDataReference="plot16_R_datagen0" yDataReference="plot16_R_datagen1"/>
+        <curve id="plot15_R" name="pi_A = 1.4" logX="false" logY="false" xDataReference="plot15_R_datagen0" yDataReference="plot15_R_datagen1"/>
+        <curve id="plot14_R" name="pi_A = 1.3" logX="false" logY="false" xDataReference="plot14_R_datagen0" yDataReference="plot14_R_datagen1"/>
+        <curve id="plot13_R" name="pi_A = 1.2" logX="false" logY="false" xDataReference="plot13_R_datagen0" yDataReference="plot13_R_datagen1"/>
+        <curve id="plot12_R" name="pi_A = 1.1" logX="false" logY="false" xDataReference="plot12_R_datagen0" yDataReference="plot12_R_datagen1"/>
+        <curve id="plot11_R" name="pi_A = 1" logX="false" logY="false" xDataReference="plot11_R_datagen0" yDataReference="plot11_R_datagen1"/>
+        <curve id="plot10_R" name="pi_A = 0.9" logX="false" logY="false" xDataReference="plot10_R_datagen0" yDataReference="plot10_R_datagen1"/>
+        <curve id="plot9_R" name="pi_A = 0.8" logX="false" logY="false" xDataReference="plot9_R_datagen0" yDataReference="plot9_R_datagen1"/>
+        <curve id="plot8_R" name="pi_A = 0.7" logX="false" logY="false" xDataReference="plot8_R_datagen0" yDataReference="plot8_R_datagen1"/>
+        <curve id="plot7_R" name="pi_A = 0.6" logX="false" logY="false" xDataReference="plot7_R_datagen0" yDataReference="plot7_R_datagen1"/>
+        <curve id="plot6_R" name="pi_A = 0.5" logX="false" logY="false" xDataReference="plot6_R_datagen0" yDataReference="plot6_R_datagen1"/>
+        <curve id="plot5_R" name="pi_A = 0.4" logX="false" logY="false" xDataReference="plot5_R_datagen0" yDataReference="plot5_R_datagen1"/>
+        <curve id="plot4_R" name="pi_A = 0.3" logX="false" logY="false" xDataReference="plot4_R_datagen0" yDataReference="plot4_R_datagen1"/>
+        <curve id="plot3_R" name="pi_A = 0.2" logX="false" logY="false" xDataReference="plot3_R_datagen0" yDataReference="plot3_R_datagen1"/>
+        <curve id="plot2_R" name="pi_A = 0.1" logX="false" logY="false" xDataReference="plot2_R_datagen0" yDataReference="plot2_R_datagen1"/>
+        <curve id="plot1_R" name="pi_A = 0" logX="false" logY="false" xDataReference="task1_model1_vernoux1_time" yDataReference="task1_model1_vernoux1_R"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

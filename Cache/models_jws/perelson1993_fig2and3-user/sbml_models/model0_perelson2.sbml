@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="perelson2" name="perelson2" substanceUnits="concentration_per_microlitre" timeUnits="day" volumeUnits="microlitre">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="concentration_per_microlitre" name="concentration per microlitre"/>
+      <unitDefinition metaid="metaid_1" id="day" name="day"/>
+      <unitDefinition metaid="metaid_2" id="microlitre" name="microlitre"/>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_3" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_4" id="T" compartment="default" initialConcentration="1000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="Tstar" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="Tstarstar" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="Ttot" compartment="default" initialConcentration="1000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="V" compartment="default" initialConcentration="0.001" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_9" id="N0" value="1000" constant="false"/>
+      <parameter metaid="metaid_10" id="Tmax" value="1500" constant="false"/>
+      <parameter metaid="metaid_11" id="k1" value="2.4e-05" constant="false"/>
+      <parameter metaid="metaid_12" id="k2" value="0.003" constant="false"/>
+      <parameter metaid="metaid_13" id="muB" value="0.24" constant="false"/>
+      <parameter metaid="metaid_14" id="muT" value="0.02" constant="false"/>
+      <parameter metaid="metaid_15" id="muV" value="2.4" constant="false"/>
+      <parameter metaid="metaid_16" id="r" value="0.03" constant="false"/>
+      <parameter metaid="metaid_17" id="s" value="10" constant="false"/>
+      <parameter metaid="metaid_18" id="theta" value="1" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_21" id="CD4TproductionV" name="v9" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_19" species="V" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_20" species="Tstarstar"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muB </ci>
+              <ci> N0 </ci>
+              <ci> Tstarstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_25" id="VinfectionCD4T" name="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_22" species="V" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_23" species="T" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_24" species="Tstar" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k1 </ci>
+              <ci> T </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_28" id="activationCD4T" name="v6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_26" species="Tstar" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_27" species="Tstarstar" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k2 </ci>
+              <ci> Tstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_30" id="clearanceV" name="v8" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_29" species="V" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muV </ci>
+              <ci> V </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_33" id="deathCD4TactiveInfected" name="v7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_31" species="Ttot" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_32" species="Tstarstar" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muB </ci>
+              <ci> Tstarstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_36" id="deathCD4Tplain" name="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_34" species="T" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_35" species="Ttot" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muT </ci>
+              <ci> T </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_39" id="deathCD4TrestingInfected" name="v5" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_37" species="Ttot" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_38" species="Tstar" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> muT </ci>
+              <ci> Tstar </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_42" id="growthCD4T" name="v2" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_40" species="T" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_41" species="Ttot" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> r </ci>
+              <ci> T </ci>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> Ttot </ci>
+                  <ci> Tmax </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_45" id="sourceCD4T" name="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_43" species="T" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_44" species="Ttot" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> s </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

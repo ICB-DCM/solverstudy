@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_schliemann1" initialTime="0" outputStartTime="0" outputEndTime="54000" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model3_schliemann1" name="schliemann1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/schliemann1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nucleus']/@size" newValue="1.056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='extracellular']/@size" newValue="1344.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytoplasm']/@size" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_1']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_2']/@value" newValue="2.8e-07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J3']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_3']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_4']/@value" newValue="2.0256e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_4']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_5']/@value" newValue="2.9344e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_5']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_6']/@value" newValue="3.3056e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_6']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_7']/@value" newValue="3.0944e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_7']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J8']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_8']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J9']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_9']/@value" newValue="0.02352"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J10']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_10']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J11']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_11']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J12']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_12']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J13']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_13']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J14']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_14']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J15']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_15']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J16']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_16']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J17']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_17']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_18']/@value" newValue="0.00953471"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_18']/@value" newValue="6.60377e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J19']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_19']/@value" newValue="0.00427827"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J20']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_20']/@value" newValue="0.0976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J21']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_21']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J22']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_22']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J23']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_23']/@value" newValue="0.0118534"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J24']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_24']/@value" newValue="0.1135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J25']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_25']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J26']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_26']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J27']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_27']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J28']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_28']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J29']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_29']/@value" newValue="0.45"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J30']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_30']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J31']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_31']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J32']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_32']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J33']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_33']/@value" newValue="0.00976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J34']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_34']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_35']/@value" newValue="6.4e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_35']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_36']/@value" newValue="1.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_36']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_37']/@value" newValue="2.24902e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_37']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_38']/@value" newValue="0.000772256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_38']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_39']/@value" newValue="9.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_39']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J40']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_40']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J41']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_41']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J42']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_42']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J43']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_43']/@value" newValue="0.000394201"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J44']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_44']/@value" newValue="0.00154022"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J45']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_45']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J46']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_46']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J47']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_47']/@value" newValue="0.0115517"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J48']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_48']/@value" newValue="0.000470498"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J49']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_49']/@value" newValue="0.000104931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J50']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_50']/@value" newValue="0.000165744"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J51']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_51']/@value" newValue="93.75"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J52']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_52']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J53']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_53']/@value" newValue="0.00625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J54']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_54']/@value" newValue="1.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J55']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_55']/@value" newValue="0.104167"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J56']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_56']/@value" newValue="0.0125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J57']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_57']/@value" newValue="3.0303e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J58']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_58']/@value" newValue="0.0606061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_59']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_59']/@value" newValue="0.00257576"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J60']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_60']/@value" newValue="1.4348"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J61']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_61']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J62']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_62']/@value" newValue="3.78788e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J63']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_63']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J64']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_64']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J65']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_65']/@value" newValue="0.0506061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J66']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_66']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J67']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_67']/@value" newValue="0.00687273"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_68']/@value" newValue="0.000197531"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_68']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_69']/@value" newValue="4.93827e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_69']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_70']/@value" newValue="3.95062e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_70']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J71']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_71']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J72']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_72']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J73']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_73']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J74']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_74']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_75']/@value" newValue="1.66603e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_75']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J76']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_76']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_77']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_77']/@value" newValue="9.64506e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J78']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_78']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J79']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_79']/@value" newValue="0.015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J80']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_80']/@value" newValue="0.009375"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J81']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_81']/@value" newValue="0.0015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_82']/@value" newValue="0.625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_82']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J83']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_83']/@value" newValue="1.875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J84']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_84']/@value" newValue="5e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J85']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_85']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J86']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_86']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J87']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_87']/@value" newValue="0.1875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_88']/@value" newValue="0.520833"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_88']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP_mRNA']/@initialConcentration" newValue="0.000139056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp8']/@initialConcentration" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp3']/@initialConcentration" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_mRNA']/@initialConcentration" newValue="5.31517e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp6']/@initialConcentration" newValue="0.064"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_TRADD']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB_N']/@initialConcentration" newValue="9.00189e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='cPARP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20']/@initialConcentration" newValue="0.104434"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR']/@initialConcentration" newValue="0.00390625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKK']/@initialConcentration" newValue="0.64"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20_mRNA']/@initialConcentration" newValue="5.56657e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']/@initialConcentration" newValue="0.000115365"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRAF2']/@initialConcentration" newValue="0.33056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8_RIP_TRAF2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR_Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FADD']/@initialConcentration" newValue="0.30944"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB_N']/@initialConcentration" newValue="0.000691431"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RIP']/@initialConcentration" newValue="0.20256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR_E']/@initialConcentration" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_mRNA']/@initialConcentration" newValue="0.000219646"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PIkBa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB']/@initialConcentration" newValue="0.0151032"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PARP']/@initialConcentration" newValue="1.66667"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRADD']/@initialConcentration" newValue="0.29344"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKKa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP']/@initialConcentration" newValue="7.83371"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP']/@initialConcentration" newValue="0.0320472"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_E']/@initialConcentration" newValue="0.2688"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa']/@initialConcentration" newValue="0.00101518"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_N']/@initialConcentration" newValue="0.0013839"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR']/@initialConcentration" newValue="0.28789"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_E']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp6']/@initialConcentration" newValue="0.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model2_schliemann1" name="schliemann1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/schliemann1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nucleus']/@size" newValue="1.056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='extracellular']/@size" newValue="1344.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytoplasm']/@size" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_1']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_2']/@value" newValue="2.8e-07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J3']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_3']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_4']/@value" newValue="2.0256e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_4']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_5']/@value" newValue="2.9344e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_5']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_6']/@value" newValue="3.3056e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_6']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_7']/@value" newValue="3.0944e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_7']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J8']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_8']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J9']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_9']/@value" newValue="0.02352"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J10']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_10']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J11']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_11']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J12']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_12']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J13']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_13']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J14']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_14']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J15']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_15']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J16']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_16']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J17']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_17']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_18']/@value" newValue="0.00953471"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_18']/@value" newValue="6.60377e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J19']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_19']/@value" newValue="0.00427827"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J20']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_20']/@value" newValue="0.0976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J21']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_21']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J22']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_22']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J23']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_23']/@value" newValue="0.0118534"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J24']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_24']/@value" newValue="0.1135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J25']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_25']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J26']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_26']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J27']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_27']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J28']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_28']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J29']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_29']/@value" newValue="0.45"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J30']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_30']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J31']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_31']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J32']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_32']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J33']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_33']/@value" newValue="0.00976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J34']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_34']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_35']/@value" newValue="6.4e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_35']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_36']/@value" newValue="1.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_36']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_37']/@value" newValue="2.24902e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_37']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_38']/@value" newValue="0.000772256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_38']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_39']/@value" newValue="9.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_39']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J40']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_40']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J41']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_41']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J42']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_42']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J43']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_43']/@value" newValue="0.000394201"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J44']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_44']/@value" newValue="0.00154022"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J45']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_45']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J46']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_46']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J47']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_47']/@value" newValue="0.0115517"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J48']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_48']/@value" newValue="0.000470498"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J49']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_49']/@value" newValue="0.000104931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J50']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_50']/@value" newValue="0.000165744"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J51']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_51']/@value" newValue="93.75"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J52']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_52']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J53']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_53']/@value" newValue="0.00625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J54']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_54']/@value" newValue="1.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J55']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_55']/@value" newValue="0.104167"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J56']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_56']/@value" newValue="0.0125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J57']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_57']/@value" newValue="3.0303e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J58']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_58']/@value" newValue="0.0606061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_59']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_59']/@value" newValue="0.00257576"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J60']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_60']/@value" newValue="1.4348"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J61']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_61']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J62']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_62']/@value" newValue="3.78788e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J63']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_63']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J64']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_64']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J65']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_65']/@value" newValue="0.0506061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J66']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_66']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J67']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_67']/@value" newValue="0.00687273"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_68']/@value" newValue="0.000197531"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_68']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_69']/@value" newValue="4.93827e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_69']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_70']/@value" newValue="3.95062e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_70']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J71']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_71']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J72']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_72']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J73']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_73']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J74']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_74']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_75']/@value" newValue="1.66603e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_75']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J76']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_76']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_77']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_77']/@value" newValue="9.64506e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J78']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_78']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J79']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_79']/@value" newValue="0.015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J80']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_80']/@value" newValue="0.009375"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J81']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_81']/@value" newValue="0.0015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_82']/@value" newValue="0.625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_82']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J83']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_83']/@value" newValue="1.875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J84']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_84']/@value" newValue="5e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J85']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_85']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J86']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_86']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J87']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_87']/@value" newValue="0.1875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_88']/@value" newValue="0.520833"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_88']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP_mRNA']/@initialConcentration" newValue="0.000139056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp8']/@initialConcentration" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp3']/@initialConcentration" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_mRNA']/@initialConcentration" newValue="5.31517e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp6']/@initialConcentration" newValue="0.064"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_TRADD']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB_N']/@initialConcentration" newValue="9.00189e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='cPARP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20']/@initialConcentration" newValue="0.104434"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR']/@initialConcentration" newValue="0.0026043"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKK']/@initialConcentration" newValue="0.64"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20_mRNA']/@initialConcentration" newValue="5.56657e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']/@initialConcentration" newValue="0.000115365"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRAF2']/@initialConcentration" newValue="0.33056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8_RIP_TRAF2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR_Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FADD']/@initialConcentration" newValue="0.30944"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB_N']/@initialConcentration" newValue="0.000691431"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RIP']/@initialConcentration" newValue="0.20256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR_E']/@initialConcentration" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_mRNA']/@initialConcentration" newValue="0.000219646"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PIkBa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB']/@initialConcentration" newValue="0.0151032"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PARP']/@initialConcentration" newValue="1.66667"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRADD']/@initialConcentration" newValue="0.29344"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKKa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP']/@initialConcentration" newValue="7.83371"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP']/@initialConcentration" newValue="0.0320472"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_E']/@initialConcentration" newValue="0.2688"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa']/@initialConcentration" newValue="0.00101518"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_N']/@initialConcentration" newValue="0.0013839"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR']/@initialConcentration" newValue="0.28789"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_E']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp6']/@initialConcentration" newValue="0.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model1_schliemann1" name="schliemann1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/schliemann1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nucleus']/@size" newValue="1.056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='extracellular']/@size" newValue="1344.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytoplasm']/@size" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_1']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_2']/@value" newValue="2.8e-07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J3']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_3']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_4']/@value" newValue="2.0256e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_4']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_5']/@value" newValue="2.9344e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_5']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_6']/@value" newValue="3.3056e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_6']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_7']/@value" newValue="3.0944e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_7']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J8']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_8']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J9']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_9']/@value" newValue="0.02352"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J10']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_10']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J11']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_11']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J12']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_12']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J13']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_13']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J14']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_14']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J15']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_15']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J16']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_16']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J17']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_17']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_18']/@value" newValue="0.00953471"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_18']/@value" newValue="6.60377e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J19']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_19']/@value" newValue="0.00427827"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J20']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_20']/@value" newValue="0.0976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J21']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_21']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J22']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_22']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J23']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_23']/@value" newValue="0.0118534"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J24']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_24']/@value" newValue="0.1135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J25']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_25']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J26']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_26']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J27']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_27']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J28']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_28']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J29']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_29']/@value" newValue="0.45"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J30']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_30']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J31']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_31']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J32']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_32']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J33']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_33']/@value" newValue="0.00976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J34']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_34']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_35']/@value" newValue="6.4e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_35']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_36']/@value" newValue="1.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_36']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_37']/@value" newValue="2.24902e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_37']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_38']/@value" newValue="0.000772256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_38']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_39']/@value" newValue="9.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_39']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J40']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_40']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J41']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_41']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J42']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_42']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J43']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_43']/@value" newValue="0.000394201"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J44']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_44']/@value" newValue="0.00154022"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J45']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_45']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J46']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_46']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J47']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_47']/@value" newValue="0.0115517"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J48']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_48']/@value" newValue="0.000470498"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J49']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_49']/@value" newValue="0.000104931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J50']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_50']/@value" newValue="0.000165744"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J51']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_51']/@value" newValue="93.75"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J52']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_52']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J53']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_53']/@value" newValue="0.00625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J54']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_54']/@value" newValue="1.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J55']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_55']/@value" newValue="0.104167"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J56']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_56']/@value" newValue="0.0125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J57']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_57']/@value" newValue="3.0303e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J58']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_58']/@value" newValue="0.0606061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_59']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_59']/@value" newValue="0.00257576"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J60']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_60']/@value" newValue="1.4348"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J61']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_61']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J62']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_62']/@value" newValue="3.78788e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J63']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_63']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J64']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_64']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J65']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_65']/@value" newValue="0.0506061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J66']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_66']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J67']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_67']/@value" newValue="0.00687273"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_68']/@value" newValue="0.000197531"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_68']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_69']/@value" newValue="4.93827e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_69']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_70']/@value" newValue="3.95062e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_70']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J71']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_71']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J72']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_72']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J73']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_73']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J74']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_74']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_75']/@value" newValue="1.66603e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_75']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J76']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_76']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_77']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_77']/@value" newValue="9.64506e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J78']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_78']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J79']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_79']/@value" newValue="0.015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J80']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_80']/@value" newValue="0.009375"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J81']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_81']/@value" newValue="0.0015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_82']/@value" newValue="0.625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_82']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J83']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_83']/@value" newValue="1.875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J84']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_84']/@value" newValue="5e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J85']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_85']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J86']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_86']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J87']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_87']/@value" newValue="0.1875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_88']/@value" newValue="0.520833"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_88']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP_mRNA']/@initialConcentration" newValue="0.000139056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp8']/@initialConcentration" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp3']/@initialConcentration" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_mRNA']/@initialConcentration" newValue="5.31517e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp6']/@initialConcentration" newValue="0.064"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_TRADD']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB_N']/@initialConcentration" newValue="9.00189e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='cPARP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20']/@initialConcentration" newValue="0.104434"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR']/@initialConcentration" newValue="0.00130234"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKK']/@initialConcentration" newValue="0.64"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20_mRNA']/@initialConcentration" newValue="5.56657e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']/@initialConcentration" newValue="0.000115365"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRAF2']/@initialConcentration" newValue="0.33056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8_RIP_TRAF2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR_Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FADD']/@initialConcentration" newValue="0.30944"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB_N']/@initialConcentration" newValue="0.000691431"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RIP']/@initialConcentration" newValue="0.20256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR_E']/@initialConcentration" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_mRNA']/@initialConcentration" newValue="0.000219646"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PIkBa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB']/@initialConcentration" newValue="0.0151032"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PARP']/@initialConcentration" newValue="1.66667"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRADD']/@initialConcentration" newValue="0.29344"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKKa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP']/@initialConcentration" newValue="7.83371"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP']/@initialConcentration" newValue="0.0320472"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_E']/@initialConcentration" newValue="0.2688"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa']/@initialConcentration" newValue="0.00101518"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_N']/@initialConcentration" newValue="0.0013839"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR']/@initialConcentration" newValue="0.28789"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_E']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp6']/@initialConcentration" newValue="0.0"/>
+      </listOfChanges>
+    </model>
+    <model id="model0_schliemann1" name="schliemann1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/schliemann1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nucleus']/@size" newValue="1.056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='extracellular']/@size" newValue="1344.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytoplasm']/@size" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J1']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_1']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J2']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_2']/@value" newValue="2.8e-07"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J3']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_3']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_4']/@value" newValue="2.0256e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J4']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_4']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_5']/@value" newValue="2.9344e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J5']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_5']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_6']/@value" newValue="3.3056e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J6']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_6']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_7']/@value" newValue="3.0944e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J7']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_7']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J8']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_8']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J9']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_9']/@value" newValue="0.02352"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J10']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_10']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J11']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_11']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J12']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_12']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J13']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_13']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J14']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_14']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J15']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_15']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J16']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_16']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J17']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_17']/@value" newValue="5.6e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_18']/@value" newValue="0.00953471"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J18']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_18']/@value" newValue="6.60377e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J19']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_19']/@value" newValue="0.00427827"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J20']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_20']/@value" newValue="0.0976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J21']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_21']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J22']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_22']/@value" newValue="0.001135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J23']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_23']/@value" newValue="0.0118534"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J24']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_24']/@value" newValue="0.1135"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J25']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_25']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J26']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_26']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J27']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_27']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J28']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_28']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J29']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_29']/@value" newValue="0.45"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J30']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_30']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J31']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_31']/@value" newValue="0.3125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J32']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_32']/@value" newValue="0.3"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J33']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_33']/@value" newValue="0.00976562"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J34']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_34']/@value" newValue="0.03125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_35']/@value" newValue="6.4e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J35']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_35']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_36']/@value" newValue="1.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J36']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_36']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_37']/@value" newValue="2.24902e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J37']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_37']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_38']/@value" newValue="0.000772256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J38']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_38']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_39']/@value" newValue="9.6e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J39']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_39']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J40']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_40']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J41']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_41']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J42']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_42']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J43']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_43']/@value" newValue="0.000394201"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J44']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_44']/@value" newValue="0.00154022"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J45']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_45']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J46']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_46']/@value" newValue="0.0001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J47']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_47']/@value" newValue="0.0115517"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J48']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_48']/@value" newValue="0.000470498"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J49']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_49']/@value" newValue="0.000104931"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J50']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_50']/@value" newValue="0.000165744"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J51']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_51']/@value" newValue="93.75"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J52']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_52']/@value" newValue="0.1"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J53']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_53']/@value" newValue="0.00625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J54']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_54']/@value" newValue="1.25"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J55']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_55']/@value" newValue="0.104167"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J56']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_56']/@value" newValue="0.0125"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J57']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_57']/@value" newValue="3.0303e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J58']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_58']/@value" newValue="0.0606061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_59']/@value" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J59']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_59']/@value" newValue="0.00257576"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J60']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_60']/@value" newValue="1.4348"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J61']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_61']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J62']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_62']/@value" newValue="3.78788e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J63']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_63']/@value" newValue="0.0151515"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J64']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_64']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J65']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_65']/@value" newValue="0.0506061"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J66']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_66']/@value" newValue="3.33333e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J67']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_67']/@value" newValue="0.00687273"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_68']/@value" newValue="0.000197531"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J68']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_68']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_69']/@value" newValue="4.93827e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J69']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_69']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_70']/@value" newValue="3.95062e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J70']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_70']/@value" newValue="6.17284e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J71']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_71']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J72']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_72']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J73']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_73']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J74']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_74']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_75']/@value" newValue="1.66603e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J75']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_75']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J76']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_76']/@value" newValue="5.78704e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_77']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J77']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_77']/@value" newValue="9.64506e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J78']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_78']/@value" newValue="5.78704e-06"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J79']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_79']/@value" newValue="0.015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J80']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_80']/@value" newValue="0.009375"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J81']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_81']/@value" newValue="0.0015625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_82']/@value" newValue="0.625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J82']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_82']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J83']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_83']/@value" newValue="1.875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J84']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_84']/@value" newValue="5e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J85']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_85']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J86']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_86']/@value" newValue="0.15625"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J87']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_87']/@value" newValue="0.1875"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='ka_88']/@value" newValue="0.520833"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='J88']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_88']/@value" newValue="0.001"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP_mRNA']/@initialConcentration" newValue="0.000139056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp8']/@initialConcentration" newValue="3.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRCint1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp3']/@initialConcentration" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_mRNA']/@initialConcentration" newValue="5.31517e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='pCasp6']/@initialConcentration" newValue="0.064"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_TRADD']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB_N']/@initialConcentration" newValue="9.00189e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='cPARP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20']/@initialConcentration" newValue="0.104434"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR']/@initialConcentration" newValue="0.0002"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKK']/@initialConcentration" newValue="0.64"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='A20_mRNA']/@initialConcentration" newValue="5.56657e-05"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']/@initialConcentration" newValue="0.000115365"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRAF2']/@initialConcentration" newValue="0.33056"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8_RIP_TRAF2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR_Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FADD']/@initialConcentration" newValue="0.30944"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB_N']/@initialConcentration" newValue="0.000691431"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='RIP']/@initialConcentration" newValue="0.20256"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFR_E']/@initialConcentration" newValue="0.005"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP_mRNA']/@initialConcentration" newValue="0.000219646"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_FLIP_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PIkBa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_NFkB']/@initialConcentration" newValue="0.0151032"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2_pCasp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC2']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNFRC1']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='PARP']/@initialConcentration" newValue="1.66667"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TRADD']/@initialConcentration" newValue="0.29344"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IKKa']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='XIAP']/@initialConcentration" newValue="7.83371"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='FLIP']/@initialConcentration" newValue="0.0320472"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp8']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_E']/@initialConcentration" newValue="0.2688"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa']/@initialConcentration" newValue="0.00101518"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='IkBa_N']/@initialConcentration" newValue="0.0013839"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='BAR']/@initialConcentration" newValue="0.28789"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='TNF_TNFR_E']/@initialConcentration" newValue="0.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp6']/@initialConcentration" newValue="0.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task3_model3_schliemann1" modelReference="model3_schliemann1" simulationReference="sim0_model0_schliemann1"/>
+    <task id="task2_model2_schliemann1" modelReference="model2_schliemann1" simulationReference="sim0_model0_schliemann1"/>
+    <task id="task1_model1_schliemann1" modelReference="model1_schliemann1" simulationReference="sim0_model0_schliemann1"/>
+    <task id="task0_model0_schliemann1" modelReference="model0_schliemann1" simulationReference="sim0_model0_schliemann1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="plot3_Casp3_datagen1">
+      <listOfVariables>
+        <variable id="task3_model3_schliemann1_Casp3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']" taskReference="task3_model3_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_schliemann1_Casp3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_Casp3_datagen0">
+      <listOfVariables>
+        <variable id="task3_model3_schliemann1_time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_schliemann1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_Casp3_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_schliemann1_Casp3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']" taskReference="task2_model2_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_schliemann1_Casp3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_Casp3_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_schliemann1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_schliemann1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_Casp3_datagen1">
+      <listOfVariables>
+        <variable id="task1_model1_schliemann1_Casp3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']" taskReference="task1_model1_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_schliemann1_Casp3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_Casp3_datagen0">
+      <listOfVariables>
+        <variable id="task1_model1_schliemann1_time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_schliemann1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schliemann1_Casp3">
+      <listOfVariables>
+        <variable id="Casp3" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Casp3']" taskReference="task0_model0_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Casp3 </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schliemann1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_NFkB_datagen1">
+      <listOfVariables>
+        <variable id="task3_model3_schliemann1_NFkB" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']" taskReference="task3_model3_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_schliemann1_NFkB </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot3_NFkB_datagen0">
+      <listOfVariables>
+        <variable id="task3_model3_schliemann1_time" symbol="urn:sedml:symbol:time" taskReference="task3_model3_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task3_model3_schliemann1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_NFkB_datagen1">
+      <listOfVariables>
+        <variable id="task2_model2_schliemann1_NFkB" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']" taskReference="task2_model2_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_schliemann1_NFkB </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot2_NFkB_datagen0">
+      <listOfVariables>
+        <variable id="task2_model2_schliemann1_time" symbol="urn:sedml:symbol:time" taskReference="task2_model2_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task2_model2_schliemann1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_NFkB_datagen1">
+      <listOfVariables>
+        <variable id="task1_model1_schliemann1_NFkB" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']" taskReference="task1_model1_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_schliemann1_NFkB </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot1_NFkB_datagen0">
+      <listOfVariables>
+        <variable id="task1_model1_schliemann1_time" symbol="urn:sedml:symbol:time" taskReference="task1_model1_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task1_model1_schliemann1_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schliemann1_NFkB">
+      <listOfVariables>
+        <variable id="NFkB" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='NFkB']" taskReference="task0_model0_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> NFkB </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_schliemann1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_schliemann1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_3A_Casp3" name="Figure 3A Casp3">
+      <listOfCurves>
+        <curve id="plot3_Casp3" name="TNF = 0,00390625 uM" logX="false" logY="false" xDataReference="plot3_Casp3_datagen0" yDataReference="plot3_Casp3_datagen1"/>
+        <curve id="plot2_Casp3" name="TNF = 0,0026043 uM" logX="false" logY="false" xDataReference="plot2_Casp3_datagen0" yDataReference="plot2_Casp3_datagen1"/>
+        <curve id="plot1_Casp3" name="TNF = 0,00130234" logX="false" logY="false" xDataReference="plot1_Casp3_datagen0" yDataReference="plot1_Casp3_datagen1"/>
+        <curve id="plot0_Casp3" name="TNF = 0,0002 uM" logX="false" logY="false" xDataReference="task0_model0_schliemann1_time" yDataReference="task0_model0_schliemann1_Casp3"/>
+      </listOfCurves>
+    </plot2D>
+    <plot2D id="Figure_3A_NFkB" name="Figure 3A NFkB">
+      <listOfCurves>
+        <curve id="plot3_NFkB" name="TNF = 0,00390625 uM" logX="false" logY="false" xDataReference="plot3_NFkB_datagen0" yDataReference="plot3_NFkB_datagen1"/>
+        <curve id="plot2_NFkB" name="TNF = 0,0026043 uM" logX="false" logY="false" xDataReference="plot2_NFkB_datagen0" yDataReference="plot2_NFkB_datagen1"/>
+        <curve id="plot1_NFkB" name="TNF = 0,00130234 uM" logX="false" logY="false" xDataReference="plot1_NFkB_datagen0" yDataReference="plot1_NFkB_datagen1"/>
+        <curve id="plot0_NFkB" name="TNF = 0,0002 uM" logX="false" logY="false" xDataReference="task0_model0_schliemann1_time" yDataReference="task0_model0_schliemann1_NFkB"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

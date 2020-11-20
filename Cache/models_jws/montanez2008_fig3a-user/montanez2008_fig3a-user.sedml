@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim0_model0_montanez1" initialTime="0" outputStartTime="0" outputEndTime="100" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_montanez1" name="montanez1" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/montanez1/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ORN']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ARGin']/@initialConcentration" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='ODC']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmodc']/@value" newValue="90.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='ODC']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vmaxodc']/@value" newValue="0.013"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='NOS']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmnos1']/@value" newValue="16.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='NOS']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vmaxnos1']/@value" newValue="1.33"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Ornithine_efflux']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kiornhat']/@value" newValue="360.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Ornithine_efflux']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmeffllat']/@value" newValue="847.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Ornithine_efflux']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vmaxeffllat']/@value" newValue="420.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Ornithine_efflux']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vmaxefflhat']/@value" newValue="160.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Ornithine_efflux']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmlat']/@value" newValue="847.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Ornithine_efflux']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmhat']/@value" newValue="70.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginine_transport']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kiornhat']/@value" newValue="360.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginine_transport']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vmaxlat']/@value" newValue="420.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginine_transport']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmlat']/@value" newValue="847.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginine_transport']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vmaxhat']/@value" newValue="160.5"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginine_transport']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmhat']/@value" newValue="70.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginase']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kioarg']/@value" newValue="1000.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginase']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Kmarg']/@value" newValue="1500.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='Arginase']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Vmaxarg']/@value" newValue="110.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytosol']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='extracellular']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_montanez1" modelReference="model0_montanez1" simulationReference="sim0_model0_montanez1"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_montanez1_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_montanez1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_montanez1_ARGin">
+      <listOfVariables>
+        <variable id="ARGin" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ARGin']" taskReference="task0_model0_montanez1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ARGin </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_montanez1_ORN">
+      <listOfVariables>
+        <variable id="ORN" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='ORN']" taskReference="task0_model0_montanez1"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> ORN </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure3A" name="Figure 3A">
+      <listOfCurves>
+        <curve id="plot0_ARGin" name="ARGin" logX="false" logY="false" xDataReference="task0_model0_montanez1_time" yDataReference="task0_model0_montanez1_ARGin"/>
+        <curve id="plot0_ORN" name="ORN" logX="false" logY="false" xDataReference="task0_model0_montanez1_time" yDataReference="task0_model0_montanez1_ORN"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>

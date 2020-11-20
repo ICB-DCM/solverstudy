@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="srimani1" name="srimani1">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="ain" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="c" compartment="default" initialConcentration="0.1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="ca" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="cap" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="n" name="n" compartment="default" initialConcentration="0.001" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_6" id="V" value="1.5" constant="false"/>
+      <parameter metaid="metaid_7" id="V1" value="0.2" constant="false"/>
+      <parameter metaid="metaid_8" id="Vc" value="1e-09" constant="false"/>
+      <parameter metaid="metaid_9" id="Vm" value="0.0001" constant="false"/>
+      <parameter metaid="metaid_10" id="a0" name="a0" value="20.62" constant="false"/>
+      <parameter metaid="metaid_11" id="aStart" name="aStart" value="0" constant="false"/>
+      <parameter metaid="metaid_12" id="d" value="120" constant="false"/>
+      <parameter metaid="metaid_13" id="k1" value="0.2" constant="false"/>
+      <parameter metaid="metaid_14" id="kb" value="1.5" constant="false"/>
+      <parameter metaid="metaid_15" id="kd" value="0.1" constant="false"/>
+      <parameter metaid="metaid_16" id="kf" value="2.5" constant="false"/>
+      <parameter metaid="metaid_17" id="kin" value="0.007" constant="false"/>
+      <parameter metaid="metaid_18" id="kout" value="0.01" constant="false"/>
+      <parameter metaid="metaid_19" id="kr" value="0.02" constant="false"/>
+      <parameter metaid="metaid_20" id="ku" value="0.1" constant="false"/>
+      <parameter metaid="metaid_21" id="mu0" value="0.05" constant="false"/>
+      <parameter metaid="metaid_22" id="nm" value="1" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_24" id="v1" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_23" species="c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> k1 </ci>
+                <ci> c </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> V1 </ci>
+                <ci> c </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_28" id="v2" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_25" species="c" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_26" species="ain" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_27" species="ca" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kf </ci>
+              <ci> c </ci>
+              <ci> ain </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_30" id="v3" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_29" species="c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku </ci>
+              <ci> c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_34" id="v4" name="v4" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_31" species="ca" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_32" species="ain" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_33" species="c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb </ci>
+              <ci> ca </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_36" id="v5" name="v5" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_35" species="ain" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kin </ci>
+              <piecewise>
+                <piece>
+                  <ci> a0 </ci>
+                  <apply>
+                    <lt/>
+                    <ci> aStart </ci>
+                    <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                    <apply>
+                      <plus/>
+                      <ci> aStart </ci>
+                      <ci> d </ci>
+                    </apply>
+                  </apply>
+                </piece>
+                <otherwise>
+                  <cn type="integer"> 0 </cn>
+                </otherwise>
+              </piecewise>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_38" id="v6" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_37" species="ain" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kout </ci>
+              <ci> ain </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_41" id="v7" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_39" species="cap" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_40" species="ain" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kr </ci>
+              <ci> cap </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_44" id="v8" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_42" species="ca" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_43" species="cap" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kd </ci>
+              <ci> ca </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_47" id="v9" name="v9" reversible="true" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_45" species="n" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_46" species="c"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> mu0 </ci>
+                  <ci> c </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> V </ci>
+                  <ci> c </ci>
+                </apply>
+              </apply>
+              <ci> n </ci>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> n </ci>
+                  <ci> nm </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

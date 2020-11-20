@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <model id="hald">
+    <listOfCompartments>
+      <compartment metaid="metaid_0" sboTerm="SBO:0000410" id="default" size="1" constant="false"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" id="ACA" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_2" id="ACA0" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_3" id="ADP" compartment="default" initialConcentration="1.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_4" id="AMP" compartment="default" initialConcentration="0.33" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="ATP" compartment="default" initialConcentration="2.1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_6" id="DHAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_7" id="DHAPCN" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="DPG" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_9" id="EtOH" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_10" id="EtOH0" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_11" id="F6P" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_12" id="FBP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_13" id="G6P" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_14" id="GAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_15" id="Glc" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_16" id="Glc0" compartment="default" initialConcentration="24" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_17" id="Glyc" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_18" id="Glyc0" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_19" id="HCN" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_20" id="HCN0" compartment="default" initialConcentration="5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_21" id="NAD" compartment="default" initialConcentration="0.75" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_22" id="NADH" compartment="default" initialConcentration="0.23" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_23" id="OAc" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_24" id="OAc0" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_25" id="PEP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_26" id="Pyr" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_27" id="PyrCN" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_28" id="X" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_29" id="drain" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      <species metaid="metaid_30" id="glycogen" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_31" id="lacto" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_32" id="Atot" value="3.93" constant="false"/>
+      <parameter metaid="metaid_33" id="Etotadh1" value="0.0045" constant="false"/>
+      <parameter metaid="metaid_34" id="KG6Pactiv" value="3.1" constant="false"/>
+      <parameter metaid="metaid_35" id="KaPDC" value="8.8888889" constant="false"/>
+      <parameter metaid="metaid_36" id="Kadh1ACA" value="1.1" constant="false"/>
+      <parameter metaid="metaid_37" id="Kadh1EtOH" value="17" constant="false"/>
+      <parameter metaid="metaid_38" id="Kadh1NAD" value="0.17" constant="false"/>
+      <parameter metaid="metaid_39" id="Kadh1NADH" value="0.11" constant="false"/>
+      <parameter metaid="metaid_40" id="KaldDHAP" value="2" constant="false"/>
+      <parameter metaid="metaid_41" id="KaldFBP" value="0.3" constant="false"/>
+      <parameter metaid="metaid_42" id="KaldGAP" value="4" constant="false"/>
+      <parameter metaid="metaid_43" id="KaldIGAP" value="10" constant="false"/>
+      <parameter metaid="metaid_44" id="Kaldeq" value="0.081" constant="false"/>
+      <parameter metaid="metaid_45" id="KatpconATP" value="10000000000" constant="false"/>
+      <parameter metaid="metaid_46" id="Keq" value="5.0476587558e-05" constant="false"/>
+      <parameter metaid="metaid_47" id="KgapdhDPG" value="0.01" constant="false"/>
+      <parameter metaid="metaid_48" id="KgapdhGAP" value="0.6" constant="false"/>
+      <parameter metaid="metaid_49" id="KgapdhNAD" value="0.1" constant="false"/>
+      <parameter metaid="metaid_50" id="KgapdhNADH" value="0.06" constant="false"/>
+      <parameter metaid="metaid_51" id="Kgapdheq" value="0.0055" constant="false"/>
+      <parameter metaid="metaid_52" id="KglctrGlc" value="1.7" constant="false"/>
+      <parameter metaid="metaid_53" id="KglctrIG6P" value="1.2" constant="false"/>
+      <parameter metaid="metaid_54" id="KglctrIIG6P" value="7.2" constant="false"/>
+      <parameter metaid="metaid_55" id="KhkATP" value="0.1" constant="false"/>
+      <parameter metaid="metaid_56" id="KhkDGlc" value="0.37" constant="false"/>
+      <parameter metaid="metaid_57" id="KhkGlc" value="0" constant="false"/>
+      <parameter metaid="metaid_58" id="Kiadh1ACA" value="1.1" constant="false"/>
+      <parameter metaid="metaid_59" id="Kiadh1EtOH" value="90" constant="false"/>
+      <parameter metaid="metaid_60" id="Kiadh1NAD" value="0.92" constant="false"/>
+      <parameter metaid="metaid_61" id="Kiadh1NADH" value="0.031" constant="false"/>
+      <parameter metaid="metaid_62" id="KlpglycDHAP" value="25" constant="false"/>
+      <parameter metaid="metaid_63" id="KlpglycINAD" value="0.13" constant="false"/>
+      <parameter metaid="metaid_64" id="KlpglycINADH" value="0.034" constant="false"/>
+      <parameter metaid="metaid_65" id="KlpglycNADH" value="0.13" constant="false"/>
+      <parameter metaid="metaid_66" id="KmPYRd" value="0.5" constant="false"/>
+      <parameter metaid="metaid_67" id="Kpdc" value="0.8" constant="false"/>
+      <parameter metaid="metaid_68" id="Kpfk" value="0.021" constant="false"/>
+      <parameter metaid="metaid_69" id="KpfkmATP" value="0" constant="false"/>
+      <parameter metaid="metaid_70" id="KpgiF6P" value="0.15" constant="false"/>
+      <parameter metaid="metaid_71" id="KpgiG6P" value="0.8" constant="false"/>
+      <parameter metaid="metaid_72" id="Kpgieq" value="0.13" constant="false"/>
+      <parameter metaid="metaid_73" id="KpkADP" value="0.17" constant="false"/>
+      <parameter metaid="metaid_74" id="KpkDPEP" value="0.2" constant="false"/>
+      <parameter metaid="metaid_75" id="KpkPEP" value="0.2" constant="false"/>
+      <parameter metaid="metaid_76" id="KtimDHAP" value="1.23" constant="false"/>
+      <parameter metaid="metaid_77" id="KtimGAP" value="1.27" constant="false"/>
+      <parameter metaid="metaid_78" id="Ktimeq" value="0.055" constant="false"/>
+      <parameter metaid="metaid_79" id="KxPDC" value="9" constant="false"/>
+      <parameter metaid="metaid_80" id="Ntot" value="0.98" constant="false"/>
+      <parameter metaid="metaid_81" id="Pglctr" value="1" constant="false"/>
+      <parameter metaid="metaid_82" id="V1PDC" value="0.9558" constant="false"/>
+      <parameter metaid="metaid_83" id="V1adh1" value="110.16" constant="false"/>
+      <parameter metaid="metaid_84" id="V2adh1" value="550.8" constant="false"/>
+      <parameter metaid="metaid_85" id="VPYRd" value="1.96" constant="false"/>
+      <parameter metaid="metaid_86" id="Valdf" value="2207.82" constant="false"/>
+      <parameter metaid="metaid_87" id="Valdr" value="11039.1" constant="false"/>
+      <parameter metaid="metaid_88" id="Vatpconm" value="128000000000" constant="false"/>
+      <parameter metaid="metaid_89" id="Vgapdh" value="833.858" constant="false"/>
+      <parameter metaid="metaid_90" id="Vglctr" value="142.0944" constant="false"/>
+      <parameter metaid="metaid_91" id="Vhkm" value="41.40376" constant="false"/>
+      <parameter metaid="metaid_92" id="Vlpglycm" value="81.4797" constant="false"/>
+      <parameter metaid="metaid_93" id="Vpdcm" value="95.58" constant="false"/>
+      <parameter metaid="metaid_94" id="Vpfkm" value="38.163468" constant="false"/>
+      <parameter metaid="metaid_95" id="Vpgi" value="496.042" constant="false"/>
+      <parameter metaid="metaid_96" id="Vpkm" value="343.096" constant="false"/>
+      <parameter metaid="metaid_97" id="Vratio" value="59" constant="false"/>
+      <parameter metaid="metaid_98" id="Vtimm" value="116.365" constant="false"/>
+      <parameter metaid="metaid_99" id="alp" value="0.09" constant="false"/>
+      <parameter metaid="metaid_100" id="bet" value="100" constant="false"/>
+      <parameter metaid="metaid_101" id="dACA" value="24.7" constant="false"/>
+      <parameter metaid="metaid_102" id="dEtOH" value="16.72" constant="false"/>
+      <parameter metaid="metaid_103" id="dGlyc" value="1.9" constant="false"/>
+      <parameter metaid="metaid_104" id="dHCN" value="34.2" constant="false"/>
+      <parameter metaid="metaid_105" id="dOAc" value="16.72" constant="false"/>
+      <parameter metaid="metaid_106" id="kOAc" value="0.5" constant="false"/>
+      <parameter metaid="metaid_107" id="kVap" value="0.00287219" constant="false"/>
+      <parameter metaid="metaid_108" id="kacab" value="2.03e-06" constant="false"/>
+      <parameter metaid="metaid_109" id="kacaf" value="0.036" constant="false"/>
+      <parameter metaid="metaid_110" id="kakf" value="432.9" constant="false"/>
+      <parameter metaid="metaid_111" id="kakr" value="133.333" constant="false"/>
+      <parameter metaid="metaid_112" id="kappapfk" value="0.15" constant="false"/>
+      <parameter metaid="metaid_113" id="kdhapb" value="0.012" constant="false"/>
+      <parameter metaid="metaid_114" id="kdhapf" value="0.037" constant="false"/>
+      <parameter metaid="metaid_115" id="kg6pst" value="2.598218" constant="false"/>
+      <parameter metaid="metaid_116" id="klppepf" value="443866" constant="false"/>
+      <parameter metaid="metaid_117" id="klppepr" value="1528.62" constant="false"/>
+      <parameter metaid="metaid_118" id="kpyrb" value="0.0037" constant="false"/>
+      <parameter metaid="metaid_119" id="kpyrf" value="0.034" constant="false"/>
+      <parameter metaid="metaid_120" id="sc" value="2" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="metaid_123" id="v_ACAvap" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_121" species="ACA0" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_122" species="X" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 0.5 </cn>
+              <ci> kVap </ci>
+              <ci> ACA0 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_128" id="v_ADH1" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_124" species="NAD" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_125" species="EtOH" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_126" species="NADH" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_127" species="ACA" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 2 </cn>
+              <ci> sc </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> V1adh1 </ci>
+                  <ci> V2adh1 </ci>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <ci> EtOH </ci>
+                      <ci> NAD </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> ACA </ci>
+                        <ci> NADH </ci>
+                      </apply>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> Kiadh1NAD </ci>
+                    <ci> Kadh1EtOH </ci>
+                    <ci> V2adh1 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> Kadh1EtOH </ci>
+                    <ci> V2adh1 </ci>
+                    <ci> NAD </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> Kadh1NAD </ci>
+                    <ci> V2adh1 </ci>
+                    <ci> EtOH </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> V2adh1 </ci>
+                    <ci> NAD </ci>
+                    <ci> EtOH </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> Kadh1NADH </ci>
+                      <ci> V1adh1 </ci>
+                      <ci> ACA </ci>
+                    </apply>
+                    <ci> Keq </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> Kadh1ACA </ci>
+                      <ci> V1adh1 </ci>
+                      <ci> NADH </ci>
+                    </apply>
+                    <ci> Keq </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> V1adh1 </ci>
+                      <ci> ACA </ci>
+                      <ci> NADH </ci>
+                    </apply>
+                    <ci> Keq </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> Kadh1NADH </ci>
+                      <ci> V1adh1 </ci>
+                      <ci> NAD </ci>
+                      <ci> ACA </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> Kiadh1NAD </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> Kadh1NAD </ci>
+                      <ci> V2adh1 </ci>
+                      <ci> EtOH </ci>
+                      <ci> NADH </ci>
+                    </apply>
+                    <ci> Kiadh1NADH </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> V2adh1 </ci>
+                      <ci> NAD </ci>
+                      <ci> EtOH </ci>
+                      <ci> ACA </ci>
+                    </apply>
+                    <ci> Kiadh1ACA </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> V1adh1 </ci>
+                      <ci> EtOH </ci>
+                      <ci> ACA </ci>
+                      <ci> NADH </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> Kiadh1EtOH </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_132" id="v_AK" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_129" species="ATP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_130" species="AMP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_131" species="ADP" stoichiometry="2" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kakf </ci>
+                  <ci> AMP </ci>
+                  <ci> ATP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kakr </ci>
+                  <apply>
+                    <power/>
+                    <ci> ADP </ci>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_136" id="v_ALD" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_133" species="FBP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_134" species="GAP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_135" species="DHAP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> Valdf </ci>
+                    <ci> FBP </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KaldFBP </ci>
+                    <ci> FBP </ci>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> GAP </ci>
+                        <ci> KaldDHAP </ci>
+                        <ci> Valdf </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> Kaldeq </ci>
+                        <ci> Valdr </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> DHAP </ci>
+                        <ci> KaldGAP </ci>
+                        <ci> Valdf </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> Kaldeq </ci>
+                        <ci> Valdr </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> FBP </ci>
+                        <ci> GAP </ci>
+                      </apply>
+                      <ci> KaldIGAP </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> GAP </ci>
+                        <ci> DHAP </ci>
+                        <ci> Valdf </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> Kaldeq </ci>
+                        <ci> Valdr </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> Valdf </ci>
+                      <ci> GAP </ci>
+                      <ci> DHAP </ci>
+                    </apply>
+                    <ci> Kaldeq </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KaldFBP </ci>
+                    <ci> FBP </ci>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> GAP </ci>
+                        <ci> KaldDHAP </ci>
+                        <ci> Valdf </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> Kaldeq </ci>
+                        <ci> Valdr </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> DHAP </ci>
+                        <ci> KaldGAP </ci>
+                        <ci> Valdf </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> Kaldeq </ci>
+                        <ci> Valdr </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> FBP </ci>
+                        <ci> GAP </ci>
+                      </apply>
+                      <ci> KaldIGAP </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> GAP </ci>
+                        <ci> DHAP </ci>
+                        <ci> Valdf </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> Kaldeq </ci>
+                        <ci> Valdr </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_141" id="v_ALDH" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_137" species="NAD" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_138" species="ACA" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_139" species="OAc" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_140" species="NADH" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <ci> kOAc </ci>
+              <ci> ACA </ci>
+              <ci> NAD </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_144" id="v_ATPcon" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_142" species="ATP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_143" species="ADP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <cn> 0.832 </cn>
+                <ci> sc </ci>
+                <ci> Vatpconm </ci>
+                <ci> ATP </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> KatpconATP </ci>
+                <ci> ATP </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_148" id="v_DHAPCN" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_145" species="HCN" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_146" species="DHAP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_147" species="DHAPCN" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kdhapf </ci>
+                <ci> HCN </ci>
+                <ci> DHAP </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdhapb </ci>
+                <ci> DHAPCN </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_153" id="v_GAPDH" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_149" species="NAD" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_150" species="GAP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_151" species="NADH" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_152" species="DPG" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> Vgapdh </ci>
+                        <ci> GAP </ci>
+                        <ci> NAD </ci>
+                      </apply>
+                      <ci> KgapdhGAP </ci>
+                    </apply>
+                    <ci> KgapdhNAD </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> GAP </ci>
+                        <ci> KgapdhGAP </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> DPG </ci>
+                        <ci> KgapdhDPG </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> NAD </ci>
+                        <ci> KgapdhNAD </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> NADH </ci>
+                        <ci> KgapdhNADH </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <ci> Vgapdh </ci>
+                          <ci> DPG </ci>
+                          <ci> NADH </ci>
+                        </apply>
+                        <ci> Kgapdheq </ci>
+                      </apply>
+                      <ci> KgapdhGAP </ci>
+                    </apply>
+                    <ci> KgapdhNAD </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> GAP </ci>
+                        <ci> KgapdhGAP </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> DPG </ci>
+                        <ci> KgapdhDPG </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> NAD </ci>
+                        <ci> KgapdhNAD </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> NADH </ci>
+                        <ci> KgapdhNADH </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_157" id="v_Glctr" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_154" species="Glc0" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_155" species="Glc" stoichiometry="59" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_156" species="G6P"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> Vglctr </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <divide/>
+                      <ci> Glc0 </ci>
+                      <ci> KglctrGlc </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> Glc0 </ci>
+                        <ci> KglctrGlc </ci>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <plus/>
+                            <apply>
+                              <times/>
+                              <ci> Pglctr </ci>
+                              <apply>
+                                <divide/>
+                                <ci> Glc0 </ci>
+                                <ci> KglctrGlc </ci>
+                              </apply>
+                            </apply>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                          <apply>
+                            <plus/>
+                            <apply>
+                              <times/>
+                              <ci> Pglctr </ci>
+                              <apply>
+                                <divide/>
+                                <ci> Glc </ci>
+                                <ci> KglctrGlc </ci>
+                              </apply>
+                            </apply>
+                            <cn type="integer"> 1 </cn>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> Glc </ci>
+                            <ci> KglctrGlc </ci>
+                          </apply>
+                          <apply>
+                            <divide/>
+                            <ci> G6P </ci>
+                            <ci> KglctrIG6P </ci>
+                          </apply>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <ci> Glc </ci>
+                              <ci> G6P </ci>
+                            </apply>
+                            <apply>
+                              <times/>
+                              <ci> KglctrGlc </ci>
+                              <ci> KglctrIIG6P </ci>
+                            </apply>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> Vglctr </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <divide/>
+                      <ci> Glc </ci>
+                      <ci> KglctrGlc </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> Glc </ci>
+                        <ci> KglctrGlc </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <times/>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <plus/>
+                              <apply>
+                                <times/>
+                                <ci> Pglctr </ci>
+                                <apply>
+                                  <divide/>
+                                  <ci> Glc </ci>
+                                  <ci> KglctrGlc </ci>
+                                </apply>
+                              </apply>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                            <apply>
+                              <plus/>
+                              <apply>
+                                <times/>
+                                <ci> Pglctr </ci>
+                                <apply>
+                                  <divide/>
+                                  <ci> Glc0 </ci>
+                                  <ci> KglctrGlc </ci>
+                                </apply>
+                              </apply>
+                              <cn type="integer"> 1 </cn>
+                            </apply>
+                          </apply>
+                          <apply>
+                            <plus/>
+                            <cn type="integer"> 1 </cn>
+                            <apply>
+                              <divide/>
+                              <ci> Glc0 </ci>
+                              <ci> KglctrGlc </ci>
+                            </apply>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <divide/>
+                          <ci> G6P </ci>
+                          <ci> KglctrIG6P </ci>
+                        </apply>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <times/>
+                            <ci> Glc </ci>
+                            <ci> G6P </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <ci> KglctrGlc </ci>
+                            <ci> KglctrIIG6P </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_160" id="v_HCNvap" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_158" species="HCN0" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_159" species="X" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kVap </ci>
+              <ci> HCN0 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_165" id="v_HK" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_161" species="Glc" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_162" species="ATP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_163" species="G6P" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_164" species="ADP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vhkm </ci>
+                  <ci> ATP </ci>
+                  <ci> Glc </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> KhkDGlc </ci>
+                    <ci> KhkATP </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KhkGlc </ci>
+                    <ci> ATP </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KhkATP </ci>
+                    <ci> Glc </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> Glc </ci>
+                    <ci> ATP </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_169" id="v_LACTO" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_166" species="HCN0" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_167" species="ACA0" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_168" species="lacto" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kacaf </ci>
+                <ci> HCN0 </ci>
+                <ci> ACA0 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kacab </ci>
+                <ci> lacto </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_173" id="v_PDC" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_170" species="Pyr" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_171" species="ACA" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_172" species="G6P"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 0.7 </cn>
+              <ci> sc </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> V1PDC </ci>
+                  <ci> Pyr </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> KaPDC </ci>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <ci> G6P </ci>
+                          <ci> KxPDC </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <times/>
+                            <ci> bet </ci>
+                            <ci> G6P </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <ci> alp </ci>
+                            <ci> KxPDC </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> Pyr </ci>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <ci> G6P </ci>
+                          <apply>
+                            <times/>
+                            <ci> alp </ci>
+                            <ci> KxPDC </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <times/>
+                            <ci> bet </ci>
+                            <ci> G6P </ci>
+                          </apply>
+                          <apply>
+                            <times/>
+                            <ci> alp </ci>
+                            <ci> KxPDC </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_179" id="v_PFK" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_174" species="F6P" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_175" species="ATP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_176" species="FBP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_177" species="ADP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_178" species="AMP"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vpfkm </ci>
+                  <ci> ATP </ci>
+                  <apply>
+                    <times/>
+                    <ci> F6P </ci>
+                    <ci> F6P </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <times/>
+                      <ci> Kpfk </ci>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <times/>
+                          <ci> kappapfk </ci>
+                          <apply>
+                            <divide/>
+                            <ci> ATP </ci>
+                            <ci> AMP </ci>
+                          </apply>
+                          <apply>
+                            <divide/>
+                            <ci> ATP </ci>
+                            <ci> AMP </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> F6P </ci>
+                      <ci> F6P </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KpfkmATP </ci>
+                    <ci> ATP </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_182" id="v_PGI" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_180" species="G6P" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_181" species="F6P" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> Vpgi </ci>
+                    <ci> G6P </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KpgiG6P </ci>
+                    <ci> G6P </ci>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <divide/>
+                        <ci> KpgiG6P </ci>
+                        <ci> KpgiF6P </ci>
+                      </apply>
+                      <ci> F6P </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> Vpgi </ci>
+                    <apply>
+                      <divide/>
+                      <ci> F6P </ci>
+                      <ci> Kpgieq </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KpgiG6P </ci>
+                    <ci> G6P </ci>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <divide/>
+                        <ci> KpgiG6P </ci>
+                        <ci> KpgiF6P </ci>
+                      </apply>
+                      <ci> F6P </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_187" id="v_PK" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_183" species="PEP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_184" species="ADP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_185" species="Pyr" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_186" species="ATP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vpkm </ci>
+                  <ci> ADP </ci>
+                  <ci> PEP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> KpkPEP </ci>
+                    <ci> PEP </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KpkADP </ci>
+                    <ci> ADP </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_191" id="v_PYRCN" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_188" species="Pyr" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_189" species="HCN" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_190" species="PyrCN" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kpyrf </ci>
+                <ci> HCN </ci>
+                <ci> Pyr </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kpyrb </ci>
+                <ci> PyrCN </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_194" id="v_PYRdrain" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_192" species="Pyr" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_193" species="drain" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 1.15 </cn>
+              <ci> sc </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> VPYRd </ci>
+                  <ci> Pyr </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> KmPYRd </ci>
+                  <ci> Pyr </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_199" id="v_Storage" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_195" species="G6P" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_196" species="ATP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_197" species="glycogen" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_198" species="ADP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <ci> kg6pst </ci>
+              <ci> ATP </ci>
+              <ci> G6P </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_202" id="v_TIM" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_200" species="DHAP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_201" species="GAP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> Vtimm </ci>
+                    <ci> DHAP </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KtimDHAP </ci>
+                    <ci> DHAP </ci>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <divide/>
+                        <ci> KtimDHAP </ci>
+                        <ci> KtimGAP </ci>
+                      </apply>
+                      <ci> GAP </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> Vtimm </ci>
+                    <apply>
+                      <divide/>
+                      <ci> GAP </ci>
+                      <ci> Ktimeq </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> KtimDHAP </ci>
+                    <ci> DHAP </ci>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <divide/>
+                        <ci> KtimDHAP </ci>
+                        <ci> KtimGAP </ci>
+                      </apply>
+                      <ci> GAP </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_205" id="v_diACA" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_203" species="ACA" stoichiometry="59" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_204" species="ACA0" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dACA </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> ACA </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dACA </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> ACA0 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_208" id="v_diEtOH" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_206" species="EtOH" stoichiometry="59" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_207" species="EtOH0" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dEtOH </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> EtOH </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dEtOH </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> EtOH0 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_211" id="v_diGlyc" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_209" species="Glyc" stoichiometry="59" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_210" species="Glyc0" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dGlyc </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> Glyc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dGlyc </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> Glyc0 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_214" id="v_diHCN" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_212" species="HCN" stoichiometry="59" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_213" species="HCN0" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dHCN </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> HCN </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dHCN </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> HCN0 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_217" id="v_diOAc" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_215" species="OAc" stoichiometry="59" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_216" species="OAc0" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dOAc </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> OAc </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> dOAc </ci>
+                    <ci> Vratio </ci>
+                  </apply>
+                  <ci> OAc0 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_222" id="v_lpGlyc" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_218" species="NADH" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_219" species="DHAP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_220" species="NAD" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_221" species="Glyc" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vlpglycm </ci>
+                  <ci> DHAP </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> KlpglycDHAP </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <divide/>
+                          <ci> KlpglycINADH </ci>
+                          <ci> NADH </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> NAD </ci>
+                            <ci> KlpglycINAD </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> DHAP </ci>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <divide/>
+                          <ci> KlpglycNADH </ci>
+                          <ci> NADH </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> NAD </ci>
+                            <ci> KlpglycINAD </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_227" id="v_lpPEP" reversible="true" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_223" species="DPG" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_224" species="ADP" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_225" species="PEP" stoichiometry="1" constant="true"/>
+          <speciesReference metaid="metaid_226" species="ATP" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> sc </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> klppepf </ci>
+                  <ci> DPG </ci>
+                  <ci> ADP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> klppepr </ci>
+                  <ci> PEP </ci>
+                  <ci> ATP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

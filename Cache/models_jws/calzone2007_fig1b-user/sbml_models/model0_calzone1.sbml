@@ -1,0 +1,2042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" level="2" version="1">
+  <model id="calzone1" name="calzone1">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="metaid_0" id="min" name="min">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="60"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="metaid_1" id="cytoplasm" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005737"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+      <compartment metaid="metaid_2" id="nuclei" spatialDimensions="3" size="1" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005634"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_3" id="FZYa" name="FZYa" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q24044"/>
+                  <rdf:li rdf:resource="http://identifiers.org/interpro/IPR000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_4" id="IEa_1" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_5" id="MPFc" name="MPFc" compartment="cytoplasm" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P23572"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P20439"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0031387"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_6" id="MPFn" name="MPFn" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P20439"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P23572"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0031387"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_7" id="N" name="N" compartment="nuclei" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_8" id="StgPc" name="StgPc" compartment="cytoplasm" initialConcentration="0.8" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_8">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P20483"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_9" id="StgPn" name="StgPn" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_9">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P20483"/>
+                  <rdf:li rdf:resource="http://identifiers.org/interpro/IPR000751"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_10" id="Stgc" name="Stgc" compartment="cytoplasm" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_10">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P20483"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_11" id="Stgm" name="Stgm" compartment="cytoplasm" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:33699"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_12" id="Stgn" name="Stgn" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_12">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P20483"/>
+                  <rdf:li rdf:resource="http://identifiers.org/interpro/IPR000751"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_13" id="Wee1Pc" name="Wee1Pc" compartment="cytoplasm" initialConcentration="0.8" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">
+        Wee1Pc has been defined as boundarycondition, only change with the assignment rule.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_13">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P54350"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P30291"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_14" id="Wee1Pn" name="Wee1Pn" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P54350"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P30291"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_15" id="Wee1c" name="Wee1c" compartment="cytoplasm" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P54350"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P30291"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_16" id="Wee1n" name="Wee1n" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_16">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P54350"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P30291"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_17" id="Xm" name="Xm" compartment="cytoplasm" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.chebi/CHEBI:33699"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_18" id="Xp" name="Xp" compartment="cytoplasm" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="metaid_19" id="preMPFc" name="preMPFc" compartment="cytoplasm" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0031387"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_20" id="preMPFn" name="preMPFn" compartment="nuclei" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0031387"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="metaid_21" id="CycBT" value="0" constant="false"/>
+      <parameter metaid="metaid_22" id="E_1" name="E" value="7e-05" constant="true"/>
+      <parameter metaid="metaid_23" id="Jafzy" name="Jafzy" value="0.01" constant="true"/>
+      <parameter metaid="metaid_24" id="Jaie" name="Jaie" value="0.01" constant="true"/>
+      <parameter metaid="metaid_25" id="Jastg" name="Jastg" value="0.05" constant="true"/>
+      <parameter metaid="metaid_26" id="Jawee" name="Jawee" value="0.05" constant="true"/>
+      <parameter metaid="metaid_27" id="Jifzy" name="Jifzy" value="0.01" constant="true"/>
+      <parameter metaid="metaid_28" id="Jiie" name="Jiie" value="0.01" constant="true"/>
+      <parameter metaid="metaid_29" id="Jistg" name="Jistg" value="0.05" constant="true"/>
+      <parameter metaid="metaid_30" id="Jiwee" name="Jiwee" value="0.05" constant="true"/>
+      <parameter metaid="metaid_31" id="Jm" name="Jm" value="0.05" constant="true"/>
+      <parameter metaid="metaid_32" id="StgPT" value="0" constant="false"/>
+      <parameter metaid="metaid_33" id="StringT" value="0.8" constant="true">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">
+        Simulation of Figure1, total amounts of String are constant, 0.8.</p>
+        </notes>
+      </parameter>
+      <parameter metaid="metaid_34" id="Wee1T" value="0.8" constant="true">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">
+        Total Wee1 are constant 0.8.</p>
+        </notes>
+      </parameter>
+      <parameter metaid="metaid_35" id="factor_1" name="factor" value="1.95" constant="true"/>
+      <parameter metaid="metaid_36" id="kafzy" name="kafzy" value="1" constant="true"/>
+      <parameter metaid="metaid_37" id="kaie" name="kaie" value="1" constant="true"/>
+      <parameter metaid="metaid_38" id="kastg" name="kastgpp" value="1" constant="true"/>
+      <parameter metaid="metaid_39" id="kastgp" name="kastgp" value="0" constant="true"/>
+      <parameter metaid="metaid_40" id="kawee" name="kawee" value="0.3" constant="true"/>
+      <parameter metaid="metaid_41" id="kdc" name="kdcp" value="0.01" constant="true"/>
+      <parameter metaid="metaid_42" id="kdm" name="kdmpp" value="0.2" constant="true"/>
+      <parameter metaid="metaid_43" id="kdmp" name="kdmp" value="0.002" constant="true"/>
+      <parameter metaid="metaid_44" id="kdn" name="kdnpp" value="1.5" constant="true"/>
+      <parameter metaid="metaid_45" id="kdnp" name="kdnp" value="0.01" constant="true"/>
+      <parameter metaid="metaid_46" id="kdstg" name="kdstg" value="0" constant="true">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">
+        kdstg=0 for figure1B</p>
+        </notes>
+      </parameter>
+      <parameter metaid="metaid_47" id="kez_1" name="kez" value="0.5" constant="true"/>
+      <parameter metaid="metaid_48" id="kifzy" name="kifzy" value="0.2" constant="true"/>
+      <parameter metaid="metaid_49" id="kiie" name="kiie" value="0.4" constant="true"/>
+      <parameter metaid="metaid_50" id="kins_1" name="kins" value="0.08" constant="true"/>
+      <parameter metaid="metaid_51" id="kinw_1" name="kinw" value="0.04" constant="true"/>
+      <parameter metaid="metaid_52" id="kistg" name="kistg" value="0.3" constant="true"/>
+      <parameter metaid="metaid_53" id="kiwee" name="kiweepp" value="1" constant="true"/>
+      <parameter metaid="metaid_54" id="kiweep" name="kiweep" value="0.01" constant="true"/>
+      <parameter metaid="metaid_55" id="kout_1" name="kout" value="0" constant="true"/>
+      <parameter metaid="metaid_56" id="kouts_1" name="kouts" value="0.02" constant="true"/>
+      <parameter metaid="metaid_57" id="koutw_1" name="koutw" value="0.01" constant="true"/>
+      <parameter metaid="metaid_58" id="ksc" name="ksc" value="0.01" constant="true"/>
+      <parameter metaid="metaid_59" id="ksstg" name="ksstg" value="0" constant="true">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">
+        ksstg=0 for figure1B</p>
+        </notes>
+      </parameter>
+      <parameter metaid="metaid_60" id="kstg" name="kstgpp" value="2" constant="true"/>
+      <parameter metaid="metaid_61" id="kstgp" name="kstgp" value="0.2" constant="true"/>
+      <parameter metaid="metaid_62" id="ksxm_1" name="ksxm" value="0.0005" constant="true"/>
+      <parameter metaid="metaid_63" id="ksxp_1" name="ksxp" value="0.001" constant="true"/>
+      <parameter metaid="metaid_64" id="kt" name="kin" value="0.15" constant="true"/>
+      <parameter metaid="metaid_65" id="kwee" name="kweepp" value="1" constant="true"/>
+      <parameter metaid="metaid_66" id="kweep" name="kweep" value="0.005" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="metaid_67" variable="Wee1Pc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <ci> Wee1T </ci>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Wee1n </ci>
+                    <ci> Wee1Pn </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <cn> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+            <ci> Wee1c </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_68" variable="StgPT">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <apply>
+                <minus/>
+                <cn> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+              <ci> StgPc </ci>
+            </apply>
+            <apply>
+              <times/>
+              <ci> N </ci>
+              <ci> E_1 </ci>
+              <ci> StgPn </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="metaid_69" variable="CycBT">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <apply>
+              <times/>
+              <apply>
+                <minus/>
+                <cn> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> MPFc </ci>
+                <ci> preMPFc </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <ci> N </ci>
+              <ci> E_1 </ci>
+              <apply>
+                <plus/>
+                <ci> MPFn </ci>
+                <ci> preMPFn </ci>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_71" id="Nuclei_1" name="Nuclei" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_70" species="N" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_73" id="R_1" name="Synthesis of MPFc" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_72" species="MPFc" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ksc </ci>
+              <ci> cytoplasm </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_76" id="R_10" name="mRNA of Stg" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_74" species="Stgm" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_75" species="Xp"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> kdmp </ci>
+                    <ci> Stgm </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> Jm </ci>
+                    <ci> Stgm </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kdm </ci>
+                  <ci> Xp </ci>
+                  <ci> Stgm </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_79" id="R_12" name="Synthesis of Stg" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_77" species="Stgc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_78" species="Stgm"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> ksstg </ci>
+              <ci> Stgm </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_83" id="R_13" name="activation of Stgc" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_80" species="Stgc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_81" species="StgPc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_82" species="MPFc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> kastgp </ci>
+                    <apply>
+                      <times/>
+                      <ci> kastg </ci>
+                      <ci> MPFc </ci>
+                    </apply>
+                  </apply>
+                  <ci> Stgc </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jastg </ci>
+                  <ci> Stgc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_86" id="R_14" name="inactivation of Stgc" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_84" species="StgPc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_85" species="Stgc" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kistg </ci>
+                  <ci> StgPc </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jistg </ci>
+                  <ci> StgPc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_88" id="R_15" name="degradation of Stgc" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_87" species="Stgc" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kdstg </ci>
+              <ci> Stgc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_90" id="R_16" name="degradation of active Stgc" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_89" species="StgPc" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kdstg </ci>
+              <ci> StgPc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_93" id="R_19" name="export of MPF from cytoplasm" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_91" species="MPFc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_92" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kt </ci>
+                  <ci> MPFc </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_97" id="R_2" name="Activation of MPFc" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_94" species="preMPFc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_95" species="MPFc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_96" species="StgPc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <plus/>
+                <ci> kstgp </ci>
+                <apply>
+                  <times/>
+                  <ci> kstg </ci>
+                  <ci> StgPc </ci>
+                </apply>
+              </apply>
+              <ci> preMPFc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_100" id="R_20" name="export of preMPF from cytoplasm" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_98" species="preMPFc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_99" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kt </ci>
+                  <ci> preMPFc </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_102" id="R_21" name="export of Wee1P from nucleus" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_101" species="Wee1Pn" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> koutw_1 </ci>
+              <ci> Wee1Pn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_105" id="R_22" name="export of Wee1P from cytoplasm" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_103" species="Wee1Pc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_104" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kinw_1 </ci>
+                  <ci> Wee1Pc </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_107" id="R_23" name="export of Wee1 from nucleus" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_106" species="Wee1n" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> koutw_1 </ci>
+              <ci> Wee1n </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_110" id="R_24" name="export of Wee1c from cytoplasm" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_108" species="Wee1c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_109" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kinw_1 </ci>
+                  <ci> Wee1c </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_112" id="R_25" name="export of StgP from nucleus" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_111" species="StgPn" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> kouts_1 </ci>
+              <ci> StgPn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_115" id="R_26" name="export of StgP from cytoplasm" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_113" species="StgPc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_114" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kins_1 </ci>
+                  <ci> StgPc </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_117" id="R_27" name="export of Stg from nucleus" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_116" species="Stgn" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> kouts_1 </ci>
+              <ci> Stgn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_120" id="R_28" name="export of Stg from cytoplasm" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_118" species="Stgc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_119" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kins_1 </ci>
+                  <ci> Stgc </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_124" id="R_29" name="activation of MPFn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_121" species="preMPFn" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_122" species="MPFn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_123" species="StgPn"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <plus/>
+                <ci> kstgp </ci>
+                <apply>
+                  <times/>
+                  <ci> kstg </ci>
+                  <ci> StgPn </ci>
+                </apply>
+              </apply>
+              <ci> preMPFn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_128" id="R_3" name="Inactivation of MPFc" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_125" species="MPFc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_126" species="preMPFc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_127" species="Wee1c"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <plus/>
+                <ci> kweep </ci>
+                <apply>
+                  <times/>
+                  <ci> kwee </ci>
+                  <ci> Wee1c </ci>
+                </apply>
+              </apply>
+              <ci> MPFc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_132" id="R_30" name="inactivation of MPFn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_129" species="MPFn" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_130" species="preMPFn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_131" species="Wee1n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <plus/>
+                <ci> kweep </ci>
+                <apply>
+                  <times/>
+                  <ci> kwee </ci>
+                  <ci> Wee1n </ci>
+                </apply>
+              </apply>
+              <ci> MPFn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_135" id="R_33" name="degradation of preMPFn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_133" species="preMPFn" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_134" species="FZYa"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <plus/>
+                <ci> kdnp </ci>
+                <apply>
+                  <times/>
+                  <ci> kdn </ci>
+                  <ci> FZYa </ci>
+                </apply>
+              </apply>
+              <ci> preMPFn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_138" id="R_34" name="degradation of MPFn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_136" species="MPFn" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_137" species="FZYa"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <plus/>
+                <ci> kdnp </ci>
+                <apply>
+                  <times/>
+                  <ci> kdn </ci>
+                  <ci> FZYa </ci>
+                </apply>
+              </apply>
+              <ci> MPFn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_140" id="R_37" name="activation of intermediary enzyme" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_139" species="IEa_1" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kiie </ci>
+                  <ci> IEa_1 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jiie </ci>
+                  <ci> IEa_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_143" id="R_38" name="inactivation of intermediary enzyme" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_141" species="IEa_1" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_142" species="MPFn"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kaie </ci>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <ci> IEa_1 </ci>
+                  </apply>
+                  <ci> MPFn </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <plus/>
+                    <ci> Jaie </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <ci> IEa_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_146" id="R_39" name="activation of FZY" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_144" species="FZYa" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_145" species="IEa_1"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kafzy </ci>
+                  <ci> IEa_1 </ci>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <ci> FZYa </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <plus/>
+                    <ci> Jafzy </ci>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <ci> FZYa </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_148" id="R_40" name="inactivation of FZY" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_147" species="FZYa" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kifzy </ci>
+                  <ci> FZYa </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jifzy </ci>
+                  <ci> FZYa </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_152" id="R_41" name="inactivation of Wee1n" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_149" species="Wee1n" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_150" species="Wee1Pn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_151" species="MPFn"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> kiweep </ci>
+                    <apply>
+                      <times/>
+                      <ci> kiwee </ci>
+                      <ci> MPFn </ci>
+                    </apply>
+                  </apply>
+                  <ci> Wee1n </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jiwee </ci>
+                  <ci> Wee1n </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_155" id="R_42" name="activation of Wee1n" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_153" species="Wee1Pn" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_154" species="Wee1n" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kawee </ci>
+                  <ci> Wee1Pn </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jawee </ci>
+                  <ci> Wee1Pn </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_159" id="R_43" name="activation of StgPn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_156" species="Stgn" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_157" species="StgPn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_158" species="MPFn"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> kastgp </ci>
+                    <apply>
+                      <times/>
+                      <ci> kastg </ci>
+                      <ci> MPFn </ci>
+                    </apply>
+                  </apply>
+                  <ci> Stgn </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jastg </ci>
+                  <ci> Stgn </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_162" id="R_44" name="inactivation of StgPn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_160" species="StgPn" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_161" species="Stgn" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kistg </ci>
+                  <ci> StgPn </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jistg </ci>
+                  <ci> StgPn </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_164" id="R_45" name="degradation of Stgn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_163" species="Stgn" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> kdstg </ci>
+              <ci> Stgn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_166" id="R_46" name="degradation of StgPn" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_165" species="StgPn" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> kdstg </ci>
+              <ci> StgPn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_168" id="R_6" name="Degradation of cyclin" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_167" species="preMPFc" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kdc </ci>
+              <ci> preMPFc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_170" id="R_7" name="degradation of cyclin" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_169" species="MPFc" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kdc </ci>
+              <ci> MPFc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_174" id="R_8" name="Inactivation of Wee1c" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_171" species="Wee1c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_172" species="Wee1Pc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_173" species="MPFc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> kiweep </ci>
+                    <apply>
+                      <times/>
+                      <ci> kiwee </ci>
+                      <ci> MPFc </ci>
+                    </apply>
+                  </apply>
+                  <ci> Wee1c </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jiwee </ci>
+                  <ci> Wee1c </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_178" id="R_9" name="Activation of Wee1c" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_175" species="Wee1Pc" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="metaid_176" species="Wee1c" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_177" species="Wee1Pc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kawee </ci>
+                  <ci> Wee1Pc </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <ci> Jawee </ci>
+                  <ci> Wee1Pc </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_181" id="_16" name="import of MPF into nucleus" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_179" species="MPFn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_180" species="MPFc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kt </ci>
+              <ci> MPFc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_184" id="_18" name="import of preMPF into nucleus" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_182" species="preMPFn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_183" species="preMPFc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kt </ci>
+              <ci> preMPFc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_188" id="_182_1" name="import of  Wee1P into cytoplasm" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_185" species="Wee1Pc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_186" species="Wee1Pn"/>
+          <modifierSpeciesReference metaid="metaid_187" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> koutw_1 </ci>
+                  <ci> Wee1Pn </ci>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_191" id="_20" name="import of Wee1P into nucleus" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_189" species="Wee1Pn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_190" species="Wee1Pc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kinw_1 </ci>
+              <ci> Wee1Pc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_195" id="_22" name="import of Wee1 into cytoplasm" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_192" species="Wee1c" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_193" species="Wee1n"/>
+          <modifierSpeciesReference metaid="metaid_194" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> koutw_1 </ci>
+                  <ci> Wee1n </ci>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_198" id="_24" name="import of Wee1 into nucleus" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_196" species="Wee1n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_197" species="Wee1c"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kinw_1 </ci>
+              <ci> Wee1c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_202" id="_26" name="import of StgP into cytoplasm" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_199" species="StgPc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_200" species="StgPn"/>
+          <modifierSpeciesReference metaid="metaid_201" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kouts_1 </ci>
+                  <ci> StgPn </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_205" id="_28" name="import of StgP into nucleus" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_203" species="StgPn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_204" species="StgPc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kins_1 </ci>
+              <ci> StgPc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_209" id="_30" name="import of Stg into cytoplasm" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_206" species="Stgc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_207" species="Stgn"/>
+          <modifierSpeciesReference metaid="metaid_208" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kouts_1 </ci>
+                  <ci> Stgn </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_212" id="_32" name="import of Stg into nucleus" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_210" species="Stgn" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_211" species="Stgc"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> kins_1 </ci>
+              <ci> Stgc </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_215" id="_50" name="Zygotic mRNA" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_213" species="Xm" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_214" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> ksxm_1 </ci>
+              <ci> N </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_218" id="_51" name="Zygotic proteins" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_216" species="Xp" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_217" species="Xm"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> cytoplasm </ci>
+              <ci> ksxp_1 </ci>
+              <ci> Xm </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_220" id="exportofMPFfromnucleus_1" name="export of MPF from nucleus" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_219" species="MPFn" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> kout_1 </ci>
+              <ci> MPFn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_222" id="exportofpreMPFnfromnucleus_1" name="export of preMPFn from nucleus" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference metaid="metaid_221" species="preMPFn" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <ci> kout_1 </ci>
+              <ci> preMPFn </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_226" id="importofMPFintocytoplasm_1" name="import of MPF into cytoplasm" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_223" species="MPFc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_224" species="N"/>
+          <modifierSpeciesReference metaid="metaid_225" species="MPFn"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kout_1 </ci>
+                  <ci> MPFn </ci>
+                  <ci> E_1 </ci>
+                  <ci> N </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_230" id="importofpreMPFintocytoplaslm_1" name="import of preMPF into cytoplasm" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference metaid="metaid_227" species="preMPFc" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference metaid="metaid_228" species="preMPFn"/>
+          <modifierSpeciesReference metaid="metaid_229" species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> nuclei </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> kout_1 </ci>
+                  <ci> preMPFn </ci>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+                <apply>
+                  <minus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <times/>
+                    <ci> N </ci>
+                    <ci> E_1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event metaid="metaid_231">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">
+        When Fzy=Kez(increasing), then the following changes are made instantaneously (for X=MPF,preMPF,Wee1,Wee1P, Stg, and StgP) :        <p>Xc-&gt; (1-N*E)*Xc/(1-1.95*N*E)</p>
+          <p>Xn-&gt;Xn/1.95</p>
+          <p>N-&gt;1.95N</p>
+      </p>
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+        <rdf:Description rdf:about="#metaid_231">
+          <bqbiol:isVersionOf>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0000093"/>
+            </rdf:Bag>
+          </bqbiol:isVersionOf>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+    <trigger>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <apply>
+          <geq/>
+          <ci> FZYa </ci>
+          <ci> kez_1 </ci>
+        </apply>
+      </math>
+    </trigger>
+    <listOfEventAssignments>
+      <eventAssignment metaid="metaid_232" variable="MPFc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> MPFc </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn> 1.95 </cn>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_233" variable="StgPn">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> StgPn </ci>
+            <cn> 1.95 </cn>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_234" variable="Stgc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> Stgc </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn> 1.95 </cn>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_235" variable="StgPc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> StgPc </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn> 1.95 </cn>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_236" variable="Stgn">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> Stgn </ci>
+            <cn> 1.95 </cn>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_237" variable="Wee1c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> Wee1c </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn> 1.95 </cn>
+                  <ci> N </ci>
+                  <ci> E_1 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_238" variable="Wee1Pn">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> Wee1Pn </ci>
+            <cn> 1.95 </cn>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_239" variable="Wee1n">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> Wee1n </ci>
+            <cn> 1.95 </cn>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_240" variable="preMPFn">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> preMPFn </ci>
+            <cn> 1.95 </cn>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_241" variable="MPFn">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> MPFn </ci>
+            <cn> 1.95 </cn>
+          </apply>
+        </math>
+      </eventAssignment>
+      <eventAssignment metaid="metaid_242" variable="N">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> factor_1 </ci>
+            <ci> N </ci>
+          </apply>
+        </math>
+      </eventAssignment>
+    </listOfEventAssignments>
+  </event>
+</listOfEvents>
+</model>
+</sbml>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sedML xmlns="http://sed-ml.org/sed-ml/level1/version3" xmlns:addedPrefix="http://sed-ml.org/sed-ml/level1/version2" level="1" version="3">
+  <listOfSimulations>
+    <uniformTimeCourse id="sim1_model0_leloup6" initialTime="0" outputStartTime="0" outputEndTime="72" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+    <uniformTimeCourse id="sim0_model0_leloup6" initialTime="0" outputStartTime="32" outputEndTime="104" numberOfPoints="1000">
+      <algorithm kisaoID="KISAO:0000019"/>
+    </uniformTimeCourse>
+  </listOfSimulations>
+  <listOfModels>
+    <model id="model0_leloup6" name="leloup6" language="urn:sedml:language:sbml" source="https://jjj.bio.vu.nl/models/leloup6/sbml/">
+      <listOfChanges>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P2']/@initialConcentration" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P0']/@initialConcentration" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='P1']/@initialConcentration" newValue="0.02"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='CN']/@initialConcentration" newValue="1.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T2']/@initialConcentration" newValue="4.65"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='C']/@initialConcentration" newValue="0.18"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T0']/@initialConcentration" newValue="0.54"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='T1']/@initialConcentration" newValue="0.79"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M_P']/@initialConcentration" newValue="0.09"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M_T']/@initialConcentration" newValue="1.41"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='kd']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='l_d']/@value" newValue="12.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='n']/@value" newValue="4.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='v_dT_dark']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfParameters/sbml:parameter[@id='v_dT_fac']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P2_light_deact']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_dP']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P2_light_deact']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='v_dP']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T2_light_deact']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_dT']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T2_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_4T']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T2_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_4T']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T1_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_2T']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T1_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_2T']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T1_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_3T']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T1_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_3T']/@value" newValue="8.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_1T']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='T_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_1T']/@value" newValue="8.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P2_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_4P']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P2_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_4P']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P1_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_2P']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P1_depho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_2P']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P1_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_3P']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P1_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_3P']/@value" newValue="8.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_1P']/@value" newValue="2.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='P_pho']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='V_1P']/@value" newValue="8.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='C_transp']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k2']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='C_transp']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k1']/@value" newValue="1.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='CN_decay']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_CN']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='C_decay']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='kd_C']/@value" newValue="0.01"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='C_form']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k4']/@value" newValue="0.6"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='C_form']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k3']/@value" newValue="1.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='TIM_transl']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k_sT']/@value" newValue="0.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='PER_transl']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='k_sP']/@value" newValue="0.9"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='M_P_decay']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_mP']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='M_P_decay']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='v_mP']/@value" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='M_T_decay']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='K_mT']/@value" newValue="0.2"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='M_T_decay']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='v_mT']/@value" newValue="0.7"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='tim_trans']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Ki_T']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='tim_trans']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='v_sT']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='per_trans']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='Ki_P']/@value" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction[@id='per_trans']/sbml:kineticLaw/sbml:listOfLocalParameters/sbml:localParameter[@id='v_sP']/@value" newValue="0.8"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='cytoplasm']/@size" newValue="1.0"/>
+        <changeAttribute target="/sbml:sbml/sbml:model/sbml:listOfCompartments/sbml:compartment[@id='nucleus']/@size" newValue="1.0"/>
+      </listOfChanges>
+    </model>
+  </listOfModels>
+  <listOfTasks>
+    <task id="task0_model0_leloup6" modelReference="model0_leloup6" simulationReference="sim1_model0_leloup6"/>
+  </listOfTasks>
+  <listOfDataGenerators>
+    <dataGenerator id="task0_model0_leloup6_time">
+      <listOfVariables>
+        <variable id="time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_leloup6_v_dT">
+      <listOfVariables>
+        <variable id="v_dT" target="/sbml:sbml/sbml:model/sbml:listOfParameter/sbml:parameter[@id='v_dT']" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> v_dT </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_leloup6_Pt">
+      <listOfVariables>
+        <variable id="Pt" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Pt']" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Pt </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_leloup6_Tt">
+      <listOfVariables>
+        <variable id="Tt" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='Tt']" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> Tt </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_leloup6_M_P">
+      <listOfVariables>
+        <variable id="M_P" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M_P']" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> M_P </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="task0_model0_leloup6_M_T">
+      <listOfVariables>
+        <variable id="M_T" target="/sbml:sbml/sbml:model/sbml:listOfSpecies/sbml:species[@id='M_T']" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> M_T </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_M_P_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_leloup6_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_leloup6_time </ci>
+      </math>
+    </dataGenerator>
+    <dataGenerator id="plot0_M_T_datagen0">
+      <listOfVariables>
+        <variable id="task0_model0_leloup6_time" symbol="urn:sedml:symbol:time" taskReference="task0_model0_leloup6"/>
+      </listOfVariables>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <ci> task0_model0_leloup6_time </ci>
+      </math>
+    </dataGenerator>
+  </listOfDataGenerators>
+  <listOfOutputs>
+    <plot2D id="Figure_4D" name="Figure 4D">
+      <listOfCurves>
+        <curve id="plot0_v_dT" name="v_dT" logX="false" logY="false" xDataReference="task0_model0_leloup6_time" yDataReference="task0_model0_leloup6_v_dT"/>
+        <curve id="plot0_Pt" name="Pt" logX="false" logY="false" xDataReference="task0_model0_leloup6_time" yDataReference="task0_model0_leloup6_Pt"/>
+        <curve id="plot0_Tt" name="Tt" logX="false" logY="false" xDataReference="task0_model0_leloup6_time" yDataReference="task0_model0_leloup6_Tt"/>
+        <curve id="plot0_M_P" name="MP" logX="false" logY="false" xDataReference="plot0_M_P_datagen0" yDataReference="task0_model0_leloup6_M_P"/>
+        <curve id="plot0_M_T" name="MT" logX="false" logY="false" xDataReference="plot0_M_T_datagen0" yDataReference="task0_model0_leloup6_M_T"/>
+      </listOfCurves>
+    </plot2D>
+  </listOfOutputs>
+</sedML>
