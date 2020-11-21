@@ -151,11 +151,11 @@ for i_key, key in enumerate(keys_copasi):
 plt.plot([1e-4, 1e-4], [-5, 410], 'k:', linewidth=2)
 
 plt.legend(fontsize=12)
-plt.xlabel('maximal allowed error of state trajectories (acceptance threshold)',
-           fontsize=16)
-plt.xticks(fontsize=16)
-plt.yticks(fontsize=16)
-plt.ylabel('number of accepted models', fontsize=16)
+plt.xlabel('Maximal allowed error of state trajectories (acceptance threshold)',
+           fontsize=15)
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
+plt.ylabel('Number of accepted models', fontsize=15)
 plt.xscale('log')
 plt.ylim((-10, 420))
 

@@ -9,9 +9,9 @@ from C import (
     ATOL_RTOLS, DIR_FIGURES)
 
 # Figure object
-fig, axes = plt.subplots(nrows=4, ncols=2, figsize=(12, 8))
-fontsize = 12
-labelsize = 8
+fig, axes = plt.subplots(nrows=4, ncols=2, figsize=(12, 9))
+fontsize = 15
+labelsize = 12
 alpha = 0.7
 marker_size = 2
 
@@ -91,20 +91,26 @@ for ix, (ax, (atol, rtol)) in enumerate(zip(axes.flatten()[:-1], ATOL_RTOLS)):
     ax.set_ylim([ymin*0.5, ymax*2])
     atol_lb, rtol_lb = tol_labels[ix]
     ax.set_title(f"Abs. tol = {atol_lb}, Rel. tol = {rtol_lb}",
-                 fontsize=labelsize + 1)
+                 fontsize=fontsize)
     if ix % 2 == 0:
-        ax.set_ylabel("Simulation time [ms]")
+        # Due to limited space, here size is decreased
+        ax.set_ylabel("Simulation time [ms]", fontsize=labelsize)
     else:
         ax.set_yticklabels([])
     if ix < len(ATOL_RTOLS) - 2:
         ax.set_xticks([])
+    else:
+        # Same size as other labels
+        ax.set_xlabel("Number of state variables", fontsize=labelsize)
 
 axes.flatten()[0].legend(loc='center', bbox_to_anchor=[1.05, 0.5],
                          fontsize=labelsize - 1, frameon=False)
 
 ###############################################################################
 # Failure rate plot
+
 ax = axes.flatten()[-1]
+
 # To long
 failures_arr = []
 colors_arr = []
@@ -120,7 +126,8 @@ n_tol = len(ATOL_RTOLS)
 n_linsol = len(LINSOL_DCT)
 xs = np.arange(len(failures_arr))
 ax.bar(x=xs, height=failures_arr, color=colors_arr, width=0.5)
-ax.set_ylabel("Failure rate [%]")
+# Same size as other plots
+ax.set_ylabel("Failure rate [%]", fontsize=labelsize)
 xticks = (n_linsol + 1) * np.arange(n_tol) + n_linsol / 2
 ax.set_xticks(xticks)
 ax.set_xticklabels([])
@@ -130,11 +137,11 @@ for i_tol, (atol_lb, rtol_lb) in enumerate(tol_labels):
     x = (n_linsol + 1) * i_tol + n_linsol / 2
     ax.text(x, -7, atol_lb, fontsize=labelsize, transform=ax.transData,
             horizontalalignment='center', verticalalignment='bottom')
-    ax.text(x, -11, rtol_lb, fontsize=labelsize, transform=ax.transData,
+    ax.text(x, -12, rtol_lb, fontsize=labelsize, transform=ax.transData,
             horizontalalignment='center', verticalalignment='bottom')
-ax.text(-6, -7, 'Abs. tol.:', fontsize=labelsize+1, transform=ax.transData,
+ax.text(-9, -7, 'Abs. tol.:', fontsize=labelsize, transform=ax.transData,
         verticalalignment='bottom')
-ax.text(-6, -11, 'Rel. tol.:',  fontsize=labelsize+1, transform=ax.transData,
+ax.text(-9, -12, 'Rel. tol.:',  fontsize=labelsize, transform=ax.transData,
         verticalalignment='bottom')
 
 ###############################################################################
@@ -152,6 +159,6 @@ plt.tight_layout()
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.pdf"))
-plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.png"))
+plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.png"), dpi=300)
 
 #plt.show()

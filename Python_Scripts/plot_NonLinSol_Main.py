@@ -9,8 +9,8 @@ from C import (
 
 # Figure object
 fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(12, 5))
-fontsize = 12
-labelsize = 8
+fontsize = 15
+labelsize = 12
 
 # Group by nonlinear solver and solver algorithm
 failures = {}
@@ -75,26 +75,28 @@ a_labels = [f'$10^{{{tol[0].split("e")[1]}}}$' for tol in ATOL_RTOLS]
 r_labels = [f'$10^{{{tol[1].split("e")[1]}}}$' for tol in ATOL_RTOLS]
 
 for i_linsol, linsol in enumerate(LINSOL_DCT):
-    ax.text(i_linsol*(n_tol+1) + 3, -3, LINSOL_DCT[linsol], fontsize=labelsize,
+    ax.text(i_linsol*(n_tol+1) + 3, -4, LINSOL_DCT[linsol], fontsize=labelsize,
             transform=ax.transData,
             horizontalalignment='center', verticalalignment='center')
     for i_tol, (a_label, r_label) in enumerate(zip(a_labels, r_labels)):
-        ax.text(i_linsol*(n_tol+1) + i_tol, -6.5, a_label, fontsize=labelsize,
+        ax.text(i_linsol*(n_tol+1) + i_tol, -10.5, a_label, fontsize=labelsize,
                 transform=ax.transData, rotation=45,
                 horizontalalignment='center', verticalalignment='center')
-        ax.text(i_linsol*(n_tol+1) + i_tol, -10, r_label, fontsize=labelsize,
+        ax.text(i_linsol*(n_tol+1) + i_tol, -18, r_label, fontsize=labelsize,
                 transform=ax.transData, rotation=45,
                 horizontalalignment='center', verticalalignment='center')
-ax.text(-3, -3, 'Lin. sol.:',
-        horizontalalignment='center', verticalalignment='center')
-ax.text(-3, -6.5, 'Abs. tol.:',
-        horizontalalignment='center', verticalalignment='center')
-ax.text(-3, -10, 'Rel. tol.:',
-        horizontalalignment='center', verticalalignment='center')
+ax.text(-4, -4, 'Lin. sol.:', fontsize=labelsize,
+        horizontalalignment='left', verticalalignment='center')
+ax.text(-4, -10.5, 'Abs. tol.:', fontsize=labelsize,
+        horizontalalignment='left', verticalalignment='center')
+ax.text(-4, -18, 'Rel. tol.:', fontsize=labelsize,
+        horizontalalignment='left', verticalalignment='center')
 
 # Legend
-ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.3),
-          ncol=5, frameon=False, fontsize=fontsize)
+ax.legend(loc='center', bbox_to_anchor=(0.5, -0.7),
+          ncol=3, fontsize=fontsize-1, frameon=False)
+# Needed for some reason
+fig.subplots_adjust(bottom=0.38)
 
 # Decoration
 ax.set_ylabel('Failure rate [%]', fontsize=fontsize)
@@ -103,11 +105,12 @@ ax.tick_params(labelsize=labelsize)
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
+#plt.margins(0, 0)
 plt.tight_layout()
 
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Main.pdf"))
-plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Main.png"))
+plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Main.png"), dpi=300)
 
 #plt.show()

@@ -42,7 +42,7 @@ for model in model_list:
 
 # First create a table with the numeric values
 all_models = pd.DataFrame(data=np.array([n_species, n_reactions]).transpose(),
-                          columns=('number of species', 'number of reactions'),
+                          columns=('Number of species', 'Number of reactions'),
                           index=model_names)
 # then add the string labels to not confuse datatypes
 all_models = all_models.join(pd.DataFrame(data=accepted_label,
@@ -53,14 +53,14 @@ copied_models['Composition'] = ['all models'] * all_models.shape[0]
 data = pd.concat([copied_models, all_models])
 
 # set plotting properties
-sns.set(rc={'axes.labelsize':18,
-            'xtick.labelsize':18,
-            'ytick.labelsize':18})
+sns.set(rc={'axes.labelsize':15,
+            'xtick.labelsize':12,
+            'ytick.labelsize':12})
 sns.set_style('ticks')
 
 #
 fig = sns.JointGrid(data=data, hue='Composition',
-                    x='number of species', y='number of reactions',
+                    x='Number of species', y='Number of reactions',
                     xlim=(-.2, 3.5), ylim=(-.2, 3.5),
                     palette=[[0, 0, 0, 1], [.25, .15, .85, 1], [.9, .6, .2, 1]])
 fig = fig.plot_joint(sns.scatterplot, hue='Composition', data=data)
@@ -70,28 +70,28 @@ fig.ax_joint.set_yticklabels(('$10^0$', '$10^1$', '$10^2$', '$10^3$'))
 fig.ax_joint.set_xticks((0, 1, 2, 3))
 fig.ax_joint.set_xticklabels(('$10^0$', '$10^1$', '$10^2$', '$10^3$'))
 
-sns.histplot(data.loc[data['Composition'] == 'all models', 'number of species'],
+sns.histplot(data.loc[data['Composition'] == 'all models', 'Number of species'],
              ax=fig.ax_marg_x, legend=False, element="step", binwidth=0.25,
              edgecolor=[0,0,0,1], facecolor=[0, 0, 0, 0],
              binrange=[0, 3.5])
-sns.histplot(data.loc[data['Composition'] == 'rejected', 'number of species'],
+sns.histplot(data.loc[data['Composition'] == 'rejected', 'Number of species'],
              ax=fig.ax_marg_x, legend=False, element="step", binwidth=0.25,
              edgecolor=[.8, .5, .1, .9], facecolor=[.8, .5, .1, .4],
              binrange=[0, 3.5])
-sns.histplot(data.loc[data['Composition'] == 'accepted', 'number of species'],
+sns.histplot(data.loc[data['Composition'] == 'accepted', 'Number of species'],
              ax=fig.ax_marg_x, legend=False, element="step", binwidth=0.25,
              edgecolor=[.2, .1, .7, .9], facecolor=[.2, .1, .7, .4],
              binrange=[0, 3.5])
 
-sns.histplot(data=data.loc[data['Composition'] == 'all models'], y='number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'all models'], y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[0,0,0,1], facecolor=[0, 0, 0, 0],
              binrange=[0, 3.5])
-sns.histplot(data=data.loc[data['Composition'] == 'rejected'], y='number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'rejected'], y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[.8, .5, .1, .9], facecolor=[.8, .5, .1, .4],
              binrange=[0, 3.5])
-sns.histplot(data=data.loc[data['Composition'] == 'accepted'], y='number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'accepted'], y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[.2, .1, .7, .9], facecolor=[.2, .1, .7, .4],
              binrange=[0, 3.5])
@@ -101,16 +101,16 @@ os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.pdf'))
 plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.png'), dpi=300)
 
-species_all = all_models['number of species'].values
+species_all = all_models['Number of species'].values
 species_acc = all_models[all_models['Composition'] ==
-                              'accepted']['number of species'].values
+                              'accepted']['Number of species'].values
 species_rej =  all_models[all_models['Composition'] ==
-                              'rejected']['number of species'].values
-reactions_all = all_models['number of reactions'].values
+                              'rejected']['Number of species'].values
+reactions_all = all_models['Number of reactions'].values
 reactions_acc = all_models[all_models['Composition'] ==
-                              'accepted']['number of reactions'].values
+                              'accepted']['Number of reactions'].values
 reactions_rej =  all_models[all_models['Composition'] ==
-                              'rejected']['number of reactions'].values
+                              'rejected']['Number of reactions'].values
 
 ks_species_all_acc = st.ks_2samp(species_all, species_acc)
 ks_species_all_rej = st.ks_2samp(species_all, species_rej)

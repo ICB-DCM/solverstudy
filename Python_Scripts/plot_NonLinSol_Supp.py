@@ -32,8 +32,9 @@ for f in files:
 
 # Figure object
 fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 5))
-fontsize = 12
-labelsize = 8
+fontsize = 15
+labelsize = 12
+lettersize = 20
 alpha = 0.7
 marker_size = 2
 
@@ -171,15 +172,15 @@ ax.set_xlim([-0.5, n_tol - 0.5])
 ax.set_xticks(x_ticks)
 ax.set_xticklabels([])
 for i_tol, (a_label, r_label) in enumerate(zip(a_labels, r_labels)):
-    ax.text((i_tol+0.5) / (n_tol), -0.06, a_label, fontsize=labelsize,
+    ax.text((i_tol+0.5) / (n_tol), -0.08, a_label, fontsize=labelsize,
             transform=ax.transAxes,
             horizontalalignment='center', verticalalignment='bottom')
-    ax.text((i_tol+0.5) / (n_tol), -0.1, r_label, fontsize=labelsize,
+    ax.text((i_tol+0.5) / (n_tol), -0.13, r_label, fontsize=labelsize,
             transform=ax.transAxes,
             horizontalalignment='center', verticalalignment='bottom')
-ax.text(-0.07, -0.06, 'Abs. tol.:', fontsize=labelsize, transform=ax.transAxes,
+ax.text(-0.13, -0.08, 'Abs. tol.:', fontsize=labelsize, transform=ax.transAxes,
         verticalalignment='bottom')
-ax.text(-0.07, -0.1, 'Rel. tol.:',  fontsize=labelsize, transform=ax.transAxes,
+ax.text(-0.13, -0.13, 'Rel. tol.:',  fontsize=labelsize, transform=ax.transAxes,
         verticalalignment='bottom')
 
 # Plot text 'B'
@@ -191,6 +192,6 @@ plt.tight_layout()
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.pdf"))
-plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.png"))
+plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.png"), dpi=300)
 
 #plt.show()

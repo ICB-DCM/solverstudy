@@ -8,9 +8,10 @@ from C import (
     DIR_FIGURES, ATOLS_ALL, RTOLS_ALL)
 
 # Figure object
-fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(12, 6))
-fontsize = 12
-labelsize = 8
+fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(12, 7))
+fontsize = 15
+labelsize = 12
+lettersize = 20
 alpha = 0.7
 marker_size = 2
 
@@ -38,7 +39,9 @@ n_rtol = len(RTOLS_ALL)
 xs = np.arange(n_atol * n_rtol + (n_atol - 1))
 
 # Absolute tolerance colors
-colors = ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854', '#ffd92f']
+# No longer used after update
+# colors = ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854', '#ffd92f']
+color='#c0c0c0'
 
 # Normalize simulation times by (1e-6, 1e-6)
 ref_tol = ('1e-6', '1e-6')
@@ -51,17 +54,14 @@ times[ref_tol] /= times[ref_tol]
 # Flat arrays (last dimension expanded for times)
 failures_flat = []
 times_flat = []
-colors_flat = []
 for i_atol, atol in enumerate(ATOLS_ALL):
     for rtol in RTOLS_ALL:
         failures_flat.append(failures[(atol, rtol)])
         times_flat.append(times[(atol, rtol)][~np.isnan(times[(atol, rtol)])])
-        colors_flat.append(colors[i_atol])
     # Empty
     if i_atol < n_atol - 1:
         failures_flat.append(np.nan)
         times_flat.append(np.array([]))
-        colors_flat.append('white')
 
 ###############################################################################
 # Figure 1: Simulation times box plot
@@ -73,7 +73,7 @@ bp = ax.boxplot(
     positions=xs,
     widths=0.5, patch_artist=True)
 # Prettify plot
-for patch, color in zip(bp['boxes'], colors_flat):
+for patch in bp['boxes']:
     patch.set_facecolor(color)
 for whisker in bp['whiskers']:
     whisker.set(color='#7570b3', linewidth=1)
@@ -82,10 +82,13 @@ for cap in bp['caps']:
 for median in bp['medians']:
     median.set(color='black', linewidth=2)
 for flier in bp['fliers']:
-    flier.set(marker='+', color='#e7298a', alpha=alpha, markersize=3)
+    flier.set(marker='+', color='#e7298a', alpha=alpha, markersize=4)
 
 # Decorations
-ax.set_ylabel("Relative simulation time")
+ax.text(-0.06, 0.5, "Relative simulation time", rotation=90,
+        transform=ax.transAxes,
+        horizontalalignment='left', verticalalignment='center',
+        fontsize=fontsize)
 ax.set_yscale('log')
 ax.tick_params(labelsize=labelsize)
 ax.spines['top'].set_visible(False)
@@ -97,17 +100,20 @@ ax.set_xlim([-1, len(failures_flat)])
 ax.yaxis.grid(True, linestyle='-', which='both', color='lightgrey', alpha=0.25)
 
 # Plot text 'A'
-ax.text(-0.05, 1, 'A', fontsize=fontsize + 3, transform=ax.transAxes)
+ax.text(-0.085, 1, 'A', fontsize=lettersize, transform=ax.transAxes)
 
 ###############################################################################
 # Figure 2: Failure rates bar plot
 
 ax = axes[1]
 
-ax.bar(x=xs, height=failures_flat, color=colors_flat, width=0.5,
+ax.bar(x=xs, height=failures_flat, color=color, width=0.5,
        edgecolor='black')
 
-ax.set_ylabel("Failure rate [%]")
+ax.text(-0.06, 0.5, "Failure rate [%]", rotation=90, transform=ax.transAxes,
+        horizontalalignment='left', verticalalignment='center',
+        fontsize=fontsize)
+#ax.set_ylabel("Failure rate [%]", fontsize=fontsize)
 #ax.set_yscale('log')
 ax.tick_params(labelsize=labelsize)
 ax.spines['top'].set_visible(False)
@@ -123,21 +129,21 @@ r_labels = [f'$10^{{{tol.split("e")[1]}}}$' for tol in RTOLS_ALL]
 for i_atol, atol in enumerate(ATOLS_ALL):
     for i_rtol, rtol in enumerate(RTOLS_ALL):
         if i_rtol == 0:
-            ax.text(i_atol*(n_atol+1), -15, a_labels[i_atol],
+            ax.text(i_atol*(n_atol+1), -17, a_labels[i_atol],
                     fontsize=labelsize,
                     transform=ax.transData, rotation=45,
                     horizontalalignment='center', verticalalignment='bottom')
-        ax.text(i_atol*(n_atol+1) + i_rtol, -25, r_labels[i_rtol],
+        ax.text(i_atol*(n_atol+1) + i_rtol, -28, r_labels[i_rtol],
                 fontsize=labelsize,
                 transform=ax.transData, rotation=45,
                 horizontalalignment='center', verticalalignment='bottom')
-ax.text(-3, -15, 'Abs. tol.:', fontsize=labelsize+1, transform=ax.transData,
+ax.text(-4.3, -17, 'Abs. tol.:', fontsize=labelsize+1, transform=ax.transData,
         verticalalignment='bottom')
-ax.text(-3, -25, 'Rel. tol.:',  fontsize=labelsize+1, transform=ax.transData,
+ax.text(-4.3, -28, 'Rel. tol.:',  fontsize=labelsize+1, transform=ax.transData,
         verticalalignment='bottom')
 
 # Plot text 'B'
-ax.text(-0.05, 1, 'B', fontsize=fontsize + 3, transform=ax.transAxes)
+ax.text(-0.085, 1, 'B', fontsize=lettersize, transform=ax.transAxes)
 
 # Condense layout
 plt.tight_layout()
@@ -145,6 +151,6 @@ plt.tight_layout()
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.pdf"))
-plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.png"))
+plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.png"), dpi=300)
 
 #plt.show()
