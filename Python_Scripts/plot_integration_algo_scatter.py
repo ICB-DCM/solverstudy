@@ -341,17 +341,17 @@ def plot_scatter_times(data_setting_a, data_setting_b,
 
 plot_scatter_times(data_am, data_bdf, 'AM', 'BDF',
                    cm_am, cm_bdf, darkest_am, darkest_bdf,
-                   0.05, 2e3, 400,
+                   0.05, 2e3, 700,
                    axs[4], axs[5], 'A', 'B')
 
 plot_scatter_times(data_lsoda, data_am, 'LSODA', 'AM',
                    cm_lsoda, cm_am, darkest_lsoda, darkest_am,
-                   0.05, 2e5, 400,
+                   0.05, 2e5, 700,
                    axs[2], axs[3], 'C', 'D')
 
 plot_scatter_times(data_lsoda, data_bdf, 'LSODA', 'BDF',
                    cm_lsoda, cm_bdf, darkest_lsoda, darkest_bdf,
-                   0.05, 2e5, 400,
+                   0.05, 2e5, 700,
                    axs[0], axs[1], 'E', 'F')
 
 # Save plot
@@ -360,4 +360,4 @@ plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.png"))
 
 # show figure
-#plt.show()
+plt.show()
