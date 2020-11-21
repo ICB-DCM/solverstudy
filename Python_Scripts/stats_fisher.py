@@ -34,6 +34,7 @@ for atol, rtol in ATOL_RTOLS:
     successes[('LSODA', 'Newton-type', 'Dense', (atol, rtol))] = \
         df.shape[0] - sum(df['failure'])
 
+
 def to_arr(str_or_arr: str) -> List:
     """Keep if iterable, convert string to iterable."""
     if isinstance(str_or_arr, str):
@@ -117,4 +118,3 @@ for linsol in LINSOL_DCT.values():
                             linsols='Dense'),
                 *sumit_both(solalgs='BDF', nonlinsols='Newton-type',
                             linsols=linsol))
-

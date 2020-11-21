@@ -101,7 +101,8 @@ fig.text(0.01, 0.5, "Number of models", ha='center', va='center',
 
 fig.text(0.5, 0.97, "relative error tolerance", ha='center', va='center',
          fontsize=fontsize)
-fig.text(0.03, 0.5, "absolute error tolerance.", rotation='vertical', ha='center', va='center',
+fig.text(0.03, 0.5, "absolute error tolerance", rotation='vertical',
+         ha='center', va='center',
          fontsize=fontsize)
 
 # Condense layout
