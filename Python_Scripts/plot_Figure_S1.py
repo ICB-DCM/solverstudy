@@ -170,4 +170,3 @@ plt.gcf().set_size_inches((15.0, 10.0))
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.pdf'))
 plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.png'), dpi=300)
-
