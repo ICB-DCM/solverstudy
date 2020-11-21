@@ -36,7 +36,7 @@ for atol, rtol in ATOL_RTOLS:
                 DIR_RESULTS_ALGORITHMS,
                 f"atol_{atol}__rtol_{rtol}__linSol_{linsol}" \
                 f"__nonlinSol_{NONLINSOL_IDS['Newton-type']}" \
-                f"__solAlg_{SOLALG_IDS['BDF']}.tsv")
+                f"__solAlg_{SOLALG_IDS['Adams']}.tsv")
         df = pd.read_csv(f, sep='\t', index_col=0).sort_index()
         times.setdefault((atol, rtol), {})[linsol] = \
             1000 * np.array(df['median_intern'])
@@ -158,7 +158,7 @@ plt.tight_layout()
 
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
-plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.pdf"))
-plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.png"), dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp3.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp3.png"), dpi=300)
 
 #plt.show()

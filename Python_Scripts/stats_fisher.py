@@ -1,4 +1,4 @@
-"""Statistical tests: Fisher's exact test on various targets."""
+"""Fisher's exact tests on various targets."""
 
 import os
 import pandas as pd

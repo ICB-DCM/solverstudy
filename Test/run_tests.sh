@@ -47,6 +47,7 @@ time python execute_study_tolerances.py
 
 # Run plots
 for script in `ls plot_*`; do
+  # Some scripts use data not available in test mode
   if [ $script != "plot_Figure_S1.py" ] \
       && [ $script != "plot_integration_algo_scatter.py" ]; then
     python $script

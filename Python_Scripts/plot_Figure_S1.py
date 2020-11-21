@@ -139,7 +139,7 @@ for i_key, key in enumerate(keys_amici[6:]):
 
 # plot accepting with all settings
 plt.plot(min_errors_copasi, model_range_copasi, '-', linewidth=3,
-         color=colors_copasi[0], label='COPASI, any settings')
+         color=colors_copasi[0], label='COPASI, any setting')
 
 for i_key, key in enumerate(keys_copasi):
     data_copasi = np.array(list(all_models_copasi[key]))
@@ -151,11 +151,11 @@ for i_key, key in enumerate(keys_copasi):
 plt.plot([1e-4, 1e-4], [-5, 410], 'k:', linewidth=2)
 
 plt.legend(fontsize=12)
-plt.xlabel('maximal allowed error of state trajectories (acceptance threshold)',
-           fontsize=16)
-plt.xticks(fontsize=16)
-plt.yticks(fontsize=16)
-plt.ylabel('number of accepted models', fontsize=16)
+plt.xlabel('Maximal allowed error of state trajectories (acceptance threshold)',
+           fontsize=15)
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.ylabel('Number of accepted models', fontsize=15)
 plt.xscale('log')
 plt.ylim((-10, 420))
 
@@ -170,4 +170,3 @@ plt.gcf().set_size_inches((15.0, 10.0))
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.pdf'))
 plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.png'), dpi=300)
-
