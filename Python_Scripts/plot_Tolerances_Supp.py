@@ -61,9 +61,9 @@ for i_atol, atol in enumerate(ATOLS_ALL):
         ax.hist(times[(atol, rtol)], bins=bins, color='#c0c0c0')
 
         # Failure rate
-        ax.text(0.9, 0.9, f"{failures[(atol, rtol)]:.1f}%",
-                ha='right', va='top', transform=ax.transAxes,
-                fontsize=fontsize)
+        ax.text(0.5, 0.97, f"Failure rate: {failures[(atol, rtol)]:.1f}%",
+                ha='center', va='top', transform=ax.transAxes,
+                fontsize=fontsize-1)
 
         # Axes decorations
         ax.set_xlim([xmin, xmax])
@@ -77,7 +77,10 @@ for i_atol, atol in enumerate(ATOLS_ALL):
         else:
             ax.set_ylabel(a_labels[i_atol], fontsize=fontsize)
         if i_atol < n_atol - 1:
-            ax.set_xticks([])
+            ax.set_xticks([1, 10, 100])
+            ax.set_xticklabels([])
+        else:
+            ax.set_xticks([1, 10, 100])
         if i_atol == 0:
             ax.set_xlabel(r_labels[i_rtol], fontsize=fontsize)
             ax.xaxis.set_label_position('top')
@@ -96,9 +99,9 @@ fig.text(0.5, 0.01, "Relative simulation time", ha='center', va='center',
 fig.text(0.01, 0.5, "Number of models", ha='center', va='center',
          rotation='vertical', fontsize=fontsize+3)
 
-fig.text(0.5, 0.97, "Rel. tol.", ha='center', va='center',
+fig.text(0.5, 0.97, "relative error tolerance", ha='center', va='center',
          fontsize=fontsize)
-fig.text(0.03, 0.5, "Abs. tol.", rotation='vertical', ha='center', va='center',
+fig.text(0.03, 0.5, "absolute error tolerance.", rotation='vertical', ha='center', va='center',
          fontsize=fontsize)
 
 # Condense layout
