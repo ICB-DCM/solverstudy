@@ -139,7 +139,7 @@ for i_key, key in enumerate(keys_amici[6:]):
 
 # plot accepting with all settings
 plt.plot(min_errors_copasi, model_range_copasi, '-', linewidth=3,
-         color=colors_copasi[0], label='COPASI, any settings')
+         color=colors_copasi[0], label='COPASI, any setting')
 
 for i_key, key in enumerate(keys_copasi):
     data_copasi = np.array(list(all_models_copasi[key]))
