@@ -1,6 +1,5 @@
 import os
 import matplotlib.pyplot as plt
-import matplotlib as mpl
 import numpy as np
 import scipy.stats as st
 import pandas as pd
@@ -83,15 +82,18 @@ sns.histplot(data.loc[data['Composition'] == 'accepted', 'Number of species'],
              edgecolor=[.2, .1, .7, .9], facecolor=[.2, .1, .7, .4],
              binrange=[0, 3.5])
 
-sns.histplot(data=data.loc[data['Composition'] == 'all models'], y='Number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'all models'],
+             y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[0,0,0,1], facecolor=[0, 0, 0, 0],
              binrange=[0, 3.5])
-sns.histplot(data=data.loc[data['Composition'] == 'rejected'], y='Number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'rejected'],
+             y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[.8, .5, .1, .9], facecolor=[.8, .5, .1, .4],
              binrange=[0, 3.5])
-sns.histplot(data=data.loc[data['Composition'] == 'accepted'], y='Number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'accepted'],
+             y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[.2, .1, .7, .9], facecolor=[.2, .1, .7, .4],
              binrange=[0, 3.5])
@@ -103,14 +105,14 @@ plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.png'), dpi=300)
 
 species_all = all_models['Number of species'].values
 species_acc = all_models[all_models['Composition'] ==
-                              'accepted']['Number of species'].values
-species_rej =  all_models[all_models['Composition'] ==
-                              'rejected']['Number of species'].values
+                         'accepted']['Number of species'].values
+species_rej = all_models[all_models['Composition'] ==
+                         'rejected']['Number of species'].values
 reactions_all = all_models['Number of reactions'].values
 reactions_acc = all_models[all_models['Composition'] ==
-                              'accepted']['Number of reactions'].values
-reactions_rej =  all_models[all_models['Composition'] ==
-                              'rejected']['Number of reactions'].values
+                           'accepted']['Number of reactions'].values
+reactions_rej = all_models[all_models['Composition'] ==
+                           'rejected']['Number of reactions'].values
 
 ks_species_all_acc = st.ks_2samp(species_all, species_acc)
 ks_species_all_rej = st.ks_2samp(species_all, species_rej)
@@ -120,9 +122,15 @@ ks_reactions_all_acc = st.ks_2samp(reactions_all, reactions_acc)
 ks_reactions_all_rej = st.ks_2samp(reactions_all, reactions_rej)
 ks_reactions_acc_rej = st.ks_2samp(reactions_acc, reactions_rej)
 
-print('KS-test, all models vs. accepted models, number of species:', ks_species_all_acc)
-print('KS-test, all models vs. rejected models, number of species:', ks_species_all_rej)
-print('KS-test, accepted models vs. rejected models, number of species:', ks_species_acc_rej)
-print('KS-test, all models vs. accepted models, number of reactions', ks_reactions_all_acc)
-print('KS-test, all models vs. rejected models, number of reactions', ks_reactions_all_rej)
-print('KS-test, accepted models vs. rejected models, number of reactions', ks_reactions_acc_rej)
+print('KS-test, all models vs. accepted models, number of species:',
+      ks_species_all_acc)
+print('KS-test, all models vs. rejected models, number of species:',
+      ks_species_all_rej)
+print('KS-test, accepted models vs. rejected models, number of species:',
+      ks_species_acc_rej)
+print('KS-test, all models vs. accepted models, number of reactions',
+      ks_reactions_all_acc)
+print('KS-test, all models vs. rejected models, number of reactions',
+      ks_reactions_all_rej)
+print('KS-test, accepted models vs. rejected models, number of reactions',
+      ks_reactions_acc_rej)

@@ -23,7 +23,8 @@ model_list = list(max_errors_amici['amici_path'])
 for model in model_list:
     # get all SBML models (for which import worked), and read out the maximal
     # error found during trajectory comparison
-    mi = int(max_errors_amici[max_errors_amici['amici_path'] == model].index.values)
+    mi = int(max_errors_amici[
+        max_errors_amici['amici_path'] == model].index.values)
 
     # discard the column with model name
     error_values_amici = np.array(max_errors_amici.loc[mi,:].values[1:],
@@ -31,13 +32,15 @@ for model in model_list:
     min_errors_amici.append(np.min(error_values_amici))
 
 # First create a table with the numeric values
-all_models_amici = pd.DataFrame(data=np.array(max_errors_amici.values[:, 1:], dtype=float),
-                          columns=list(max_errors_amici.keys())[1:],
-                          index=model_list)
+all_models_amici = pd.DataFrame(
+    data=np.array(max_errors_amici.values[:, 1:], dtype=float),
+    columns=list(max_errors_amici.keys())[1:],
+    index=model_list)
 # then add the string labels to not confuse datatypes
-all_models_amici = all_models_amici.join(pd.DataFrame(data=min_errors_amici,
-                                                      columns=('best simulation',),
-                                                      index=model_list))
+all_models_amici = all_models_amici.join(pd.DataFrame(
+    data=min_errors_amici,
+    columns=('best simulation',),
+    index=model_list))
 min_errors_amici = np.array(min_errors_amici)
 min_errors_amici.sort()
 
@@ -53,21 +56,24 @@ model_list = list(max_errors_copasi['copasi_path'])
 for model in model_list:
     # get all SBML models (for which import worked), and read out the maximal
     # error found during trajectory comparison
-    mi = int(max_errors_copasi[max_errors_copasi['copasi_path'] == model].index.values)
+    mi = int(max_errors_copasi[
+        max_errors_copasi['copasi_path'] == model].index.values)
 
     # discard the column with model name
-    error_values_copasi = np.array(max_errors_copasi.loc[mi,:].values[1:],
-                                  dtype=float)
+    error_values_copasi = np.array(max_errors_copasi.loc[mi, :].values[1:],
+                                   dtype=float)
     min_errors_copasi.append(np.min(error_values_copasi))
 
 # First create a table with the numeric values
-all_models_copasi = pd.DataFrame(data=np.array(max_errors_copasi.values[:, 1:], dtype=float),
-                          columns=list(max_errors_copasi.keys())[1:],
-                          index=model_list)
+all_models_copasi = pd.DataFrame(
+    data=np.array(max_errors_copasi.values[:, 1:], dtype=float),
+    columns=list(max_errors_copasi.keys())[1:],
+    index=model_list)
 # then add the string labels to not confuse datatypes
-all_models_copasi = all_models_copasi.join(pd.DataFrame(data=min_errors_copasi,
-                                                        columns=('best simulation',),
-                                                        index=model_list))
+all_models_copasi = all_models_copasi.join(pd.DataFrame(
+    data=min_errors_copasi,
+    columns=('best simulation',),
+    index=model_list))
 min_errors_copasi = np.array(min_errors_copasi)
 min_errors_copasi.sort()
 
@@ -144,7 +150,8 @@ plt.plot(min_errors_copasi, model_range_copasi, '-', linewidth=3,
 for i_key, key in enumerate(keys_copasi):
     data_copasi = np.array(list(all_models_copasi[key]))
     data_copasi.sort()
-    plt.plot(data_copasi, model_range_copasi, linewidth=1.5, label=leg_copasi[i_key],
+    plt.plot(data_copasi, model_range_copasi, linewidth=1.5,
+             label=leg_copasi[i_key],
              linestyle='dashdot', color=colors_copasi[i_key + 1])
 
 # plot vertical line

@@ -79,9 +79,9 @@ def plot_scatter_times(data_setting_a, data_setting_b,
                        lower_bound, upper_bound, ratio_bound,
                        ax_left, ax_right, letter_left, letter_right):
     # create list of doubles for scatter plot
-    setting_a_better_x = [] # red
+    setting_a_better_x = []  # red
     setting_a_better_y = []
-    setting_b_better_x = [] # blue
+    setting_b_better_x = []  # blue
     setting_b_better_y = []
     ratio_a_over_b = []
     ratio_b_over_a = []
@@ -95,7 +95,7 @@ def plot_scatter_times(data_setting_a, data_setting_b,
     n_states_setting_a_failed = []
     n_states_setting_b_failed = []
     n_states_both_failed = []
-    equal_x = [] # yellow
+    equal_x = []  # yellow
     equal_y = []
     setting_a_failed_x = []
     setting_a_failed_y = []
@@ -186,45 +186,56 @@ def plot_scatter_times(data_setting_a, data_setting_b,
     a_failed_percentage = round(100 * len(setting_a_failed_x) / data_am.size, 2)
     b_failed_percentage = round(100 * len(setting_b_failed_x) / data_am.size, 2)
     both_failed_percentage = round(100 * len(both_failed_x) / data_am.size, 2)
+    # plot a-better points (above diagonal)
     ax_left.scatter(
         setting_a_better_x, setting_a_better_y,
         s=marker_size, c=kde_color_a, cmap=colormap_a,
         label=f'{setting_a_name} faster: {a_faster_percentage}%',
         zorder=10, clip_on=False, alpha=alpha)
+    # plot b-better points (below diagonal)
     ax_left.scatter(
         setting_b_better_x, setting_b_better_y,
         s=marker_size, c=kde_color_b, cmap=colormap_b,
         label=f'{setting_b_name} faster: {b_faster_percentage}%',
         zorder=10, clip_on=False, alpha=alpha)
+    # plot a=b-points (on diagonal)
     ax_left.scatter(
         equal_x, equal_y, s=marker_size, c='grey', zorder=10, clip_on=False,
         alpha=alpha)
+    # plot a-failed points on right axis
     ax_left.scatter(
         setting_a_failed_x, setting_a_failed_y,
         c=color_name_a, cmap=colormap_b, marker='D',
         s=marker_size, facecolors='none', edgecolors=color_name_b, zorder=10,
         clip_on=False)
+    # plot b-failed points on upper axis
     ax_left.scatter(
         setting_b_failed_x, setting_b_failed_y,
         c=color_name_b, cmap=colormap_a, s=marker_size,
         facecolors='none', edgecolors=color_name_a, marker='D', zorder=10,
         clip_on=False)
+    # plot both-failed points in upper-right corner
     ax_left.scatter(
         both_failed_x, both_failed_y, s=marker_size, facecolors='none',
         edgecolors='grey', marker='D', zorder=10, clip_on=False)
+    # plot diagonal
     ax_left.plot([lower_bound, upper_bound], [lower_bound, upper_bound],
-            c='black', zorder=20)
+                 c='black', zorder=20)
+
+    # decorations
     ax_left.set_xlim([lower_bound, upper_bound])
     ax_left.set_ylim([lower_bound, upper_bound])
     ax_left.set_xscale('log')
     ax_left.set_yscale('log')
-    ax_left.set_xlabel(f'{setting_a_name} simulation time [ms]', fontsize=fontsize)
-    ax_left.set_ylabel(f'{setting_b_name} simulation time [ms]', fontsize=fontsize)
+    ax_left.set_xlabel(f'{setting_a_name} simulation time [ms]',
+                       fontsize=fontsize)
+    ax_left.set_ylabel(f'{setting_b_name} simulation time [ms]',
+                       fontsize=fontsize)
 
     geo_mean_bounds = np.sqrt(upper_bound * lower_bound)
     beyond_bound = upper_bound * 1.15
 
-    # plot legend manually
+    # plot a/b faster texts
     ax_left.text(.2 * geo_mean_bounds, .25 * upper_bound,
                  f'{setting_a_name} faster: {a_faster_percentage}%',
                  fontsize=fontsize, va='top', ha='center',
@@ -234,6 +245,7 @@ def plot_scatter_times(data_setting_a, data_setting_b,
                  fontsize=fontsize, va='bottom', ha='left',
                  color=color_name_b)
 
+    # decorations
     ax_left.tick_params(labelsize=labelsize)
     ax_left.spines['top'].set_linestyle(linestyle)
     ax_left.spines['top'].set_linewidth(linewidth)
@@ -242,7 +254,7 @@ def plot_scatter_times(data_setting_a, data_setting_b,
     ax_left.spines['top'].set_color('grey')
     ax_left.spines['right'].set_color('grey')
 
-    # write text over axis
+    # write failed-%-text over axes
     ax_left.text(
         beyond_bound, geo_mean_bounds,
         f'only {setting_a_name} failed: {a_failed_percentage}%',
@@ -265,7 +277,7 @@ def plot_scatter_times(data_setting_a, data_setting_b,
     ###########################################################################
     # Right ratio plot
 
-    # create and adapt spines
+    # hide spines
     ax_right.spines['left'].set_visible(False)
     ax_right.spines['right'].set_visible(False)
     ax_right.spines['top'].set_visible(False)
@@ -280,22 +292,27 @@ def plot_scatter_times(data_setting_a, data_setting_b,
                   linestyle=linestyle, linewidth=linewidth)
 
     # plot data
+    # plot b-better points (right)
     ax_right.scatter(
         ratio_a_over_b, n_states_setting_b_better,
         s=marker_size, c=kde_color_b, cmap=colormap_b, alpha=alpha,
         zorder=10, clip_on=False)
+    # plot a-better points (left)
     ax_right.scatter(
         ratio_b_over_a, n_states_setting_a_better,
         s=marker_size, c=kde_color_a, cmap=colormap_a, alpha=alpha,
         zorder=10, clip_on=False)
+    # plot a=b-points on center axis
     ax_right.scatter(
         ratio_equal, num_states_equal,
         s=marker_size, c='grey', alpha=alpha,
         zorder=100, clip_on=False)
+    # plot a-failed points on right axis
     ax_right.scatter(
         ratio_setting_a_failed, n_states_setting_a_failed,
         s=marker_size, c=color_name_b, cmap=colormap_b, alpha=alpha,
         zorder=10, clip_on=False)
+    # plot b-failed points on left axis
     ax_right.scatter(
         ratio_setting_b_failed, n_states_setting_b_failed,
         s=marker_size, c=color_name_a, cmap=colormap_a,
