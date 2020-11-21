@@ -12,8 +12,8 @@ from util import (
 
 
 # Solver algorithm
-sol_alg = '2'
-non_lin_sol = '2'
+sol_alg = '2'  # BDF
+non_lin_sol = '2'  # Newton-type
 
 # Sub-select files for solver algorithm and non-linear solver
 # And remove (1e-6, 1e-6) tolerance combination

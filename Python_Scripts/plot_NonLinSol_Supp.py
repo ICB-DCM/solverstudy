@@ -11,7 +11,7 @@ from util import (
     atol_from_fname, rtol_from_fname)
 
 
-solalg = '2'  # AM
+solalg = '1'  # AM
 linsol = '9'  # KLU
 
 # Sub-select files for solver algorithm and non-linear solver
