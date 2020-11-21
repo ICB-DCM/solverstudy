@@ -5,21 +5,17 @@ import scipy.stats as stats
 import matplotlib.pyplot as plt
 
 from C import (
-    DIR_RESULTS_ALGORITHMS, LINSOL_DCT, ATOL_RTOLS, DIR_FIGURES)
+    DIR_RESULTS_ALGORITHMS, LINSOL_DCT, ATOL_RTOLS, SOLALG_IDS, NONLINSOL_IDS,
+    DIR_FIGURES)
 from util import (
     solalg_from_fname, nonlinsol_from_fname, linsol_from_fname,
     atol_from_fname, rtol_from_fname)
 
-
-# Solver algorithm
-sol_alg = '1'  # Adams
-non_lin_sol = '2'  # Newton-type
-
 # Sub-select files for solver algorithm and non-linear solver
 # And remove (1e-6, 1e-6) tolerance combination
 files = [f for f in os.listdir(DIR_RESULTS_ALGORITHMS)
-         if solalg_from_fname(f) == sol_alg and
-         nonlinsol_from_fname(f) == non_lin_sol and
+         if solalg_from_fname(f) == str(SOLALG_IDS['Adams']) and
+         nonlinsol_from_fname(f) == str(NONLINSOL_IDS['Newton-type']) and
          ((atol_from_fname(f), rtol_from_fname(f)) in ATOL_RTOLS)]
 
 # Extract times and numbers of state variables
