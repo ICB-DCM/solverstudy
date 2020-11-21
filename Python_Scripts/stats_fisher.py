@@ -24,6 +24,15 @@ for solalg, solalg_s in SOLALG_DCT.items():
                 successes[(solalg_s, nonlinsol_s, linsol_s, (atol, rtol))] = \
                     df.shape[0] - sum(df['failure'])
 
+for atol, rtol in ATOL_RTOLS:
+    f = f"atol_{atol}__rtol_{rtol}__linSol_{1}" \
+        f"__nonlinSol_{2}__solAlg_{3}.tsv"
+    df = pd.read_csv(
+        os.path.join(DIR_RESULTS_ALGORITHMS, f), sep='\t')
+    failures[('LSODA', 'Newton-type', 'Dense', (atol, rtol))] = \
+        sum(df['failure'])
+    successes[('LSODA', 'Newton-type', 'Dense', (atol, rtol))] = \
+        df.shape[0] - sum(df['failure'])
 
 def to_arr(str_or_arr: str) -> List:
     """Keep if iterable, convert string to iterable."""
@@ -100,3 +109,12 @@ for solalg in SOLALG_DCT.values():
                                 linsols=linsol),
                     *sumit_both(solalgs=solalg, nonlinsols='Newton-type',
                                 linsols=linsol))
+
+print(f"\nLSODA vs BDF")
+for linsol in LINSOL_DCT.values():
+    print(f"LSODA vs BDF for linsol {linsol}")
+    fisher_test(*sumit_both(solalgs='LSODA', nonlinsols='Newton-type',
+                            linsols='Dense'),
+                *sumit_both(solalgs='BDF', nonlinsols='Newton-type',
+                            linsols=linsol))
+
