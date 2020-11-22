@@ -126,7 +126,7 @@ The main study consists of two parts: an algorithm study and a tolerance study:
 
 The analysis is based on result files contained in
 `SOLVERSTUDY_DIR_BASE/results` as well as
-`SOLVERSTUDY_DIR_BASE/Models/{max_trajectory_errors_{amici,copasi}.tsv,model_summary.tsv}`.
+`SOLVERSTUDY_DIR_BASE/Models/{max_trajectory_errors_{amici,copasi}},model_summary}.tsv`.
 Those files are contained in this repository under
 `SOLVERSTUDY_DIR_BASE=CACHE`.
 
