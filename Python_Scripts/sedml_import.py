@@ -11,7 +11,7 @@ from C import DIR_MODELS_SEDML, JWS_MODEL_FILE
 
 logger = logging.getLogger(LOGGER_NAME)
 
-BASE_URL = "https://jjj.bio.vu.nl"
+BASE_URL = "https://jjj.mib.ac.uk"
 BASE_FOLDER = DIR_MODELS_SEDML
 
 
