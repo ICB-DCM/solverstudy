@@ -394,4 +394,4 @@ plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.png"),
             dpi=300)
 
 # show figure
-plt.show()
+#plt.show()
