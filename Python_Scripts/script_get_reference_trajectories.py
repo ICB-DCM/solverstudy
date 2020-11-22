@@ -60,7 +60,7 @@ def get_reference_trajectories():
     os.makedirs(dir_traj_jws)
 
     # Get jws model slug list
-    url = "https://jjj.bio.vu.nl/rest/models/?format=json"
+    url = "https://jjj.mib.ac.uk/rest/models/?format=json"
     jws_model_infos = json.loads(requests.get(url).text)
 
     # Loop over all models

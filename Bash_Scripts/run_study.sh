@@ -46,3 +46,7 @@ for plot_script in `ls plot_*`; do
   time python $plot_script
 done
 
+# Run further analyses
+for script in `ls stats_*`; do
+  python $script
+done
