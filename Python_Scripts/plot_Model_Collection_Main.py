@@ -149,7 +149,7 @@ plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.pdf'))
 plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.eps'),
             format='eps', dpi=300)
 plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.png'), dpi=300)
-plt.show()
+#plt.show()
 
 
 
