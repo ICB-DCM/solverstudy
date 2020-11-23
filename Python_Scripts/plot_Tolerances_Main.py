@@ -100,7 +100,7 @@ ax.set_xlim([-1, len(failures_flat)])
 ax.yaxis.grid(True, linestyle='-', which='both', color='lightgrey', alpha=0.25)
 
 # Plot text 'A'
-ax.text(-0.085, 1, 'A', fontsize=lettersize, transform=ax.transAxes)
+ax.text(-0.085, 1, 'a', fontsize=lettersize, transform=ax.transAxes)
 
 ###############################################################################
 # Figure 2: Failure rates bar plot
@@ -143,7 +143,7 @@ ax.text(-4.3, -28, 'Rel. tol.:',  fontsize=labelsize+1, transform=ax.transData,
         verticalalignment='bottom')
 
 # Plot text 'B'
-ax.text(-0.085, 1, 'B', fontsize=lettersize, transform=ax.transAxes)
+ax.text(-0.085, 1, 'b', fontsize=lettersize, transform=ax.transAxes)
 
 # Condense layout
 plt.tight_layout()
