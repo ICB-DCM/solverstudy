@@ -61,7 +61,7 @@ for i_atol, atol in enumerate(ATOLS_ALL):
         ax.hist(times[(atol, rtol)], bins=bins, color='#c0c0c0')
 
         # Failure rate
-        ax.text(0.5, 0.97, f"Failure rate: {failures[(atol, rtol)]:.1f}%",
+        ax.text(0.5, 0.97, f"Failed: {failures[(atol, rtol)]:.1f}%",
                 ha='center', va='top', transform=ax.transAxes,
                 fontsize=fontsize-1)
 
@@ -111,6 +111,8 @@ plt.tight_layout(rect=[0.03, 0.03, 0.97, 0.97])
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Supp.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Supp.eps"),
+            format='eps', dpi=300)
 plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Supp.png"), dpi=300)
 
 #plt.show()

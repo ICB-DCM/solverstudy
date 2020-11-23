@@ -27,7 +27,8 @@ for model in model_list:
     # check if import worked
     if all(model_info.loc[mi, 'amici_import'] != 'OK'):
         continue
-
+    if all([str(val) == 'nan' for val in model_info.loc[mi, 'copasi_path']]):
+        continue
     # we want to plot on log10-scale
     n_species.append(np.log10(model_info.loc[mi0, 'n_species']))
     n_reactions.append(np.log10(model_info.loc[mi0, 'n_reactions']))
@@ -52,7 +53,7 @@ copied_models['Composition'] = ['all models'] * all_models.shape[0]
 data = pd.concat([copied_models, all_models])
 
 # set plotting properties
-sns.set(rc={'axes.labelsize':15,
+sns.set(rc={'axes.labelsize':16,
             'xtick.labelsize':12,
             'ytick.labelsize':12})
 sns.set_style('ticks')
@@ -62,7 +63,7 @@ fig = sns.JointGrid(data=data, hue='Composition',
                     x='Number of species', y='Number of reactions',
                     xlim=(-.2, 3.5), ylim=(-.2, 3.5),
                     palette=[[0, 0, 0, 1], [.25, .15, .85, 1], [.9, .6, .2, 1]])
-fig = fig.plot_joint(sns.scatterplot, hue='Composition', data=data)
+# fig = fig.plot_joint(sns.scatterplot, hue='Composition', data=data)
 
 fig.ax_joint.set_yticks((0, 1, 2, 3))
 fig.ax_joint.set_yticklabels(('$10^0$', '$10^1$', '$10^2$', '$10^3$'))
@@ -97,22 +98,73 @@ sns.histplot(data=data.loc[data['Composition'] == 'accepted'],
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[.2, .1, .7, .9], facecolor=[.2, .1, .7, .4],
              binrange=[0, 3.5])
+# we want to highlight the models form Biomodels and those from JWS differently
+biomodels = ('eungdamrong2007', 'froehlich2018', 'holzhutter2004', 'hui2014',
+             'lai2014', 'leber2015', 'levchenko2000', 'ouzounoglou2014',
+             'pathak2013', 'pathak2013a', 'pritchard2002', 'proctor2010',
+             'proctor2013', 'qi2013', 'sasagawa2005', 'sengupta2015',
+             'singh2006', 'sivakumar2011', 'ueda2001', 'ung2008', 'yang2007')
 
-plt.gcf().set_size_inches((9.0, 9.0))
+
+for model in all_models.index:
+    # plot each model as a point, with different color (accepted/rejected)
+    # and marker (biomodels/JWS)
+    if all_models.loc[model, 'Composition'] == 'accepted':
+        col = [.2, .1, .7, .9]
+    else:
+        col = [.8, .5, .1, .9]
+    if model in biomodels:
+        form = 'P'
+    else:
+        form = 'o'
+
+    # plot into the joint_plot axes object
+    fig.ax_joint.plot(all_models.loc[model, 'Number of species'],
+                      all_models.loc[model, 'Number of reactions'],
+                      form, color=col)
+
+# draw the legend
+fig.ax_joint.text(0.3, 3.4, 'accepted',
+                  color=[0,0,0,1], fontsize=12, va='center', ha='center')
+fig.ax_joint.text(.95, 3.4, 'rejected',
+                  color=[0, 0, 0, 1], fontsize=12, va='center', ha='center')
+fig.ax_joint.text(1.7, 3.2, 'Biomodels',
+                  color=[0,0,0,1], fontsize=12, va='center', ha='center')
+fig.ax_joint.text(1.7, 3.0, 'JWS online',
+                  color=[0, 0, 0, 1], fontsize=12, va='center', ha='center')
+fig.ax_joint.plot(0.3, 3.2, 'P', color=[.2, .1, .7, .9])
+fig.ax_joint.plot(.95, 3.2, 'P', color=[.8, .5, .1, .9])
+fig.ax_joint.plot(0.3, 3.0, 'o', color=[.2, .1, .7, .9])
+fig.ax_joint.plot(.95, 3.0, 'o', color=[.8, .5, .1, .9])
+
+# Subfigure label
+fig.ax_joint.text(-0.135, 1.17, 'b', fontsize=20,
+                  transform=fig.ax_joint.transAxes)
+
+plt.gcf().set_size_inches((7.0, 7.0))
+
+# save
 os.makedirs(DIR_FIGURES, exist_ok=True)
-plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.pdf'))
-plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.png'), dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.pdf'))
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.eps'),
+            format='eps', dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.png'), dpi=300)
+#plt.show()
+
+
+
+# ===== Statistical tests =====================================================
 
 species_all = all_models['Number of species'].values
 species_acc = all_models[all_models['Composition'] ==
-                         'accepted']['Number of species'].values
-species_rej = all_models[all_models['Composition'] ==
-                         'rejected']['Number of species'].values
+                              'accepted']['Number of species'].values
+species_rej =  all_models[all_models['Composition'] ==
+                              'rejected']['Number of species'].values
 reactions_all = all_models['Number of reactions'].values
 reactions_acc = all_models[all_models['Composition'] ==
-                           'accepted']['Number of reactions'].values
-reactions_rej = all_models[all_models['Composition'] ==
-                           'rejected']['Number of reactions'].values
+                              'accepted']['Number of reactions'].values
+reactions_rej =  all_models[all_models['Composition'] ==
+                              'rejected']['Number of reactions'].values
 
 ks_species_all_acc = st.ks_2samp(species_all, species_acc)
 ks_species_all_rej = st.ks_2samp(species_all, species_rej)

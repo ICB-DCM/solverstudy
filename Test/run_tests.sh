@@ -48,8 +48,10 @@ time python execute_study_tolerances.py
 # Run plots
 for script in `ls plot_*`; do
   # Some scripts use data not available in test mode
+  #  or fail due to too few data points
   if [ $script != "plot_Figure_S1.py" ] \
-      && [ $script != "plot_integration_algo_scatter.py" ]; then
+      && [ $script != "plot_Integration_Algo_Main.py" ] \
+      && [ $script != "plot_Integration_Algo_Supp1.py"] ; then
     python $script
   fi
 done

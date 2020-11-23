@@ -195,8 +195,8 @@ def plot_it(solalg, ax1, ax2, letter_1, letter_2):
     ax.text(-0.13, 1, letter_2, fontsize=labelsize + 5, transform=ax.transAxes)
 
 
-plot_it('1', axes.flatten()[0], axes.flatten()[1], 'A', 'B')
-plot_it('2', axes.flatten()[2], axes.flatten()[3], 'C', 'D')
+plot_it('1', axes.flatten()[0], axes.flatten()[1], 'a', 'b')
+plot_it('2', axes.flatten()[2], axes.flatten()[3], 'c', 'd')
 
 # Condense layout
 plt.tight_layout()
@@ -205,5 +205,7 @@ plt.tight_layout()
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.png"), dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, "NonLinearSolver_Supp.eps"),
+            dpi=300, format='eps')
 
 #plt.show()
