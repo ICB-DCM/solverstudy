@@ -61,7 +61,7 @@ for i_atol, atol in enumerate(ATOLS_ALL):
         ax.hist(times[(atol, rtol)], bins=bins, color='#c0c0c0')
 
         # Failure rate
-        ax.text(0.5, 0.97, f"Failure rate: {failures[(atol, rtol)]:.1f}%",
+        ax.text(0.5, 0.97, f"Failed: {failures[(atol, rtol)]:.1f}%",
                 ha='center', va='top', transform=ax.transAxes,
                 fontsize=fontsize-1)
 
