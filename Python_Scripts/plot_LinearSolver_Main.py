@@ -106,7 +106,7 @@ ymax = max(np.nanmax(times_for_linsol[linsol]) for linsol in LINSOL_DCT)
 ax.set_ylim([ymin * 0.5, ymax*2])
 
 # Plot text 'A'
-ax.text(-0.13, 1, 'A', fontsize=lettersize, transform=ax.transAxes)
+ax.text(-0.13, 1, 'a', fontsize=lettersize, transform=ax.transAxes)
 
 ###############################################################################
 # Box plot of computation times, colored by linear solver, separated by
@@ -182,7 +182,7 @@ ax.text(-0.13, -0.13, 'Rel. tol.:', fontsize=labelsize, transform=ax.transAxes,
         verticalalignment='bottom')
 
 # Plot text 'B'
-ax.text(-0.13, 1, 'B', fontsize=lettersize, transform=ax.transAxes)
+ax.text(-0.13, 1, 'b', fontsize=lettersize, transform=ax.transAxes)
 
 ###############################################################################
 ###############################################################################
@@ -304,7 +304,7 @@ ymax = max(np.nanmax(times_for_linsol[linsol]) for linsol in solver_dct)
 ax.set_ylim([ymin * 0.5, ymax*2])
 
 # Plot text 'C'
-ax.text(-0.13, 1, 'C', fontsize=lettersize, transform=ax.transAxes)
+ax.text(-0.13, 1, 'c', fontsize=lettersize, transform=ax.transAxes)
 
 ###############################################################################
 # Box plot of computation times, colored by linear solver, separated by
@@ -380,7 +380,7 @@ ax.text(-0.13, -0.13, 'Rel. tol.:',  fontsize=labelsize, transform=ax.transAxes,
         verticalalignment='bottom')
 
 # Plot text 'D'
-ax.text(-0.13, 1, 'D', fontsize=lettersize, transform=ax.transAxes)
+ax.text(-0.13, 1, 'd', fontsize=lettersize, transform=ax.transAxes)
 
 ###############################################################################
 # Finishing
@@ -398,5 +398,7 @@ plt.tight_layout()
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main.png"), dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Main.eps"),
+            dpi=300, format="eps")
 
 #plt.show()

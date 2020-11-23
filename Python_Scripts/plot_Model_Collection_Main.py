@@ -1,6 +1,5 @@
 import os
 import matplotlib.pyplot as plt
-import matplotlib as mpl
 import numpy as np
 import scipy.stats as st
 import pandas as pd
@@ -84,39 +83,47 @@ sns.histplot(data.loc[data['Composition'] == 'accepted', 'Number of species'],
              edgecolor=[.2, .1, .7, .9], facecolor=[.2, .1, .7, .4],
              binrange=[0, 3.5])
 
-sns.histplot(data=data.loc[data['Composition'] == 'all models'], y='Number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'all models'],
+             y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[0,0,0,1], facecolor=[0, 0, 0, 0],
              binrange=[0, 3.5])
-sns.histplot(data=data.loc[data['Composition'] == 'rejected'], y='Number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'rejected'],
+             y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[.8, .5, .1, .9], facecolor=[.8, .5, .1, .4],
              binrange=[0, 3.5])
-sns.histplot(data=data.loc[data['Composition'] == 'accepted'], y='Number of reactions',
+sns.histplot(data=data.loc[data['Composition'] == 'accepted'],
+             y='Number of reactions',
              ax=fig.ax_marg_y, legend=False, element="step", binwidth=0.25,
              edgecolor=[.2, .1, .7, .9], facecolor=[.2, .1, .7, .4],
              binrange=[0, 3.5])
-
+# we want to highlight the models form Biomodels and those from JWS differently
 biomodels = ('eungdamrong2007', 'froehlich2018', 'holzhutter2004', 'hui2014',
              'lai2014', 'leber2015', 'levchenko2000', 'ouzounoglou2014',
              'pathak2013', 'pathak2013a', 'pritchard2002', 'proctor2010',
              'proctor2013', 'qi2013', 'sasagawa2005', 'sengupta2015',
              'singh2006', 'sivakumar2011', 'ueda2001', 'ung2008', 'yang2007')
+
+
 for model in all_models.index:
+    # plot each model as a point, with different color (accepted/rejected)
+    # and marker (biomodels/JWS)
     if all_models.loc[model, 'Composition'] == 'accepted':
         col = [.2, .1, .7, .9]
     else:
         col = [.8, .5, .1, .9]
-
     if model in biomodels:
         form = 'P'
     else:
         form = 'o'
 
+    # plot into the joint_plot axes object
     fig.ax_joint.plot(all_models.loc[model, 'Number of species'],
                       all_models.loc[model, 'Number of reactions'],
                       form, color=col)
 
+# draw the legend
 fig.ax_joint.text(0.3, 3.4, 'accepted',
                   color=[0,0,0,1], fontsize=12, va='center', ha='center')
 fig.ax_joint.text(.95, 3.4, 'rejected',
@@ -130,14 +137,23 @@ fig.ax_joint.plot(.95, 3.2, 'P', color=[.8, .5, .1, .9])
 fig.ax_joint.plot(0.3, 3.0, 'o', color=[.2, .1, .7, .9])
 fig.ax_joint.plot(.95, 3.0, 'o', color=[.8, .5, .1, .9])
 
-fig.ax_joint.text(-0.135, 1.17, 'B', fontsize=20,
+# Subfigure label
+fig.ax_joint.text(-0.135, 1.17, 'b', fontsize=20,
                   transform=fig.ax_joint.transAxes)
 
 plt.gcf().set_size_inches((7.0, 7.0))
+
+# save
 os.makedirs(DIR_FIGURES, exist_ok=True)
-plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.pdf'))
-plt.savefig(os.path.join(DIR_FIGURES, 'bias_assessment.png'), dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.pdf'))
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.eps'),
+            format='eps', dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Main.png'), dpi=300)
 plt.show()
+
+
+
+# ===== Statistical tests =====================================================
 
 species_all = all_models['Number of species'].values
 species_acc = all_models[all_models['Composition'] ==
@@ -158,9 +174,15 @@ ks_reactions_all_acc = st.ks_2samp(reactions_all, reactions_acc)
 ks_reactions_all_rej = st.ks_2samp(reactions_all, reactions_rej)
 ks_reactions_acc_rej = st.ks_2samp(reactions_acc, reactions_rej)
 
-print('KS-test, all models vs. accepted models, number of species:', ks_species_all_acc)
-print('KS-test, all models vs. rejected models, number of species:', ks_species_all_rej)
-print('KS-test, accepted models vs. rejected models, number of species:', ks_species_acc_rej)
-print('KS-test, all models vs. accepted models, number of reactions', ks_reactions_all_acc)
-print('KS-test, all models vs. rejected models, number of reactions', ks_reactions_all_rej)
-print('KS-test, accepted models vs. rejected models, number of reactions', ks_reactions_acc_rej)
+print('KS-test, all models vs. accepted models, number of species:',
+      ks_species_all_acc)
+print('KS-test, all models vs. rejected models, number of species:',
+      ks_species_all_rej)
+print('KS-test, accepted models vs. rejected models, number of species:',
+      ks_species_acc_rej)
+print('KS-test, all models vs. accepted models, number of reactions',
+      ks_reactions_all_acc)
+print('KS-test, all models vs. rejected models, number of reactions',
+      ks_reactions_all_rej)
+print('KS-test, accepted models vs. rejected models, number of reactions',
+      ks_reactions_acc_rej)

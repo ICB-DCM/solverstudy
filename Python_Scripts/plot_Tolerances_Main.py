@@ -151,6 +151,8 @@ plt.tight_layout()
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.eps"),
+            format='eps', dpi=300)
 plt.savefig(os.path.join(DIR_FIGURES, "Tolerances_Main.png"), dpi=300)
 
 #plt.show()

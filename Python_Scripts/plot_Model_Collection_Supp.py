@@ -158,8 +158,8 @@ for i_key, key in enumerate(keys_copasi):
 plt.plot([1e-4, 1e-4], [-5, 410], 'k:', linewidth=2)
 
 plt.legend(fontsize=12)
-plt.xlabel('Maximal allowed error of state trajectories (acceptance threshold)',
-           fontsize=15)
+plt.xlabel('Maximal allowed error of state trajectories '
+           '(acceptance threshold)', fontsize=15)
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
 plt.ylabel('Number of accepted models', fontsize=15)
@@ -175,5 +175,7 @@ ax.spines['right'].set_visible(False)
 # plot
 plt.gcf().set_size_inches((15.0, 10.0))
 os.makedirs(DIR_FIGURES, exist_ok=True)
-plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.pdf'))
-plt.savefig(os.path.join(DIR_FIGURES, 'Figure_S1.png'), dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Supp.eps'),
+            format='eps', dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Supp.pdf'))
+plt.savefig(os.path.join(DIR_FIGURES, 'Model_Collection_Supp.png'), dpi=300)

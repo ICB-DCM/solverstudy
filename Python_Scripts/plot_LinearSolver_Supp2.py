@@ -160,5 +160,7 @@ plt.tight_layout()
 os.makedirs(DIR_FIGURES, exist_ok=True)
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.pdf"))
 plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.png"), dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, "LinearSolver_Supp2.eps"),
+            dpi=300, format="eps")
 
-#plt.show()
+plt.show()

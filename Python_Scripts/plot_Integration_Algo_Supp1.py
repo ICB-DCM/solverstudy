@@ -29,7 +29,7 @@ data_lsoda = []
 data_states = []
 for atol, rtol in ATOL_RTOLS:
     # AM algorithm
-    f_am = f"atol_{atol}__rtol_{rtol}__linSol_9__nonlinSol_2__solAlg_1.tsv"
+    f_am = f"atol_{atol}__rtol_{rtol}__linSol_7__nonlinSol_2__solAlg_1.tsv"
     df_am = pd.read_csv(
         os.path.join(DIR_RESULTS_ALGORITHMS, f_am), sep='\t', index_col=0)
     df_am.sort_index(inplace=True)
@@ -38,7 +38,7 @@ for atol, rtol in ATOL_RTOLS:
     data_states.append(df_am['n_species'].values)
 
     # BDF algorithm
-    f_bdf = f"atol_{atol}__rtol_{rtol}__linSol_9__nonlinSol_2__solAlg_2.tsv"
+    f_bdf = f"atol_{atol}__rtol_{rtol}__linSol_7__nonlinSol_2__solAlg_2.tsv"
     df_bdf = pd.read_csv(
         os.path.join(DIR_RESULTS_ALGORITHMS, f_bdf), sep='\t', index_col=0)
     df_bdf.sort_index(inplace=True)
@@ -375,23 +375,25 @@ def plot_scatter_times(data_setting_a, data_setting_b,
 plot_scatter_times(data_am, data_bdf, 'AM', 'BDF',
                    cm_am, cm_bdf, darkest_am, darkest_bdf,
                    0.05, 2e3, 700,
-                   axs[4], axs[5], 'A', 'B')
+                   axs[4], axs[5], 'a', 'b')
 
 plot_scatter_times(data_lsoda, data_am, 'LSODA', 'AM',
                    cm_lsoda, cm_am, darkest_lsoda, darkest_am,
                    0.05, 2e5, 700,
-                   axs[2], axs[3], 'C', 'D')
+                   axs[2], axs[3], 'c', 'd')
 
 plot_scatter_times(data_lsoda, data_bdf, 'LSODA', 'BDF',
                    cm_lsoda, cm_bdf, darkest_lsoda, darkest_bdf,
                    0.05, 2e5, 700,
-                   axs[0], axs[1], 'E', 'F')
+                   axs[0], axs[1], 'e', 'f')
 
 # Save plot
 os.makedirs(DIR_FIGURES, exist_ok=True)
-plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.pdf"))
-plt.savefig(os.path.join(DIR_FIGURES, "integration_algo_scatter_main.png"),
+plt.savefig(os.path.join(DIR_FIGURES, "Integration_Algo_Supp1.pdf"))
+plt.savefig(os.path.join(DIR_FIGURES, "Integration_Algo_Supp1.png"),
             dpi=300)
+plt.savefig(os.path.join(DIR_FIGURES, "Integration_Algo_Supp1.eps"),
+            dpi=300, format="eps")
 
 # show figure
 #plt.show()
